@@ -1,0 +1,40 @@
+---
+// src/pages/index.astro
+import Layout from '../layouts/Layout.astro';
+
+const buildTime = new Date().toLocaleString();
+---
+
+<Layout title="Working On Studio">
+  <div class="bg-gray-950 text-gray-100">
+    <main class="min-h-screen flex items-center justify-center p-8">
+      <div class="max-w-2xl mx-auto space-y-12">
+        <div class="group">
+          <h1 class="text-base font-display cursor-default">
+            working on<span class="text-gray-500 text-xs group-hover:text-emerald-300">.studio</span>
+          </h1>
+        </div>
+        <div class="text-sm space-y-12 font-sans leading-6">
+          <div>
+            <p>Working on...making the obvious visible.</p>
+            <p>Working on...putting people back in technology.</p>
+            <p>Working on...re-humanising software.</p>
+          </div>
+          <div>
+            <p>Working on...a new site.</p>
+          </div>
+        </div>
+        <!-- <div class="bg-white p-6 rounded-lg shadow-sm border">
+          <p class="text-lg leading-relaxed">
+            A creative studio producing both physical and digital products that make people enjoy life more while serving as social experiments. We take behaviors people do unconsciously and create mirrors that make them suddenly aware of it.
+          </p>
+        </div> -->
+        <div class="text-[11px] text-gray-500 space-y-1">
+          <p>Built with Astro + Svelte + Tailwind</p>
+          <p>Generated: {buildTime}</p>
+          <p>Repository: <a href="https://github.com/YOURUSERNAME/workingon-studio" class="underline">github.com/YOURUSERNAME/workingon-studio</a></p>
+        </div>
+      </div>
+    </main>
+  </div>
+</Layout>
