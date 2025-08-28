@@ -6,6 +6,14 @@
     showTimeline = !showTimeline;
   }
 
+  // Get latest version for current branch
+  $: currentBranchVersion =
+    timelineData?.entries?.filter(
+      (entry) => entry.branch === timelineData?.currentBranch
+    )?.[0]?.version ||
+    timelineData?.entries?.[0]?.version ||
+    "v1.0.0";
+
   // Group entries by date
   function groupByDate(entries) {
     if (!entries) return [];
@@ -34,15 +42,18 @@
 </script>
 
 <section class="timeline-section space-y-12">
-  <button
-    class="last-built-trigger"
-    on:click={toggleTimeline}
-    aria-expanded={showTimeline}
-  >
-    <span class="build-info">
-      Last built: {timelineData?.lastBuild || "Loading..."}
-    </span>
-  </button>
+  <div class="space-y-1">
+    <div>{currentBranchVersion}</div>
+    <button
+      class="last-built-trigger"
+      on:click={toggleTimeline}
+      aria-expanded={showTimeline}
+    >
+      <span>
+        Last built: {timelineData?.lastBuild || "Loading..."}
+      </span>
+    </button>
+  </div>
 
   {#if showTimeline && timelineData}
     <div
@@ -69,29 +80,35 @@
               {group.date}
             </h3>
 
-            <ul class="timeline-entries space-y-2">
+            <ul class="timeline-entries space-y-6">
               {#each group.entries as entry}
                 <li
-                  class="timeline-entry"
+                  class="timeline-entry space-y-2"
                   data-type={entry.type}
                 >
                   <div class="entry-meta">
-                    <span class="version">{entry.version}</span>
-                    <span class="branch-display">{entry.branchDisplay}</span>
-                    <span class="time text-gray-500 text-xs">
+                    <span class="time text-gray-500 text-[11px]">
                       {entry.formattedDate.split(" at ")[1]}
                     </span>
                   </div>
 
-                  <div class="entry-content">
-                    <p
-                      class="message first-letter:capitalize text-gray-100 text-xs"
-                    >
-                      {entry.message}
-                    </p>
-
-                    {#if entry.statsText}
-                      <span class="stats">{entry.statsText}</span>
+                  <div class="entry-content space-y-1">
+                    {#if entry.branchMerged && entry.intoBranch}
+                      <p class="message text-gray-100 text-xs">
+                        <span class="merge-info">
+                          <span class="merged-branch">{entry.branchMerged}</span
+                          >
+                          <span class="merge-arrow text-yellow-300">←</span>
+                          <span class="into-branch">{entry.intoBranch}</span>
+                        </span>
+                      </p>
+                    {:else}
+                      <p class="first-letter:capitalize text-gray-100 text-xs">
+                        {entry.message}
+                      </p>
+                    {/if}
+                    {#if entry.branchMerged && entry.intoBranch}{:else}
+                      <span class="branch-display">{entry.branchDisplay}</span>
                     {/if}
                   </div>
                 </li>

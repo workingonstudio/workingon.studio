@@ -308,6 +308,16 @@ async function fetchGitHubTimeline() {
       `📊 Total unique commits to process: ${uniqueCommits.length} (${detailedCommits.length} main + ${draftPRCommits.length} draft)`
     );
 
+    // Get current branch for version context
+    let currentBranch = "main";
+    try {
+      currentBranch =
+        execSync("git branch --show-current", { encoding: "utf8" }).trim() ||
+        "main";
+    } catch (error) {
+      console.warn('Could not determine current branch, using "main"');
+    }
+
     // DEBUG: Show which commits we're actually processing
     console.log("\n🔍 DEBUG: Commits Being Processed (including drafts):");
     uniqueCommits.forEach((commit, index) => {
@@ -335,6 +345,7 @@ async function fetchGitHubTimeline() {
       lastBuild: formatDate(new Date().toISOString()),
       source: "github-api",
       repository: `${GITHUB_OWNER}/${GITHUB_REPO}`,
+      currentBranch: currentBranch,
       entries: uniqueCommits.reverse().map((commit, index) => {
         const pr = findPRForCommit(prCommitsMap, prMessageMap, commit);
         const branchName = pr ? pr.head.ref : "main";
@@ -343,6 +354,15 @@ async function fetchGitHubTimeline() {
         let type = determineTypeFromPR(pr, commit, branchName);
         if (commit._isDraftPR && type === "feature") {
           type = "draft-feature"; // Special type for draft work
+        }
+
+        // Handle merge commit branch information
+        let branchMerged = null;
+        let intoBranch = null;
+        if (commit.parents && commit.parents.length > 1 && pr) {
+          // This is a merge commit with PR context
+          branchMerged = pr.head.ref; // The branch that was merged
+          intoBranch = pr.base.ref; // The branch it was merged into
         }
 
         return {
@@ -359,6 +379,8 @@ async function fetchGitHubTimeline() {
           type: type,
           branch: branchName,
           branchDisplay: branchName,
+          branchMerged: branchMerged,
+          intoBranch: intoBranch,
           isMerge: commit.parents && commit.parents.length > 1,
           isDraft: commit._isDraftPR || false,
           prNumber: pr?.number || commit._prNumber,
