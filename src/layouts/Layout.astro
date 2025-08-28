@@ -1,5 +1,4 @@
 ---
-// src/layouts/Layout.astro
 import '../styles/global.css';
 
 export interface Props {
@@ -7,6 +6,10 @@ export interface Props {
 }
 
 const { title } = Astro.props;
+
+// Get font URLs from environment variables
+const nudicaFontUrl = import.meta.env.NUDICA_FONT_CSS_URL;
+const nudicaMonoFontUrl = import.meta.env.NUDICA_MONO_FONT_CSS_URL;
 ---
 
 <!doctype html>
@@ -17,6 +20,11 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    
+    <!-- CDN Font Stylesheets -->
+    {nudicaFontUrl && <link rel="stylesheet" href={nudicaFontUrl} />}
+    {nudicaMonoFontUrl && <link rel="stylesheet" href={nudicaMonoFontUrl} />}
+    
     <title>{title}</title>
   </head>
   <body>

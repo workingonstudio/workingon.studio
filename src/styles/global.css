@@ -5,22 +5,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-@font-face {
-  font-family: "nudicamedium";
-  src: url("/fonts/nudica/nudica-medium-webfont.woff2") format("woff2"),
-    url("/fonts/nudica/nudica-medium-webfont.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "nudica_monomedium";
-  src: url("/fonts/nudica-mono/nudicamono-medium-webfont.woff2") format("woff2"),
-    url("/fonts/nudica-mono/nudicamono-medium-webfont.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-
 @theme {
   --font-sans: "nudica_monomedium", ui-monospace, SFMono-Regular;
   --font-display: "nudicamedium", ui-sans-serif, system-ui;
