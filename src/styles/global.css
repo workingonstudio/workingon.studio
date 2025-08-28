@@ -5,25 +5,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-@font-face {
-  font-family: "nudicamedium";
-  src: url("/fonts/nudica/nudica-medium-webfont.woff2") format("woff2"),
-    url("/fonts/nudica/nudica-medium-webfont.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "nudica_monomedium";
-  src: url("/fonts/nudica-mono/nudicamono-medium-webfont.woff2") format("woff2"),
-    url("/fonts/nudica-mono/nudicamono-medium-webfont.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-
 @theme {
-  --font-sans: "nudica_monomedium", ui-monospace, SFMono-Regular;
-  --font-display: "nudicamedium", ui-sans-serif, system-ui;
+  --font-sans: "nudica_monomedium", "IBM Plex Mono", ui-monospace,
+    SFMono-Regular;
+  --font-display: "nudicamedium", "Space Grotesk", ui-sans-serif, system-ui;
   --text-shadow-glow: 0 0 5px #f0b100, 0 0 15px #f0b100, 0 0 30px #f0b100,
     0 0 60px rgba(255, 0, 0, 0.5);
   --animate-flicker: flicker 3s infinite;
