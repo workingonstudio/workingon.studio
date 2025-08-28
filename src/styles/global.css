@@ -26,7 +26,7 @@
   --font-display: "nudicamedium", ui-sans-serif, system-ui;
   --text-shadow-glow: 0 0 5px #f0b100, 0 0 15px #f0b100, 0 0 30px #f0b100,
     0 0 60px rgba(255, 0, 0, 0.5);
-  --animate-flicker: flicker 5s infinite;
+  --animate-flicker: flicker 3s infinite;
 }
 
 @keyframes flicker {
