@@ -69,7 +69,7 @@
               {group.date}
             </h3>
 
-            <ul class="timeline-entries space-y-2 ml-4">
+            <ul class="timeline-entries space-y-2">
               {#each group.entries as entry}
                 <li
                   class="timeline-entry"

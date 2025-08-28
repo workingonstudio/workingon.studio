@@ -1,12 +1,14 @@
 {
-  "generated": "2025-08-28T16:01:27.396Z",
-  "lastBuild": "28 August 2025 at 17:01",
+  "generated": "2025-08-28T18:42:36.869Z",
+  "lastBuild": "28 August 2025 at 19:42",
+  "source": "github-api",
+  "repository": "prmack/WorkingOn.studio",
   "entries": [
     {
-      "version": "v1.0.0",
+      "version": "v1.0.0.1",
       "hash": "3260f62",
       "message": "v1.0 - escape Framer constraints, migrate to Astro",
-      "date": "2025-08-27T12:31:27.000Z",
+      "date": "2025-08-27T12:31:27Z",
       "author": "Paul Mackenzie",
       "stats": {
         "insertions": 5559,
@@ -18,13 +20,14 @@
       "branchDisplay": "main",
       "isMerge": false,
       "formattedDate": "27 August 2025 at 13:31",
-      "statsText": "+5559 lines"
+      "statsText": "+5559 lines",
+      "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/3260f6265c01106e8898a760f2cf338c61cebdb8"
     },
     {
-      "version": "v1.0.0.1",
+      "version": "v1.0.0.2",
       "hash": "7abca90",
       "message": "improve build time formatting to 24-hour clock",
-      "date": "2025-08-27T12:42:37.000Z",
+      "date": "2025-08-27T12:42:37Z",
       "author": "Paul Mackenzie",
       "stats": {
         "insertions": 11,
@@ -36,13 +39,14 @@
       "branchDisplay": "main",
       "isMerge": false,
       "formattedDate": "27 August 2025 at 13:42",
-      "statsText": "+11 -3 lines"
+      "statsText": "+11 -3 lines",
+      "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/7abca90741ec5fea91529c7ff776ec20088121db"
     },
     {
-      "version": "v1.0.0.2",
+      "version": "v1.0.0.3",
       "hash": "a67714d",
       "message": "adding glow effect on logo hover",
-      "date": "2025-08-27T13:00:40.000Z",
+      "date": "2025-08-27T13:00:40Z",
       "author": "Paul Mackenzie",
       "stats": {
         "insertions": 3,
@@ -54,13 +58,14 @@
       "branchDisplay": "main",
       "isMerge": false,
       "formattedDate": "27 August 2025 at 14:00",
-      "statsText": "+3 -1 lines"
+      "statsText": "+3 -1 lines",
+      "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/a67714d5d8d5a4aecf589feb22eff87e93132d6f"
     },
     {
-      "version": "v1.0.0.3",
+      "version": "v1.0.0.4",
       "hash": "dd054ca",
       "message": "adjusting logo glow color",
-      "date": "2025-08-27T13:11:03.000Z",
+      "date": "2025-08-27T13:11:03Z",
       "author": "Paul Mackenzie",
       "stats": {
         "insertions": 1,
@@ -72,13 +77,14 @@
       "branchDisplay": "main",
       "isMerge": false,
       "formattedDate": "27 August 2025 at 14:11",
-      "statsText": "+1 -1 lines"
+      "statsText": "+1 -1 lines",
+      "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/dd054ca4fd95322460b9bd4150c5c528c19fb2b2"
     },
     {
-      "version": "v1.0.0.4",
+      "version": "v1.0.0.5",
       "hash": "3ec99ab",
       "message": "Removing 'built with' section of footer",
-      "date": "2025-08-27T13:54:05.000Z",
+      "date": "2025-08-27T13:54:05Z",
       "author": "Paul Mackenzie",
       "stats": {
         "insertions": 0,
@@ -90,13 +96,14 @@
       "branchDisplay": "main",
       "isMerge": false,
       "formattedDate": "27 August 2025 at 14:54",
-      "statsText": "-1 lines"
+      "statsText": "-1 lines",
+      "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/3ec99abf5dffedeb2bcfc3e03e50daff8660d257"
     },
     {
-      "version": "v1.0.0.5",
+      "version": "v1.0.0.6",
       "hash": "92c5b4c",
       "message": "Updating logo hover area.",
-      "date": "2025-08-27T14:08:14.000Z",
+      "date": "2025-08-27T14:08:14Z",
       "author": "Paul Mackenzie",
       "stats": {
         "insertions": 2,
@@ -108,13 +115,14 @@
       "branchDisplay": "main",
       "isMerge": false,
       "formattedDate": "27 August 2025 at 15:08",
-      "statsText": "+2 -2 lines"
+      "statsText": "+2 -2 lines",
+      "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/92c5b4c2b3c889e8145a59e8b28f78a5a1879aca"
     },
     {
-      "version": "v1.0.0.6",
+      "version": "v1.0.0.7",
       "hash": "0fe9c6d",
       "message": "Updating list copy.",
-      "date": "2025-08-27T16:40:23.000Z",
+      "date": "2025-08-27T16:40:23Z",
       "author": "Paul Mackenzie",
       "stats": {
         "insertions": 2,
@@ -126,13 +134,14 @@
       "branchDisplay": "main",
       "isMerge": false,
       "formattedDate": "27 August 2025 at 17:40",
-      "statsText": "+2 -2 lines"
+      "statsText": "+2 -2 lines",
+      "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/0fe9c6dd68fbb62d1c46c479c89f27e8bf292169"
     },
     {
-      "version": "v1.0.0.7",
+      "version": "v1.0.0.8",
       "hash": "526645a",
       "message": "Adding flicker to .studio on hover",
-      "date": "2025-08-27T20:54:52.000Z",
+      "date": "2025-08-27T20:54:52Z",
       "author": "Paul Mackenzie",
       "stats": {
         "insertions": 48,
@@ -144,13 +153,14 @@
       "branchDisplay": "main",
       "isMerge": false,
       "formattedDate": "27 August 2025 at 21:54",
-      "statsText": "+48 -1 lines"
+      "statsText": "+48 -1 lines",
+      "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/526645a9d95197362a890506b0904c58d15029bd"
     },
     {
-      "version": "v1.0.0.8",
+      "version": "v1.0.0.9",
       "hash": "511c71a",
       "message": "Altering flickering speed, and target area.",
-      "date": "2025-08-28T06:08:59.000Z",
+      "date": "2025-08-28T06:08:59Z",
       "author": "Paul Mackenzie",
       "stats": {
         "insertions": 4,
@@ -162,13 +172,14 @@
       "branchDisplay": "main",
       "isMerge": false,
       "formattedDate": "28 August 2025 at 07:08",
-      "statsText": "+4 -4 lines"
+      "statsText": "+4 -4 lines",
+      "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/511c71a16473202ce5f576bf065fb6fba5d9eef8"
     },
     {
-      "version": "v1.0.0.9",
+      "version": "v1.0.0.10",
       "hash": "c4354f1",
       "message": "Adjusting target area, again.",
-      "date": "2025-08-28T06:22:11.000Z",
+      "date": "2025-08-28T06:22:11Z",
       "author": "Paul Mackenzie",
       "stats": {
         "insertions": 14,
@@ -180,97 +191,88 @@
       "branchDisplay": "main",
       "isMerge": false,
       "formattedDate": "28 August 2025 at 07:22",
-      "statsText": "+14 -12 lines"
-    },
-    {
-      "version": "v1.0.0.10",
-      "hash": "f7750eb",
-      "message": "Creating timeline script. Creating timeline component",
-      "date": "2025-08-28T10:36:53.000Z",
-      "author": "Paul Mackenzie",
-      "stats": {
-        "insertions": 563,
-        "deletions": 20,
-        "files": 8
-      },
-      "type": "feature",
-      "branch": "meta-timeline-development",
-      "branchDisplay": "meta-timeline-development",
-      "isMerge": false,
-      "formattedDate": "28 August 2025 at 11:36",
-      "statsText": "+563 -20 lines"
+      "statsText": "+14 -12 lines",
+      "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/c4354f122c3093a05db5b5a8b5b1712fba165d28"
     },
     {
       "version": "v1.0.0.11",
-      "hash": "3eab797",
-      "message": "Fixing annoying VsCode error",
-      "date": "2025-08-28T11:02:50.000Z",
+      "hash": "f9e3358",
+      "message": "Remove licensed font files - now hosted on CDN",
+      "date": "2025-08-28T12:00:22Z",
       "author": "Paul Mackenzie",
       "stats": {
-        "insertions": 36,
-        "deletions": 16,
-        "files": 5
+        "insertions": 16,
+        "deletions": 18,
+        "files": 4
       },
-      "type": "feature",
-      "branch": "meta-timeline-development",
-      "branchDisplay": "meta-timeline-development",
+      "type": "commit",
+      "branch": "main",
+      "branchDisplay": "main",
       "isMerge": false,
-      "formattedDate": "28 August 2025 at 12:02",
-      "statsText": "+36 -16 lines"
+      "formattedDate": "28 August 2025 at 13:00",
+      "statsText": "+16 -18 lines",
+      "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/f9e3358e4e11365b0002934fd7fdba8305c32c38"
     },
     {
       "version": "v1.0.0.12",
-      "hash": "81c810c",
-      "message": "Sorting better timeline script, styling timeline.",
-      "date": "2025-08-28T11:36:06.000Z",
-      "author": "Paul Mackenzie",
-      "stats": {
-        "insertions": 166,
-        "deletions": 160,
-        "files": 4
-      },
-      "type": "feature",
-      "branch": "meta-timeline-development",
-      "branchDisplay": "meta-timeline-development",
-      "isMerge": false,
-      "formattedDate": "28 August 2025 at 12:36",
-      "statsText": "+166 -160 lines"
-    },
-    {
-      "version": "v1.0.0.13",
-      "hash": "5770bc6",
+      "hash": "4cd52b3",
       "message": "Remove licensed fonts",
-      "date": "2025-08-28T12:05:23.000Z",
+      "date": "2025-08-28T12:03:17Z",
       "author": "Paul Mackenzie",
       "stats": {
         "insertions": 5,
         "deletions": 0,
         "files": 1
       },
-      "type": "feature",
-      "branch": "meta-timeline-development",
-      "branchDisplay": "meta-timeline-development",
+      "type": "commit",
+      "branch": "main",
+      "branchDisplay": "main",
       "isMerge": false,
-      "formattedDate": "28 August 2025 at 13:05",
-      "statsText": "+5 lines"
+      "formattedDate": "28 August 2025 at 13:03",
+      "statsText": "+5 lines",
+      "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/4cd52b38203ab97d982b412b82da81c26b71b073"
+    },
+    {
+      "version": "v1.0.0.13",
+      "hash": "f16085f",
+      "message": "Adding fallback font.",
+      "date": "2025-08-28T13:48:41Z",
+      "author": "Paul Mackenzie",
+      "stats": {
+        "insertions": 6,
+        "deletions": 2,
+        "files": 2
+      },
+      "type": "feature",
+      "branch": "font-licence-fix",
+      "branchDisplay": "font-licence-fix",
+      "isMerge": false,
+      "prNumber": 1,
+      "prTitle": "Font licence fix",
+      "formattedDate": "28 August 2025 at 14:48",
+      "statsText": "+6 -2 lines",
+      "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/f16085ffd0ffeeab37c46ae81e526f0c20600881"
     },
     {
       "version": "v1.0.0.14",
-      "hash": "4ba07f6",
-      "message": "Merge main into timeline branch, resolve settings.json conflict",
-      "date": "2025-08-28T15:56:28.000Z",
+      "hash": "30704a6",
+      "message": "Merge pull request /font-licence-fix",
+      "date": "2025-08-28T15:47:36Z",
       "author": "Paul Mackenzie",
       "stats": {
-        "insertions": 2,
-        "deletions": 1,
-        "files": 1
+        "insertions": 17,
+        "deletions": 20,
+        "files": 3
       },
-      "type": "feature",
-      "branch": "meta-timeline-development",
-      "branchDisplay": "meta-timeline-development",
-      "isMerge": false,
-      "formattedDate": "28 August 2025 at 16:56",
-      "statsText": "+2 -1 lines"
+      "type": "merge",
+      "branch": "font-licence-fix",
+      "branchDisplay": "font-licence-fix",
+      "isMerge": true,
+      "prNumber": 1,
+      "prTitle": "Font licence fix",
+      "formattedDate": "28 August 2025 at 16:47",
+      "statsText": "+17 -20 lines",
+      "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/30704a690268eff13f43f1b190f1fc4904353d49"
     }
   ]
 }
