@@ -1,3 +1,10 @@
 {
-  "css.lint.unknownAtRules": "ignore"
+  "css.lint.unknownAtRules": "ignore",
+  "svelte.enable-ts-plugin": true,
+  "svelte.plugin.svelte.compilerWarnings": {
+    "css-unused-selector": "ignore"
+  },
+  "svelte.plugin.typescript.diagnostics.enable": true,
+  "typescript.preferences.includePackageJsonAutoImports": "auto",
+  "svelte.plugin.svelte.diagnostics.enable": false
 }

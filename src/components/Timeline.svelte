@@ -1,6 +1,5 @@
 <script>
   export let timelineData;
-
   let showTimeline = false;
 
   function toggleTimeline() {
