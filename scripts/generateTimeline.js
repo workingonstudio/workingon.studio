@@ -153,7 +153,7 @@ function extractGitHistory() {
           stats: parseStats(statsLine),
           type: entryType,
           branch: branchName,
-          branchDisplay: branchName, // Simplified - just show the actual branch
+          branchDisplay: branchName,
           isMerge: isMerge,
         });
       }
@@ -186,11 +186,54 @@ function formatStats(stats) {
 }
 
 function generateTimeline() {
+  // Check if we have existing GitHub timeline data
+  const githubTimelineFile = path.join(
+    process.cwd(),
+    "src",
+    "data",
+    "timeline-github.json"
+  );
+
+  if (fs.existsSync(githubTimelineFile)) {
+    console.log("📄 Using existing GitHub timeline data");
+
+    try {
+      const githubData = JSON.parse(
+        fs.readFileSync(githubTimelineFile, "utf8")
+      );
+
+      // Update the lastBuild time to current
+      githubData.lastBuild = formatDate(new Date().toISOString());
+      githubData.generated = new Date().toISOString();
+
+      // Copy to main timeline file so component can use it
+      const mainTimelineFile = path.join(
+        process.cwd(),
+        "src",
+        "data",
+        "timeline.json"
+      );
+      fs.writeFileSync(mainTimelineFile, JSON.stringify(githubData, null, 2));
+
+      console.log("✅ GitHub timeline data preserved and updated");
+      console.log(`📊 ${githubData.entries.length} entries from GitHub API`);
+
+      return githubData;
+    } catch (error) {
+      console.warn("⚠️  Could not read GitHub timeline data:", error.message);
+      console.log("📄 Falling back to local git generation");
+    }
+  }
+
+  // Fall back to local git timeline generation
+  console.log("📄 Generating timeline from local git history");
+
   const commits = extractGitHistory();
 
   const timeline = {
     generated: new Date().toISOString(),
     lastBuild: formatDate(new Date().toISOString()),
+    source: "local-git",
     entries: commits.map((commit) => ({
       ...commit,
       formattedDate: formatDate(commit.date),
@@ -208,7 +251,9 @@ function generateTimeline() {
   const timelineFile = path.join(dataDir, "timeline.json");
   fs.writeFileSync(timelineFile, JSON.stringify(timeline, null, 2));
 
-  console.log(`✅ Generated timeline with ${timeline.entries.length} entries`);
+  console.log(
+    `✅ Generated local timeline with ${timeline.entries.length} entries`
+  );
   console.log(`📝 Written to: ${timelineFile}`);
 
   return timeline;

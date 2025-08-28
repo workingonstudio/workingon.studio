@@ -66,13 +66,15 @@ async function fetchAllPages(baseUrl, params = {}) {
   return allItems;
 }
 
-function findPRForCommit(pulls, commitSha) {
-  return pulls.find(
-    (pr) =>
-      pr.merge_commit_sha === commitSha ||
-      pr.head.sha === commitSha ||
-      (pr.commits && pr.commits.some((c) => c.sha === commitSha))
-  );
+function findPRForCommit(prCommitsMap, prMessageMap, commit) {
+  // First try exact SHA match (most reliable)
+  if (prCommitsMap[commit.sha]) {
+    return prCommitsMap[commit.sha];
+  }
+
+  // If no SHA match, this commit probably isn't in any PR
+  // Don't force a message match - let it stay as 'main'
+  return null;
 }
 
 function determineTypeFromPR(pr, commit, branchName) {
@@ -163,6 +165,102 @@ async function fetchGitHubTimeline() {
     );
     console.log(`✅ Found ${pulls.length} pull requests`);
 
+    // Fetch commits for each PR to build proper mapping
+    console.log("📦 Fetching PR commit mappings...");
+    const prCommitsMap = {};
+    const prMessageMap = {};
+    for (const pr of pulls) {
+      console.log(`📦 Fetching commits for PR #${pr.number}: ${pr.title}`);
+      try {
+        const prCommits = await fetchFromGitHub(
+          `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/pulls/${pr.number}/commits`
+        );
+        prCommits.forEach((commit) => {
+          prCommitsMap[commit.sha] = pr;
+          // Add message-based mapping with date for uniqueness
+          const message = commit.commit.message.split("\n")[0];
+          const author = commit.commit.author.name;
+          const date = new Date(commit.commit.committer.date)
+            .toISOString()
+            .split("T")[0]; // Just date part
+          const key = `${message}::${author}::${date}`;
+          prMessageMap[key] = pr;
+        });
+        console.log(
+          `   ✅ Mapped ${prCommits.length} commits to ${pr.head.ref}`
+        );
+      } catch (error) {
+        console.warn(
+          `   ⚠️  Could not fetch commits for PR #${pr.number}: ${error.message}`
+        );
+      }
+    }
+    console.log(
+      `✅ Total commit-to-PR mappings: ${Object.keys(prCommitsMap).length}`
+    );
+
+    // DEBUG: Show what commits were mapped to which PRs
+    console.log("\n🔍 DEBUG: PR Commit Mappings:");
+    Object.entries(prCommitsMap).forEach(([sha, pr]) => {
+      console.log(
+        `   ${sha.substring(0, 7)} -> PR #${pr.number} (${pr.head.ref})`
+      );
+    });
+
+    // Collect all commits from draft PRs to include in timeline
+    console.log("\n📦 Fetching draft PR commits for timeline inclusion...");
+    const draftPRCommits = [];
+    for (const pr of pulls) {
+      if (pr.draft) {
+        console.log(`📝 Including draft PR #${pr.number}: ${pr.title}`);
+        try {
+          const prCommits = await fetchFromGitHub(
+            `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/pulls/${pr.number}/commits`
+          );
+
+          // Get detailed stats for each draft PR commit
+          for (const commit of prCommits) {
+            try {
+              const detailedCommit = await fetchFromGitHub(
+                `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/commits/${commit.sha}`
+              );
+              // Mark as draft work
+              detailedCommit._isDraftPR = true;
+              detailedCommit._prNumber = pr.number;
+              detailedCommit._prTitle = pr.title;
+              draftPRCommits.push(detailedCommit);
+            } catch (error) {
+              console.warn(
+                `   ⚠️  Could not fetch details for draft commit ${commit.sha.substring(
+                  0,
+                  7
+                )}`
+              );
+            }
+          }
+          console.log(
+            `   ✅ Added ${prCommits.length} draft commits from ${pr.head.ref}`
+          );
+        } catch (error) {
+          console.warn(
+            `   ⚠️  Could not fetch draft PR commits: ${error.message}`
+          );
+        }
+      }
+    }
+
+    console.log(
+      `✅ Found ${draftPRCommits.length} additional commits from draft PRs`
+    );
+
+    // DEBUG: Show first few entries in prCommitsMap with full SHAs
+    console.log("\n🔍 DEBUG: First few entries in prCommitsMap (full SHAs):");
+    Object.entries(prCommitsMap)
+      .slice(0, 8)
+      .forEach(([sha, pr]) => {
+        console.log(`   "${sha}" -> ${pr.head.ref}`);
+      });
+
     // Get detailed stats for each commit (this will be slower but more accurate)
     console.log("📊 Fetching detailed commit stats...");
     const detailedCommits = [];
@@ -191,6 +289,45 @@ async function fetchGitHubTimeline() {
       }
     }
 
+    // Merge main branch commits with draft PR commits
+    const allCommits = [...detailedCommits, ...draftPRCommits];
+
+    // Remove duplicates (in case draft commits are also in main branch)
+    const uniqueCommits = allCommits.filter(
+      (commit, index, arr) =>
+        arr.findIndex((c) => c.sha === commit.sha) === index
+    );
+
+    // Sort by commit date (newest first for processing, will reverse later)
+    uniqueCommits.sort(
+      (a, b) =>
+        new Date(b.commit.committer.date) - new Date(a.commit.committer.date)
+    );
+
+    console.log(
+      `📊 Total unique commits to process: ${uniqueCommits.length} (${detailedCommits.length} main + ${draftPRCommits.length} draft)`
+    );
+
+    // DEBUG: Show which commits we're actually processing
+    console.log("\n🔍 DEBUG: Commits Being Processed (including drafts):");
+    uniqueCommits.forEach((commit, index) => {
+      const pr = findPRForCommit(prCommitsMap, prMessageMap, commit);
+      const branch = pr ? pr.head.ref : "main";
+      const draftIndicator = commit._isDraftPR ? " [DRAFT]" : "";
+      console.log(
+        `   ${index + 1}. ${commit.sha.substring(0, 7)} - ${
+          commit.commit.message.split("\n")[0]
+        } (${branch})${draftIndicator}`
+      );
+    });
+
+    // DEBUG: Show full SHAs of processed commits vs mapped commits
+    console.log("\n🔍 DEBUG: Processed commit SHAs vs Mapped SHAs:");
+    detailedCommits.slice(0, 5).forEach((commit, index) => {
+      const inMap = prCommitsMap[commit.sha] ? "✅" : "❌";
+      console.log(`   ${index + 1}. "${commit.sha}" ${inMap}`);
+    });
+
     // Process commits into timeline entries
     console.log("🔄 Processing timeline entries...");
     const timeline = {
@@ -198,9 +335,15 @@ async function fetchGitHubTimeline() {
       lastBuild: formatDate(new Date().toISOString()),
       source: "github-api",
       repository: `${GITHUB_OWNER}/${GITHUB_REPO}`,
-      entries: detailedCommits.reverse().map((commit, index) => {
-        const pr = findPRForCommit(pulls, commit.sha);
+      entries: uniqueCommits.reverse().map((commit, index) => {
+        const pr = findPRForCommit(prCommitsMap, prMessageMap, commit);
         const branchName = pr ? pr.head.ref : "main";
+
+        // Determine type, considering draft status
+        let type = determineTypeFromPR(pr, commit, branchName);
+        if (commit._isDraftPR && type === "feature") {
+          type = "draft-feature"; // Special type for draft work
+        }
 
         return {
           version: generateVersion(commit, index),
@@ -213,12 +356,13 @@ async function fetchGitHubTimeline() {
             deletions: commit.stats?.deletions || 0,
             files: commit.files?.length || 0,
           },
-          type: determineTypeFromPR(pr, commit, branchName),
+          type: type,
           branch: branchName,
           branchDisplay: branchName,
           isMerge: commit.parents && commit.parents.length > 1,
-          prNumber: pr?.number,
-          prTitle: pr?.title,
+          isDraft: commit._isDraftPR || false,
+          prNumber: pr?.number || commit._prNumber,
+          prTitle: pr?.title || commit._prTitle,
           formattedDate: formatDate(commit.commit.committer.date),
           statsText: formatStats(commit.stats),
           githubUrl: commit.html_url,
