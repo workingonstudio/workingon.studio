@@ -1,0 +1,195 @@
+{
+  "generated": "2025-08-28T09:04:27.429Z",
+  "lastBuild": "28 August 2025 at 10:04",
+  "entries": [
+    {
+      "version": "v1.0",
+      "hash": "3240e4f",
+      "message": "v1.0 - escape Framer constraints, migrate to Astro",
+      "date": "2025-08-27T12:31:27.000Z",
+      "author": "Paul Mackenzie",
+      "stats": {
+        "insertions": 5589,
+        "deletions": 0,
+        "files": 25
+      },
+      "type": "release",
+      "branch": "main",
+      "branchDisplay": "main",
+      "isMerge": false,
+      "formattedDate": "27 August 2025 at 13:31",
+      "statsText": "+5589 lines"
+    },
+    {
+      "version": "v1.0.1",
+      "hash": "a70940b",
+      "message": "improve build time formatting to 24-hour clock",
+      "date": "2025-08-27T12:42:37.000Z",
+      "author": "Paul Mackenzie",
+      "stats": {
+        "insertions": 11,
+        "deletions": 3,
+        "files": 1
+      },
+      "type": "branch-commit",
+      "branch": "meta-timeline-development",
+      "branchDisplay": "meta-timeline-development",
+      "isMerge": false,
+      "refs": "",
+      "formattedDate": "27 August 2025 at 13:42",
+      "statsText": "+11 -3 lines"
+    },
+    {
+      "version": "v1.0.2",
+      "hash": "3c49789",
+      "message": "adding glow effect on logo hover",
+      "date": "2025-08-27T13:00:40.000Z",
+      "author": "Paul Mackenzie",
+      "stats": {
+        "insertions": 3,
+        "deletions": 1,
+        "files": 2
+      },
+      "type": "branch-commit",
+      "branch": "meta-timeline-development",
+      "branchDisplay": "meta-timeline-development",
+      "isMerge": false,
+      "refs": "",
+      "formattedDate": "27 August 2025 at 14:00",
+      "statsText": "+3 -1 lines"
+    },
+    {
+      "version": "v1.0.3",
+      "hash": "0d96e96",
+      "message": "adjusting logo glow color",
+      "date": "2025-08-27T13:11:03.000Z",
+      "author": "Paul Mackenzie",
+      "stats": {
+        "insertions": 1,
+        "deletions": 1,
+        "files": 1
+      },
+      "type": "branch-commit",
+      "branch": "meta-timeline-development",
+      "branchDisplay": "meta-timeline-development",
+      "isMerge": false,
+      "refs": "",
+      "formattedDate": "27 August 2025 at 14:11",
+      "statsText": "+1 -1 lines"
+    },
+    {
+      "version": "v1.0.4",
+      "hash": "705e28c",
+      "message": "Removing 'built with' section of footer",
+      "date": "2025-08-27T13:54:05.000Z",
+      "author": "Paul Mackenzie",
+      "stats": {
+        "insertions": 0,
+        "deletions": 1,
+        "files": 1
+      },
+      "type": "branch-commit",
+      "branch": "meta-timeline-development",
+      "branchDisplay": "meta-timeline-development",
+      "isMerge": false,
+      "refs": "",
+      "formattedDate": "27 August 2025 at 14:54",
+      "statsText": "-1 lines"
+    },
+    {
+      "version": "v1.0.5",
+      "hash": "e96430c",
+      "message": "Updating logo hover area.",
+      "date": "2025-08-27T14:08:14.000Z",
+      "author": "Paul Mackenzie",
+      "stats": {
+        "insertions": 2,
+        "deletions": 2,
+        "files": 1
+      },
+      "type": "branch-commit",
+      "branch": "meta-timeline-development",
+      "branchDisplay": "meta-timeline-development",
+      "isMerge": false,
+      "refs": "",
+      "formattedDate": "27 August 2025 at 15:08",
+      "statsText": "+2 -2 lines"
+    },
+    {
+      "version": "v1.0.6",
+      "hash": "cfe3f75",
+      "message": "Updating list copy.",
+      "date": "2025-08-27T16:40:23.000Z",
+      "author": "Paul Mackenzie",
+      "stats": {
+        "insertions": 2,
+        "deletions": 2,
+        "files": 1
+      },
+      "type": "branch-commit",
+      "branch": "meta-timeline-development",
+      "branchDisplay": "meta-timeline-development",
+      "isMerge": false,
+      "refs": "",
+      "formattedDate": "27 August 2025 at 17:40",
+      "statsText": "+2 -2 lines"
+    },
+    {
+      "version": "v1.0.7",
+      "hash": "ce926e0",
+      "message": "Adding flicker to .studio on hover",
+      "date": "2025-08-27T20:54:52.000Z",
+      "author": "Paul Mackenzie",
+      "stats": {
+        "insertions": 48,
+        "deletions": 1,
+        "files": 2
+      },
+      "type": "branch-commit",
+      "branch": "meta-timeline-development",
+      "branchDisplay": "meta-timeline-development",
+      "isMerge": false,
+      "refs": "",
+      "formattedDate": "27 August 2025 at 21:54",
+      "statsText": "+48 -1 lines"
+    },
+    {
+      "version": "v1.0.8",
+      "hash": "398c592",
+      "message": "Altering flickering speed, and target area.",
+      "date": "2025-08-28T06:08:59.000Z",
+      "author": "Paul Mackenzie",
+      "stats": {
+        "insertions": 4,
+        "deletions": 4,
+        "files": 2
+      },
+      "type": "branch-commit",
+      "branch": "meta-timeline-development",
+      "branchDisplay": "meta-timeline-development",
+      "isMerge": false,
+      "refs": "",
+      "formattedDate": "28 August 2025 at 07:08",
+      "statsText": "+4 -4 lines"
+    },
+    {
+      "version": "v1.0.9",
+      "hash": "23106e0",
+      "message": "Adjusting target area, again.",
+      "date": "2025-08-28T06:22:11.000Z",
+      "author": "Paul Mackenzie",
+      "stats": {
+        "insertions": 14,
+        "deletions": 12,
+        "files": 1
+      },
+      "type": "branch-commit",
+      "branch": "meta-timeline-development",
+      "branchDisplay": "main -> meta-timeline-development",
+      "isMerge": false,
+      "refs": "HEAD -> meta-timeline-development, main",
+      "formattedDate": "28 August 2025 at 07:22",
+      "statsText": "+14 -12 lines"
+    }
+  ]
+}

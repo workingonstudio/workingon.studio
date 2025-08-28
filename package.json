@@ -3,10 +3,11 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
+    "dev": "npm run timeline:generate && astro dev",
+    "build": "npm run timeline:generate && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "timeline:generate": "node scripts/generateTimeline.js"
   },
   "dependencies": {
     "@astrojs/svelte": "^7.1.0",
@@ -15,5 +16,8 @@
     "svelte": "^5.38.5",
     "tailwindcss": "^4.1.12",
     "typescript": "^5.9.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.11"
   }
 }
