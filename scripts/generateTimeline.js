@@ -17,35 +17,43 @@ function parseStats(statsLine) {
   };
 }
 
-function extractBranchFromRefs(refs) {
-  if (!refs) return null;
-
-  // Look for branch references (origin/branch-name or branch-name)
-  const branchMatch = refs.match(/origin\/([^,\s]+)/);
-  if (branchMatch) return branchMatch[1];
-
-  // Look for local branch references
-  const localBranchMatch = refs.match(/(?:^|\s)([^/\s,]+)(?:\s|,|$)/);
-  if (localBranchMatch && !localBranchMatch[1].includes("HEAD")) {
-    return localBranchMatch[1];
-  }
-
-  return null;
-}
-
-function getCurrentBranchForCommit(hash) {
+function getBranchForCommit(hash) {
   try {
-    const branchOutput = execSync(`git branch --contains ${hash}`, {
-      encoding: "utf8",
-    });
-    const branches = branchOutput
-      .split("\n")
-      .map((line) => line.replace(/^\*?\s+/, ""))
-      .filter((branch) => branch && branch !== "main" && branch !== "master");
+    // First, try to find branches that contain this commit
+    const branchOutput = execSync(
+      `git branch --contains ${hash} --format="%(refname:short)"`,
+      { encoding: "utf8" }
+    ).trim();
 
-    return branches[0] || "main";
+    if (branchOutput) {
+      const branches = branchOutput
+        .split("\n")
+        .filter((branch) => branch.trim());
+
+      // If commit is on main/master, prefer that
+      if (branches.includes("main")) return "main";
+      if (branches.includes("master")) return "master";
+
+      // Otherwise, return the first non-main branch
+      const featureBranches = branches.filter(
+        (b) => b !== "main" && b !== "master"
+      );
+      if (featureBranches.length > 0) return featureBranches[0];
+
+      return branches[0] || "main";
+    }
+
+    // Fallback: try to get current branch at time of commit
+    const currentBranch = execSync("git branch --show-current", {
+      encoding: "utf8",
+    }).trim();
+    return currentBranch || "main";
   } catch (error) {
-    return "unknown";
+    console.warn(
+      `Could not determine branch for commit ${hash}:`,
+      error.message
+    );
+    return "main";
   }
 }
 
@@ -55,64 +63,20 @@ function determineEntryType(message, isMerge, branchName) {
   }
 
   if (branchName && branchName !== "main" && branchName !== "master") {
-    return "branch-commit";
-  }
-
-  // Check for common branch creation patterns in commit messages
-  if (
-    message.toLowerCase().includes("create") &&
-    message.toLowerCase().includes("branch")
-  ) {
-    return "branch-creation";
+    return "feature";
   }
 
   return "commit";
 }
 
-function formatBranchDisplay(refs, branchName) {
-  if (!refs) return branchName || "main";
-
-  // Parse refs to find branch flow
-  // Example: "HEAD -> meta-timeline-development, main" becomes "main -> meta-timeline-development"
-  const refParts = refs.split(",").map((r) => r.trim());
-
-  let fromBranch = "main";
-  let toBranch = branchName;
-
-  // Look for HEAD -> branch pattern
-  const headMatch = refs.match(/HEAD -> ([^,]+)/);
-  if (headMatch) {
-    toBranch = headMatch[1];
-  }
-
-  // If we have multiple refs, assume the non-HEAD one is the source
-  const otherRefs = refParts.filter(
-    (ref) =>
-      !ref.includes("HEAD") &&
-      !ref.includes("origin/") &&
-      ref.trim() !== toBranch
-  );
-
-  if (otherRefs.length > 0) {
-    fromBranch = otherRefs[0].trim();
-  }
-
-  // Don't show arrow for main branch commits
-  if (toBranch === "main" || toBranch === fromBranch) {
-    return toBranch;
-  }
-
-  return `${fromBranch} -> ${toBranch}`;
-}
-
 function extractGitHistory() {
   try {
-    // Get the latest tag (assuming v1.0 format)
+    // Get the latest tag
     const latestTag = execSync("git describe --tags --abbrev=0", {
       encoding: "utf8",
     }).trim();
 
-    // Get all commits since the tag, including merge commits and branch info
+    // Get all commits since the tag
     const gitLogOutput = execSync(
       `git log ${latestTag}..HEAD --format="%H|%s|%ci|%an|%P" --shortstat --reverse`,
       { encoding: "utf8" }
@@ -124,24 +88,8 @@ function extractGitHistory() {
       { encoding: "utf8" }
     );
 
-    // Get branch information for commits
-    const branchInfoOutput = execSync(
-      `git log ${latestTag}..HEAD --format="%H|%D" --reverse`,
-      { encoding: "utf8" }
-    );
-
     const commits = [];
     let commitCount = 0;
-
-    // Parse branch info into a lookup map
-    const branchInfo = new Map();
-    const branchLines = branchInfoOutput.split("\n");
-    for (const line of branchLines) {
-      if (line && line.includes("|")) {
-        const [hash, refs] = line.split("|");
-        branchInfo.set(hash, refs.trim());
-      }
-    }
 
     // Parse the tag commit first
     const tagLines = tagCommitOutput.split("\n");
@@ -173,17 +121,15 @@ function extractGitHistory() {
       if (line && line.includes("|")) {
         const [hash, message, date, author, parents] = line.split("|");
 
-        // Check if this is a merge commit (has multiple parents)
+        // Check if this is a merge commit
         const parentHashes = parents ? parents.split(" ").filter((p) => p) : [];
         const isMerge = parentHashes.length > 1;
 
-        // Determine branch info and type
-        const refs = branchInfo.get(hash) || "";
-        const branchName =
-          extractBranchFromRefs(refs) || getCurrentBranchForCommit(hash);
+        // Get actual branch for this commit
+        const branchName = getBranchForCommit(hash);
         const entryType = determineEntryType(message, isMerge, branchName);
 
-        // Look for stats line (next non-empty line that contains insertions/deletions)
+        // Look for stats line
         let statsLine = "";
         for (let j = i + 1; j < lines.length && j < i + 5; j++) {
           if (
@@ -207,9 +153,8 @@ function extractGitHistory() {
           stats: parseStats(statsLine),
           type: entryType,
           branch: branchName,
-          branchDisplay: formatBranchDisplay(refs, branchName),
+          branchDisplay: branchName, // Simplified - just show the actual branch
           isMerge: isMerge,
-          refs: refs,
         });
       }
     }

@@ -1,1 +1,6 @@
-export default {};
+// @ts-ignore
+import { vitePreprocess } from "@astrojs/svelte";
+
+export default {
+  preprocess: vitePreprocess(),
+};

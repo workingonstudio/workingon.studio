@@ -1,6 +1,6 @@
 {
-  "generated": "2025-08-28T10:57:01.882Z",
-  "lastBuild": "28 August 2025 at 11:57",
+  "generated": "2025-08-28T11:16:44.762Z",
+  "lastBuild": "28 August 2025 at 12:16",
   "entries": [
     {
       "version": "v1.0",
@@ -31,11 +31,10 @@
         "deletions": 3,
         "files": 1
       },
-      "type": "branch-commit",
-      "branch": "meta-timeline-development",
-      "branchDisplay": "meta-timeline-development",
+      "type": "commit",
+      "branch": "main",
+      "branchDisplay": "main",
       "isMerge": false,
-      "refs": "",
       "formattedDate": "27 August 2025 at 13:42",
       "statsText": "+11 -3 lines"
     },
@@ -50,11 +49,10 @@
         "deletions": 1,
         "files": 2
       },
-      "type": "branch-commit",
-      "branch": "meta-timeline-development",
-      "branchDisplay": "meta-timeline-development",
+      "type": "commit",
+      "branch": "main",
+      "branchDisplay": "main",
       "isMerge": false,
-      "refs": "",
       "formattedDate": "27 August 2025 at 14:00",
       "statsText": "+3 -1 lines"
     },
@@ -69,11 +67,10 @@
         "deletions": 1,
         "files": 1
       },
-      "type": "branch-commit",
-      "branch": "meta-timeline-development",
-      "branchDisplay": "meta-timeline-development",
+      "type": "commit",
+      "branch": "main",
+      "branchDisplay": "main",
       "isMerge": false,
-      "refs": "",
       "formattedDate": "27 August 2025 at 14:11",
       "statsText": "+1 -1 lines"
     },
@@ -88,11 +85,10 @@
         "deletions": 1,
         "files": 1
       },
-      "type": "branch-commit",
-      "branch": "meta-timeline-development",
-      "branchDisplay": "meta-timeline-development",
+      "type": "commit",
+      "branch": "main",
+      "branchDisplay": "main",
       "isMerge": false,
-      "refs": "",
       "formattedDate": "27 August 2025 at 14:54",
       "statsText": "-1 lines"
     },
@@ -107,11 +103,10 @@
         "deletions": 2,
         "files": 1
       },
-      "type": "branch-commit",
-      "branch": "meta-timeline-development",
-      "branchDisplay": "meta-timeline-development",
+      "type": "commit",
+      "branch": "main",
+      "branchDisplay": "main",
       "isMerge": false,
-      "refs": "",
       "formattedDate": "27 August 2025 at 15:08",
       "statsText": "+2 -2 lines"
     },
@@ -126,11 +121,10 @@
         "deletions": 2,
         "files": 1
       },
-      "type": "branch-commit",
-      "branch": "meta-timeline-development",
-      "branchDisplay": "meta-timeline-development",
+      "type": "commit",
+      "branch": "main",
+      "branchDisplay": "main",
       "isMerge": false,
-      "refs": "",
       "formattedDate": "27 August 2025 at 17:40",
       "statsText": "+2 -2 lines"
     },
@@ -145,11 +139,10 @@
         "deletions": 1,
         "files": 2
       },
-      "type": "branch-commit",
-      "branch": "meta-timeline-development",
-      "branchDisplay": "meta-timeline-development",
+      "type": "commit",
+      "branch": "main",
+      "branchDisplay": "main",
       "isMerge": false,
-      "refs": "",
       "formattedDate": "27 August 2025 at 21:54",
       "statsText": "+48 -1 lines"
     },
@@ -164,11 +157,10 @@
         "deletions": 4,
         "files": 2
       },
-      "type": "branch-commit",
-      "branch": "meta-timeline-development",
-      "branchDisplay": "meta-timeline-development",
+      "type": "commit",
+      "branch": "main",
+      "branchDisplay": "main",
       "isMerge": false,
-      "refs": "",
       "formattedDate": "28 August 2025 at 07:08",
       "statsText": "+4 -4 lines"
     },
@@ -187,7 +179,6 @@
       "branch": "main",
       "branchDisplay": "main",
       "isMerge": false,
-      "refs": "origin/main, main",
       "formattedDate": "28 August 2025 at 07:22",
       "statsText": "+14 -12 lines"
     },
@@ -202,13 +193,30 @@
         "deletions": 20,
         "files": 8
       },
-      "type": "branch-commit",
+      "type": "feature",
       "branch": "meta-timeline-development",
-      "branchDisplay": "main -> meta-timeline-development",
+      "branchDisplay": "meta-timeline-development",
       "isMerge": false,
-      "refs": "HEAD -> meta-timeline-development, origin/meta-timeline-development",
       "formattedDate": "28 August 2025 at 11:36",
       "statsText": "+563 -20 lines"
+    },
+    {
+      "version": "v1.0.11",
+      "hash": "67f1495",
+      "message": "Fixing annoying VsCode error",
+      "date": "2025-08-28T11:02:50.000Z",
+      "author": "Paul Mackenzie",
+      "stats": {
+        "insertions": 36,
+        "deletions": 16,
+        "files": 5
+      },
+      "type": "feature",
+      "branch": "meta-timeline-development",
+      "branchDisplay": "meta-timeline-development",
+      "isMerge": false,
+      "formattedDate": "28 August 2025 at 12:02",
+      "statsText": "+36 -16 lines"
     }
   ]
 }
