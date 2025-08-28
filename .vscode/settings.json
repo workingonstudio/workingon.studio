@@ -6,5 +6,6 @@
   },
   "svelte.plugin.typescript.diagnostics.enable": true,
   "typescript.preferences.includePackageJsonAutoImports": "auto",
-  "svelte.plugin.svelte.diagnostics.enable": false
+  "svelte.plugin.svelte.diagnostics.enable": false,
+  "cSpell.words": ["nudica"]
 }
