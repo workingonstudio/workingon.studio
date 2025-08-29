@@ -6,13 +6,16 @@
     showTimeline = !showTimeline;
   }
 
-  // Get latest version for current branch - take the LAST entry, not first
-  $: currentBranchVersion =
-    timelineData?.entries
-      ?.filter((entry) => entry.branch === timelineData?.currentBranch)
-      ?.slice(-1)[0]?.version ||
-    timelineData?.entries?.slice(-1)[0]?.version ||
-    "v1.0.0";
+  // Get the latest version - simplified logic
+  $: currentVersion = (() => {
+    if (!timelineData?.entries || timelineData.entries.length === 0) {
+      return "v1.0.0";
+    }
+
+    // Get the very last entry (highest version)
+    const latestEntry = timelineData.entries[timelineData.entries.length - 1];
+    return latestEntry?.version || "v1.0.0";
+  })();
 
   // Group entries by date
   function groupByDate(entries) {
@@ -43,7 +46,7 @@
 
 <section class="timeline-section space-y-12">
   <div class="space-y-1">
-    <div>{currentBranchVersion}</div>
+    <div>{currentVersion}</div>
     <button
       class="last-built-trigger cursor-help"
       on:click={toggleTimeline}
@@ -94,8 +97,13 @@
                 class="timeline-entry space-y-2"
                 data-type={entry.type}
               >
-                <div class="entry-meta">
-                  <span class="time text-gray-500 text-[11px]">
+                <div
+                  class="entry-meta flex flex-row justify-between text-gray-600 text-[10px]"
+                >
+                  <span class="version-debug">
+                    {entry.version}
+                  </span>
+                  <span class="time">
                     {entry.formattedDate.split(" at ")[1]}
                   </span>
                 </div>
