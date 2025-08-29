@@ -6,13 +6,16 @@
     showTimeline = !showTimeline;
   }
 
-  // Get latest version for current branch - take the LAST entry, not first
-  $: currentBranchVersion =
-    timelineData?.entries
-      ?.filter((entry) => entry.branch === timelineData?.currentBranch)
-      ?.slice(-1)[0]?.version ||
-    timelineData?.entries?.slice(-1)[0]?.version ||
-    "v1.0.0";
+  // Get the latest version - simplified logic
+  $: currentVersion = (() => {
+    if (!timelineData?.entries || timelineData.entries.length === 0) {
+      return "v1.0.0";
+    }
+
+    // Get the very last entry (highest version)
+    const latestEntry = timelineData.entries[timelineData.entries.length - 1];
+    return latestEntry?.version || "v1.0.0";
+  })();
 
   // Group entries by date
   function groupByDate(entries) {
@@ -32,9 +35,12 @@
 
     // Convert to array and sort by date (newest first)
     return Object.entries(groups)
-      .map(([date, entries]) => ({ date, entries }))
+      .map(([date, entries]) => ({
+        date,
+        entries: entries.sort((a, b) => new Date(b.date) - new Date(a.date)), // Sort commits within date: newest first (latest time at top)
+      }))
       .sort(
-        (a, b) => new Date(b.entries[0].date) - new Date(a.entries[0].date)
+        (a, b) => new Date(b.entries[0].date) - new Date(a.entries[0].date) // Sort date groups: newest first
       );
   }
 
@@ -43,7 +49,7 @@
 
 <section class="timeline-section space-y-12">
   <div class="space-y-1">
-    <div>{currentBranchVersion}</div>
+    <div>{currentVersion}</div>
     <button
       class="last-built-trigger cursor-help"
       on:click={toggleTimeline}
@@ -82,9 +88,7 @@
     <div class="timeline-groups space-y-6 mb-6">
       {#each groupedEntries as group}
         <div class="date-group">
-          <h3
-            class="date-header text-sm text-gray-400 font-display mb-3 sticky top-0 bg-gray-950 py-1"
-          >
+          <h3 class="date-header text-sm text-gray-400 font-display mb-3 py-1">
             {group.date}
           </h3>
 
@@ -94,8 +98,13 @@
                 class="timeline-entry space-y-2"
                 data-type={entry.type}
               >
-                <div class="entry-meta">
-                  <span class="time text-gray-500 text-[11px]">
+                <div
+                  class="entry-meta flex flex-row justify-between text-gray-600 text-[10px]"
+                >
+                  <span class="version-debug">
+                    {entry.version}
+                  </span>
+                  <span class="time">
                     {entry.formattedDate.split(" at ")[1]}
                   </span>
                 </div>
@@ -104,9 +113,13 @@
                   {#if entry.branchMerged && entry.intoBranch}
                     <p class="message text-gray-100 text-xs">
                       <span class="merge-info">
-                        <span class="merged-branch">{entry.branchMerged}</span>
+                        <span class="merged-branch"
+                          >{entry.branchDisplay === entry.branchMerged
+                            ? entry.intoBranch
+                            : entry.branchDisplay}</span
+                        >
                         <span class="merge-arrow text-yellow-300">←</span>
-                        <span class="into-branch">{entry.intoBranch}</span>
+                        <span class="into-branch">{entry.branchMerged}</span>
                       </span>
                     </p>
                   {:else}
