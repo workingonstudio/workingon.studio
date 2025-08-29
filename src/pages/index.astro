@@ -1,6 +1,8 @@
 ---
 // src/pages/index.astro
 import Layout from '../layouts/Layout.astro';
+import Timeline from "../components/Timeline.svelte";
+import timelineData from '../data/timeline.json';
 
 const buildTime = new Date().toLocaleDateString('en-GB', {
   year: 'numeric',
@@ -16,7 +18,7 @@ const buildTime = new Date().toLocaleDateString('en-GB', {
 <Layout title="Working On Studio">
   <div class="bg-gray-950 text-gray-100">
     <main class="min-h-screen flex items-center justify-center p-8">
-      <div class="max-w-2xl mx-auto space-y-12">
+      <div class="max-w-md mx-auto space-y-12">
         <div class="group space-y-12">
           <div>
             <h1 class="text-base font-display cursor-default inline-block">
@@ -40,8 +42,9 @@ const buildTime = new Date().toLocaleDateString('en-GB', {
           </p>
         </div> -->
         <div class="text-[11px] text-gray-500 space-y-1">
-          <p>Last update: <span class="lowercase">{buildTime}</span></p>
-          <p>Repository: <a href="https://github.com/YOURUSERNAME/workingon-studio" class="underline">github.com/YOURUSERNAME/workingon-studio</a></p>
+          <div>
+            <Timeline timelineData={timelineData} client:load />
+          </div>
         </div>
       </div>
     </main>
