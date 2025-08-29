@@ -88,9 +88,7 @@
     <div class="timeline-groups space-y-6 mb-6">
       {#each groupedEntries as group}
         <div class="date-group">
-          <h3
-            class="date-header text-sm text-gray-400 font-display mb-3 sticky top-0 bg-gray-950 py-1"
-          >
+          <h3 class="date-header text-sm text-gray-400 font-display mb-3 py-1">
             {group.date}
           </h3>
 
