@@ -1,12 +1,12 @@
 {
-  "generated": "2025-08-29T05:58:13.209Z",
-  "lastBuild": "29 August 2025 at 06:58:13 GMT+01:00",
+  "generated": "2025-08-29T06:20:05.502Z",
+  "lastBuild": "29 August 2025 at 07:20:05 GMT+01:00",
   "source": "github-api",
   "repository": "prmack/WorkingOn.studio",
   "currentBranch": "main",
   "entries": [
     {
-      "version": "v1.0.0.1",
+      "version": "v1.0.1",
       "hash": "3260f62",
       "message": "v1.0 - escape Framer constraints, migrate to Astro",
       "date": "2025-08-27T12:31:27Z",
@@ -28,7 +28,7 @@
       "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/3260f6265c01106e8898a760f2cf338c61cebdb8"
     },
     {
-      "version": "v1.0.0.2",
+      "version": "v1.0.2",
       "hash": "7abca90",
       "message": "improve build time formatting to 24-hour clock",
       "date": "2025-08-27T12:42:37Z",
@@ -50,7 +50,7 @@
       "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/7abca90741ec5fea91529c7ff776ec20088121db"
     },
     {
-      "version": "v1.0.0.3",
+      "version": "v1.0.3",
       "hash": "a67714d",
       "message": "adding glow effect on logo hover",
       "date": "2025-08-27T13:00:40Z",
@@ -72,7 +72,7 @@
       "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/a67714d5d8d5a4aecf589feb22eff87e93132d6f"
     },
     {
-      "version": "v1.0.0.4",
+      "version": "v1.0.4",
       "hash": "dd054ca",
       "message": "adjusting logo glow color",
       "date": "2025-08-27T13:11:03Z",
@@ -94,7 +94,7 @@
       "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/dd054ca4fd95322460b9bd4150c5c528c19fb2b2"
     },
     {
-      "version": "v1.0.0.5",
+      "version": "v1.0.5",
       "hash": "3ec99ab",
       "message": "Removing 'built with' section of footer",
       "date": "2025-08-27T13:54:05Z",
@@ -116,7 +116,7 @@
       "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/3ec99abf5dffedeb2bcfc3e03e50daff8660d257"
     },
     {
-      "version": "v1.0.0.6",
+      "version": "v1.0.6",
       "hash": "92c5b4c",
       "message": "Updating logo hover area.",
       "date": "2025-08-27T14:08:14Z",
@@ -138,7 +138,7 @@
       "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/92c5b4c2b3c889e8145a59e8b28f78a5a1879aca"
     },
     {
-      "version": "v1.0.0.7",
+      "version": "v1.0.7",
       "hash": "0fe9c6d",
       "message": "Updating list copy.",
       "date": "2025-08-27T16:40:23Z",
@@ -160,7 +160,7 @@
       "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/0fe9c6dd68fbb62d1c46c479c89f27e8bf292169"
     },
     {
-      "version": "v1.0.0.8",
+      "version": "v1.0.8",
       "hash": "526645a",
       "message": "Adding flicker to .studio on hover",
       "date": "2025-08-27T20:54:52Z",
@@ -182,7 +182,7 @@
       "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/526645a9d95197362a890506b0904c58d15029bd"
     },
     {
-      "version": "v1.0.0.9",
+      "version": "v1.0.9",
       "hash": "511c71a",
       "message": "Altering flickering speed, and target area.",
       "date": "2025-08-28T06:08:59Z",
@@ -204,7 +204,7 @@
       "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/511c71a16473202ce5f576bf065fb6fba5d9eef8"
     },
     {
-      "version": "v1.0.0.10",
+      "version": "v1.0.10",
       "hash": "c4354f1",
       "message": "Adjusting target area, again.",
       "date": "2025-08-28T06:22:11Z",
@@ -226,7 +226,7 @@
       "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/c4354f122c3093a05db5b5a8b5b1712fba165d28"
     },
     {
-      "version": "v1.0.0.11",
+      "version": "v1.0.11",
       "hash": "f7750eb",
       "message": "Creating timeline script. Creating timeline component",
       "date": "2025-08-28T10:36:53Z",
@@ -250,7 +250,7 @@
       "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/f7750ebd321a1db721039aca34e763a2a679d75b"
     },
     {
-      "version": "v1.0.0.12",
+      "version": "v1.0.12",
       "hash": "3eab797",
       "message": "Fixing annoying VsCode error",
       "date": "2025-08-28T11:02:50Z",
@@ -274,7 +274,7 @@
       "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/3eab7978ca738fa41e4ae95159d7cb983c0f9928"
     },
     {
-      "version": "v1.0.0.13",
+      "version": "v1.0.13",
       "hash": "81c810c",
       "message": "Sorting better timeline script, styling timeline.",
       "date": "2025-08-28T11:36:06Z",
@@ -298,7 +298,7 @@
       "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/81c810c5563bd90df7b66478a2464edbe80ca417"
     },
     {
-      "version": "v1.0.0.14",
+      "version": "v1.0.14",
       "hash": "f9e3358",
       "message": "Remove licensed font files - now hosted on CDN",
       "date": "2025-08-28T12:00:22Z",
@@ -322,7 +322,7 @@
       "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/f9e3358e4e11365b0002934fd7fdba8305c32c38"
     },
     {
-      "version": "v1.0.0.15",
+      "version": "v1.0.15",
       "hash": "4cd52b3",
       "message": "Remove licensed fonts",
       "date": "2025-08-28T12:03:17Z",
@@ -344,7 +344,7 @@
       "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/4cd52b38203ab97d982b412b82da81c26b71b073"
     },
     {
-      "version": "v1.0.0.16",
+      "version": "v1.0.16",
       "hash": "5770bc6",
       "message": "Remove licensed fonts",
       "date": "2025-08-28T12:05:23Z",
@@ -368,7 +368,7 @@
       "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/5770bc628b35beadd8692a65bc58670b30e68910"
     },
     {
-      "version": "v1.0.0.17",
+      "version": "v1.0.17",
       "hash": "f16085f",
       "message": "Adding fallback font.",
       "date": "2025-08-28T13:48:41Z",
@@ -392,7 +392,7 @@
       "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/f16085ffd0ffeeab37c46ae81e526f0c20600881"
     },
     {
-      "version": "v1.0.0.18",
+      "version": "v1.0.18",
       "hash": "30704a6",
       "message": "Merge pull request /font-licence-fix",
       "date": "2025-08-28T15:47:36Z",
@@ -414,7 +414,7 @@
       "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/30704a690268eff13f43f1b190f1fc4904353d49"
     },
     {
-      "version": "v1.0.0.19",
+      "version": "v1.0.19",
       "hash": "4ba07f6",
       "message": "Merge main into timeline branch, resolve settings.json conflict",
       "date": "2025-08-28T15:56:28Z",
@@ -438,7 +438,7 @@
       "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/4ba07f609c9c6fc15abf92191453166290cdfda8"
     },
     {
-      "version": "v1.0.0.20",
+      "version": "v1.0.20",
       "hash": "86ca694",
       "message": "Really merging main this time.",
       "date": "2025-08-28T16:02:48Z",
@@ -462,7 +462,7 @@
       "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/86ca694fa16b3356673f212a5086ba7444c4e7c5"
     },
     {
-      "version": "v1.0.0.21",
+      "version": "v1.0.21",
       "hash": "4e1e6be",
       "message": "Updating script to request repo data from Github.",
       "date": "2025-08-28T18:55:03Z",
@@ -486,7 +486,7 @@
       "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/4e1e6be0962cda1cd39fcec10f096bfca49c601e"
     },
     {
-      "version": "v1.0.0.22",
+      "version": "v1.0.22",
       "hash": "d00f9b4",
       "message": "Updating git fetch script to be more strict, and show commits from draft PRs",
       "date": "2025-08-28T21:47:21Z",
@@ -510,7 +510,7 @@
       "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/d00f9b4a3ba6d6317a94cc6cf4f62f5e771999d0"
     },
     {
-      "version": "v1.0.0.23",
+      "version": "v1.0.23",
       "hash": "7ba8f57",
       "message": "Getting latest version from github. Styling entries",
       "date": "2025-08-28T22:51:52Z",
@@ -532,6 +532,30 @@
       "formattedDate": "28 August 2025 at 23:51:52 GMT+01:00",
       "statsText": "+153 -25 lines",
       "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/7ba8f57c58916b1a752441b263eb55328fc4a547"
+    },
+    {
+      "version": "v1.0.24",
+      "hash": "2ebaaca",
+      "message": "Updating time format to include Timezone, and Seconds",
+      "date": "2025-08-29T06:01:51Z",
+      "author": "Paul Mackenzie",
+      "stats": {
+        "insertions": 52,
+        "deletions": 26,
+        "files": 4
+      },
+      "type": "draft-feature",
+      "branch": "meta-timeline-development",
+      "branchDisplay": "meta-timeline-development",
+      "branchMerged": null,
+      "intoBranch": null,
+      "isMerge": false,
+      "isDraft": true,
+      "prNumber": 2,
+      "prTitle": "Meta timeline development",
+      "formattedDate": "29 August 2025 at 07:01:51 GMT+01:00",
+      "statsText": "+52 -26 lines",
+      "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/2ebaacab821b691fc489b33fbd3e77068c1576f7"
     }
   ]
 }

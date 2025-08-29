@@ -6,12 +6,12 @@
     showTimeline = !showTimeline;
   }
 
-  // Get latest version for current branch
+  // Get latest version for current branch - take the LAST entry, not first
   $: currentBranchVersion =
-    timelineData?.entries?.filter(
-      (entry) => entry.branch === timelineData?.currentBranch
-    )?.[0]?.version ||
-    timelineData?.entries?.[0]?.version ||
+    timelineData?.entries
+      ?.filter((entry) => entry.branch === timelineData?.currentBranch)
+      ?.slice(-1)[0]?.version ||
+    timelineData?.entries?.slice(-1)[0]?.version ||
     "v1.0.0";
 
   // Group entries by date

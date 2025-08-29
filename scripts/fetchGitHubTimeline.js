@@ -109,15 +109,15 @@ function generateVersion(commit, index, latestTag = "v1.0.0") {
   const message = commit.commit.message;
   const versionMatch = message.match(/^v?(\d+\.\d+\.\d+)/);
   if (versionMatch) {
-    return versionMatch[1];
+    return `v${versionMatch[1]}`;
   }
 
-  // Otherwise, auto-increment from latest tag
-  const [major, minor, patch] = latestTag
-    .replace("v", "")
-    .split(".")
-    .map(Number);
-  return `v${major}.${minor}.${patch}.${index + 1}`;
+  // Extract major.minor from the tag, ignoring patch
+  const tagWithoutV = latestTag.replace("v", "");
+  const [major, minor] = tagWithoutV.split(".").map(Number);
+
+  // Auto-increment with just major.minor.increment format
+  return `v${major}.${minor}.${index + 1}`;
 }
 
 function formatDate(isoString) {
@@ -320,6 +320,19 @@ async function fetchGitHubTimeline() {
       console.warn('Could not determine current branch, using "main"');
     }
 
+    // Get the latest tag
+    let latestTag = "v1.0.0";
+    try {
+      const tags = await fetchFromGitHub(
+        `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/tags`
+      );
+      if (tags && tags.length > 0) {
+        latestTag = tags[0].name;
+      }
+    } catch (error) {
+      console.warn('Could not fetch tags, using default "v1.0.0"');
+    }
+
     // DEBUG: Show which commits we're actually processing
     console.log("\n🔍 DEBUG: Commits Being Processed (including drafts):");
     uniqueCommits.forEach((commit, index) => {
@@ -368,7 +381,7 @@ async function fetchGitHubTimeline() {
         }
 
         return {
-          version: generateVersion(commit, index),
+          version: generateVersion(commit, index, latestTag),
           hash: commit.sha.substring(0, 7),
           message: commit.commit.message.split("\n")[0], // First line only
           date: commit.commit.committer.date,
