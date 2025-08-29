@@ -112,9 +112,13 @@
                   {#if entry.branchMerged && entry.intoBranch}
                     <p class="message text-gray-100 text-xs">
                       <span class="merge-info">
-                        <span class="merged-branch">{entry.branchMerged}</span>
+                        <span class="merged-branch"
+                          >{entry.branchDisplay === entry.branchMerged
+                            ? entry.intoBranch
+                            : entry.branchDisplay}</span
+                        >
                         <span class="merge-arrow text-yellow-300">←</span>
-                        <span class="into-branch">{entry.intoBranch}</span>
+                        <span class="into-branch">{entry.branchMerged}</span>
                       </span>
                     </p>
                   {:else}

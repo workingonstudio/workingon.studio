@@ -393,12 +393,61 @@ async function fetchGitHubTimeline() {
         }
 
         // Handle merge commit branch information
+        // Handle merge commit branch information
         let branchMerged = null;
         let intoBranch = null;
-        if (commit.parents && commit.parents.length > 1 && pr) {
-          // This is a merge commit with PR context
-          branchMerged = pr.head.ref; // The branch that was merged
-          intoBranch = pr.base.ref; // The branch it was merged into
+        if (commit.parents && commit.parents.length > 1) {
+          // This is a merge commit
+          const message = commit.commit.message;
+
+          // Try to parse branch name from commit message
+          // Common patterns: "Merge pull request #X from branch-name"
+          //                  "Merge branch 'branch-name' into target-branch"
+          //                  "Merge pull request /branch-name"
+
+          const prMergeMatch = message.match(
+            /Merge pull request.*?\/([^.\s]+)/
+          );
+          const branchMergeMatch = message.match(
+            /Merge branch '([^']+)' into (.+)/
+          );
+          const simplePRMatch = message.match(
+            /Merge pull request.*?from.*?\/([^.\s]+)/
+          );
+
+          if (branchMergeMatch) {
+            // Direct branch merge: "Merge branch 'feature' into dev"
+            branchMerged = branchMergeMatch[1];
+            intoBranch = branchMergeMatch[2];
+          } else if (prMergeMatch) {
+            // PR merge: "Merge pull request /branch-name"
+            branchMerged = prMergeMatch[1];
+            // For PR merges, determine target from PR data or current branch context
+            if (pr) {
+              intoBranch = pr.base.ref;
+            } else {
+              // Fallback to the branch this commit appears to be on
+              intoBranch = branchName;
+            }
+          } else if (simplePRMatch) {
+            // GitHub PR merge: "Merge pull request #X from user/branch-name"
+            branchMerged = simplePRMatch[1];
+            if (pr) {
+              intoBranch = pr.base.ref;
+            } else {
+              intoBranch = branchName;
+            }
+          } else if (pr) {
+            // Fallback to PR data if we have it
+            branchMerged = pr.head.ref;
+            intoBranch = pr.base.ref;
+          }
+
+          console.log(
+            `🔀 Merge commit ${commit.sha.substring(0, 7)}: "${
+              message.split("\n")[0]
+            }" -> ${branchMerged} → ${intoBranch}`
+          );
         }
 
         return {
