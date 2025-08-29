@@ -110,7 +110,9 @@
                       </span>
                     </p>
                   {:else}
-                    <p class="first-letter:capitalize text-gray-100 text-xs">
+                    <p
+                      class="first-letter:capitalize text-gray-100 text-xs/relaxed"
+                    >
                       {entry.message}
                     </p>
                   {/if}

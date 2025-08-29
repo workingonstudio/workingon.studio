@@ -383,7 +383,11 @@ async function fetchGitHubTimeline() {
         return {
           version: generateVersion(commit, index, latestTag),
           hash: commit.sha.substring(0, 7),
-          message: commit.commit.message.split("\n")[0], // First line only
+          message: (() => {
+            const msg = commit.commit.message.split("\n")[0]; // First line only
+            // Add period if not present and message doesn't end with other punctuation
+            return msg.match(/[.!?]$/) ? msg : msg + ".";
+          })(),
           date: commit.commit.committer.date,
           author: commit.commit.author.name,
           stats: {

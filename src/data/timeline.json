@@ -1,6 +1,6 @@
 {
-  "generated": "2025-08-29T06:20:05.502Z",
-  "lastBuild": "29 August 2025 at 07:20:05 GMT+01:00",
+  "generated": "2025-08-29T06:59:10.575Z",
+  "lastBuild": "29 August 2025 at 07:59:10 GMT+01:00",
   "source": "github-api",
   "repository": "prmack/WorkingOn.studio",
   "currentBranch": "main",
@@ -8,7 +8,7 @@
     {
       "version": "v1.0.1",
       "hash": "3260f62",
-      "message": "v1.0 - escape Framer constraints, migrate to Astro",
+      "message": "v1.0 - escape Framer constraints, migrate to Astro.",
       "date": "2025-08-27T12:31:27Z",
       "author": "Paul Mackenzie",
       "stats": {
@@ -30,7 +30,7 @@
     {
       "version": "v1.0.2",
       "hash": "7abca90",
-      "message": "improve build time formatting to 24-hour clock",
+      "message": "improve build time formatting to 24-hour clock.",
       "date": "2025-08-27T12:42:37Z",
       "author": "Paul Mackenzie",
       "stats": {
@@ -52,7 +52,7 @@
     {
       "version": "v1.0.3",
       "hash": "a67714d",
-      "message": "adding glow effect on logo hover",
+      "message": "adding glow effect on logo hover.",
       "date": "2025-08-27T13:00:40Z",
       "author": "Paul Mackenzie",
       "stats": {
@@ -74,7 +74,7 @@
     {
       "version": "v1.0.4",
       "hash": "dd054ca",
-      "message": "adjusting logo glow color",
+      "message": "adjusting logo glow color.",
       "date": "2025-08-27T13:11:03Z",
       "author": "Paul Mackenzie",
       "stats": {
@@ -96,7 +96,7 @@
     {
       "version": "v1.0.5",
       "hash": "3ec99ab",
-      "message": "Removing 'built with' section of footer",
+      "message": "Removing 'built with' section of footer.",
       "date": "2025-08-27T13:54:05Z",
       "author": "Paul Mackenzie",
       "stats": {
@@ -162,7 +162,7 @@
     {
       "version": "v1.0.8",
       "hash": "526645a",
-      "message": "Adding flicker to .studio on hover",
+      "message": "Adding flicker to .studio on hover.",
       "date": "2025-08-27T20:54:52Z",
       "author": "Paul Mackenzie",
       "stats": {
@@ -228,7 +228,7 @@
     {
       "version": "v1.0.11",
       "hash": "f7750eb",
-      "message": "Creating timeline script. Creating timeline component",
+      "message": "Creating timeline script. Creating timeline component.",
       "date": "2025-08-28T10:36:53Z",
       "author": "Paul Mackenzie",
       "stats": {
@@ -252,7 +252,7 @@
     {
       "version": "v1.0.12",
       "hash": "3eab797",
-      "message": "Fixing annoying VsCode error",
+      "message": "Fixing annoying VsCode error.",
       "date": "2025-08-28T11:02:50Z",
       "author": "Paul Mackenzie",
       "stats": {
@@ -300,7 +300,7 @@
     {
       "version": "v1.0.14",
       "hash": "f9e3358",
-      "message": "Remove licensed font files - now hosted on CDN",
+      "message": "Remove licensed font files - now hosted on CDN.",
       "date": "2025-08-28T12:00:22Z",
       "author": "Paul Mackenzie",
       "stats": {
@@ -324,7 +324,7 @@
     {
       "version": "v1.0.15",
       "hash": "4cd52b3",
-      "message": "Remove licensed fonts",
+      "message": "Remove licensed fonts.",
       "date": "2025-08-28T12:03:17Z",
       "author": "Paul Mackenzie",
       "stats": {
@@ -346,7 +346,7 @@
     {
       "version": "v1.0.16",
       "hash": "5770bc6",
-      "message": "Remove licensed fonts",
+      "message": "Remove licensed fonts.",
       "date": "2025-08-28T12:05:23Z",
       "author": "Paul Mackenzie",
       "stats": {
@@ -394,7 +394,7 @@
     {
       "version": "v1.0.18",
       "hash": "30704a6",
-      "message": "Merge pull request /font-licence-fix",
+      "message": "Merge pull request /font-licence-fix.",
       "date": "2025-08-28T15:47:36Z",
       "author": "Paul Mackenzie",
       "stats": {
@@ -416,7 +416,7 @@
     {
       "version": "v1.0.19",
       "hash": "4ba07f6",
-      "message": "Merge main into timeline branch, resolve settings.json conflict",
+      "message": "Merge main into timeline branch, resolve settings.json conflict.",
       "date": "2025-08-28T15:56:28Z",
       "author": "Paul Mackenzie",
       "stats": {
@@ -488,7 +488,7 @@
     {
       "version": "v1.0.22",
       "hash": "d00f9b4",
-      "message": "Updating git fetch script to be more strict, and show commits from draft PRs",
+      "message": "Updating git fetch script to be more strict, and show commits from draft PRs.",
       "date": "2025-08-28T21:47:21Z",
       "author": "Paul Mackenzie",
       "stats": {
@@ -512,7 +512,7 @@
     {
       "version": "v1.0.23",
       "hash": "7ba8f57",
-      "message": "Getting latest version from github. Styling entries",
+      "message": "Getting latest version from github. Styling entries.",
       "date": "2025-08-28T22:51:52Z",
       "author": "Paul Mackenzie",
       "stats": {
@@ -536,7 +536,7 @@
     {
       "version": "v1.0.24",
       "hash": "2ebaaca",
-      "message": "Updating time format to include Timezone, and Seconds",
+      "message": "Updating time format to include Timezone, and Seconds.",
       "date": "2025-08-29T06:01:51Z",
       "author": "Paul Mackenzie",
       "stats": {
@@ -556,6 +556,54 @@
       "formattedDate": "29 August 2025 at 07:01:51 GMT+01:00",
       "statsText": "+52 -26 lines",
       "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/2ebaacab821b691fc489b33fbd3e77068c1576f7"
+    },
+    {
+      "version": "v1.0.25",
+      "hash": "2aebf60",
+      "message": "Fixing version number logic. Now depended on main branch.",
+      "date": "2025-08-29T06:26:26Z",
+      "author": "Paul Mackenzie",
+      "stats": {
+        "insertions": 75,
+        "deletions": 38,
+        "files": 3
+      },
+      "type": "draft-feature",
+      "branch": "meta-timeline-development",
+      "branchDisplay": "meta-timeline-development",
+      "branchMerged": null,
+      "intoBranch": null,
+      "isMerge": false,
+      "isDraft": true,
+      "prNumber": 2,
+      "prTitle": "Meta timeline development",
+      "formattedDate": "29 August 2025 at 07:26:26 GMT+01:00",
+      "statsText": "+75 -38 lines",
+      "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/2aebf60ca2c9430d136e2043aebdaed3a185f2db"
+    },
+    {
+      "version": "v1.0.26",
+      "hash": "44d0a06",
+      "message": "Changing rendering of timeline. Styling cursors. Moving github link.",
+      "date": "2025-08-29T06:43:52Z",
+      "author": "Paul Mackenzie",
+      "stats": {
+        "insertions": 66,
+        "deletions": 62,
+        "files": 2
+      },
+      "type": "draft-feature",
+      "branch": "meta-timeline-development",
+      "branchDisplay": "meta-timeline-development",
+      "branchMerged": null,
+      "intoBranch": null,
+      "isMerge": false,
+      "isDraft": true,
+      "prNumber": 2,
+      "prTitle": "Meta timeline development",
+      "formattedDate": "29 August 2025 at 07:43:52 GMT+01:00",
+      "statsText": "+66 -62 lines",
+      "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/44d0a0676f6793e34dc23c335c02e7e9b107f319"
     }
   ]
 }
