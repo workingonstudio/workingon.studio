@@ -31,7 +31,45 @@ function findPRForCommit(prCommitsMap, commit) {
   return prCommitsMap[commit.sha] || null;
 }
 
+function extractBracketTags(message) {
+  // Extract all tags in square brackets like [TRANSPARENCY], [FEATURE], etc.
+  const bracketMatches = message.match(/\[([^\]]+)\]/g);
+  return bracketMatches
+    ? bracketMatches.map(
+        (match) => match.slice(1, -1).toLowerCase() // Remove brackets and lowercase
+      )
+    : [];
+}
+
 function determineTypeFromPR(pr, commit, branchName) {
+  const message = commit.commit.message;
+  const messageLower = message.toLowerCase();
+
+  // Extract bracket tags for logging
+  const bracketTags = extractBracketTags(message);
+
+  // Check for transparency/meta commits via bracket tags
+  if (
+    bracketTags.includes("transparency") ||
+    messageLower.includes("transparency commit") ||
+    messageLower.includes("timeline recovery")
+  ) {
+    return "transparency";
+  }
+
+  // Check for other bracket tag types
+  if (bracketTags.includes("release")) {
+    return "release";
+  }
+
+  if (bracketTags.includes("hotfix")) {
+    return "hotfix";
+  }
+
+  if (bracketTags.includes("docs")) {
+    return "docs";
+  }
+
   if (commit.parents && commit.parents.length > 1) {
     return "merge";
   }
@@ -42,11 +80,10 @@ function determineTypeFromPR(pr, commit, branchName) {
   }
 
   // Check commit message for patterns
-  const message = commit.commit.message.toLowerCase();
   if (
-    message.includes("release") ||
-    message.includes("version") ||
-    message.match(/^v\d+\./)
+    messageLower.includes("release") ||
+    messageLower.includes("version") ||
+    messageLower.match(/^v\d+\./)
   ) {
     return "release";
   }
@@ -58,7 +95,7 @@ function determineTypeFromPR(pr, commit, branchName) {
   return "commit";
 }
 
-// Add this function to get tags with their commit dates
+// Add this function to get tags with their commit dates - VERSION TAGS ONLY
 async function getTagsWithDates(octokit, owner, repo) {
   try {
     const tags = await octokit.paginate(octokit.rest.repos.listTags, {
@@ -67,9 +104,16 @@ async function getTagsWithDates(octokit, owner, repo) {
       per_page: 100,
     });
 
-    // Get commit details for each tag to get the date
+    // Filter to only version tags (v followed by numbers and dots)
+    const versionTags = tags.filter((tag) => /^v\d+\.\d+\.\d+$/.test(tag.name));
+
+    console.log(
+      `📦 Found ${tags.length} total tags, ${versionTags.length} version tags`
+    );
+
+    // Get commit details for each version tag to get the date
     const tagsWithDates = [];
-    for (const tag of tags) {
+    for (const tag of versionTags) {
       try {
         const { data: tagCommit } = await octokit.rest.repos.getCommit({
           owner: owner,
@@ -83,7 +127,7 @@ async function getTagsWithDates(octokit, owner, repo) {
           sha: tag.commit.sha,
         });
       } catch (error) {
-        console.warn(`Could not fetch commit for tag ${tag.name}`);
+        console.warn(`Could not fetch commit for version tag ${tag.name}`);
       }
     }
 
@@ -91,18 +135,18 @@ async function getTagsWithDates(octokit, owner, repo) {
     tagsWithDates.sort((a, b) => a.date - b.date);
 
     console.log(
-      "🏷️  Tags with dates:",
+      "🏷️  Version tags with dates:",
       tagsWithDates.map((t) => `${t.name} (${t.date.toISOString()})`)
     );
 
     return tagsWithDates;
   } catch (error) {
     console.warn(`Could not fetch tags with dates: ${error.message}`);
-    return [{ name: "v1.0.0", date: new Date(0) }]; // Default fallback
+    return [{ name: "v1.1.0", date: new Date("2025-08-29T07:25:20Z") }]; // Default fallback with your known tag
   }
 }
 
-// Modified version generation function
+// Fixed version generation function - clean production version
 function generateVersionForCommit(commit, allCommitsInOrder, tagsWithDates) {
   // If this commit message looks like a release, use that
   const message = commit.commit.message;
@@ -113,21 +157,32 @@ function generateVersionForCommit(commit, allCommitsInOrder, tagsWithDates) {
 
   const commitDate = new Date(commit.commit.committer.date);
 
-  // Find which tag this commit came after
+  // Find which tag this commit came after (or is equal to)
   let relevantTag = null;
+
   for (let i = tagsWithDates.length - 1; i >= 0; i--) {
-    if (commitDate > tagsWithDates[i].date) {
+    if (commitDate >= tagsWithDates[i].date) {
       relevantTag = tagsWithDates[i];
       break;
     }
   }
 
-  // If no tag found, use default
-  if (!relevantTag) {
-    relevantTag = { name: "v1.0.0", date: new Date(0) };
+  // Safe fallback - use your known v1.1.0 tag
+  if (!relevantTag || !relevantTag.name) {
+    relevantTag = { name: "v1.1.0", date: new Date("2025-08-29T07:25:20Z") };
   }
 
-  // Count commits since this tag
+  // Special case: if this commit is exactly at a tag, return the tag version
+  const matchingTag = tagsWithDates.find(
+    (tag) =>
+      Math.abs(new Date(tag.date).getTime() - commitDate.getTime()) < 1000 // Within 1 second
+  );
+
+  if (matchingTag) {
+    return matchingTag.name;
+  }
+
+  // Count commits since this tag (excluding the tag commit itself)
   const commitsAfterTag = allCommitsInOrder.filter((c) => {
     const cDate = new Date(c.commit.committer.date);
     return cDate > relevantTag.date && cDate <= commitDate;
@@ -135,19 +190,15 @@ function generateVersionForCommit(commit, allCommitsInOrder, tagsWithDates) {
 
   const incrementalIndex = commitsAfterTag.length;
 
-  // Extract version parts from the relevant tag
-  const tagWithoutV = relevantTag.name.replace("v", "");
-  const [major, minor] = tagWithoutV.split(".").map(Number);
+  // Safe parsing of version numbers
+  const tagWithoutV = relevantTag.name.replace(/^v/, "");
+  const versionParts = tagWithoutV.split(".");
+  const major = parseInt(versionParts[0]) || 1;
+  const minor = parseInt(versionParts[1]) || 0;
+  const patch = parseInt(versionParts[2]) || 0;
 
-  const newVersion = `v${major}.${minor}.${incrementalIndex}`;
-  console.log(
-    `🔢 Commit ${commit.sha.substring(
-      0,
-      7
-    )} (${commitDate.toISOString()}) -> after tag ${
-      relevantTag.name
-    } -> ${newVersion}`
-  );
+  // Generate version: use tag's major.minor.patch + incremental count
+  const newVersion = `v${major}.${minor}.${patch + incrementalIndex}`;
 
   return newVersion;
 }
@@ -393,7 +444,6 @@ async function fetchGitHubTimeline() {
         }
 
         // Handle merge commit branch information
-        // Handle merge commit branch information
         let branchMerged = null;
         let intoBranch = null;
         if (commit.parents && commit.parents.length > 1) {
@@ -478,6 +528,7 @@ async function fetchGitHubTimeline() {
           isDraft: commit._isDraftPR || false,
           prNumber: pr?.number || commit._prNumber,
           prTitle: pr?.title || commit._prTitle,
+          bracketTags: extractBracketTags(commit.commit.message), // Store bracket tags for future use
           formattedDate: formatDate(commit.commit.committer.date),
           statsText: formatStats(commit.stats),
           githubUrl: commit.html_url,
@@ -504,11 +555,31 @@ async function fetchGitHubTimeline() {
     console.log(`📁 ${mainTimelineFile}`);
     console.log(`📊 ${timeline.entries.length} entries processed`);
 
-    // Show a preview
+    // Show a preview with bracket tags
     console.log("\n📋 Preview of recent entries:");
     timeline.entries.slice(-5).forEach((entry) => {
-      console.log(`   ${entry.version} - ${entry.message} (${entry.branch})`);
+      const tagDisplay =
+        entry.bracketTags.length > 0
+          ? ` [${entry.bracketTags.join(", ")}]`
+          : "";
+      console.log(
+        `   ${entry.version} - ${entry.message} (${entry.branch})${tagDisplay}`
+      );
     });
+
+    // Log all discovered bracket tags for future reference
+    const allBracketTags = new Set();
+    timeline.entries.forEach((entry) => {
+      entry.bracketTags.forEach((tag) => allBracketTags.add(tag));
+    });
+
+    if (allBracketTags.size > 0) {
+      console.log(
+        `\n🏷️  Discovered bracket tags: ${Array.from(allBracketTags).join(
+          ", "
+        )}`
+      );
+    }
 
     return timeline;
   } catch (error) {
