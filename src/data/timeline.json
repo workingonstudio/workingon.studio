@@ -1,6 +1,6 @@
 {
-  "generated": "2025-08-28T22:21:58.866Z",
-  "lastBuild": "28 August 2025 at 23:21",
+  "generated": "2025-08-29T05:58:13.209Z",
+  "lastBuild": "29 August 2025 at 06:58:13 GMT+01:00",
   "source": "github-api",
   "repository": "prmack/WorkingOn.studio",
   "currentBranch": "main",
@@ -23,7 +23,7 @@
       "intoBranch": null,
       "isMerge": false,
       "isDraft": false,
-      "formattedDate": "27 August 2025 at 13:31",
+      "formattedDate": "27 August 2025 at 13:31:27 GMT+01:00",
       "statsText": "+5559 lines",
       "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/3260f6265c01106e8898a760f2cf338c61cebdb8"
     },
@@ -45,7 +45,7 @@
       "intoBranch": null,
       "isMerge": false,
       "isDraft": false,
-      "formattedDate": "27 August 2025 at 13:42",
+      "formattedDate": "27 August 2025 at 13:42:37 GMT+01:00",
       "statsText": "+11 -3 lines",
       "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/7abca90741ec5fea91529c7ff776ec20088121db"
     },
@@ -67,7 +67,7 @@
       "intoBranch": null,
       "isMerge": false,
       "isDraft": false,
-      "formattedDate": "27 August 2025 at 14:00",
+      "formattedDate": "27 August 2025 at 14:00:40 GMT+01:00",
       "statsText": "+3 -1 lines",
       "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/a67714d5d8d5a4aecf589feb22eff87e93132d6f"
     },
@@ -89,7 +89,7 @@
       "intoBranch": null,
       "isMerge": false,
       "isDraft": false,
-      "formattedDate": "27 August 2025 at 14:11",
+      "formattedDate": "27 August 2025 at 14:11:03 GMT+01:00",
       "statsText": "+1 -1 lines",
       "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/dd054ca4fd95322460b9bd4150c5c528c19fb2b2"
     },
@@ -111,7 +111,7 @@
       "intoBranch": null,
       "isMerge": false,
       "isDraft": false,
-      "formattedDate": "27 August 2025 at 14:54",
+      "formattedDate": "27 August 2025 at 14:54:05 GMT+01:00",
       "statsText": "-1 lines",
       "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/3ec99abf5dffedeb2bcfc3e03e50daff8660d257"
     },
@@ -133,7 +133,7 @@
       "intoBranch": null,
       "isMerge": false,
       "isDraft": false,
-      "formattedDate": "27 August 2025 at 15:08",
+      "formattedDate": "27 August 2025 at 15:08:14 GMT+01:00",
       "statsText": "+2 -2 lines",
       "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/92c5b4c2b3c889e8145a59e8b28f78a5a1879aca"
     },
@@ -155,7 +155,7 @@
       "intoBranch": null,
       "isMerge": false,
       "isDraft": false,
-      "formattedDate": "27 August 2025 at 17:40",
+      "formattedDate": "27 August 2025 at 17:40:23 GMT+01:00",
       "statsText": "+2 -2 lines",
       "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/0fe9c6dd68fbb62d1c46c479c89f27e8bf292169"
     },
@@ -177,7 +177,7 @@
       "intoBranch": null,
       "isMerge": false,
       "isDraft": false,
-      "formattedDate": "27 August 2025 at 21:54",
+      "formattedDate": "27 August 2025 at 21:54:52 GMT+01:00",
       "statsText": "+48 -1 lines",
       "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/526645a9d95197362a890506b0904c58d15029bd"
     },
@@ -199,7 +199,7 @@
       "intoBranch": null,
       "isMerge": false,
       "isDraft": false,
-      "formattedDate": "28 August 2025 at 07:08",
+      "formattedDate": "28 August 2025 at 07:08:59 GMT+01:00",
       "statsText": "+4 -4 lines",
       "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/511c71a16473202ce5f576bf065fb6fba5d9eef8"
     },
@@ -221,7 +221,7 @@
       "intoBranch": null,
       "isMerge": false,
       "isDraft": false,
-      "formattedDate": "28 August 2025 at 07:22",
+      "formattedDate": "28 August 2025 at 07:22:11 GMT+01:00",
       "statsText": "+14 -12 lines",
       "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/c4354f122c3093a05db5b5a8b5b1712fba165d28"
     },
@@ -245,7 +245,7 @@
       "isDraft": true,
       "prNumber": 2,
       "prTitle": "Meta timeline development",
-      "formattedDate": "28 August 2025 at 11:36",
+      "formattedDate": "28 August 2025 at 11:36:53 GMT+01:00",
       "statsText": "+563 -20 lines",
       "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/f7750ebd321a1db721039aca34e763a2a679d75b"
     },
@@ -269,7 +269,7 @@
       "isDraft": true,
       "prNumber": 2,
       "prTitle": "Meta timeline development",
-      "formattedDate": "28 August 2025 at 12:02",
+      "formattedDate": "28 August 2025 at 12:02:50 GMT+01:00",
       "statsText": "+36 -16 lines",
       "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/3eab7978ca738fa41e4ae95159d7cb983c0f9928"
     },
@@ -293,7 +293,7 @@
       "isDraft": true,
       "prNumber": 2,
       "prTitle": "Meta timeline development",
-      "formattedDate": "28 August 2025 at 12:36",
+      "formattedDate": "28 August 2025 at 12:36:06 GMT+01:00",
       "statsText": "+166 -160 lines",
       "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/81c810c5563bd90df7b66478a2464edbe80ca417"
     },
@@ -317,7 +317,7 @@
       "isDraft": false,
       "prNumber": 1,
       "prTitle": "Font licence fix",
-      "formattedDate": "28 August 2025 at 13:00",
+      "formattedDate": "28 August 2025 at 13:00:22 GMT+01:00",
       "statsText": "+16 -18 lines",
       "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/f9e3358e4e11365b0002934fd7fdba8305c32c38"
     },
@@ -339,7 +339,7 @@
       "intoBranch": null,
       "isMerge": false,
       "isDraft": false,
-      "formattedDate": "28 August 2025 at 13:03",
+      "formattedDate": "28 August 2025 at 13:03:17 GMT+01:00",
       "statsText": "+5 lines",
       "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/4cd52b38203ab97d982b412b82da81c26b71b073"
     },
@@ -363,7 +363,7 @@
       "isDraft": true,
       "prNumber": 2,
       "prTitle": "Meta timeline development",
-      "formattedDate": "28 August 2025 at 13:05",
+      "formattedDate": "28 August 2025 at 13:05:23 GMT+01:00",
       "statsText": "+5 lines",
       "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/5770bc628b35beadd8692a65bc58670b30e68910"
     },
@@ -387,7 +387,7 @@
       "isDraft": false,
       "prNumber": 1,
       "prTitle": "Font licence fix",
-      "formattedDate": "28 August 2025 at 14:48",
+      "formattedDate": "28 August 2025 at 14:48:41 GMT+01:00",
       "statsText": "+6 -2 lines",
       "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/f16085ffd0ffeeab37c46ae81e526f0c20600881"
     },
@@ -409,7 +409,7 @@
       "intoBranch": null,
       "isMerge": true,
       "isDraft": false,
-      "formattedDate": "28 August 2025 at 16:47",
+      "formattedDate": "28 August 2025 at 16:47:36 GMT+01:00",
       "statsText": "+17 -20 lines",
       "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/30704a690268eff13f43f1b190f1fc4904353d49"
     },
@@ -433,7 +433,7 @@
       "isDraft": true,
       "prNumber": 2,
       "prTitle": "Meta timeline development",
-      "formattedDate": "28 August 2025 at 16:56",
+      "formattedDate": "28 August 2025 at 16:56:28 GMT+01:00",
       "statsText": "+2 -1 lines",
       "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/4ba07f609c9c6fc15abf92191453166290cdfda8"
     },
@@ -457,7 +457,7 @@
       "isDraft": true,
       "prNumber": 2,
       "prTitle": "Meta timeline development",
-      "formattedDate": "28 August 2025 at 17:02",
+      "formattedDate": "28 August 2025 at 17:02:48 GMT+01:00",
       "statsText": "+98 -48 lines",
       "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/86ca694fa16b3356673f212a5086ba7444c4e7c5"
     },
@@ -481,7 +481,7 @@
       "isDraft": true,
       "prNumber": 2,
       "prTitle": "Meta timeline development",
-      "formattedDate": "28 August 2025 at 19:55",
+      "formattedDate": "28 August 2025 at 19:55:03 GMT+01:00",
       "statsText": "+391 -96 lines",
       "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/4e1e6be0962cda1cd39fcec10f096bfca49c601e"
     },
@@ -505,9 +505,33 @@
       "isDraft": true,
       "prNumber": 2,
       "prTitle": "Meta timeline development",
-      "formattedDate": "28 August 2025 at 22:47",
+      "formattedDate": "28 August 2025 at 22:47:21 GMT+01:00",
       "statsText": "+361 -26 lines",
       "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/d00f9b4a3ba6d6317a94cc6cf4f62f5e771999d0"
+    },
+    {
+      "version": "v1.0.0.23",
+      "hash": "7ba8f57",
+      "message": "Getting latest version from github. Styling entries",
+      "date": "2025-08-28T22:51:52Z",
+      "author": "Paul Mackenzie",
+      "stats": {
+        "insertions": 153,
+        "deletions": 25,
+        "files": 3
+      },
+      "type": "draft-feature",
+      "branch": "meta-timeline-development",
+      "branchDisplay": "meta-timeline-development",
+      "branchMerged": null,
+      "intoBranch": null,
+      "isMerge": false,
+      "isDraft": true,
+      "prNumber": 2,
+      "prTitle": "Meta timeline development",
+      "formattedDate": "28 August 2025 at 23:51:52 GMT+01:00",
+      "statsText": "+153 -25 lines",
+      "githubUrl": "https://github.com/prmack/WorkingOn.studio/commit/7ba8f57c58916b1a752441b263eb55328fc4a547"
     }
   ]
 }

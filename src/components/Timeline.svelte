@@ -71,7 +71,7 @@
         </h2>
       </div>
 
-      <div class="timeline-groups space-y-6">
+      <div class="timeline-groups space-y-6 mb-6">
         {#each groupedEntries as group}
           <div class="date-group">
             <h3
