@@ -35,9 +35,12 @@
 
     // Convert to array and sort by date (newest first)
     return Object.entries(groups)
-      .map(([date, entries]) => ({ date, entries }))
+      .map(([date, entries]) => ({
+        date,
+        entries: entries.sort((a, b) => new Date(b.date) - new Date(a.date)), // Sort commits within date: newest first (latest time at top)
+      }))
       .sort(
-        (a, b) => new Date(b.entries[0].date) - new Date(a.entries[0].date)
+        (a, b) => new Date(b.entries[0].date) - new Date(a.entries[0].date) // Sort date groups: newest first
       );
   }
 
