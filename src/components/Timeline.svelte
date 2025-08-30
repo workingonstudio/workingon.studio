@@ -63,9 +63,9 @@
     <p class="truncate">
       Repo<span class="hidden sm:inline-block">sitory</span>:
       <a
-        href="https://github.com/prmack/WorkingOn.studio"
+        href="https://github.com/prmack/workingon.studio"
         class="underline hover:text-gray-100"
-        >https://github.com/prmack/WorkingOn.studio</a
+        >https://github.com/prmack/workingon.studio</a
       >
     </p>
   </div>
