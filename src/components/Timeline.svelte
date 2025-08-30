@@ -59,8 +59,8 @@
         Last built: {timelineData?.lastBuild || "Loading..."}
       </span>
     </button>
-    <p>
-      Repo<span class="hidden sm:inline-block">sitory</span>:
+    <p class="truncate">
+      Repository:
       <a
         href="https://github.com/prmack/WorkingOn.studio"
         class="underline hover:text-gray-100"
