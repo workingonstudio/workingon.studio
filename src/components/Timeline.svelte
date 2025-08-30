@@ -56,7 +56,7 @@
       aria-expanded={showTimeline}
     >
       <span class="capitalize sm:normal-case">
-        <span class="hidden sm:inline-block">Last</span> built: {timelineData?.lastBuild ||
+        <span class="hidden sm:inline-block">Last</span> updated: {timelineData?.lastBuild ||
           "Loading..."}
       </span>
     </button>
