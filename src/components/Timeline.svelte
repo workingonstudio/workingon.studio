@@ -51,12 +51,13 @@
   <div class="space-y-1">
     <div>{currentVersion}</div>
     <button
-      class="last-built-trigger cursor-help"
+      class="last-built-trigger cursor-help text-left truncate"
       on:click={toggleTimeline}
       aria-expanded={showTimeline}
     >
-      <span>
-        Last built: {timelineData?.lastBuild || "Loading..."}
+      <span class="capitalize sm:normal-case">
+        <span class="hidden sm:inline-block">Last</span> built: {timelineData?.lastBuild ||
+          "Loading..."}
       </span>
     </button>
     <p class="truncate">
