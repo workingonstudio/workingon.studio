@@ -32,32 +32,24 @@ function findPRForCommit(prCommitsMap, commit) {
 }
 
 function extractBracketTags(message) {
-  // Extract all tags in square brackets like [TRANSPARENCY], [FEATURE], etc.
-  const bracketMatches = message.match(/\[([^\]]+)\]/g);
-  return bracketMatches
-    ? bracketMatches.map(
-        (match) => match.slice(1, -1).toLowerCase() // Remove brackets and lowercase
-      )
-    : [];
+  // Extract all tags in square brackets at the beginning of commit messages
+  // Match patterns like "[TRANSPARENCY]", "[FEATURE]", "[HOTFIX] Fix bug", etc.
+  const bracketMatches = message.match(/^\[([^\]]+)\]/);
+  return bracketMatches ? [bracketMatches[1].toLowerCase()] : [];
 }
 
 function determineTypeFromPR(pr, commit, branchName) {
   const message = commit.commit.message;
   const messageLower = message.toLowerCase();
 
-  // Extract bracket tags for logging
+  // Extract bracket tags for story classification
   const bracketTags = extractBracketTags(message);
 
-  // Check for transparency/meta commits via bracket tags
-  if (
-    bracketTags.includes("transparency") ||
-    messageLower.includes("transparency commit") ||
-    messageLower.includes("timeline recovery")
-  ) {
+  // Use bracket tags to determine entry type
+  if (bracketTags.includes("transparency")) {
     return "transparency";
   }
 
-  // Check for other bracket tag types
   if (bracketTags.includes("release")) {
     return "release";
   }
@@ -70,12 +62,16 @@ function determineTypeFromPR(pr, commit, branchName) {
     return "docs";
   }
 
+  if (bracketTags.includes("feature")) {
+    return "feature";
+  }
+
+  // Fallback to existing logic for untagged commits
   if (commit.parents && commit.parents.length > 1) {
     return "merge";
   }
 
   if (pr) {
-    // It was part of a PR, so likely a feature
     return "feature";
   }
 
@@ -508,7 +504,11 @@ async function fetchGitHubTimeline() {
           ),
           hash: commit.sha.substring(0, 7),
           message: (() => {
-            const msg = commit.commit.message.split("\n")[0]; // First line only
+            let msg = commit.commit.message.split("\n")[0]; // First line only
+
+            // Remove bracket tags from display message for cleaner timeline
+            msg = msg.replace(/^\[([^\]]+)\]\s*/, "");
+
             // Add period if not present and message doesn't end with other punctuation
             return msg.match(/[.!?]$/) ? msg : msg + ".";
           })(),
