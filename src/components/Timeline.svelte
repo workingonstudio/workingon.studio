@@ -79,7 +79,7 @@
         class="text-base text-gray-100 font-display cursor-default inline-block"
       >
         progress<span
-          class="text-gray-500 text-xs group-hover:text-yellow-300 group-hover:text-shadow-glow group-hover:motion-safe:animate-flicker"
+          class="text-xs text-yellow-300 text-shadow-glow motion-safe:animate-flicker sm:text-gray-500 sm:text-shadow-none sm:motion-safe:animate-none sm:group-hover:text-shadow-glow sm:group-hover:text-yellow-300 sm:group-hover:motion-safe:animate-flicker"
           >.log</span
         >
       </h2>

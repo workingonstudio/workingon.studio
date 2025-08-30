@@ -4,15 +4,7 @@ import Layout from '../layouts/Layout.astro';
 import Timeline from "../components/Timeline.svelte";
 import timelineData from '../data/timeline.json';
 
-const buildTime = new Date().toLocaleDateString('en-GB', {
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric'
-}) + ', ' + new Date().toLocaleTimeString('en-GB', {
-  hour: '2-digit',
-  minute: '2-digit',
-  hour12: false
-});
+const actionList = ["making the obvious visable", "centering people in technology", "finding delight in the mundane"]
 ---
 
 <Layout title="Working On Studio">
@@ -22,14 +14,14 @@ const buildTime = new Date().toLocaleDateString('en-GB', {
         <div class="group space-y-12">
           <div>
             <h1 class="text-base font-display cursor-default inline-block">
-              working on<span class="text-gray-500 text-xs group-hover:text-yellow-300 group-hover:text-shadow-glow group-hover:motion-safe:animate-flicker">.studio</span>
+              working on<span class="text-xs text-yellow-300 text-shadow-glow motion-safe:animate-flicker sm:text-gray-500 sm:text-shadow-none sm:motion-safe:animate-none sm:group-hover:text-shadow-glow sm:group-hover:text-yellow-300 sm:group-hover:motion-safe:animate-flicker">.studio</span>
             </h1>
           </div>
           <div class="text-sm space-y-12 font-sans leading-6">
             <div>
-              <p>Working on...making the obvious visible.</p>
-              <p>Working on...centering people in technology.</p>
-              <p>Working on...finding delight in the mundane.</p>
+              {actionList.map(item => (
+                <p><span class="hidden sm:inline">Working on</span>...{item}.</p>
+              ))}
             </div>
             <div>
               <p>Working on...a new site.</p>
