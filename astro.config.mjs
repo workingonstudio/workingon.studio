@@ -10,5 +10,9 @@ export default defineConfig({
   integrations: [svelte()],
   vite: {
     plugins: [tailwindcss()],
+    server: {
+      host: true,
+      allowedHosts: ["localhost", ".ngrok.io", ".ngrok-free.app"],
+    },
   },
 });
