@@ -51,19 +51,21 @@
   <div class="space-y-1">
     <div>{currentVersion}</div>
     <button
-      class="last-built-trigger cursor-help"
+      class="last-built-trigger cursor-help text-left truncate"
       on:click={toggleTimeline}
       aria-expanded={showTimeline}
     >
-      <span>
-        Last built: {timelineData?.lastBuild || "Loading..."}
+      <span class="capitalize sm:normal-case">
+        <span class="hidden sm:inline-block">Last</span> updated: {timelineData?.lastBuild ||
+          "Loading..."}
       </span>
     </button>
-    <p>
-      Repository: <a
-        href="https://github.com/prmack/WorkingOn.studio"
+    <p class="truncate">
+      Repo<span class="hidden sm:inline-block">sitory</span>:
+      <a
+        href="https://github.com/prmack/workingon.studio"
         class="underline hover:text-gray-100"
-        >https://github.com/prmack/WorkingOn.studio</a
+        >https://github.com/prmack/workingon.studio</a
       >
     </p>
   </div>
@@ -79,7 +81,7 @@
         class="text-base text-gray-100 font-display cursor-default inline-block"
       >
         progress<span
-          class="text-gray-500 text-xs group-hover:text-yellow-300 group-hover:text-shadow-glow group-hover:motion-safe:animate-flicker"
+          class="text-xs text-yellow-300 text-shadow-glow motion-safe:animate-flicker sm:text-gray-500 sm:text-shadow-none sm:motion-safe:animate-none sm:group-hover:text-shadow-glow sm:group-hover:text-yellow-300 sm:group-hover:motion-safe:animate-flicker"
           >.log</span
         >
       </h2>
