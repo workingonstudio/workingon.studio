@@ -38,7 +38,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           GITHUB_OWNER: prmack
-          GITHUB_REPO: WorkingOn.studio
+          GITHUB_REPO: workingon.studio
         run: npm run timeline:fetch-github
 
       - name: Build with Astro

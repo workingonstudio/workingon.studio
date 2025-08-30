@@ -9,7 +9,7 @@ dotenv.config({ path: ".env.local" });
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const GITHUB_OWNER = process.env.GITHUB_OWNER || "prmack";
-const GITHUB_REPO = process.env.GITHUB_REPO || "WorkingOn.studio";
+const GITHUB_REPO = process.env.GITHUB_REPO || "workingon.studio";
 
 if (!GITHUB_TOKEN) {
   console.error("❌ Please set GITHUB_TOKEN environment variable");
@@ -91,7 +91,7 @@ function determineTypeFromPR(pr, commit, branchName) {
   return "commit";
 }
 
-// Add this function to get tags with their commit dates - VERSION TAGS ONLY
+// FIXED: Get tags with their commit dates - VERSION TAGS ONLY
 async function getTagsWithDates(octokit, owner, repo) {
   try {
     const tags = await octokit.paginate(octokit.rest.repos.listTags, {
@@ -106,6 +106,12 @@ async function getTagsWithDates(octokit, owner, repo) {
     console.log(
       `📦 Found ${tags.length} total tags, ${versionTags.length} version tags`
     );
+
+    // If no version tags exist, return empty array instead of fake fallback
+    if (versionTags.length === 0) {
+      console.log("📦 No version tags found in repository");
+      return [];
+    }
 
     // Get commit details for each version tag to get the date
     const tagsWithDates = [];
@@ -138,11 +144,11 @@ async function getTagsWithDates(octokit, owner, repo) {
     return tagsWithDates;
   } catch (error) {
     console.warn(`Could not fetch tags with dates: ${error.message}`);
-    return [{ name: "v1.1.0", date: new Date("2025-08-29T07:25:20Z") }]; // Default fallback with your known tag
+    return []; // Return empty array instead of fake fallback
   }
 }
 
-// Fixed version generation function - clean production version
+// FIXED: Version generation with proper fallback when no tags exist
 function generateVersionForCommit(commit, allCommitsInOrder, tagsWithDates) {
   // If this commit message looks like a release, use that
   const message = commit.commit.message;
@@ -152,6 +158,14 @@ function generateVersionForCommit(commit, allCommitsInOrder, tagsWithDates) {
   }
 
   const commitDate = new Date(commit.commit.committer.date);
+
+  // If no tags exist, use simple incremental versioning from v1.0.0
+  if (tagsWithDates.length === 0) {
+    const commitIndex = allCommitsInOrder.findIndex(
+      (c) => c.sha === commit.sha
+    );
+    return `v1.0.${commitIndex + 1}`;
+  }
 
   // Find which tag this commit came after (or is equal to)
   let relevantTag = null;
@@ -163,9 +177,9 @@ function generateVersionForCommit(commit, allCommitsInOrder, tagsWithDates) {
     }
   }
 
-  // Safe fallback - use your known v1.1.0 tag
-  if (!relevantTag || !relevantTag.name) {
-    relevantTag = { name: "v1.1.0", date: new Date("2025-08-29T07:25:20Z") };
+  // If no relevant tag found, use the earliest tag as reference
+  if (!relevantTag) {
+    relevantTag = tagsWithDates[0];
   }
 
   // Special case: if this commit is exactly at a tag, return the tag version
@@ -227,14 +241,57 @@ async function fetchGitHubTimeline() {
   console.log(`📁 Repository: ${GITHUB_OWNER}/${GITHUB_REPO}`);
 
   try {
-    // Fetch all commits using Octokit pagination
-    console.log("📦 Fetching commits...");
-    const commits = await octokit.paginate(octokit.rest.repos.listCommits, {
+    // FIXED: First, fetch all branches to get commits from all branches
+    console.log("🌿 Fetching all branches...");
+    const branches = await octokit.paginate(octokit.rest.repos.listBranches, {
       owner: GITHUB_OWNER,
       repo: GITHUB_REPO,
       per_page: 100,
     });
-    console.log(`✅ Found ${commits.length} commits`);
+    console.log(
+      `✅ Found ${branches.length} branches: ${branches
+        .map((b) => b.name)
+        .join(", ")}`
+    );
+
+    // FIXED: Fetch commits from ALL branches
+    console.log("📦 Fetching commits from all branches...");
+    const allCommits = [];
+    const seenShas = new Set(); // Prevent duplicates
+
+    for (const branch of branches) {
+      console.log(`📦 Fetching commits from branch: ${branch.name}`);
+      try {
+        const branchCommits = await octokit.paginate(
+          octokit.rest.repos.listCommits,
+          {
+            owner: GITHUB_OWNER,
+            repo: GITHUB_REPO,
+            sha: branch.name, // This is the key fix!
+            per_page: 100,
+          }
+        );
+
+        // Add branch info to each commit and filter duplicates
+        branchCommits.forEach((commit) => {
+          if (!seenShas.has(commit.sha)) {
+            commit._branchFound = branch.name; // Track which branch we found it on
+            allCommits.push(commit);
+            seenShas.add(commit.sha);
+          }
+        });
+
+        console.log(
+          `   ✅ Found ${branchCommits.length} commits on ${branch.name}`
+        );
+      } catch (error) {
+        console.warn(
+          `   ⚠️  Could not fetch commits from branch ${branch.name}: ${error.message}`
+        );
+      }
+    }
+
+    console.log(`📦 Total unique commits found: ${allCommits.length}`);
 
     // Fetch all pull requests using Octokit pagination
     console.log("🔄 Fetching pull requests...");
@@ -283,74 +340,17 @@ async function fetchGitHubTimeline() {
       `✅ Total commit-to-PR mappings: ${Object.keys(prCommitsMap).length}`
     );
 
-    // Collect commits from draft PRs for timeline inclusion
-    console.log("\n📦 Fetching draft PR commits for timeline inclusion...");
-    const draftPRCommits = [];
-
-    for (const pr of pulls.filter((pr) => pr.draft)) {
-      console.log(`📝 Including draft PR #${pr.number}: ${pr.title}`);
-      try {
-        const prCommits = await octokit.paginate(
-          octokit.rest.pulls.listCommits,
-          {
-            owner: GITHUB_OWNER,
-            repo: GITHUB_REPO,
-            pull_number: pr.number,
-            per_page: 100,
-          }
-        );
-
-        // Get detailed stats for each draft PR commit
-        for (const commit of prCommits) {
-          try {
-            const { data: detailedCommit } = await octokit.rest.repos.getCommit(
-              {
-                owner: GITHUB_OWNER,
-                repo: GITHUB_REPO,
-                ref: commit.sha,
-              }
-            );
-
-            // Mark as draft work
-            detailedCommit._isDraftPR = true;
-            detailedCommit._prNumber = pr.number;
-            detailedCommit._prTitle = pr.title;
-            draftPRCommits.push(detailedCommit);
-          } catch (error) {
-            console.warn(
-              `   ⚠️  Could not fetch details for draft commit ${commit.sha.substring(
-                0,
-                7
-              )}`
-            );
-          }
-        }
-
-        console.log(
-          `   ✅ Added ${prCommits.length} draft commits from ${pr.head.ref}`
-        );
-      } catch (error) {
-        console.warn(
-          `   ⚠️  Could not fetch draft PR commits: ${error.message}`
-        );
-      }
-    }
-
-    console.log(
-      `✅ Found ${draftPRCommits.length} additional commits from draft PRs`
-    );
-
-    // Get detailed stats for recent commits (limit to avoid rate limiting)
+    // Get detailed stats for commits (limit to avoid rate limiting)
     console.log("📊 Fetching detailed commit stats...");
     const detailedCommits = [];
-    const recentCommits = commits.slice(0, Math.min(commits.length, 50));
+    const recentCommits = allCommits.slice(0, Math.min(allCommits.length, 100));
 
     for (let i = 0; i < recentCommits.length; i++) {
       const commit = recentCommits[i];
       console.log(
         `📊 Getting stats for commit ${i + 1}/${
           recentCommits.length
-        }: ${commit.sha.substring(0, 7)}`
+        }: ${commit.sha.substring(0, 7)} (${commit._branchFound})`
       );
 
       try {
@@ -359,6 +359,9 @@ async function fetchGitHubTimeline() {
           repo: GITHUB_REPO,
           ref: commit.sha,
         });
+
+        // Preserve branch information
+        detailedCommit._branchFound = commit._branchFound;
         detailedCommits.push(detailedCommit);
       } catch (error) {
         console.warn(
@@ -366,28 +369,19 @@ async function fetchGitHubTimeline() {
             error.message
           }`
         );
-        detailedCommits.push(commit); // Use basic commit data
+        // Use basic commit data with branch info
+        commit._branchFound = commit._branchFound;
+        detailedCommits.push(commit);
       }
     }
 
-    // Merge main branch commits with draft PR commits
-    const allCommits = [...detailedCommits, ...draftPRCommits];
-
-    // Remove duplicates (in case draft commits are also in main branch)
-    const uniqueCommits = allCommits.filter(
-      (commit, index, arr) =>
-        arr.findIndex((c) => c.sha === commit.sha) === index
-    );
-
     // Sort by commit date (newest first for processing, will reverse later)
-    uniqueCommits.sort(
+    detailedCommits.sort(
       (a, b) =>
         new Date(b.commit.committer.date) - new Date(a.commit.committer.date)
     );
 
-    console.log(
-      `📊 Total unique commits to process: ${uniqueCommits.length} (${detailedCommits.length} main + ${draftPRCommits.length} draft)`
-    );
+    console.log(`📊 Total commits to process: ${detailedCommits.length}`);
 
     // Get current branch for version context
     let currentBranch = "main";
@@ -409,15 +403,18 @@ async function fetchGitHubTimeline() {
     );
 
     // DEBUG: Show which commits we're processing
-    console.log("\n🔍 DEBUG: Commits Being Processed (including drafts):");
-    uniqueCommits.forEach((commit, index) => {
+    console.log("\n🔍 DEBUG: Commits Being Processed (from all branches):");
+    detailedCommits.forEach((commit, index) => {
       const pr = findPRForCommit(prCommitsMap, commit);
-      const branch = pr ? pr.head.ref : currentBranch;
-      const draftIndicator = commit._isDraftPR ? " [DRAFT]" : "";
+      const branchFromPR = pr ? pr.head.ref : null;
+      const branchFromDiscovery = commit._branchFound;
+      const displayBranch =
+        branchFromPR || branchFromDiscovery || currentBranch;
+
       console.log(
         `   ${index + 1}. ${commit.sha.substring(0, 7)} - ${
           commit.commit.message.split("\n")[0]
-        } (${branch})${draftIndicator}`
+        } (found on: ${branchFromDiscovery}, display: ${displayBranch})`
       );
     });
 
@@ -429,15 +426,18 @@ async function fetchGitHubTimeline() {
       source: "github-api-octokit",
       repository: `${GITHUB_OWNER}/${GITHUB_REPO}`,
       currentBranch: currentBranch,
-      entries: uniqueCommits.reverse().map((commit, index) => {
+      totalBranches: branches.length,
+      branchesProcessed: branches.map((b) => b.name),
+      entries: detailedCommits.reverse().map((commit, index) => {
         const pr = findPRForCommit(prCommitsMap, commit);
-        const branchName = pr ? pr.head.ref : currentBranch;
+
+        // Use PR branch if available, otherwise use discovered branch
+        const branchName = pr
+          ? pr.head.ref
+          : commit._branchFound || currentBranch;
 
         // Determine type, considering draft status
         let type = determineTypeFromPR(pr, commit, branchName);
-        if (commit._isDraftPR && type === "feature") {
-          type = "draft-feature"; // Special type for draft work
-        }
 
         // Handle merge commit branch information
         let branchMerged = null;
@@ -447,10 +447,6 @@ async function fetchGitHubTimeline() {
           const message = commit.commit.message;
 
           // Try to parse branch name from commit message
-          // Common patterns: "Merge pull request #X from branch-name"
-          //                  "Merge branch 'branch-name' into target-branch"
-          //                  "Merge pull request /branch-name"
-
           const prMergeMatch = message.match(
             /Merge pull request.*?\/([^.\s]+)/
           );
@@ -499,7 +495,7 @@ async function fetchGitHubTimeline() {
         return {
           version: generateVersionForCommit(
             commit,
-            uniqueCommits,
+            detailedCommits,
             tagsWithDates
           ),
           hash: commit.sha.substring(0, 7),
@@ -525,10 +521,9 @@ async function fetchGitHubTimeline() {
           branchMerged: branchMerged,
           intoBranch: intoBranch,
           isMerge: commit.parents && commit.parents.length > 1,
-          isDraft: commit._isDraftPR || false,
-          prNumber: pr?.number || commit._prNumber,
-          prTitle: pr?.title || commit._prTitle,
-          bracketTags: extractBracketTags(commit.commit.message), // Store bracket tags for future use
+          prNumber: pr?.number,
+          prTitle: pr?.title,
+          bracketTags: extractBracketTags(commit.commit.message),
           formattedDate: formatDate(commit.commit.committer.date),
           statsText: formatStats(commit.stats),
           githubUrl: commit.html_url,
@@ -553,11 +548,13 @@ async function fetchGitHubTimeline() {
     console.log(`✅ GitHub timeline saved:`);
     console.log(`📁 ${githubTimelineFile}`);
     console.log(`📁 ${mainTimelineFile}`);
-    console.log(`📊 ${timeline.entries.length} entries processed`);
+    console.log(
+      `📊 ${timeline.entries.length} entries processed from ${timeline.totalBranches} branches`
+    );
 
-    // Show a preview with bracket tags
+    // Show a preview with branch info
     console.log("\n📋 Preview of recent entries:");
-    timeline.entries.slice(-5).forEach((entry) => {
+    timeline.entries.slice(-10).forEach((entry) => {
       const tagDisplay =
         entry.bracketTags.length > 0
           ? ` [${entry.bracketTags.join(", ")}]`
@@ -567,19 +564,15 @@ async function fetchGitHubTimeline() {
       );
     });
 
-    // Log all discovered bracket tags for future reference
-    const allBracketTags = new Set();
+    // Show branch summary
+    console.log(`\n🌿 Branch Summary:`);
+    const branchCounts = {};
     timeline.entries.forEach((entry) => {
-      entry.bracketTags.forEach((tag) => allBracketTags.add(tag));
+      branchCounts[entry.branch] = (branchCounts[entry.branch] || 0) + 1;
     });
-
-    if (allBracketTags.size > 0) {
-      console.log(
-        `\n🏷️  Discovered bracket tags: ${Array.from(allBracketTags).join(
-          ", "
-        )}`
-      );
-    }
+    Object.entries(branchCounts).forEach(([branch, count]) => {
+      console.log(`   ${branch}: ${count} commits`);
+    });
 
     return timeline;
   } catch (error) {
