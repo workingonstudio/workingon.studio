@@ -9,7 +9,7 @@ dotenv.config({ path: ".env.local" });
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const GITHUB_OWNER = process.env.GITHUB_OWNER || "prmack";
-const GITHUB_REPO = process.env.GITHUB_REPO || "WorkingOn.studio";
+const GITHUB_REPO = process.env.GITHUB_REPO || "workingon.studio";
 
 if (!GITHUB_TOKEN) {
   console.error("❌ Please set GITHUB_TOKEN environment variable");
