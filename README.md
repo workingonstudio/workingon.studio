@@ -24,9 +24,9 @@ Each one works. Each one also makes you think about why you needed it in the fir
 
 Here's where it gets interesting.
 
-Instead of hiding our messy development process behind polished marketing copy, we made it the centrepiece. See that "Last updated" timestamp? Click it.
+Instead of hiding my messy development process behind polished marketing copy, I made it the centrepiece. See that "Last updated" timestamp? Click it.
 
-You'll see every commit, every iteration, every small improvement. The actual development timeline, auto-generated from git commits. No sanitised "our process" nonsense—just the real process, visible and unfiltered.
+You'll see every commit, every iteration, every small improvement. The actual development timeline, auto-generated from git commits. No sanitised "my process" nonsense—just the real process, visible and unfiltered.
 
 Because transparency isn't just philosophy. It's practice.
 
