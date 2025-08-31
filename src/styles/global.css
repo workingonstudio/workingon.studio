@@ -6,8 +6,7 @@
 }
 
 @theme {
-  --font-sans: "nudica_monomedium", "IBM Plex Mono", ui-monospace,
-    SFMono-Regular;
+  --font-sans: "nudica_monomedium", "Azeret Mono", ui-monospace, SFMono-Regular;
   --font-display: "nudicamedium", "Space Grotesk", ui-sans-serif, system-ui;
   --text-shadow-glow: 0 0 5px #f0b100, 0 0 15px #f0b100, 0 0 30px #f0b100,
     0 0 60px rgba(255, 0, 0, 0.5);
