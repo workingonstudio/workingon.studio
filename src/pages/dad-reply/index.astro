@@ -2,11 +2,15 @@
 import DadReply from "../../layouts/DadReply.astro";
 import Header from "../../components/dad-reply/Header.svelte";
 import Hero from "../../components/dad-reply/Hero.svelte";
+import ComingSoon from "../../components/dad-reply/ComingSoon.svelte";
 ---
 
 <DadReply title="Dad Reply - Universal Acknowledgment">
   <main class="flex flex-col max-w-[1156px] mx-auto px-6">
     <Header />
-    <Hero />
+    <div class="space-y-60">
+      <Hero />
+      <ComingSoon />
+    </div>
   </main>
 </DadReply>
