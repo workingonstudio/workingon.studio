@@ -6,7 +6,7 @@
   export let borderColor: string = "border-transparent";
   export let icon: string = "chrome";
   export let downloadLink: string = "/";
-  export let clickable: boolean = true;
+  export const clickable: boolean = true;
 </script>
 
 <a
