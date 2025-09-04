@@ -1,19 +1,19 @@
 <script lang="ts">
 </script>
 
-<div class="flex flex-col space-y-5 text-black">
+<div class="flex flex-col space-y-5 text-black overflow-hidden">
   <div class="font-[Roboto]">
-    <strong class="text-[15px]"
-      >workingon.studio <span class="text-xs font-normal text-slate-400"
-        >&lt;<a href="mailto:hello@workingon.studio">hello@workingon.studio</a
-        >&gt;</span
-      ></strong
-    >
-    <span class="flex items-center text-xs font-normal text-slate-400"
-      >to you <span class="material-symbols-rounded !text-lg"
+    <strong class="text-[15px]">
+      workingon.studio <span class="text-xs font-normal text-slate-400">
+        &lt;<a href="mailto:hello@workingon.studio">hello@workingon.studio</a
+        >&gt;
+      </span>
+    </strong>
+    <span class="flex items-center text-xs font-normal text-slate-400">
+      to you <span class="material-symbols-rounded !text-lg"
         >arrow_drop_down</span
-      ></span
-    >
+      >
+    </span>
   </div>
   <div class="font-[Arial] text-sm/7 space-y-5">
     <p>To all,</p>

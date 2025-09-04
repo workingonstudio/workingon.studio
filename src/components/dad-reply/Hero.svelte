@@ -30,7 +30,7 @@
     </div>
   </div>
   <div
-    class="flex-1 bg-white border border-slate-300 rounded-[14px] p-16 the-shadow"
+    class="flex-1 bg-white border border-slate-300 pt-16 pr-16 pb-16 pl-16 mr-0 the-shadow rounded-[14px] lg:pr-0 lg:rounded-none lg:rounded-l-[14px] lg:-mr-[calc(50vw-50%)]"
   >
     <Email />
   </div>
