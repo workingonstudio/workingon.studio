@@ -15,6 +15,6 @@
   />
   <Pill
     icon="flash_off"
-    text="Not powered by AI"
+    text="No AI by default"
   />
 </ul>

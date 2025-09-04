@@ -17,7 +17,7 @@
       </p>
       <FeaturePills />
     </div>
-    <div class="flex gap-6 text-sm *:p-3 *:border-2 *:rounded-lg *:flex">
+    <div class="flex gap-6">
       <DownloadButton />
       <DownloadButton
         platform="Edge"
