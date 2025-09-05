@@ -11,7 +11,8 @@
 }
 
 .the-shadow {
-  box-shadow: 0 153px 43px 0 rgba(143, 143, 143, 0),
+  box-shadow:
+    0 153px 43px 0 rgba(143, 143, 143, 0),
     0 98px 39px 0 rgba(143, 143, 143, 0.01),
     0 55px 33px 0 rgba(143, 143, 143, 0.05),
     0 25px 25px 0 rgba(143, 143, 143, 0.09),

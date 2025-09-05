@@ -1,5 +1,7 @@
 <script lang="ts">
+  import Badge from "./partials/Badge.svelte";
   import ToneRadio from "./partials/ToneRadio.svelte";
+  let selectedTone = "tone-1";
 </script>
 
 <div class="flex flex-row items-start gap-32 [&_p]:leading-relaxed">
@@ -10,14 +12,14 @@
   </div>
   <div class="flex-1 space-y-40">
     <div class="space-y-6">
-      <h3 class="text-2xl font-semibold">Choose a tone that matches you.</h3>
+      <h3>Choose a tone that matches you. <Badge text="Free" bgColor="bg-blue-100" /></h3>
       <div class="flex flex-row justify-between py-6">
-        <ToneRadio value="tone-1" />
-        <ToneRadio value="tone-2" emoji="👍🏻" />
-        <ToneRadio value="tone-3" emoji="👍🏼" />
-        <ToneRadio value="tone-4" emoji="👍🏽" />
-        <ToneRadio value="tone-5" emoji="👍🏾" />
-        <ToneRadio value="tone-6" emoji="👍🏿" />
+        <ToneRadio value="tone-1" bind:group={selectedTone} />
+        <ToneRadio value="tone-2" emoji="👍🏻" bind:group={selectedTone} />
+        <ToneRadio value="tone-3" emoji="👍🏼" bind:group={selectedTone} />
+        <ToneRadio value="tone-4" emoji="👍🏽" bind:group={selectedTone} />
+        <ToneRadio value="tone-5" emoji="👍🏾" bind:group={selectedTone} />
+        <ToneRadio value="tone-6" emoji="👍🏿" bind:group={selectedTone} />
       </div>
       <p>
         In v1.5.0 you’ll have the ability to change the tone of thumb up. You have the choice everywhere else, so why
@@ -28,7 +30,7 @@
       </small>
     </div>
     <div class="space-y-6">
-      <h3 class="text-2xl font-semibold">Another button?</h3>
+      <h3>Another button?<Badge text="Pro" bgColor="bg-orange-100" /></h3>
       <div class="rounded-lg border border-slate-300 p-6"></div>
       <p>
         That right baby. This isn’t like selling electric windows in a new car. This is like selling a purpose build
@@ -36,7 +38,7 @@
       </p>
     </div>
     <div class="space-y-6">
-      <h3 class="text-2xl font-semibold">Custom responses!</h3>
+      <h3>Custom responses!</h3>
       <div class="rounded-lg border border-slate-300 p-6"></div>
       <p>
         That right baby. This isn’t like selling electric windows in a new car. This is like selling a purpose build
@@ -48,6 +50,9 @@
 
 <style>
   @reference "@styles/dad-reply.css";
+  h3 {
+    @apply text-2xl font-semibold;
+  }
   p {
     @apply leading-relaxed text-slate-500;
   }

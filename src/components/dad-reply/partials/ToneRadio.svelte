@@ -1,14 +1,15 @@
 <script lang="ts">
   export let value: string = "tone-1";
   export let emoji: string = "👍";
+  export let group: string;
 </script>
 
 <label
   class="tone-option flex cursor-pointer items-center rounded-lg border border-slate-300 p-3 has-[:focus]:border-blue-500 has-[:focus]:ring-1 has-[:focus]:ring-blue-500/50 has-[:focus]:ring-offset-2"
   for={value}
 >
-  <input type="radio" name="skinTone" {value} id={value} class="mr-4 cursor-pointer focus:outline-none" />
-  <span class="h-5 w-5 text-[21px] leading-[21px]">{emoji}</span>
+  <input type="radio" name="skinTone" {value} id={value} bind:group class="mr-3 cursor-pointer focus:outline-none" />
+  <span class="h-5 w-5 text-[20px] leading-[20px]">{emoji}</span>
 </label>
 
 <style>
@@ -17,7 +18,7 @@
     appearance: none;
     width: 1rem;
     height: 1rem;
-    @apply rounded-full border border-slate-500 bg-white;
+    @apply rounded-full border border-slate-300 bg-white;
   }
   input[type="radio"]:checked {
     @apply border-blue-600 bg-blue-600;
