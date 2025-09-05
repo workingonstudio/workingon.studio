@@ -4,9 +4,26 @@
 </script>
 
 <label
-  class="tone-option flex cursor-pointer items-center rounded-lg border border-slate-300 p-3 has-[:focus]:border-blue-500/50 has-[:focus]:ring-1 has-[:focus]:ring-offset-2"
+  class="tone-option flex cursor-pointer items-center rounded-lg border border-slate-300 p-3 has-[:focus]:border-blue-500 has-[:focus]:ring-1 has-[:focus]:ring-blue-500/50 has-[:focus]:ring-offset-2"
   for={value}
 >
-  <input type="radio" name="skinTone" {value} id={value} class="mr-4 cursor-pointer" />
+  <input type="radio" name="skinTone" {value} id={value} class="mr-4 cursor-pointer focus:outline-none" />
   <span class="h-5 w-5 text-[21px] leading-[21px]">{emoji}</span>
 </label>
+
+<style>
+  @reference "@styles/dad-reply.css";
+  input[type="radio"] {
+    appearance: none;
+    width: 1rem;
+    height: 1rem;
+    @apply rounded-full border border-slate-500 bg-white;
+  }
+  input[type="radio"]:checked {
+    @apply border-blue-600 bg-blue-600;
+    background-image: radial-gradient(circle, white 30%, transparent 35%);
+    &:focus {
+      @apply ring-2 ring-blue-600 ring-offset-2;
+    }
+  }
+</style>
