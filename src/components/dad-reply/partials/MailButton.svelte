@@ -1,11 +1,12 @@
 <script lang="ts">
+  import Icon from "@iconify/svelte";
   export let icon: string | undefined = undefined;
   export let text: string = "";
 </script>
 
 <button class="google-button flex max-h-9 items-center px-4 py-2 text-sm font-medium [&_span]:mr-3">
   {#if icon}
-    <iconify-icon icon="material-symbols:{icon}" class="mr-3 text-[18px]"></iconify-icon>
+    <Icon icon="material-symbols:{icon}" class="mr-3 text-[18px]"></Icon>
   {:else}
     <span>👍</span>
   {/if}
