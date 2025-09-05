@@ -3,9 +3,7 @@
   export let text: string = "";
 </script>
 
-<button
-  class="google-button flex items-center text-sm font-medium py-2 px-4 [&_span]:mr-3 max-h-9"
->
+<button class="google-button flex max-h-9 items-center px-4 py-2 text-sm font-medium [&_span]:mr-3">
   {#if icon}
     <span class="material-symbols-rounded">{icon}</span>
   {:else}
@@ -15,13 +13,13 @@
 </button>
 
 <style>
-  @reference "$styles/dad-reply.css";
+  @reference "@styles/dad-reply.css";
   .google-button {
     font-family: "Google Sans", sans-serif;
     color: #444746;
-    @apply border border-[#747775] rounded-full;
+    @apply rounded-full border border-[#747775];
     &:hover {
-      @apply bg-slate-100 cursor-pointer;
+      @apply cursor-pointer bg-slate-100;
     }
   }
 </style>

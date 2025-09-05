@@ -41,7 +41,7 @@
 </div>
 
 <style>
-  @reference "../../styles/dad-reply.css";
+  @reference "@styles/dad-reply.css";
   p {
     @apply leading-relaxed text-slate-500;
   }
