@@ -1,27 +1,39 @@
 ---
 // src/pages/index.astro
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 import Timeline from "../components/Timeline.svelte";
-import timelineData from '../data/timeline.json';
+import timelineData from "../data/timeline.json";
 
-const actionList = ["making the obvious visable", "centering people in technology", "finding delight in the mundane"]
+const actionList = [
+  "making the obvious visable",
+  "centering people in technology",
+  "finding delight in the mundane",
+];
 ---
 
 <Layout title="workingon.studio">
   <div class="bg-gray-950 text-gray-100">
-    <main class="min-h-screen flex items-center justify-center p-8">
-      <div class="max-w-md mx-auto space-y-12">
+    <main class="flex min-h-screen items-center justify-center p-8">
+      <div class="mx-auto max-w-md space-y-12">
         <div class="group space-y-12">
           <div>
-            <h1 class="text-base font-display cursor-default inline-block">
-              working on<span class="text-xs text-yellow-300 text-shadow-glow motion-safe:animate-flicker sm:text-gray-500 sm:text-shadow-none sm:motion-safe:animate-none sm:group-hover:text-shadow-glow sm:group-hover:text-yellow-300 sm:group-hover:motion-safe:animate-flicker">.studio</span>
+            <h1 class="font-display inline-block cursor-default text-base">
+              working on<span
+                class="text-shadow-glow motion-safe:animate-flicker sm:group-hover:text-shadow-glow sm:group-hover:motion-safe:animate-flicker text-xs text-yellow-300 sm:text-gray-500 sm:text-shadow-none sm:group-hover:text-yellow-300 sm:motion-safe:animate-none"
+              >
+                .studio
+              </span>
             </h1>
           </div>
-          <div class="text-sm space-y-12 font-sans leading-6">
+          <div class="space-y-12 font-sans text-sm leading-6">
             <div>
-              {actionList.map(item => (
-                <p><span class="hidden sm:inline-block">working on</span>...{item}.</p>
-              ))}
+              {
+                actionList.map((item) => (
+                  <p>
+                    <span class="hidden sm:inline-block">working on</span>...{item}.
+                  </p>
+                ))
+              }
             </div>
             <div>
               <p>working on...a new site.</p>
@@ -33,7 +45,7 @@ const actionList = ["making the obvious visable", "centering people in technolog
             A creative studio producing both physical and digital products that make people enjoy life more while serving as social experiments. We take behaviors people do unconsciously and create mirrors that make them suddenly aware of it.
           </p>
         </div> -->
-        <div class="text-[11px] text-gray-500 space-y-1">
+        <div class="space-y-1 text-[11px] text-gray-500">
           <div>
             <Timeline timelineData={timelineData} client:load />
           </div>
