@@ -1,7 +1,8 @@
+<!-- src/components/dad-reply/partials/NewButton.svelte -->
 <script lang="ts">
-  import Icon from "@iconify/svelte";
+  import Icon from "@components/Icon.svelte";
   let isOpen = false;
-  $: buttonIcon = isOpen ? "close-small-rounded" : "keyboard-arrow-down-rounded";
+  $: buttonIcon = isOpen ? "close" : "arrowDown";
 
   function handleClick() {
     isOpen = !isOpen;
@@ -35,7 +36,7 @@
       class="flex items-center justify-center rounded-r-full border border-l-0 pr-2 pl-1"
       on:click={handleClick}
     >
-      <Icon icon="material-symbols:{buttonIcon}" class="text-2xl"></Icon>
+      <Icon name={buttonIcon} class_="text-2xl" />
     </button>
   </div>
 </div>

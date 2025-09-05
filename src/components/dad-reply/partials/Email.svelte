@@ -36,7 +36,7 @@
   </div>
   <div class="flex flex-row space-x-3">
     <MailButton text="Dad Reply" />
-    <MailButton text="Reply" icon="reply-rounded" />
-    <MailButton text="Forward" icon="forward-rounded" />
+    <MailButton text="Reply" iconName="reply" />
+    <MailButton text="Forward" iconName="forward" />
   </div>
 </div>
