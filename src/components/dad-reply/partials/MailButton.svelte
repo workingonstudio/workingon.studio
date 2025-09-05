@@ -5,7 +5,7 @@
 
 <button class="google-button flex max-h-9 items-center px-4 py-2 text-sm font-medium [&_span]:mr-3">
   {#if icon}
-    <span class="material-symbols-rounded">{icon}</span>
+    <iconify-icon icon="material-symbols:{icon}" class="mr-3 text-[18px]"></iconify-icon>
   {:else}
     <span>👍</span>
   {/if}
