@@ -1,7 +1,8 @@
 <script lang="ts">
   import Badge from "./partials/Badge.svelte";
-  import NewButton from "./partials/NewButton.svelte";
+  import AdvButton from "./partials/AdvButton.svelte";
   import ToneRadio from "./partials/ToneRadio.svelte";
+  import MailButton from "./partials/MailButton.svelte";
   let selectedTone = "tone-1";
 </script>
 
@@ -38,7 +39,22 @@
         <h3 class="inline-flex">A new button?</h3>
         <Badge text="Pro" bgColor="bg-orange-100" />
       </div>
-      <NewButton />
+      <div class="py-6">
+        <div class="relative flex flex-col rounded-bl-[14px] border-b-1 border-l-1 border-slate-300 p-12">
+          <div class="absolute inset-x-0 space-y-5 px-12 font-[Arial] text-sm/7 [&_p]:!text-black">
+            <p>
+              Not because I'm trying to fix broken systems. Because I'm meeting people where they are and changing how
+              they interact with those systems.
+            </p>
+            <p>Cheers.</p>
+          </div>
+          <div class="flex items-end space-x-3">
+            <AdvButton />
+            <MailButton iconName="reply" text="Reply" />
+            <MailButton iconName="forward" text="Forward" />
+          </div>
+        </div>
+      </div>
       <p>
         That right baby. This isn’t like selling electric windows in a new car. This is like selling a purpose build
         napping pod.
