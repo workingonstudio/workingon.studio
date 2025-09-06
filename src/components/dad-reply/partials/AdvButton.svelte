@@ -8,6 +8,28 @@
 
   let containerRef: any;
 
+  let selectedIndex = 0;
+
+  $: currentButton = buttonOptions[selectedIndex];
+
+  $: buttonOptions = [
+    {
+      emoji: "👍",
+      text: "Dad Reply",
+      class: "active",
+    },
+    {
+      emoji: "👀",
+      text: "Looking",
+      class: "",
+    },
+    {
+      emoji: "🥳",
+      text: "Yay!",
+      class: "",
+    },
+  ];
+
   onMount(() => {
     function handleClickOutside(event: any) {
       if (containerRef && !containerRef.contains(event.target)) {
@@ -22,33 +44,32 @@
     };
   });
 
+  function updateButton(option: any) {
+    selectedIndex = buttonOptions.findIndex((btn) => btn.emoji === option.emoji);
+    handleClick();
+  }
+
   function handleClick() {
     showMenu = !showMenu;
   }
 </script>
 
 <div class="font-['Google Sans'] flex w-fit flex-col text-sm font-medium" bind:this={containerRef}>
-  <ul
-    class="mb-4 {visable} z-50 flex flex-col rounded-lg border border-slate-300 bg-white p-2 shadow *:cursor-pointer *:rounded-sm *:p-2 *:hover:bg-blue-50"
+  <div
+    class="mb-4 {visable} z-50 flex min-w-[160px] flex-col rounded-lg border border-slate-300 bg-white p-2 shadow *:cursor-pointer *:rounded-sm *:p-2 *:text-left *:hover:bg-slate-50"
   >
-    <li>
-      <span class="mr-1">👍</span>
-      Dad Reply
-    </li>
-    <li>
-      <span class="mr-1">✅</span>
-      Got it
-    </li>
-    <li>
-      <span class="mr-1">🤝</span>
-      Thanks
-    </li>
-  </ul>
+    {#each buttonOptions as option, index}
+      <button class={index === selectedIndex ? "active" : ""} on:click|preventDefault={() => updateButton(option)}>
+        <span class="mr-2">{option.emoji}</span>
+        {option.text}
+      </button>
+    {/each}
+  </div>
 
   <div class="google-button flex max-h-9 flex-row">
     <div class="rounded-full rounded-r-lg border px-4 py-2">
-      <span class="mr-3">👍</span>
-      Dad Reply
+      <span class="mr-2">{currentButton.emoji}</span>
+      {currentButton.text}
     </div>
     <button
       type="button"
@@ -80,5 +101,9 @@
       0 20px 12px 0 rgba(99, 99, 99, 0.05),
       0 9px 9px 0 rgba(99, 99, 99, 0.09),
       0 2px 5px 0 rgba(99, 99, 99, 0.1);
+  }
+
+  .active {
+    @apply bg-blue-50 font-bold;
   }
 </style>
