@@ -1,17 +1,35 @@
 <!-- src/components/dad-reply/partials/NewButton.svelte -->
 <script lang="ts">
   import Icon from "@components/Icon.svelte";
-  let isOpen = false;
-  $: buttonIcon = isOpen ? "close" : "arrowDown";
+  import { onMount } from "svelte";
+  let showMenu: boolean = false;
+  $: visable = showMenu ? "visible" : "invisible";
+  $: buttonIcon = showMenu ? "close" : "arrowDown";
+
+  let containerRef: any;
+
+  onMount(() => {
+    function handleClickOutside(event: any) {
+      if (containerRef && !containerRef.contains(event.target)) {
+        showMenu = false;
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  });
 
   function handleClick() {
-    isOpen = !isOpen;
+    showMenu = !showMenu;
   }
 </script>
 
-<div class="font-['Google Sans'] flex w-fit flex-col text-sm font-medium">
+<div class="font-['Google Sans'] flex w-fit flex-col text-sm font-medium" bind:this={containerRef}>
   <ul
-    class="mb-4 flex flex-col rounded-lg border border-slate-300 p-2 shadow *:cursor-pointer *:rounded-sm *:p-2 *:hover:bg-blue-50"
+    class="mb-4 {visable} z-50 flex flex-col rounded-lg border border-slate-300 bg-white p-2 shadow *:cursor-pointer *:rounded-sm *:p-2 *:hover:bg-blue-50"
   >
     <li>
       <span class="mr-1">👍</span>
@@ -26,7 +44,8 @@
       Thanks
     </li>
   </ul>
-  <div class="google-button flex flex-row">
+
+  <div class="google-button flex max-h-9 flex-row">
     <div class="rounded-full rounded-r-lg border px-4 py-2">
       <span class="mr-3">👍</span>
       Dad Reply
