@@ -54,17 +54,19 @@
   }
 </script>
 
-<div class="font-['Google Sans'] flex w-fit flex-col text-sm font-medium" bind:this={containerRef}>
-  <div
-    class="mb-4 {visable} z-50 flex min-w-[160px] flex-col rounded-lg border border-slate-300 bg-white p-2 shadow *:cursor-pointer *:rounded-sm *:p-2 *:text-left *:hover:bg-slate-50"
-  >
-    {#each buttonOptions as option, index}
-      <button class={index === selectedIndex ? "active" : ""} on:click|preventDefault={() => updateButton(option)}>
-        <span class="mr-2">{option.emoji}</span>
-        {option.text}
-      </button>
-    {/each}
-  </div>
+<div class="font-['Google Sans'] relative text-sm font-medium" bind:this={containerRef}>
+  {#if showMenu}
+    <div
+      class="absolute bottom-full left-1/2 z-50 mb-4 flex min-w-[160px] -translate-x-1/2 transform flex-col rounded-lg border border-slate-300 bg-white p-2 shadow *:cursor-pointer *:rounded-sm *:p-2 *:text-left *:hover:bg-slate-50"
+    >
+      {#each buttonOptions as option, index}
+        <button class={index === selectedIndex ? "active" : ""} on:click|preventDefault={() => updateButton(option)}>
+          <span class="mr-2">{option.emoji}</span>
+          {option.text}
+        </button>
+      {/each}
+    </div>
+  {/if}
 
   <div class="google-button flex max-h-9 flex-row">
     <button class="rounded-full rounded-r-lg border px-4 py-2">
