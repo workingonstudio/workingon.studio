@@ -67,10 +67,10 @@
   </div>
 
   <div class="google-button flex max-h-9 flex-row">
-    <div class="rounded-full rounded-r-lg border px-4 py-2">
+    <button class="rounded-full rounded-r-lg border px-4 py-2">
       <span class="mr-2">{currentButton.emoji}</span>
       {currentButton.text}
-    </div>
+    </button>
     <button
       type="button"
       class="flex items-center justify-center rounded-r-full border border-l-0 pr-2 pl-1"
