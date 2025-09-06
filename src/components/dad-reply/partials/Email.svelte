@@ -7,9 +7,7 @@
     <div class="font-[Roboto]">
       <strong class="text-[15px]">
         workingon.studio <span class="text-xs font-normal text-slate-400">
-          &lt;
-          <a href="mailto:hello@workingon.studio">hello@workingon.studio</a>
-          &gt;
+          <a href="mailto:hello@workingon.studio">&lt;hello@workingon.studio&gt;</a>
         </span>
       </strong>
       <span class="flex items-center text-xs font-normal text-slate-400">
