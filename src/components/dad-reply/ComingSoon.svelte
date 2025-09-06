@@ -48,7 +48,7 @@
             </p>
             <p>Cheers.</p>
           </div>
-          <div class="flex items-end space-x-3">
+          <div class="mt-38 flex items-end space-x-3">
             <AdvButton />
             <MailButton iconName="reply" text="Reply" />
             <MailButton iconName="forward" text="Forward" />
