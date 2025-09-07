@@ -21,37 +21,73 @@
 <div class="flex flex-col space-y-7">
   <div class="space-y-1">
     <span class="inline-flex text-gray-500 text-[11px]">Current Balance</span>
-    <h3 class="text-2xl {totalClass}">{netTotal}</h3>
+    <h3 class="text-2xl font-sans {totalClass}">{netTotal}</h3>
   </div>
-  <div>
-    <table class="table-auto w-full border-spacing-y-4 border-separate">
-      <thead>
-        <tr class="text-[11px] text-gray-500">
-          <th class="text-left">Description</th>
-          <th class="text-right">In</th>
-          <th class="text-right">Out</th>
-        </tr>
-      </thead>
-      <tbody class="text-sm group">
-        {#each financeData.entries as item}
-          <tr>
-            <td>{item.description}</td>
-            <td class="text-right"></td>
-            <td class="text-right">-&#xA3;{item.out.toFixed(2)}</td>
-          </tr>
-        {/each}
-      </tbody>
-    </table>
+
+  <div
+    class="flex flex-col"
+    role="table"
+    aria-label="Financial transactions"
+  >
+    <!-- Header -->
+    <div
+      class="flex text-[11px] text-gray-500 pb-2"
+      role="rowgroup"
+    >
+      <div
+        class="flex w-full"
+        role="row"
+      >
+        <span
+          class="flex-1 text-left"
+          role="columnheader">Description</span
+        >
+        <span
+          class="w-28 text-right"
+          role="columnheader">In</span
+        >
+        <span
+          class="w-28 text-right"
+          role="columnheader">Out</span
+        >
+      </div>
+    </div>
+
+    <!-- Rows -->
+    <div
+      class="flex flex-col space-y-4 text-sm finance-rows"
+      role="rowgroup"
+    >
+      {#each financeData.entries as item, index}
+        <div
+          class="flex transition-colors ease-in-out duration-150 cursor-default finance-row"
+          role="row"
+        >
+          <span
+            class="flex-1"
+            role="cell">{item.description}</span
+          >
+          <span
+            class="w-28 text-right"
+            role="cell"
+          ></span>
+          <span
+            class="w-28 text-right"
+            role="cell">-£{item.out.toFixed(2)}</span
+          >
+        </div>
+      {/each}
+    </div>
   </div>
 </div>
 
 <style>
   @reference "../styles/global.css";
-  tbody:hover tr:not(:hover) {
+  .finance-rows:hover .finance-row:not(:hover) {
     @apply text-gray-500 delay-100;
   }
 
-  tbody tr {
-    @apply transition-colors ease-in-out duration-150 cursor-default;
+  .finance-row:focus {
+    @apply outline-none ring-2 ring-blue-500 ring-offset-2 ring-offset-gray-950;
   }
 </style>
