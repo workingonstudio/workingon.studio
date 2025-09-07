@@ -1,4 +1,5 @@
 <script>
+  import { DateTime } from "luxon";
   export let timelineData;
   // Group entries by date
   function groupByDate(entries) {
@@ -52,7 +53,7 @@
                     {entry.version}
                   </span>
                   <span class="time">
-                    {entry.formattedDate.split(" at ")[1]}
+                    {DateTime.fromISO(entry.date).toFormat("TT ZZ")}
                   </span>
                 </div>
 

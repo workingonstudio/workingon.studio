@@ -5,10 +5,13 @@
 </script>
 
 <footer
-  class="flex flex-col md:flex-row justify-between md:items-center text-gray-600 text-xs py-8"
+  class="flex flex-col space-y-2 md:flex-row md:justify-between md:items-center text-gray-600 text-xs py-8"
 >
-  <span>workingonstudio ltd. no: 12345678</span>
-  <span>{DateTime.fromISO(date).toFormat("EEE ff ZZZ")}</span>
+  <span
+    >last updated: {DateTime.fromISO(date).toFormat(
+      "ccc',' LL LLL y TT ZZZ"
+    )}</span
+  >
 </footer>
 
 <style>
