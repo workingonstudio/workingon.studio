@@ -32,7 +32,9 @@ const nudicaMonoFontUrl = import.meta.env.NUDICA_MONO_FONT_CSS_URL;
     
     <title>{title}</title>
   </head>
-  <body class="selection:bg-gray-100 selection:text-gray-950">
-    <slot />
+  <body class="selection:bg-gray-100 selection:text-gray-950 bg-gray-950">
+    <main class="min-h-screen flex-1 flex mx-[5%] md:mx-[10%]">
+      <slot />
+    </main>
   </body>
 </html>

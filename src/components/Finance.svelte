@@ -18,7 +18,7 @@
       : `-£${Math.abs(totalIncome - totalExpenses).toFixed(2)}`;
 </script>
 
-<div class="flex flex-col space-y-7">
+<section class="flex flex-col space-y-7 max-w-md">
   <div class="space-y-1">
     <span class="inline-flex text-gray-500 text-[11px]">Current Balance</span>
     <h3 class="text-2xl font-sans {totalClass}">{netTotal}</h3>
@@ -55,12 +55,12 @@
 
     <!-- Rows -->
     <div
-      class="flex flex-col space-y-4 text-sm finance-rows"
+      class="flex flex-col text-sm finance-rows"
       role="rowgroup"
     >
       {#each financeData.entries as item, index}
         <div
-          class="flex transition-colors ease-in-out duration-150 cursor-default finance-row"
+          class="flex transition-colors ease-in-out duration-150 cursor-default finance-row pb-4"
           role="row"
         >
           <span
@@ -79,7 +79,7 @@
       {/each}
     </div>
   </div>
-</div>
+</section>
 
 <style>
   @reference "../styles/global.css";

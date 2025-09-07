@@ -1,15 +1,15 @@
 ---
-// src/pages/index.astro
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/partials/Header.svelte";
-import Home from "../components/Home.svelte";
 import Footer from "../components/partials/Footer.svelte";
+import Timeline from "../components/Timeline.svelte";
+import timelineData from "../data/timeline.json"
 ---
 
 <Layout title="workingon.studio">
   <div class="bg-gray-950 flex flex-1 flex-col justify-between text-gray-100">
-    <Header text="workingon.studio" client:load />
-        <Home />
+    <Header text="progress.log" client:load />
+      <Timeline {timelineData} />
     <Footer />
   </div>
 </Layout>
