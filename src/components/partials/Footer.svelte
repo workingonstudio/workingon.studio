@@ -1,13 +1,14 @@
 <script lang="ts">
+  import { DateTime } from "luxon";
   import timelineData from "../../data/timeline-github.json";
-  let date = new Date(timelineData.generated);
+  let date = timelineData.generated;
 </script>
 
 <footer
-  class="flex flex-row justify-between items-center text-gray-600 text-xs py-8"
+  class="flex flex-col md:flex-row justify-between md:items-center text-gray-600 text-xs py-8"
 >
-  <span>workingonstudio ltd, no: 12345678</span>
-  <span>{date.toUTCString()}</span>
+  <span>workingonstudio ltd. no: 12345678</span>
+  <span>{DateTime.fromISO(date).toFormat("EEE ff ZZZ")}</span>
 </footer>
 
 <style>
