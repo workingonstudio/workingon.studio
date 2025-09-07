@@ -1,5 +1,8 @@
 <script lang="ts">
   import timelineData from "../../data/timeline-github.json";
+  import { totals } from "../../stores/finance.js";
+
+  $: totalClass = $totals.isPositive ? "text-green-500" : "text-red-500";
   export let text: string;
   let headerText: string;
   let dotText: string;
@@ -15,7 +18,7 @@
 </script>
 
 <header
-  class="flex flex-row justify-between items-center group p-8 bg-gray-950/80 backdrop-blur-sm"
+  class="flex flex-row justify-between items-center group py-8 bg-gray-950/80 backdrop-blur-sm"
 >
   <a
     href="/"
@@ -29,7 +32,13 @@
     </h1>
   </a>
   <nav class="text-gray-600 text-xs">
-    <ul>
+    <ul class="flex-col *:inline-flex space-x-2">
+      <li>
+        <a
+          href="/finances"
+          class={totalClass}>{$totals.formatted}</a
+        >
+      </li>
       <li><a href="/progress">{currentVersion}</a></li>
     </ul>
   </nav>
@@ -37,7 +46,7 @@
 
 <style>
   @reference "../../styles/global.css";
-  nav a {
-    @apply hover:text-gray-100 hover:underline;
+  nav li a {
+    @apply hover:text-gray-100;
   }
 </style>

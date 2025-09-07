@@ -55,12 +55,12 @@
 
     <!-- Rows -->
     <div
-      class="flex flex-col space-y-4 text-sm finance-rows"
+      class="flex flex-col text-sm finance-rows"
       role="rowgroup"
     >
       {#each financeData.entries as item, index}
         <div
-          class="flex transition-colors ease-in-out duration-150 cursor-default finance-row"
+          class="flex transition-colors ease-in-out duration-150 cursor-default finance-row pb-4"
           role="row"
         >
           <span
