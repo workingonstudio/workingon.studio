@@ -1,22 +1,5 @@
 <script>
   export let timelineData;
-  let showTimeline = false;
-
-  function toggleTimeline() {
-    showTimeline = !showTimeline;
-  }
-
-  // Get the latest version - simplified logic
-  $: currentVersion = (() => {
-    if (!timelineData?.entries || timelineData.entries.length === 0) {
-      return "v1.0.0";
-    }
-
-    // Get the very last entry (highest version)
-    const latestEntry = timelineData.entries[timelineData.entries.length - 1];
-    return latestEntry?.version || "v1.0.0";
-  })();
-
   // Group entries by date
   function groupByDate(entries) {
     if (!entries) return [];
@@ -47,46 +30,8 @@
   $: groupedEntries = groupByDate(timelineData?.entries);
 </script>
 
-<section class="timeline-section space-y-12">
-  <div class="space-y-1">
-    <div>{currentVersion}</div>
-    <button
-      class="last-built-trigger cursor-help text-left truncate"
-      on:click={toggleTimeline}
-      aria-expanded={showTimeline}
-    >
-      <span class="capitalize sm:normal-case">
-        <span class="hidden sm:inline-block">Last</span> updated: {timelineData?.lastBuild ||
-          "Loading..."}
-      </span>
-    </button>
-    <p class="truncate">
-      Repo<span class="hidden sm:inline-block">sitory</span>:
-      <a
-        href="https://github.com/prmack/workingon.studio"
-        class="underline hover:text-gray-100"
-        >https://github.com/prmack/workingon.studio</a
-      >
-    </p>
-  </div>
-
-  <!-- Always render timeline content, but hide it when not shown -->
-  <div
-    class="timeline-reveal group space-y-12 {showTimeline
-      ? ''
-      : 'invisible h-0 overflow-hidden'}"
-  >
-    <div class="timeline-header">
-      <h2
-        class="text-base text-gray-100 font-display cursor-default inline-block"
-      >
-        progress<span
-          class="text-xs text-yellow-300 text-shadow-glow motion-safe:animate-flicker sm:text-gray-500 sm:text-shadow-none sm:motion-safe:animate-none sm:group-hover:text-shadow-glow sm:group-hover:text-yellow-300 sm:group-hover:motion-safe:animate-flicker"
-          >.log</span
-        >
-      </h2>
-    </div>
-
+<section class="timeline-section max-w-md space-y-12 mt-32">
+  <div class="timeline-reveal group space-y-12">
     <div class="timeline-groups space-y-6 mb-6">
       {#each groupedEntries as group}
         <div class="date-group">
@@ -134,7 +79,9 @@
                     </p>
                   {/if}
                   {#if entry.branchMerged && entry.intoBranch}{:else}
-                    <span class="branch-display">{entry.branchDisplay}</span>
+                    <span class="branch-display text-gray-500 text-[11px]"
+                      >{entry.branchDisplay}</span
+                    >
                   {/if}
                 </div>
               </li>

@@ -1,30 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Timeline from "../components/Timeline.svelte";
-import timelineData from "../data/timeline.json"
 import Finance from "../components/Finance.svelte"
+import Header from "../components/partials/Header.svelte";
+import Footer from "../components/partials/Footer.svelte";
 ---
 
 <Layout title="workingon.studio - Finance">
-  <div class="bg-gray-950 text-gray-100">
-    <main class="min-h-screen flex items-center justify-center p-8">
-      <div class="max-w-md mx-auto space-y-12">
-        <div class="group space-y-12">
-          <div>
-            <h1 class="text-base font-display cursor-default inline-block">
-              finances<span class="text-xs text-yellow-300 text-shadow-glow motion-safe:animate-flicker sm:text-gray-500 sm:text-shadow-none sm:motion-safe:animate-none sm:group-hover:text-shadow-glow sm:group-hover:text-yellow-300 sm:group-hover:motion-safe:animate-flicker">.log</span>
-            </h1>
-          </div>
-          <div class="space-y-12 font-sans leading-6">
-            <Finance client:load>
-          </div>
-          <div class="text-[11px] text-gray-500 space-y-1">
-            <div>
-              <Timeline timelineData={timelineData} client:load />
-            </div>
-          </div>
-        </div>
+  <div class="bg-gray-950 flex flex-1 flex-col justify-between text-gray-100">
+    <Header text="finance.log" client:load />
+      <div class="p-8">
+        <Finance />
       </div>
-    </main>
+    <Footer />
   </div>
 </Layout>
