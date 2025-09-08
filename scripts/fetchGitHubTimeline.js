@@ -14,9 +14,7 @@ const GITHUB_REPO = process.env.GITHUB_REPO || "workingon.studio";
 if (!GITHUB_TOKEN) {
   console.error("❌ Please set GITHUB_TOKEN environment variable");
   console.log("💡 Get a token at: https://github.com/settings/tokens");
-  console.log(
-    "💡 Usage: GITHUB_TOKEN=your_token npm run timeline:fetch-github"
-  );
+  console.log("💡 Usage: GITHUB_TOKEN=your_token npm run timeline:fetch-github");
   process.exit(1);
 }
 
@@ -103,9 +101,7 @@ async function getTagsWithDates(octokit, owner, repo) {
     // Filter to only version tags (v followed by numbers and dots)
     const versionTags = tags.filter((tag) => /^v\d+\.\d+\.\d+$/.test(tag.name));
 
-    console.log(
-      `📦 Found ${tags.length} total tags, ${versionTags.length} version tags`
-    );
+    console.log(`📦 Found ${tags.length} total tags, ${versionTags.length} version tags`);
 
     // If no version tags exist, return empty array instead of fake fallback
     if (versionTags.length === 0) {
@@ -161,9 +157,7 @@ function generateVersionForCommit(commit, allCommitsInOrder, tagsWithDates) {
 
   // If no tags exist, use simple incremental versioning from v1.0.0
   if (tagsWithDates.length === 0) {
-    const commitIndex = allCommitsInOrder.findIndex(
-      (c) => c.sha === commit.sha
-    );
+    const commitIndex = allCommitsInOrder.findIndex((c) => c.sha === commit.sha);
     return `v1.0.${commitIndex + 1}`;
   }
 
@@ -184,8 +178,7 @@ function generateVersionForCommit(commit, allCommitsInOrder, tagsWithDates) {
 
   // Special case: if this commit is exactly at a tag, return the tag version
   const matchingTag = tagsWithDates.find(
-    (tag) =>
-      Math.abs(new Date(tag.date).getTime() - commitDate.getTime()) < 1000 // Within 1 second
+    (tag) => Math.abs(new Date(tag.date).getTime() - commitDate.getTime()) < 1000 // Within 1 second
   );
 
   if (matchingTag) {
@@ -248,11 +241,7 @@ async function fetchGitHubTimeline() {
       repo: GITHUB_REPO,
       per_page: 100,
     });
-    console.log(
-      `✅ Found ${branches.length} branches: ${branches
-        .map((b) => b.name)
-        .join(", ")}`
-    );
+    console.log(`✅ Found ${branches.length} branches: ${branches.map((b) => b.name).join(", ")}`);
 
     // FIXED: Fetch commits from ALL branches with better deduplication
     console.log("📦 Fetching commits from all branches...");
@@ -263,15 +252,12 @@ async function fetchGitHubTimeline() {
     for (const branch of branches) {
       console.log(`📦 Fetching commits from branch: ${branch.name}`);
       try {
-        const branchCommits = await octokit.paginate(
-          octokit.rest.repos.listCommits,
-          {
-            owner: GITHUB_OWNER,
-            repo: GITHUB_REPO,
-            sha: branch.name, // This is the key fix!
-            per_page: 100,
-          }
-        );
+        const branchCommits = await octokit.paginate(octokit.rest.repos.listCommits, {
+          owner: GITHUB_OWNER,
+          repo: GITHUB_REPO,
+          sha: branch.name, // This is the key fix!
+          per_page: 100,
+        });
 
         // Track branches for each commit and filter duplicates
         branchCommits.forEach((commit) => {
@@ -293,16 +279,12 @@ async function fetchGitHubTimeline() {
         console.log(
           `   ✅ Found ${branchCommits.length} commits on ${branch.name} (${
             branchCommits.filter(
-              (c) =>
-                !seenShas.has(c.sha) ||
-                commitToBranches.get(c.sha).includes(branch.name)
+              (c) => !seenShas.has(c.sha) || commitToBranches.get(c.sha).includes(branch.name)
             ).length
           } new)`
         );
       } catch (error) {
-        console.warn(
-          `   ⚠️  Could not fetch commits from branch ${branch.name}: ${error.message}`
-        );
+        console.warn(`   ⚠️  Could not fetch commits from branch ${branch.name}: ${error.message}`);
       }
     }
 
@@ -338,40 +320,29 @@ async function fetchGitHubTimeline() {
     for (const pr of pulls) {
       console.log(`📦 Fetching commits for PR #${pr.number}: ${pr.title}`);
       try {
-        const prCommits = await octokit.paginate(
-          octokit.rest.pulls.listCommits,
-          {
-            owner: GITHUB_OWNER,
-            repo: GITHUB_REPO,
-            pull_number: pr.number,
-            per_page: 100,
-          }
-        );
+        const prCommits = await octokit.paginate(octokit.rest.pulls.listCommits, {
+          owner: GITHUB_OWNER,
+          repo: GITHUB_REPO,
+          pull_number: pr.number,
+          per_page: 100,
+        });
 
         prCommits.forEach((commit) => {
           prCommitsMap[commit.sha] = pr;
         });
 
-        console.log(
-          `   ✅ Mapped ${prCommits.length} commits to ${pr.head.ref}`
-        );
+        console.log(`   ✅ Mapped ${prCommits.length} commits to ${pr.head.ref}`);
       } catch (error) {
-        console.warn(
-          `   ⚠️  Could not fetch commits for PR #${pr.number}: ${error.message}`
-        );
+        console.warn(`   ⚠️  Could not fetch commits for PR #${pr.number}: ${error.message}`);
       }
     }
 
-    console.log(
-      `✅ Total commit-to-PR mappings: ${Object.keys(prCommitsMap).length}`
-    );
+    console.log(`✅ Total commit-to-PR mappings: ${Object.keys(prCommitsMap).length}`);
 
     // DEBUG: Show PR commit mappings
     console.log("\n🔍 DEBUG: PR Commit Mappings:");
     Object.entries(prCommitsMap).forEach(([sha, pr]) => {
-      console.log(
-        `   ${sha.substring(0, 7)} -> PR #${pr.number} (${pr.head.ref})`
-      );
+      console.log(`   ${sha.substring(0, 7)} -> PR #${pr.number} (${pr.head.ref})`);
     });
 
     // Get detailed stats for commits (limit to avoid rate limiting)
@@ -400,9 +371,7 @@ async function fetchGitHubTimeline() {
         detailedCommits.push(detailedCommit);
       } catch (error) {
         console.warn(
-          `⚠️  Could not fetch details for ${commit.sha.substring(0, 7)}: ${
-            error.message
-          }`
+          `⚠️  Could not fetch details for ${commit.sha.substring(0, 7)}: ${error.message}`
         );
         // Use basic commit data with branch info
         commit._branchFound = commit._branchFound;
@@ -413,8 +382,7 @@ async function fetchGitHubTimeline() {
 
     // Sort by commit date (newest first for processing, will reverse later)
     detailedCommits.sort(
-      (a, b) =>
-        new Date(b.commit.committer.date) - new Date(a.commit.committer.date)
+      (a, b) => new Date(b.commit.committer.date) - new Date(a.commit.committer.date)
     );
 
     console.log(`📊 Total commits to process: ${detailedCommits.length}`);
@@ -432,11 +400,7 @@ async function fetchGitHubTimeline() {
     }
 
     // Get tags with their commit dates
-    const tagsWithDates = await getTagsWithDates(
-      octokit,
-      GITHUB_OWNER,
-      GITHUB_REPO
-    );
+    const tagsWithDates = await getTagsWithDates(octokit, GITHUB_OWNER, GITHUB_REPO);
 
     // DEBUG: Show which commits we're processing
     console.log("\n🔍 DEBUG: Commits Being Processed (from all branches):");
@@ -445,8 +409,7 @@ async function fetchGitHubTimeline() {
       const branchFromPR = pr ? pr.head.ref : null;
       const branchFromDiscovery = commit._branchFound;
       const allBranches = commit._allBranches || [];
-      const displayBranch =
-        branchFromPR || branchFromDiscovery || currentBranch;
+      const displayBranch = branchFromPR || branchFromDiscovery || currentBranch;
 
       console.log(
         `   ${index + 1}. ${commit.sha.substring(0, 7)} - ${
@@ -471,9 +434,7 @@ async function fetchGitHubTimeline() {
         const pr = findPRForCommit(prCommitsMap, commit);
 
         // Use PR branch if available, otherwise use discovered branch
-        let branchName = pr
-          ? pr.head.ref
-          : commit._branchFound || currentBranch;
+        let branchName = pr ? pr.head.ref : commit._branchFound || currentBranch;
 
         // This will be the final branch name for display (starts as branchName, may be overridden for merges)
         let finalBranchName = branchName;
@@ -492,12 +453,8 @@ async function fetchGitHubTimeline() {
           const prMergeMatch = message.match(
             /Merge pull request.*?[/#](\d+).*?from.*?[:/]([^.\s/]+)/
           );
-          const branchMergeMatch = message.match(
-            /Merge branch '([^']+)' into (.+)/
-          );
-          const simplePRMatch = message.match(
-            /Merge pull request.*?\/([^.\s]+)/
-          );
+          const branchMergeMatch = message.match(/Merge branch '([^']+)' into (.+)/);
+          const simplePRMatch = message.match(/Merge pull request.*?\/([^.\s]+)/);
 
           if (prMergeMatch) {
             // GitHub PR merge: "Merge pull request #123 from user/branch-name"
@@ -538,11 +495,7 @@ async function fetchGitHubTimeline() {
         }
 
         return {
-          version: generateVersionForCommit(
-            commit,
-            detailedCommits,
-            tagsWithDates
-          ),
+          version: generateVersionForCommit(commit, detailedCommits, tagsWithDates),
           hash: commit.sha.substring(0, 7),
           message: (() => {
             let msg = commit.commit.message.split("\n")[0]; // First line only
@@ -601,13 +554,8 @@ async function fetchGitHubTimeline() {
     // Show a preview with branch info
     console.log("\n📋 Preview of recent entries:");
     timeline.entries.slice(-10).forEach((entry) => {
-      const tagDisplay =
-        entry.bracketTags.length > 0
-          ? ` [${entry.bracketTags.join(", ")}]`
-          : "";
-      console.log(
-        `   ${entry.version} - ${entry.message} (${entry.branch})${tagDisplay}`
-      );
+      const tagDisplay = entry.bracketTags.length > 0 ? ` [${entry.bracketTags.join(", ")}]` : "";
+      console.log(`   ${entry.version} - ${entry.message} (${entry.branch})${tagDisplay}`);
     });
 
     // Show branch summary
@@ -624,9 +572,7 @@ async function fetchGitHubTimeline() {
   } catch (error) {
     console.error("❌ Error fetching GitHub timeline:", error.message);
     if (error.status === 401) {
-      console.log(
-        "💡 Check that your GITHUB_TOKEN is valid and has repo access"
-      );
+      console.log("💡 Check that your GITHUB_TOKEN is valid and has repo access");
     }
     if (error.status === 404) {
       console.log("💡 Check that GITHUB_OWNER and GITHUB_REPO are correct");
