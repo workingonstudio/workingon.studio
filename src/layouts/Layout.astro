@@ -1,5 +1,5 @@
 ---
-import '../styles/global.css';
+import "@styles/global.css";
 
 const isDev = import.meta.env.DEV;
 const plausibleDomain = isDev ? 'localhost' : 'workingon.studio';
@@ -29,23 +29,25 @@ const nudicaMonoFontUrl = import.meta.env.NUDICA_MONO_FONT_CSS_URL;
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="A creative studio producing cultural mirror products" />
-    <meta name="theme-color" content="#030712">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#030712" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,500;1,500&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,500;1,500&family=Space+Grotesk:wght@500&display=swap"
+      rel="stylesheet"
+    />
     <meta name="generator" content={Astro.generator} />
     
     <script defer data-domain={plausibleDomain} src={plausibleScript}></script>
     <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
 
-
     <!-- CDN Font Stylesheets -->
     {nudicaFontUrl && <link rel="stylesheet" href={nudicaFontUrl} />}
     {nudicaMonoFontUrl && <link rel="stylesheet" href={nudicaMonoFontUrl} />}
-    
+
     <title>{title}</title>
   </head>
   <body class="selection:bg-gray-100 selection:text-gray-950 bg-gray-950">

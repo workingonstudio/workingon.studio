@@ -7,5 +7,13 @@
   "svelte.plugin.typescript.diagnostics.enable": true,
   "typescript.preferences.includePackageJsonAutoImports": "auto",
   "svelte.plugin.svelte.diagnostics.enable": false,
-  "cSpell.words": ["nudica"]
+  "cSpell.words": ["iconify", "nudica"],
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[astro]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[svelte]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

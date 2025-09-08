@@ -39,16 +39,10 @@
           <h3 class="date-header text-xs text-gray-400 font-mono mb-3 py-1">
             {group.date}
           </h3>
-
           <ul class="timeline-entries space-y-6">
             {#each group.entries as entry}
-              <li
-                class="timeline-entry space-y-2"
-                data-type={entry.type}
-              >
-                <div
-                  class="entry-meta flex flex-row justify-between text-gray-600 text-[10px]"
-                >
+              <li class="timeline-entry space-y-2" data-type={entry.type}>
+                <div class="entry-meta flex flex-row justify-between text-[10px] text-gray-600">
                   <span class="version-debug">
                     {entry.version}
                   </span>
@@ -56,24 +50,19 @@
                     {DateTime.fromISO(entry.date).toFormat("TT ZZ")}
                   </span>
                 </div>
-
                 <div class="entry-content space-y-1">
                   {#if entry.branchMerged && entry.intoBranch}
-                    <p class="message text-gray-100 text-xs">
+                    <p class="message text-xs text-gray-100">
                       <span class="merge-info">
-                        <span class="merged-branch"
-                          >{entry.branchDisplay === entry.branchMerged
-                            ? entry.intoBranch
-                            : entry.branchDisplay}</span
-                        >
+                        <span class="merged-branch">
+                          {entry.branchDisplay === entry.branchMerged ? entry.intoBranch : entry.branchDisplay}
+                        </span>
                         <span class="merge-arrow text-yellow-300">←</span>
                         <span class="into-branch">{entry.branchMerged}</span>
                       </span>
                     </p>
                   {:else}
-                    <p
-                      class="first-letter:capitalize text-gray-100 text-xs/relaxed"
-                    >
+                    <p class="text-xs/relaxed text-gray-100 first-letter:capitalize">
                       {entry.message}
                     </p>
                   {/if}

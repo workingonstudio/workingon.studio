@@ -2,6 +2,7 @@
 import { defineConfig } from "astro/config";
 import svelte from "@astrojs/svelte";
 import tailwindcss from "@tailwindcss/vite";
+import path from "path";
 
 // https://astro.build/config
 export default defineConfig({
@@ -12,6 +13,13 @@ export default defineConfig({
     server: {
       host: true,
       allowedHosts: ["localhost", ".ngrok.io", ".ngrok-free.app"],
+    },
+    resolve: {
+      alias: {
+        "@layouts": path.resolve("./src/layouts"),
+        "@components": path.resolve("./src/components"),
+        "@styles": path.resolve("./src/styles"),
+      },
     },
   },
 });
