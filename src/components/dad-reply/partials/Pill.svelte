@@ -1,10 +1,11 @@
 <script lang="ts">
+  import Icon from "@iconify/svelte";
   export let icon: string;
   export let text: string;
 </script>
 
 <li>
-  <iconify-icon icon="material-symbols:{icon}" class="mr-2 text-[18px] text-blue-600"></iconify-icon>
+  <Icon icon="material-symbols:{icon}" class="mr-2 text-[18px] text-blue-600"></Icon>
   {text}
 </li>
 

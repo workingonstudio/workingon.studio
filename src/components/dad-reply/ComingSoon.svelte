@@ -1,5 +1,6 @@
 <script lang="ts">
   import Badge from "./partials/Badge.svelte";
+  import NewButton from "./partials/NewButton.svelte";
   import ToneRadio from "./partials/ToneRadio.svelte";
   let selectedTone = "tone-1";
 </script>
@@ -12,7 +13,10 @@
   </div>
   <div class="flex-1 space-y-40">
     <div class="space-y-6">
-      <h3>Choose a tone that matches you. <Badge text="Free" bgColor="bg-blue-100" /></h3>
+      <div class="flex flex-row place-content-between items-center">
+        <h3 class="inline-flex">Choose a tone that matches you.</h3>
+        <Badge text="Free" bgColor="bg-blue-100" />
+      </div>
       <div class="flex flex-row justify-between py-6">
         <ToneRadio value="tone-1" bind:group={selectedTone} />
         <ToneRadio value="tone-2" emoji="👍🏻" bind:group={selectedTone} />
@@ -30,8 +34,11 @@
       </small>
     </div>
     <div class="space-y-6">
-      <h3>Another button?<Badge text="Pro" bgColor="bg-orange-100" /></h3>
-      <div class="rounded-lg border border-slate-300 p-6"></div>
+      <div class="flex flex-row place-content-between items-center">
+        <h3 class="inline-flex">A new button?</h3>
+        <Badge text="Pro" bgColor="bg-orange-100" />
+      </div>
+      <NewButton />
       <p>
         That right baby. This isn’t like selling electric windows in a new car. This is like selling a purpose build
         napping pod.
