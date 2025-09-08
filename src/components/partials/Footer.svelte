@@ -15,7 +15,5 @@
   </a>
   <span>last updated: {DateTime.fromISO(date).toFormat("ccc',' LL LLL y TT ZZZ")}</span>
 </footer>
-<!-- "ccc',' LL LLL y TT ZZZ" -->
-
 <style>
 </style>
