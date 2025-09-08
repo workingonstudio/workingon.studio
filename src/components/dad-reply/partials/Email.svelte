@@ -34,7 +34,7 @@
   </div>
   <div class="flex flex-row space-x-3">
     <MailButton text="Dad Reply" />
-    <MailButton text="Reply" iconName="reply" />
+    <MailButton type="email" href="hello@workingon.studio" text="Reply" iconName="reply" />
     <MailButton text="Forward" iconName="forward" />
   </div>
 </div>
