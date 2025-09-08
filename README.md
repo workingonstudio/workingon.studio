@@ -24,7 +24,7 @@ Each one works. Each one also makes you think about why you needed it in the fir
 
 Here's where it gets interesting.
 
-Instead of hiding my messy development process behind polished marketing copy, I made it the centrepiece. See that "Last updated" timestamp? Click it.
+Instead of hiding my messy development process behind polished marketing copy, I made it the centrepiece. The version number on the site reveals all the commits into this project.
 
 You'll see every commit, every iteration, every small improvement. The actual development timeline, auto-generated from git commits. No sanitised "my process" nonsense—just the real process, visible and unfiltered.
 
@@ -52,6 +52,6 @@ Always working on something.
 
 ---
 
-Repository: [github.com/prmack/WorkingOn.studio](https://github.com/prmack/WorkingOn.studio)
+Repository: [https://github.com/workingonstudio/workingon.studio](https://github.com/workingonstudio/workingon.studio)
 
 *Everything's transparent here. Even this README is version-controlled and visible in the timeline.*
