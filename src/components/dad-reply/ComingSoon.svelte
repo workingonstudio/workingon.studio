@@ -1,4 +1,5 @@
 <script lang="ts">
+  import ToneRadio from "./partials/ToneRadio.svelte";
 </script>
 
 <div class="flex flex-row items-start gap-32 [&_p]:leading-relaxed">
@@ -10,7 +11,14 @@
   <div class="flex-1 space-y-40">
     <div class="space-y-6">
       <h3 class="text-2xl font-semibold">Choose a tone that matches you.</h3>
-      <div class="rounded-lg border border-slate-300 p-6"></div>
+      <div class="flex flex-row justify-between py-6">
+        <ToneRadio value="tone-1" />
+        <ToneRadio value="tone-2" emoji="👍🏻" />
+        <ToneRadio value="tone-3" emoji="👍🏼" />
+        <ToneRadio value="tone-4" emoji="👍🏽" />
+        <ToneRadio value="tone-5" emoji="👍🏾" />
+        <ToneRadio value="tone-6" emoji="👍🏿" />
+      </div>
       <p>
         In v1.5.0 you’ll have the ability to change the tone of thumb up. You have the choice everywhere else, so why
         not here too.*
