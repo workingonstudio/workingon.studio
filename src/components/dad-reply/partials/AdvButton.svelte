@@ -2,8 +2,7 @@
 <script lang="ts">
   import Icon from "@components/Icon.svelte";
   import { onMount } from "svelte";
-  let showMenu: boolean = false;
-  $: visable = showMenu ? "visible" : "invisible";
+  let showMenu: boolean = true;
   $: buttonIcon = showMenu ? "close" : "arrowDown";
 
   let containerRef: any;
@@ -29,20 +28,6 @@
       class: "",
     },
   ];
-
-  onMount(() => {
-    function handleClickOutside(event: any) {
-      if (containerRef && !containerRef.contains(event.target)) {
-        showMenu = false;
-      }
-    }
-
-    document.addEventListener("mousedown", handleClickOutside);
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  });
 
   function updateButton(option: any) {
     selectedIndex = buttonOptions.findIndex((btn) => btn.emoji === option.emoji);

@@ -31,55 +31,12 @@
   $: groupedEntries = groupByDate(timelineData?.entries);
 </script>
 
-<<<<<<< HEAD
 <section class="timeline-section max-w-md space-y-12 mt-32">
   <div class="timeline-reveal group space-y-12">
     <div class="timeline-groups space-y-6 mb-6">
       {#each groupedEntries as group}
         <div class="date-group">
           <h3 class="date-header text-xs text-gray-400 font-mono mb-3 py-1">
-=======
-<section class="timeline-section space-y-12">
-  <div class="space-y-1">
-    <div>{currentVersion}</div>
-    <button
-      class="last-built-trigger cursor-help truncate text-left"
-      on:click={toggleTimeline}
-      aria-expanded={showTimeline}
-    >
-      <span class="capitalize sm:normal-case">
-        <span class="hidden sm:inline-block">Last</span>
-        updated: {timelineData?.lastBuild || "Loading..."}
-      </span>
-    </button>
-    <p class="truncate">
-      Repo
-      <span class="hidden sm:inline-block">sitory</span>
-      :
-      <a href="https://github.com/prmack/workingon.studio" class="underline hover:text-gray-100">
-        https://github.com/prmack/workingon.studio
-      </a>
-    </p>
-  </div>
-
-  <!-- Always render timeline content, but hide it when not shown -->
-  <div class="timeline-reveal group space-y-12 {showTimeline ? '' : 'invisible h-0 overflow-hidden'}">
-    <div class="timeline-header">
-      <h2 class="font-display inline-block cursor-default text-base text-gray-100">
-        progress
-        <span
-          class="text-shadow-glow motion-safe:animate-flicker sm:group-hover:text-shadow-glow sm:group-hover:motion-safe:animate-flicker text-xs text-yellow-300 sm:text-gray-500 sm:text-shadow-none sm:group-hover:text-yellow-300 sm:motion-safe:animate-none"
-        >
-          .log
-        </span>
-      </h2>
-    </div>
-
-    <div class="timeline-groups mb-6 space-y-6">
-      {#each groupedEntries as group}
-        <div class="date-group">
-          <h3 class="date-header mb-3 py-1 font-mono text-xs text-gray-400 uppercase">
->>>>>>> b872d21 (Adding better prettier congfig, and reformating all files with it.)
             {group.date}
           </h3>
 
@@ -112,9 +69,7 @@
                     </p>
                   {/if}
                   {#if entry.branchMerged && entry.intoBranch}{:else}
-                    <span class="branch-display text-gray-500 text-[11px]"
-                      >{entry.branchDisplay}</span
-                    >
+                    <span class="branch-display text-gray-500 text-[11px]">{entry.branchDisplay}</span>
                   {/if}
                 </div>
               </li>

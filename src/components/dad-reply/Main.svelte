@@ -4,8 +4,8 @@
   import ComingSoon from "./ComingSoon.svelte";
 </script>
 
-<main class="mx-auto flex max-w-[1156px] flex-col px-6">
-  <Header />
+<Header />
+<main class="mx-auto flex max-w-[1156px] flex-col">
   <div class="space-y-60">
     <Hero />
     <ComingSoon />
