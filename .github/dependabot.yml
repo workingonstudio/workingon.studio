@@ -6,7 +6,6 @@ updates:
       interval: "weekly"
     open-pull-requests-limit: 5
     reviewers:
-      - "prmack"  # Your GitHub username
+      - "workingonstudio"
     commit-message:
       prefix: "[DEPS]"
-      include: "scope"
