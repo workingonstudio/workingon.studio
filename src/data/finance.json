@@ -1,0 +1,30 @@
+{
+  "generated" :  "2025-09-06T21:33:20.962Z",
+  "entries" : [
+    {
+      "description" : "Domain name",
+      "in" : 0,
+      "out" : 9.77
+    },
+    {
+      "description" : "Company registration",
+      "in": 0,
+      "out": 15.00
+    },
+    {
+      "description" : "Virtual office",
+      "in": 0,
+      "out": 24.99
+    },
+    {
+      "description": "Email service",
+      "in": 0,
+      "out": 1.00
+    },
+    {
+      "description": "Claude Pro",
+      "in": 0,
+      "out": 17.00
+    }
+  ]
+}
