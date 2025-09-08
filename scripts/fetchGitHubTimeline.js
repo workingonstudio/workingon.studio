@@ -254,10 +254,11 @@ async function fetchGitHubTimeline() {
         .join(", ")}`
     );
 
-    // FIXED: Fetch commits from ALL branches
+    // FIXED: Fetch commits from ALL branches with better deduplication
     console.log("📦 Fetching commits from all branches...");
     const allCommits = [];
     const seenShas = new Set(); // Prevent duplicates
+    const commitToBranches = new Map(); // Track which branches contain each commit
 
     for (const branch of branches) {
       console.log(`📦 Fetching commits from branch: ${branch.name}`);
@@ -272,17 +273,31 @@ async function fetchGitHubTimeline() {
           }
         );
 
-        // Add branch info to each commit and filter duplicates
+        // Track branches for each commit and filter duplicates
         branchCommits.forEach((commit) => {
+          // Track which branches contain this commit
+          if (!commitToBranches.has(commit.sha)) {
+            commitToBranches.set(commit.sha, []);
+          }
+          commitToBranches.get(commit.sha).push(branch.name);
+
+          // Only add to allCommits if we haven't seen it before
           if (!seenShas.has(commit.sha)) {
-            commit._branchFound = branch.name; // Track which branch we found it on
+            // Add the FIRST branch we found it on (usually the most specific one)
+            commit._branchFound = branch.name;
             allCommits.push(commit);
             seenShas.add(commit.sha);
           }
         });
 
         console.log(
-          `   ✅ Found ${branchCommits.length} commits on ${branch.name}`
+          `   ✅ Found ${branchCommits.length} commits on ${branch.name} (${
+            branchCommits.filter(
+              (c) =>
+                !seenShas.has(c.sha) ||
+                commitToBranches.get(c.sha).includes(branch.name)
+            ).length
+          } new)`
         );
       } catch (error) {
         console.warn(
@@ -292,6 +307,17 @@ async function fetchGitHubTimeline() {
     }
 
     console.log(`📦 Total unique commits found: ${allCommits.length}`);
+
+    // DEBUG: Show branch mapping for recent commits
+    console.log("\n🔍 DEBUG: Recent commits and their branches:");
+    allCommits.slice(-10).forEach((commit) => {
+      const branchList = commitToBranches.get(commit.sha) || [];
+      console.log(
+        `   ${commit.sha.substring(0, 7)} - "${
+          commit.commit.message.split("\n")[0]
+        }" appears on: ${branchList.join(", ")}`
+      );
+    });
 
     // Fetch all pull requests using Octokit pagination
     console.log("🔄 Fetching pull requests...");
@@ -340,16 +366,24 @@ async function fetchGitHubTimeline() {
       `✅ Total commit-to-PR mappings: ${Object.keys(prCommitsMap).length}`
     );
 
+    // DEBUG: Show PR commit mappings
+    console.log("\n🔍 DEBUG: PR Commit Mappings:");
+    Object.entries(prCommitsMap).forEach(([sha, pr]) => {
+      console.log(
+        `   ${sha.substring(0, 7)} -> PR #${pr.number} (${pr.head.ref})`
+      );
+    });
+
     // Get detailed stats for commits (limit to avoid rate limiting)
     console.log("📊 Fetching detailed commit stats...");
     const detailedCommits = [];
-    const recentCommits = allCommits.slice(0, Math.min(allCommits.length, 100));
+    const recentCommits = allCommits;
 
     for (let i = 0; i < recentCommits.length; i++) {
       const commit = recentCommits[i];
       console.log(
         `📊 Getting stats for commit ${i + 1}/${
-          recentCommits.length
+          allCommits.length
         }: ${commit.sha.substring(0, 7)} (${commit._branchFound})`
       );
 
@@ -362,6 +396,7 @@ async function fetchGitHubTimeline() {
 
         // Preserve branch information
         detailedCommit._branchFound = commit._branchFound;
+        detailedCommit._allBranches = commitToBranches.get(commit.sha) || [];
         detailedCommits.push(detailedCommit);
       } catch (error) {
         console.warn(
@@ -371,6 +406,7 @@ async function fetchGitHubTimeline() {
         );
         // Use basic commit data with branch info
         commit._branchFound = commit._branchFound;
+        commit._allBranches = commitToBranches.get(commit.sha) || [];
         detailedCommits.push(commit);
       }
     }
@@ -408,13 +444,16 @@ async function fetchGitHubTimeline() {
       const pr = findPRForCommit(prCommitsMap, commit);
       const branchFromPR = pr ? pr.head.ref : null;
       const branchFromDiscovery = commit._branchFound;
+      const allBranches = commit._allBranches || [];
       const displayBranch =
         branchFromPR || branchFromDiscovery || currentBranch;
 
       console.log(
         `   ${index + 1}. ${commit.sha.substring(0, 7)} - ${
           commit.commit.message.split("\n")[0]
-        } (found on: ${branchFromDiscovery}, display: ${displayBranch})`
+        } (found on: ${branchFromDiscovery}, all branches: ${allBranches.join(
+          ", "
+        )}, display: ${displayBranch})`
       );
     });
 
@@ -432,9 +471,12 @@ async function fetchGitHubTimeline() {
         const pr = findPRForCommit(prCommitsMap, commit);
 
         // Use PR branch if available, otherwise use discovered branch
-        const branchName = pr
+        let branchName = pr
           ? pr.head.ref
           : commit._branchFound || currentBranch;
+
+        // This will be the final branch name for display (starts as branchName, may be overridden for merges)
+        let finalBranchName = branchName;
 
         // Determine type, considering draft status
         let type = determineTypeFromPR(pr, commit, branchName);
@@ -448,31 +490,29 @@ async function fetchGitHubTimeline() {
 
           // Try to parse branch name from commit message
           const prMergeMatch = message.match(
-            /Merge pull request.*?\/([^.\s]+)/
+            /Merge pull request.*?[/#](\d+).*?from.*?[:/]([^.\s/]+)/
           );
           const branchMergeMatch = message.match(
             /Merge branch '([^']+)' into (.+)/
           );
           const simplePRMatch = message.match(
-            /Merge pull request.*?from.*?\/([^.\s]+)/
+            /Merge pull request.*?\/([^.\s]+)/
           );
 
-          if (branchMergeMatch) {
-            // Direct branch merge: "Merge branch 'feature' into dev"
-            branchMerged = branchMergeMatch[1];
-            intoBranch = branchMergeMatch[2];
-          } else if (prMergeMatch) {
-            // PR merge: "Merge pull request /branch-name"
-            branchMerged = prMergeMatch[1];
-            // For PR merges, determine target from PR data or current branch context
+          if (prMergeMatch) {
+            // GitHub PR merge: "Merge pull request #123 from user/branch-name"
+            branchMerged = prMergeMatch[2];
             if (pr) {
               intoBranch = pr.base.ref;
             } else {
-              // Fallback to the branch this commit appears to be on
               intoBranch = branchName;
             }
+          } else if (branchMergeMatch) {
+            // Direct branch merge: "Merge branch 'feature' into dev"
+            branchMerged = branchMergeMatch[1];
+            intoBranch = branchMergeMatch[2];
           } else if (simplePRMatch) {
-            // GitHub PR merge: "Merge pull request #X from user/branch-name"
+            // Simple PR merge: "Merge pull request /branch-name"
             branchMerged = simplePRMatch[1];
             if (pr) {
               intoBranch = pr.base.ref;
@@ -490,6 +530,11 @@ async function fetchGitHubTimeline() {
               message.split("\n")[0]
             }" -> ${branchMerged} → ${intoBranch}`
           );
+
+          // For merge commits from deleted branches, use the merged branch name as the display branch
+          if (branchMerged && !pr) {
+            branchName = branchMerged;
+          }
         }
 
         return {
@@ -516,8 +561,8 @@ async function fetchGitHubTimeline() {
             files: commit.files?.length || 0,
           },
           type: type,
-          branch: branchName,
-          branchDisplay: branchName,
+          branch: finalBranchName,
+          branchDisplay: finalBranchName,
           branchMerged: branchMerged,
           intoBranch: intoBranch,
           isMerge: commit.parents && commit.parents.length > 1,
@@ -527,6 +572,7 @@ async function fetchGitHubTimeline() {
           formattedDate: formatDate(commit.commit.committer.date),
           statsText: formatStats(commit.stats),
           githubUrl: commit.html_url,
+          allBranches: commit._allBranches || [],
         };
       }),
     };
