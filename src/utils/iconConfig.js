@@ -23,6 +23,7 @@ export const USED_ICONS = {
   arrowDown: `${ICON_SETS.materialSymbols}:keyboard-arrow-down-rounded`,
   close: `${ICON_SETS.materialSymbols}:close-small-rounded`,
   dropDown: `${ICON_SETS.materialSymbols}:arrow-drop-down`,
+  quote: `${ICON_SETS.materialSymbols}:format-quote-outline-rounded`,
 
   // Add new icons here as you use them
   // home: `${ICON_SETS.lucide}:home`,
