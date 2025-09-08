@@ -37,7 +37,7 @@ jobs:
       - name: Fetch GitHub timeline
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          GITHUB_OWNER: prmack
+          GITHUB_OWNER: workingonstudio
           GITHUB_REPO: workingon.studio
         run: npm run timeline:fetch-github
 
