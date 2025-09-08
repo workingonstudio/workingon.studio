@@ -4,8 +4,12 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
-    open-pull-requests-limit: 5
-    reviewers:
-      - "workingonstudio"
+    groups:
+      minor-patch-updates:
+        patterns:
+          - "*"
+        update-types:
+          - "patch"
+          - "minor"
     commit-message:
       prefix: "[DEPS]"
