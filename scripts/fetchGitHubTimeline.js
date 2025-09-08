@@ -8,7 +8,7 @@ import { Octokit } from "@octokit/rest";
 dotenv.config({ path: ".env.local" });
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
-const GITHUB_OWNER = process.env.GITHUB_OWNER || "prmack";
+const GITHUB_OWNER = process.env.GITHUB_OWNER || "workingonstudio";
 const GITHUB_REPO = process.env.GITHUB_REPO || "workingon.studio";
 
 if (!GITHUB_TOKEN) {
