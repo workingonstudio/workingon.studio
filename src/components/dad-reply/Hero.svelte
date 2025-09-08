@@ -4,16 +4,15 @@
   import Email from "./partials/Email.svelte";
 </script>
 
-<section class="flex gap-2 items-center">
+<section class="flex items-center gap-2">
   <div class="w-[684px] space-y-12">
     <h1 class="text-[40px] font-semibold">
       Instantly reply to your emails with minimal effort and maximum dad energy.
     </h1>
-    <div class="w-[566px] text-slate-500 space-y-6">
+    <div class="w-[566px] space-y-6 text-slate-500">
       <p>
-        Whether it’s that weekly status report, someone asking a question that
-        is already in the wiki, or a simple request for coffee. There’s now a
-        better way to respond to the mundane, inane or frivolous emails.
+        Whether it’s that weekly status report, someone asking a question that is already in the wiki, or a simple
+        request for coffee. There’s now a better way to respond to the mundane, inane or frivolous emails.
       </p>
       <FeaturePills />
     </div>
@@ -30,7 +29,7 @@
     </div>
   </div>
   <div
-    class="flex-1 bg-white border border-slate-300 pt-16 pr-16 pb-16 pl-16 mr-0 the-shadow rounded-[14px] lg:pr-0 lg:rounded-none lg:rounded-l-[14px] lg:-mr-[calc(50vw-50%)]"
+    class="the-shadow mr-0 flex-1 rounded-[14px] border border-slate-300 bg-white pt-16 pr-16 pb-16 pl-16 lg:-mr-[calc(50vw-50%)] lg:rounded-none lg:rounded-l-[14px] lg:pr-0"
   >
     <Email />
   </div>
