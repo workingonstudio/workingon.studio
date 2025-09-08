@@ -47,6 +47,6 @@
 <style>
   @reference "../../styles/global.css";
   nav li a {
-    @apply hover:text-gray-100;
+    @apply hover:text-gray-100 transition-colors ease-in-out;
   }
 </style>
