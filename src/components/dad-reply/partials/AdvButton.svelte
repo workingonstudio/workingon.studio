@@ -1,7 +1,6 @@
 <!-- src/components/dad-reply/partials/NewButton.svelte -->
 <script lang="ts">
   import Icon from "@components/Icon.svelte";
-  import { onMount } from "svelte";
   let showMenu: boolean = true;
   $: buttonIcon = showMenu ? "close" : "arrowDown";
 

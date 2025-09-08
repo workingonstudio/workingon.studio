@@ -3,7 +3,7 @@
   import Badge from "./partials/Badge.svelte";
 </script>
 
-<div class="flex bg-white sticky top-0 backdrop-blur-md z-50 border-b border-b-white/10">
+<div class="flex bg-white sticky top-0 backdrop-blur-md z-[1000] border-b border-b-white/10">
   <header class="max-w-[1156px] mx-auto mb-4 flex flex-row flex-1 items-center justify-between py-10 text-slate-700">
     <div class="flex flex-row space-x-6">
       <Logo />

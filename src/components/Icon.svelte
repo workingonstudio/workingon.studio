@@ -24,6 +24,7 @@
     arrowDown: "material-symbols:keyboard-arrow-down-rounded",
     close: "material-symbols:close-small-rounded",
     dropDown: "material-symbols:arrow-drop-down",
+    quote: "material-symbols:format-quote-outline-rounded",
   };
 
   // Determine which icon to use
