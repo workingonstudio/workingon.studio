@@ -1,5 +1,5 @@
 <script lang="ts">
-  export let platform: string = "Chrome";
+  export let platform: string = "Chrome Web Store";
   export let textColor: string = "text-white";
   export let bgColor: string = "bg-blue-600";
   export let bgColorHover: string = "hover:bg-blue-700";
