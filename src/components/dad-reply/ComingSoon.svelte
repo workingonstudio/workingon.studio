@@ -65,7 +65,7 @@
       <div class="flex flex-row items-center justify-between py-6">
         {#each emojiList as emoji}
           <div
-            class="flex h-[44px] w-[44px] cursor-default items-center justify-center rounded-lg border border-slate-300 text-[20px] transition-all delay-50 ease-in-out hover:shadow-lg hover:motion-safe:animate-bounce"
+            class="relative bottom-0 flex h-[44px] w-[44px] cursor-default items-center justify-center rounded-lg border border-slate-300 text-[20px] transition-all delay-75 ease-in-out hover:bottom-2 hover:shadow-lg"
           >
             {emoji}
           </div>
@@ -77,7 +77,7 @@
       </p>
     </div>
   </div>
-  <div class="sticky top-1/3 my-14 w-2/5 space-y-3.5">
+  <div class="sticky top-1/3 w-2/5 space-y-3.5">
     <span class="text-[40px]">👀</span>
     <h3 class="!text-[32px] font-semibold text-slate-700">What's coming in v1.5</h3>
     <p>This dad’s hit the gym listened to the latest alpha male podcast* and is ready to get back on the market*.</p>

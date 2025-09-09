@@ -30,7 +30,7 @@
         otherText: "per year",
         styles: "line-through",
       },
-      features: ["Advanced multi-select button.", "Custom responses.", "<s>Remove 'via Reply Dad' branding.</s>"],
+      features: ["Advanced multi-select button.", "Custom responses.", "<s>Remove</s> 'via Reply Dad' branding."],
       button: {
         style: "hollow",
         show: true,
