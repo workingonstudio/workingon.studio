@@ -1,0 +1,33 @@
+<script lang="ts">
+  import { slide, fade } from "svelte/transition";
+  import { cubicOut } from "svelte/easing";
+  export let emailName: string = "";
+  export let emailContent: string;
+
+  let chromeStoreURL = "https://chromewebstore.google.com/detail/ddkeoflblemlolckmnhihhabplfmogop";
+</script>
+
+<div in:slide={{ duration: 200, easing: cubicOut }} out:slide={{ duration: 200, delay: 100 }}>
+  <div class="font-[Roboto]" in:fade={{ delay: 200, duration: 200, easing: cubicOut }} out:fade={{ duration: 100 }}>
+    <strong class="text-[15px]">
+      {emailName}
+      <span class="text-xs font-normal text-slate-400">
+        <a href={chromeStoreURL}>&lt;download@chrome.store&gt;</a>
+      </span>
+    </strong>
+    <!-- prettier-ignore -->
+    <span class="flex items-center text-xs font-normal text-slate-400 space-x-1"><span>to</span><a href="https://workingon.studio">workingon.studio</a>
+      <span class="material-symbols-rounded !text-lg">arrow_drop_down</span>
+    </span>
+    <p class="py-2">{emailContent}</p>
+    <a class="font-[Arial] text-xs font-normal" href={chromeStoreURL}>(via dad reply)</a>
+  </div>
+</div>
+
+<style>
+  @reference "@styles/dad-reply.css";
+
+  a {
+    @apply text-slate-400 hover:text-blue-600;
+  }
+</style>

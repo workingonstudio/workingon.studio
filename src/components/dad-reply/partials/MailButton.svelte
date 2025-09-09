@@ -1,10 +1,23 @@
 <script lang="ts">
   import Icon from "@components/Icon.svelte";
-  export let iconName: string | undefined = undefined;
-  export let text: string = "";
-  export let type: "email" | "click" = "click";
-  export let href: string = ""; // Add this
-  export let event; // Add this
+
+  let {
+    iconName = undefined,
+    text = "",
+    type = "click",
+    href = "",
+    thumbUp = undefined,
+    disabled = false,
+    onclick = () => {},
+  }: {
+    iconName?: string;
+    text?: string;
+    type?: "email" | "click";
+    href?: string;
+    thumbUp?: boolean;
+    disabled?: boolean;
+    onclick?: () => void;
+  } = $props();
 
   const emailConfig = {
     to: "hello@workingon.studio",
@@ -16,15 +29,16 @@
     if (type === "email") {
       const { to, subject, body } = emailConfig;
       window.location.href = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    } else if (event) {
-      event();
+    } else if (thumbUp) {
+      onclick();
     }
   }
 </script>
 
 <button
   type="button"
-  on:click={handleClick}
+  onclick={handleClick}
+  {disabled}
   class="google-button flex max-h-9 items-center px-4 py-2 text-sm font-medium [&_span]:mr-3"
 >
   {#if iconName}
@@ -43,6 +57,9 @@
     @apply rounded-full border border-[#747775];
     &:hover {
       @apply cursor-pointer bg-slate-100;
+    }
+    &:disabled {
+      @apply cursor-not-allowed bg-white opacity-50 hover:bg-white;
     }
   }
 </style>

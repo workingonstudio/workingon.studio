@@ -1,5 +1,43 @@
 <script lang="ts">
+  import Reply from "./Reply.svelte";
   import MailButton from "./MailButton.svelte";
+  let showReply = false;
+
+  let replyCollection = [
+    {
+      emailName: "its.that.easy",
+      emailContent: "👍",
+    },
+    {
+      emailName: "slow.learner.huh",
+      emailContent: "👍",
+    },
+    {
+      emailName: "thats.it.button.disabled",
+      emailContent: "👍",
+    },
+    {
+      emailName: "who.hurt.you?",
+      emailContent: "👀✌️🫵",
+    },
+  ];
+
+  let replyShown: any = [];
+  let currentIndex = 0;
+  $: isDisabled = currentIndex >= replyCollection.length;
+
+  function toggleReply() {
+    if (isDisabled) return;
+
+    showReply = true;
+
+    setTimeout(() => {
+      if (currentIndex < replyCollection.length) {
+        replyShown = [...replyShown, replyCollection[currentIndex]];
+        currentIndex++;
+      }
+    }, 100);
+  }
 </script>
 
 <div class="flex flex-col space-y-8 overflow-hidden text-black">
@@ -31,9 +69,14 @@
       </p>
       <p>Cheers.</p>
     </div>
+    {#if showReply}
+      {#each replyShown as reply}
+        <Reply emailContent={reply.emailContent} emailName={reply.emailName} />
+      {/each}
+    {/if}
   </div>
   <div class="flex flex-row space-x-3">
-    <MailButton text="Dad Reply" />
+    <MailButton text="Dad Reply" thumbUp={true} onclick={toggleReply} disabled={isDisabled} />
     <MailButton type="email" href="hello@workingon.studio" text="Reply" iconName="reply" />
     <MailButton text="Forward" iconName="forward" />
   </div>
