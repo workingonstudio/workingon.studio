@@ -1,17 +1,29 @@
 <script lang="ts">
-  export let platform: string = "Chrome Web Store";
-  export let textColor: string = "text-white";
-  export let bgColor: string = "bg-blue-600";
-  export let bgColorHover: string = "hover:bg-blue-700";
-  export let borderColor: string = "border-transparent";
-  export let icon: string = "chrome";
+  export let style: string = "solid";
+  export let label: string = "";
+  export let icon: boolean;
+  export let iconRef: string = "";
   export let downloadLink: string = "/";
 </script>
 
-<a
-  href={downloadLink}
-  class="flex rounded-lg border-2 p-3 text-sm font-semibold {textColor} {bgColor} {borderColor} {bgColorHover} transition-colors duration-300 ease-in-out"
->
-  <i class="fa-brands {'fa-' + icon} mr-2.5 text-xl"></i>
-  {"Download for " + platform}
+<a href={downloadLink} class="btn {style}">
+  {#if icon}
+    <i class="fa-brands {'fa-' + iconRef} mr-2.5 text-xl"></i>
+  {/if}
+  {label}
 </a>
+
+<style>
+  @reference "@styles/dad-reply.css";
+  .btn {
+    @apply flex justify-center rounded-lg border-2 border-transparent p-3;
+    @apply text-sm font-semibold;
+    @apply transition-colors duration-300 ease-in-out;
+    &.solid {
+      @apply bg-blue-600 text-white hover:bg-blue-700;
+    }
+    &.hollow {
+      @apply border-blue-600 bg-white text-blue-600;
+    }
+  }
+</style>

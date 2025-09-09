@@ -17,15 +17,13 @@
       <FeaturePills />
     </div>
     <div class="flex gap-6">
-      <DownloadButton downloadLink="https://chromewebstore.google.com/detail/ddkeoflblemlolckmnhihhabplfmogop" />
       <DownloadButton
-        platform="Internet Explorer"
-        icon="internet-explorer"
-        borderColor="border-blue-600"
-        bgColor="white"
-        bgColorHover="white"
-        textColor="text-blue-600"
+        label="Download from Chrome web store"
+        icon
+        iconRef="chrome"
+        downloadLink="https://chromewebstore.google.com/detail/ddkeoflblemlolckmnhihhabplfmogop"
       />
+      <DownloadButton icon label="Download for Internet Explorer" iconRef="internet-explorer" style="hollow" />
     </div>
   </div>
   <div

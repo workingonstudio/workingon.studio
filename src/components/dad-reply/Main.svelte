@@ -3,6 +3,7 @@
   import Hero from "./Hero.svelte";
   import ComingSoon from "./ComingSoon.svelte";
   import Quotes from "./Quotes.svelte";
+  import Pricing from "./Pricing.svelte";
 </script>
 
 <Header />
@@ -11,5 +12,6 @@
     <Hero />
     <Quotes />
     <ComingSoon />
+    <Pricing />
   </div>
 </main>
