@@ -4,18 +4,15 @@
   import ToneRadio from "./partials/ToneRadio.svelte";
   import MailButton from "./partials/MailButton.svelte";
   let selectedTone = "tone-1";
+
+  let emojiList = ["👋", "👀", "💩", "🔥", "🤘", "🍾", "💀", "💰", "☕"];
 </script>
 
-<div class="flex flex-row items-start gap-32 [&_p]:leading-relaxed">
-  <div class="sticky top-1/3 my-14 w-2/5 space-y-3.5">
-    <h2 class="text-[32px] font-semibold">What to expect in v1.5.0</h2>
-    <p>This dad’s hit the gym listened to the latest alpha male podcast* and is ready to get back on the market*.</p>
-    <small>* ignored the advice because its’s ridiculous nonsense.</small>
-  </div>
+<div class="flex flex-row items-start gap-32">
   <div class="flex-1 space-y-40">
     <div class="space-y-6">
       <div class="flex flex-row place-content-between items-center">
-        <h3 class="inline-flex">Choose a tone that matches you.</h3>
+        <h4 class="inline-flex">Choose a tone that matches you.</h4>
         <Badge text="Free" bgColor="bg-blue-100" />
       </div>
       <div class="flex flex-row justify-between py-6">
@@ -36,7 +33,7 @@
     </div>
     <div class="space-y-6">
       <div class="flex flex-row place-content-between items-center">
-        <h3 class="inline-flex">A new button?</h3>
+        <h4 class="inline-flex">A new button?</h4>
         <Badge text="Pro" bgColor="bg-orange-100" />
       </div>
       <div class="py-6">
@@ -61,19 +58,36 @@
       </p>
     </div>
     <div class="space-y-6">
-      <h3>Custom responses!</h3>
-      <div class="rounded-lg border border-slate-300 p-6"></div>
+      <div class="flex flex-row place-content-between items-center">
+        <h4 class="inline-flex">Custom responses?</h4>
+        <Badge text="Pro" bgColor="bg-orange-100" />
+      </div>
+      <div class="flex flex-row items-center justify-between py-6">
+        {#each emojiList as emoji}
+          <div
+            class="flex h-[44px] w-[44px] cursor-default items-center justify-center rounded-lg border border-slate-300 text-[20px] transition-all delay-50 ease-in-out hover:shadow-lg hover:motion-safe:animate-bounce"
+          >
+            {emoji}
+          </div>
+        {/each}
+      </div>
       <p>
         That right baby. This isn’t like selling electric windows in a new car. This is like selling a purpose build
         napping pod. Check out this new addition.
       </p>
     </div>
   </div>
+  <div class="sticky top-1/3 my-14 w-2/5 space-y-3.5">
+    <span class="text-[40px]">👀</span>
+    <h3 class="!text-[32px] font-semibold text-slate-700">What's coming in v1.5</h3>
+    <p>This dad’s hit the gym listened to the latest alpha male podcast* and is ready to get back on the market*.</p>
+    <small>* ignored the advice because its’s ridiculous nonsense.</small>
+  </div>
 </div>
 
 <style>
   @reference "@styles/dad-reply.css";
-  h3 {
+  h4 {
     @apply text-2xl font-semibold;
   }
   p {
