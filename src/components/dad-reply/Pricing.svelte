@@ -48,7 +48,7 @@
     <span class="cursor-default text-4xl">🎁</span>
     <h3 class="text-[32px] font-semibold text-slate-700">Download and get access to a Pro trial.</h3>
     <p class="text-slate-500">It’s what you always dream of as a child. Now I am giving them away*.</p>
-    <p class="text-xs text-slate-400">* the pro trial that is, not a child that would be mental.</p>
+    <small>* the pro trial that is, not a child that would be mental.</small>
   </div>
   <div class="flex w-2/3 flex-row gap-6">
     {#each priceTables as { badge: { bgColor, text }, price: { currency, cost, otherText, styles }, features, button: { style, show, icon, iconRef, label } }}

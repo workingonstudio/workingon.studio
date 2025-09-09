@@ -6,9 +6,7 @@
 
 <section class="flex items-center gap-2">
   <div class="w-[684px] space-y-12">
-    <h1 class="text-[40px] font-semibold">
-      Instantly reply to your emails with minimal effort and maximum dad energy.
-    </h1>
+    <h1>Instantly reply to your emails with minimal effort and maximum dad energy.</h1>
     <div class="w-[566px] space-y-6 text-slate-500">
       <p>
         Whether it’s that weekly status report, someone asking a question that is already in the wiki, or a simple

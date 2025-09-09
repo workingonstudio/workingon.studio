@@ -90,10 +90,4 @@
   h4 {
     @apply text-2xl font-semibold;
   }
-  p {
-    @apply leading-relaxed text-slate-500;
-  }
-  small {
-    @apply text-xs text-slate-400;
-  }
 </style>

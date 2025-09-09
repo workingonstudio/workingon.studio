@@ -6,8 +6,35 @@
 }
 
 @theme {
-  --font-sans: "Poppins", sans-serif;
-  --font-display: "Geist", sans-serif;
+  --font-geist: "Geist", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+
+  --color-primary: theme(colors.blue.600);
+  --color-text: theme(colors.slate.700);
+  --color-text-body: theme(colors.slate.500);
+  --color-text-muted: theme(colors.slate.400);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-poppins);
+  color: var(--color-text);
+}
+
+h1 {
+  @apply text-[40px] font-semibold;
+}
+
+p {
+  color: var(--color-text-body);
+  @apply leading-relaxed;
+}
+
+small {
+  color: var(--color-text-muted);
+  @apply text-xs;
 }
 
 .the-shadow {
