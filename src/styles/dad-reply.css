@@ -19,7 +19,7 @@
   --screen-lg: 64rem; /* 1024px */
   --screen-xl: 80rem; /* 1280px */
   --screen-2xl: 96rem; /* 1536px */
-  --screen-3xl: 112rem;
+  --screen-3xl: 112rem; /* 1792px */
 }
 
 @layer base {
