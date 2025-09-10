@@ -4,7 +4,7 @@
 </script>
 
 <div class="sticky top-0 z-[1000] flex border-b border-b-white/10 bg-white backdrop-blur-md">
-  <header class="mx-auto mb-4 flex max-w-[1156px] flex-1 flex-row items-center justify-between py-10 text-slate-700">
+  <header class="mx-auto mb-4 flex max-w-6xl flex-1 flex-row items-center justify-between py-10 text-slate-700">
     <div class="flex flex-row space-x-6">
       <Logo />
       <div class="inline-flex items-center">

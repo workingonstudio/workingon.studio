@@ -40,7 +40,7 @@
   }
 </script>
 
-<div class="flex flex-col space-y-8 overflow-hidden text-black">
+<div class="flex flex-col space-y-8 overflow-hidden">
   <div class="space-y-5">
     <div class="font-[Roboto]">
       <strong class="text-[15px]">
@@ -52,7 +52,7 @@
         to you <span class="material-symbols-rounded !text-lg">arrow_drop_down</span>
       </span>
     </div>
-    <div class="space-y-5 font-[Arial] text-sm/7">
+    <div class="space-y-5 text-sm/7 *:font-[Arial] *:text-black!">
       <p>To all,</p>
       <p>Look, I'm tired of products that pretend to solve problems while creating new ones.</p>
       <p>

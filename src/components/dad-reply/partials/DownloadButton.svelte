@@ -20,10 +20,13 @@
     @apply text-sm font-semibold;
     @apply transition-colors duration-300 ease-in-out;
     &.solid {
-      @apply bg-blue-600 text-white hover:bg-blue-700;
+      background: var(--color-primary);
+      @apply text-white hover:bg-blue-700;
     }
     &.hollow {
-      @apply border-blue-600 bg-white text-blue-600;
+      color: var(--color-primary);
+      border-color: var(--color-primary);
+      @apply bg-white;
     }
   }
 </style>

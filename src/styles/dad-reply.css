@@ -13,18 +13,37 @@
   --color-text: theme(colors.slate.700);
   --color-text-body: theme(colors.slate.500);
   --color-text-muted: theme(colors.slate.400);
+
+  --breakpoint-3xl: 112rem;
+}
+
+body {
+  font-family: var(--font-poppins);
+  color: var(--color-text);
+  &::selection {
+    background: var(--color-primary);
+    @apply text-white;
+  }
 }
 
 h1,
 h2,
 h3,
 h4 {
-  font-family: var(--font-poppins);
   color: var(--color-text);
+  @apply font-semibold;
 }
 
 h1 {
-  @apply text-[40px] font-semibold;
+  @apply text-[40px];
+}
+
+h3 {
+  @apply text-[32px];
+}
+
+h4 {
+  @apply text-2xl;
 }
 
 p {

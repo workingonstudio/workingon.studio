@@ -30,7 +30,11 @@
         otherText: "per year",
         styles: "line-through",
       },
-      features: ["Advanced multi-select button.", "Custom responses.", "<s>Remove</s> 'via Reply Dad' branding."],
+      features: [
+        "Advanced multi-select button.",
+        "Custom responses.",
+        "<s>Remove 'via Reply Dad' branding.</s>*<small class='block ml-5 mt-1'>* not available during trial.</small>",
+      ],
       button: {
         style: "hollow",
         show: true,
@@ -46,8 +50,8 @@
 <div class="flex flex-col items-center justify-center space-y-12">
   <div class="flex flex-col space-y-4 text-center">
     <span class="cursor-default text-4xl">🎁</span>
-    <h3 class="text-[32px] font-semibold text-slate-700">Download and get access to a Pro trial.</h3>
-    <p class="text-slate-500">It’s what you always dream of as a child. Now I am giving them away*.</p>
+    <h3 class="text-[32px]">Download and get access to a Pro trial.</h3>
+    <p>It’s what you always dream of as a child. Now I am giving them away*.</p>
     <small>* the pro trial that is, not a child that would be mental.</small>
   </div>
   <div class="flex w-2/3 flex-row gap-6">

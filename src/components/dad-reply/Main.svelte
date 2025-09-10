@@ -7,7 +7,7 @@
 </script>
 
 <Header />
-<main class="mx-auto flex max-w-[1156px] flex-col">
+<main class="mx-auto flex max-w-6xl flex-col">
   <div class="space-y-60">
     <Hero />
     <Quotes />

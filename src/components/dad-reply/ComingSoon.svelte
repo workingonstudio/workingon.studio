@@ -79,7 +79,7 @@
   </div>
   <div class="sticky top-1/3 w-2/5 space-y-3.5">
     <span class="text-[40px]">👀</span>
-    <h3 class="!text-[32px] font-semibold text-slate-700">What's coming in v1.5</h3>
+    <h3>What's coming in v1.5</h3>
     <p>This dad’s hit the gym listened to the latest alpha male podcast* and is ready to get back on the market*.</p>
     <small>* ignored the advice because its’s ridiculous nonsense.</small>
   </div>
@@ -87,7 +87,4 @@
 
 <style>
   @reference "@styles/dad-reply.css";
-  h4 {
-    @apply text-2xl font-semibold;
-  }
 </style>
