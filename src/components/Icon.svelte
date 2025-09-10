@@ -25,6 +25,7 @@
     close: "material-symbols:close-small-rounded",
     dropDown: "material-symbols:arrow-drop-down",
     quote: "material-symbols:format-quote-outline-rounded",
+    progress: "material-symbols:progress-activity",
   };
 
   // Determine which icon to use
@@ -68,7 +69,7 @@
 </script>
 
 <!-- Always maintain consistent dimensions -->
-<span class="inline-flex items-center justify-center {sizeClass} {class_}" {style}>
+<span class="items-center justify-center {sizeClass} {class_}" {style}>
   {#if mounted}
     <IconifyIcon icon={iconToUse} {width} {height} {inline} />
   {/if}
