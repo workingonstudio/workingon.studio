@@ -40,7 +40,7 @@
         show: true,
         iconRef: "chrome",
         icon: true,
-        label: "Download from Chrome Web Store",
+        label: "Download for Chrome",
         downloadLink: "https://chromewebstore.google.com/detail/ddkeoflblemlolckmnhihhabplfmogop",
       },
     },

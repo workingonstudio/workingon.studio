@@ -16,7 +16,7 @@
     </div>
     <div class="flex gap-6">
       <DownloadButton
-        label="Download from Chrome web store"
+        label="Download for Chrome"
         icon
         iconRef="chrome"
         downloadLink="https://chromewebstore.google.com/detail/ddkeoflblemlolckmnhihhabplfmogop"

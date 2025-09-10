@@ -14,7 +14,7 @@
     <nav class="font-regular flex flex-row space-x-4 divide-x divide-slate-300 text-sm [&_a]:hover:underline">
       <ul class="flex flex-row pr-4">
         <li>
-          <a href="/" class="font-medium text-blue-600">Claim early bird offer</a>
+          <a href="#earlybird" class="font-medium text-blue-600">Claim early bird offer</a>
         </li>
       </ul>
       <ul class="flex flex-row space-x-4">

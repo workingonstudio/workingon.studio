@@ -1,14 +1,19 @@
 <script lang="ts">
   import Badge from "./partials/Badge.svelte";
   import Icon from "@components/Icon.svelte";
+
   let isSubmitting: boolean = false;
+  let success: boolean = false;
 
   function handleSubmit() {
-    isSubmitting = !isSubmitting;
+    isSubmitting = true;
+    setTimeout(() => {
+      success = true;
+    }, 1000);
   }
 </script>
 
-<div class="flex flex-col">
+<div id="earlybird" class="flex flex-col">
   {#if !isSubmitting}
     <div class="flex flex-row items-center justify-center gap-12">
       <div class="flex w-md flex-col space-y-4">
@@ -37,14 +42,26 @@
         </form>
       </div>
     </div>
-  {:else}
+  {:else if !success}
     <div class="my-16 flex flex-col justify-center space-y-3 text-center">
       <span class="cursor-default text-4xl">🕵️‍♂️</span>
       <h3>Hold on...</h3>
       <p>Just checking that email.</p>
       <span class="flex flex-1 items-center justify-center">
-        <Icon name="progress" class_="text-2xl text-slate-400" />
+        <Icon name="progress" class_="text-2xl text-slate-400 animate-spin" />
       </span>
+    </div>
+  {:else if success && isSubmitting}
+    <div class="my-16 flex flex-col justify-center space-y-3 text-center">
+      <span class="cursor-default text-4xl">🪿</span>
+      <h3>Check your email you silly goose.</h3>
+      <p>
+        Confirmation email just sent to <span class="font-mono text-slate-700">paul@workingon.studio</span>
+      </p>
+      <small>
+        * could be in spam amongst all those <em>other</em>
+        emails.
+      </small>
     </div>
   {/if}
 </div>
