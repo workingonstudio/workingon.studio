@@ -24,6 +24,7 @@ export const USED_ICONS = {
   close: `${ICON_SETS.materialSymbols}:close-small-rounded`,
   dropDown: `${ICON_SETS.materialSymbols}:arrow-drop-down`,
   quote: `${ICON_SETS.materialSymbols}:format-quote-outline-rounded`,
+  progress: `${ICON_SETS.materialSymbols}:progress-activity`,
 
   // Add new icons here as you use them
   // home: `${ICON_SETS.lucide}:home`,

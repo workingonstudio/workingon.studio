@@ -71,18 +71,26 @@
     @apply flex justify-center rounded-lg border-2 border-transparent p-3;
     @apply text-sm font-semibold;
     @apply transition-colors duration-300 ease-in-out;
+    @apply cursor-pointer;
     &.solid {
       background: var(--color-primary);
-      @apply text-white;
       &:hover {
         background: var(--color-primary-hover);
       }
+      @apply text-white;
     }
     &.hollow {
       color: var(--color-primary);
       border-color: var(--color-primary);
       @apply bg-white;
     }
+  }
+  input[type="email"] {
+    color: var(--color-text-body);
+    @apply h-12 w-full flex-1 rounded-lg border border-slate-300 p-2 text-sm placeholder:font-normal placeholder:text-slate-400;
+  }
+  .custom-outline {
+    @apply transition-colors outline-none hover:border-blue-500 hover:shadow-sm hover:shadow-blue-500/5 focus:ring-1 focus:ring-blue-500/50 focus:ring-offset-2 active:ring-1 active:ring-blue-500/50;
   }
 }
 
