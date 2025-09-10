@@ -9,7 +9,7 @@
 </script>
 
 <div
-  class="radius-md container flex flex-col space-y-3 rounded-[14px] border border-slate-300 bg-white p-8 font-medium {gridSetting} transition-shadow hover:cursor-default hover:shadow-lg"
+  class="card flex flex-col space-y-3 p-8 font-medium {gridSetting} transition-shadow hover:cursor-default hover:shadow-lg"
 >
   <Icon name="quote" class_="mr-2 text-blue-600 text-2xl" />
   <div class="flex flex-1 flex-col justify-between space-y-3">

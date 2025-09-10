@@ -49,21 +49,21 @@
 
 <div class="flex flex-col items-center justify-center space-y-12">
   <div class="flex flex-col space-y-4 text-center">
-    <span class="cursor-default text-4xl">🎁</span>
-    <h3 class="text-[32px]">Download and get access to a Pro trial.</h3>
+    <span class="cursor-default text-4xl">🎟️</span>
+    <h2>Download and get access to a Pro trial.</h2>
     <p>It’s what you always dream of as a child. Now I am giving them away*.</p>
     <small>* the pro trial that is, not a child that would be mental.</small>
   </div>
   <div class="flex w-2/3 flex-row gap-6">
     {#each priceTables as { badge: { bgColor, text }, price: { currency, cost, otherText, styles }, features, button: { style, show, icon, iconRef, label } }}
       <div
-        class="flex flex-1 flex-col items-start space-y-6 rounded-[14px] border border-slate-300 bg-white p-6 transition-shadow hover:shadow-lg"
+        class="flex flex-1 flex-col items-start space-y-6 rounded-[14px] border border-slate-300 bg-white p-6 transition-shadow last:shadow-lg"
       >
         <Badge {text} {bgColor} />
-        <h3 class="flex flex-row items-center text-[40px] font-semibold text-slate-700">
+        <h2 class="flex flex-row items-center">
           <span class={styles}>{currency}{cost}</span>
-          <span class="ml-3 text-xs text-slate-500">{otherText}</span>
-        </h3>
+          <span class="ml-3 text-xs font-medium">{otherText}</span>
+        </h2>
         <ul class="space-y-3 text-sm font-medium">
           {#each features as feature}
             <li class="before:mr-2 before:content-['👍']">{@html feature}</li>

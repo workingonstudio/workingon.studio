@@ -5,7 +5,7 @@
 </script>
 
 <li>
-  <Icon name={icon} class_="mr-2 text-[18px] text-blue-600" />
+  <Icon name={icon} class_="mr-2 text-lg text-blue-600" />
   {text}
 </li>
 

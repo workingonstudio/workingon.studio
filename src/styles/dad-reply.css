@@ -14,46 +14,58 @@
   --color-text-body: theme(colors.slate.500);
   --color-text-muted: theme(colors.slate.400);
 
-  --breakpoint-3xl: 112rem;
+  --screen-sm: 40rem; /* 640px */
+  --screen-md: 48rem; /* 768px */
+  --screen-lg: 64rem; /* 1024px */
+  --screen-xl: 80rem; /* 1280px */
+  --screen-2xl: 96rem; /* 1536px */
+  --screen-3xl: 112rem;
 }
 
-body {
-  font-family: var(--font-poppins);
-  color: var(--color-text);
-  &::selection {
-    background: var(--color-primary);
-    @apply text-white;
+@layer base {
+  body {
+    font-family: var(--font-poppins);
+    color: var(--color-text);
+    &::selection {
+      background: var(--color-primary);
+      @apply text-white;
+    }
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--color-text);
+    @apply font-semibold text-pretty;
+  }
+
+  h1 {
+    @apply text-4xl/14;
+  }
+
+  h2 {
+    @apply text-3xl;
+  }
+
+  h3 {
+    @apply text-2xl;
+  }
+
+  p {
+    color: var(--color-text-body);
+    @apply leading-relaxed;
+  }
+
+  small {
+    color: var(--color-text-muted);
+    @apply text-xs;
   }
 }
 
-h1,
-h2,
-h3,
-h4 {
-  color: var(--color-text);
-  @apply font-semibold;
-}
-
-h1 {
-  @apply text-[40px];
-}
-
-h3 {
-  @apply text-[32px];
-}
-
-h4 {
-  @apply text-2xl;
-}
-
-p {
-  color: var(--color-text-body);
-  @apply leading-relaxed;
-}
-
-small {
-  color: var(--color-text-muted);
-  @apply text-xs;
+@layer components {
+  .card {
+    @apply rounded-xl border border-slate-300 bg-white p-6;
+  }
 }
 
 .the-shadow {

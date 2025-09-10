@@ -24,7 +24,7 @@
       <DownloadButton icon label="Download for Internet Explorer" iconRef="internet-explorer" style="hollow" />
     </div>
   </div>
-  <div class="email-container the-shadow mr-2 flex-1 lg:-mr-[calc(50vw-50%)]">
+  <div class="card the-shadow mr-2 flex-1 pt-16 pr-16 pb-16 pl-16 lg:-mr-[calc(50vw-50%)]">
     <Email />
   </div>
 </section>
