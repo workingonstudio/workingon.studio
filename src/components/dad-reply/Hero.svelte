@@ -21,10 +21,10 @@
         iconRef="chrome"
         downloadLink="https://chromewebstore.google.com/detail/ddkeoflblemlolckmnhihhabplfmogop"
       />
-      <DownloadButton icon label="Download for Internet Explorer" iconRef="internet-explorer" style="hollow" />
+      <DownloadButton icon label="Download for IE 6.0" iconRef="internet-explorer" style="hollow" />
     </div>
   </div>
-  <div class="card the-shadow mr-2 flex-1 pt-16 pr-16 pb-16 pl-16 lg:-mr-[calc(50vw-50%)]">
+  <div class="card email-container the-shadow flex-1">
     <Email />
   </div>
 </section>
@@ -32,9 +32,9 @@
 <style>
   @reference "@styles/dad-reply.css";
   .email-container {
-    @apply pt-16 pr-16 pb-16 pl-16;
-    @apply rounded-[14px] border border-slate-300 bg-white;
-    @apply md:rounded;
-    @apply lg:rounded-none lg:rounded-l-[14px] lg:pr-0;
+    @apply mr-0 pt-12 pr-12 pb-12 pl-12;
+    @apply rounded-xl;
+    @apply lg:-mr-[calc(50vw-50%)] lg:rounded-none lg:rounded-l-xl lg:p-16 lg:pr-0;
+    @apply 2xl:-mr-[calc(25vw-25%)] 2xl:rounded-xl 2xl:p-16;
   }
 </style>
