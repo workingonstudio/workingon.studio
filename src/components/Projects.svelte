@@ -8,10 +8,10 @@
     {#each projectData as project}
       <li class="space-y-4">
         <div class="space-y-3">
-          <h2 class="flex flex-row items-center">
+          <h2 class="flex flex-row items-center text-sm">
             <Icon name={project.icon} class_="text-lg mr-2" />{project.name}
           </h2>
-          <p class="text-sm">
+          <p class="text-xs/5">
             {project.description}
           </p>
         </div>
