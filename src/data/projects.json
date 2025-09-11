@@ -1,6 +1,6 @@
 [
   {
-    "icon": "thumbUp",
+    "icon": "mailReply",
     "name": "Dad Reply",
     "description": "Instantly reply to your emails with minimal effort and maximum dad energy.",
     "version": 1.0,
@@ -9,7 +9,7 @@
     "link": "/"
   },
   {
-    "icon": "animation",
+    "icon": "boolean",
     "name": "Solidarity",
     "description": "Gives you the illusion of every member on LinkedIn being #opentowork.",
     "version": 1.1,
@@ -18,7 +18,7 @@
     "link": "/"
   },
   {
-    "icon": "waterDrop",
+    "icon": "rainDrop",
     "name": "TypeDrop",
     "description": "It's not about how much AI is costing you, but how much it's costing us.",
     "version": 0.5,
@@ -27,7 +27,7 @@
     "link": "/"
   },
   {
-    "icon": "swords",
+    "icon": "noodleBowl",
     "name": "Design Dojo",
     "description": "How much will you spend to be truly unique? sustainable uniqueness vs wasteful exclusivity",
     "version": 0.1,
@@ -36,7 +36,7 @@
     "link": "/"
   },
   {
-    "icon": "shelves",
+    "icon": "application",
     "name": "Only 98",
     "description": "How much will you spend to be truly unique? sustainable uniqueness vs wasteful exclusivity.",
     "version": 0.1,

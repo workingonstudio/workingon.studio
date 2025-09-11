@@ -26,12 +26,13 @@
     dropDown: "material-symbols:arrow-drop-down",
     quote: "material-symbols:format-quote-outline-rounded",
     progress: "material-symbols:progress-activity",
-    thumbUp: "material-symbols:thumb-up-outline-rounded",
-    animation: "material-symbols:animation",
-    waterDrop: "material-symbols:water-drop-outline-rounded",
-    shelves: "material-symbols:shelves-outline-rounded",
-    swords: "material-symbols:swords-outline-rounded",
+    // Main
     copywrite: "material-symbols:copyright-outline-rounded",
+    noodleBowl: "carbon:noodle-bowl",
+    rainDrop: "carbon:rain-drop",
+    boolean: "carbon:boolean",
+    mailReply: "carbon:mail-reply",
+    application: "carbon:application",
   };
 
   // Determine which icon to use
