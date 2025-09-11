@@ -26,6 +26,13 @@
     dropDown: "material-symbols:arrow-drop-down",
     quote: "material-symbols:format-quote-outline-rounded",
     progress: "material-symbols:progress-activity",
+    // Main
+    copywrite: "material-symbols:copyright-outline-rounded",
+    noodleBowl: "carbon:noodle-bowl",
+    rainDrop: "carbon:rain-drop",
+    boolean: "carbon:boolean",
+    mailReply: "carbon:mail-reply",
+    application: "carbon:application",
   };
 
   // Determine which icon to use
