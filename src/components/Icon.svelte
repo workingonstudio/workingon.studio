@@ -26,6 +26,12 @@
     dropDown: "material-symbols:arrow-drop-down",
     quote: "material-symbols:format-quote-outline-rounded",
     progress: "material-symbols:progress-activity",
+    thumbUp: "material-symbols:thumb-up-outline-rounded",
+    animation: "material-symbols:animation",
+    waterDrop: "material-symbols:water-drop-outline-rounded",
+    shelves: "material-symbols:shelves-outline-rounded",
+    swords: "material-symbols:swords-outline-rounded",
+    copywrite: "material-symbols:copyright-outline-rounded",
   };
 
   // Determine which icon to use

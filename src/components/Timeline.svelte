@@ -31,19 +31,19 @@
   $: groupedEntries = groupByDate(timelineData?.entries);
 </script>
 
-<section class="timeline-section max-w-md space-y-12 mt-32">
+<section class="timeline-section mt-32 max-w-md space-y-12">
   <div class="timeline-reveal group space-y-12">
-    <div class="timeline-groups space-y-6 mb-6">
+    <div class="timeline-groups mb-6 space-y-6">
       {#each groupedEntries as group}
         <div class="date-group">
-          <h3 class="date-header text-xs text-gray-400 font-mono mb-3 py-1">
+          <h3 class="date-header mb-3 py-1 font-mono text-xs text-gray-400">
             {group.date}
           </h3>
 
           <ul class="timeline-entries space-y-6">
             {#each group.entries as entry}
               <li class="timeline-entry space-y-2" data-type={entry.type}>
-                <div class="entry-meta flex flex-row justify-between text-[10px] text-gray-600">
+                <div class="entry-meta text-xxs flex flex-row justify-between text-gray-600">
                   <span class="version-debug">
                     {entry.version}
                   </span>
@@ -69,7 +69,7 @@
                     </p>
                   {/if}
                   {#if entry.branchMerged && entry.intoBranch}{:else}
-                    <span class="branch-display text-gray-500 text-[11px]">{entry.branchDisplay}</span>
+                    <span class="branch-display text-xxs text-gray-500">{entry.branchDisplay}</span>
                   {/if}
                 </div>
               </li>

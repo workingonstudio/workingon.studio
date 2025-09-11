@@ -25,6 +25,12 @@ export const USED_ICONS = {
   dropDown: `${ICON_SETS.materialSymbols}:arrow-drop-down`,
   quote: `${ICON_SETS.materialSymbols}:format-quote-outline-rounded`,
   progress: `${ICON_SETS.materialSymbols}:progress-activity`,
+  thumbUp: `${ICON_SETS.materialSymbols}:thumb-up-outline-rounded`,
+  animation: `${ICON_SETS.materialSymbols}:animation`,
+  waterDrop: `${ICON_SETS.materialSymbols}:water-drop-outline-rounded`,
+  shelves: `${ICON_SETS.materialSymbols}:shelves-outline-rounded`,
+  swords: `${ICON_SETS.materialSymbols}:swords-outline-rounded`,
+  copywrite: `${ICON_SETS.materialSymbols}:copyright-outline-rounded`,
 
   // Add new icons here as you use them
   // home: `${ICON_SETS.lucide}:home`,
