@@ -1,17 +1,13 @@
 ---
-import "@styles/global.css";
+import "../styles/global.css";
 
 const isDev = import.meta.env.DEV;
-const plausibleDomain = isDev ? "localhost" : "workingon.studio";
-const plausibleScript = isDev
-  ? "https://plausible-analytics-ce-production-a4db.up.railway.app/js/script.local.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js"
-  : "https://plausible-analytics-ce-production-a4db.up.railway.app/js/script.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js";
-
-declare global {
-  interface Window {
-    plausible: any;
-  }
-}
+const umamiScript = isDev
+  ? "https://umami-production-7b84.up.railway.app/script.js"
+  : "https://umami-production-7b84.up.railway.app/script.js";
+const umamiWebsiteID = isDev
+  ? "8399259a-e3c8-4994-9ad4-797479ea7dca"
+  : "276249ef-c30a-4a67-bfa5-674b6cb5d013";
 
 export interface Props {
   title: string;
@@ -41,14 +37,7 @@ const nudicaMonoFontUrl = import.meta.env.NUDICA_MONO_FONT_CSS_URL;
     />
     <meta name="generator" content={Astro.generator} />
 
-    <script defer data-domain={plausibleDomain} src={plausibleScript}></script>
-    <script>
-      window.plausible =
-        window.plausible ||
-        function () {
-          (window.plausible.q = window.plausible.q || []).push(arguments);
-        };
-    </script>
+    <script is:inline defer data-website-id={umamiWebsiteID} src={umamiScript}></script>
 
     <!-- CDN Font Stylesheets -->
     {nudicaFontUrl && <link rel="stylesheet" href={nudicaFontUrl} />}
@@ -56,8 +45,8 @@ const nudicaMonoFontUrl = import.meta.env.NUDICA_MONO_FONT_CSS_URL;
 
     <title>{title}</title>
   </head>
-  <body class="selection:bg-gray-100 selection:text-gray-950 bg-gray-950">
-    <main class="min-h-screen flex-1 flex mx-[5%] md:mx-[10%]">
+  <body class="bg-gray-950 selection:bg-gray-100 selection:text-gray-950">
+    <main class="mx-[5%] flex min-h-screen flex-1 md:mx-[10%]">
       <slot />
     </main>
   </body>
