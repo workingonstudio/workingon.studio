@@ -8,7 +8,7 @@
         text: "Free",
       },
       price: {
-        currency: "$",
+        currency: "",
         cost: "Free",
         otherText: "",
         styles: "",

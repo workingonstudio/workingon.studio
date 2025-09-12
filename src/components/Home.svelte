@@ -7,9 +7,9 @@
     <div class="space-y-12 text-sm leading-6">
       <div>
         {#each actionList as item}
+          <!-- prettier-ignore -->
           <p>
-            <span class="hidden sm:inline-block">working on</span>
-            ...{item}.
+            <span class="hidden sm:inline-block">working on</span>...{item}.
           </p>
         {/each}
       </div>

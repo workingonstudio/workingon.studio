@@ -19,8 +19,8 @@
       <div class="flex w-md flex-col space-y-4">
         <span class="cursor-default text-4xl">🪱</span>
         <h2>Early bird offer!</h2>
-        <p>It’s what you always dream about as a child. Now I am giving them away*.</p>
-        <small>* the pro trial that is, not a child that would be mental.</small>
+        <p>For a limited time, and to say thank you. You can claim a lifetime license to Dad Reply*.</p>
+        <small>* that's my lifetime, obviously, I will share medical records regularly.</small>
       </div>
       <div class="card w-md space-y-6 shadow-lg">
         <div class="space-y-8">

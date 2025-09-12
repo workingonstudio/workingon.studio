@@ -20,7 +20,7 @@
       <span class="material-symbols-rounded !text-lg">arrow_drop_down</span>
     </span>
     <p class="py-2">{emailContent}</p>
-    <a class="font-[Arial] text-xs font-normal" href={chromeStoreURL}>(via dad reply)</a>
+    <a class="font-[Arial] text-xs font-normal" href={chromeStoreURL}>via dad reply</a>
   </div>
 </div>
 
