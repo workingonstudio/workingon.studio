@@ -7,8 +7,8 @@
   let chromeStoreURL = "https://chromewebstore.google.com/detail/ddkeoflblemlolckmnhihhabplfmogop";
 </script>
 
-<div in:slide={{ duration: 200, easing: cubicOut }} out:slide={{ duration: 200, delay: 100 }}>
-  <div class="font-[Roboto]" in:fade={{ delay: 200, duration: 200, easing: cubicOut }} out:fade={{ duration: 100 }}>
+<div in:slide={{ duration: 200, easing: cubicOut }}>
+  <div class="font-[Roboto]" in:fade={{ delay: 200, duration: 200, easing: cubicOut }}>
     <strong class="text-[15px]">
       {emailName}
       <span class="text-xs font-normal text-slate-400">

@@ -6,7 +6,7 @@
 <div class="space-y-12">
   <div class="flex flex-col space-y-4 text-center">
     <h2>
-      <span class="text-4xl">✊</span>
+      <span class="inline-flex text-4xl">✊</span>
       Join the rebellion against the pointless.
     </h2>
     <p>1000’s of thumbs, 1000’s of minutes saved. Join the movement.</p>

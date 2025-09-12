@@ -20,7 +20,7 @@
         <span class="cursor-default text-4xl">🪱</span>
         <h2>Early bird offer!</h2>
         <p>For a limited time, and to say thank you. You can claim a lifetime license to Dad Reply*.</p>
-        <small>* that's my lifetime, obviously, I will share medical records regularly.</small>
+        <small>* you'll receive a code when v1.5 launches.</small>
       </div>
       <div class="card w-md space-y-6 shadow-lg">
         <div class="space-y-8">
