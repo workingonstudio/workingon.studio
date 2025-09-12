@@ -36,7 +36,7 @@
   }
 </script>
 
-<div in:slide={{ duration: 200, easing: cubicOut }} out:slide={{ duration: 200, delay: 100 }}>
+<div class="mt-8" in:slide={{ duration: 200, easing: cubicOut }} out:slide={{ duration: 200, delay: 100 }}>
   <div class="mr-16 space-y-6" in:fade={{ delay: 300, duration: 200, easing: cubicOut }} out:fade={{ duration: 200 }}>
     <div class="flex h-[25px] flex-row items-center justify-between text-base font-semibold">
       <div class="flex space-x-2">

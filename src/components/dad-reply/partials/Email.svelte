@@ -86,7 +86,7 @@
     <MailButton type="email" href="hello@workingon.studio" text="Reply" iconName="reply" />
     <MailButton text="Forward" clickable={true} onclick={toggleForward} iconName="forward" />
   </div>
-  {#if showShare}
-    <ShareModule bind:showShare />
-  {/if}
 </div>
+{#if showShare}
+  <ShareModule bind:showShare />
+{/if}
