@@ -5,6 +5,7 @@
   import Quotes from "./Quotes.svelte";
   import Pricing from "./Pricing.svelte";
   import EarlyBird from "./EarlyBird.svelte";
+  import ShareModule from "./partials/ShareModule.svelte";
 </script>
 
 <Header />
@@ -14,6 +15,7 @@
     <Quotes />
     <ComingSoon />
     <Pricing />
+    <ShareModule />
     <EarlyBird />
   </div>
 </main>

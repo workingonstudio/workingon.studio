@@ -85,7 +85,8 @@
       @apply bg-white;
     }
   }
-  input[type="email"] {
+  input[type="email"],
+  input[type="text"] {
     color: var(--color-text-body);
     @apply h-12 w-full flex-1 rounded-lg border border-slate-300 p-2 text-sm placeholder:font-normal placeholder:text-slate-400;
   }

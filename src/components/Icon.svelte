@@ -26,6 +26,8 @@
     dropDown: "material-symbols:arrow-drop-down",
     quote: "material-symbols:format-quote-outline-rounded",
     progress: "material-symbols:progress-activity",
+    share: "material-symbols:ios-share-rounded",
+    copy: "material-symbols:content-copy-outline-rounded",
     // Main
     copywrite: "material-symbols:copyright-outline-rounded",
     noodleBowl: "carbon:noodle-bowl",
