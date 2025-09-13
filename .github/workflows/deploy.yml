@@ -48,6 +48,8 @@ jobs:
         env:
           NUDICA_FONT_CSS_URL: ${{ secrets.NUDICA_FONT_CSS_URL }}
           NUDICA_MONO_FONT_CSS_URL: ${{ secrets.NUDICA_MONO_FONT_CSS_URL }}
+          UMAMI_ID_PROD: ${{ secrets.UMAMI_ID_PROD }}
+          UMAMI_SCRIPT_URL: ${{ secrets.UMAMI_SCRIPT_URL }}
         run: npm run build
 
       - name: Upload artifact
