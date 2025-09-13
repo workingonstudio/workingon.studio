@@ -1,9 +1,7 @@
 ---
 import "../styles/global.css";
 
-const isDev = import.meta.env.DEV;
-const umamiScriptURL = import.meta.env.UMAMI_SCRIPT_URL;
-const umamiWebsiteID = isDev ? import.meta.env.UMAMI_ID_DEV : import.meta.env.UMAMI_ID_PROD;
+import Analytics from "./partials/Analytics.astro";
 
 export interface Props {
   title: string;
@@ -32,7 +30,8 @@ const nudicaMonoFontUrl = import.meta.env.NUDICA_MONO_FONT_CSS_URL;
       rel="stylesheet"
     />
     <meta name="generator" content={Astro.generator} />
-    <script is:inline defer data-website-id={umamiWebsiteID} src={umamiScriptURL}></script>
+
+    <Analytics />
 
     <!-- CDN Font Stylesheets -->
     {nudicaFontUrl && <link rel="stylesheet" href={nudicaFontUrl} />}

@@ -1,0 +1,16 @@
+---
+const isDev = import.meta.env.DEV;
+const umamiScriptURL = import.meta.env.UMAMI_SCRIPT_URL;
+const umamiWebsiteID = isDev ? import.meta.env.UMAMI_ID_DEV : import.meta.env.UMAMI_ID_PROD;
+
+const { productName = "workingon.studio" } = Astro.props;
+---
+
+<script
+  is:inline
+  defer
+  data-website-id={umamiWebsiteID}
+  src={umamiScriptURL}
+  data-tag={productName}
+>
+</script>
