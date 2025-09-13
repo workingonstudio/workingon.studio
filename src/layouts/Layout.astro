@@ -1,13 +1,6 @@
 ---
 import "../styles/global.css";
 
-// Add this debug block
-console.log("=== BUILD TIME DEBUG ===");
-console.log("UMAMI_SCRIPT_URL:", import.meta.env.UMAMI_SCRIPT_URL);
-console.log("UMAMI_ID_PROD:", import.meta.env.UMAMI_ID_PROD);
-console.log("UMAMI_ID_DEV:", import.meta.env.UMAMI_ID_DEV);
-console.log("DEV mode:", import.meta.env.DEV);
-
 const isDev = import.meta.env.DEV;
 const umamiScriptURL = import.meta.env.UMAMI_SCRIPT_URL;
 const umamiWebsiteID = isDev
