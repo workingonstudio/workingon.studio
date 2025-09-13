@@ -13,7 +13,11 @@
     <Icon name="copywrite" class_="flex items-center" />
     <span>workingonstudio ltd, no: 16700615</span>
   </a>
-  <span>last updated: {DateTime.fromISO(date).toFormat("ccc',' LL LLL y TT ZZZ")}</span>
+  <span
+    >last updated: {DateTime.fromISO(date).toFormat(
+      "ccc',' dd LLL y TT ZZZ"
+    )}</span
+  >
 </footer>
 
 <style>
