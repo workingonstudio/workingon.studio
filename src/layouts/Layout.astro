@@ -7,6 +7,14 @@ const umamiWebsiteID = isDev
   ? import.meta.env.UMAMI_ID_DEV
   : import.meta.env.UMAMI_ID_PROD;
 
+console.log("Umami Debug:", {
+  isDev,
+  umamiScriptURL,
+  umamiWebsiteID,
+  mode: import.meta.env.MODE,
+  prod: import.meta.env.PROD,
+});
+
 export interface Props {
   title: string;
 }
