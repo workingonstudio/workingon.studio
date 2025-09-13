@@ -2,12 +2,10 @@
 import "../styles/global.css";
 
 const isDev = import.meta.env.DEV;
-const umamiScript = isDev
-  ? "https://umami-production-7b84.up.railway.app/script.js"
-  : "https://umami-production-7b84.up.railway.app/script.js";
+const umamiScriptURL = import.meta.env.UMAMI_SCRIPT_URL;
 const umamiWebsiteID = isDev
-  ? "8399259a-e3c8-4994-9ad4-797479ea7dca"
-  : "276249ef-c30a-4a67-bfa5-674b6cb5d013";
+  ? import.meta.env.UMAMI_ID_DEV
+  : import.meta.env.UMAMI_ID_PROD;
 
 export interface Props {
   title: string;
@@ -69,7 +67,7 @@ const nudicaMonoFontUrl = import.meta.env.NUDICA_MONO_FONT_CSS_URL;
       is:inline
       defer
       data-website-id={umamiWebsiteID}
-      src={umamiScript}
+      src={umamiScriptURL}
     ></script>
 
     <!-- CDN Font Stylesheets -->
