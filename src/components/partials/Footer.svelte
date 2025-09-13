@@ -1,7 +1,7 @@
 <script lang="ts">
   import { DateTime } from "luxon";
   import timelineData from "../../data/timeline-github.json";
-  let date = timelineData.generated;  
+  let date = timelineData.generated;
 </script>
 
 <footer
@@ -13,7 +13,12 @@
   >
     <span class="font-display">&#169;</span> workingonstudio ltd, no: 16700615
   </a>
-  <span>last updated: {DateTime.fromISO(date).toFormat("ccc',' LL LLL y TT ZZZ")}</span>
+  <span
+    >last updated: {DateTime.fromISO(date).toFormat(
+      "ccc',' dd LLL y TT ZZZ"
+    )}</span
+  >
 </footer>
+
 <style>
 </style>
