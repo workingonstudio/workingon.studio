@@ -1,7 +1,9 @@
 <script lang="ts">
   import Reply from "./Reply.svelte";
   import MailButton from "./MailButton.svelte";
+  import ShareModule from "./ShareModule.svelte";
   let showReply = false;
+  let showShare = false;
 
   let replyCollection = [
     {
@@ -37,6 +39,10 @@
         currentIndex++;
       }
     }, 100);
+  }
+
+  function toggleForward() {
+    showShare = true;
   }
 </script>
 
@@ -76,8 +82,11 @@
     {/if}
   </div>
   <div class="flex flex-row space-x-3">
-    <MailButton text="Dad Reply" thumbUp={true} onclick={toggleReply} disabled={isDisabled} />
+    <MailButton text="Dad Reply" clickable={true} onclick={toggleReply} disabled={isDisabled} />
     <MailButton type="email" href="hello@workingon.studio" text="Reply" iconName="reply" />
-    <MailButton text="Forward" iconName="forward" />
+    <MailButton text="Forward" clickable={true} onclick={toggleForward} iconName="forward" />
   </div>
 </div>
+{#if showShare}
+  <ShareModule bind:showShare />
+{/if}

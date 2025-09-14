@@ -26,6 +26,8 @@ export const USED_ICONS = {
   dropDown: `${ICON_SETS.materialSymbols}:arrow-drop-down`,
   quote: `${ICON_SETS.materialSymbols}:format-quote-outline-rounded`,
   progress: `${ICON_SETS.materialSymbols}:progress-activity`,
+  share: `${ICON_SETS.materialSymbols}:ios-share-rounded`,
+  copy: `${ICON_SETS.materialSymbols}:content-copy-outline-rounded`,
   // Main site
   copywrite: `${ICON_SETS.materialSymbols}:copyright-outline-rounded`,
   rainDrop: `${ICON_SETS.carbon}:rain-drop`,

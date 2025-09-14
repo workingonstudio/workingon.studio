@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Share on Reddit",
+    "iconRef": "reddit",
+    "href": "https://www.reddit.com/submit?title=",
+    "color": "text-[#FF4500]"
+  },
+  {
+    "title": "Share on Linkedin",
+    "iconRef": "linkedin-in",
+    "href": "https://www.linkedin.com/sharing/share-offsite/?text=",
+    "color": "text-[#0073B1]"
+  },
+  {
+    "title": "Share on Threads",
+    "iconRef": "threads",
+    "href": "https://threads.net/intent/post?text=",
+    "color": "text-[#0C0C0C]"
+  },
+  {
+    "title": "Share on Whatsapp",
+    "iconRef": "whatsapp",
+    "href": "https://api.whatsapp.com/send?text=",
+    "color": "text-[#25D366]"
+  },
+  {
+    "title": "Share on Bluesky",
+    "iconRef": "bluesky",
+    "href": "https://bsky.app/intent/compose?text=",
+    "color": "text-[#1185FE]"
+  },
+  {
+    "title": "Share on X",
+    "iconRef": "x-twitter",
+    "href": "https://twitter.com/intent/tweet?text=",
+    "color": "text-[#14171A]"
+  }
+]

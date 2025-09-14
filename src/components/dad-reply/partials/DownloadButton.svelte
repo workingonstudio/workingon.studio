@@ -16,7 +16,7 @@
 <style>
   @reference "@styles/dad-reply.css";
   .btn {
-    @apply flex justify-center rounded-lg border-2 border-transparent p-3;
+    @apply flex justify-center rounded-lg border-2 border-transparent p-3 pr-4;
     @apply text-sm font-semibold;
     @apply transition-colors duration-300 ease-in-out;
     &.solid {

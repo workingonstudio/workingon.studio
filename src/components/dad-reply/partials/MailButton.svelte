@@ -6,7 +6,7 @@
     text = "",
     type = "click",
     href = "",
-    thumbUp = undefined,
+    clickable = undefined,
     disabled = false,
     onclick = () => {},
   }: {
@@ -14,7 +14,7 @@
     text?: string;
     type?: "email" | "click";
     href?: string;
-    thumbUp?: boolean;
+    clickable?: boolean;
     disabled?: boolean;
     onclick?: () => void;
   } = $props();
@@ -29,7 +29,7 @@
     if (type === "email") {
       const { to, subject, body } = emailConfig;
       window.location.href = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    } else if (thumbUp) {
+    } else if (clickable) {
       onclick();
     }
   }
