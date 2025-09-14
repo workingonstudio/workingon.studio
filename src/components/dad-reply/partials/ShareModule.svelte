@@ -43,11 +43,11 @@
         <Icon name="forward" class_="flex text-2xl text-blue-600" />
         <span class="flex">Forward.</span>
       </div>
-      <div in:fade={{ duration: 500, easing: bounceIn }} out:fade={{ duration: 500, easing: cubicOut }}>
-        {#if copiedToClipboard}
+      {#if copiedToClipboard}
+        <div in:fade={{ duration: 200 }} out:fade={{ duration: 200 }}>
           <Badge text="Copied to clipboard" bgColor="bg-blue-100" />
-        {/if}
-      </div>
+        </div>
+      {/if}
     </div>
 
     <form action="" class="relative flex flex-1 flex-row justify-between">

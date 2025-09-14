@@ -36,9 +36,9 @@
     "color": "text-[#1877F2]"
   },
   {
-    "title": "Share on Mastodon",
-    "iconRef": "mastodon",
+    "title": "Share on Bluesky",
+    "iconRef": "bluesky",
     "href": "/",
-    "color": "text-[#5865F2]"
+    "color": "text-[#1185FE]"
   }
 ]
