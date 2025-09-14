@@ -1,0 +1,49 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Header from "@components/partials/Header.svelte";
+import Footer from "@components/partials/Footer.svelte";
+
+import Icon from "@components/Icon.svelte";
+---
+
+<Layout title="404">
+  <div class="flex flex-1 flex-col justify-between">
+    <Header client:load text="return.home" />
+    <div class="flex flex-col space-y-12">
+      <h1 class="text-7xl">404</h1>
+      <div class="flex w-md flex-col space-y-4">
+        <!-- prettier-ignore -->
+        <blockquote>Guys like us, that work on ranches, are the loneliest guys in the world. They got no
+          family. They don't belong no place. They come to a ranch an' work up a stake, and the
+          first thing you know they're poundin' their tail on some other ranch. They ain't got
+          nothing to look ahead to.
+        </blockquote>
+        <div class="flex flex-col space-y-6">
+          <ul class="text-xxs flex flex-row space-x-3 text-gray-500">
+            <li class="flex items-center">
+              <Icon client:load name="notebook" class_="text-sm mr-2 text-inherit" />
+              <span>Of Mice and Men</span>
+            </li>
+            <li class="flex items-center">
+              <Icon client:load name="edit" class_="text-sm mr-2 text-inherit" />
+              <span>John Steinbeck</span>
+            </li>
+          </ul>
+          <a href="" class="flex items-center text-xs text-[#44841A]">
+            <Icon client:load name="shoppingCart" class_="text-lg mr-2 text-inherit" />
+            <span>Buy from Oxfam</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <Footer />
+  </div>
+</Layout>
+
+<style>
+  @reference "../styles/global.css";
+  blockquote {
+    @apply text-sm/relaxed;
+    @apply before:content-[open-quote] after:content-[close-quote];
+  }
+</style>
