@@ -36,6 +36,9 @@
     boolean: "carbon:boolean",
     mailReply: "carbon:mail-reply",
     application: "carbon:application",
+    notebook: "carbon:notebook",
+    edit: "carbon:edit",
+    shoppingCart: "carbon:shopping-cart",
   };
 
   // Determine which icon to use

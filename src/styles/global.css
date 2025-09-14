@@ -26,7 +26,7 @@
 
 @layer base {
   body {
-    @apply bg-slate-950;
+    background-color: var(--color-bg-main);
     font-family: var(--font-nudicaMono);
     color: var(--color-text-primary);
     ::selection {
