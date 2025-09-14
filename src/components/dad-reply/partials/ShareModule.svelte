@@ -15,7 +15,9 @@
 
   let copiedToClipboard = false;
 
-  let linkURL = "https://dadreply.com?UTMSource='share'";
+  let linkURL = "https://wo.studio/projects/dad-reply";
+  let linkText = "Dad Reply: Instantly reply to your emails with minimal effort and maximum dad energy.";
+  linkText = encodeURIComponent(linkText);
 
   let copyTimeoutId: any;
 
@@ -67,14 +69,20 @@
       <ul class="flex flex-row space-x-3">
         {#each socialButtons as { title, iconRef, href, color }}
           <li>
-            <a
-              {href}
-              {title}
-              aria-label={title}
-              class="flex h-[41px] w-[41px] items-center rounded-lg border border-slate-300 p-2 transition delay-50 hover:shadow-lg"
-            >
-              <i class="fa-brands {'fa-' + iconRef} text-xl {color}"></i>
-            </a>
+            {#if iconRef === "bluesky"}
+              <a
+                href={href + linkText + "%20" + encodeURIComponent(linkURL)}
+                {title}
+                aria-label={title}
+                target="_blank"
+              >
+                <i class="fa-brands {'fa-' + iconRef} text-md {color}"></i>
+              </a>
+            {:else}
+              <a href={href + linkText + "&url=" + linkURL} {title} aria-label={title} target="_blank">
+                <i class="fa-brands {'fa-' + iconRef} text-xl {color}"></i>
+              </a>
+            {/if}
           </li>
         {/each}
       </ul>
@@ -90,4 +98,11 @@
 
 <style>
   @reference "@styles/dad-reply.css";
+  ul {
+    li {
+      a {
+        @apply flex h-[41px] w-[41px] items-center justify-center rounded-lg border border-slate-300 p-2 transition delay-50 hover:shadow-lg;
+      }
+    }
+  }
 </style>
