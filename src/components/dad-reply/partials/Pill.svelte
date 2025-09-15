@@ -13,6 +13,6 @@
   @reference "@styles/dad-reply.css";
   li {
     color: var(--color-text-body);
-    @apply flex items-center rounded-full border border-slate-300 px-3 py-1;
+    @apply inline-flex items-center rounded-full border border-slate-300 px-3 py-1 md:flex;
   }
 </style>

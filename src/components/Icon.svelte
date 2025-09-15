@@ -29,6 +29,9 @@
     share: "material-symbols:ios-share-rounded",
     copy: "material-symbols:content-copy-outline-rounded",
     delete: "material-symbols:delete-outline-rounded",
+    support: "material-symbols:support",
+    encrypted: "material-symbols:encrypted-outline-rounded",
+    signature: "material-symbols:signature-rounded",
     // Main
     copywrite: "material-symbols:copyright-outline-rounded",
     noodleBowl: "carbon:noodle-bowl",

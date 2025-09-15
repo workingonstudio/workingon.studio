@@ -15,20 +15,20 @@
 
 <div id="earlybird" class="flex flex-col">
   {#if !isSubmitting}
-    <div class="flex flex-row items-center justify-center gap-12">
-      <div class="flex w-md flex-col space-y-4">
+    <div class="flex flex-col items-center justify-center gap-12 md:flex-row">
+      <div class="flex w-full flex-col space-y-4 md:w-md">
         <span class="cursor-default text-4xl">🪱</span>
         <h2>Early bird offer!</h2>
         <p>For a limited time, and to say thank you. You can claim a lifetime license to Dad Reply*.</p>
         <small>* you'll receive a code when v1.5 launches.</small>
       </div>
-      <div class="card w-md space-y-6 shadow-lg">
+      <div class="card w-full space-y-6 shadow-lg md:w-md">
         <div class="space-y-8">
           <div class="flex flex-row space-x-3">
             <Badge text="Lifetime Pro" bgColor="bg-orange-100" />
             <Badge text="Limited" bgColor="bg-blue-100" />
           </div>
-          <h1 class="text-5xl">$19.99</h1>
+          <h1 class="text-5xl!">$19.99</h1>
           <ul class="space-y-3 text-sm font-medium">
             <li class="before:mr-2 before:content-['👍']">Lifetime licence to Pro.</li>
             <li class="before:mr-2 before:content-['👍']">Access to Beta features.</li>

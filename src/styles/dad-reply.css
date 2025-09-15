@@ -31,6 +31,7 @@
       background: var(--color-primary);
       @apply text-white;
     }
+    @apply text-base;
   }
   h1,
   h2,
@@ -41,20 +42,21 @@
   }
 
   h1 {
-    @apply text-4xl/14;
+    @apply text-2xl md:text-4xl/14;
   }
 
   h2 {
-    @apply text-3xl;
+    @apply text-xl md:text-3xl;
   }
 
   h3 {
-    @apply text-2xl;
+    @apply text-lg md:text-2xl;
   }
 
   p {
     color: var(--color-text-body);
     @apply leading-relaxed;
+    @apply text-sm md:text-base;
   }
 
   small {
