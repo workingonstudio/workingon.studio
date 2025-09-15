@@ -17,14 +17,6 @@
           <a href="#earlybird" class="font-medium text-blue-600">Claim early bird offer</a>
         </li>
       </ul>
-      <ul class="flex flex-row space-x-4">
-        <li>
-          <a href="https://www.producthunt.com/products/dad-reply" target="_blank">Product Hunt</a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/company/dadreply" target="_blank">LinkedIn</a>
-        </li>
-      </ul>
     </nav>
   </header>
 </div>

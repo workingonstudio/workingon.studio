@@ -5,6 +5,7 @@
   import Quotes from "./Quotes.svelte";
   import Pricing from "./Pricing.svelte";
   import EarlyBird from "./EarlyBird.svelte";
+  import Footer from "./Footer.svelte";
 </script>
 
 <Header />
@@ -15,5 +16,6 @@
     <ComingSoon />
     <Pricing />
     <EarlyBird />
+    <Footer />
   </div>
 </main>
