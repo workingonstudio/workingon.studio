@@ -4,17 +4,17 @@
   import Email from "./partials/Email.svelte";
 </script>
 
-<section class="flex items-center gap-2">
-  <div class="w-2xl space-y-12">
+<section class="flex flex-col items-center gap-2 md:flex-row">
+  <div class="w-full space-y-12 md:w-2xl">
     <h1>Instantly reply to your emails with minimal effort and maximum dad energy.</h1>
-    <div class="w-xl space-y-6">
+    <div class="w-full space-y-6 md:w-xl">
       <p>
         Whether it’s that weekly status report, someone asking a question that is already in the wiki, or a simple
         request for coffee. There’s now a better way to respond to the mundane, inane or frivolous emails.
       </p>
       <FeaturePills />
     </div>
-    <div class="flex gap-6">
+    <div class="flex flex-col gap-6 md:flex-row">
       <DownloadButton
         label="Download for Chrome"
         icon
@@ -24,7 +24,7 @@
       <DownloadButton icon label="Download for IE 6.0" iconRef="internet-explorer" style="hollow" />
     </div>
   </div>
-  <div class="card email-container the-shadow flex-1">
+  <div class="card email-container the-shadow order-first flex-1 md:order-none">
     <Email />
   </div>
 </section>
@@ -32,7 +32,8 @@
 <style>
   @reference "@styles/dad-reply.css";
   .email-container {
-    @apply mr-0 pt-12 pr-12 pb-12 pl-12;
+    @apply absolute bottom-[360px] md:relative md:bottom-0;
+    @apply mr-0 px-4 py-8;
     @apply rounded-xl;
     @apply lg:-mr-[calc(50vw-50%)] lg:rounded-none lg:rounded-l-xl lg:p-16 lg:pr-0;
     @apply 2xl:-mr-[calc(25vw-25%)] 2xl:rounded-xl 2xl:p-16;

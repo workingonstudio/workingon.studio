@@ -39,7 +39,7 @@
   type="button"
   onclick={handleClick}
   {disabled}
-  class="google-button flex max-h-9 items-center px-4 py-2 text-sm font-medium [&_span]:mr-3"
+  class="google-button flex max-h-9 items-center px-4 py-2 text-xs font-medium md:text-sm [&_span]:mr-3"
 >
   {#if iconName}
     <Icon name={iconName} class_="mr-3 text-[18px]" />

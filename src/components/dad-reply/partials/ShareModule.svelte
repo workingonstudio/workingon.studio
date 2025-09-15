@@ -39,7 +39,11 @@
 </script>
 
 <div class="mt-8" in:slide={{ duration: 200, easing: cubicOut }} out:slide={{ duration: 200, delay: 100 }}>
-  <div class="mr-16 space-y-6" in:fade={{ delay: 300, duration: 200, easing: cubicOut }} out:fade={{ duration: 200 }}>
+  <div
+    class="mr-0 space-y-6 md:mr-16"
+    in:fade={{ delay: 300, duration: 200, easing: cubicOut }}
+    out:fade={{ duration: 200 }}
+  >
     <div class="flex h-[25px] flex-row items-center justify-between text-base font-semibold">
       <div class="flex space-x-2">
         <Icon name="forward" class_="flex text-2xl text-blue-600" />

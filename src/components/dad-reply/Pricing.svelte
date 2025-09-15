@@ -47,21 +47,21 @@
   ];
 </script>
 
-<div class="flex flex-col items-center justify-center space-y-12">
-  <div class="flex flex-col space-y-4 text-center">
+<div class="flex flex-col items-start justify-center space-y-12 md:items-center">
+  <div class="flex flex-col space-y-4 text-left md:text-center">
     <span class="cursor-default text-4xl">🎟️</span>
     <h2>Download and get access to a Pro trial.</h2>
     <p>It’s what you always dream of as a child. Now I am giving them away*.</p>
     <small>* the pro trial that is, not a child that would be mental.</small>
   </div>
-  <div class="flex w-2/3 flex-row gap-6">
+  <div class="flex w-full flex-col gap-6 md:w-2/3 md:flex-row">
     {#each priceTables as { badge: { bgColor, text }, price: { currency, cost, otherText, styles }, features, button: { style, show, icon, iconRef, label } }}
       <div
         class="flex flex-1 flex-col items-start space-y-6 rounded-[14px] border border-slate-300 bg-white p-6 transition-shadow last:shadow-lg"
       >
         <Badge {text} {bgColor} />
         <h2 class="flex flex-row items-center">
-          <span class={styles}>{currency}{cost}</span>
+          <span class={styles + " text-4xl!"}>{currency}{cost}</span>
           <span class="ml-3 text-xs font-medium">{otherText}</span>
         </h2>
         <ul class="space-y-3 text-sm font-medium">

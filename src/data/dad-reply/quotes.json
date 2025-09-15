@@ -3,23 +3,23 @@
     "quote": "This is the artisanal, hand-crafted feature in a world of mass-produced software.<br/><br/>A beautiful reminder that quality will always trump quantity.",
     "cite": "Peter Dedene",
     "link": "https://x.com/peterdedene/status/1954985670315061705",
-    "gridSetting": "row-span-3",
+    "gridSetting": "md:row-span-3",
     "itemAlign": "items-center",
-    "textSize": "text-xl"
+    "textSize": "md:text-xl"
   },
   {
     "quote": "Y'all building AGI when you could be innovating like this.",
     "cite": "Ryan Hoover",
     "link": "https://x.com/rrhoover/status/1954983479135047766",
-    "gridSetting": "row-span-2",
+    "gridSetting": "md:row-span-2",
     "itemAlign": "items-center",
-    "textSize": "text-3xl"
+    "textSize": "md:text-3xl"
   },
   {
     "quote": "This is such a clever productivity hack. A quick thumbs-up saves so much time!",
     "cite": "Grace Marie",
     "link": "https://www.producthunt.com/products/dad-reply?comment=4796869",
-    "gridSetting": "col-start-2 row-start-3",
+    "gridSetting": "md:col-start-2 md:row-start-3",
     "itemAlign": "",
     "textSize": ""
   },
@@ -27,15 +27,15 @@
     "quote": "When the world is on fire with low-quality ai generated replies that end with contrived engagement baiting questions, this is the plug-in that we need.",
     "cite": "Mcval Osborne",
     "link": "https://www.producthunt.com/products/dad-reply?comment=4795603",
-    "gridSetting": "row-span-2 col-start-3 row-start-2",
+    "gridSetting": "md:row-span-2 md:col-start-3 md:row-start-2",
     "itemAlign": "items-center",
-    "textSize": "text-lg"
+    "textSize": "md:text-lg"
   },
   {
     "quote": "This is the rubber-stamp version of “Sounds good.",
     "cite": "Sharmada Shastry",
     "link": "https://www.producthunt.com/products/dad-reply/launches/dad-reply?comment=4797735",
-    "gridSetting": "col-start-3 row-start-1",
+    "gridSetting": "md:col-start-3 md:row-start-1",
     "itemAlign": "",
     "textSize": ""
   },
@@ -61,6 +61,6 @@
     "link": "https://www.producthunt.com/products/dad-reply?comment=4795289",
     "gridSetting": "",
     "itemAlign": "",
-    "textSize": "text-xl"
+    "textSize": "md:text-xl"
   }
 ]

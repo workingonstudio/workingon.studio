@@ -58,7 +58,7 @@
         to you <span class="material-symbols-rounded !text-lg">arrow_drop_down</span>
       </span>
     </div>
-    <div class="space-y-5 text-sm/7 *:font-[Arial] *:text-black!">
+    <div class="space-y-5 *:font-[Arial] *:text-black!">
       <p>To all,</p>
       <p>Look, I'm tired of products that pretend to solve problems while creating new ones.</p>
       <p>
@@ -90,3 +90,10 @@
 {#if showShare}
   <ShareModule bind:showShare />
 {/if}
+
+<style>
+  @reference "@styles/dad-reply.css";
+  p {
+    @apply text-sm/7;
+  }
+</style>
