@@ -1,6 +1,9 @@
 <script lang="ts">
   import Icon from "@components/Icon.svelte";
   import Badge from "@components/solidarity/partials/Badge.svelte";
+  import Switch from "@components/solidarity/partials/Toggle.svelte";
+
+  let toggled = false;
 </script>
 
 <div class="header sticky top-0 my-36 flex flex-1 border-stone-50 bg-stone-50/95 py-6">
@@ -15,7 +18,8 @@
       </a>
       <Badge text="v1.0.1" bgColor="bg-stone-200" />
     </div>
-    <div>
+    <div class="flex flex-row items-center gap-6">
+      <Switch bind:checked={toggled} id="toggled" />
       <a href="" class="btn">
         <Icon name="plus" class_="icon-md text-[20px]" />Add to Chrome
       </a>
