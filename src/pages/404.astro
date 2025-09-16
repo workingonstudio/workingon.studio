@@ -29,7 +29,7 @@ import Icon from "@components/Icon.svelte";
               <span>John Steinbeck</span>
             </li>
           </ul>
-          <a href="" class="flex items-center text-xs text-[#44841A]">
+          <a href="" class="flex items-center text-xs text-lime-700 hover:text-lime-400">
             <Icon client:load name="shoppingCart" class_="text-lg mr-2 text-inherit" />
             <span>Buy from Oxfam</span>
           </a>
@@ -42,6 +42,9 @@ import Icon from "@components/Icon.svelte";
 
 <style>
   @reference "../styles/global.css";
+  a {
+    @apply transition-colors delay-100;
+  }
   blockquote {
     @apply text-sm/relaxed;
     @apply before:content-[open-quote] after:content-[close-quote];
