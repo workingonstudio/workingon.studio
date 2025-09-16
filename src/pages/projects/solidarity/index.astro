@@ -1,0 +1,12 @@
+---
+import Solidarity from "@layouts/Solidarity.astro";
+import Header from "@components/solidarity/partials/Header.svelte";
+import Main from "@components/solidarity/Main.svelte";
+---
+
+<Solidarity title="Solidarity - Universal Acknowledgment">
+  <main class="mx-[5%] flex flex-1 flex-col md:mx-[10%]">
+    <Header client:load />
+    <Main />
+  </main>
+</Solidarity>

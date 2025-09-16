@@ -32,6 +32,10 @@
     support: "material-symbols:support",
     encrypted: "material-symbols:encrypted-outline-rounded",
     signature: "material-symbols:signature-rounded",
+
+    // Hero
+    plus: "heroicons:plus-20-solid",
+
     // Main
     copywrite: "material-symbols:copyright-outline-rounded",
     noodleBowl: "carbon:noodle-bowl",
