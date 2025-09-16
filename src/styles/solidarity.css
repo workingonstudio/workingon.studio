@@ -3,7 +3,6 @@
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  @apply transition-colors delay-100;
 }
 
 @theme {
@@ -32,7 +31,6 @@
   body {
     font-family: var(--font-lora);
     color: var(--color-text);
-
     &::selection {
       background: var(--color-primary);
       @apply text-white;
@@ -53,11 +51,11 @@
   }
 
   h2 {
-    @apply text-xl md:text-3xl;
+    @apply text-xl md:text-2xl;
   }
 
   h3 {
-    @apply text-lg md:text-2xl;
+    @apply text-lg;
   }
 
   p {
@@ -68,6 +66,11 @@
   small {
     color: var(--color-text-muted);
     @apply text-xs;
+  }
+  a,
+  button,
+  input[type="submit"] {
+    @apply transition-colors delay-100;
   }
 }
 
