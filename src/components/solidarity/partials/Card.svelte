@@ -1,20 +1,54 @@
 <script lang="ts">
-  export let name: string;
-  export let title: string;
   export let src: string;
-  export let blurred: boolean;
+  export let height: number;
+  export let width: number;
+  export let itemNumber: number;
 
-  $: isBlurred = blurred ? "blur-[1.5px]" : "blur-none";
+  function getItemClasses(itemNumber: number): string {
+    if (itemNumber === 4) return "center-item absolute top-32 left-1/2 z-10";
+    return `circle-item-${itemNumber} absolute top-32 left-1/2`;
+  }
+
+  let checkItemNumber = itemNumber === 4 ? "shadow-lg shadow-stone-900/10" : "";
+  $: itemAlign = getItemClasses(itemNumber);
+
+  $: sizeClass = width === 64 ? "w-16 h-16" : width === 128 ? "w-32 h-32" : "";
 </script>
 
-<div class="flex w-full flex-row gap-5 rounded-2xl bg-stone-100 p-6 {isBlurred}">
-  <img {src} alt="" class="h-10 w-10 rounded-full border-transparent" />
-  <div class="flex flex-col">
-    <span class="font-mulish text-base font-bold">{name}</span>
-    <span class="font-lora text-xs text-stone-700">{title}</span>
-  </div>
+<div class={itemAlign}>
+  <img src="../../../../public/solidarity/otw-overlay.png" class="overlay absolute {sizeClass} rounded-full" />
+  <img {src} alt="" {width} {height} class="rounded-full border-transparent {checkItemNumber}" />
 </div>
 
 <style>
   @reference "@styles/solidarity.css";
+  /* Center item - position from top */
+  .center-item {
+    transform: translate(-50%, -32px);
+  }
+
+  .circle-item-0 {
+    transform: translate(-50%, -130px);
+  }
+  .circle-item-1 {
+    transform: translate(calc(-50% + 92px), -92px);
+  }
+  .circle-item-2 {
+    transform: translate(calc(-50% + 130px), 0px);
+  }
+  .circle-item-3 {
+    transform: translate(calc(-50% + 92px), 92px);
+  }
+  .circle-item-5 {
+    transform: translate(-50%, 130px);
+  }
+  .circle-item-6 {
+    transform: translate(calc(-50% - 92px), 92px);
+  }
+  .circle-item-7 {
+    transform: translate(calc(-50% - 130px), 0px);
+  }
+  .circle-item-8 {
+    transform: translate(calc(-50% - 92px), -92px);
+  }
 </style>

@@ -3,32 +3,57 @@
 
   let users = [
     {
-      name: "Thomas Knoll",
-      title: "Leading growth @ Venteur.com",
-      src: "https://placehold.co/40x40@2x.png",
-      blurred: true,
+      src: "https://placehold.co/64x64@2x.png",
+      width: 64,
+      height: 64,
     },
     {
-      name: "Paul Mackenzie",
-      title: "Founder @ workingon.studio",
-      src: "https://placehold.co/40x40@2x.png",
-      blurred: false,
+      src: "https://placehold.co/64x64@2x.png",
+      width: 64,
+      height: 64,
     },
     {
-      name: "Ashley Bradshaw",
-      title: "Product designer",
-      src: "https://placehold.co/40x40@2x.png",
-      blurred: true,
+      src: "https://placehold.co/64x64@2x.png",
+      width: 64,
+      height: 64,
+    },
+    {
+      src: "https://placehold.co/64x64@2x.png",
+      width: 64,
+      height: 64,
+    },
+    {
+      src: "../../../../public/solidarity/me-shoe.png",
+      width: 128,
+      height: 128,
+    },
+    {
+      src: "https://placehold.co/64x64@2x.png",
+      width: 64,
+      height: 64,
+    },
+    {
+      src: "https://placehold.co/64x64@2x.png",
+      width: 64,
+      height: 64,
+    },
+    {
+      src: "https://placehold.co/64x64@2x.png",
+      width: 64,
+      height: 64,
+    },
+    {
+      src: "https://placehold.co/64x64@2x.png",
+      width: 64,
+      height: 64,
     },
   ];
 </script>
 
-<div class="flex h-full w-sm flex-col">
-  <div class="my-40 flex w-full flex-col gap-4">
-    {#each users as user}
-      <Card {...user} />
-    {/each}
-  </div>
+<div class="relative mt-32 flex w-1/3 items-start justify-center">
+  {#each users as user, index}
+    <Card {...user} itemNumber={index} />
+  {/each}
 </div>
 
 <style>
