@@ -90,7 +90,7 @@
   @reference "@styles/solidarity.css";
   .overlay {
     background: url("/solidarity/gradient-bg.png") center/cover no-repeat;
-    transition: background-size 3s ease-out;
+    transition: background-size 20s ease-out;
   }
 
   .overlay.expanded {

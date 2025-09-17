@@ -44,7 +44,7 @@
   }
 
   .thumb {
-    @apply absolute top-0 left-0 h-4 w-4 rounded-full border border-stone-300 bg-white transition-all duration-300 ease-in-out;
+    @apply absolute top-0 left-0 h-4 w-4 rounded-full border border-stone-300 bg-white transition-all duration-500 ease-in-out;
   }
 
   input[type="checkbox"]:checked ~ .thumb {
