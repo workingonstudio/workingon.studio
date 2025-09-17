@@ -3,9 +3,9 @@
 </script>
 
 <ul class="flex flex-col md:flex-row">
-  <Pill icon="addCircleOutline" text="Added directly in Gmail" />
-  <Pill icon="webTraffic" text="Single click reply" />
-  <Pill icon="flashOff" text="No AI by design" />
+  <Pill icon="material-symbols:add-circle-outline" text="Added directly in Gmail" />
+  <Pill icon="material-symbols:web-traffic-rounded" text="Single click reply" />
+  <Pill icon="material-symbols:flash-off-outline-rounded" text="No AI by design" />
 </ul>
 
 <style>

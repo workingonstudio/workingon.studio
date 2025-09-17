@@ -8,8 +8,9 @@
     {#each projectData as project}
       <li class="space-y-4">
         <div class="space-y-3">
-          <h2 class="flex flex-row items-center text-base">
-            <Icon name={project.icon} class_="text-lg mr-2" />{project.name}
+          <h2 class="flex flex-row items-center gap-2 text-base">
+            <iconify-icon icon="carbon:{project.icon}" class="text-lg"></iconify-icon>
+            {project.name}
           </h2>
           <p class="text-sm/5">
             {project.description}

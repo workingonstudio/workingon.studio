@@ -31,15 +31,15 @@
       </div>
       <ul class="space-y-2">
         <li>
-          <Icon name="support" class_="icon-md" />
+          <iconify-icon icon="material-symbols:support" class="mr-2"></iconify-icon>
           <a href="">Support</a>
         </li>
         <li>
-          <Icon name="encrypted" class_="icon-md" />
+          <iconify-icon icon="material-symbols:encrypted-outline-rounded" class="mr-2"></iconify-icon>
           <a href="">Privacy policy</a>
         </li>
         <li>
-          <Icon name="signature" class_="icon-md" />
+          <iconify-icon icon="material-symbols:signature-rounded" class="mr-2"></iconify-icon>
           <a href="">Terms of service</a>
         </li>
       </ul>

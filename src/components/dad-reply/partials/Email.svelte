@@ -83,8 +83,8 @@
   </div>
   <div class="flex flex-row space-x-3">
     <MailButton text="Dad Reply" clickable={true} onclick={toggleReply} disabled={isDisabled} />
-    <MailButton type="email" href="hello@workingon.studio" text="Reply" iconName="reply" />
-    <MailButton text="Forward" clickable={true} onclick={toggleForward} iconName="forward" />
+    <MailButton type="email" href="hello@workingon.studio" text="Reply" iconName="material-symbols:reply-rounded" />
+    <MailButton text="Forward" clickable={true} onclick={toggleForward} iconName="material-symbols:forward-rounded" />
   </div>
 </div>
 {#if showShare}

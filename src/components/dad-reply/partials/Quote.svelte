@@ -11,7 +11,7 @@
 <div
   class="card flex flex-col space-y-3 p-8 font-medium {gridSetting} transition-shadow hover:cursor-default hover:shadow-lg"
 >
-  <Icon name="quote" class_="mr-2 text-blue-600 text-2xl" />
+  <iconify-icon icon="material-symbols:format-quote-outline-rounded" class="mr-2 text-2xl text-blue-600"></iconify-icon>
   <div class="flex flex-1 flex-col justify-between space-y-3">
     <div class="flex flex-1 {itemAlign}">
       <blockquote class="{textSize} text-pretty">{@html quote}</blockquote>

@@ -26,13 +26,22 @@
   <nav class="flex flex-row items-center text-xs">
     <ul class="flex flex-row items-center space-x-4 *:inline-flex">
       <li>
-        <a href="/projects/"><Icon name="networkRef" class_="text-base" />projects</a>
+        <a href="/projects/" data-astro-prefetch>
+          <iconify-icon icon="carbon:network-3-reference" class="text-lg"></iconify-icon>
+          projects
+        </a>
       </li>
       <li>
-        <a href="/finances" class={totalClass}><Icon name="piggy" class_="text-base" />{$totals.formatted}</a>
+        <a href="/finances" data-astro-prefetch class={totalClass}>
+          <iconify-icon icon="carbon:piggy-bank-slot" class="text-lg"></iconify-icon>
+          {$totals.formatted}
+        </a>
       </li>
       <li>
-        <a href="/progress"><Icon name="version" class_="text-base" />{currentVersion}</a>
+        <a href="/progress" data-astro-prefetch>
+          <iconify-icon icon="carbon:version" class="text-lg"></iconify-icon>
+          {currentVersion}
+        </a>
       </li>
     </ul>
   </nav>

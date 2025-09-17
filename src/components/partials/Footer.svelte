@@ -10,9 +10,9 @@
 >
   <a
     href="https://find-and-update.company-information.service.gov.uk/company/16700615"
-    class="flex flex-row items-center justify-center transition-all delay-100 hover:text-gray-100 md:justify-normal"
+    class="flex flex-row items-center justify-center gap-1 transition-all delay-100 hover:text-gray-100 md:justify-normal"
   >
-    <Icon name="copywrite" class_="flex items-center" />
+    <iconify-icon icon="material-symbols:copyright-outline-rounded" class="text-sm"></iconify-icon>
     <span>workingonstudio ltd, no: 16700615</span>
   </a>
   <span class="order-first md:order-none">

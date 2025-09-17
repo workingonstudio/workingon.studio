@@ -35,6 +35,12 @@ export const USED_ICONS = {
   boolean: `${ICON_SETS.carbon}:boolean`,
   mailReply: `${ICON_SETS.carbon}:mail-reply`,
   application: `${ICON_SETS.carbon}:application`,
+  notebook: `${ICON_SETS.carbon}:notebook`,
+  edit: `${ICON_SETS.carbon}:edit`,
+  shoppingCart: `${ICON_SETS.carbon}:shoppingCart`,
+  piggy: `${ICON_SETS.carbon}:piggy`,
+  networkRef: `${ICON_SETS.carbon}:networkRef`,
+  version: `${ICON_SETS.carbon}:version`,
 
   // Add new icons here as you use them
   // home: `${ICON_SETS.lucide}:home`,
