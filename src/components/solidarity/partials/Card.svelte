@@ -20,7 +20,7 @@
       out:fade={{ duration: 2000 }}
     />
   {/if}
-  <img {src} alt="" {width} {height} class="rounded-full border-transparent {checkItemNumber}" />
+  <img {src} alt="avatar" {width} {height} class="rounded-full border-transparent {checkItemNumber}" />
 </div>
 
 <style>
