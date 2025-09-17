@@ -2,8 +2,6 @@
 import Layout from "@layouts/Layout.astro";
 import Header from "@components/partials/Header.svelte";
 import Footer from "@components/partials/Footer.svelte";
-
-import Icon from "@components/Icon.svelte";
 ---
 
 <Layout title="404">
@@ -19,18 +17,20 @@ import Icon from "@components/Icon.svelte";
           nothing to look ahead to.
         </blockquote>
         <div class="flex flex-col space-y-12">
-          <ul class="text-xxs flex flex-row space-x-3 text-gray-500">
+          <ul class="text-xxs flex flex-row gap-4 text-gray-500">
             <li class="flex items-center">
-              <Icon client:load name="notebook" class_="text-sm mr-2 text-inherit" />
+              <iconify-icon icon="carbon:notebook-reference" class="mr-2 text-base text-inherit"
+              ></iconify-icon>
               <span>Of Mice and Men</span>
             </li>
             <li class="flex items-center">
-              <Icon client:load name="edit" class_="text-sm mr-2 text-inherit" />
+              <iconify-icon icon="carbon:edit" class="mr-2 text-base text-inherit"></iconify-icon>
               <span>John Steinbeck</span>
             </li>
           </ul>
           <a href="" class="flex items-center text-xs text-lime-700 hover:text-lime-400">
-            <Icon client:load name="shoppingCart" class_="text-lg mr-2 text-inherit" />
+            <iconify-icon icon="carbon:shopping-cart-plus" class="mr-2 text-lg text-inherit"
+            ></iconify-icon>
             <span>Buy from Oxfam</span>
           </a>
         </div>

@@ -1,5 +1,4 @@
 <script lang="ts">
-  import Icon from "@components/Icon.svelte";
   import timelineData from "../../data/timeline-github.json";
   import { totals } from "../../stores/finance.js";
 

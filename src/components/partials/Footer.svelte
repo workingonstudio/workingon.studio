@@ -1,6 +1,5 @@
 <script lang="ts">
   import { DateTime } from "luxon";
-  import Icon from "@components/Icon.svelte";
   import timelineData from "../../data/timeline-github.json";
   let date = timelineData.generated;
 </script>

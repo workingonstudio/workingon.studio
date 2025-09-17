@@ -1,5 +1,4 @@
 <script lang="ts">
-  import Icon from "@components/Icon.svelte";
   import Badge from "@components/solidarity/partials/Badge.svelte";
   import Toggle from "@components/solidarity/partials/Toggle.svelte";
 </script>
