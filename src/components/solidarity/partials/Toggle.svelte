@@ -7,14 +7,19 @@
 
   $effect(() => {
     const unsubscribe = toggleStore.subscribe((value) => {
+      console.log("Toggle received store value:", value);
       checked = value;
     });
     return unsubscribe;
   });
 
-  $effect(() => {
-    toggleStore.set(checked);
-  });
+  function handleChange(event: Event) {
+    console.log("handleChange - checked before:", checked);
+    console.log("handleChange - event.target.checked:", (event.target as HTMLInputElement).checked);
+
+    // Use the event target value instead of the bound variable
+    toggleStore.set((event.target as HTMLInputElement).checked);
+  }
 
   let text = $derived(checked ? "on" : "off");
 </script>
@@ -22,7 +27,7 @@
 <label for={id}>
   <span class="font-mulish mr-2 w-3 cursor-pointer text-right text-[10px] font-bold uppercase">{text}</span>
   <div class="switch">
-    <input {id} name={id} type="checkbox" class="sr-only" bind:checked />
+    <input {id} name={id} type="checkbox" class="sr-only" bind:checked on:change={handleChange} />
     <div class="track"></div>
     <div class="thumb"></div>
   </div>

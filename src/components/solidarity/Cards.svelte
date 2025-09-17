@@ -74,6 +74,9 @@
       overlay: isToggled ? true : user.overlay,
     }))
   );
+  $effect(() => {
+    console.log("Cards component - Final users overlay states:", users.map((u, i) => `${i}:${u.overlay}`).join(", "));
+  });
 </script>
 
 <div class="relative flex h-full w-full items-start justify-center">
