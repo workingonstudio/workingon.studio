@@ -1,19 +1,14 @@
 <script lang="ts">
-  export let src: string;
-  export let height: number;
-  export let width: number;
-  export let itemNumber: number;
-  export let overlay: boolean;
+  let { src, height, width, itemNumber, overlay } = $props();
 
   function getItemClasses(itemNumber: number): string {
     if (itemNumber === 4) return "center-item absolute top-32 left-1/2 z-10";
     return `circle-item-${itemNumber} absolute top-32 left-1/2`;
   }
 
-  let checkItemNumber = itemNumber === 4 ? "shadow-lg shadow-stone-900/10" : "";
-  $: itemAlign = getItemClasses(itemNumber);
-
-  $: sizeClass = width === 64 ? "w-16 h-16" : width === 128 ? "w-32 h-32 shadow" : "";
+  let checkItemNumber = $derived(itemNumber === 4 ? "shadow-lg shadow-stone-900/10" : "");
+  let itemAlign = $derived(getItemClasses(itemNumber));
+  let sizeClass = $derived(width === 64 ? "w-16 h-16" : width === 128 ? "w-32 h-32 shadow" : "");
 </script>
 
 <div class={itemAlign}>

@@ -20,7 +20,8 @@ export default defineConfig({
         "@components": path.resolve("./src/components"),
         "@styles": path.resolve("./src/styles"),
         "@data": path.resolve("./src/data"),
-        "@docs": path.resolve("./src/docs")
+        "@docs": path.resolve("./src/docs"),
+        "@stores": path.resolve("./src/stores")
       },
     },
   },

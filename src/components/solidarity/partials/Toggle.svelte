@@ -1,11 +1,26 @@
 <script lang="ts">
-  export let id = "";
-  export let checked = false;
-  $: text = checked ? "on" : "off";
+  import { toggleStore } from "@stores/solidarity/toggle";
+
+  let { id = "" } = $props();
+
+  let checked = $state(false);
+
+  $effect(() => {
+    const unsubscribe = toggleStore.subscribe((value) => {
+      checked = value;
+    });
+    return unsubscribe;
+  });
+
+  $effect(() => {
+    toggleStore.set(checked);
+  });
+
+  let text = $derived(checked ? "on" : "off");
 </script>
 
 <label for={id}>
-  <span class="font-mulish mr-2 cursor-pointer text-right text-[10px] font-bold uppercase">{text}</span>
+  <span class="font-mulish mr-2 w-3 cursor-pointer text-right text-[10px] font-bold uppercase">{text}</span>
   <div class="switch">
     <input {id} name={id} type="checkbox" class="sr-only" bind:checked />
     <div class="track"></div>

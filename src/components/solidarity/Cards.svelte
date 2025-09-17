@@ -1,7 +1,8 @@
 <script lang="ts">
+  import { toggleStore } from "@stores/solidarity/toggle";
   import Card from "./partials/Card.svelte";
 
-  let users = [
+  let originalUsers = [
     {
       src: "https://placehold.co/64x64@2x.png",
       width: 64,
@@ -57,6 +58,22 @@
       overlay: false,
     },
   ];
+
+  let isToggled = $state(false);
+
+  $effect(() => {
+    const unsubscribe = toggleStore.subscribe((value) => {
+      isToggled = value;
+    });
+    return unsubscribe;
+  });
+
+  let users = $derived(
+    originalUsers.map((user) => ({
+      ...user,
+      overlay: isToggled ? true : user.overlay,
+    }))
+  );
 </script>
 
 <div class="relative flex h-full w-full items-start justify-center">
