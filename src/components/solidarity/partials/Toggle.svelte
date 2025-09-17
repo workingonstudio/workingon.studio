@@ -5,7 +5,7 @@
 </script>
 
 <label for={id}>
-  <span class="font-mulish mr-2 cursor-pointer text-right text-[10px] uppercase">{text}</span>
+  <span class="font-mulish mr-2 cursor-pointer text-right text-[10px] font-bold uppercase">{text}</span>
   <div class="switch">
     <input {id} name={id} type="checkbox" class="sr-only" bind:checked />
     <div class="track"></div>

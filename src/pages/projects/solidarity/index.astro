@@ -2,16 +2,20 @@
 import "@styles/solidarity.css";
 
 import Solidarity from "@layouts/Solidarity.astro";
-import Header from "@components/solidarity/partials/Header.svelte";
+import Header from "@components/solidarity/Header.svelte";
 import Main from "./Main.astro";
+import Cards from "@components/solidarity/Cards.svelte";
 import Footer from "@components/partials/Footer.svelte";
 ---
 
 <Solidarity title="Solidarity - Universal Acknowledgment">
-  <img src="/public/solidarity/ring-bg.svg" class="absolute z-30" />
+  <img src="/solidarity/ring-bg.svg" class="absolute -z-30" />
   <Header client:load />
   <div class="mx-[5%] flex flex-1 flex-col gap-36 md:mx-[10%]">
-    <Main />
+    <div class="flex flex-1 flex-row items-stretch gap-6">
+      <Main />
+      <Cards />
+    </div>
     <div class="px-0 text-[10px] text-stone-500 [&_a]:hover:text-emerald-600">
       <Footer client:load />
     </div>
