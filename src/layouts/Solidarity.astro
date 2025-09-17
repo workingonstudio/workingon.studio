@@ -28,6 +28,13 @@ const { title } = Astro.props;
       rel="stylesheet"
     />
 
+    <script
+      is:inline
+      type="module"
+      src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
+    >
+    </script>
+
     <!-- CDN Font Stylesheets -->
     {brockmannFontUrl && <link rel="stylesheet" href={brockmannFontUrl} />}
 

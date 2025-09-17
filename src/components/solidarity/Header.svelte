@@ -8,9 +8,7 @@
   <header class=" mx-20 flex w-full flex-row justify-between">
     <div class="flex flex-row items-center gap-6">
       <a href="/" class="group flex flex-row items-center gap-2 text-stone-900">
-        <span class="group-spin-drop">
-          <Icon name="boolean" class_="text-3xl" />
-        </span>
+        <iconify-icon icon="carbon:boolean" class="group-spin-drop text-3xl"></iconify-icon>
         <!-- prettier-ignore -->
         <span class="flex-inline font-mulish text-base font-extrabold uppercase tracking-[2%]">
           Solidarity<span>.</span>
@@ -21,7 +19,8 @@
     <div class="flex flex-row items-center gap-6">
       <Toggle id="toggled" />
       <a href="/" class="btn">
-        <Icon name="plus" class_="icon-md text-[20px]" />Add to Chrome
+        <iconify-icon icon="carbon:add" class="text-3xl"></iconify-icon>
+        Add to Chrome
       </a>
     </div>
   </header>
