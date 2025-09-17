@@ -12,7 +12,7 @@
     },
     {
       id: "user-2",
-      src: "/solidarity/avatars/ryan.jpeg",
+      src: "/solidarity/avatars/andrew.jpeg",
       width: 64,
       height: 64,
       overlay: false,
@@ -95,13 +95,22 @@
 <style>
   @reference "@styles/solidarity.css";
   .overlay {
-    background: url("/solidarity/gradient-bg.png") center/cover no-repeat;
-    background-size: 100% 100%;
-    @apply bg-stone-50/10;
-    transition: background-size 2000ms ease-in-out;
+    position: relative;
+    background: radial-gradient(circle at center, transparent 0%, oklch(98.5% 0.001 106.423) 50%);
+    background-position: center;
+    background-size: 110% 110%;
+    transition: background-size 700ms cubic-bezier(0.95, 0.05, 0.795, 0.035);
+  }
+
+  .overlay::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.02'/%3E%3C/svg%3E");
+    pointer-events: none;
   }
 
   .overlay.expanded {
-    background-size: 500% 500%;
+    background-size: 400% 400%;
   }
 </style>

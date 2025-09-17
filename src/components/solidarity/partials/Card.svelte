@@ -1,6 +1,5 @@
 <script lang="ts">
-  import { cubicInOut, elasticInOut } from "svelte/easing";
-  import { fade, scale } from "svelte/transition";
+  import { fade } from "svelte/transition";
   let { src, height, width, itemNumber, overlay } = $props();
 
   function getItemClasses(itemNumber: number): string {
@@ -66,13 +65,13 @@
   }
 
   .fade-spin-scale-in {
-    animation: fadeSpinScaleIn 2000ms cubic-bezier(0.95, 0.05, 0.795, 0.035);
+    animation: fadeSpinScaleIn 700ms cubic-bezier(0.95, 0.05, 0.795, 0.035);
   }
 
   @keyframes fadeSpinScaleIn {
     from {
       opacity: 0;
-      transform: rotate(180deg);
+      transform: rotate(90deg);
     }
     to {
       opacity: 1;

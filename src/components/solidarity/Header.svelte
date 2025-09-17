@@ -8,7 +8,7 @@
   <header class=" mx-20 flex w-full flex-row justify-between">
     <div class="flex flex-row items-center gap-6">
       <a href="/" class="group flex flex-row items-center gap-2 text-stone-900">
-        <span class="group-hover:animate-spin-drop">
+        <span class="group-spin-drop">
           <Icon name="boolean" class_="text-3xl" />
         </span>
         <!-- prettier-ignore -->
