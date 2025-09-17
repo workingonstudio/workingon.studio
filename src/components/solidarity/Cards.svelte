@@ -80,7 +80,7 @@
 </script>
 
 <div class="relative flex h-full w-full items-start justify-center">
-  <div class="overlay absolute top-[-2px] z-10 min-h-[325px] w-full"></div>
+  <div class="overlay absolute top-[-2px] z-10 min-h-[325px] w-full {isToggled ? 'expanded' : ''}"></div>
   {#each users as user, index}
     <Card {...user} itemNumber={index} />
   {/each}
@@ -90,5 +90,10 @@
   @reference "@styles/solidarity.css";
   .overlay {
     background: url("/solidarity/gradient-bg.png") center/cover no-repeat;
+    transition: background-size 3s ease-out;
+  }
+
+  .overlay.expanded {
+    background-size: 200% 200%;
   }
 </style>

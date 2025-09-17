@@ -16,8 +16,8 @@
 <div class={itemAlign}>
   {#if overlay}
     <img
-      in:fade={{ delay: 0, duration: 500, easing: cubicInOut }}
-      out:fade={{ duration: 500, easing: cubicInOut }}
+      in:fade={{ delay: 0, duration: 300, easing: cubicInOut }}
+      out:fade={{ duration: 300, easing: cubicInOut }}
       src="/solidarity/otw-overlay.png"
       class="overlay absolute {sizeClass} rounded-full"
     />
