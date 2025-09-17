@@ -43,7 +43,7 @@
           <ul class="timeline-entries space-y-6">
             {#each group.entries as entry}
               <li class="timeline-entry space-y-2" data-type={entry.type}>
-                <div class="entry-meta text-xxs flex flex-row justify-between text-gray-600">
+                <div class="entry-meta text-xxs flex flex-row justify-between text-gray-500">
                   <span class="version-debug">
                     {entry.version}
                   </span>
@@ -51,10 +51,9 @@
                     {DateTime.fromISO(entry.date).toFormat("TT ZZ")}
                   </span>
                 </div>
-
                 <div class="entry-content space-y-1">
                   {#if entry.branchMerged && entry.intoBranch}
-                    <p class="message text-xs text-gray-100">
+                    <p class="message text-base text-gray-100">
                       <span class="merge-info">
                         <span class="merged-branch">
                           {entry.branchDisplay === entry.branchMerged ? entry.intoBranch : entry.branchDisplay}
@@ -64,7 +63,7 @@
                       </span>
                     </p>
                   {:else}
-                    <p class="text-xs/relaxed text-gray-100 first-letter:capitalize">
+                    <p class="text-base/relaxed text-pretty text-gray-100 first-letter:capitalize">
                       {entry.message}
                     </p>
                   {/if}

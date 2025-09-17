@@ -46,6 +46,9 @@
     notebook: "carbon:notebook",
     edit: "carbon:edit",
     shoppingCart: "carbon:shopping-cart",
+    piggy: "carbon:piggy-bank-slot",
+    networkRef: "carbon:network-3-reference",
+    version: "carbon:version",
   };
 
   // Determine which icon to use

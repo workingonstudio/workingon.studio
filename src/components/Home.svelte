@@ -4,7 +4,7 @@
 
 <div class="max-w-md space-y-12">
   <div class="group space-y-12">
-    <div class="space-y-12 text-sm leading-6">
+    <div class="space-y-12 text-base leading-7">
       <div>
         {#each actionList as item}
           <!-- prettier-ignore -->
