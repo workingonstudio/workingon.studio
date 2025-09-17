@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { cubicInOut } from "svelte/easing";
+  import { fade } from "svelte/transition";
   let { src, height, width, itemNumber, overlay } = $props();
 
   function getItemClasses(itemNumber: number): string {
@@ -13,7 +15,12 @@
 
 <div class={itemAlign}>
   {#if overlay}
-    <img src="/solidarity/otw-overlay.png" class="overlay absolute {sizeClass} rounded-full" />
+    <img
+      in:fade={{ delay: 0, duration: 500, easing: cubicInOut }}
+      out:fade={{ duration: 500, easing: cubicInOut }}
+      src="/solidarity/otw-overlay.png"
+      class="overlay absolute {sizeClass} rounded-full"
+    />
   {/if}
   <img {src} alt="" {width} {height} class="rounded-full border-transparent {checkItemNumber}" />
 </div>
