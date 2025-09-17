@@ -24,6 +24,20 @@
   --screen-3xl: 112rem; /* 1792px */
 }
 
+@layer utilities {
+  @keyframes spin-drop {
+    0% {
+      transform: translateY(0) rotate(0deg);
+    }
+    100% {
+      transform: translateY(-16px) rotate(180deg);
+    }
+  }
+  .animate-spin-drop {
+    animation: spin-drop 300ms ease-in-out forwards;
+  }
+}
+
 @layer base {
   html {
     background: var(--color-stone-50);

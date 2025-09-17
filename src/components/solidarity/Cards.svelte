@@ -4,55 +4,64 @@
 
   let originalUsers = [
     {
-      src: "https://placehold.co/64x64@2x.png",
+      id: "user-1",
+      src: "/solidarity/avatars/thomas.jpeg",
       width: 64,
       height: 64,
       overlay: false,
     },
     {
-      src: "https://placehold.co/64x64@2x.png",
+      id: "user-2",
+      src: "/solidarity/avatars/ryan.jpeg",
       width: 64,
       height: 64,
       overlay: false,
     },
     {
-      src: "https://placehold.co/64x64@2x.png",
+      id: "user-3",
+      src: "/solidarity/avatars/heather.jpeg",
       width: 64,
       height: 64,
       overlay: false,
     },
     {
-      src: "https://placehold.co/64x64@2x.png",
+      id: "user-4",
+      src: "/solidarity/avatars/ashley.jpeg",
       width: 64,
       height: 64,
       overlay: false,
     },
     {
-      src: "/solidarity/me-shoe.png",
+      id: "user-5",
+      src: "/solidarity/avatars/me-shoe.png",
       width: 128,
       height: 128,
       overlay: true,
     },
     {
-      src: "https://placehold.co/64x64@2x.png",
+      id: "user-6",
+      src: "/solidarity/avatars/dinesh.jpeg",
       width: 64,
       height: 64,
       overlay: false,
     },
     {
-      src: "https://placehold.co/64x64@2x.png",
+      id: "user-7",
+      src: "/solidarity/avatars/rachael.jpeg",
       width: 64,
       height: 64,
       overlay: false,
     },
     {
-      src: "https://placehold.co/64x64@2x.png",
+      id: "user-8",
+      src: "/solidarity/avatars/darrell.jpeg",
       width: 64,
       height: 64,
       overlay: false,
     },
     {
-      src: "https://placehold.co/64x64@2x.png",
+      id: "user-9",
+      src: "/solidarity/avatars/hassan.jpeg",
       width: 64,
       height: 64,
       overlay: false,
@@ -74,9 +83,6 @@
       overlay: isToggled ? true : user.overlay,
     }))
   );
-  $effect(() => {
-    console.log("Cards component - Final users overlay states:", users.map((u, i) => `${i}:${u.overlay}`).join(", "));
-  });
 </script>
 
 <div class="relative flex h-full w-full items-start justify-center">
@@ -90,10 +96,12 @@
   @reference "@styles/solidarity.css";
   .overlay {
     background: url("/solidarity/gradient-bg.png") center/cover no-repeat;
-    transition: background-size 20s ease-out;
+    background-size: 100% 100%;
+    @apply bg-stone-50/10;
+    transition: background-size 2000ms ease-in-out;
   }
 
   .overlay.expanded {
-    background-size: 200% 200%;
+    background-size: 500% 500%;
   }
 </style>

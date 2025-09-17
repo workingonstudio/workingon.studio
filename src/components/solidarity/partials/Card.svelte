@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { cubicInOut } from "svelte/easing";
-  import { fade } from "svelte/transition";
+  import { cubicInOut, elasticInOut } from "svelte/easing";
+  import { fade, scale } from "svelte/transition";
   let { src, height, width, itemNumber, overlay } = $props();
 
   function getItemClasses(itemNumber: number): string {
@@ -16,10 +16,9 @@
 <div class={itemAlign}>
   {#if overlay}
     <img
-      in:fade={{ delay: 0, duration: 500, easing: cubicInOut }}
-      out:fade={{ duration: 500, easing: cubicInOut }}
       src="/solidarity/otw-overlay.png"
-      class="overlay absolute {sizeClass} rounded-full"
+      class="overlay absolute {sizeClass} fade-spin-scale-in rounded-full"
+      out:fade={{ duration: 2000 }}
     />
   {/if}
   <img {src} alt="" {width} {height} class="rounded-full border-transparent {checkItemNumber}" />
@@ -64,5 +63,20 @@
       0 30px 18px 0 rgba(105, 105, 105, 0.05),
       0 13px 13px 0 rgba(105, 105, 105, 0.09),
       0 3px 7px 0 rgba(105, 105, 105, 0.1);
+  }
+
+  .fade-spin-scale-in {
+    animation: fadeSpinScaleIn 2000ms cubic-bezier(0.95, 0.05, 0.795, 0.035);
+  }
+
+  @keyframes fadeSpinScaleIn {
+    from {
+      opacity: 0;
+      transform: rotate(180deg);
+    }
+    to {
+      opacity: 1;
+      transform: rotate(0deg);
+    }
   }
 </style>
