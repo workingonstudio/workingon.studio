@@ -1,6 +1,5 @@
 <script lang="ts">
   import Badge from "./partials/Badge.svelte";
-  import Icon from "@components/Icon.svelte";
   import Footer from "@components/partials/Footer.svelte";
 </script>
 

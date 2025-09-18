@@ -1,5 +1,4 @@
 <script lang="ts">
-  import Icon from "@components/Icon.svelte";
   import projectData from "@data/projects.json";
 </script>
 

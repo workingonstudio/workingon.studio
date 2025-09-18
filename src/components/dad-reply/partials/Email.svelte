@@ -55,7 +55,8 @@
         </span>
       </strong>
       <span class="flex items-center text-xs font-normal text-slate-400">
-        to you <span class="material-symbols-rounded !text-lg">arrow_drop_down</span>
+        to you
+        <iconify-icon icon="material-symbols:arrow-drop-down-rounded" class="text-lg"></iconify-icon>
       </span>
     </div>
     <div class="space-y-5 *:font-[Arial] *:text-black!">

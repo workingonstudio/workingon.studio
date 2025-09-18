@@ -44,11 +44,11 @@
             {#each group.entries as entry}
               <li class="timeline-entry space-y-2" data-type={entry.type}>
                 <div class="entry-meta text-xxs flex flex-row justify-between text-gray-500">
-                  <span class="version-debug">
-                    {entry.version}
-                  </span>
                   <span class="time">
                     {DateTime.fromISO(entry.date).toFormat("TT ZZ")}
+                  </span>
+                  <span class="version-debug">
+                    {entry.version}
                   </span>
                 </div>
                 <div class="entry-content space-y-1">

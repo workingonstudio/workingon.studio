@@ -25,21 +25,21 @@
   <nav class="flex flex-row items-center text-xs">
     <ul class="flex flex-row items-center space-x-4 *:inline-flex">
       <li>
-        <a href="/projects/" data-astro-prefetch>
+        <a href="/projects/" data-astro-prefetch class="inline-flex items-center">
           <iconify-icon icon="carbon:network-3-reference" class="text-lg"></iconify-icon>
-          projects
+          <span>projects</span>
         </a>
       </li>
       <li>
-        <a href="/finances" data-astro-prefetch class={totalClass}>
+        <a href="/finances" data-astro-prefetch class="{totalClass} inline-flex items-center">
           <iconify-icon icon="carbon:piggy-bank-slot" class="text-lg"></iconify-icon>
-          {$totals.formatted}
+          <span>{$totals.formatted}</span>
         </a>
       </li>
       <li>
-        <a href="/progress" data-astro-prefetch>
+        <a href="/progress" data-astro-prefetch class="inline-flex items-center">
           <iconify-icon icon="carbon:version" class="text-lg"></iconify-icon>
-          {currentVersion}
+          <span>{currentVersion}</span>
         </a>
       </li>
     </ul>

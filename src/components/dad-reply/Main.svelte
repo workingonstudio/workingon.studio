@@ -13,7 +13,7 @@
   <div class="space-y-60">
     <Hero />
     <Quotes />
-    <!-- <ComingSoon /> -->
+    <ComingSoon />
     <Pricing />
     <EarlyBird />
     <Footer />

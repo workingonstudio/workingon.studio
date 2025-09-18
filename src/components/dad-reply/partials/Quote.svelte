@@ -1,5 +1,4 @@
 <script lang="ts">
-  import Icon from "@components/Icon.svelte";
   export let quote;
   export let cite;
   export let link: string;

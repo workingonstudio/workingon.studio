@@ -1,6 +1,4 @@
 <script lang="ts">
-  import Icon from "@components/Icon.svelte";
-
   let {
     iconName = undefined,
     text = "",
