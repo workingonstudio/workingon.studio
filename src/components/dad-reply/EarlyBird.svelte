@@ -1,19 +1,9 @@
 <script lang="ts">
   import Badge from "./partials/Badge.svelte";
-
   import { createForm } from "felte";
   import { validator } from "@felte/validator-zod";
   import * as zod from "zod";
-
-  const apiKey = import.meta.env.LS_API_KEY;
-
-  const fetchConfig = {
-    method: "POST",
-    headers: {
-      content: "application/json",
-      Authorization: "Bearer" + apiKey,
-    },
-  };
+  import axios from "axios";
 
   let submitted = false;
 
@@ -21,29 +11,44 @@
     email: zod.string().email().nonempty(),
   });
 
-  const { form, isSubmitting, isValid, data } = createForm({
+  const { form, isSubmitting, isValid, data, errors } = createForm({
     extend: validator({ schema }),
     onSubmit: async (values) => {
-      const response = await fetch("https://api.lemonsqueezy.com/v1/customers", {
-        method: "POST",
-        headers: {
-          content: "application/json",
-          Authorization: "",
-        },
-        body: JSON.stringify({
-          data: {
-            type: "customers",
-            attributes: {
-              email: values.email,
-            },
-          },
-        }),
-      });
-      submitted = true;
+      console.log("=== FORM SUBMITTED ===");
+      console.log("Submitting email:", values.email);
+
+      try {
+        const response = await axios.post("https://workingonstudio.lemonsqueezy.com/email-subscribe/external", {
+          email: values.email,
+        });
+
+        console.log("Success! Response status:", response.status);
+
+        // If we get here, it worked (even if response is HTML)
+        if (response.status === 200) {
+          submitted = true;
+          console.log("Setting submitted to true");
+        }
+
+        return { success: true }; // Return something simple
+      } catch (error) {
+        console.error("Request failed:", error);
+        throw error;
+      }
+    },
+    onError: (error) => {
+      console.error("Form error:", error);
+      alert("Something went wrong. Please try again.");
     },
   });
+
+  // Debug the submitted state
+  $: console.log("submitted state:", submitted);
 </script>
 
+<!-- Rest of your template exactly the same -->
+
+<!-- Rest of your template stays exactly the same -->
 <div id="earlybird" class="flex flex-col">
   {#if !$isSubmitting && !submitted}
     <div class="flex flex-col items-center justify-center gap-12 md:flex-row">
@@ -67,7 +72,14 @@
         </div>
         <form use:form class="space-y-5">
           <label class="flex" for="email">
-            <input id="email" name="email" type="email" placeholder="Email address..." class="custom-outline" />
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="Email address..."
+              autocomplete="email"
+              class="custom-outline"
+            />
           </label>
           <button type="submit" class="btn solid w-full" disabled={!$isValid}>Claim offer</button>
         </form>
@@ -93,7 +105,7 @@
         Confirmation email just sent to <span class="font-mono text-slate-700">{$data.email}</span>
       </p>
       <small>
-        * could be in spam amongst all those <em>other</em>
+        * it could take a while, so be patient, and check in spam amongst all those <em>other</em>
         emails.
       </small>
     </div>
