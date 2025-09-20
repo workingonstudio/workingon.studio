@@ -14,41 +14,22 @@
   const { form, isSubmitting, isValid, data, errors } = createForm({
     extend: validator({ schema }),
     onSubmit: async (values) => {
-      console.log("=== FORM SUBMITTED ===");
-      console.log("Submitting email:", values.email);
-
       try {
         const response = await axios.post("https://workingonstudio.lemonsqueezy.com/email-subscribe/external", {
           email: values.email,
         });
-
-        console.log("Success! Response status:", response.status);
-
-        // If we get here, it worked (even if response is HTML)
-        if (response.status === 200) {
-          submitted = true;
-          console.log("Setting submitted to true");
-        }
-
-        return { success: true }; // Return something simple
+        submitted = true;
+        return response.data;
       } catch (error) {
-        console.error("Request failed:", error);
         throw error;
       }
     },
     onError: (error) => {
       console.error("Form error:", error);
-      alert("Something went wrong. Please try again.");
     },
   });
-
-  // Debug the submitted state
-  $: console.log("submitted state:", submitted);
 </script>
 
-<!-- Rest of your template exactly the same -->
-
-<!-- Rest of your template stays exactly the same -->
 <div id="earlybird" class="flex flex-col">
   {#if !$isSubmitting && !submitted}
     <div class="flex flex-col items-center justify-center gap-12 md:flex-row">
