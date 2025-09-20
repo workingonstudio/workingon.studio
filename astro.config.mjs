@@ -8,6 +8,7 @@ import path from "path";
 export default defineConfig({
   site: "https://workingon.studio",
   integrations: [svelte()],
+  prefetch: true,
   vite: {
     plugins: [tailwindcss()],
     server: {

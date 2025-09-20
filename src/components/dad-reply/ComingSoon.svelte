@@ -47,8 +47,8 @@
           </div>
           <div class="mt-38 flex items-end space-x-3">
             <AdvButton />
-            <MailButton iconName="reply" text="Reply" />
-            <MailButton iconName="forward" text="Forward" />
+            <MailButton iconName="material-symbols:reply-rounded" text="Reply" />
+            <MailButton iconName="material-symbols:forward-rounded" text="Forward" />
           </div>
         </div>
       </div>

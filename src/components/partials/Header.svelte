@@ -22,18 +22,32 @@
     <!-- prettier-ignore -->
     <h1 class="font-display inline-block text-base">{headerText}<span>{dotText}</span></h1>
   </a>
-  <nav class="text-xs">
-    <ul class="flex-col space-x-2 *:inline-flex">
+  <nav class="flex flex-row items-center text-xs">
+    <ul class="flex flex-row items-center space-x-4 *:inline-flex">
       <li>
-        <a href="/finances" class={totalClass}>{$totals.formatted}</a>
+        <a href="/projects/" data-astro-prefetch class="inline-flex items-center">
+          <iconify-icon icon="carbon:network-3-reference" class="text-lg"></iconify-icon>
+          <span>projects</span>
+        </a>
       </li>
-      <li><a href="/progress">{currentVersion}</a></li>
+      <li>
+        <a href="/finances" data-astro-prefetch class="{totalClass} inline-flex items-center">
+          <iconify-icon icon="carbon:piggy-bank-slot" class="text-lg"></iconify-icon>
+          <span>{$totals.formatted}</span>
+        </a>
+      </li>
+      <li>
+        <a href="/progress" data-astro-prefetch class="inline-flex items-center">
+          <iconify-icon icon="carbon:version" class="text-lg"></iconify-icon>
+          <span>{currentVersion}</span>
+        </a>
+      </li>
     </ul>
   </nav>
 </header>
 
 <style>
-  @reference "../../styles/global.css";
+  @reference "@styles/global.css";
   h1 {
     span {
       @apply text-shadow-glow motion-safe:animate-flicker sm:group-hover:text-shadow-glow sm:group-hover:motion-safe:animate-flicker text-xs text-yellow-300 sm:text-gray-500 sm:text-shadow-none sm:group-hover:text-yellow-300 sm:motion-safe:animate-none;
@@ -42,7 +56,7 @@
 
   nav li {
     a {
-      @apply transition-colors ease-in-out;
+      @apply flex flex-row gap-2 transition-colors ease-in-out;
       color: var(--color-text-muted);
       &:hover {
         color: var(--color-text-primary);

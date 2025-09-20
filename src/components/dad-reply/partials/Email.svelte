@@ -55,7 +55,8 @@
         </span>
       </strong>
       <span class="flex items-center text-xs font-normal text-slate-400">
-        to you <span class="material-symbols-rounded !text-lg">arrow_drop_down</span>
+        to you
+        <iconify-icon icon="material-symbols:arrow-drop-down-rounded" class="text-lg"></iconify-icon>
       </span>
     </div>
     <div class="space-y-5 *:font-[Arial] *:text-black!">
@@ -83,8 +84,8 @@
   </div>
   <div class="flex flex-row space-x-3">
     <MailButton text="Dad Reply" clickable={true} onclick={toggleReply} disabled={isDisabled} />
-    <MailButton type="email" href="hello@workingon.studio" text="Reply" iconName="reply" />
-    <MailButton text="Forward" clickable={true} onclick={toggleForward} iconName="forward" />
+    <MailButton type="email" href="hello@workingon.studio" text="Reply" iconName="material-symbols:reply-rounded" />
+    <MailButton text="Forward" clickable={true} onclick={toggleForward} iconName="material-symbols:forward-rounded" />
   </div>
 </div>
 {#if showShare}
