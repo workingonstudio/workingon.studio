@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@theme {
+  --font-mulish: "Mulish", sans-serif;
+  --font-lora: "Lora", serif;
+  --font-brockmann: "brockmannmedium", sans-serif;
+
+  --color-primary: theme(colors.emerald.300);
+  --color-primary-hover: theme(colors.emerald.500);
+  --color-text: theme(colors.stone.900);
+  --color-text-body: theme(colors.stone.700);
+  --color-text-muted: theme(colors.stone.400);
+
+  --screen-sm: 40rem; /* 640px */
+  --screen-md: 48rem; /* 768px */
+  --screen-lg: 64rem; /* 1024px */
+  --screen-xl: 80rem; /* 1280px */
+  --screen-2xl: 96rem; /* 1536px */
+  --screen-3xl: 112rem; /* 1792px */
+
+  --animate-spin-drop: spin-drop 300ms ease-in-out forwards;
+  --animate-spin-drop-reverse: spin-drop-reverse 300ms ease-in-out forwards;
+}
+
+@layer utilities {
+  @keyframes spin-drop {
+    0% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-12px) rotate(180deg);
+    }
+    100% {
+      transform: translate(0) rotate(180deg);
+    }
+  }
+
+  @keyframes spin-drop-reverse {
+    0% {
+      transform: translate(0) rotate(180deg);
+    }
+    50% {
+      transform: translateY(-12px) rotate(180deg);
+    }
+    100% {
+      transform: translateY(0) rotate(0deg);
+    }
+  }
+
+  .group-spin-drop {
+    animation: spin-drop-reverse 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  }
+
+  .group:hover .group-spin-drop {
+    animation: spin-drop 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  }
+}
+
+@layer base {
+  html {
+    background: var(--color-stone-50);
+  }
+  body {
+    font-family: var(--font-lora);
+    color: var(--color-text);
+    &::selection {
+      background: var(--color-primary);
+      @apply text-white;
+    }
+    @apply text-base;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-brockmann);
+    color: var(--color-text);
+    @apply font-medium text-pretty;
+  }
+
+  h1 {
+    @apply text-4xl md:text-4xl/14;
+  }
+
+  h2 {
+    @apply text-xl md:text-2xl;
+  }
+
+  h3 {
+    @apply text-lg;
+  }
+
+  p {
+    color: var(--color-text-body);
+    @apply leading-relaxed;
+  }
+
+  small {
+    color: var(--color-text-muted);
+    @apply text-xs;
+  }
+  a,
+  button,
+  input[type="submit"] {
+    @apply transition-colors delay-100 ease-in-out;
+  }
+}
+
+@layer components {
+}

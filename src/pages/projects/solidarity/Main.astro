@@ -1,0 +1,45 @@
+---
+import * as SDContent from "@docs/solidarity/homepage.md";
+const { frontmatter, Content } = SDContent;
+---
+
+<section class="flex w-2xl flex-col gap-11">
+  <!-- prettier-ignore -->
+  <header class="flex flex-col gap-6">
+    <h1>{ frontmatter.headerFirst }<br/> {frontmatter.headerSecond}<span>{frontmatter.headerPunc}</span></h1>
+    <div class="w-lg">
+      <p>{ frontmatter.subHeader }</p>
+    </div>
+  </header>
+  <main class="flex w-lg flex-col"><Content /></main>
+  <footer>{frontmatter.footer}</footer>
+</section>
+
+<style>
+  @reference "@styles/solidarity.css";
+  header {
+    p {
+      @apply text-xl;
+    }
+  }
+  h1,
+  h2,
+  h3 {
+    @apply uppercase;
+    span {
+      @apply text-primary;
+    }
+  }
+  main {
+    @apply gap-6 text-base leading-relaxed;
+    h2 {
+      span {
+        @apply text-primary;
+      }
+    }
+  }
+  footer {
+    font-family: "Seaweed Script";
+    @apply text-3xl;
+  }
+</style>

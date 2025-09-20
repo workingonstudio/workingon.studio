@@ -1,5 +1,5 @@
 ---
-import "../styles/global.css";
+import "../styles/solidarity.css";
 
 import Analytics from "./partials/Analytics.astro";
 
@@ -7,15 +7,13 @@ export interface Props {
   title: string;
 }
 
-const { title } = Astro.props;
+const brockmannFontUrl = import.meta.env.BROCKMANN_FONT_CSS_URL;
 
-// Get font URLs from environment variables
-const nudicaFontUrl = import.meta.env.NUDICA_FONT_CSS_URL;
-const nudicaMonoFontUrl = import.meta.env.NUDICA_MONO_FONT_CSS_URL;
+const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en" class="dark">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="A creative studio producing cultural mirror products" />
@@ -26,9 +24,10 @@ const nudicaMonoFontUrl = import.meta.env.NUDICA_MONO_FONT_CSS_URL;
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,500;1,500&family=Space+Grotesk:wght@500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Seaweed+Script&display=swap"
       rel="stylesheet"
     />
+
     <script
       is:inline
       type="module"
@@ -36,19 +35,14 @@ const nudicaMonoFontUrl = import.meta.env.NUDICA_MONO_FONT_CSS_URL;
     >
     </script>
 
-    <meta name="generator" content={Astro.generator} />
-
-    <Analytics />
-
     <!-- CDN Font Stylesheets -->
-    {nudicaFontUrl && <link rel="stylesheet" href={nudicaFontUrl} />}
-    {nudicaMonoFontUrl && <link rel="stylesheet" href={nudicaMonoFontUrl} />}
+    {brockmannFontUrl && <link rel="stylesheet" href={brockmannFontUrl} />}
 
+    <meta name="generator" content={Astro.generator} />
+    <Analytics productName="Solidarity" />
     <title>{title}</title>
   </head>
-  <body>
-    <main class="mx-[5%] flex min-h-screen flex-1 md:mx-[10%]">
-      <slot />
-    </main>
+  <body id="top">
+    <slot />
   </body>
 </html>

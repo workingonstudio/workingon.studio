@@ -1,8 +1,7 @@
 <!-- src/components/dad-reply/partials/NewButton.svelte -->
 <script lang="ts">
-  import Icon from "@components/Icon.svelte";
   let showMenu: boolean = true;
-  $: buttonIcon = showMenu ? "close" : "arrowDown";
+  $: buttonIcon = showMenu ? "material-symbols:close-small-rounded" : "material-symbols:keyboard-arrow-down-rounded";
 
   let containerRef: any;
 
@@ -62,7 +61,7 @@
       class="flex items-center justify-center rounded-r-full border border-l-0 pr-2 pl-1"
       on:click={handleClick}
     >
-      <Icon name={buttonIcon} class_="text-2xl" />
+      <iconify-icon icon={buttonIcon} class="text-2xl"></iconify-icon>
     </button>
   </div>
 </div>

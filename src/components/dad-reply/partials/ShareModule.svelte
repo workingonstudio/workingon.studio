@@ -2,8 +2,6 @@
   import { slide, fade } from "svelte/transition";
   import { cubicOut, bounceIn } from "svelte/easing";
 
-  import Icon from "@components/Icon.svelte";
-
   import socialButtons from "@data/dad-reply/socialButtons.json";
   import Badge from "./Badge.svelte";
 
@@ -46,7 +44,7 @@
   >
     <div class="flex h-[25px] flex-row items-center justify-between text-base font-semibold">
       <div class="flex space-x-2">
-        <Icon name="forward" class_="flex text-2xl text-blue-600" />
+        <iconify-icon icon="material-symbols:forward-rounded" class="text-2xl text-blue-600"></iconify-icon>
         <span class="flex">Forward.</span>
       </div>
       {#if copiedToClipboard}
@@ -65,7 +63,10 @@
         onclick={copyLink}
         class="absolute top-[2px] right-0 cursor-pointer p-3 hover:*:text-blue-600"
       >
-        <Icon name="copy" class_="text-slate-400 text-xl" />
+        <iconify-icon
+          icon="material-symbols:content-copy-outline-rounded"
+          class="text-xl text-slate-400"
+        ></iconify-icon>
       </button>
     </form>
 
@@ -94,7 +95,10 @@
         onclick={toggleShare}
         class="group flex h-[41px] w-[41px] items-center justify-center rounded-lg border border-slate-300 p-2 transition delay-50 hover:cursor-pointer"
       >
-        <Icon name="delete" class_="text-[#444746] text-xl group-hover:text-red-500" />
+        <iconify-icon
+          icon="material-symbols:delete-outline-rounded"
+          class="text-xl text-[#444746] group-hover:text-red-500"
+        ></iconify-icon>
       </button>
     </div>
   </div>
