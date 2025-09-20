@@ -47,7 +47,10 @@
       <h3>Hold on...</h3>
       <p>Just checking that email.</p>
       <span class="flex flex-1 items-center justify-center">
-        <Icon name="progress" class_="text-2xl text-slate-400 animate-spin" />
+        <iconify-icon
+          icon="material-symbols:progress-activity"
+          class="animate-spinl text-2xl text-slate-400"
+        ></iconify-icon>
       </span>
     </div>
   {:else if success && isSubmitting}
