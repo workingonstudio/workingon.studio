@@ -1,6 +1,5 @@
 <script lang="ts">
   import Badge from "./partials/Badge.svelte";
-  import Icon from "@components/Icon.svelte";
 
   let isSubmitting: boolean = false;
   let success: boolean = false;

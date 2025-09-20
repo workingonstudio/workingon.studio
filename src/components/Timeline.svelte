@@ -36,25 +36,24 @@
     <div class="timeline-groups mb-6 space-y-6">
       {#each groupedEntries as group}
         <div class="date-group">
-          <h3 class="date-header mb-3 py-1 font-mono text-xs text-gray-400">
+          <h3 class="date-header">
             {group.date}
           </h3>
 
           <ul class="timeline-entries space-y-6">
             {#each group.entries as entry}
               <li class="timeline-entry space-y-2" data-type={entry.type}>
-                <div class="entry-meta text-xxs flex flex-row justify-between text-gray-600">
-                  <span class="version-debug">
-                    {entry.version}
-                  </span>
+                <div class="entry-meta text-xxs flex flex-row justify-between text-gray-500">
                   <span class="time">
                     {DateTime.fromISO(entry.date).toFormat("TT ZZ")}
                   </span>
+                  <span class="version-debug">
+                    {entry.version}
+                  </span>
                 </div>
-
                 <div class="entry-content space-y-1">
                   {#if entry.branchMerged && entry.intoBranch}
-                    <p class="message text-xs text-gray-100">
+                    <p class="message text-sm text-gray-100">
                       <span class="merge-info">
                         <span class="merged-branch">
                           {entry.branchDisplay === entry.branchMerged ? entry.intoBranch : entry.branchDisplay}
@@ -64,7 +63,7 @@
                       </span>
                     </p>
                   {:else}
-                    <p class="text-xs/relaxed text-gray-100 first-letter:capitalize">
+                    <p class="text-sm/relaxed text-pretty text-gray-100 first-letter:capitalize">
                       {entry.message}
                     </p>
                   {/if}
@@ -80,3 +79,12 @@
     </div>
   </div>
 </section>
+
+<style>
+  @reference "@styles/global.css";
+  h3 {
+    @apply text-xxs rounded-full font-mono;
+    @apply mb-6 bg-gray-800 px-3 py-1 text-gray-400;
+    @apply inline-flex items-center;
+  }
+</style>

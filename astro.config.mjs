@@ -8,6 +8,7 @@ import path from "path";
 export default defineConfig({
   site: "https://workingon.studio",
   integrations: [svelte()],
+  prefetch: true,
   vite: {
     plugins: [tailwindcss()],
     server: {
@@ -19,7 +20,9 @@ export default defineConfig({
         "@layouts": path.resolve("./src/layouts"),
         "@components": path.resolve("./src/components"),
         "@styles": path.resolve("./src/styles"),
-        "@data": path.resolve("./src/data")
+        "@data": path.resolve("./src/data"),
+        "@docs": path.resolve("./src/docs"),
+        "@stores": path.resolve("./src/stores")
       },
     },
   },

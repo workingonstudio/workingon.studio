@@ -16,8 +16,8 @@
       </span>
     </strong>
     <!-- prettier-ignore -->
-    <span class="flex items-center text-xs font-normal text-slate-400 space-x-1"><span>to</span><a href="https://workingon.studio">workingon.studio</a>
-      <span class="material-symbols-rounded !text-lg">arrow_drop_down</span>
+    <span class="flex items-center text-xs font-normal text-slate-400"><span>to</span><a href="https://workingon.studio">workingon.studio</a>
+      <iconify-icon icon="material-symbols:arrow-drop-down-rounded" class="text-lg"></iconify-icon>
     </span>
     <p class="py-2">{emailContent}</p>
     <a class="font-[Arial] text-xs font-normal" href={chromeStoreURL}>via dad reply</a>

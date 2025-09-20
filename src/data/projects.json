@@ -1,6 +1,6 @@
 [
   {
-    "icon": "mailReply",
+    "icon": "mail-reply",
     "name": "Dad Reply",
     "description": "Instantly reply to your emails with minimal effort and maximum dad energy.",
     "version": 1.0,
@@ -18,8 +18,8 @@
     "link": "/"
   },
   {
-    "icon": "rainDrop",
-    "name": "TypeDrop",
+    "icon": "rain-drop",
+    "name": "Hidden Current",
     "description": "It's not about how much AI is costing you, but how much it's costing us.",
     "version": 0.5,
     "status": "draft",
@@ -27,7 +27,7 @@
     "link": "/"
   },
   {
-    "icon": "noodleBowl",
+    "icon": "noodle-bowl",
     "name": "Design Dojo",
     "description": "If you've ever said you were a ninja, it's time to prove it in the dojo.",
     "version": 0.1,
