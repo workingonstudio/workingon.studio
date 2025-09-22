@@ -3,7 +3,6 @@
   import { createForm } from "felte";
   import { validator } from "@felte/validator-zod";
   import * as zod from "zod";
-  import axios from "axios";
 
   let submitted = false;
 
@@ -15,17 +14,28 @@
     extend: validator({ schema }),
     onSubmit: async (values) => {
       try {
-        const response = await axios.post("https://workingonstudio.lemonsqueezy.com/email-subscribe/external", {
-          email: values.email,
+        const formBody =
+          "source=homepage&mailingLists=cmfulrm772g6y0iy1bkhxbqez&email=" + encodeURIComponent(values.email);
+
+        const response = await fetch("https://app.loops.so/api/newsletter-form/cmftqf9fn3f4nxp0i7l9sd1t0", {
+          method: "POST",
+          body: formBody,
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
         });
+
+        if (!response.ok) {
+          const data = await response.json();
+          throw new Error(data.message || `Subscription failed: ${response.status}`);
+        }
+
         submitted = true;
-        return response.data;
+        return { success: true };
       } catch (error) {
+        console.error("Form submission error:", error);
         throw error;
       }
-    },
-    onError: (error) => {
-      console.error("Form error:", error);
     },
   });
 </script>
@@ -80,15 +90,13 @@
     </div>
   {:else if submitted}
     <div class="my-16 flex flex-col justify-center space-y-3 text-center">
-      <span class="cursor-default text-4xl">🪿</span>
-      <h3>Check your email you silly goose.</h3>
+      <span class="cursor-default text-4xl">🥳</span>
+      <h3>cliché celebration emoji.</h3>
       <p>
-        Confirmation email just sent to <span class="font-mono text-slate-700">{$data.email}</span>
+        You're email <strong class="text-slate-700">{$data.email}</strong>
+        has been added to the early bird list.
       </p>
-      <small>
-        * it could take a while, so be patient, and check in spam amongst all those <em>other</em>
-        emails.
-      </small>
+      <small>* let's just hope when I am ready to launch it doesn't go to spam.</small>
     </div>
   {/if}
 </div>
