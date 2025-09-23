@@ -20,10 +20,10 @@
           </p>
         </div>
         <div class="flex-row gap-2">
-          <a href="" class="hover:text-[#FF6154]">
+          <a href="/" aria-label="Dad Reply on Producthunt" class="hover:text-[#FF6154]">
             <i class="fa-brands fa-product-hunt text-lg"></i>
           </a>
-          <a href="" class="hover:text-[#0073B1]">
+          <a href="/" aria-label="Dad Reply on Linkedin" class="hover:text-[#0073B1]">
             <i class="fa-brands fa-square-linkedin text-lg"></i>
           </a>
         </div>
@@ -31,15 +31,15 @@
       <ul class="space-y-2">
         <li>
           <iconify-icon icon="material-symbols:support" class="mr-2"></iconify-icon>
-          <a href="">Support</a>
+          <a href="mailto:support@workingon.studio">Support</a>
         </li>
         <li>
           <iconify-icon icon="material-symbols:encrypted-outline-rounded" class="mr-2"></iconify-icon>
-          <a href="">Privacy policy</a>
+          <a href="/privacy">Privacy policy</a>
         </li>
         <li>
           <iconify-icon icon="material-symbols:signature-rounded" class="mr-2"></iconify-icon>
-          <a href="">Terms of service</a>
+          <a href="/terms">Terms of service</a>
         </li>
       </ul>
     </div>

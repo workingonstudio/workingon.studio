@@ -91,7 +91,7 @@
   {:else if submitted}
     <div class="my-16 flex flex-col justify-center space-y-3 text-center">
       <span class="cursor-default text-4xl">🥳</span>
-      <h3>cliché celebration emoji.</h3>
+      <h3>Cliché celebration emoji.</h3>
       <p>
         You're email <strong class="text-slate-700">{$data.email}</strong>
         has been added to the early bird list.

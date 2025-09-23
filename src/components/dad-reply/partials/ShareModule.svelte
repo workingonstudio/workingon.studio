@@ -1,6 +1,6 @@
 <script lang="ts">
   import { slide, fade } from "svelte/transition";
-  import { cubicOut, bounceIn } from "svelte/easing";
+  import { cubicOut } from "svelte/easing";
 
   import socialButtons from "@data/dad-reply/socialButtons.json";
   import Badge from "./Badge.svelte";
@@ -61,6 +61,7 @@
       <button
         type="button"
         onclick={copyLink}
+        aria-label="copy link"
         class="absolute top-[2px] right-0 cursor-pointer p-3 hover:*:text-blue-600"
       >
         <iconify-icon
@@ -94,6 +95,7 @@
       <button
         onclick={toggleShare}
         class="group flex h-[41px] w-[41px] items-center justify-center rounded-lg border border-slate-300 p-2 transition delay-50 hover:cursor-pointer"
+        aria-label="close share"
       >
         <iconify-icon
           icon="material-symbols:delete-outline-rounded"
