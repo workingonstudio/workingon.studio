@@ -1,10 +1,10 @@
 <script lang="ts">
   import Badge from "./partials/Badge.svelte";
+  import { submittedEmail } from "@stores/dadreply/email";
+
   import { createForm } from "felte";
   import { validator } from "@felte/validator-zod";
   import * as zod from "zod";
-
-  let submitted = false;
 
   const schema = zod.object({
     email: zod.string().email().nonempty(),
@@ -30,7 +30,8 @@
           throw new Error(data.message || `Subscription failed: ${response.status}`);
         }
 
-        submitted = true;
+        submittedEmail.set({ submitted: true, email: values.email });
+
         return { success: true };
       } catch (error) {
         console.error("Form submission error:", error);
@@ -41,7 +42,7 @@
 </script>
 
 <div id="earlybird" class="flex flex-col">
-  {#if !$isSubmitting && !submitted}
+  {#if !$isSubmitting && !$submittedEmail.submitted}
     <div class="flex flex-col items-center justify-center gap-12 md:flex-row">
       <div class="flex w-full flex-col space-y-4 md:w-md">
         <span class="cursor-default text-4xl">🪱</span>
@@ -88,12 +89,12 @@
         ></iconify-icon>
       </span>
     </div>
-  {:else if submitted}
+  {:else if $submittedEmail.submitted}
     <div class="my-16 flex flex-col justify-center space-y-3 text-center">
       <span class="cursor-default text-4xl">🥳</span>
       <h3>Cliché celebration emoji.</h3>
       <p>
-        You're email <strong class="text-slate-700">{$data.email}</strong>
+        You're email <strong class="text-slate-700">{$submittedEmail.email}</strong>
         has been added to the early bird list.
       </p>
       <small>* let's just hope when I am ready to launch it doesn't go to spam.</small>

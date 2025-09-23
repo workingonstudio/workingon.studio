@@ -7,17 +7,12 @@
 
   $effect(() => {
     const unsubscribe = toggleStore.subscribe((value) => {
-      console.log("Toggle received store value:", value);
       checked = value;
     });
     return unsubscribe;
   });
 
   function handleChange(event: Event) {
-    console.log("handleChange - checked before:", checked);
-    console.log("handleChange - event.target.checked:", (event.target as HTMLInputElement).checked);
-
-    // Use the event target value instead of the bound variable
     toggleStore.set((event.target as HTMLInputElement).checked);
   }
 

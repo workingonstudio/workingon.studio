@@ -2,6 +2,8 @@
   import Logo from "./partials/Logo.svelte";
   import Badge from "./partials/Badge.svelte";
 
+  import { submittedEmail } from "@stores/dadreply/email";
+
   function handleClick() {
     document.getElementById("email")?.focus();
   }
@@ -18,7 +20,13 @@
     <nav class="font-regular flex flex-row space-x-4 text-sm [&_a]:hover:underline">
       <ul class="flex flex-row">
         <li>
-          <a href="/" class="font-medium text-blue-600" on:click|preventDefault={handleClick}>Claim early bird offer</a>
+          {#if $submittedEmail.submitted}
+            <a href="#earlybird" class="font-medium text-blue-600">Early bird offer claimed</a>
+          {:else}
+            <a href="/" class="font-medium text-blue-600" on:click|preventDefault={handleClick}>
+              Claim early bird offer
+            </a>
+          {/if}
         </li>
       </ul>
     </nav>
