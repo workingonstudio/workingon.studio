@@ -2,30 +2,34 @@
   import projectData from "@data/projects.json";
 </script>
 
-<section class="mt-32 max-w-md space-y-12">
+<section class="mt-16 max-w-md space-y-12">
   <ul class="mb-6 space-y-12">
-    {#each projectData as project}
-      <li class="space-y-4">
-        <div class="space-y-3">
-          <h2 class="flex flex-row items-center gap-2 text-base">
-            <iconify-icon icon="carbon:{project.icon}" class="text-lg"></iconify-icon>
-            {project.name}
-          </h2>
-          <p class="text-sm/5">
-            {project.description}
-          </p>
-        </div>
-        <ul class="meta">
-          <li>
-            <span class="indicator {project.status}"></span>
-            {project.status}
-          </li>
-          <li>v{project.version.toFixed(1)}</li>
-          {#each project.tags as tag}
-            <li>{tag}</li>
-          {/each}
-        </ul>
-      </li>
+    {#each projectData as { icon, name, description, version, status, tags, link }, index}
+      {#if index <= 1}
+        <li>
+          <a href={link} class="space-y-4">
+            <div class="space-y-3">
+              <h2 class="flex flex-row items-center gap-2 text-base">
+                <iconify-icon icon="carbon:{icon}" class="text-lg"></iconify-icon>
+                {name}
+              </h2>
+              <p class="text-sm/5">
+                {description}
+              </p>
+            </div>
+            <ul class="meta">
+              <li>
+                <span class="indicator {status}"></span>
+                {status}
+              </li>
+              <li>v{version.toFixed(1)}</li>
+              {#each tags as tag}
+                <li>{tag}</li>
+              {/each}
+            </ul>
+          </a>
+        </li>
+      {/if}
     {/each}
   </ul>
 </section>

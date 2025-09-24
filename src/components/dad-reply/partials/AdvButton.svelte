@@ -60,6 +60,7 @@
       type="button"
       class="flex items-center justify-center rounded-r-full border border-l-0 pr-2 pl-1"
       on:click={handleClick}
+      aria-label="close / open button"
     >
       <iconify-icon icon={buttonIcon} class="text-2xl"></iconify-icon>
     </button>

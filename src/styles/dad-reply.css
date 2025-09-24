@@ -86,6 +86,12 @@
       border-color: var(--color-primary);
       @apply bg-white;
     }
+    &:disabled {
+      @apply cursor-default bg-gray-100 text-gray-400;
+      &:hover {
+        @apply bg-gray-100;
+      }
+    }
   }
   input[type="email"],
   input[type="text"] {

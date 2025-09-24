@@ -7,7 +7,7 @@
   "svelte.plugin.typescript.diagnostics.enable": true,
   "typescript.preferences.includePackageJsonAutoImports": "auto",
   "svelte.plugin.svelte.diagnostics.enable": false,
-  "cSpell.words": ["iconify", "nudica"],
+  "cSpell.words": ["felte", "iconify", "nudica"],
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[astro]": {
