@@ -97,7 +97,9 @@
         You're email <strong class="text-slate-700">{$submittedEmail.email}</strong>
         has been added to the early bird list.
       </p>
-      <small>* let's just hope when I am ready to launch it doesn't go to spam.</small>
+      <small>
+        * in case you forgot, that's $19.99 all in. Let's just hope when I am ready to launch it doesn't go to spam.
+      </small>
     </div>
   {/if}
 </div>
