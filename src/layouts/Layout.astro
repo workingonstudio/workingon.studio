@@ -2,6 +2,7 @@
 import "../styles/global.css";
 
 import Analytics from "./partials/Analytics.astro";
+import { ClientRouter } from "astro:transitions";
 
 export interface Props {
   title: string;
@@ -39,6 +40,7 @@ const nudicaMonoFontUrl = import.meta.env.NUDICA_MONO_FONT_CSS_URL;
     <meta name="generator" content={Astro.generator} />
 
     <Analytics />
+    <ClientRouter />
 
     <!-- CDN Font Stylesheets -->
     {nudicaFontUrl && <link rel="stylesheet" href={nudicaFontUrl} />}
