@@ -17,7 +17,7 @@
     <img
       src="/solidarity/otw-overlay.png"
       class="overlay absolute {sizeClass} fade-spin-scale-in rounded-full"
-      out:fade={{ duration: 2000 }}
+      out:fade={{ duration: 1000 }}
     />
   {/if}
   <img {src} alt="avatar" {width} {height} class="rounded-full border-transparent {checkItemNumber}" />

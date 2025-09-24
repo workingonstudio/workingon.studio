@@ -35,7 +35,7 @@
 
     <!-- Rows -->
     <div class="finance-rows flex flex-col text-sm" role="rowgroup">
-      {#each financeData.entries as item, index}
+      {#each financeData.entries as item}
         <div class="finance-row flex cursor-default pb-4 transition-colors duration-150 ease-in-out" role="row">
           <span class="flex-1" role="cell">{item.description}</span>
           <span class="w-28 text-right" role="cell"></span>

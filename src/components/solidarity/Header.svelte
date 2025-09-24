@@ -18,7 +18,7 @@
     <div class="flex flex-row items-center gap-6">
       <Toggle id="toggled" />
       <a href="https://chromewebstore.google.com/detail/ahahliplongfboaikbajdedefpoifjeb" target="_blank" class="btn">
-        <iconify-icon icon="carbon:add" class="text-3xl"></iconify-icon>
+        <iconify-icon icon="carbon:add" class="text-2xl"></iconify-icon>
         Add to Chrome
       </a>
     </div>
@@ -35,10 +35,10 @@
   .btn {
     @apply flex flex-row items-center gap-2;
     @apply rounded-full bg-emerald-300;
-    @apply font-mulish text-sm font-bold;
-    @apply py-2.5 pr-4 pl-3;
+    @apply font-mulish text-sm font-bold text-emerald-900;
+    @apply py-2 pr-4 pl-3;
     &:hover {
-      @apply text-emerald-900 hover:bg-emerald-200;
+      @apply hover:bg-emerald-200;
     }
   }
 </style>

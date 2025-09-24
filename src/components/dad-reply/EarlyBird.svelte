@@ -94,7 +94,7 @@
       <span class="cursor-default text-4xl">🥳</span>
       <h3>Cliché celebration emoji.</h3>
       <p>
-        You're email <strong class="text-slate-700">{$submittedEmail.email}</strong>
+        Your email <strong class="text-slate-700">{$submittedEmail.email}</strong>
         has been added to the early bird list.
       </p>
       <small>

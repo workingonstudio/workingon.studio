@@ -3,12 +3,12 @@
 </script>
 
 <section class="mt-16 max-w-md space-y-12">
-  <ul class="mb-6 space-y-12">
+  <ul class="project-list mb-6 space-y-12">
     {#each projectData as { icon, name, description, version, status, tags, link }, index}
       {#if index <= 1}
-        <li>
+        <li class="project-item">
           <a href={link} class="space-y-4">
-            <div class="space-y-3">
+            <div class="content space-y-3">
               <h2 class="flex flex-row items-center gap-2 text-base">
                 <iconify-icon icon="carbon:{icon}" class="text-lg"></iconify-icon>
                 {name}
@@ -56,5 +56,12 @@
     &.draft {
       @apply bg-amber-500;
     }
+  }
+  .project-list:hover .project-item:not(:hover) {
+    @apply opacity-20 transition-opacity delay-100 duration-300 ease-in-out;
+  }
+
+  .project-item {
+    @apply transition-opacity delay-100 duration-300 ease-in-out;
   }
 </style>
