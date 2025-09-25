@@ -26,7 +26,7 @@ Here's where it gets interesting.
 
 Instead of hiding my messy development process behind polished marketing copy, I made it the centrepiece. The version number on the site reveals all the commits into this project.
 
-You'll see every commit, every iteration, every small improvement. The actual development timeline, auto-generated from git commits. No sanitised "my process" nonsense—just the real process, visible and unfiltered.
+You'll see every commit, every iteration, every small improvement. The actual development timeline, auto-generated from git commits. No sanitised "my process" nonsense - just the real process, visible and unfiltered.
 
 Because transparency isn't just philosophy. It's practice.
 
@@ -34,7 +34,7 @@ Because transparency isn't just philosophy. It's practice.
 
 I don't ask people to abandon existing systems. That's naive and ineffective. Instead, I meet them where they are and change how they interact with those systems.
 
-Rather than preaching about digital wellness, I build Dad Reply. Instead of lecturing about LinkedIn's toxicity, I create Solidarity. I don't write manifestos about AI's environmental cost—I make TypeDrop.
+Rather than preaching about digital wellness, I build Dad Reply. Instead of lecturing about LinkedIn's toxicity, I create Solidarity. I don't write manifestos about AI's environmental cost - I make TypeDrop.
 
 Each product is both functional tool and cultural commentary, delivered through experience rather than explanation.
 
