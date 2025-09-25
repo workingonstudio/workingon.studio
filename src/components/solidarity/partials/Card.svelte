@@ -16,6 +16,7 @@
   {#if overlay}
     <img
       src="/solidarity/otw-overlay.png"
+      alt="otw overlay"
       class="overlay absolute {sizeClass} fade-spin-scale-in rounded-full"
       out:fade={{ duration: 1000 }}
     />
