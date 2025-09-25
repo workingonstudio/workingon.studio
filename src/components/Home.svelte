@@ -1,7 +1,7 @@
 <script lang="ts">
   const actionList = [
     "making the obvious visable",
-    "centering people in technology",
+    "centring people in technology",
     "finding delight in the mundane",
   ];
 </script>
