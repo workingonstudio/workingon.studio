@@ -5,7 +5,7 @@
 </script>
 
 <footer
-  class="text-xxs flex flex-col items-center justify-center space-y-2 py-8 text-center md:flex-row md:justify-between md:space-y-0 md:text-left"
+  class="text-xxs flex flex-col items-start space-y-2 py-8 text-center md:flex-row md:justify-between md:space-y-0 md:text-left"
 >
   <a
     href="https://find-and-update.company-information.service.gov.uk/company/16700615"
@@ -14,7 +14,7 @@
     <iconify-icon icon="material-symbols:copyright-outline-rounded" class="text-sm"></iconify-icon>
     <span>workingonstudio ltd, no: 16700615</span>
   </a>
-  <span class="order-first md:order-none">
+  <span>
     last updated: {DateTime.fromISO(date).toFormat("ccc',' dd LLL y TT ZZZ")}
   </span>
 </footer>
