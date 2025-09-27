@@ -9,7 +9,7 @@ import Footer from "@components/partials/Footer.svelte";
     <Header client:load text="return.home" />
     <div class="flex flex-col space-y-12">
       <h1 class="text-7xl">404</h1>
-      <div class="flex w-md flex-col space-y-4">
+      <div class="flex w-2xl flex-col space-y-4">
         <!-- prettier-ignore -->
         <blockquote>Guys like us, that work on ranches, are the loneliest guys in the world. They got no
           family. They don't belong no place. They come to a ranch an' work up a stake, and the
@@ -50,7 +50,7 @@ import Footer from "@components/partials/Footer.svelte";
     @apply transition-colors delay-100;
   }
   blockquote {
-    @apply -indent-2 text-base/relaxed;
+    @apply -indent-2 text-base/loose;
     @apply before:content-[open-quote] after:content-[close-quote];
   }
 </style>

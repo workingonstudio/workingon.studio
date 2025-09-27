@@ -16,7 +16,7 @@
       </span>
     </strong>
     <!-- prettier-ignore -->
-    <span class="flex items-center text-xs font-normal text-slate-400"><span>to</span><a href="https://workingon.studio">workingon.studio</a>
+    <span class="flex items-center gap-1 text-xs font-normal text-slate-400"><span>to</span><a href="https://workingon.studio">workingon.studio</a>
       <iconify-icon icon="material-symbols:arrow-drop-down-rounded" class="text-lg"></iconify-icon>
     </span>
     <p class="py-2">{emailContent}</p>
