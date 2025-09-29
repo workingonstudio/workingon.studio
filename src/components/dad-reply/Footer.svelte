@@ -35,11 +35,11 @@
         </li>
         <li>
           <iconify-icon icon="material-symbols:encrypted-outline-rounded" class="mr-2"></iconify-icon>
-          <a href="/privacy">Privacy policy</a>
+          <a href="/projects/dad-reply/privacy/">Privacy policy</a>
         </li>
         <li>
           <iconify-icon icon="material-symbols:signature-rounded" class="mr-2"></iconify-icon>
-          <a href="/terms">Terms of service</a>
+          <a href="/projects/dad-reply/terms/">Terms of service</a>
         </li>
       </ul>
     </div>

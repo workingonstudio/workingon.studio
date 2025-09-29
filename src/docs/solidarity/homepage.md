@@ -1,7 +1,7 @@
 ---
 headerFirst: Release yourself from
 headerSecond: the weight of the green ring
-headerPunc: .
+headerPunctuation: .
 subHeader: The psychology of gentle exposure, and the way a fear of shame can be softened, not avoided.
 footer: good luck on your journey.
 ---
