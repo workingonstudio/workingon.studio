@@ -17,7 +17,7 @@
   }
 
   let isClosed = true;
-  $: icon = isClosed ? "carbon:add-large" : "carbon:close-large";
+  $: icon = isClosed ? "carbon:add" : "carbon:close";
 
   let isSpinning = false;
 
@@ -40,13 +40,15 @@
       <!-- prettier-ignore -->
       <h1 class="font-display inline-block">{headerText}<span>{dotText}</span></h1>
     </a>
-    <iconify-icon
-      onclick={toggleMenu}
-      {icon}
-      class="text-2xl text-gray-500 transition-colors duration-500 hover:cursor-pointer hover:text-gray-100 {isSpinning
-        ? 'spinning'
-        : ''}"
-    ></iconify-icon>
+    <button type="button">
+      <iconify-icon
+        onclick={toggleMenu}
+        {icon}
+        class="text-2xl text-gray-500 transition-colors duration-500 hover:cursor-pointer hover:text-gray-100 {isSpinning
+          ? 'spinning'
+          : ''}"
+      ></iconify-icon>
+    </button>
   </header>
   {#if !isClosed}
     <nav
@@ -113,6 +115,10 @@
         }
       }
     }
+  }
+
+  button {
+    @apply h-6 w-6;
   }
 
   .spinning {
