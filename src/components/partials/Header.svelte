@@ -17,10 +17,18 @@
   }
 
   let isClosed = true;
-  $: icon = isClosed ? "carbon:menu" : "carbon:close-large";
+  $: icon = isClosed ? "carbon:add-large" : "carbon:close-large";
+
+  let isSpinning = false;
 
   function toggleMenu() {
-    isClosed = !isClosed;
+    isSpinning = true;
+    setTimeout(() => {
+      isClosed = !isClosed;
+    }, 200);
+    setTimeout(() => {
+      isSpinning = false;
+    }, 400);
   }
 
   grabHeader(text);
@@ -35,7 +43,9 @@
     <iconify-icon
       onclick={toggleMenu}
       {icon}
-      class="text-2xl text-gray-500 hover:cursor-pointer hover:text-gray-100"
+      class="text-2xl text-gray-500 transition-colors duration-500 hover:cursor-pointer hover:text-gray-100 {isSpinning
+        ? 'spinning'
+        : ''}"
     ></iconify-icon>
   </header>
   {#if !isClosed}
@@ -50,15 +60,15 @@
         out:fade={{ duration: 300, easing: cubicInOut }}
       >
         <li class="group">
-          <a href="projects/">
+          <a href="/projects/">
             <!-- prettier-ignore -->
-            <h2>project<span>.list</span></h2>
+            <h2>projects<span>.list</span></h2>
           </a>
         </li>
         <li class="group">
           <a href="/finances">
             <!-- prettier-ignore -->
-            <h2>finance<span>.log</span></h2>
+            <h2>finance<span>.csv</span></h2>
             <div class="flex flex-row gap-2 {totalClass} items-center">
               <iconify-icon icon="carbon:piggy-bank-slot" class="text-lg"></iconify-icon>
               <span>{$totals.formatted}</span>
@@ -68,7 +78,7 @@
         <li class="group">
           <a href="/progress">
             <!-- prettier-ignore -->
-            <h2>progress<span>.log</span></h2>
+            <h2>progress<span>.git</span></h2>
             <div class="flex flex-row items-center gap-2 text-gray-500">
               <iconify-icon icon="carbon:version" class="text-lg"></iconify-icon>
               <span>{currentVersion}</span>
@@ -102,6 +112,19 @@
           @apply flex w-full flex-row justify-between;
         }
       }
+    }
+  }
+
+  .spinning {
+    animation: spin-once 1000ms ease-in-out;
+  }
+
+  @keyframes spin-once {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
     }
   }
 </style>
