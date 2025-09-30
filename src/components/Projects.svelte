@@ -37,10 +37,10 @@
 <style>
   @reference "@styles/global.css";
   h2 {
-    color: var(--color-text-primary);
+    @apply text-primary;
   }
   p {
-    color: var(--color-text-body);
+    @apply text-body;
   }
   .meta {
     @apply text-xxs flex flex-row space-x-2;

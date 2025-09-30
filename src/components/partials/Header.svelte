@@ -45,7 +45,7 @@
       description: "financials coming in/out of the studio.",
     },
     {
-      icon: "carbon:version",
+      icon: "carbon:branch",
       href: "/progress",
       title: "progress",
       subtitle: ".git",
@@ -112,7 +112,7 @@
   nav {
     ul {
       li {
-        @apply flex flex-row items-center gap-4;
+        @apply flex flex-row items-center gap-4 transition-opacity duration-300;
         a {
           @apply flex w-full flex-col justify-between gap-1;
           p {
@@ -120,6 +120,9 @@
           }
         }
       }
+    }
+    &:has(li:hover) li:not(:hover) {
+      @apply opacity-30 delay-100;
     }
   }
 

@@ -26,6 +26,6 @@
   @reference "@styles/global.css";
 
   p {
-    color: var(--color-text-body);
+    @apply text-body;
   }
 </style>
