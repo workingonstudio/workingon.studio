@@ -4,7 +4,7 @@
   import Email from "./partials/Email.svelte";
 </script>
 
-<section class="flex flex-col items-center gap-4 lg:flex-row">
+<section class="flex flex-col gap-12 md:gap-4 lg:flex-row">
   <div class="w-full space-y-12 md:my-10 md:w-2/3 md:text-center lg:w-2xl lg:text-left">
     <h1>Instantly reply to your emails with minimal effort and maximum dad energy.</h1>
     <div class="w-full space-y-6 lg:w-2xl">
@@ -32,7 +32,7 @@
 <style>
   @reference "@styles/dad-reply.css";
   .email-container {
-    @apply absolute bottom-[360px] md:relative md:bottom-0;
+    @apply md:relative md:bottom-0;
     @apply mr-0 px-4 py-8;
     @apply rounded-xl;
     @apply lg:-mr-[calc(50vw-50%)] lg:rounded-none lg:rounded-l-xl lg:p-16 lg:pr-0;

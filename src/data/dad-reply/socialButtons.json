@@ -28,11 +28,5 @@
     "iconRef": "bluesky",
     "href": "https://bsky.app/intent/compose?text=",
     "color": "text-[#1185FE]"
-  },
-  {
-    "title": "Share on X",
-    "iconRef": "x-twitter",
-    "href": "https://twitter.com/intent/tweet?text=",
-    "color": "text-[#14171A]"
   }
 ]

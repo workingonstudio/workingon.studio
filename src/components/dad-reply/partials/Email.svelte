@@ -49,12 +49,12 @@
 <div class="flex flex-col space-y-8 overflow-hidden">
   <div class="space-y-5">
     <div class="font-[Roboto]">
-      <strong class="text-[15px]">
-        workingon.studio <span class="text-xs font-normal text-slate-400">
+      <strong class="text-xs md:text-[15px]">
+        workingon.studio <span class="text-xxs font-normal text-slate-400 md:text-xs">
           <a href="mailto:hello@workingon.studio" class="hover:text-blue-600">&lt;hello@workingon.studio&gt;</a>
         </span>
       </strong>
-      <span class="flex items-center text-xs font-normal text-slate-400">
+      <span class="text-xxs flex items-center font-normal text-slate-400 md:text-xs">
         to you
         <iconify-icon icon="material-symbols:arrow-drop-down-rounded" class="text-lg"></iconify-icon>
       </span>
@@ -62,7 +62,7 @@
     <div class="space-y-5 *:font-[Arial] *:text-black!">
       <p>To all,</p>
       <p>Look, I'm tired of products that pretend to solve problems while creating new ones.</p>
-      <p>
+      <p class="hidden md:flex">
         Tired of "user experiences" designed to extract rather than delight. Tired of the gap between what we say we're
         building and what we're actually building.
       </p>
@@ -82,7 +82,7 @@
       {/each}
     {/if}
   </div>
-  <div class="flex flex-row space-x-3">
+  <div class="flex flex-row gap-3">
     <MailButton text="Dad Reply" clickable={true} onclick={toggleReply} disabled={isDisabled} />
     <MailButton type="email" href="hello@workingon.studio" text="Reply" iconName="material-symbols:reply-rounded" />
     <MailButton text="Forward" clickable={true} onclick={toggleForward} iconName="material-symbols:forward-rounded" />
@@ -95,6 +95,6 @@
 <style>
   @reference "@styles/dad-reply.css";
   p {
-    @apply text-sm/7;
+    @apply text-xs/5 md:text-sm/7;
   }
 </style>
