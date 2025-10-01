@@ -21,9 +21,7 @@
       <ul class="flex flex-row">
         <li>
           {#if $submittedEmail.submitted}
-            <a href="#earlybird" class="font-medium text-slate-400">
-              Yeeeeeaaaah...you've claimed the early bird offer!
-            </a>
+            <a href="#earlybird" class="font-medium text-slate-400">Offer claimed!</a>
           {:else}
             <a href="/" class="font-medium text-blue-600" on:click|preventDefault={handleClick}>
               Claim early bird offer

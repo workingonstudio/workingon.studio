@@ -4,9 +4,9 @@
 </script>
 
 <div class="space-y-12">
-  <div class="flex flex-col space-y-4 text-left md:text-center">
-    <h2 class="flex flex-col gap-3 md:flex-row md:justify-center">
-      <span class="flex text-4xl md:inline-flex">✊</span>
+  <div class="flex flex-col space-y-4 text-center">
+    <h2 class="flex flex-col justify-center gap-3 md:flex-row">
+      <span class="flex justify-center text-4xl md:inline-flex">✊</span>
       <span>Join the rebellion against the pointless.</span>
     </h2>
     <p>1000’s of thumbs, 1000’s of minutes saved. Join the movement.</p>
