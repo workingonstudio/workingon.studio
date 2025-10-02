@@ -47,20 +47,19 @@
       <div class="flex w-full flex-col space-y-4 md:w-md">
         <span class="cursor-default text-4xl">🪱</span>
         <h2>Early bird offer!</h2>
-        <p>For a limited time, and to say thank you. You can claim a lifetime license to Dad Reply*.</p>
+        <p>For a limited time, and to say thank you. You can claim a lifetime discount to Dad Reply*.</p>
         <small>* you'll receive a code when v1.5 launches.</small>
       </div>
       <div class="card w-full space-y-6 shadow-lg md:w-md">
         <div class="space-y-8">
           <div class="flex flex-row space-x-3">
-            <Badge text="Lifetime Pro" bgColor="bg-orange-100" />
-            <Badge text="Limited" bgColor="bg-blue-100" />
+            <Badge text="Lifetime discount" bgColor="bg-orange-100" />
+            <Badge text="33% off" bgColor="bg-blue-100" />
           </div>
-          <h1 class="text-5xl!">$19.99</h1>
-          <ul class="space-y-3 text-sm font-medium">
-            <li class="before:mr-2 before:content-['👍']">Lifetime licence to Pro.</li>
-            <li class="before:mr-2 before:content-['👍']">Access to Beta features.</li>
-          </ul>
+          <div class="flex flex-row items-center gap-2">
+            <h1 class="text-5xl!">$19.99</h1>
+            <span class="ml-3 text-xs font-medium">per year</span>
+          </div>
         </div>
         <form use:form class="space-y-5">
           <label class="flex" for="email">
@@ -98,7 +97,8 @@
         has been added to the early bird list.
       </p>
       <small>
-        * in case you forgot, that's $19.99 all in. Let's just hope when I am ready to launch it doesn't go to spam.
+        * in case you forgot, that's $19.99 per year (33.3% discount). Let's just hope when I am ready to launch it
+        doesn't go to spam.
       </small>
     </div>
   {/if}

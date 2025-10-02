@@ -26,7 +26,7 @@
       },
       price: {
         currency: "$",
-        cost: 9.99,
+        cost: 29.99,
         otherText: "per year",
         styles: "line-through",
       },
