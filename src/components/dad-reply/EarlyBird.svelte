@@ -48,7 +48,7 @@
         <span class="cursor-default text-4xl">🪱</span>
         <h2>Early bird offer!</h2>
         <p>For a limited time, and to say thank you. You can claim a lifetime discount to Dad Reply*.</p>
-        <small>* you'll receive a code when v1.5 launches.</small>
+        <small>* you'll receive a code after the trial period ends.</small>
       </div>
       <div class="card w-full space-y-6 shadow-lg md:w-md">
         <div class="space-y-8">

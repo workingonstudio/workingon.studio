@@ -3,7 +3,7 @@
   import AdvButton from "./partials/AdvButton.svelte";
   import ToneRadio from "./partials/ToneRadio.svelte";
   import MailButton from "./partials/MailButton.svelte";
-  let selectedTone = "tone-1";
+  import Emoji from "./partials/Emoji.svelte";
 
   let emojiList = ["👋", "👀", "💩", "🔥", "🤘", "🍾", "💀", "💰", "👏"];
 </script>
@@ -18,12 +18,12 @@
       <div
         class="grid auto-cols-min grid-flow-col grid-rows-2 justify-center gap-6 py-6 lg:grid-rows-1 lg:justify-between"
       >
-        <ToneRadio value="tone-1" bind:group={selectedTone} />
-        <ToneRadio value="tone-2" emoji="👍🏻" bind:group={selectedTone} />
-        <ToneRadio value="tone-3" emoji="👍🏼" bind:group={selectedTone} />
-        <ToneRadio value="tone-4" emoji="👍🏽" bind:group={selectedTone} />
-        <ToneRadio value="tone-5" emoji="👍🏾" bind:group={selectedTone} />
-        <ToneRadio value="tone-6" emoji="👍🏿" bind:group={selectedTone} />
+        <ToneRadio value="tone-1" />
+        <ToneRadio value="tone-2" emoji="👍🏻" />
+        <ToneRadio value="tone-3" emoji="👍🏼" />
+        <ToneRadio value="tone-4" emoji="👍🏽" />
+        <ToneRadio value="tone-5" emoji="👍🏾" />
+        <ToneRadio value="tone-6" emoji="👍🏿" />
       </div>
       <p>
         In v1.5.0 you’ll have the ability to change the tone of thumb up. You have the choice everywhere else, so why
@@ -74,7 +74,7 @@
           <div
             class="relative bottom-0 flex h-[44px] w-[44px] cursor-default items-center justify-center rounded-lg border border-slate-300 text-[20px] transition-all delay-75 ease-in-out hover:bottom-2 hover:shadow-lg"
           >
-            {emoji}
+            <Emoji {emoji} />
           </div>
         {/each}
         <div
@@ -93,7 +93,8 @@
     <span class="block text-4xl">👀</span>
     <h2>What's coming in v1.5</h2>
     <p>This dad’s hit the gym, bought some new fits and is off fishing to get his Tinder profile pic.</p>
-    <small>* this is over here because the eyes need to look at something.</small>
+    <small class="hidden md:flex">* this is over here because the eyes need to look at something.</small>
+    <small class="md:hidden">* I know those eyes are looking over there, but it's below.</small>
   </div>
 </div>
 

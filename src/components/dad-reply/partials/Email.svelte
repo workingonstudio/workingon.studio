@@ -2,6 +2,7 @@
   import Reply from "./Reply.svelte";
   import MailButton from "./MailButton.svelte";
   import ShareModule from "./ShareModule.svelte";
+  import Emoji from "./Emoji.svelte";
   let showReply = false;
   let showShare = false;
 
@@ -78,7 +79,9 @@
     </div>
     {#if showReply}
       {#each replyShown as reply}
-        <Reply emailContent={reply.emailContent} emailName={reply.emailName} />
+        <Reply emailName={reply.emailName}>
+          <Emoji emoji={reply.emailContent} />
+        </Reply>
       {/each}
     {/if}
   </div>

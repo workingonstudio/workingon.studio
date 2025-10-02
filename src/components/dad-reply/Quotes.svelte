@@ -1,12 +1,13 @@
 <script lang="ts">
   import Quote from "./partials/Quote.svelte";
   import quoteData from "@data/dad-reply/quotes.json";
+  import Emoji from "./partials/Emoji.svelte";
 </script>
 
 <div class="space-y-12">
   <div class="flex flex-col space-y-4 text-center">
     <h2 class="flex flex-col justify-center gap-3 md:flex-row">
-      <span class="flex justify-center text-4xl md:inline-flex">✊</span>
+      <Emoji class_="flex flex-col justify-center gap-3 md:flex-row" emoji="✊" />
       <span>Join the rebellion against the pointless.</span>
     </h2>
     <p>1000’s of thumbs, 1000’s of minutes saved. Join the movement.</p>

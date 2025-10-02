@@ -4,11 +4,11 @@
   import Email from "./partials/Email.svelte";
 </script>
 
-<section class="flex flex-col gap-12 md:items-center md:gap-4 lg:flex-row">
+<section class="mt-20 flex flex-col gap-12 md:mt-0 md:items-center md:gap-4 lg:flex-row">
   <div class="w-full space-y-12 md:my-16 md:items-center md:text-center lg:w-2xl lg:text-left">
     <h1>Instantly reply to your emails with minimal effort and maximum dad energy.</h1>
     <div class="w-full space-y-6 lg:w-5/6">
-      <p>
+      <p class="text-pretty">
         Whether it’s that weekly status report, someone asking a question that is already in the wiki, or a simple
         request for coffee. There’s now a better way to respond to the mundane, inane or frivolous emails.
       </p>
@@ -24,7 +24,7 @@
       <DownloadButton icon label="Download for IE 6.0" iconRef="internet-explorer" style="hollow" />
     </div>
   </div>
-  <div class="card email-container the-shadow order-first flex-1 md:order-none lg:max-w-3xl">
+  <div class="card email-container the-shadow flex-1 md:order-none lg:max-w-3xl">
     <Email />
   </div>
 </section>

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Emoji from "./partials/Emoji.svelte";
   import Badge from "./partials/Badge.svelte";
   import Footer from "@components/partials/Footer.svelte";
 </script>
@@ -6,7 +7,7 @@
 <div>
   <footer class="card space-y-6 p-6 shadow-lg md:p-12">
     <div class="flex flex-row items-center gap-6">
-      <span class="text-xl">👋</span>
+      <Emoji class_="text-xl" emoji="👋" />
       <Badge text="v1.0.0" />
     </div>
     <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between md:gap-0">
@@ -20,10 +21,20 @@
           </p>
         </div>
         <div class="hidden flex-row gap-2 md:flex">
-          <a href="/" aria-label="Dad Reply on Producthunt" class="hover:text-[#FF6154]">
+          <a
+            href="https://www.producthunt.com/products/dad-reply"
+            aria-label="Dad Reply on Producthunt"
+            title="Dad Reply on Producthunt"
+            class="hover:text-[#FF6154]"
+          >
             <i class="fa-brands fa-product-hunt text-lg"></i>
           </a>
-          <a href="/" aria-label="Dad Reply on Linkedin" class="hover:text-[#0073B1]">
+          <a
+            href="https://www.linkedin.com/company/dadreply/"
+            aria-label="Dad Reply on Linkedin"
+            title="Dad Reply on Linkedin"
+            class="hover:text-[#0073B1]"
+          >
             <i class="fa-brands fa-square-linkedin text-lg"></i>
           </a>
         </div>

@@ -2,7 +2,6 @@
   import { slide, fade } from "svelte/transition";
   import { cubicOut } from "svelte/easing";
   export let emailName: string = "";
-  export let emailContent: string;
 
   let chromeStoreURL = "https://chromewebstore.google.com/detail/ddkeoflblemlolckmnhihhabplfmogop";
 </script>
@@ -19,7 +18,10 @@
     <span class="flex items-center gap-1 text-xxs md:text-xs font-normal text-slate-400"><span>to</span><a href="https://workingon.studio">workingon.studio</a>
       <iconify-icon icon="material-symbols:arrow-drop-down-rounded" class="text-lg"></iconify-icon>
     </span>
-    <p class="py-2">{emailContent}</p>
+    <div class="my-2 flex">
+      <slot />
+    </div>
+    <!-- <p class="py-2">{emailContent}</p> -->
     <a class="text-xxs font-[Arial] font-normal md:text-xs" href={chromeStoreURL}>via dad reply</a>
   </div>
 </div>
