@@ -5,7 +5,7 @@
   import MailButton from "./partials/MailButton.svelte";
   let selectedTone = "tone-1";
 
-  let emojiList = ["👋", "👀", "💩", "🔥", "🤘", "🍾", "💀", "💰", "☕", "👏"];
+  let emojiList = ["👋", "👀", "💩", "🔥", "🤘", "🍾", "💀", "💰", "👏"];
 </script>
 
 <div class="flex flex-col items-start md:flex-row md:gap-16 lg:gap-32">
@@ -77,6 +77,11 @@
             {emoji}
           </div>
         {/each}
+        <div
+          class="relative bottom-0 flex h-[44px] w-[44px] cursor-default items-center justify-center rounded-lg border border-slate-300 text-[20px] transition-all delay-75 ease-in-out hover:bottom-2 hover:shadow-lg md:hidden"
+        >
+          🐰
+        </div>
       </div>
       <p>
         That right baby. This isn’t like selling electric windows in a new car. This is like selling a purpose build
@@ -84,11 +89,11 @@
       </p>
     </div>
   </div>
-  <div class="order-first mb-40 space-y-4 md:sticky md:top-1/3 md:order-last md:w-1/2 lg:mb-0">
+  <div class="order-first mb-40 space-y-4 text-pretty md:sticky md:top-1/3 md:order-last md:w-2/5 lg:mb-0 lg:w-1/2">
     <span class="block text-4xl">👀</span>
     <h2>What's coming in v1.5</h2>
-    <p>This dad’s hit the gym listened to the latest alpha male podcast* and is ready to get back on the market*.</p>
-    <small>* ignored the advice because its’s ridiculous nonsense.</small>
+    <p>This dad’s hit the gym, bought some new fits and is off fishing to get his Tinder profile pic.</p>
+    <small>* this is over here because the eyes need to look at something.</small>
   </div>
 </div>
 

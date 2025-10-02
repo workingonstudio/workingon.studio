@@ -54,7 +54,7 @@
     <p>It’s what you always dream of as a child. Now I am giving them away*.</p>
     <small>* the pro trial that is, not a child that would be mental.</small>
   </div>
-  <div class="flex w-full flex-col gap-6 md:w-2/3 md:flex-row">
+  <div class="flex w-full flex-col gap-6 md:flex-row lg:w-2/3">
     {#each priceTables as { badge: { bgColor, text }, price: { currency, cost, otherText, styles }, features, button: { style, show, icon, iconRef, label } }}
       <div
         class="flex flex-1 flex-col items-start space-y-6 rounded-[14px] border border-slate-300 bg-white p-6 transition-shadow last:shadow-lg"

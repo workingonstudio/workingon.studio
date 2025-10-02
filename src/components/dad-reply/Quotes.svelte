@@ -11,7 +11,7 @@
     </h2>
     <p>1000’s of thumbs, 1000’s of minutes saved. Join the movement.</p>
   </div>
-  <div class="grid grid-cols-1 gap-4 md:grid-cols-3 md:grid-rows-3 md:gap-6">
+  <div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:grid-rows-3 md:gap-6 lg:grid-cols-3 lg:grid-rows-3">
     {#each quoteData as quote}
       <Quote {...quote}></Quote>
     {/each}

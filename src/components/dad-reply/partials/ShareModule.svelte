@@ -38,7 +38,7 @@
 
 <div class="mt-8" in:slide={{ duration: 200, easing: cubicOut }} out:slide={{ duration: 200, delay: 200 }}>
   <div
-    class="mr-0 space-y-6 md:mr-16"
+    class="mr-0 space-y-6 lg:mr-16"
     in:fade={{ delay: 300, duration: 200, easing: cubicOut }}
     out:fade={{ duration: 200 }}
   >
