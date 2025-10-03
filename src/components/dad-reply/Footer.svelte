@@ -54,7 +54,7 @@
         </li>
         <li>
           <iconify-icon icon="material-symbols:cognition-outline-rounded" class="mr-2"></iconify-icon>
-          <a href="https://workingon.studio">workingon.studio</a>
+          <a href="/">workingon.studio</a>
         </li>
       </ul>
     </div>
