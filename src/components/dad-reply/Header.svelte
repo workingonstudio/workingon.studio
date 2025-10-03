@@ -9,7 +9,7 @@
   }
 </script>
 
-<div class="sticky top-0 z-[1000] mb-2 flex bg-white/80 shadow-sm shadow-white backdrop-blur-sm">
+<div class="sticky top-0 z-[1000] mb-2 flex w-full bg-white/80 shadow-sm shadow-white backdrop-blur-sm">
   <header class="mx-auto flex max-w-6xl flex-1 flex-row items-center justify-between">
     <div class="flex flex-row space-x-6">
       <Logo />
@@ -21,9 +21,7 @@
       <ul class="flex flex-row">
         <li>
           {#if $submittedEmail.submitted}
-            <a href="#earlybird" class="font-medium text-slate-400">
-              Yeeeeeaaaah...you've claimed the early bird offer!
-            </a>
+            <a href="#earlybird" class="font-medium text-slate-400">Offer claimed!</a>
           {:else}
             <a href="/" class="font-medium text-blue-600" on:click|preventDefault={handleClick}>
               Claim early bird offer
@@ -38,7 +36,7 @@
 <style>
   @reference "@styles/dad-reply.css";
   header {
-    @apply px-4 py-6 md:px-0 md:py-10;
+    @apply px-4 py-6 lg:px-0 lg:py-10;
     ul {
       li {
         a {

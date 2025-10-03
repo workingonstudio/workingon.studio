@@ -22,6 +22,6 @@
 <style>
   @reference "@styles/global.css";
   footer {
-    color: var(--color-text-muted);
+    @apply text-muted;
   }
 </style>

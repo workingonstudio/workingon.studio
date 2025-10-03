@@ -2,25 +2,27 @@
   import { slide, fade } from "svelte/transition";
   import { cubicOut } from "svelte/easing";
   export let emailName: string = "";
-  export let emailContent: string;
 
   let chromeStoreURL = "https://chromewebstore.google.com/detail/ddkeoflblemlolckmnhihhabplfmogop";
 </script>
 
 <div in:slide={{ duration: 200, easing: cubicOut }}>
   <div class="font-[Roboto]" in:fade={{ delay: 200, duration: 200, easing: cubicOut }}>
-    <strong class="text-[15px]">
+    <strong class="text-xs md:text-[15px]">
       {emailName}
-      <span class="text-xs font-normal text-slate-400">
+      <span class="text-xxs font-normal text-slate-400 md:text-xs">
         <a href={chromeStoreURL}>&lt;download@chrome.store&gt;</a>
       </span>
     </strong>
     <!-- prettier-ignore -->
-    <span class="flex items-center gap-1 text-xs font-normal text-slate-400"><span>to</span><a href="https://workingon.studio">workingon.studio</a>
+    <span class="flex items-center gap-1 text-xxs md:text-xs font-normal text-slate-400"><span>to</span><a href="https://workingon.studio">workingon.studio</a>
       <iconify-icon icon="material-symbols:arrow-drop-down-rounded" class="text-lg"></iconify-icon>
     </span>
-    <p class="py-2">{emailContent}</p>
-    <a class="font-[Arial] text-xs font-normal" href={chromeStoreURL}>via dad reply</a>
+    <div class="my-2 flex">
+      <slot />
+    </div>
+    <!-- <p class="py-2">{emailContent}</p> -->
+    <a class="text-xxs font-[Arial] font-normal md:text-xs" href={chromeStoreURL}>via dad reply</a>
   </div>
 </div>
 

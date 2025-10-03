@@ -1,6 +1,7 @@
 <script lang="ts">
   import Badge from "@components/dad-reply/partials/Badge.svelte";
   import DownloadButton from "./partials/DownloadButton.svelte";
+  import Emoji from "./partials/Emoji.svelte";
   let priceTables = [
     {
       badge: {
@@ -26,7 +27,7 @@
       },
       price: {
         currency: "$",
-        cost: 9.99,
+        cost: 29.99,
         otherText: "per year",
         styles: "line-through",
       },
@@ -47,14 +48,14 @@
   ];
 </script>
 
-<div class="flex flex-col items-start justify-center space-y-12 md:items-center">
-  <div class="flex flex-col space-y-4 text-left md:text-center">
+<div class="flex flex-col items-center justify-center space-y-12 md:items-center">
+  <div class="flex flex-col space-y-4 text-center">
     <span class="cursor-default text-4xl">🎟️</span>
     <h2>Download and get access to a Pro trial.</h2>
     <p>It’s what you always dream of as a child. Now I am giving them away*.</p>
     <small>* the pro trial that is, not a child that would be mental.</small>
   </div>
-  <div class="flex w-full flex-col gap-6 md:w-2/3 md:flex-row">
+  <div class="flex w-full flex-col gap-6 md:flex-row lg:w-4/5">
     {#each priceTables as { badge: { bgColor, text }, price: { currency, cost, otherText, styles }, features, button: { style, show, icon, iconRef, label } }}
       <div
         class="flex flex-1 flex-col items-start space-y-6 rounded-[14px] border border-slate-300 bg-white p-6 transition-shadow last:shadow-lg"
@@ -66,11 +67,17 @@
         </h2>
         <ul class="space-y-3 text-sm font-medium">
           {#each features as feature}
-            <li class="before:mr-2 before:content-['👍']">{@html feature}</li>
+            <li><Emoji class_="mr-2" emoji="👍" />{@html feature}</li>
           {/each}
         </ul>
         {#if show}
-          <DownloadButton {icon} {iconRef} style="{style} w-full" {label} />
+          <DownloadButton
+            {icon}
+            {iconRef}
+            style="{style} w-full"
+            {label}
+            downloadLink="https://chromewebstore.google.com/detail/ddkeoflblemlolckmnhihhabplfmogop"
+          />
         {/if}
       </div>
     {/each}

@@ -1,7 +1,7 @@
 # Terms of Service
 
 **Effective Date:** 28/09/2025  
-**Last Updated:** 28/09/2025
+**Last Updated:** 02/10/2025
 
 ## 1. About Dad Reply
 
@@ -45,23 +45,30 @@ We provide the tool, but you decide how to use it. Use your Dad wisdom.
 The basic Dad Reply (👍 button) is free forever.
 
 ### Pro License
-Pro features require a paid license processed through Polar.sh, including:
+Pro features require a paid subscription processed through Polar.sh, including:
 - Custom emoji responses
 - Advanced button styles
 - Removal of "via Dad Reply" branding
 - Additional customization options
 
 ### Pricing and Payment
-- **Initial Offer:** One-time lifetime license
-- **Future Pricing:** Monthly subscription (existing lifetime license holders keep their benefits)
+- **Early Bird Annual:** $19.99/year (available during promotional trial period - price locked in forever)
+- **Regular Annual:** $29.99/year (standard pricing)
+- **Monthly:** $2.99/month
 - **Payment Processing:** Handled securely by Polar.sh
+- **Subscriptions:** Auto-renew until cancelled
 - **Supported Countries:** All countries supported by Polar.sh
-- **Currency:** Prices displayed in your local currency where available
+- **Currency:** Prices shown in USD; local currency conversion may apply
+
+### Trial Period
+- Pro features available during trial period with "via Dad Reply" branding
+- Branding removed with paid subscription
+- Trial access via email registration
 
 ### Refunds
 - **Free Version:** No refunds needed (it's free!)
-- **Pro License:** Refunds handled according to Polar.sh's refund policy
-- **Contact us** at support@workingon.studio if you have payment issues
+- **Paid Subscriptions:** Refunds handled according to Polar.sh's refund policy
+- **Contact us** at support@workingon.studio for payment issues
 
 ## 5. What We Don't Guarantee
 

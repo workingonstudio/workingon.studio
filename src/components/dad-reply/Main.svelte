@@ -9,8 +9,8 @@
 </script>
 
 <Header />
-<main class="mx-auto flex max-w-100 flex-col px-4 pt-72 md:max-w-6xl md:px-0 md:pt-0">
-  <div class="space-y-60">
+<main class="mx-auto flex max-w-full flex-col px-4 md:max-w-6xl md:pt-0">
+  <div class="space-y-30 md:space-y-60">
     <Hero />
     <Quotes />
     <ComingSoon />

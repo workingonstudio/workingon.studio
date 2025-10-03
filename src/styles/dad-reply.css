@@ -15,6 +15,9 @@
   --color-text-body: theme(colors.slate.500);
   --color-text-muted: theme(colors.slate.400);
 
+  --text-xxs: 0.6875rem;
+  --text-xxs--line-height: calc(1 / 0.6875);
+
   --screen-sm: 40rem; /* 640px */
   --screen-md: 48rem; /* 768px */
   --screen-lg: 64rem; /* 1024px */
@@ -42,7 +45,7 @@
   }
 
   h1 {
-    @apply text-2xl md:text-4xl/14;
+    @apply text-3xl md:text-4xl/14;
   }
 
   h2 {
@@ -80,16 +83,23 @@
         background: var(--color-primary-hover);
       }
       @apply text-white;
+      &:disabled {
+        @apply cursor-default bg-gray-100 text-gray-400;
+        &:hover {
+          @apply bg-gray-100;
+        }
+      }
     }
     &.hollow {
       color: var(--color-primary);
       border-color: var(--color-primary);
       @apply bg-white;
-    }
-    &:disabled {
-      @apply cursor-default bg-gray-100 text-gray-400;
-      &:hover {
-        @apply bg-gray-100;
+      &:disabled {
+        @apply cursor-default border-transparent bg-none text-gray-400;
+        @apply transition-none;
+        &:hover {
+          @apply bg-none;
+        }
       }
     }
   }
