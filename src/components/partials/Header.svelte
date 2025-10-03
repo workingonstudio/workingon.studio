@@ -111,12 +111,13 @@
 
   nav {
     ul {
+      @apply gap-6;
       li {
         @apply flex flex-row items-center gap-4 transition-opacity duration-300;
         a {
           @apply flex w-full flex-col justify-between gap-1;
           p {
-            @apply text-xs text-gray-500;
+            @apply text-body text-xs;
           }
         }
       }

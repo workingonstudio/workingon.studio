@@ -9,19 +9,22 @@
 >
   <a
     href="https://find-and-update.company-information.service.gov.uk/company/16700615"
-    class="flex flex-row items-center justify-center gap-1 transition-all delay-100 hover:text-gray-100 md:justify-normal"
+    class="flex flex-row items-center justify-center gap-1 md:justify-normal"
   >
     <iconify-icon icon="material-symbols:copyright-outline-rounded" class="text-sm"></iconify-icon>
     <span>workingonstudio ltd, no: 16700615</span>
   </a>
-  <span>
+  <a href="https://github.com/workingonstudio/workingon.studio">
     last updated: {DateTime.fromISO(date).toFormat("ccc',' dd LLL y TT ZZZ")}
-  </span>
+  </a>
 </footer>
 
 <style>
   @reference "@styles/global.css";
   footer {
     @apply text-muted;
+    a {
+      @apply transition-all delay-100 hover:text-gray-100;
+    }
   }
 </style>
