@@ -39,7 +39,7 @@
           </a>
         </div>
       </div>
-      <ul class="space-y-2">
+      <ul class="space-y-3 md:space-y-2">
         <li>
           <iconify-icon icon="material-symbols:support" class="mr-2"></iconify-icon>
           <a href="mailto:support@workingon.studio">Support</a>

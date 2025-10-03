@@ -71,7 +71,13 @@
           {/each}
         </ul>
         {#if show}
-          <DownloadButton {icon} {iconRef} style="{style} w-full" {label} />
+          <DownloadButton
+            {icon}
+            {iconRef}
+            style="{style} w-full"
+            {label}
+            downloadLink="https://chromewebstore.google.com/detail/ddkeoflblemlolckmnhihhabplfmogop"
+          />
         {/if}
       </div>
     {/each}

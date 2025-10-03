@@ -32,7 +32,6 @@
         iconRef="chrome"
         downloadLink="https://chromewebstore.google.com/detail/ddkeoflblemlolckmnhihhabplfmogop"
       />
-      <!-- <DownloadButton icon label="Download for IE 6.0" iconRef="" style="hollow" /> -->
       <button class="btn hollow gap-2.5" on:click|preventDefault={switchButton} disabled={IEButton.clicked}>
         {#if IEButton.clicked}
           <span class="h-[20px] w-[25px] text-xl leading-none">🤔</span>
