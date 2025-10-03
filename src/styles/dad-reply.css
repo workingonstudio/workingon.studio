@@ -83,16 +83,23 @@
         background: var(--color-primary-hover);
       }
       @apply text-white;
+      &:disabled {
+        @apply cursor-default bg-gray-100 text-gray-400;
+        &:hover {
+          @apply bg-gray-100;
+        }
+      }
     }
     &.hollow {
       color: var(--color-primary);
       border-color: var(--color-primary);
       @apply bg-white;
-    }
-    &:disabled {
-      @apply cursor-default bg-gray-100 text-gray-400;
-      &:hover {
-        @apply bg-gray-100;
+      &:disabled {
+        @apply cursor-default border-transparent bg-none text-gray-400;
+        @apply transition-none;
+        &:hover {
+          @apply bg-none;
+        }
       }
     }
   }

@@ -2,6 +2,17 @@
   import FeaturePills from "./FeaturePills.svelte";
   import DownloadButton from "./partials/DownloadButton.svelte";
   import Email from "./partials/Email.svelte";
+
+  $: IEButton = {
+    icon: "fa-brands fa-internet-explorer",
+    label: "Download for IE 6.0",
+    clicked: false,
+  };
+
+  function switchButton() {
+    IEButton.label = "Dude, seriously?";
+    IEButton.clicked = true;
+  }
 </script>
 
 <section class="mt-20 flex flex-col gap-12 md:mt-0 md:items-center md:gap-4 lg:flex-row">
@@ -21,7 +32,16 @@
         iconRef="chrome"
         downloadLink="https://chromewebstore.google.com/detail/ddkeoflblemlolckmnhihhabplfmogop"
       />
-      <DownloadButton icon label="Download for IE 6.0" iconRef="internet-explorer" style="hollow" />
+      <!-- <DownloadButton icon label="Download for IE 6.0" iconRef="" style="hollow" /> -->
+      <button class="btn hollow gap-2.5" on:click|preventDefault={switchButton} disabled={IEButton.clicked}>
+        {#if IEButton.clicked}
+          <!-- <i class="fa-regular fa-face-thinking text-xl"></i> -->
+          <span class="h-[20px] w-[25px] text-xl leading-none">🤔</span>
+        {:else}
+          <i class="fa-brands fa-internet-explorer text-xl"></i>
+        {/if}
+        {IEButton.label}
+      </button>
     </div>
   </div>
   <div class="card email-container the-shadow flex-1 md:order-none lg:max-w-3xl">
