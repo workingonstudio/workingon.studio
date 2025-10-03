@@ -35,7 +35,6 @@
       <!-- <DownloadButton icon label="Download for IE 6.0" iconRef="" style="hollow" /> -->
       <button class="btn hollow gap-2.5" on:click|preventDefault={switchButton} disabled={IEButton.clicked}>
         {#if IEButton.clicked}
-          <!-- <i class="fa-regular fa-face-thinking text-xl"></i> -->
           <span class="h-[20px] w-[25px] text-xl leading-none">🤔</span>
         {:else}
           <i class="fa-brands fa-internet-explorer text-xl"></i>
@@ -51,6 +50,13 @@
 
 <style>
   @reference "@styles/dad-reply.css";
+  .btn {
+    &.hollow {
+      &:disabled {
+        @apply text-text;
+      }
+    }
+  }
   .email-container {
     @apply md:w-2/3;
     @apply md:relative md:bottom-0;
