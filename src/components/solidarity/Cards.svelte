@@ -98,8 +98,8 @@
     position: relative;
     background: radial-gradient(circle at center, transparent 0%, oklch(98.5% 0.001 106.423) 50%);
     background-position: center;
-    background-size: 110% 110%;
     transition: background-size 700ms cubic-bezier(0.95, 0.05, 0.795, 0.035);
+    @apply bg-size-[90%_90%] md:bg-size-[110%_110%];
   }
 
   .overlay::before {
@@ -111,6 +111,6 @@
   }
 
   .overlay.expanded {
-    background-size: 400% 400%;
+    @apply bg-size-[400%_400%];
   }
 </style>

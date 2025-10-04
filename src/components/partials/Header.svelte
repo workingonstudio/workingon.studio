@@ -60,7 +60,7 @@
       <!-- prettier-ignore -->
       <h1 class="font-display inline-block">{headerText}<span>{dotText}</span></h1>
     </a>
-    <button type="button" onclick={toggleMenu}>
+    <button type="button" onclick={toggleMenu} aria-label="Toggle menu">
       <iconify-icon
         {icon}
         class="text-2xl text-gray-500 transition-colors duration-500 hover:cursor-pointer hover:text-gray-100 {isSpinning

@@ -3,15 +3,15 @@ import * as SDContent from "@docs/solidarity/homepage.md";
 const { frontmatter, Content } = SDContent;
 ---
 
-<section class="flex w-2xl flex-col gap-11">
+<section class="flex w-full flex-col gap-11 md:w-2xl">
   <!-- prettier-ignore -->
   <header class="flex flex-col gap-6">
     <h1>{ frontmatter.headerFirst }<br/> {frontmatter.headerSecond}<span>{frontmatter.headerPunctuation}</span></h1>
-    <div class="w-lg">
+    <div class="w-full md:w-lg">
       <p>{ frontmatter.subHeader }</p>
     </div>
   </header>
-  <main class="flex w-lg flex-col"><Content /></main>
+  <main class="flex w-full flex-col md:w-lg"><Content /></main>
   <footer>{frontmatter.footer}</footer>
 </section>
 

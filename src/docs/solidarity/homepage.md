@@ -26,6 +26,6 @@ This simple Chrome Extension, once toggled, gives you the illusion of every memb
 
 That's it, no options, no settings. Just click.
 
-It might sound silly, but it’s surprising how powerful this simple shift in perspective can be.
+It’s surprising how powerful this simple shift in perspective can be.
 
-For those currently in this position, I hope it will help ease the journey. And others? Give it a shot, see how it feels.
+For those currently in this position, I hope it will help ease the journey. And others? Give it a shot, see how it makes you feel.

@@ -84,7 +84,7 @@
   }
 
   h1 {
-    @apply text-4xl md:text-4xl/14;
+    @apply text-3xl/12 lg:text-4xl/14;
   }
 
   h2 {
