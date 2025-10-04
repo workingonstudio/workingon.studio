@@ -31,4 +31,4 @@ Well, what if everyone is **#opentowork**? I mean *everyone*. You, your old coll
 
 With a single click, everyone will now appear as **#opentowork** on LinkedIn. That’s it. No options. No menus. No payments (because let’s face it that certainly isn’t an expense right now).
 
-Rather than standing alone, you stand beside.
+No one stands alone when everyone's **#opentowork**.
