@@ -1,31 +1,35 @@
 ---
-headerFirst: Release yourself from
-headerSecond: the weight of the green ring
+headerFirst: The "#opentowork" ring sucks,
+headerSecond: make everyone wear it
 headerPunctuation: .
-subHeader: The psychology of gentle exposure, and the way a fear of shame can be softened, not avoided.
-footer: good luck on your journey.
+subHeader: A Chrome Extension that makes you feel less shit about looking for work.
 ---
 
-To some, generally those employed, there can be a fear of your employer finding out (despite taking precautions). But to others it can be another weight around your neck, depending on your profile picture, when you find yourself in a position of unemployment.
+So you’ve just come off the call with HR, and the person that’s been at the head of your department. Closed the Zoom/Hangout/Teams window, and the countless others that have been logged out while you were on the call (this actually happened to me). 
 
-As much as it makes you standout (as it's supposed to), it can often feel like the virtual sandwich board of a once successful stock broker just wanting to feed their family.
+You rush to your dusty LinkedIn profile and begin frantically updating your work experience. If you made an impression you’ll start receiving messages of sorrow, details are passed on. You ask for references. But I mean who is really gonna be looking at those?
 
-It can be this feeling that might deter those who really need to use it, to not.
+But now the real work begins. You need to make it known that you are now available for work. This basically becomes the equivalent of getting under someone to get over someone. No time to grieve, no time to take stock of what you really want. Feeling dejected, could you have done more? Should I have said that?
 
-The thing about the **#opentowork** banner is, although it allows you to stand out, it can quickly become a constant reminder of the position you are in. It's the food in someone's teeth that seems to get bigger every time they open their mouth. The more you look, the bigger it gets.
+The truth is most of the reasons for letting people go is the bullshit way out of your control. The poor decisions made by those on a higher pay grade, but refuse to take accountability.
+If that number isn’t going up, they look down, not around.
 
-Every time you login, every time you post, every time you update your profile with the latest buzzwords it's there. A reminder, I'm looking for work, I need work.
+But I digress. The last part of the frantic update is adding the **#opentowork** banner. If you're anything like me, you already had it set to “visible to recruiters only”. But now it’s visible to *everyone*.
 
-## What can we do<span>?</span>
+Look I get it, it’s there for a reason. But my god does it feel shit. You’re already in a vulnerable state. Wondering where the next paycheque is going to come from, figuring out what you can cut back on. Goodbye Netflix, goodbye Amazon Prime, goodbye cheeky takeaway. Tipping, what’s that?
 
-Well how about we harness the power of Exposure Therapy. The idea that if you can expose someone in a safe environment, to what they fear or worry about, they can gradually overcome it.
+You click it. LinkedIn asks if you want to post about it. 'Hey I've just been dumped, looking for…' Nah, not yet. You have faith. This will be quick. But then 1 day, 1 week, 1 month.
 
-So…I'm calling it **Solidarity**.
+Every time you log in it’s there staring you in the face. **#opentowork** **#opentowork** **#opentowork**. That green disc hanging around your neck. With your smiling face behind it. “Look at me, I’m so cheery, despite the absolute terror of not being able to pay my mortgage at the end of the month.”
 
-This simple Chrome Extension, once toggled, gives you the illusion of every member on LinkedIn being **#opentowork**. Even Bill Gates.
+I don’t know about you but it sometimes seems like I’m the only one with it on. As I scroll the feed I see success, performance gloating, and countless tips of what I should be doing to get a better chance of finding work. How I should be presenting myself. Don’t do that, do this, no not this, that. Comment “help me I’m desperate” for my 10 page .pdf.
 
-That's it, no options, no settings. Just click.
+## So what can we do<span>?</span>
 
-It’s surprising how powerful this simple shift in perspective can be.
+Well, what if everyone is **#opentowork**? I mean *everyone*. You, your old colleagues (though to be fair if you were let go, it’s not long until they are), the person that gave you the news after reading a Brené Brown quote 10 minutes before. Bill Gates.
 
-For those currently in this position, I hope it will help ease the journey. And others? Give it a shot, see how it makes you feel.
+## With Solidarity everyone is #opentowork<span>.</span>
+
+With a single click, everyone will now appear as **#opentowork** on LinkedIn. That’s it. No options. No menus. No payments (because let’s face it that certainly isn’t an expense right now).
+
+Rather than standing alone, you stand beside.
