@@ -71,7 +71,7 @@
         suddenly, uncomfortably aware of it.
       </p>
       <p>
-        I'm not trying to fix broken systems. I meet people where they are and changing how they interact with those
+        I'm not trying to fix broken systems. I meet people where they are and change how they interact with those
         systems.
       </p>
       <p>Cheers.</p>
