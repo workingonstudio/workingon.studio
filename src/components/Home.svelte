@@ -1,12 +1,12 @@
 <script lang="ts">
-  const actionList = ["making the obvious visible", "centring people in technology", "finding delight in the mundane"];
+  const actionList = ["calling out the bullshit", "standing up for delight", "pulling back the curtain"];
 </script>
 
 <div class="group w-full md:w-3xl">
   <div class="space-y-12">
     <!-- prettier-ignore -->
     <h1>
-      A creative studio producing cultural mirror products that make unconscious behaviours suddenly visible<span>.</span>
+      We've been prioritising the wrong things for too long. I make things that force you to look at what you're actually doing<span>.</span>
     </h1>
     <div class="max-w-md">
       {#each actionList as item}
