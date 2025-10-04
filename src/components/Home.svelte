@@ -1,5 +1,5 @@
 <script lang="ts">
-  const actionList = ["making the obvious visable", "centring people in technology", "finding delight in the mundane"];
+  const actionList = ["making the obvious visible", "centring people in technology", "finding delight in the mundane"];
 </script>
 
 <div class="group w-full md:w-3xl">
