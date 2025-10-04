@@ -62,18 +62,17 @@
     </div>
     <div class="space-y-5 *:font-[Arial] *:text-black!">
       <p>To all,</p>
-      <p>Look, I'm tired of products that pretend to solve problems while creating new ones.</p>
-      <p class="hidden md:flex">
-        Tired of "user experiences" designed to extract rather than delight. Tired of the gap between what we say we're
-        building and what we're actually building.
-      </p>
       <p>
+        Look, I'm tired of products that pretend to solve problems while creating new ones. Tired of "user experiences"
+        designed to extract rather than delight.
+      </p>
+      <p class="hidden md:flex">
         So I'm building cultural mirror products. Things that hold up what people are unconsciously doing and make them
         suddenly, uncomfortably aware of it.
       </p>
       <p>
-        Not because I'm trying to fix broken systems. Because I'm meeting people where they are and changing how they
-        interact with those systems.
+        I'm not trying to fix broken systems. I meet people where they are and changing how they interact with those
+        systems.
       </p>
       <p>Cheers.</p>
     </div>

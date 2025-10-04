@@ -10,7 +10,7 @@
   };
 
   function switchButton() {
-    IEButton.label = "Dude, seriously?";
+    IEButton.label = "Does Mum know you're on here?";
     IEButton.clicked = true;
   }
 </script>
@@ -20,8 +20,8 @@
     <h1>Instantly reply to your emails with minimal effort and maximum dad energy.</h1>
     <div class="w-full space-y-6 lg:w-5/6">
       <p class="text-pretty">
-        Whether it’s that weekly status report, someone asking a question that is already in the wiki, or a simple
-        request for coffee. There’s now a better way to respond to the mundane, inane or frivolous emails.
+        Whether it's that weekly status report, someone asking a question that is already in the wiki, or a simple
+        request for coffee, there's now a better way to respond to the mundane, inane, or frivolous emails.
       </p>
       <FeaturePills />
     </div>

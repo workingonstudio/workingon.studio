@@ -26,8 +26,8 @@
         <ToneRadio value="tone-6" emoji="👍🏿" />
       </div>
       <p>
-        In v1.5.0 you’ll have the ability to change the tone of thumb up. You have the choice everywhere else, so why
-        not here too.*
+        You’ll have the ability to change the tone of the thumb up. You have the choice everywhere else, so why not here
+        too.*
       </p>
       <small class="text-xs text-slate-400">
         * I understand that this is like selling a car on it having electric windows.
@@ -35,15 +35,15 @@
     </div>
     <div class="space-y-6">
       <div class="flex flex-row place-content-between items-center">
-        <h3 class="inline-flex">A new button?</h3>
+        <h3 class="inline-flex">A new button.</h3>
         <Badge text="Pro" bgColor="bg-orange-100" />
       </div>
       <div class="py-6">
         <div class="card relative hidden flex-col rounded-none rounded-bl-2xl border-t-0 border-r-0 p-12 lg:flex">
           <div class="absolute inset-x-0 space-y-5 px-12 font-[Arial] text-sm/7 [&_p]:!text-black">
             <p>
-              Not because I'm trying to fix broken systems. Because I'm meeting people where they are and changing how
-              they interact with those systems.
+              I'm not trying to fix broken systems. I meet people where they are and changing how they interact with
+              those systems.
             </p>
             <p>Cheers.</p>
           </div>
@@ -58,13 +58,12 @@
         </div>
       </div>
       <p>
-        That right baby. This isn’t like selling electric windows in a new car. This is like selling a purpose build
-        napping pod.
+        New gains, dad bod or beer belly? Like a divorced dad, there are now more options. All selectable via dropdown.
       </p>
     </div>
     <div class="space-y-6">
       <div class="flex flex-row place-content-between items-center">
-        <h3 class="inline-flex">Custom responses?</h3>
+        <h3 class="inline-flex">Custom responses.</h3>
         <Badge text="Pro" bgColor="bg-orange-100" />
       </div>
       <div
@@ -83,17 +82,14 @@
           🐰
         </div>
       </div>
-      <p>
-        That right baby. This isn’t like selling electric windows in a new car. This is like selling a purpose build
-        napping pod. Check out this new addition.
-      </p>
+      <p>But what if you don't want those emojis? Fine. Use whatever you want. But is it "praying" or "high five"?</p>
     </div>
   </div>
   <div class="order-first mb-40 space-y-4 text-pretty md:sticky md:top-1/3 md:order-last md:w-2/5 lg:mb-0 lg:w-1/2">
     <span class="block text-4xl">👀</span>
     <h2>What's coming in v1.5</h2>
     <p>This dad’s hit the gym, bought some new fits and is off fishing to get his Tinder profile pic.</p>
-    <small class="hidden md:flex">* this is over here because the eyes need to look at something.</small>
+    <small class="hidden md:flex">* this is over here because those eyes need to look at something.</small>
     <small class="md:hidden">* I know those eyes are looking over there, but it's below.</small>
   </div>
 </div>
