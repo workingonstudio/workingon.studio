@@ -29,6 +29,6 @@ Well, what if everyone is **#opentowork**? I mean *everyone*. You, your old coll
 
 ## With Solidarity everyone is #opentowork<span>.</span>
 
-With a single click, everyone will now appear as **#opentowork** on LinkedIn. That’s it. No options. No menus. No payments (because let’s face it that certainly isn’t an expense right now).
+With a single click, everyone will now appear as **#opentowork** on LinkedIn. That’s it. No options. No menus. No payments (because let’s face it, that certainly isn’t an option right now).
 
 No one stands alone when everyone's **#opentowork**.

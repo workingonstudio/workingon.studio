@@ -11,7 +11,7 @@
   {
     "icon": "boolean",
     "name": "Solidarity",
-    "description": "The #opentowork ring sucks, make everyone wear it. A Chrome Extension that makes you feel less shit about looking for work.",
+    "description": "A Chrome Extension that makes you feel less shit about looking for work.",
     "version": 1.1,
     "status": "live",
     "tags": ["Free"],
