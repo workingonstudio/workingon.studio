@@ -11,6 +11,10 @@
     website: zod.string().max(0),
   });
 
+  function resubmitEmail() {
+    submittedEmail.reset();
+  }
+
   const { form, isSubmitting, isValid, data, errors } = createForm({
     extend: validator({ schema }),
     onSubmit: async (values) => {
@@ -31,7 +35,11 @@
           throw new Error(data.message || `Subscription failed: ${response.status}`);
         }
 
-        submittedEmail.set({ submitted: true, email: values.email });
+        submittedEmail.set({
+          submitted: true,
+          email: values.email,
+          claimed: true,
+        });
 
         return { success: true };
       } catch (error) {
@@ -97,13 +105,17 @@
       <span class="cursor-default text-4xl">🥳</span>
       <h3>Cliché celebration emoji.</h3>
       <p>
-        Your email <strong class="text-slate-700">{$submittedEmail.email}</strong>
-        has been added to the early bird list.
+        A confirmation email has been sent to <strong class="text-slate-700">{$submittedEmail.email}</strong>
+        click the link to confirm your subscription (be sure to check SPAM).*
       </p>
-      <small>
-        * in case you forgot, that's $19.99 per year (33.3% discount). Let's just hope when I am ready to launch it
-        doesn't go to spam.
-      </small>
+      <small>* when the trial ends you'll be sent a discount code, $19.99 per year (33.3% discount).</small>
+      <button
+        on:click|preventDefault={resubmitEmail}
+        type="button"
+        class="inline-flex font-normal text-blue-600 underline"
+      >
+        Wrong email? Need to resubmit?
+      </button>
     </div>
   {/if}
 </div>

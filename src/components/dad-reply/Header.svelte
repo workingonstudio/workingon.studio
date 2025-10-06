@@ -20,7 +20,7 @@
     <nav class="font-regular flex flex-row space-x-4 text-sm [&_a]:hover:underline">
       <ul class="flex flex-row">
         <li>
-          {#if $submittedEmail.submitted}
+          {#if $submittedEmail.claimed}
             <a href="#earlybird" class="font-medium text-slate-400">Offer claimed!</a>
           {:else}
             <a href="/" class="font-medium text-blue-600" on:click|preventDefault={handleClick}>
