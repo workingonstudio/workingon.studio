@@ -6,8 +6,111 @@
 }
 
 @theme {
-  --font-sans: "Poppins", sans-serif;
-  --font-display: "Geist", sans-serif;
+  --font-geist: "Geist", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+
+  --color-primary: theme(colors.blue.600);
+  --color-primary-hover: theme(colors.blue.700);
+  --color-text: theme(colors.slate.700);
+  --color-text-body: theme(colors.slate.500);
+  --color-text-muted: theme(colors.slate.400);
+
+  --text-xxs: 0.6875rem;
+  --text-xxs--line-height: calc(1 / 0.6875);
+
+  --screen-sm: 40rem; /* 640px */
+  --screen-md: 48rem; /* 768px */
+  --screen-lg: 64rem; /* 1024px */
+  --screen-xl: 80rem; /* 1280px */
+  --screen-2xl: 96rem; /* 1536px */
+  --screen-3xl: 112rem; /* 1792px */
+}
+
+@layer base {
+  body {
+    font-family: var(--font-poppins);
+    color: var(--color-text);
+    &::selection {
+      background: var(--color-primary);
+      @apply text-white;
+    }
+    @apply text-base;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--color-text);
+    @apply font-semibold text-pretty;
+  }
+
+  h1 {
+    @apply text-3xl md:text-4xl/14;
+  }
+
+  h2 {
+    @apply text-xl md:text-3xl;
+  }
+
+  h3 {
+    @apply text-lg md:text-2xl;
+  }
+
+  p {
+    color: var(--color-text-body);
+    @apply leading-relaxed;
+    @apply text-sm md:text-base;
+  }
+
+  small {
+    color: var(--color-text-muted);
+    @apply text-xs;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-xl border border-slate-300 bg-white p-6;
+  }
+  .btn {
+    @apply flex justify-center rounded-lg border-2 border-transparent p-3;
+    @apply text-sm font-semibold;
+    @apply transition-colors duration-300 ease-in-out;
+    @apply cursor-pointer;
+    &.solid {
+      background: var(--color-primary);
+      &:hover {
+        background: var(--color-primary-hover);
+      }
+      @apply text-white;
+      &:disabled {
+        @apply cursor-default bg-gray-100 text-gray-400;
+        &:hover {
+          @apply bg-gray-100;
+        }
+      }
+    }
+    &.hollow {
+      color: var(--color-primary);
+      border-color: var(--color-primary);
+      @apply bg-white;
+      &:disabled {
+        @apply cursor-default border-transparent bg-none text-gray-400;
+        @apply transition-none;
+        &:hover {
+          @apply bg-none;
+        }
+      }
+    }
+  }
+  input[type="email"],
+  input[type="text"] {
+    color: var(--color-text-body);
+    @apply h-12 w-full flex-1 rounded-lg border border-slate-300 p-2 text-sm placeholder:font-normal placeholder:text-slate-400;
+  }
+  .custom-outline {
+    @apply transition-colors outline-none hover:border-blue-500 hover:shadow-sm hover:shadow-blue-500/5 focus:ring-1 focus:ring-blue-500/50 focus:ring-offset-2 active:ring-1 active:ring-blue-500/50;
+  }
 }
 
 .the-shadow {

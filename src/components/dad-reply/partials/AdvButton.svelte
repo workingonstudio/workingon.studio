@@ -1,8 +1,9 @@
 <!-- src/components/dad-reply/partials/NewButton.svelte -->
 <script lang="ts">
-  import Icon from "@components/Icon.svelte";
+  import Emoji from "./Emoji.svelte";
+
   let showMenu: boolean = true;
-  $: buttonIcon = showMenu ? "close" : "arrowDown";
+  $: buttonIcon = showMenu ? "material-symbols:close-small-rounded" : "material-symbols:keyboard-arrow-down-rounded";
 
   let containerRef: any;
 
@@ -45,7 +46,7 @@
     >
       {#each buttonOptions as option, index}
         <button class={index === selectedIndex ? "active" : ""} on:click|preventDefault={() => updateButton(option)}>
-          <span class="mr-2">{option.emoji}</span>
+          <Emoji class_="mr-2" emoji={option.emoji} />
           {option.text}
         </button>
       {/each}
@@ -54,15 +55,16 @@
 
   <div class="google-button flex max-h-9 flex-row">
     <button class="rounded-full rounded-r-lg border px-4 py-2">
-      <span class="mr-2">{currentButton.emoji}</span>
+      <Emoji class_="mr-2" emoji={currentButton.emoji} />
       {currentButton.text}
     </button>
     <button
       type="button"
       class="flex items-center justify-center rounded-r-full border border-l-0 pr-2 pl-1"
       on:click={handleClick}
+      aria-label="close / open button"
     >
-      <Icon name={buttonIcon} class_="text-2xl" />
+      <iconify-icon icon={buttonIcon} class="text-2xl"></iconify-icon>
     </button>
   </div>
 </div>

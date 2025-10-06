@@ -1,0 +1,47 @@
+[
+  {
+    "icon": "mail-reply",
+    "name": "Dad Reply",
+    "description": "Instantly reply to your emails with minimal effort and maximum dad energy.",
+    "version": 1.0,
+    "status": "live",
+    "tags": ["Paid", "Free"],
+    "link": "dad-reply"
+  },
+  {
+    "icon": "boolean",
+    "name": "Solidarity",
+    "description": "A Chrome Extension that makes you feel less shit about looking for work.",
+    "version": 1.1,
+    "status": "live",
+    "tags": ["Free"],
+    "link": "solidarity"
+  },
+  {
+    "icon": "rain-drop",
+    "name": "Hidden Current",
+    "description": "It's not about how much AI is costing you, but how much it's costing us.",
+    "version": 0.5,
+    "status": "draft",
+    "tags": ["Free"],
+    "link": "/"
+  },
+  {
+    "icon": "noodle-bowl",
+    "name": "Design Dojo",
+    "description": "If you've ever said you were a ninja, it's time to prove it in the dojo.",
+    "version": 0.1,
+    "status": "draft",
+    "tags": ["Paid", "Free"],
+    "link": "/"
+  },
+  {
+    "icon": "application",
+    "name": "Only 98",
+    "description": "How much will you spend to be truly unique? Sustainable uniqueness vs wasteful exclusivity.",
+    "version": 0.1,
+    "status": "draft",
+    "tags": ["Paid"],
+    "link": "/"
+  }
+]

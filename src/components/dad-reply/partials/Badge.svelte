@@ -1,5 +1,6 @@
 <script lang="ts">
   export let text: string = "";
+  // Update to be STYLES for more Flexibility.
   export let bgColor: string = "bg-slate-200";
 </script>
 

@@ -1,12 +1,12 @@
 <script lang="ts">
-  import Icon from "@components/Icon.svelte";
+  import Emoji from "./Emoji.svelte";
 
   let {
     iconName = undefined,
     text = "",
     type = "click",
     href = "",
-    thumbUp = undefined,
+    clickable = undefined,
     disabled = false,
     onclick = () => {},
   }: {
@@ -14,7 +14,7 @@
     text?: string;
     type?: "email" | "click";
     href?: string;
-    thumbUp?: boolean;
+    clickable?: boolean;
     disabled?: boolean;
     onclick?: () => void;
   } = $props();
@@ -29,7 +29,7 @@
     if (type === "email") {
       const { to, subject, body } = emailConfig;
       window.location.href = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    } else if (thumbUp) {
+    } else if (clickable) {
       onclick();
     }
   }
@@ -39,12 +39,12 @@
   type="button"
   onclick={handleClick}
   {disabled}
-  class="google-button flex max-h-9 items-center px-4 py-2 text-sm font-medium [&_span]:mr-3"
+  class="google-button text-xxs flex max-h-9 items-center px-3 py-1 font-medium md:px-4 md:py-2 md:text-sm"
 >
   {#if iconName}
-    <Icon name={iconName} class_="mr-3 text-[18px]" />
+    <iconify-icon icon={iconName} class="mr-1 text-[18px] md:mr-3"></iconify-icon>
   {:else}
-    <span>👍</span>
+    <Emoji class_="mr-2 md:mr-3" emoji="👍" />
   {/if}
   {text}
 </button>

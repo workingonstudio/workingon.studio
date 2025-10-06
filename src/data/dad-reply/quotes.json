@@ -3,23 +3,23 @@
     "quote": "This is the artisanal, hand-crafted feature in a world of mass-produced software.<br/><br/>A beautiful reminder that quality will always trump quantity.",
     "cite": "Peter Dedene",
     "link": "https://x.com/peterdedene/status/1954985670315061705",
-    "gridSetting": "row-span-3",
+    "gridSetting": "lg:row-span-3 md:row-span-2",
     "itemAlign": "items-center",
-    "textSize": "text-xl"
+    "textSize": "md:text-xl"
   },
   {
     "quote": "Y'all building AGI when you could be innovating like this.",
     "cite": "Ryan Hoover",
     "link": "https://x.com/rrhoover/status/1954983479135047766",
-    "gridSetting": "row-span-2",
+    "gridSetting": "lg:row-span-2 md:row-span-1",
     "itemAlign": "items-center",
-    "textSize": "text-3xl"
+    "textSize": "md:text-3xl"
   },
   {
     "quote": "This is such a clever productivity hack. A quick thumbs-up saves so much time!",
     "cite": "Grace Marie",
     "link": "https://www.producthunt.com/products/dad-reply?comment=4796869",
-    "gridSetting": "col-start-2 row-start-3",
+    "gridSetting": "lg:col-start-2 lg:row-start-3 md:col-start-1 md:row-start-3",
     "itemAlign": "",
     "textSize": ""
   },
@@ -27,15 +27,15 @@
     "quote": "When the world is on fire with low-quality ai generated replies that end with contrived engagement baiting questions, this is the plug-in that we need.",
     "cite": "Mcval Osborne",
     "link": "https://www.producthunt.com/products/dad-reply?comment=4795603",
-    "gridSetting": "row-span-2 col-start-3 row-start-2",
+    "gridSetting": "lg:row-span-2 lg:col-start-3 lg:row-start-2",
     "itemAlign": "items-center",
-    "textSize": "text-lg"
+    "textSize": "md:text-lg"
   },
   {
     "quote": "This is the rubber-stamp version of “Sounds good.",
     "cite": "Sharmada Shastry",
     "link": "https://www.producthunt.com/products/dad-reply/launches/dad-reply?comment=4797735",
-    "gridSetting": "col-start-3 row-start-1",
+    "gridSetting": "lg:col-start-3 lg:row-start-1 md:col-start-2",
     "itemAlign": "",
     "textSize": ""
   },
@@ -43,9 +43,9 @@
     "quote": "Finally, a productivity tool that perfectly captures my emotional availability in emails.",
     "cite": "Alesia Cherniavskaia",
     "link": "https://www.producthunt.com/products/dad-reply?comment=4795887",
-    "gridSetting": "",
+    "gridSetting": "md:col-span-2 lg:col-span-1",
     "itemAlign": "",
-    "textSize": ""
+    "textSize": "md:text-3xl lg:text-base"
   },
   {
     "quote": "I think think this might be my favorite launch.",
@@ -61,6 +61,6 @@
     "link": "https://www.producthunt.com/products/dad-reply?comment=4795289",
     "gridSetting": "",
     "itemAlign": "",
-    "textSize": "text-xl"
+    "textSize": "md:text-xl"
   }
 ]

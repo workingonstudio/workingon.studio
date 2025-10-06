@@ -1,14 +1,20 @@
 <script lang="ts">
+  import Emoji from "./Emoji.svelte";
 </script>
 
 <a href="#top" class="thumb-swing">
-  <h2 class="font-display flex items-center text-xl font-bold tracking-tight">
-    <span class="mr-2">👍</span>
+  <h2 class="flex items-center font-bold tracking-tight">
+    <Emoji class_="mr-2 emoji" emoji="👍" />
     <span class="leading-none">Dad Reply</span>
   </h2>
 </a>
 
 <style>
+  @reference "@styles/dad-reply.css";
+  h2 {
+    font-family: var(--font-geist);
+    @apply text-base md:text-xl;
+  }
   @keyframes thumbSwing {
     0% {
       transform: rotate(0deg);
@@ -40,7 +46,7 @@
     }
   }
 
-  .thumb-swing:hover span:first-child {
+  .thumb-swing:hover :global(.emoji) {
     animation: thumbSwing 1s ease-in;
   }
 </style>

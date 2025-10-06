@@ -1,7 +1,10 @@
 <script lang="ts">
   import Reply from "./Reply.svelte";
   import MailButton from "./MailButton.svelte";
+  import ShareModule from "./ShareModule.svelte";
+  import Emoji from "./Emoji.svelte";
   let showReply = false;
+  let showShare = false;
 
   let replyCollection = [
     {
@@ -38,46 +41,62 @@
       }
     }, 100);
   }
+
+  function toggleForward() {
+    showShare = true;
+  }
 </script>
 
-<div class="flex flex-col space-y-8 overflow-hidden text-black">
+<div class="flex flex-col space-y-8 overflow-hidden">
   <div class="space-y-5">
     <div class="font-[Roboto]">
-      <strong class="text-[15px]">
-        workingon.studio <span class="text-xs font-normal text-slate-400">
+      <strong class="text-xs md:text-[15px]">
+        workingon.studio <span class="text-xxs font-normal text-slate-400 md:text-xs">
           <a href="mailto:hello@workingon.studio" class="hover:text-blue-600">&lt;hello@workingon.studio&gt;</a>
         </span>
       </strong>
-      <span class="flex items-center text-xs font-normal text-slate-400">
-        to you <span class="material-symbols-rounded !text-lg">arrow_drop_down</span>
+      <span class="text-xxs flex items-center font-normal text-slate-400 md:text-xs">
+        to you
+        <iconify-icon icon="material-symbols:arrow-drop-down-rounded" class="text-lg"></iconify-icon>
       </span>
     </div>
-    <div class="space-y-5 font-[Arial] text-sm/7">
+    <div class="space-y-5 *:font-[Arial] *:text-black!">
       <p>To all,</p>
-      <p>Look, I'm tired of products that pretend to solve problems while creating new ones.</p>
       <p>
-        Tired of "user experiences" designed to extract rather than delight. Tired of the gap between what we say we're
-        building and what we're actually building.
+        Look, I'm tired of products that pretend to solve problems while creating new ones. Tired of "user experiences"
+        designed to extract rather than delight.
       </p>
-      <p>
+      <p class="hidden md:flex">
         So I'm building cultural mirror products. Things that hold up what people are unconsciously doing and make them
         suddenly, uncomfortably aware of it.
       </p>
       <p>
-        Not because I'm trying to fix broken systems. Because I'm meeting people where they are and changing how they
-        interact with those systems.
+        I'm not trying to fix broken systems. I meet people where they are and change how they interact with those
+        systems.
       </p>
       <p>Cheers.</p>
     </div>
     {#if showReply}
       {#each replyShown as reply}
-        <Reply emailContent={reply.emailContent} emailName={reply.emailName} />
+        <Reply emailName={reply.emailName}>
+          <Emoji emoji={reply.emailContent} />
+        </Reply>
       {/each}
     {/if}
   </div>
-  <div class="flex flex-row space-x-3">
-    <MailButton text="Dad Reply" thumbUp={true} onclick={toggleReply} disabled={isDisabled} />
-    <MailButton type="email" href="hello@workingon.studio" text="Reply" iconName="reply" />
-    <MailButton text="Forward" iconName="forward" />
+  <div class="flex flex-row gap-3">
+    <MailButton text="Dad Reply" clickable={true} onclick={toggleReply} disabled={isDisabled} />
+    <MailButton type="email" href="hello@workingon.studio" text="Reply" iconName="material-symbols:reply-rounded" />
+    <MailButton text="Forward" clickable={true} onclick={toggleForward} iconName="material-symbols:forward-rounded" />
   </div>
 </div>
+{#if showShare}
+  <ShareModule bind:showShare />
+{/if}
+
+<style>
+  @reference "@styles/dad-reply.css";
+  p {
+    @apply text-xs/5 md:text-sm/7;
+  }
+</style>
