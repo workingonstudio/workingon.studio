@@ -101,21 +101,23 @@
       </span>
     </div>
   {:else if $submittedEmail.submitted}
-    <div class="my-16 flex flex-col justify-center space-y-3 text-center">
-      <span class="cursor-default text-4xl">🥳</span>
-      <h3>Cliché celebration emoji.</h3>
-      <p>
-        A confirmation email has been sent to <strong class="text-slate-700">{$submittedEmail.email}</strong>
-        click the link to confirm your subscription (be sure to check SPAM).*
-      </p>
-      <small>* when the trial ends you'll be sent a discount code, $19.99 per year (33.3% discount).</small>
-      <button
-        on:click|preventDefault={resubmitEmail}
-        type="button"
-        class="inline-flex font-normal text-blue-600 underline"
-      >
-        Wrong email? Need to resubmit?
-      </button>
+    <div class="my-16 flex flex-col items-center justify-center text-center">
+      <div class="flex w-full flex-col items-center space-y-3 md:w-2/3">
+        <span class="cursor-default text-4xl">🥳</span>
+        <h3>Cliché celebration emoji.</h3>
+        <p>
+          A confirmation email has been sent to <strong class="text-slate-700">{$submittedEmail.email}</strong>
+          click the link to confirm your subscription (be sure to check SPAM).*
+        </p>
+        <small>* when the trial ends you'll be sent a discount code, $19.99 per year (33.3% discount).</small>
+        <button
+          on:click|preventDefault={resubmitEmail}
+          type="button"
+          class="inline-flex cursor-pointer text-xs font-normal text-blue-600 underline"
+        >
+          Wrong email? Need to resubmit?
+        </button>
+      </div>
     </div>
   {/if}
 </div>
