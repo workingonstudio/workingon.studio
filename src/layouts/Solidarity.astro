@@ -1,6 +1,8 @@
 ---
 import "../styles/solidarity.css";
 
+import { AstroSeo } from "@astrolib/seo";
+
 import Analytics from "./partials/Analytics.astro";
 import { ClientRouter } from "astro:transitions";
 
@@ -11,15 +13,40 @@ export interface Props {
 const brockmannFontUrl = import.meta.env.BROCKMANN_FONT_CSS_URL;
 
 const { title } = Astro.props;
+const currentURL = new URL(Astro.url.pathname, Astro.site).href;
 ---
 
 <!doctype html>
 <html lang="en" class="scroll-smooth">
   <head>
+    <AstroSeo
+      {title}
+      description="A Chrome Extension that makes you feel less s**t about looking for work."
+      canonical={currentURL}
+      ,
+      openGraph={{
+        url: currentURL,
+        title: title,
+        description: "A Chrome Extension that makes you feel less s**t about looking for work.",
+        images: [
+          {
+            url: Astro.site + "solidarity/solidarity-default-opengraph.png",
+            height: 600,
+            width: 1200,
+          },
+          {
+            url: Astro.site + "solidarity/solidarity-square-opengraph.png",
+            height: 1080,
+            width: 1080,
+          },
+        ],
+        site_name: "workingon.studio",
+      }}
+    />
     <meta charset="UTF-8" />
-    <meta name="description" content="A creative studio producing cultural mirror products" />
-    <meta name="theme-color" content="#030712" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="theme-color" content="#FAFAF9" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -33,8 +60,7 @@ const { title } = Astro.props;
       is:inline
       type="module"
       src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    >
-    </script>
+    ></script>
 
     <!-- CDN Font Stylesheets -->
     {brockmannFontUrl && <link rel="stylesheet" href={brockmannFontUrl} />}
