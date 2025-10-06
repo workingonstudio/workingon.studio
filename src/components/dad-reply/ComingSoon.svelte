@@ -4,8 +4,22 @@
   import ToneRadio from "./partials/ToneRadio.svelte";
   import MailButton from "./partials/MailButton.svelte";
   import Emoji from "./partials/Emoji.svelte";
+  import { selectedTone, applyTone } from "@stores/dadreply/toneStore";
+  import { changeFavicon, resetFavicon } from "@utils/dad-reply/faviconChanger";
+  import { onMount, onDestroy } from "svelte";
 
   let emojiList = ["👋", "👀", "💩", "🔥", "🤘", "🍾", "💀", "💰", "👏"];
+
+  // Watch for tone changes and update favicon
+  $: if ($selectedTone) {
+    const tonedEmoji = applyTone("👍", $selectedTone);
+    changeFavicon(tonedEmoji);
+  }
+
+  // Reset favicon when leaving the page
+  onDestroy(() => {
+    resetFavicon();
+  });
 </script>
 
 <div class="flex flex-col items-start md:flex-row md:gap-16 lg:gap-32">
