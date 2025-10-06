@@ -1,0 +1,31 @@
+---
+import "@styles/solidarity.css";
+
+import Solidarity from "@layouts/Solidarity.astro";
+import Header from "@components/solidarity/Header.svelte";
+import Main from "./Main.astro";
+import Cards from "@components/solidarity/Cards.svelte";
+import Footer from "@components/partials/Footer.svelte";
+---
+
+<Solidarity title="Solidarity - No one stands alone wheneveryone’s #opentowork - workingon.studio">
+  <img src="/solidarity/ring-bg.svg" class="absolute -z-30" />
+  <Header client:load />
+  <div class="mx-[5%] flex flex-1 flex-col gap-36 xl:mx-[10%]">
+    <div class="flex flex-1 flex-col gap-6 lg:flex-row">
+      <section class="flex flex-col gap-11">
+        <Main />
+      </section>
+      <div class="sticky top-65 mt-48 h-full w-full flex-shrink-0 lg:h-screen lg:w-1/3">
+        <Cards client:load />
+      </div>
+    </div>
+    <div class="px-0 text-[10px] text-stone-500 [&_a]:hover:!text-emerald-600">
+      <Footer client:load />
+    </div>
+  </div>
+</Solidarity>
+
+<style>
+  @reference "@styles/solidarity.css";
+</style>
