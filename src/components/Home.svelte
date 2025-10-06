@@ -1,5 +1,5 @@
 <script lang="ts">
-  const actionList = ["calling out the bullshit", "standing up for delight", "pulling back the curtain"];
+  const actionList = ["standing up for delight", "pulling back the curtain", "calling out the bullshit"];
 </script>
 
 <div class="group w-full md:w-3xl">
