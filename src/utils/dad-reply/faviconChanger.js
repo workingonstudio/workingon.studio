@@ -37,6 +37,9 @@ export function changeFavicon(emoji) {
  * Reset favicon to original PNG
  */
 export function resetFavicon() {
+  // Only run in browser
+  if (typeof document === "undefined") return;
+
   let favicon = document.querySelector('link[rel="icon"]');
 
   if (!favicon) {
