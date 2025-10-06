@@ -112,4 +112,13 @@
 }
 
 @layer components {
+  .btn {
+    @apply flex-row items-center gap-2;
+    @apply rounded-full bg-emerald-300;
+    @apply font-mulish text-sm font-bold text-emerald-900;
+    @apply px-4 py-4 md:py-2 md:pr-4 md:pl-3;
+    &:hover {
+      @apply hover:bg-emerald-200;
+    }
+  }
 }

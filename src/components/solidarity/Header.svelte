@@ -18,8 +18,8 @@
     <div class="flex flex-row items-center gap-6">
       <Toggle id="toggled" />
       <!-- prettier-ignore -->
-      <a href="https://chromewebstore.google.com/detail/ahahliplongfboaikbajdedefpoifjeb" target="_blank" class="btn">
-        <iconify-icon icon="carbon:add" class="text-2xl"></iconify-icon>
+      <a href="https://chromewebstore.google.com/detail/ahahliplongfboaikbajdedefpoifjeb" target="_blank" class="btn hidden md:flex">
+        <iconify-icon icon="lucide:plus" class="text-lg"></iconify-icon>
         Add to Chrome
       </a>
     </div>
@@ -31,15 +31,6 @@
   span {
     span {
       @apply text-primary;
-    }
-  }
-  .btn {
-    @apply flex flex-row items-center gap-2;
-    @apply rounded-full bg-emerald-300;
-    @apply font-mulish text-sm font-bold text-emerald-900;
-    @apply py-2 pr-4 pl-3;
-    &:hover {
-      @apply hover:bg-emerald-200;
     }
   }
 </style>
