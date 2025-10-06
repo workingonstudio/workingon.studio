@@ -1,9 +1,5 @@
 <script lang="ts">
-  const actionList = [
-    "making the obvious visable",
-    "centring people in technology",
-    "finding delight in the mundane",
-  ];
+ const actionList = ["standing up for delight", "pulling back the curtain", "calling out the bullshit"];
 </script>
 
 <div class="group w-full md:w-3xl">
