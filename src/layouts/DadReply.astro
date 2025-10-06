@@ -11,6 +11,7 @@ export interface Props {
 
 const { title } = Astro.props;
 const currentURL = new URL(Astro.url.pathname, Astro.site).href;
+const publishDate = new Date().toISOString();
 ---
 
 <html lang="en" class="scroll-smooth bg-white">
@@ -37,6 +38,11 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
           },
         ],
         site_name: "workingon.studio",
+        article: {
+          publishedTime: publishDate,
+          modifiedTime: publishDate,
+          authors: ["Paul Mackenzie"],
+        },
       }}
     />
     <meta charset="UTF-8" />
@@ -59,9 +65,10 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
       is:inline
       type="module"
       src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    ></script>
-    <script is:inline src="https://kit.fontawesome.com/180e1f6a33.js" crossorigin="anonymous">
+    >
     </script>
+    <script is:inline src="https://kit.fontawesome.com/180e1f6a33.js" crossorigin="anonymous"
+    ></script>
     <meta name="generator" content={Astro.generator} />
     <Analytics productName="Dad Reply" />
     <ClientRouter />
