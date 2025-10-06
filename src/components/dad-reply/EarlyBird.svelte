@@ -20,7 +20,14 @@
     onSubmit: async (values) => {
       try {
         const formBody =
-          "source=homepage&mailingLists=cmfulrm772g6y0iy1bkhxbqez&email=" + encodeURIComponent(values.email);
+          "source=website&" +
+          "userGroup=earlybird&" +
+          "product=" +
+          encodeURIComponent("Dad Reply") +
+          "&" +
+          "mailingLists=cmfulrm772g6y0iy1bkhxbqez&" +
+          "email=" +
+          encodeURIComponent(values.email);
 
         const response = await fetch("https://app.loops.so/api/newsletter-form/cmftqf9fn3f4nxp0i7l9sd1t0", {
           method: "POST",
