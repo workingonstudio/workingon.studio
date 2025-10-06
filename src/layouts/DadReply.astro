@@ -26,9 +26,14 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
         description: "Instantly reply to your emails with minimal effort and maximum dad energy.",
         images: [
           {
-            url: Astro.site + "dad-reply/dad-reply-opengraph.png",
+            url: Astro.site + "dad-reply/dad-reply-default-opengraph.png",
             height: 600,
             width: 1200,
+          },
+          {
+            url: Astro.site + "dad-reply/dad-reply-square-opengraph.png",
+            height: 1080,
+            width: 1080,
           },
         ],
         site_name: "workingon.studio",
@@ -36,7 +41,8 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
     />
     <meta charset="UTF-8" />
     <meta name="theme-color" content="#FFFFFF" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -53,9 +59,10 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
       is:inline
       type="module"
       src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    ></script>
-    <script is:inline src="https://kit.fontawesome.com/180e1f6a33.js" crossorigin="anonymous">
+    >
     </script>
+    <script is:inline src="https://kit.fontawesome.com/180e1f6a33.js" crossorigin="anonymous"
+    ></script>
     <meta name="generator" content={Astro.generator} />
     <Analytics productName="Dad Reply" />
     <ClientRouter />
