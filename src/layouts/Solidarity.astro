@@ -14,6 +14,7 @@ const brockmannFontUrl = import.meta.env.BROCKMANN_FONT_CSS_URL;
 
 const { title } = Astro.props;
 const currentURL = new URL(Astro.url.pathname, Astro.site).href;
+const publishDate = new Date().toISOString();
 ---
 
 <!doctype html>
@@ -41,6 +42,11 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
           },
         ],
         site_name: "workingon.studio",
+        article: {
+          publishedTime: publishDate,
+          modifiedTime: publishDate,
+          authors: ["Paul Mackenzie"],
+        },
       }}
     />
     <meta charset="UTF-8" />

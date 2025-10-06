@@ -11,6 +11,7 @@ export interface Props {
 
 const { title } = Astro.props;
 const currentURL = new URL(Astro.url.pathname, Astro.site).href;
+const publishDate = new Date().toISOString();
 
 // Get font URLs from environment variables
 const nudicaFontUrl = import.meta.env.NUDICA_FONT_CSS_URL;
@@ -43,6 +44,11 @@ const nudicaMonoFontUrl = import.meta.env.NUDICA_MONO_FONT_CSS_URL;
           },
         ],
         site_name: "workingon.studio",
+        article: {
+          publishedTime: publishDate,
+          modifiedTime: publishDate,
+          authors: ["Paul Mackenzie"],
+        },
       }}
     />
     <meta charset="UTF-8" />
@@ -61,7 +67,8 @@ const nudicaMonoFontUrl = import.meta.env.NUDICA_MONO_FONT_CSS_URL;
       is:inline
       type="module"
       src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    ></script>
+    >
+    </script>
 
     <meta name="generator" content={Astro.generator} />
 
