@@ -1,6 +1,7 @@
 <script lang="ts">
   import { toggleStore } from "@stores/solidarity/toggle";
   import Card from "./partials/Card.svelte";
+  import Toggle from "@components/solidarity/partials/Toggle.svelte";
 
   let originalUsers = [
     {
@@ -99,7 +100,7 @@
     background: radial-gradient(circle at center, transparent 0%, oklch(98.5% 0.001 106.423) 50%);
     background-position: center;
     transition: background-size 700ms cubic-bezier(0.95, 0.05, 0.795, 0.035);
-    @apply bg-size-[90%_90%] md:bg-size-[110%_110%];
+    @apply bg-size-[110%_110%];
   }
 
   .overlay::before {

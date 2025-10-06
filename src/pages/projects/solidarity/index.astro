@@ -15,8 +15,15 @@ import Footer from "@components/partials/Footer.svelte";
     <div class="flex flex-1 flex-col gap-6 lg:flex-row">
       <section class="flex flex-col gap-11">
         <Main />
+        <a
+          href="https://chromewebstore.google.com/detail/ahahliplongfboaikbajdedefpoifjeb"
+          target="_blank"
+          class="btn flex justify-center md:hidden"
+        >
+          Download for Chrome
+        </a>
       </section>
-      <div class="sticky top-65 mt-48 h-full w-full flex-shrink-0 lg:h-screen lg:w-1/3">
+      <div class="sticky top-65 mt-24 h-full w-full flex-shrink-0 md:mt-48 lg:h-screen lg:w-1/3">
         <Cards client:load />
       </div>
     </div>
