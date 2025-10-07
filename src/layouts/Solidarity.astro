@@ -13,6 +13,7 @@ export interface Props {
 const brockmannFontUrl = import.meta.env.BROCKMANN_FONT_CSS_URL;
 
 const { title } = Astro.props;
+const longTitle = title + " - workingon.studio";
 const currentURL = new URL(Astro.url.pathname, Astro.site).href;
 const publishDate = new Date().toISOString();
 ---
@@ -21,7 +22,7 @@ const publishDate = new Date().toISOString();
 <html lang="en" class="scroll-smooth">
   <head>
     <AstroSeo
-      {title}
+      title={longTitle}
       description="A Chrome Extension that makes you feel less s**t about looking for work."
       canonical={currentURL}
       ,
@@ -66,7 +67,8 @@ const publishDate = new Date().toISOString();
       is:inline
       type="module"
       src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    ></script>
+    >
+    </script>
 
     <!-- CDN Font Stylesheets -->
     {brockmannFontUrl && <link rel="stylesheet" href={brockmannFontUrl} />}
