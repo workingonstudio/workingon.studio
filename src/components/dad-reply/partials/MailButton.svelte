@@ -40,7 +40,7 @@
 
 <button
   type="button"
-  on:click={handleClick}
+  onclick={handleClick}
   {disabled}
   class="google-button text-xxs relative flex max-h-9 px-3 py-1 font-medium md:px-4 md:py-2 md:text-sm"
 >
