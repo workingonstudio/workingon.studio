@@ -45,9 +45,8 @@
   class="google-button text-xxs relative flex max-h-9 px-3 py-1 font-medium md:px-4 md:py-2 md:text-sm"
 >
   {#if iconName}
-    <iconify-icon icon={iconName} class="mr-1 text-[18px] md:mr-3"></iconify-icon>
+    <iconify-icon icon={iconName} class="mr-1 hidden md:mr-3 md:flex md:text-[18px]"></iconify-icon>
   {:else}
-    <!-- <span class="indicator"></span> -->
     <span class={thumbClass}>
       <Emoji class_="mr-2 md:mr-3" emoji="👍" />
     </span>
