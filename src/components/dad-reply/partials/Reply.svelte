@@ -12,7 +12,7 @@
     in:fade={{ delay: 200, duration: 200, easing: cubicOut }}
   >
     <div class="flex flex-row gap-3">
-      <img src="/dad-reply/avatars/me-shoe.png" class="h-9 w-9 rounded-full" alt="" />
+      <img src="/dad-reply/avatars/me-shoe.png" class="hidden h-9 w-9 rounded-full md:flex" alt="" />
       <div class="flex flex-col">
         <strong class="text-xs md:text-[15px]">
           {emailName}
@@ -26,7 +26,7 @@
         </span>
       </div>
     </div>
-    <div class="ml-12 flex flex-col gap-2">
+    <div class="ml-0 flex flex-col gap-2 sm:ml-12">
       <slot />
       <a class="text-xxs color font-[Arial] font-normal md:text-xs" href={chromeStoreURL}>via dad reply</a>
     </div>

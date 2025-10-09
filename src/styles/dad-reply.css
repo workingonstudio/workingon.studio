@@ -45,7 +45,7 @@
   }
 
   h1 {
-    @apply text-3xl md:text-4xl/14;
+    @apply text-3xl/10 md:text-4xl/14;
   }
 
   h2 {

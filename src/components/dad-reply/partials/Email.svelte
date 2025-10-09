@@ -50,7 +50,7 @@
 <div class="flex flex-col space-y-8 overflow-hidden">
   <div class="mb-8 space-y-5">
     <div class="flex flex-row gap-3 font-[Roboto]">
-      <img src="/dad-reply/avatars/lumburg-lumburg.png" class="h-9 w-9 rounded-full" alt="" />
+      <img src="/dad-reply/avatars/lumburg-lumburg.png" class="hidden h-9 w-9 rounded-full md:flex" alt="" />
       <div class="flex flex-col">
         <strong class="text-xs md:text-[15px]">
           Bill Lumbergh <span class="text-xxs font-normal text-slate-400 md:text-xs">
@@ -63,7 +63,7 @@
         </span>
       </div>
     </div>
-    <div class="ml-12 space-y-5 *:font-[Arial] *:text-black!">
+    <div class="ml-0 space-y-5 *:font-[Arial] *:text-black! sm:ml-12">
       <p>Yeahhh, hi there,</p>
       <p>
         I'm gonna need you to go ahead and come in on Saturday.
@@ -72,7 +72,7 @@
       </p>
       <p class="">Mmkay? Thanks.</p>
       <div class="flex flex-col gap-1">
-        <strong class="text-sm">Bill Lumbergh</strong>
+        <strong class="text-xs md:text-sm">Bill Lumbergh</strong>
         <small>Division Vice President</small>
       </div>
     </div>
@@ -84,7 +84,7 @@
       {/each}
     {/if}
   </div>
-  <div class="ml-12 flex flex-row gap-3">
+  <div class="ml-0 flex flex-row gap-3 sm:ml-12">
     <MailButton text="Dad Reply" clickable={true} onclick={toggleReply} disabled={isDisabled} />
     <MailButton type="email" href="hello@workingon.studio" text="Reply" iconName="material-symbols:reply-rounded" />
     <MailButton text="Forward" clickable={true} onclick={toggleForward} iconName="material-symbols:forward-rounded" />
