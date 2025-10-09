@@ -26,7 +26,7 @@
   <div class="flex-1 space-y-40 md:w-1/2">
     <div class="space-y-6">
       <div class="flex flex-row place-content-between items-center">
-        <h3 class="inline-flex">Choose your tone.</h3>
+        <h3 class="inline-flex">Choose the tone, to match your tone.</h3>
         <Badge text="Free" bgColor="bg-blue-100" />
       </div>
       <div
@@ -101,7 +101,7 @@
   </div>
   <div class="order-first mb-40 space-y-4 text-pretty md:sticky md:top-1/3 md:order-last md:w-2/5 lg:mb-0 lg:w-1/2">
     <span class="block text-4xl">👀</span>
-    <h2>What's coming in v1.5</h2>
+    <h2>What's NEW in v1.5</h2>
     <p>This dad’s hit the gym, bought some new fits and is off fishing to get his Tinder profile pic.</p>
     <small class="hidden md:flex">* this is over here because those eyes need to look at something.</small>
     <small class="md:hidden">* I know those eyes are looking over there, but it's below.</small>

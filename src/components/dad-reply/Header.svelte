@@ -13,23 +13,27 @@
   <header class="mx-auto flex max-w-6xl flex-1 flex-row items-center justify-between">
     <div class="flex flex-row space-x-6">
       <Logo />
-      <div class="inline-flex items-center">
-        <Badge text={"v1.0.0"} />
+      <div class="inline-flex items-center gap-2">
+        <Badge text={"Pro Trial Edition"} bgColor="bg-orange-100" />
       </div>
     </div>
-    <nav class="font-regular flex flex-row space-x-4 text-sm [&_a]:hover:underline">
-      <ul class="flex flex-row">
-        <li>
-          {#if $submittedEmail.claimed}
-            <a href="#earlybird" class="font-medium text-slate-400">Offer claimed!</a>
-          {:else}
-            <a href="/" class="font-medium text-blue-600" on:click|preventDefault={handleClick}>
-              Claim early bird offer
+    <div class="flex flex-row items-center gap-2">
+      <nav>
+        <ul class="flex flex-row gap-4">
+          <li>
+            <a
+              href="https://www.producthunt.com/products/dad-reply"
+              aria-label="Dad Reply on Producthunt"
+              title="Dad Reply on Producthunt"
+              class="flex flex-row items-center gap-1 text-sm font-semibold transition-colors delay-100 hover:text-[#FF6154]"
+            >
+              <i class="fa-brands fa-product-hunt text-lg"></i>
+              Product Hunt
             </a>
-          {/if}
-        </li>
-      </ul>
-    </nav>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
 </div>
 

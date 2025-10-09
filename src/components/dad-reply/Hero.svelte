@@ -17,7 +17,13 @@
 
 <section class="mt-20 flex flex-col gap-12 md:mt-0 md:items-center md:gap-4 lg:flex-row">
   <div class="w-full space-y-12 md:my-16 md:items-center md:text-center lg:w-2xl lg:text-left">
-    <h1>Instantly reply to your emails with minimal effort and maximum dad energy.</h1>
+    <h1>
+      Stop wasting time on emails.
+      <br />
+      Reply with a single click.
+      <br />
+      No typing. No thinking.
+    </h1>
     <div class="w-full space-y-6 lg:w-5/6">
       <p class="text-pretty">
         Whether it's that weekly status report, someone asking a question that is already in the wiki, or a simple
@@ -59,9 +65,9 @@
   .email-container {
     @apply md:w-2/3;
     @apply md:relative md:bottom-0;
-    @apply mr-0 px-8 py-8;
+    @apply mr-0 px-8 py-12;
     @apply rounded-xl;
-    @apply lg:-mr-[calc(50vw-50%)] lg:rounded-none lg:rounded-l-xl lg:p-16 lg:pr-0;
-    @apply 2xl:-mr-[calc(25vw-25%)] 2xl:rounded-xl 2xl:p-16;
+    @apply lg:-mr-[calc(50vw-50%)] lg:rounded-none lg:rounded-l-xl lg:pr-0;
+    @apply 2xl:-mr-[calc(25vw-25%)] 2xl:rounded-xl;
   }
 </style>
