@@ -18,6 +18,11 @@
       class: "active",
     },
     {
+      emoji: "👋",
+      text: "Wave",
+      class: "",
+    },
+    {
       emoji: "👀",
       text: "Looking",
       class: "",

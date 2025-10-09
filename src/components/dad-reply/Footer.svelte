@@ -8,7 +8,7 @@
   <footer class="card space-y-6 p-6 shadow-lg md:p-12">
     <div class="flex flex-row items-center gap-6">
       <Emoji class_="text-xl" emoji="👋" />
-      <Badge text="v1.0.0" />
+      <Badge text="v1.5.0" />
     </div>
     <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between md:gap-0">
       <div class="flex w-2xs flex-col gap-4">

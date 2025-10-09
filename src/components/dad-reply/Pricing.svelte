@@ -52,8 +52,8 @@
   <div class="flex flex-col space-y-4 text-center">
     <span class="cursor-default text-4xl">🎟️</span>
     <h2>Download and get access to a Pro trial.</h2>
-    <p>It’s what you always dream of as a child. Now I am giving them away*.</p>
-    <small>* the pro trial that is, not a child that would be mental.</small>
+    <p class="text-pretty">Until I figure out payments*, I'm letting you trial the Pro features.</p>
+    <small>* Technically, if I die before that happens, free stuff for you!</small>
   </div>
   <div class="flex w-full flex-col gap-6 md:flex-row lg:w-4/5">
     {#each priceTables as { badge: { bgColor, text }, price: { currency, cost, otherText, styles }, features, button: { style, show, icon, iconRef, label } }}

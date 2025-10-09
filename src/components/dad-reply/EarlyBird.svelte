@@ -63,8 +63,10 @@
       <div class="flex w-full flex-col space-y-4 md:w-md">
         <span class="cursor-default text-4xl">🪱</span>
         <h2>Early bird offer!</h2>
-        <p>For a limited time and to say thank you, you can claim a lifetime discount to Dad Reply*.</p>
-        <small>* you'll receive a code after the trial period ends.</small>
+        <p class="text-pretty">
+          If I ever do get payments sorted, I'll send you a discount code for 33% off a yearly subscription, for life*.
+        </p>
+        <small>* mine or yours, makes no difference.</small>
       </div>
       <div class="card w-full space-y-6 shadow-lg md:w-md">
         <div class="space-y-8">
