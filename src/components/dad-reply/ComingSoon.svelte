@@ -26,7 +26,7 @@
   <div class="flex-1 space-y-40 md:w-1/2">
     <div class="space-y-6">
       <div class="flex flex-row place-content-between items-center">
-        <h3 class="inline-flex">Choose your tone.</h3>
+        <h3 class="inline-flex">Choose the tone, that matches your tone.</h3>
         <Badge text="Free" bgColor="bg-blue-100" />
       </div>
       <div
@@ -40,16 +40,16 @@
         <ToneRadio value="tone-6" emoji="👍🏿" />
       </div>
       <p>
-        You’ll have the ability to change the tone of the thumb up. You have the choice everywhere else, so why not here
-        too.*
+        Nothing feels more personal than a low-effort response that matches you. Plus, I mean come on, this option is
+        available everywhere it's not special. But you are.*
       </p>
       <small class="text-xs text-slate-400">
-        * I understand that this is like selling a car on it having electric windows.
+        * Yes, this is like selling a car because it has electric windows. I know.
       </small>
     </div>
     <div class="space-y-6">
       <div class="flex flex-row place-content-between items-center">
-        <h3 class="inline-flex">A new button.</h3>
+        <h3 class="inline-flex">Papa’s got a brand new bag.</h3>
         <Badge text="Pro" bgColor="bg-orange-100" />
       </div>
       <div class="py-6">
@@ -67,17 +67,18 @@
             <MailButton iconName="material-symbols:forward-rounded" text="Forward" />
           </div>
         </div>
-        <div class="flex h-40 flex-col items-center justify-end lg:hidden">
+        <div class="flex h-55 flex-col items-center justify-end lg:hidden">
           <AdvButton />
         </div>
       </div>
-      <p>
-        New gains, dad bod or beer belly? Like a divorced dad, there are now more options. All selectable via dropdown.
+      <p class="text-pretty">
+        Choose from multiple replies to suit your mood, level of engagement, emotional capacity or how many fucks you've
+        got left in the tank today.
       </p>
     </div>
     <div class="space-y-6">
       <div class="flex flex-row place-content-between items-center">
-        <h3 class="inline-flex">Custom responses.</h3>
+        <h3 class="inline-flex">Approve, deny, or escalate with a click.</h3>
         <Badge text="Pro" bgColor="bg-orange-100" />
       </div>
       <div
@@ -96,12 +97,16 @@
           🐰
         </div>
       </div>
-      <p>But what if you don't want those emojis? Fine. Use whatever you want. But is it "praying" or "high five"?</p>
+      <p>
+        Add custom emojis to interact with your CRM, codebase, customer support system, trading platform, HR software*
+        &#8230 you get the idea.
+      </p>
+      <small>* You thought there wasn't a more inhuman way to fire someone? well&#8230tada.</small>
     </div>
   </div>
   <div class="order-first mb-40 space-y-4 text-pretty md:sticky md:top-1/3 md:order-last md:w-2/5 lg:mb-0 lg:w-1/2">
     <span class="block text-4xl">👀</span>
-    <h2>What's coming in v1.5</h2>
+    <h2>What's NEW in v1.5</h2>
     <p>This dad’s hit the gym, bought some new fits and is off fishing to get his Tinder profile pic.</p>
     <small class="hidden md:flex">* this is over here because those eyes need to look at something.</small>
     <small class="md:hidden">* I know those eyes are looking over there, but it's below.</small>

@@ -7,22 +7,29 @@
 </script>
 
 <div in:slide={{ duration: 200, easing: cubicOut }}>
-  <div class="font-[Roboto]" in:fade={{ delay: 200, duration: 200, easing: cubicOut }}>
-    <strong class="text-xs md:text-[15px]">
-      {emailName}
-      <span class="text-xxs font-normal text-slate-400 md:text-xs">
-        <a href={chromeStoreURL}>&lt;download@chrome.store&gt;</a>
-      </span>
-    </strong>
-    <!-- prettier-ignore -->
-    <span class="flex items-center gap-1 text-xxs md:text-xs font-normal text-slate-400"><span>to</span><a href="https://workingon.studio">workingon.studio</a>
-      <iconify-icon icon="material-symbols:arrow-drop-down-rounded" class="text-lg"></iconify-icon>
-    </span>
-    <div class="my-2 flex">
-      <slot />
+  <div
+    class="mt-8 flex flex-col gap-3 border-t-1 border-slate-200 pt-8 font-[Roboto]"
+    in:fade={{ delay: 200, duration: 200, easing: cubicOut }}
+  >
+    <div class="flex flex-row gap-3">
+      <img src="/dad-reply/avatars/me-shoe.png" class="hidden h-9 w-9 rounded-full md:flex" alt="" />
+      <div class="flex flex-col">
+        <strong class="text-xs md:text-[15px]">
+          {emailName}
+          <span class="text-xxs font-normal text-slate-400 md:text-xs">
+            <a href="mailto:paul@workingon.studio">&lt;paul@workingon.studio&gt;</a>
+          </span>
+        </strong>
+        <!-- prettier-ignore -->
+        <span class="flex items-center gap-1 text-xxs md:text-xs font-normal text-slate-400"><span>to</span><span>&lt;bill.lumbergh@initech.com&gt;</span>
+          <iconify-icon icon="material-symbols:arrow-drop-down-rounded" class="text-lg"></iconify-icon>
+        </span>
+      </div>
     </div>
-    <!-- <p class="py-2">{emailContent}</p> -->
-    <a class="text-xxs font-[Arial] font-normal md:text-xs" href={chromeStoreURL}>via dad reply</a>
+    <div class="ml-0 flex flex-col gap-2 sm:ml-12">
+      <slot />
+      <a class="text-xxs color font-[Arial] font-normal md:text-xs" href={chromeStoreURL}>via dad reply</a>
+    </div>
   </div>
 </div>
 
