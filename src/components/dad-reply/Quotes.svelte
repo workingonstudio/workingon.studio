@@ -7,7 +7,7 @@
 <div class="space-y-12">
   <div class="flex flex-col space-y-4 text-center">
     <h2 class="flex flex-col justify-center gap-3 md:flex-row">
-      <Emoji class_="flex flex-col justify-center gap-3 md:flex-row" emoji="✊" />
+      <Emoji class_="flex flex-col justify-center gap-3 md:flex-row text-4xl animate-bounce" emoji="✊" />
       <span>Join the rebellion against the pointless.</span>
     </h2>
     <p class="text-pretty">Thousands of thumbs. Thousands of minutes saved. Join the movement.</p>
