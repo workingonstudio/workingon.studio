@@ -14,8 +14,8 @@
 <main class="mx-auto flex max-w-full flex-col px-4 md:max-w-6xl md:pt-0">
   <div class="space-y-30 md:space-y-60">
     <Hero />
-    <Quotes />
     <ComingSoon />
+    <Quotes />
     <Pricing />
     <EarlyBird />
     <Footer />

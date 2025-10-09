@@ -25,9 +25,9 @@
 <div class="flex flex-col items-start md:flex-row md:gap-16 lg:gap-32">
   <div class="flex-1 space-y-40 md:w-1/2">
     <div class="space-y-6">
-      <div class="flex flex-row place-content-between items-center">
+      <div class="flex flex-col place-content-between items-start gap-3 sm:flex-row sm:items-center">
         <h3 class="inline-flex">Choose the tone, that matches your tone.</h3>
-        <Badge text="Free" bgColor="bg-blue-100" />
+        <Badge text="Free" bgColor="bg-blue-100" otherClasses="order-first sm:order-none" />
       </div>
       <div
         class="grid auto-cols-min grid-flow-col grid-rows-2 justify-center gap-6 py-6 lg:grid-rows-1 lg:justify-between"
@@ -48,9 +48,9 @@
       </small>
     </div>
     <div class="space-y-6">
-      <div class="flex flex-row place-content-between items-center">
+      <div class="flex flex-col place-content-between items-start gap-3 sm:flex-row sm:items-center">
         <h3 class="inline-flex">Papa’s got a brand new bag.</h3>
-        <Badge text="Pro" bgColor="bg-orange-100" />
+        <Badge text="Pro" bgColor="bg-orange-100" otherClasses="order-first sm:order-none" />
       </div>
       <div class="py-6">
         <div class="card relative hidden flex-col rounded-none rounded-bl-2xl border-t-0 border-r-0 p-12 lg:flex">
@@ -77,9 +77,9 @@
       </p>
     </div>
     <div class="space-y-6">
-      <div class="flex flex-row place-content-between items-center">
-        <h3 class="inline-flex">Approve, deny, or escalate with a click.</h3>
-        <Badge text="Pro" bgColor="bg-orange-100" />
+      <div class="flex flex-col place-content-between items-start gap-3 sm:flex-row sm:items-center">
+        <h3 class="inline-flex">Quickly approve, deny, or escalate.</h3>
+        <Badge text="Pro" bgColor="bg-orange-100" otherClasses="order-first sm:order-none" />
       </div>
       <div
         class="grid auto-cols-min grid-flow-col grid-rows-2 justify-center gap-4 py-6 md:justify-between lg:grid-rows-1"

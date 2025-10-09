@@ -36,7 +36,11 @@
   }
 </script>
 
-<div class="mt-8" in:slide={{ duration: 200, easing: cubicOut }} out:slide={{ duration: 200, delay: 200 }}>
+<div
+  class="mt-8 ml-0 md:ml-12"
+  in:slide={{ duration: 200, easing: cubicOut }}
+  out:slide={{ duration: 200, delay: 200 }}
+>
   <div
     class="mr-0 space-y-6 lg:mr-16"
     in:fade={{ delay: 300, duration: 200, easing: cubicOut }}
@@ -44,8 +48,8 @@
   >
     <div class="flex h-[25px] flex-row items-center justify-between text-base font-semibold">
       <div class="flex space-x-2">
-        <iconify-icon icon="material-symbols:forward-rounded" class="text-2xl text-blue-600"></iconify-icon>
-        <span class="flex">Forward.</span>
+        <iconify-icon icon="material-symbols:share" class="text-2xl text-blue-600"></iconify-icon>
+        <span class="flex">Share.</span>
       </div>
       {#if copiedToClipboard}
         <div in:fade={{ duration: 200 }} out:fade={{ duration: 200 }}>
