@@ -47,7 +47,7 @@
   {#if iconName}
     <iconify-icon icon={iconName} class="mr-1 hidden md:mr-3 md:flex md:text-[18px]"></iconify-icon>
   {:else}
-    <span class={thumbClass}>
+    <span class={clickable ? thumbClass : ""}>
       <Emoji class_="mr-2 md:mr-3" emoji="👍" />
     </span>
   {/if}

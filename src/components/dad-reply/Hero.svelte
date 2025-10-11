@@ -1,5 +1,4 @@
 <script lang="ts">
-  import FeaturePills from "./FeaturePills.svelte";
   import DownloadButton from "./partials/DownloadButton.svelte";
   import Email from "./partials/Email.svelte";
 
