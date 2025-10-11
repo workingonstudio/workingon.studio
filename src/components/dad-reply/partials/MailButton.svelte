@@ -59,7 +59,7 @@
   .google-button {
     font-family: "Google Sans", sans-serif;
     color: #444746;
-    @apply rounded-full border border-[#747775];
+    @apply rounded-full border border-slate-400;
     &:hover {
       @apply cursor-pointer bg-slate-100;
     }
