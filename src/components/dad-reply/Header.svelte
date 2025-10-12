@@ -14,21 +14,34 @@
     <div class="flex flex-row space-x-6">
       <Logo />
       <div class="inline-flex items-center gap-2">
+        <Badge text={"v1.5.1"} />
         <Badge text={"Pro Trial Edition"} bgColor="bg-orange-100" />
       </div>
     </div>
     <div class="flex flex-row items-center gap-2">
       <nav>
-        <ul class="flex flex-row gap-4">
+        <ul class="flex flex-row gap-6 font-semibold">
+          <li>
+            <a href="">How it works</a>
+          </li>
+          <li>
+            <a href="">Pro features</a>
+          </li>
+          <li>
+            <a href="#pricing">Pricing</a>
+          </li>
+          <li class="flex flex-row items-center gap-1">
+            <span class="relative h-1.5 w-1.5 rounded-full bg-blue-600">
+              <span class="absolute h-1.5 w-1.5 rounded-full bg-blue-600 motion-safe:animate-ping"></span>
+            </span>
+            <a href="" on:click|preventDefault={handleClick}>Early bird offer</a>
+          </li>
           <li>
             <a
-              href="https://www.producthunt.com/products/dad-reply"
-              aria-label="Dad Reply on Producthunt"
-              title="Dad Reply on Producthunt"
-              class="flex flex-row items-center gap-2 text-sm font-semibold transition-colors delay-100 hover:text-[#FF6154]"
+              href="https://chromewebstore.google.com/detail/ddkeoflblemlolckmnhihhabplfmogop"
+              class="text-blue-600 underline hover:!no-underline"
             >
-              <iconify-icon icon="fa7-brands:product-hunt" class="text-lg"></iconify-icon>
-              Product Hunt
+              Download for Chrome
             </a>
           </li>
         </ul>
@@ -44,7 +57,7 @@
     ul {
       li {
         a {
-          @apply text-xs;
+          @apply text-sm hover:underline;
         }
       }
     }

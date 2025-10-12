@@ -48,7 +48,7 @@
   ];
 </script>
 
-<div class="flex flex-col items-center justify-center space-y-12 md:items-center">
+<div id="pricing" class="flex flex-col items-center justify-center space-y-12 md:items-center">
   <div class="flex flex-col space-y-4 text-center">
     <span class="cursor-default text-4xl">🎟️</span>
     <h2>Download and get access to a Pro trial.</h2>
