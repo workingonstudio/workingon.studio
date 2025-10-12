@@ -8,7 +8,7 @@
 
 <a href={downloadLink} class="btn gap-2.5 {style}">
   {#if icon}
-    <i class="fa-brands {'fa-' + iconRef} text-xl"></i>
+    <iconify-icon icon="fa7-brands:{iconRef}" class="text-xl"></iconify-icon>
   {/if}
   {label}
 </a>

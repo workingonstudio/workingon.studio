@@ -38,7 +38,7 @@
         {#if IEButton.clicked}
           <span class="h-[20px] w-[25px] text-xl leading-none">🤔</span>
         {:else}
-          <i class="fa-brands fa-internet-explorer text-xl"></i>
+          <iconify-icon icon="fa7-brands:internet-explorer" class="text-xl"></iconify-icon>
         {/if}
         {IEButton.label}
       </button>

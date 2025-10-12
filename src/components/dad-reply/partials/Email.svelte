@@ -3,6 +3,7 @@
   import MailButton from "./MailButton.svelte";
   import ShareModule from "./ShareModule.svelte";
   import Emoji from "./Emoji.svelte";
+  import EmailFrom from "./EmailFrom.svelte";
   let showReply = false;
   let showShare = false;
 
@@ -49,20 +50,12 @@
 
 <div class="flex flex-col space-y-8 overflow-hidden">
   <div class="mb-8 space-y-5">
-    <div class="flex flex-row gap-3 font-['Roboto']">
-      <img src="/dad-reply/avatars/lumburg-lumburg.png" class="hidden h-9 w-9 rounded-full md:flex" alt="" />
-      <div class="flex flex-col">
-        <strong class="text-xs md:text-[15px]">
-          Bill Lumbergh <span class="text-xxs font-normal text-slate-400 md:text-xs">
-            <span>&lt;bill.lumbergh@initech.com&gt;</span>
-          </span>
-        </strong>
-        <span class="text-xxs flex items-center font-normal text-slate-400 md:text-xs">
-          to you
-          <iconify-icon icon="material-symbols:arrow-drop-down-rounded" class="text-lg"></iconify-icon>
-        </span>
-      </div>
-    </div>
+    <EmailFrom
+      avatarFilename="lumburg-lumburg.png"
+      fromName="Bill Lumbergh"
+      fromEmail="bill.lumbergh@initech.com"
+      toEmail="you"
+    />
     <div class="ml-0 space-y-5 *:font-['Arial'] *:text-black! sm:ml-12">
       <p>Yeahhh, hi there,</p>
       <p>

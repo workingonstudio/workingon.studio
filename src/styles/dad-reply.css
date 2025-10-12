@@ -81,6 +81,7 @@
     @apply text-sm font-semibold;
     @apply transition-colors duration-300 ease-in-out;
     @apply cursor-pointer;
+    @apply px-4;
     &.solid {
       background: var(--color-primary);
       &:hover {

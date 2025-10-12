@@ -25,9 +25,9 @@
               href="https://www.producthunt.com/products/dad-reply"
               aria-label="Dad Reply on Producthunt"
               title="Dad Reply on Producthunt"
-              class="flex flex-row items-center gap-1 text-sm font-semibold transition-colors delay-100 hover:text-[#FF6154]"
+              class="flex flex-row items-center gap-2 text-sm font-semibold transition-colors delay-100 hover:text-[#FF6154]"
             >
-              <i class="fa-brands fa-product-hunt text-lg"></i>
+              <iconify-icon icon="fa7-brands:product-hunt" class="text-lg"></iconify-icon>
               Product Hunt
             </a>
           </li>
