@@ -48,7 +48,7 @@
     font-family: var(--font-display);
   }
   h1 {
-    @apply text-3xl leading-relaxed md:text-4xl;
+    @apply text-3xl md:text-6xl/22;
   }
   p {
     font-family: var(--font-nudicaMono);

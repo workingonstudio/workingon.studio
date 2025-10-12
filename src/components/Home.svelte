@@ -1,8 +1,8 @@
 <script lang="ts">
- const actionList = ["standing up for delight", "pulling back the curtain", "calling out the bullshit"];
+  const actionList = ["standing up for delight", "pulling back the curtain", "calling out the bullshit"];
 </script>
 
-<div class="group w-full md:w-3xl">
+<div class="group w-full">
   <div class="space-y-12">
     <!-- prettier-ignore -->
     <h1>

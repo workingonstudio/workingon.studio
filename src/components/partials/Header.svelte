@@ -1,34 +1,4 @@
 <script lang="ts">
-  import { slide, fade } from "svelte/transition";
-  import { cubicOut, cubicInOut } from "svelte/easing";
-
-  export let text: string;
-  let headerText: string;
-  let dotText: string;
-
-  function grabHeader(text: string) {
-    let stringLength = text.length;
-    headerText = text.slice(0, text.indexOf("."));
-    dotText = text.slice(text.indexOf("."), stringLength);
-  }
-
-  let isClosed = true;
-  $: icon = isClosed ? "carbon:add" : "carbon:close";
-
-  let isSpinning = false;
-
-  function toggleMenu() {
-    isSpinning = true;
-    setTimeout(() => {
-      isClosed = !isClosed;
-    }, 200);
-    setTimeout(() => {
-      isSpinning = false;
-    }, 400);
-  }
-
-  grabHeader(text);
-
   let navItems = [
     {
       icon: "carbon:delivery-parcel",
@@ -42,7 +12,7 @@
       href: "/finances",
       title: "finances",
       subtitle: ".csv",
-      description: "financials coming in/out of the studio.",
+      description: "financials in/out of the studio.",
     },
     {
       icon: "carbon:branch",
@@ -51,58 +21,72 @@
       subtitle: ".git",
       description: "every update, every change.",
     },
+    {
+      icon: "carbon:flagging-taxi",
+      href: "/hire",
+      title: "hire",
+      subtitle: ".mail",
+      description: "you need me more than...",
+    },
+  ];
+
+  let socials = [
+    {
+      icon: "fa7-brands:threads",
+      title: "Follow on Threads",
+      href: "https://www.threads.com/@workingon.studio",
+    },
+    {
+      icon: "fa7-brands:square-linkedin",
+      title: "Follow on LinkedIn",
+      href: "https://www.linkedin.com/company/workingonstudio/about/",
+    },
+    {
+      icon: "fa7-brands:github",
+      title: "Follow on Github",
+      href: "https://github.com/workingonstudio",
+    },
   ];
 </script>
 
-<div class="sticky top-0 space-y-6 bg-gray-950/80 py-8 backdrop-blur-sm">
-  <header class="group flex flex-row items-center justify-between">
+<div class="sticky top-0 mb-16 bg-gray-950/80 backdrop-blur-sm">
+  <header class="group flex flex-row items-center justify-between py-12">
     <a href="/" class="cursor-pointer">
       <!-- prettier-ignore -->
-      <h1 class="font-display inline-block">{headerText}<span>{dotText}</span></h1>
+      <h1 class="font-display inline-block text-xl">workingon<span>.studio</span></h1>
     </a>
-    <button type="button" onclick={toggleMenu} aria-label="Toggle menu">
-      <iconify-icon
-        {icon}
-        class="text-2xl text-gray-500 transition-colors duration-500 hover:cursor-pointer hover:text-gray-100 {isSpinning
-          ? 'spinning'
-          : ''}"
-      ></iconify-icon>
-    </button>
+    <ul class="social flex flex-row gap-4">
+      {#each socials as { icon, href, title }}
+        <li><a {href} aria-label={title} {title}><iconify-icon {icon} class="text-md"></iconify-icon></a></li>
+      {/each}
+    </ul>
   </header>
-  {#if !isClosed}
-    <nav
-      class="flex flex-col items-start text-xs"
-      in:slide={{ duration: 300, easing: cubicOut }}
-      out:slide={{ duration: 300, easing: cubicInOut, delay: 250 }}
-    >
-      <ul
-        class="flex w-full flex-col gap-4"
-        in:fade={{ duration: 300, easing: cubicOut, delay: 250 }}
-        out:fade={{ duration: 300, easing: cubicInOut }}
-      >
-        {#each navItems as { icon, href, title, subtitle, description }}
-          <li class="group">
-            <iconify-icon {icon} class="text-lg text-gray-500"></iconify-icon>
-            <a {href}>
-              <!-- prettier-ignore -->
-              <h2>{title}<span>{subtitle}</span></h2>
-              <p>{description}</p>
-            </a>
-          </li>
-        {/each}
-      </ul>
-    </nav>
-  {/if}
+  <nav class="flex flex-col items-start border-y-1 border-slate-900 py-6 text-xs">
+    <ul class="flex w-full flex-row">
+      {#each navItems as { icon, href, title, subtitle, description }}
+        <li class="group">
+          <iconify-icon {icon} class="text-lg text-gray-500"></iconify-icon>
+          <a {href}>
+            <!-- prettier-ignore -->
+            <h2>{title}<span>{subtitle}</span></h2>
+            <p>{description}</p>
+          </a>
+        </li>
+      {/each}
+    </ul>
+  </nav>
 </div>
 
 <style>
   @reference "@styles/global.css";
-  h1,
+  h1 {
+    @apply text-xl;
+  }
   h2 {
     @apply text-base;
   }
   h1 span {
-    @apply text-shadow-glow motion-safe:animate-flicker sm:group-hover:text-shadow-glow sm:group-hover:motion-safe:animate-flicker text-xs text-yellow-300 sm:text-gray-500 sm:text-shadow-none sm:group-hover:text-yellow-300 sm:motion-safe:animate-none;
+    @apply text-shadow-glow motion-safe:animate-flicker sm:group-hover:text-shadow-glow sm:group-hover:motion-safe:animate-flicker text-sm text-yellow-300 sm:text-gray-500 sm:text-shadow-none sm:group-hover:text-yellow-300 sm:motion-safe:animate-none;
   }
 
   h2 span {
@@ -111,7 +95,7 @@
 
   nav {
     ul {
-      @apply gap-6;
+      @apply justify-between gap-6;
       li {
         @apply flex flex-row items-center gap-4 transition-opacity duration-300;
         a {
@@ -127,20 +111,14 @@
     }
   }
 
-  button {
-    @apply h-6 w-6;
-  }
-
-  .spinning {
-    animation: spin-once 1000ms ease-in-out;
-  }
-
-  @keyframes spin-once {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
+  .social {
+    li {
+      a {
+        @apply text-muted;
+        &:hover {
+          @apply text-primary transition-colors duration-300;
+        }
+      }
     }
   }
 </style>
