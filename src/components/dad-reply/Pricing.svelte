@@ -14,7 +14,7 @@
         otherText: "",
         styles: "",
       },
-      features: ["Basic button.", "Additional emoji options.", "'via Reply Dad' branding."],
+      features: ["Basic button.", "Additional emoji options.", "'via Dad Reply' branding."],
       button: {
         show: false,
         icon: false,
@@ -34,7 +34,7 @@
       features: [
         "Advanced multi-select button.",
         "Custom responses.",
-        "<s>Remove 'via Reply Dad' branding.</s>*<small class='block ml-5 mt-1'>* not available during trial.</small>",
+        "<s>Remove 'via Dad Reply' branding.</s>*<small class='block ml-5 mt-1'>* not available during trial.</small>",
       ],
       button: {
         style: "hollow",
@@ -48,7 +48,7 @@
   ];
 </script>
 
-<div id="pricing" class="flex flex-col items-center justify-center space-y-12 md:items-center">
+<div id="pricing" class="flex flex-col items-center justify-center space-y-12 py-30 md:items-center">
   <div class="flex flex-col space-y-4 text-center">
     <span class="cursor-default text-4xl">🎟️</span>
     <h2>Download and get access to a Pro trial.</h2>

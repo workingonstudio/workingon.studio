@@ -2,7 +2,6 @@
   import Header from "./Header.svelte";
   import Hero from "./Hero.svelte";
   import How from "./How.svelte";
-  import ComingSoon from "./ComingSoon.svelte";
   import Quotes from "./Quotes.svelte";
   import Pricing from "./Pricing.svelte";
   import EarlyBird from "./EarlyBird.svelte";
@@ -13,10 +12,9 @@
 <Banner />
 <Header />
 <main class="mx-auto flex max-w-full flex-col px-4 md:max-w-6xl md:pt-0">
-  <div class="space-y-30 md:space-y-60">
+  <div class="space-y-30">
     <Hero />
     <How />
-    <ComingSoon />
     <Quotes />
     <Pricing />
     <EarlyBird />

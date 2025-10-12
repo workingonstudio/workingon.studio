@@ -4,7 +4,12 @@
   import EmailFrom from "./partials/EmailFrom.svelte";
 </script>
 
-<div class="flex flex-col gap-24">
+<div id="how" class="flex flex-col gap-24 py-30">
+  <div class="flex flex-col space-y-4 text-center">
+    <span class="cursor-default text-4xl">🧐</span>
+    <h2>As ridiculous as it sounds.</h2>
+    <p class="text-pretty">The perfect companion for the email power user.</p>
+  </div>
   <div class="flex flex-row items-center justify-center gap-12 py-12 text-pretty">
     <div class="flex w-2/5 flex-col items-start gap-6">
       <Badge text="Nothing to learn" bgColor="bg-orange-100" />

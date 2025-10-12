@@ -22,7 +22,7 @@
       <nav>
         <ul class="flex flex-row gap-6 font-semibold">
           <li>
-            <a href="">How it works</a>
+            <a href="#how">How it works</a>
           </li>
           <li>
             <a href="">Pro features</a>
@@ -30,7 +30,7 @@
           <li>
             <a href="#pricing">Pricing</a>
           </li>
-          <li class="flex flex-row items-center gap-1">
+          <li class="flex flex-row items-center gap-3">
             <span class="relative h-1.5 w-1.5 rounded-full bg-blue-600">
               <span class="absolute h-1.5 w-1.5 rounded-full bg-blue-600 motion-safe:animate-ping"></span>
             </span>
