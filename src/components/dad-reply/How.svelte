@@ -5,12 +5,13 @@
 </script>
 
 <div class="flex flex-col gap-24">
-  <div class="flex flex-row items-center gap-12 py-12 text-pretty">
+  <div class="flex flex-row items-center justify-center gap-12 py-12 text-pretty">
     <div class="flex w-2/5 flex-col items-start gap-6">
       <Badge text="Nothing to learn" bgColor="bg-orange-100" />
       <div class="flex flex-col gap-3">
         <h4>Added directly in Gmail.</h4>
-        <p>Sitting along side the reply button like it’s always been there.</p>
+        <p>Sitting along side the reply button like it’s always been there.*</p>
+        <small>* Unlike my dad.</small>
       </div>
     </div>
     <div class="-gap-6 -z-20 flex w-2/5 flex-col rounded-bl-xl border-b-1 border-l-1 border-gray-300 px-12 py-8">
@@ -30,14 +31,14 @@
       </div>
     </div>
   </div>
-  <div class="flex flex-row items-center gap-12 py-12 text-pretty">
-    <div class="flex w-2/5 flex-col gap-8 rounded-bl-xl border-b-1 border-l-1 border-gray-300 px-12 py-8">
+  <div class="flex flex-row items-center justify-center gap-12 py-12 text-pretty">
+    <div class="flex w-2/5 flex-col gap-8 rounded-bl-xl border-b-1 border-l-1 border-gray-300 px-8 py-8">
       <div class="flex flex-col gap-4">
         <EmailFrom
           avatarFilename="me-shoe.png"
-          fromName="Paul Mackenzie"
+          fromName="You"
           fromEmail="paul@workingon.studio"
-          toEmail="bill.lumbergh@initech.com"
+          toEmail="sam.malone@cheersbar.net"
         />
         <div class="ml-0 flex flex-col gap-2 sm:ml-12">
           👍
@@ -49,7 +50,7 @@
           </a>
         </div>
       </div>
-      <div class="relative ml-12 flex h-9 flex-row items-end gap-4 overflow-hidden">
+      <div class="relative ml-12 flex h-9 flex-row items-end gap-4">
         <div class="absolute left-0 flex w-96 flex-row gap-3">
           <MailButton text="Got it" />
           <MailButton text="Reply" iconName="material-symbols:reply-rounded" />
@@ -65,7 +66,7 @@
       </div>
     </div>
   </div>
-  <div class="flex flex-row items-center gap-12 py-12 text-pretty">
+  <div class="flex flex-row items-center justify-center gap-12 py-12 text-pretty">
     <div class="flex w-2/5 flex-col items-start gap-6">
       <Badge text="Approvals in seconds" bgColor="bg-orange-100" />
       <div class="flex flex-col gap-3">
@@ -79,9 +80,9 @@
         <div class="relative flex flex-col gap-4">
           <EmailFrom
             avatarFilename="me-shoe.png"
-            fromName="Paul Mackenzie"
+            fromName="You"
             fromEmail="paul@workingon.studio"
-            toEmail="bill.lumbergh@initech.com"
+            toEmail="bob.kelso@sacredhearthospital.com"
           />
           <div class="ml-0 flex flex-col gap-2 sm:ml-12">
             👍
@@ -98,9 +99,9 @@
         <div class="flex flex-col gap-4">
           <EmailFrom
             avatarFilename="me-shoe.png"
-            fromName="Paul Mackenzie"
+            fromName="You"
             fromEmail="paul@workingon.studio"
-            toEmail="bill.lumbergh@initech.com"
+            toEmail="buck.strickland@stricklandpropane.com"
           />
           <div class="ml-0 flex flex-col gap-2 sm:ml-12">
             👍
