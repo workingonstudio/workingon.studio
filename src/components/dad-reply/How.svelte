@@ -3,56 +3,75 @@
   import MailButton from "./partials/MailButton.svelte";
 </script>
 
-<div class="flex flex-col items-center gap-12">
-  <div class="flex flex-col gap-4 text-center">
-    <span class="cursor-default text-4xl">🛠️</span>
-    <h2>So how does it work then?</h2>
-    <p class="text-pretty">It's as ridiculous as it sounds.</p>
-    <small>* Technically, if I die before that happens, free stuff for you!</small>
+<div class="flex flex-col gap-24">
+  <div class="flex flex-row gap-12 py-12 text-pretty">
+    <div class="flex w-2/5 flex-col items-start gap-6">
+      <Badge text="Nothing to learn" bgColor="bg-orange-100" />
+      <div class="flex flex-col gap-3">
+        <h4>Added directly in Gmail.</h4>
+        <p>Sitting along side the reply button like it’s always been there.</p>
+      </div>
+    </div>
+    <div
+      class="the-shadow -gap-6 -z-20 flex w-2/5 flex-col rounded-bl-xl border-b-1 border-l-1 border-gray-300 px-12 py-8"
+    >
+      <div class="flex flex-col gap-1">
+        <strong class="text-xs md:text-sm">Bill Lumbergh</strong>
+        <small>Division Vice President</small>
+      </div>
+      <div class="flex flex-row items-end gap-4">
+        <span class="the-shadow relative mb-6 rounded-full bg-white">
+          <span class="z-10">
+            <MailButton text="Got it" />
+          </span>
+          <div class="absolute top-6 -z-10 h-full w-full rounded-full border border-dashed border-slate-400"></div>
+        </span>
+        <MailButton type="email" href="hello@workingon.studio" text="Reply" iconName="material-symbols:reply-rounded" />
+        <MailButton text="Forward" iconName="material-symbols:forward" />
+      </div>
+    </div>
   </div>
-  <div class="flex flex-col gap-24 py-12">
-    <div class="flex flex-row items-start text-pretty">
-      <div class="flex w-1/2 flex-col items-start gap-6">
-        <Badge text="Nothing to learn" bgColor="bg-orange-100" />
-        <div class="flex flex-col gap-3">
-          <h3>Added directly in Gmail.</h3>
-          <p>Sitting along side the reply button like it’s always been there.</p>
+  <div class="flex flex-row gap-12 py-12 text-pretty">
+    <div class="the-shadow flex w-2/5 flex-col gap-8 rounded-bl-xl border-b-1 border-l-1 border-gray-300 px-12 py-8">
+      <div class="flex flex-col gap-4">
+        <div class="flex flex-row gap-3 font-[Roboto]">
+          <img src="/dad-reply/avatars/me-shoe.png" class="hidden h-9 w-9 rounded-full md:flex" alt="" />
+          <div class="flex flex-col">
+            <strong class="text-xs md:text-[15px]">
+              Paul Mackenzie
+              <span class="text-xxs font-normal text-slate-400 md:text-xs">
+                <a href="mailto:paul@workingon.studio">&lt;paul@workingon.studio&gt;</a>
+              </span>
+            </strong>
+            <!-- prettier-ignore -->
+            <span class="flex items-center gap-1 text-xxs md:text-xs font-normal text-slate-400"><span>to</span><span>&lt;bill.lumbergh@initech.com&gt;</span>
+            <iconify-icon icon="material-symbols:arrow-drop-down-rounded" class="text-lg"></iconify-icon>
+          </span>
+          </div>
+        </div>
+        <div class="ml-0 flex flex-col gap-2 sm:ml-12">
+          👍
+          <a
+            class="text-xxs font-[Arial] font-normal text-slate-400 md:text-xs"
+            href="https://chromewebstore.google.com/detail/ddkeoflblemlolckmnhihhabplfmogop"
+          >
+            via dad reply
+          </a>
         </div>
       </div>
-      <div class="the-shadow -gap-6 -z-20 flex flex-col rounded-bl-xl border-b-1 border-l-1 border-gray-300 px-12 py-8">
-        <div class="flex flex-col gap-1">
-          <strong class="text-xs md:text-sm">Bill Lumbergh</strong>
-          <small>Division Vice President</small>
-        </div>
-        <div class="flex flex-row items-end gap-4">
-          <span class="the-shadow relative mb-6 rounded-full bg-white">
-            <span class="z-10">
-              <MailButton text="Got it" />
-            </span>
-            <div class="absolute top-6 -z-10 h-full w-full rounded-full border border-dashed border-slate-300"></div>
-          </span>
-          <MailButton
-            type="email"
-            href="hello@workingon.studio"
-            text="Reply"
-            iconName="material-symbols:reply-rounded"
-          />
+      <div class="relative ml-12 flex h-9 flex-row items-end gap-4 overflow-hidden">
+        <div class="absolute left-0 flex w-96 flex-row gap-3">
+          <MailButton text="Got it" />
+          <MailButton text="Reply" iconName="material-symbols:reply-rounded" />
           <MailButton text="Forward" iconName="material-symbols:forward" />
         </div>
       </div>
     </div>
-    <div class="flex flex-col items-start gap-6">
+    <div class="flex w-2/5 flex-col items-start gap-6">
       <Badge text="Automatic send" bgColor="bg-orange-100" />
-      <div class="flex w-md flex-col gap-3">
-        <h3>No need to even compose.</h3>
+      <div class="flex flex-col gap-3">
+        <h4>No need to even compose.</h4>
         <p>Just a single click, and Dad Reply does the rest. No compose window. No clicking send.</p>
-      </div>
-    </div>
-    <div class="flex flex-col items-start gap-6">
-      <Badge text="Approvals in seconds" bgColor="bg-orange-100" />
-      <div class="flex w-md flex-col gap-3">
-        <h3>Less time replying.</h3>
-        <p>No more pleasantries when a simple response will do. Give people the answers they need faster.</p>
       </div>
     </div>
   </div>

@@ -56,6 +56,10 @@
     @apply text-lg md:text-2xl;
   }
 
+  h4 {
+    @apply text-xl;
+  }
+
   p {
     color: var(--color-text-body);
     @apply leading-relaxed;
