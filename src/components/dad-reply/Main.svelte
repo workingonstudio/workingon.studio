@@ -7,14 +7,16 @@
   import EarlyBird from "./EarlyBird.svelte";
   import Footer from "./Footer.svelte";
   import Banner from "./partials/Banner.svelte";
+  import Pro from "./Pro.svelte";
 </script>
 
 <Banner />
 <Header />
 <main class="mx-auto flex max-w-full flex-col px-4 md:max-w-6xl md:pt-0">
-  <div class="space-y-30">
-    <Hero />
+  <Hero />
+  <div class="*:pt-30 *:pb-10">
     <How />
+    <Pro />
     <Quotes />
     <Pricing />
     <EarlyBird />

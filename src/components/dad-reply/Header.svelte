@@ -14,8 +14,8 @@
     <div class="flex flex-row space-x-6">
       <Logo />
       <div class="inline-flex items-center gap-2">
-        <Badge text={"v1.5.1"} />
         <Badge text={"Pro Trial Edition"} bgColor="bg-orange-100" />
+        <Badge text={"v1.5.1"} />
       </div>
     </div>
     <div class="flex flex-row items-center gap-2">
@@ -25,7 +25,7 @@
             <a href="#how">How it works</a>
           </li>
           <li>
-            <a href="">Pro features</a>
+            <a href="#pro">Pro features</a>
           </li>
           <li>
             <a href="#pricing">Pricing</a>

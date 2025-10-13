@@ -14,7 +14,7 @@
   $: buttonOptions = [
     {
       emoji: "👍",
-      text: "Dad Reply",
+      text: "Got it",
       class: "active",
     },
     {
@@ -59,13 +59,13 @@
   {/if}
 
   <div class="google-button flex max-h-9 flex-row">
-    <button class="rounded-full rounded-r-lg border px-4 py-2">
+    <button class="rounded-full rounded-r-lg border border-slate-400 px-4 py-2">
       <Emoji class_="mr-2" emoji={currentButton.emoji} />
       {currentButton.text}
     </button>
     <button
       type="button"
-      class="flex items-center justify-center rounded-r-full border border-l-0 pr-2 pl-1"
+      class="flex items-center justify-center rounded-r-full border border-l-0 border-slate-400 pr-2 pl-1"
       on:click={handleClick}
       aria-label="close / open button"
     >
@@ -80,7 +80,7 @@
     font-family: "Google Sans", sans-serif;
     color: #444746;
     @apply bg-white;
-    @apply rounded-full border-[#747775];
+    @apply rounded-full border-slate-400;
     button {
       &:hover {
         @apply cursor-pointer bg-slate-100;

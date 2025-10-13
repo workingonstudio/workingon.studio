@@ -4,18 +4,18 @@
   import EmailFrom from "./partials/EmailFrom.svelte";
 </script>
 
-<div id="how" class="flex flex-col gap-24 py-30">
+<div id="how" class="flex flex-col gap-24">
   <div class="flex flex-col space-y-4 text-center">
     <span class="cursor-default text-4xl">🧐</span>
     <h2>As ridiculous as it sounds.</h2>
     <p class="text-pretty">
       The perfect companion for <s>the email power user</s>
-       email.
+      email.
     </p>
   </div>
   <div class="flex flex-row items-center justify-center gap-12 py-12 text-pretty">
     <div class="flex w-2/5 flex-col items-start gap-6">
-      <Badge text="Nothing to learn" bgColor="bg-orange-100" />
+      <Badge text="Nothing to learn" bgColor="bg-blue-100" />
       <div class="flex flex-col gap-3">
         <h4>Added directly in Gmail.</h4>
         <p>Sitting along side the reply button like it’s always been there.*</p>
@@ -67,7 +67,7 @@
       </div>
     </div>
     <div class="flex w-2/5 flex-col items-start gap-6">
-      <Badge text="Automatic send" bgColor="bg-orange-100" />
+      <Badge text="Automatic send" bgColor="bg-blue-100" />
       <div class="flex flex-col gap-3">
         <h4>Reply with a single click.</h4>
         <p>No need to compose, just a single click, and Dad Reply does the rest.</p>
@@ -76,7 +76,7 @@
   </div>
   <div class="flex flex-row items-center justify-center gap-12 py-12 text-pretty">
     <div class="flex w-2/5 flex-col items-start gap-6">
-      <Badge text="Save time" bgColor="bg-orange-100" />
+      <Badge text="Save time" bgColor="bg-blue-100" />
       <div class="flex flex-col gap-3">
         <h4>Approve in seconds.</h4>
         <p>No more pleasantries when a simple response will do. Give people the answers they need faster.</p>
