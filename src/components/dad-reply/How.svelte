@@ -8,7 +8,10 @@
   <div class="flex flex-col space-y-4 text-center">
     <span class="cursor-default text-4xl">🧐</span>
     <h2>As ridiculous as it sounds.</h2>
-    <p class="text-pretty">The perfect companion for the email power user.</p>
+    <p class="text-pretty">
+      The perfect companion for <s>the email power user</s>
+       email.
+    </p>
   </div>
   <div class="flex flex-row items-center justify-center gap-12 py-12 text-pretty">
     <div class="flex w-2/5 flex-col items-start gap-6">
@@ -66,22 +69,22 @@
     <div class="flex w-2/5 flex-col items-start gap-6">
       <Badge text="Automatic send" bgColor="bg-orange-100" />
       <div class="flex flex-col gap-3">
-        <h4>No need to even compose.</h4>
-        <p>Just a single click, and Dad Reply does the rest. No compose window. No clicking send.</p>
+        <h4>Reply with a single click.</h4>
+        <p>No need to compose, just a single click, and Dad Reply does the rest.</p>
       </div>
     </div>
   </div>
   <div class="flex flex-row items-center justify-center gap-12 py-12 text-pretty">
     <div class="flex w-2/5 flex-col items-start gap-6">
-      <Badge text="Approvals in seconds" bgColor="bg-orange-100" />
+      <Badge text="Save time" bgColor="bg-orange-100" />
       <div class="flex flex-col gap-3">
-        <h4>Less time replying.</h4>
+        <h4>Approve in seconds.</h4>
         <p>No more pleasantries when a simple response will do. Give people the answers they need faster.</p>
         <p>Get back to real work.</p>
       </div>
     </div>
     <div class="flex w-2/5 flex-col items-center -space-y-12">
-      <div class="flex scale-85 flex-col rounded-xl border border-gray-300 px-12 py-8">
+      <div class="flex scale-85 flex-col rounded-xl border border-gray-300 p-8">
         <div class="relative flex flex-col gap-4">
           <EmailFrom
             avatarFilename="me-shoe.png"
@@ -100,7 +103,7 @@
           </div>
         </div>
       </div>
-      <div class="the-shadow z-10 flex flex-col rounded-xl border border-gray-300 bg-white px-12 py-8">
+      <div class="the-shadow z-10 flex flex-col rounded-xl border border-gray-300 bg-white p-8">
         <div class="flex flex-col gap-4">
           <EmailFrom
             avatarFilename="me-shoe.png"
@@ -119,7 +122,7 @@
           </div>
         </div>
       </div>
-      <div class="flex scale-85 flex-col rounded-xl border border-gray-300 px-12 py-8">
+      <div class="flex scale-85 flex-col rounded-xl border border-gray-300 p-8">
         <div class="relative flex flex-col gap-4">
           <EmailFrom
             avatarFilename="me-shoe.png"
