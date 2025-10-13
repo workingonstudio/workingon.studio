@@ -22,26 +22,31 @@
       <br />
       No typing. No thinking.<br/>Just send it.
     </h1>
+    <div class="flex flex-row">
+      <div class="text-text-body flex flex-row items-center gap-2">
+        <iconify-icon icon="material-symbols:verified-outline-rounded" class="text-lg"></iconify-icon>
+        <strong class="text-xs font-semibold">Google Featured</strong>
+      </div>
+      <div class="text-text-body ml-6 flex flex-row items-center gap-0.5 *:text-amber-300">
+        <iconify-icon icon="material-symbols:star-rounded" class="text-md"></iconify-icon>
+        <iconify-icon icon="material-symbols:star-rounded" class="text-md"></iconify-icon>
+        <iconify-icon icon="material-symbols:star-rounded" class="text-md"></iconify-icon>
+        <iconify-icon icon="material-symbols:star-rounded" class="text-md"></iconify-icon>
+        <iconify-icon icon="material-symbols:star-rounded" class="text-md"></iconify-icon>
+      </div>
+    </div>
     <div class="w-full space-y-8 lg:w-5/6">
       <div class="flex flex-col gap-6 text-pretty">
         <p>* "But&#8230;Outlook already does this" &mdash; you're using Outlook, sit down.</p>
       </div>
     </div>
-    <div class="flex flex-col gap-6 md:flex-row md:justify-center lg:justify-normal">
+    <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-center lg:justify-normal">
       <DownloadButton
         label="Download for Chrome"
         icon
         iconRef="chrome"
         downloadLink="https://chromewebstore.google.com/detail/ddkeoflblemlolckmnhihhabplfmogop"
       />
-      <button class="btn hollow gap-2.5" on:click|preventDefault={switchButton} disabled={IEButton.clicked}>
-        {#if IEButton.clicked}
-          <span class="h-[20px] w-[25px] text-xl leading-none">🤔</span>
-        {:else}
-          <iconify-icon icon="fa7-brands:internet-explorer" class="text-xl"></iconify-icon>
-        {/if}
-        {IEButton.label}
-      </button>
     </div>
   </div>
   <div class="card email-container the-shadow flex-1 md:order-none lg:max-w-3xl">

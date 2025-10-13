@@ -8,18 +8,46 @@
   <div class="flex flex-col space-y-4 text-center">
     <span class="cursor-default text-4xl">🤔</span>
     <h2>Why not go Pro?</h2>
-    <p class="text-pretty">
-      The perfect companion for <s>the email power user</s>
-      email.
-    </p>
+    <p class="text-pretty">Get an advanced button, remove the branding link and add 3 custom emojis.</p>
+  </div>
+  <div class="flex flex-row items-center justify-center gap-12 py-12 text-pretty">
+    <div class="flex w-2/5 flex-col">
+      <div class="flex flex-col gap-3 rounded-xl border border-gray-300 px-4 py-4">
+        <div class="flex flex-row items-center gap-3">
+          <iconify-icon icon="material-symbols:drag-indicator" class="text-2xl"></iconify-icon>
+          <button class="rounded-lg border border-slate-300 px-3 py-2">👋</button>
+          <div class="flex flex-grow rounded-lg border border-slate-300 px-2.5 py-2.5 text-sm">Wave</div>
+        </div>
+        <div class="flex flex-row items-center gap-3">
+          <iconify-icon icon="material-symbols:drag-indicator" class="text-2xl"></iconify-icon>
+          <button class="the-shadow rounded-lg border border-slate-300 px-3 py-2">👀</button>
+          <div class="the-shadow flex flex-grow rounded-lg border border-slate-300 px-2.5 py-2.5 text-sm">Looking</div>
+        </div>
+        <div class="flex flex-row items-center gap-3">
+          <iconify-icon icon="material-symbols:drag-indicator" class="text-2xl"></iconify-icon>
+          <button class="rounded-lg border border-slate-300 px-3 py-2">🥳</button>
+          <div class="flex flex-grow rounded-lg border border-slate-300 px-2.5 py-2.5 text-sm">Yay!</div>
+        </div>
+      </div>
+    </div>
+    <div class="flex w-2/5 flex-col items-start gap-6">
+      <Badge text="Pro trial" bgColor="bg-orange-100" />
+      <div class="flex flex-col gap-3">
+        <h4>When a thumbs not enough.</h4>
+        <p>Need to say more? With Pro you can add three custom emojis</p>
+        <p>Ideal for being more ambiguous, or interacting with a CRM, Support tickets, a HR suite or code base.*</p>
+        <small>* Using Github actions.</small>
+      </div>
+    </div>
   </div>
   <div class="flex flex-row items-center justify-center gap-12 py-12 text-pretty">
     <div class="flex w-2/5 flex-col items-start gap-6">
       <Badge text="Pro trial" bgColor="bg-orange-100" />
       <div class="flex flex-col gap-3">
-        <h4>Added directly in Gmail.</h4>
-        <p>Sitting along side the reply button like it’s always been there.*</p>
-        <small>* Unlike my dad.</small>
+        <h4>Pappas got a brand new bag.</h4>
+        <p>Need to say more? With Pro you can add three custom emojis</p>
+        <p>Ideal for being more ambiguous, or interacting with a CRM, Support tickets, a HR suite or code base.*</p>
+        <small>* Using Github actions.</small>
       </div>
     </div>
     <div class="flex w-2/5 flex-col gap-6 rounded-bl-xl border-b-1 border-l-1 border-gray-300 px-12 py-8">
