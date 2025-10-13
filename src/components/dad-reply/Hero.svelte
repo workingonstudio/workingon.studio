@@ -47,6 +47,15 @@
         iconRef="chrome"
         downloadLink="https://chromewebstore.google.com/detail/ddkeoflblemlolckmnhihhabplfmogop"
       />
+      <div class="btn relative cursor-default items-center gap-2 border-2 border-gray-300 text-gray-400">
+        <iconify-icon icon="fa7-brands:firefox" class="text-xl"></iconify-icon>
+        Download for Firefox
+        <span
+          class="text-text-body absolute -top-2 -right-5 rounded-full bg-orange-100 px-2 py-0.5 text-[9px] font-semibold uppercase"
+        >
+          soon
+        </span>
+      </div>
     </div>
   </div>
   <div class="card email-container the-shadow flex-1 md:order-none lg:max-w-3xl">
