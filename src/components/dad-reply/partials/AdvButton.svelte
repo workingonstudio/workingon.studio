@@ -69,7 +69,7 @@
       on:click={handleClick}
       aria-label="close / open button"
     >
-      <iconify-icon icon={buttonIcon} class="text-2xl"></iconify-icon>
+      <iconify-icon icon={buttonIcon} class="h-6 w-6 text-2xl"></iconify-icon>
     </button>
   </div>
 </div>

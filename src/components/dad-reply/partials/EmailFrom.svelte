@@ -16,7 +16,7 @@
     </strong>
     <!-- prettier-ignore -->
     <span class="flex items-center gap-1 text-xxs md:text-xs font-normal text-slate-400"><span>to</span><span>&lt;{toEmail}&gt;</span>
-      <iconify-icon icon="material-symbols:arrow-drop-down-rounded" class="text-lg"></iconify-icon>
+      <iconify-icon icon="material-symbols:arrow-drop-down-rounded" class="text-lg w-[18px] h-[18px]"></iconify-icon>
     </span>
   </div>
 </div>
