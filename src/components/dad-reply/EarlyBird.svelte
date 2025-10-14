@@ -71,8 +71,8 @@
       <div class="card w-full space-y-6 shadow-lg md:w-md">
         <div class="space-y-8">
           <div class="flex flex-row space-x-3">
-            <Badge text="Lifetime discount" bgColor="bg-orange-100" />
-            <Badge text="33% off" bgColor="bg-blue-100" />
+            <Badge text="Lifetime discount" bgColor="bg-blue-100" />
+            <Badge text="33% off" bgColor="bg-orange-100" />
           </div>
           <div class="flex flex-row items-center gap-2">
             <h1 class="text-5xl!">$19.99</h1>

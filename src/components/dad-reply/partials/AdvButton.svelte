@@ -18,18 +18,18 @@
       class: "active",
     },
     {
-      emoji: "👋",
-      text: "Wave",
+      emoji: "🎖️",
+      text: "Feature",
       class: "",
     },
     {
-      emoji: "👀",
-      text: "Looking",
+      emoji: "🐛",
+      text: "Bug",
       class: "",
     },
     {
-      emoji: "🥳",
-      text: "Yay!",
+      emoji: "🛟",
+      text: "Issue",
       class: "",
     },
   ];

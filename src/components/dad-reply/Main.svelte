@@ -17,9 +17,9 @@
   <div class="*:pt-30 *:pb-10">
     <How />
     <Pro />
-    <Quotes />
     <Pricing />
     <EarlyBird />
+    <Quotes />
     <Footer />
   </div>
 </main>

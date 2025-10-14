@@ -24,8 +24,8 @@
     </div>
     <div class="-gap-6 -z-20 flex w-2/5 flex-col rounded-bl-xl border-b-1 border-l-1 border-gray-300 px-12 py-8">
       <div class="flex flex-col gap-1">
-        <strong class="text-xs md:text-sm">Bill Lumbergh</strong>
-        <small>Division Vice President</small>
+        <strong class="text-xs md:text-sm">Marcus Rivera</strong>
+        <small>Senior Frontend Engineer</small>
       </div>
       <div class="flex flex-row items-end gap-4">
         <span class="the-shadow relative mb-6 rounded-full bg-white">
@@ -80,17 +80,17 @@
       <div class="flex flex-col gap-3">
         <h4>Approve in seconds.</h4>
         <p>No more pleasantries when a simple response will do. Give people the answers they need faster.</p>
-        <p>Get back to real work.</p>
+        <p>Get back to work.</p>
       </div>
     </div>
     <div class="flex w-2/5 flex-col items-center -space-y-12">
-      <div class="flex scale-85 flex-col rounded-xl border border-gray-300 p-8">
+      <div class="flex w-100 scale-85 flex-col rounded-xl border border-gray-300 p-8">
         <div class="relative flex flex-col gap-4">
           <EmailFrom
             avatarFilename="me-shoe.png"
             fromName="You"
             fromEmail="paul@workingon.studio"
-            toEmail="bob.kelso@sacredhearthospital.com"
+            toEmail="andrew@workingon.studio"
           />
           <div class="ml-0 flex flex-col gap-2 sm:ml-12">
             👍
@@ -103,13 +103,13 @@
           </div>
         </div>
       </div>
-      <div class="the-shadow z-10 flex flex-col rounded-xl border border-gray-300 bg-white p-8">
+      <div class="the-shadow z-10 flex w-100 flex-col rounded-xl border border-gray-300 bg-white p-8">
         <div class="flex flex-col gap-4">
           <EmailFrom
             avatarFilename="me-shoe.png"
             fromName="You"
             fromEmail="paul@workingon.studio"
-            toEmail="buck.strickland@stricklandpropane.com"
+            toEmail="liz@workingon.studio"
           />
           <div class="ml-0 flex flex-col gap-2 sm:ml-12">
             👍
@@ -122,13 +122,13 @@
           </div>
         </div>
       </div>
-      <div class="flex scale-85 flex-col rounded-xl border border-gray-300 p-8">
+      <div class="flex w-100 scale-85 flex-col rounded-xl border border-gray-300 p-8">
         <div class="relative flex flex-col gap-4">
           <EmailFrom
             avatarFilename="me-shoe.png"
             fromName="Paul Mackenzie"
             fromEmail="paul@workingon.studio"
-            toEmail="bill.lumbergh@initech.com"
+            toEmail="thomas@workingon.studio"
           />
           <div class="ml-0 flex flex-col gap-2 sm:ml-12">
             👍

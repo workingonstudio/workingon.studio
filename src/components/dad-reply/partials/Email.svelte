@@ -50,23 +50,17 @@
 
 <div class="flex flex-col space-y-8 overflow-hidden">
   <div class="mb-8 space-y-5">
-    <EmailFrom
-      avatarFilename="lumburg-lumburg.png"
-      fromName="Bill Lumbergh"
-      fromEmail="bill.lumbergh@initech.com"
-      toEmail="you"
-    />
+    <EmailFrom avatarFilename="mario.jpeg" fromName="Mario Fernando" fromEmail="mario@workingon.studio" toEmail="you" />
     <div class="ml-0 space-y-5 *:font-['Arial'] *:text-black! sm:ml-12">
-      <p>Yeahhh, hi there,</p>
+      <p>Hey,</p>
       <p>
-        I'm gonna need you to go ahead and come in on Saturday.
+        Just wanted to confirm we're still on track for the Friday deadline?
         <br />
-        We need to play catch up.
+        Let me know if anything's changed.
       </p>
-      <p class="">Mmkay? Thanks.</p>
       <div class="flex flex-col gap-1">
-        <strong class="text-xs md:text-sm">Bill Lumbergh</strong>
-        <small>Division Vice President</small>
+        <strong class="text-xs md:text-sm">Mario Fernando</strong>
+        <small>Sr. Full Stack Software Engineer</small>
       </div>
     </div>
     {#if showReply}
@@ -80,7 +74,7 @@
   <div class="ml-0 flex flex-row gap-3 sm:ml-12">
     <MailButton text="Got it" clickable={true} onclick={toggleReply} disabled={isDisabled} />
     <MailButton type="email" href="hello@workingon.studio" text="Reply" iconName="material-symbols:reply-rounded" />
-    <MailButton text="Share" clickable={true} onclick={toggleForward} iconName="material-symbols:share" />
+    <MailButton text="Forward" clickable={true} onclick={toggleForward} iconName="material-symbols:forward" />
   </div>
 </div>
 {#if showShare}

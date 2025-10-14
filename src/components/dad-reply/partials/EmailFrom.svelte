@@ -11,7 +11,7 @@
     <strong class="text-xs md:text-[15px]">
       {fromName}
       <span class="text-xxs font-normal text-slate-400 md:text-xs">
-        <a href="mailto:paul@workingon.studio">&lt;{fromEmail}&gt;</a>
+        <a href="mailto:hello@workingon.studio">&lt;{fromEmail}&gt;</a>
       </span>
     </strong>
     <!-- prettier-ignore -->
