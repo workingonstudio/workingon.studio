@@ -47,9 +47,7 @@
       <div class="btn relative cursor-default items-center gap-2 text-gray-400">
         <iconify-icon icon="fa7-brands:firefox" class="text-xl"></iconify-icon>
         Add to Firefox
-        <span class="text-text-body absolute -top-2 -right-5 rounded-full bg-orange-100 px-2 py-0.5 text-[9px]">
-          Soon
-        </span>
+        <span class="text-text-body rounded-full bg-orange-100 px-2 py-0.5 text-[9px]">Soon</span>
       </div>
     </div>
     <div class="w-full space-y-8 lg:w-5/6">
