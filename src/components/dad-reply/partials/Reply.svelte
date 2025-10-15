@@ -21,7 +21,7 @@
           </span>
         </strong>
         <!-- prettier-ignore -->
-        <span class="flex items-center gap-1 text-xxs md:text-xs font-normal text-slate-400"><span>to</span><span>&lt;bill.lumbergh@initech.com&gt;</span>
+        <span class="flex items-center gap-1 text-xxs md:text-xs font-normal text-slate-400"><span>to</span><span>&lt;mario@workingon.studio&gt;</span>
           <iconify-icon icon="material-symbols:arrow-drop-down-rounded" class="text-lg"></iconify-icon>
         </span>
       </div>

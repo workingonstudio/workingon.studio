@@ -5,17 +5,17 @@
 </script>
 
 <footer
-  class="text-xxs flex flex-col items-start space-y-2 py-8 text-center md:flex-row md:justify-between md:space-y-0 md:text-left"
+  class="text-xxs flex flex-col items-center space-y-2 py-8 text-center sm:items-start md:flex-row md:justify-between md:space-y-0 md:text-left"
 >
+  <a href="https://github.com/workingonstudio/workingon.studio">
+    last updated: {DateTime.fromISO(date).toFormat("ccc',' dd LLL y TT ZZZ")}
+  </a>
   <a
     href="https://find-and-update.company-information.service.gov.uk/company/16700615"
-    class="flex flex-row items-center justify-center gap-1 md:justify-normal"
+    class="order-last flex flex-row items-center justify-center gap-1 md:order-first md:justify-normal"
   >
     <iconify-icon icon="material-symbols:copyright-outline-rounded" class="text-sm"></iconify-icon>
     <span>workingonstudio ltd, no: 16700615</span>
-  </a>
-  <a href="https://github.com/workingonstudio/workingon.studio">
-    last updated: {DateTime.fromISO(date).toFormat("ccc',' dd LLL y TT ZZZ")}
   </a>
 </footer>
 

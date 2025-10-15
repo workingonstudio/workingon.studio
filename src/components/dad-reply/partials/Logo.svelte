@@ -2,51 +2,60 @@
   import Emoji from "./Emoji.svelte";
 </script>
 
-<a href="#top" class="thumb-swing">
-  <h2 class="flex items-center font-bold tracking-tight">
+<div class="group flex items-center gap-3 font-bold tracking-tight">
+  <a href="#top" class="thumb-swing">
     <Emoji class_="mr-2 emoji" emoji="👍" />
     <span class="leading-none">Dad Reply</span>
-  </h2>
-</a>
+  </a>
+  <!-- <button type="button">
+    <iconify-icon icon="material-symbols:more-horiz" class="cursor-pointer text-sm"></iconify-icon>
+  </button> -->
+</div>
 
 <style>
   @reference "@styles/dad-reply.css";
-  h2 {
+  div {
     font-family: var(--font-geist);
     @apply text-base md:text-xl;
   }
+
+  /* button {
+    @apply invisible flex items-center transition-all duration-150;
+    @apply rounded-m border border-gray-300;
+    @apply px-0.5 py-0.5;
+    @apply group-hover:visible;
+  } */
+
+  a.thumb-swing :global(.emoji) {
+    display: inline-block;
+    transform-origin: bottom left;
+  }
+
+  a.thumb-swing:hover :global(.emoji) {
+    animation: thumbSwing 1s ease-in-out;
+  }
+
   @keyframes thumbSwing {
     0% {
       transform: rotate(0deg);
-      transform-origin: bottom left;
     }
     15% {
       transform: rotate(-12deg);
-      transform-origin: bottom left;
     }
     30% {
       transform: rotate(8deg);
-      transform-origin: bottom left;
     }
     45% {
       transform: rotate(-4deg);
-      transform-origin: bottom left;
     }
     60% {
       transform: rotate(2deg);
-      transform-origin: bottom left;
     }
     75% {
       transform: rotate(-1deg);
-      transform-origin: bottom left;
     }
     100% {
       transform: rotate(0deg);
-      transform-origin: bottom left;
     }
-  }
-
-  .thumb-swing:hover :global(.emoji) {
-    animation: thumbSwing 1s ease-in;
   }
 </style>
