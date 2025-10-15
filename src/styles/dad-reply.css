@@ -45,7 +45,7 @@
   }
 
   h1 {
-    @apply text-3xl/10 md:text-5xl/17;
+    @apply text-center text-4xl/12 md:text-5xl/17 lg:text-left;
   }
 
   h2 {
@@ -54,6 +54,10 @@
 
   h3 {
     @apply text-lg md:text-2xl;
+  }
+
+  h4 {
+    @apply text-xl;
   }
 
   p {
@@ -77,6 +81,7 @@
     @apply text-sm font-semibold;
     @apply transition-colors duration-300 ease-in-out;
     @apply cursor-pointer;
+    @apply px-4;
     &.solid {
       background: var(--color-primary);
       &:hover {

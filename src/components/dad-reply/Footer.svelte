@@ -8,7 +8,7 @@
   <footer class="card space-y-6 p-6 shadow-lg md:p-12">
     <div class="flex flex-row items-center gap-6">
       <Emoji class_="text-xl" emoji="👋" />
-      <Badge text="v1.5.0" />
+      <Badge text="v1.5.1" />
     </div>
     <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between md:gap-0">
       <div class="flex w-2xs flex-col gap-4">
@@ -41,19 +41,19 @@
       </div>
       <ul class="space-y-3 md:space-y-2">
         <li>
-          <iconify-icon icon="material-symbols:support" class="mr-2"></iconify-icon>
+          <iconify-icon icon="material-symbols:support" class="mr-2 h-4 w-4"></iconify-icon>
           <a href="mailto:support@workingon.studio">Support</a>
         </li>
         <li>
-          <iconify-icon icon="material-symbols:encrypted-outline-rounded" class="mr-2"></iconify-icon>
+          <iconify-icon icon="material-symbols:encrypted-outline-rounded" class="mr-2 h-4 w-4"></iconify-icon>
           <a href="/projects/dad-reply/privacy/">Privacy policy</a>
         </li>
         <li>
-          <iconify-icon icon="material-symbols:signature-rounded" class="mr-2"></iconify-icon>
+          <iconify-icon icon="material-symbols:signature-rounded" class="mr-2 h-4 w-4"></iconify-icon>
           <a href="/projects/dad-reply/terms/">Terms of service</a>
         </li>
         <li>
-          <iconify-icon icon="material-symbols:cognition-outline-rounded" class="mr-2"></iconify-icon>
+          <iconify-icon icon="material-symbols:cognition-outline-rounded" class="mr-2 h-4 w-4"></iconify-icon>
           <a href="/">workingon.studio</a>
         </li>
       </ul>

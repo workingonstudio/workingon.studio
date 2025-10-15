@@ -2,6 +2,7 @@
   import Badge from "@components/dad-reply/partials/Badge.svelte";
   import DownloadButton from "./partials/DownloadButton.svelte";
   import Emoji from "./partials/Emoji.svelte";
+  import SectionHeader from "./partials/SectionHeader.svelte";
   let priceTables = [
     {
       badge: {
@@ -14,7 +15,7 @@
         otherText: "",
         styles: "",
       },
-      features: ["Basic button.", "Additional emoji options.", "'via Reply Dad' branding."],
+      features: ["Basic button.", "Additional emoji options.", "'via Dad Reply' branding."],
       button: {
         show: false,
         icon: false,
@@ -34,27 +35,28 @@
       features: [
         "Advanced multi-select button.",
         "Custom responses.",
-        "<s>Remove 'via Reply Dad' branding.</s>*<small class='block ml-5 mt-1'>* not available during trial.</small>",
+        "<s>Remove 'via Dad Reply' branding.</s>*<small class='block ml-5 mt-1'>* not available during trial.</small>",
       ],
       button: {
         style: "hollow",
         show: true,
         iconRef: "chrome",
         icon: true,
-        label: "Download for Chrome",
+        label: "Add to Chrome",
         downloadLink: "https://chromewebstore.google.com/detail/ddkeoflblemlolckmnhihhabplfmogop",
       },
     },
   ];
 </script>
 
-<div class="flex flex-col items-center justify-center space-y-12 md:items-center">
-  <div class="flex flex-col space-y-4 text-center">
-    <span class="cursor-default text-4xl">🎟️</span>
-    <h2>Download and get access to a Pro trial.</h2>
-    <p class="text-pretty">Until I figure out payments*, I'm letting you trial the Pro features.</p>
-    <small>* Technically, if I die before that happens, free stuff for you!</small>
-  </div>
+<div id="pricing" class="flex flex-col items-center justify-center space-y-12 py-30 md:items-center">
+  <SectionHeader
+    emoji="🎟️"
+    header="Download and get access to a Pro trial."
+    body="Until I figure out payments*, I'm letting you trial the Pro features."
+    hasFootnote
+    footnote="Technically, if I die before that happens, free stuff for you!"
+  />
   <div class="flex w-full flex-col gap-6 md:flex-row lg:w-4/5">
     {#each priceTables as { badge: { bgColor, text }, price: { currency, cost, otherText, styles }, features, button: { style, show, icon, iconRef, label } }}
       <div
