@@ -95,7 +95,7 @@
             fromEmail="paul@workingon.studio"
             toEmail="andrew@workingon.studio"
           />
-          <div class="ml-0 flex flex-col gap-2 sm:ml-12">
+          <div class="ml-0 flex flex-col gap-2 md:ml-12">
             👍
             <a
               class="text-xxs font-[Arial] font-normal text-slate-400 md:text-xs"
@@ -114,7 +114,7 @@
             fromEmail="paul@workingon.studio"
             toEmail="liz@workingon.studio"
           />
-          <div class="ml-0 flex flex-col gap-2 sm:ml-12">
+          <div class="ml-0 flex flex-col gap-2 md:ml-12">
             👍
             <a
               class="text-xxs font-[Arial] font-normal text-slate-400 md:text-xs"
@@ -133,7 +133,7 @@
             fromEmail="paul@workingon.studio"
             toEmail="thomas@workingon.studio"
           />
-          <div class="ml-0 flex flex-col gap-2 sm:ml-12">
+          <div class="ml-0 flex flex-col gap-2 md:ml-12">
             👍
             <a
               class="text-xxs font-[Arial] font-normal text-slate-400 md:text-xs"

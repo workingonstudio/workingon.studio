@@ -66,7 +66,10 @@
       </div>
       <div class="flex flex-row items-stretch justify-start gap-4">
         <AdvButton />
-        <MailButton text="Reply" iconName="material-symbols:reply-rounded" />
+        <div class="flex flex-1 rounded-full border border-dashed border-neutral-200 bg-neutral-50/80 md:h-9"></div>
+        <div
+          class="hidden flex-1 rounded-full border border-dashed border-neutral-200 bg-neutral-50/80 md:flex md:h-9"
+        ></div>
       </div>
     </div>
   </div>
