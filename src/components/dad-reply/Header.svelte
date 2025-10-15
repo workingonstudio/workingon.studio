@@ -15,7 +15,7 @@
 <div class="sticky top-0 z-[1000] mb-2 flex w-full bg-white/80 shadow-sm shadow-white backdrop-blur-sm">
   <header class="mx-auto flex max-w-6xl flex-1 flex-col items-start lg:flex-row lg:items-center lg:justify-between">
     <div class="flex w-full flex-row justify-between lg:w-auto">
-      <div class="flex flex-row items-center space-x-6">
+      <div class="flex flex-row items-center gap-4">
         <Logo />
         <div class="inline-flex items-center gap-2">
           <Badge text={"Pro Trial Edition"} bgColor="bg-orange-100" />

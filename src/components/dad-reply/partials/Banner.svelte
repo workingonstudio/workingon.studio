@@ -10,7 +10,7 @@
   <div class="mx-auto flex max-w-6xl flex-1 flex-row items-center justify-center">
     <div class="text-text flex-inline flex items-center gap-4">
       <span class="text-2xl hover:cursor-help">🐦‍⬛</span>
-      <span class="text-xs font-semibold sm:text-sm">
+      <span class="text-left text-xs font-semibold sm:text-sm">
         Early bird offer : Get 33% off a yearly subscription until you die (or I do).
       </span>
     </div>

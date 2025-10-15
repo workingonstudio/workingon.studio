@@ -1,4 +1,6 @@
 <script lang="ts">
+  import Indicator from "./Indicator.svelte";
+
   let { isOpen = false, onClose } = $props();
   function handleClick() {
     document.getElementById("email")?.focus({ preventScroll: true });
@@ -13,23 +15,21 @@
 <nav class="{isOpen ? '' : 'hidden'} w-full lg:flex">
   <ul class="flex flex-col gap-0 pl-6 font-semibold md:gap-4 lg:flex-row lg:gap-6">
     <li>
-      <a href="#how" on:click={handleClose}>How it works</a>
+      <a href="#how" onclick={handleClose}>How it works</a>
     </li>
     <li>
-      <a href="#pro" on:click={handleClose}>Unlock Pro</a>
+      <a href="#pro" onclick={handleClose}>Unlock Pro</a>
     </li>
     <li>
-      <a href="#pricing" on:click={handleClose}>Pricing</a>
+      <a href="#pricing" onclick={handleClose}><del>Pricing</del></a>
     </li>
     <li class="flex flex-col">
       <a
         href="#earlybird"
-        on:click={handleClick}
+        onclick={handleClick}
         class="flex flex-row items-center justify-center gap-2 lg:justify-start"
       >
-        <span class="relative h-1.5 w-1.5 rounded-full bg-blue-600">
-          <span class="absolute left-0 h-1.5 w-1.5 rounded-full bg-blue-600 motion-safe:animate-ping"></span>
-        </span>
+        <Indicator />
         Early bird offer
       </a>
     </li>

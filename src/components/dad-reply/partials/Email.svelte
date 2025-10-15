@@ -4,6 +4,7 @@
   import ShareModule from "./ShareModule.svelte";
   import Emoji from "./Emoji.svelte";
   import EmailFrom from "./EmailFrom.svelte";
+  import Indicator from "./Indicator.svelte";
   let showReply = false;
   let showShare = false;
 
@@ -71,8 +72,8 @@
       {/each}
     {/if}
   </div>
-  <div class="ml-0 flex flex-row gap-3 sm:ml-12">
-    <MailButton text="Got it" clickable={true} onclick={toggleReply} disabled={isDisabled} />
+  <div class="relative ml-0 flex flex-row gap-3 sm:ml-12">
+    <MailButton text="Try it" clickable={true} onclick={toggleReply} disabled={isDisabled} />
     <MailButton type="email" href="hello@workingon.studio" text="Reply" iconName="material-symbols:reply-rounded" />
     <MailButton text="Forward" clickable={true} onclick={toggleForward} iconName="material-symbols:forward" />
   </div>

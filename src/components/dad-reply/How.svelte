@@ -13,8 +13,8 @@
       email.
     </p>
   </div>
-  <div class="flex flex-row items-center justify-center gap-12 py-12 text-pretty">
-    <div class="flex w-2/5 flex-col items-start gap-6">
+  <div class="flex flex-col items-center justify-center gap-12 py-12 text-pretty lg:flex-row">
+    <div class="flex w-90 flex-col items-start gap-6 lg:w-2/5">
       <Badge text="Nothing to learn" bgColor="bg-blue-100" />
       <div class="flex flex-col gap-3">
         <h4>Added directly in Gmail.</h4>
@@ -22,7 +22,9 @@
         <small>* Unlike my dad.</small>
       </div>
     </div>
-    <div class="-gap-6 -z-20 flex w-2/5 flex-col rounded-bl-xl border-b-1 border-l-1 border-gray-300 px-12 py-8">
+    <div
+      class="-gap-6 -z-20 flex w-auto flex-col rounded-bl-xl border-b-1 border-l-1 border-gray-300 px-12 py-8 lg:w-2/5"
+    >
       <div class="flex flex-col gap-1">
         <strong class="text-xs md:text-sm">Marcus Rivera</strong>
         <small>Senior Frontend Engineer</small>
@@ -39,8 +41,8 @@
       </div>
     </div>
   </div>
-  <div class="flex flex-row items-center justify-center gap-12 py-12 text-pretty">
-    <div class="flex w-2/5 flex-col gap-8 rounded-bl-xl border-b-1 border-l-1 border-gray-300 px-8 py-8">
+  <div class="flex flex-col items-center justify-center gap-12 py-12 text-pretty lg:flex-row">
+    <div class="flex w-90 flex-col gap-8 rounded-bl-xl border-b-1 border-l-1 border-gray-300 px-8 py-8 lg:w-2/5">
       <div class="flex flex-col gap-4">
         <EmailFrom
           avatarFilename="me-shoe.png"
@@ -58,7 +60,7 @@
           </a>
         </div>
       </div>
-      <div class="relative ml-12 flex h-9 flex-row items-end gap-4">
+      <div class="relative flex h-9 flex-row items-end gap-4 lg:ml-12">
         <div class="absolute left-0 flex w-96 flex-row gap-3">
           <MailButton text="Got it" />
           <MailButton text="Reply" iconName="material-symbols:reply-rounded" />
@@ -66,7 +68,7 @@
         </div>
       </div>
     </div>
-    <div class="flex w-2/5 flex-col items-start gap-6">
+    <div class="order-first flex w-90 flex-col items-start gap-6 lg:order-0 lg:w-2/5">
       <Badge text="Automatic send" bgColor="bg-blue-100" />
       <div class="flex flex-col gap-3">
         <h4>Reply with a single click.</h4>
@@ -74,16 +76,15 @@
       </div>
     </div>
   </div>
-  <div class="flex flex-row items-center justify-center gap-12 py-12 text-pretty">
-    <div class="flex w-2/5 flex-col items-start gap-6">
+  <div class="flex flex-col items-center justify-center gap-12 py-12 text-pretty lg:flex-row">
+    <div class="flex w-90 flex-col items-start gap-6 lg:w-2/5">
       <Badge text="Save time" bgColor="bg-blue-100" />
       <div class="flex flex-col gap-3">
         <h4>Approve in seconds.</h4>
         <p>No more pleasantries when a simple response will do. Give people the answers they need faster.</p>
-        <p>Get back to work.</p>
       </div>
     </div>
-    <div class="flex w-2/5 flex-col items-center -space-y-12">
+    <div class="flex flex-col items-center -space-y-12 lg:w-2/5">
       <div class="flex w-100 scale-85 flex-col rounded-xl border border-gray-300 p-8">
         <div class="relative flex flex-col gap-4">
           <EmailFrom

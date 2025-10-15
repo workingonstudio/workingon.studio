@@ -61,13 +61,6 @@
 
 <style>
   @reference "@styles/dad-reply.css";
-  .btn {
-    &.hollow {
-      &:disabled {
-        @apply text-text;
-      }
-    }
-  }
   .email-container {
     @apply md:w-2/3;
     @apply md:relative md:bottom-0;

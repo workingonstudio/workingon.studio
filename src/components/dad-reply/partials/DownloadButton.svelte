@@ -6,7 +6,7 @@
   export let downloadLink: string = "/";
 </script>
 
-<a href={downloadLink} class="btn gap-2.5 {style}">
+<a href={downloadLink} class="btn cursor-pointer gap-2.5 {style}">
   {#if icon}
     <iconify-icon icon="fa7-brands:{iconRef}" class="text-xl"></iconify-icon>
   {/if}
