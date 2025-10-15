@@ -13,7 +13,7 @@
 </script>
 
 <nav class="{isOpen ? '' : 'hidden'} w-full lg:flex">
-  <ul class="flex flex-col gap-0 pl-6 font-semibold md:gap-4 lg:flex-row lg:gap-6">
+  <ul class="flex flex-col gap-0 pl-0 font-semibold md:gap-4 md:pl-6 lg:flex-row lg:gap-6">
     <li>
       <a href="#how" onclick={handleClose}>How it works</a>
     </li>
