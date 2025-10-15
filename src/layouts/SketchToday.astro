@@ -1,0 +1,79 @@
+---
+import "../styles/sketch-today.css";
+
+import Analytics from "./partials/Analytics.astro";
+import { ClientRouter } from "astro:transitions";
+import { AstroSeo } from "@astrolib/seo";
+
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+const currentURL = new URL(Astro.url.pathname, Astro.site).href;
+const publishDate = new Date().toISOString();
+---
+
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <AstroSeo
+      {title}
+      description=""
+      canonical={currentURL}
+      ,
+      openGraph={{
+        url: currentURL,
+        title: title,
+        description: "",
+        images: [
+          {
+            url: Astro.site + "",
+            height: 600,
+            width: 1200,
+          },
+          {
+            url: Astro.site + "",
+            height: 1080,
+            width: 1080,
+          },
+        ],
+        site_name: "workingon.studio",
+        article: {
+          publishedTime: publishDate,
+          modifiedTime: publishDate,
+          authors: ["Paul Mackenzie"],
+        },
+      }}
+    />
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#030712" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      is:inline
+      type="module"
+      src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
+    ></script>
+
+    <meta name="generator" content={Astro.generator} />
+
+    <Analytics productName="Sketch Today" />
+    <ClientRouter />
+
+    <title>{title}</title>
+  </head>
+  <body>
+    <main class="mx-[5%] flex min-h-screen flex-1 md:mx-[10%]">
+      <slot />
+    </main>
+  </body>
+</html>
