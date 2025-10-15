@@ -2,19 +2,19 @@
   import Badge from "./partials/Badge.svelte";
   import MailButton from "./partials/MailButton.svelte";
   import EmailFrom from "./partials/EmailFrom.svelte";
+  import SectionHeader from "./partials/SectionHeader.svelte";
 </script>
 
 <div id="how" class="flex flex-col gap-24">
-  <div class="flex flex-col space-y-4 text-center">
-    <span class="cursor-default text-4xl">🧐</span>
-    <h2>As ridiculous as it sounds.</h2>
-    <p class="text-pretty">
-      The perfect companion for <s>the email power user</s>
-      email.
-    </p>
-  </div>
+  <SectionHeader
+    emoji="🧐"
+    header="As ridiculous as it sounds."
+    body="The perfect companion for <s>the email power user</s>
+      email."
+  />
+
   <div class="flex flex-col items-center justify-center gap-12 py-12 text-pretty lg:flex-row">
-    <div class="flex w-90 flex-col items-start gap-6 lg:w-2/5">
+    <div class="flex w-90 flex-col items-start gap-6 md:w-2/3 lg:w-2/5">
       <Badge text="Nothing to learn" bgColor="bg-blue-100" />
       <div class="flex flex-col gap-3">
         <h4>Added directly in Gmail.</h4>
@@ -42,7 +42,9 @@
     </div>
   </div>
   <div class="flex flex-col items-center justify-center gap-12 py-12 text-pretty lg:flex-row">
-    <div class="flex w-90 flex-col gap-8 rounded-bl-xl border-b-1 border-l-1 border-gray-300 px-8 py-8 lg:w-2/5">
+    <div
+      class="flex w-90 flex-col gap-8 rounded-bl-xl border-b-1 border-l-1 border-gray-300 px-8 py-8 md:w-3/5 lg:w-2/5"
+    >
       <div class="flex flex-col gap-4">
         <EmailFrom
           avatarFilename="me-shoe.png"
@@ -61,14 +63,14 @@
         </div>
       </div>
       <div class="relative flex h-9 flex-row items-end gap-4 lg:ml-12">
-        <div class="absolute left-0 flex w-96 flex-row gap-3">
+        <div class="absolute flex w-full flex-row items-stretch gap-3">
           <MailButton text="Got it" />
-          <MailButton text="Reply" iconName="material-symbols:reply-rounded" />
-          <MailButton text="Forward" iconName="material-symbols:forward" />
+          <div class="flex flex-1 rounded-full border border-dashed border-neutral-200 bg-neutral-50/80 md:h-9"></div>
+          <div class="flex flex-1 rounded-full border border-dashed border-neutral-200 bg-neutral-50/80 md:h-9"></div>
         </div>
       </div>
     </div>
-    <div class="order-first flex w-90 flex-col items-start gap-6 lg:order-0 lg:w-2/5">
+    <div class="order-first flex w-90 flex-col items-start gap-6 md:w-2/3 lg:order-0 lg:w-2/5">
       <Badge text="Automatic send" bgColor="bg-blue-100" />
       <div class="flex flex-col gap-3">
         <h4>Reply with a single click.</h4>
@@ -77,7 +79,7 @@
     </div>
   </div>
   <div class="flex flex-col items-center justify-center gap-12 py-12 text-pretty lg:flex-row">
-    <div class="flex w-90 flex-col items-start gap-6 lg:w-2/5">
+    <div class="flex w-90 flex-col items-start gap-6 md:w-2/3 lg:w-2/5">
       <Badge text="Save time" bgColor="bg-blue-100" />
       <div class="flex flex-col gap-3">
         <h4>Approve in seconds.</h4>

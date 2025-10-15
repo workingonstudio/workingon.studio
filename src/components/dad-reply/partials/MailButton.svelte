@@ -45,7 +45,10 @@
   class="google-button text-xxs relative flex max-h-9 px-3 py-1 font-medium md:px-4 md:py-2 md:text-sm"
 >
   {#if iconName}
-    <iconify-icon icon={iconName} class="mr-1 hidden md:mr-3 md:flex md:text-[18px]"></iconify-icon>
+    <iconify-icon
+      icon={iconName}
+      class="mr-1 hidden md:mr-3 md:flex md:h-auto md:w-[18px] md:text-[18px]"
+    ></iconify-icon>
   {:else}
     <span>
       <Emoji class_="mr-2 md:mr-3" emoji="👍" />
@@ -66,43 +69,5 @@
     &:disabled {
       @apply cursor-not-allowed bg-white opacity-50 hover:bg-white;
     }
-  }
-  .indicator {
-    @apply absolute -left-1 h-2 w-2 animate-ping rounded-full bg-blue-600;
-  }
-
-  @keyframes thumbSwing {
-    0% {
-      transform: rotate(0deg);
-      transform-origin: bottom left;
-    }
-    15% {
-      transform: rotate(-12deg);
-      transform-origin: bottom left;
-    }
-    30% {
-      transform: rotate(8deg);
-      transform-origin: bottom left;
-    }
-    45% {
-      transform: rotate(-4deg);
-      transform-origin: bottom left;
-    }
-    60% {
-      transform: rotate(2deg);
-      transform-origin: bottom left;
-    }
-    75% {
-      transform: rotate(-1deg);
-      transform-origin: bottom left;
-    }
-    100% {
-      transform: rotate(0deg);
-      transform-origin: bottom left;
-    }
-  }
-
-  .thumb-swing {
-    animation: thumbSwing 1s ease-in infinite;
   }
 </style>

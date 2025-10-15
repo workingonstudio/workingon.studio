@@ -1,6 +1,7 @@
 <script lang="ts">
   import DownloadButton from "./partials/DownloadButton.svelte";
   import Email from "./partials/Email.svelte";
+  import GoogleFeature from "./partials/GoogleFeature.svelte";
 
   $: IEButton = {
     icon: "fa-brands fa-internet-explorer",
@@ -17,18 +18,8 @@
 <section class="mt-20 flex flex-col gap-12 md:mt-0 md:items-center md:gap-4 lg:flex-row">
   <div class="w-full space-y-12 md:my-16 md:items-center md:text-center lg:w-2xl lg:text-left">
     <div class="flex flex-col gap-3">
-      <div class="flex flex-row">
-        <div class="text-text-body flex flex-row items-center gap-2">
-          <iconify-icon icon="material-symbols:verified-outline-rounded" class="text-lg"></iconify-icon>
-          <strong class="text-xs font-semibold">Google Featured</strong>
-        </div>
-        <div class="text-text-body ml-6 flex flex-row items-center gap-0.5 *:text-amber-300">
-          <iconify-icon icon="material-symbols:star-rounded" class="text-md"></iconify-icon>
-          <iconify-icon icon="material-symbols:star-rounded" class="text-md"></iconify-icon>
-          <iconify-icon icon="material-symbols:star-rounded" class="text-md"></iconify-icon>
-          <iconify-icon icon="material-symbols:star-rounded" class="text-md"></iconify-icon>
-          <iconify-icon icon="material-symbols:star-rounded" class="text-md"></iconify-icon>
-        </div>
+      <div class="flex flex-row justify-center lg:justify-start">
+        <GoogleFeature />
       </div>
       <!-- prettier-ignore -->
       <h1>

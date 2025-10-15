@@ -19,12 +19,12 @@
     @apply text-base md:text-xl;
   }
 
-  button {
+  /* button {
     @apply invisible flex items-center transition-all duration-150;
     @apply rounded-m border border-gray-300;
     @apply px-0.5 py-0.5;
     @apply group-hover:visible;
-  }
+  } */
 
   a.thumb-swing :global(.emoji) {
     display: inline-block;
