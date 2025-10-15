@@ -43,6 +43,6 @@
 <style>
   @reference "@styles/dad-reply.css";
   header {
-    @apply px-4 py-6 lg:px-0 lg:py-10;
+    @apply px-4 py-6 lg:py-10;
   }
 </style>

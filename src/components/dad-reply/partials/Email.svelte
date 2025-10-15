@@ -75,7 +75,9 @@
   <div class="relative ml-0 flex flex-row gap-3 sm:ml-12">
     <MailButton text="Try it" clickable={true} onclick={toggleReply} disabled={isDisabled} />
     <MailButton type="email" href="hello@workingon.studio" text="Reply" iconName="material-symbols:reply-rounded" />
-    <MailButton text="Forward" clickable={true} onclick={toggleForward} iconName="material-symbols:forward" />
+    <div class="lg:hidden xl:flex">
+      <MailButton text="Forward" clickable={true} onclick={toggleForward} iconName="material-symbols:forward" />
+    </div>
   </div>
 </div>
 {#if showShare}

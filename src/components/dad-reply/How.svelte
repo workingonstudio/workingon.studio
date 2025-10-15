@@ -23,7 +23,7 @@
       </div>
     </div>
     <div
-      class="-gap-6 -z-20 flex w-auto flex-col rounded-bl-xl border-b-1 border-l-1 border-gray-300 px-12 py-8 lg:w-2/5"
+      class="-gap-6 -z-20 flex w-90 flex-col rounded-bl-xl border-b-1 border-l-1 border-gray-300 py-8 pl-6 md:w-auto md:pl-12 lg:w-2/5"
     >
       <div class="flex flex-col gap-1">
         <strong class="text-xs md:text-sm">Marcus Rivera</strong>

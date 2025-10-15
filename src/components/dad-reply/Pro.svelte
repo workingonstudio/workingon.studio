@@ -2,6 +2,7 @@
   import Badge from "./partials/Badge.svelte";
   import AdvButton from "./partials/AdvButton.svelte";
   import SectionHeader from "./partials/SectionHeader.svelte";
+  import MailButton from "./partials/MailButton.svelte";
 </script>
 
 <div id="pro" class="flex flex-col gap-24 py-30">
@@ -65,8 +66,7 @@
       </div>
       <div class="flex flex-row items-stretch justify-start gap-4">
         <AdvButton />
-        <div class="flex flex-1 rounded-full border border-dashed border-neutral-200 bg-neutral-50/80"></div>
-        <div class="flex flex-1 rounded-full border border-dashed border-neutral-200 bg-neutral-50/80"></div>
+        <MailButton text="Reply" iconName="material-symbols:reply-rounded" />
       </div>
     </div>
   </div>
