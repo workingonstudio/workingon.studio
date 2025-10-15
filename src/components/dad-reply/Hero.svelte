@@ -1,7 +1,7 @@
 <script lang="ts">
-  import FeaturePills from "./FeaturePills.svelte";
   import DownloadButton from "./partials/DownloadButton.svelte";
   import Email from "./partials/Email.svelte";
+  import GoogleFeature from "./partials/GoogleFeature.svelte";
 
   $: IEButton = {
     icon: "fa-brands fa-internet-explorer",
@@ -15,34 +15,34 @@
   }
 </script>
 
-<section class="mt-20 flex flex-col gap-12 md:mt-0 md:items-center md:gap-4 lg:flex-row">
+<section class="mt-16 flex flex-col gap-12 md:mt-0 md:items-center md:gap-4 lg:mt-20 lg:flex-row">
   <div class="w-full space-y-12 md:my-16 md:items-center md:text-center lg:w-2xl lg:text-left">
-    <!-- prettier-ignore -->
-    <h1>
-      Reply in one click.*
-      <br />
-      No typing. No thinking.<br/>Just send it.
-    </h1>
-    <div class="w-full space-y-8 lg:w-5/6">
-      <div class="flex flex-col gap-6 text-pretty">
-        <p>* "But&#8230;Outlook already does this" &mdash; you're using Outlook, sit down.</p>
+    <div class="flex flex-col gap-3">
+      <div class="flex flex-row justify-center lg:justify-start">
+        <GoogleFeature />
       </div>
+      <!-- prettier-ignore -->
+      <h1>
+        Email triage in one click.*
+        <br />
+        Don't type. Decide.
+      </h1>
     </div>
-    <div class="flex flex-col gap-6 md:flex-row md:justify-center lg:justify-normal">
+    <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-center lg:justify-normal">
       <DownloadButton
-        label="Download for Chrome"
+        label="Add to Chrome"
         icon
         iconRef="chrome"
         downloadLink="https://chromewebstore.google.com/detail/ddkeoflblemlolckmnhihhabplfmogop"
       />
-      <button class="btn hollow gap-2.5" on:click|preventDefault={switchButton} disabled={IEButton.clicked}>
-        {#if IEButton.clicked}
-          <span class="h-[20px] w-[25px] text-xl leading-none">🤔</span>
-        {:else}
-          <i class="fa-brands fa-internet-explorer text-xl"></i>
-        {/if}
-        {IEButton.label}
-      </button>
+      <div class="btn relative cursor-default items-center gap-2 text-gray-400">
+        <iconify-icon icon="fa7-brands:firefox" class="text-xl"></iconify-icon>
+        Add to Firefox
+        <span class="text-text-body rounded-full bg-orange-100 px-2 py-0.5 text-[9px]">Soon</span>
+      </div>
+    </div>
+    <div class="w-full space-y-8 text-center lg:w-5/6 lg:text-left">
+      <small>* "But&#8230;Outlook already does this" &mdash; you're using Outlook, sit down.</small>
     </div>
   </div>
   <div class="card email-container the-shadow flex-1 md:order-none lg:max-w-3xl">
@@ -52,13 +52,6 @@
 
 <style>
   @reference "@styles/dad-reply.css";
-  .btn {
-    &.hollow {
-      &:disabled {
-        @apply text-text;
-      }
-    }
-  }
   .email-container {
     @apply md:w-2/3;
     @apply md:relative md:bottom-0;
