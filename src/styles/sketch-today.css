@@ -3,12 +3,13 @@
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  @apply transition-all duration-200;
 }
 
 @theme {
   --font-montserrat: "Montserrat", sans-serif;
 
-  --color-primary: theme(colors.blue.600);
+  --color-primary: theme(colors.amber.500);
   --color-primary-hover: theme(colors.blue.700);
   --color-main: theme(colors.gray.800);
   --color-body: theme(colors.gray.500);
