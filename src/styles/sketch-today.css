@@ -6,12 +6,12 @@
 }
 
 @theme {
-  --font-merriweather: "Merriweather", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
 
   --color-primary: theme(colors.blue.600);
   --color-primary-hover: theme(colors.blue.700);
-  --color-header: theme(colors.slate.700);
-  --color-body: theme(colors.slate.500);
+  --color-main: theme(colors.gray.800);
+  --color-body: theme(colors.gray.500);
   --color-muted: theme(colors.slate.400);
 
   --text-xxs: 0.6875rem;
@@ -26,7 +26,11 @@
 }
 
 @layer base {
-}
-
-@layer components {
+  html {
+    background: var(--color-stone-50);
+  }
+  body {
+    font-family: var(--font-montserrat);
+    color: var(--color-main);
+  }
 }
