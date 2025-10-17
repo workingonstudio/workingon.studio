@@ -46,12 +46,17 @@
   h3,
   h4 {
     font-family: var(--font-display);
+    font-feature-settings: "ss01" 1;
   }
   h1 {
     @apply text-3xl md:text-6xl/22;
   }
+  h2 {
+    @apply text-primary text-3xl;
+  }
   p {
     font-family: var(--font-nudicaMono);
+    @apply text-body text-xl/relaxed;
   }
 }
 

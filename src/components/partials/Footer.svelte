@@ -5,14 +5,9 @@
 
   let links = [
     {
-      icon: "carbon:tool-kit",
+      icon: "carbon:development",
       href: "/",
-      text: "astro",
-    },
-    {
-      icon: "carbon:code",
-      href: "https://svelte.dev/",
-      text: "svelte",
+      text: "astro + svelte",
     },
     {
       icon: "carbon:data-analytics",
@@ -32,11 +27,11 @@
   ];
 </script>
 
-<footer class="mt-12 flex flex-row items-center justify-between py-6">
+<footer class="mt-12 flex flex-col items-center justify-between border-t-1 border-slate-900 py-6 md:flex-row">
   <!-- prettier-ignore -->
-  <div class="flex flex-col gap-0.5">
-    <a href="/" class="text-primary text-sm font-display">workingon<span class="text-muted text-xxs">.studio</span></a>
-    <small class="text-xxs flex uppercase text-muted">workingonstudio ltd, no: 12345678</small>
+  <div class="flex flex-row items-center gap-2">
+    <a href="/" class="group text-primary text-md font-display">wo<span class="flicker text-muted text-xxs">.studio</span></a>
+    <a href="/"><small class="uppercase text-muted text-xxs">workingonstudio ltd, no: 12345678</small></a>
   </div>
   <ul class="text-muted flex flex-row gap-6">
     {#each links as { icon, href, text }}
@@ -55,6 +50,9 @@
   footer {
     a {
       @apply hover:text-primary transition-all delay-100;
+    }
+    .flicker {
+      @apply text-shadow-glow motion-safe:animate-flicker text-yellow-300;
     }
   }
 </style>

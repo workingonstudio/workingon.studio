@@ -29,9 +29,9 @@
                 <span class="h-8 w-8">
                   <iconify-icon icon="carbon:arrow-up-right" class="text-3xl text-gray-500" />
                 </span>
-                <h2 class="flex flex-row items-center gap-2 text-base">{name}</h2>
+                <h2 class="flex flex-row items-center gap-2">{name}</h2>
               </div>
-              <p class="ml-14 text-sm/5">
+              <p class="ml-14 text-lg/relaxed">
                 {description}
               </p>
             </div>
@@ -66,15 +66,6 @@
 
 <style>
   @reference "@styles/global.css";
-  h1 {
-    font-feature-settings: "ss01" 1;
-  }
-  h2 {
-    @apply text-primary text-3xl;
-  }
-  p {
-    @apply text-body text-xl/relaxed;
-  }
   .meta {
     @apply ml-14 text-sm uppercase;
   }

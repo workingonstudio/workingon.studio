@@ -33,18 +33,14 @@
       hello.racoon167@passinbox.com
     </a>
   </div>
-  <p class="ml-14 text-sm/5">This will forward to my inbox. You think I’m just gonna put it here for bots to grab.</p>
+  <p class="ml-14 text-lg/relaxed">
+    This will forward to my inbox. You think I’m just gonna put it here for bots to grab.
+  </p>
 </section>
 
 <style>
   @reference "@styles/global.css";
-  h1 {
-    font-feature-settings: "ss01" 1;
-  }
   a {
     @apply text-primary text-3xl underline hover:no-underline;
-  }
-  p {
-    @apply text-body text-xl/relaxed;
   }
 </style>

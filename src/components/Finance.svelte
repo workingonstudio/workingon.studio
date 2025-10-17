@@ -75,9 +75,6 @@
 
 <style>
   @reference "../styles/global.css";
-  p {
-    @apply text-body text-xl/relaxed;
-  }
   .finance-rows:hover {
     @apply text-primary delay-100;
   }

@@ -62,14 +62,14 @@
 
 <div class="sticky top-0 bg-gray-950/80 backdrop-blur-sm">
   <!-- prettier-ignore -->
-  <header class="group flex flex-row items-center justify-between transition-all duration-200 {scrolled ? 'py-4' : 'py-12'}">
+  <header class="group flex flex-row items-center justify-between transition-all duration-200 {scrolled ? 'py-4' : 'py-4 md:py-12'}">
     <a href="/" class="cursor-pointer">
       <!-- prettier-ignore -->
       <h1 class="font-display inline-block {scrolled ? 'text-xl' : 'text-sm'}">workingon<span>.studio</span></h1>
     </a>
     <div class="social flex flex-row gap-4">
       {#each socials as { icon, href, title, style }}
-        <a {href} aria-label={title} {title} class="flex items-center w-6 h-6">
+        <a {href} aria-label={title} {title} class="flex items-center justify-center w-6 h-6">
           <iconify-icon {icon} class={style}></iconify-icon>
         </a>
       {/each}
@@ -80,7 +80,7 @@
       ? 'py-4'
       : 'py-6'} text-xs"
   >
-    <ul class="flex w-full flex-row">
+    <ul class="flex w-full flex-col md:flex-row">
       {#each navItems as { icon, href, title, subtitle, description }}
         <li class="group {isActive(href) ? 'active' : ''}">
           <iconify-icon {icon} class="text-lg text-gray-500"></iconify-icon>
