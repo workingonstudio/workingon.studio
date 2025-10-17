@@ -5,10 +5,16 @@
     return currentPath === path;
   }
 
+  function openMenu() {
+    showMenu = !showMenu;
+  }
+
   let scrolled: boolean = false;
   function handleScroll() {
     scrolled = window.scrollY > 0;
   }
+
+  let showMenu = false;
 
   let navItems = [
     {
@@ -65,26 +71,31 @@
   <header class="group flex flex-row items-center justify-between transition-all duration-200 {scrolled ? 'py-4' : 'py-4 md:py-12'}">
     <a href="/" class="cursor-pointer">
       <!-- prettier-ignore -->
-      <h1 class="font-display inline-block {scrolled ? 'text-xl' : 'text-sm'}">workingon<span>.studio</span></h1>
+      <h1 class="font-display inline-block {scrolled ? 'text-sm' : 'text-xl'}">workingon<span>.studio</span></h1>
     </a>
     <div class="social flex flex-row gap-4">
       {#each socials as { icon, href, title, style }}
-        <a {href} aria-label={title} {title} class="flex items-center justify-center w-6 h-6">
+        <a {href} aria-label={title} {title} class="items-center hidden lg:flex justify-center w-6 h-6">
           <iconify-icon {icon} class={style}></iconify-icon>
         </a>
       {/each}
+      <button type="button" onclick={openMenu} class="hover:*:text-primary w-6 h-6 cursor-pointer flex lg:hidden">
+        <iconify-icon icon="carbon:{showMenu ? 'close-large' : 'menu'}" class=" text-2xl text-gray-500"></iconify-icon>
+      </button>
     </div>
   </header>
   <nav
-    class="flex flex-col items-start border-y-1 border-slate-900 transition-all duration-300 {scrolled
+    class="{showMenu
+      ? 'flex'
+      : 'hidden'} flex-col items-start border-y-1 border-slate-900 transition-all duration-300 lg:flex {scrolled
       ? 'py-4'
       : 'py-6'} text-xs"
   >
-    <ul class="flex w-full flex-col md:flex-row">
+    <ul class="flex w-full flex-col lg:flex-row">
       {#each navItems as { icon, href, title, subtitle, description }}
         <li class="group {isActive(href) ? 'active' : ''}">
-          <iconify-icon {icon} class="text-lg text-gray-500"></iconify-icon>
-          <a {href}>
+          <iconify-icon {icon} class="flex h-[18px] w-[18px] text-lg text-gray-500 lg:hidden xl:flex"></iconify-icon>
+          <a {href} onclick={openMenu}>
             <!-- prettier-ignore -->
             <h2>{title}<span>{subtitle}</span></h2>
             <p class="transition-all duration-200">{description}</p>

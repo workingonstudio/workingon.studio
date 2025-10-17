@@ -2,7 +2,7 @@
   const actionList = ["standing up for delight", "pulling back the curtain", "calling out the bullshit"];
 </script>
 
-<div class="group mx-4 mt-14 mb-16 w-full">
+<div class="group mx-2 mt-14 mb-16 w-full">
   <div class="space-y-12">
     <!-- prettier-ignore -->
     <h1>
@@ -26,6 +26,7 @@
     @apply text-body text-xl/relaxed;
   }
   h1 {
+    @apply text-pretty;
     span {
       @apply before:content-["\2217\2217"];
     }
