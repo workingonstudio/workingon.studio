@@ -5,7 +5,7 @@
     return currentPath === path;
   }
 
-  function openMenu() {
+  function toggleMenu() {
     showMenu = !showMenu;
   }
 
@@ -79,7 +79,7 @@
           <iconify-icon {icon} class={style}></iconify-icon>
         </a>
       {/each}
-      <button type="button" onclick={openMenu} class="hover:*:text-primary w-6 h-6 cursor-pointer flex lg:hidden">
+      <button type="button" onclick={toggleMenu} class="hover:*:text-primary w-6 h-6 cursor-pointer flex lg:hidden">
         <iconify-icon icon="carbon:{showMenu ? 'close-large' : 'menu'}" class=" text-2xl text-gray-500"></iconify-icon>
       </button>
     </div>
@@ -95,7 +95,7 @@
       {#each navItems as { icon, href, title, subtitle, description }}
         <li class="group {isActive(href) ? 'active' : ''}">
           <iconify-icon {icon} class="flex h-[18px] w-[18px] text-lg text-gray-500 lg:hidden xl:flex"></iconify-icon>
-          <a {href} onclick={openMenu}>
+          <a {href} onclick={toggleMenu}>
             <!-- prettier-ignore -->
             <h2>{title}<span>{subtitle}</span></h2>
             <p class="transition-all duration-200">{description}</p>
