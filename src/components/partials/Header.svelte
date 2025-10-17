@@ -23,10 +23,10 @@
     },
     {
       icon: "carbon:flagging-taxi",
-      href: "/hire",
-      title: "hire",
+      href: "/contact",
+      title: "contact",
       subtitle: ".mail",
-      description: "you need me more than...",
+      description: "bother me with admin.",
     },
   ];
 
@@ -49,7 +49,7 @@
   ];
 </script>
 
-<div class="sticky top-0 mb-16 bg-gray-950/80 backdrop-blur-sm">
+<div class="sticky top-0 bg-gray-950/80 backdrop-blur-sm">
   <header class="group flex flex-row items-center justify-between py-12">
     <a href="/" class="cursor-pointer">
       <!-- prettier-ignore -->

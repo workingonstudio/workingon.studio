@@ -5,7 +5,7 @@
 </script>
 
 <footer
-  class="text-xxs flex flex-col items-center space-y-2 py-8 text-center sm:items-start md:flex-row md:justify-between md:space-y-0 md:text-left"
+  class="flex flex-col items-center space-y-2 py-11 text-center text-xs sm:items-start md:flex-row md:justify-between md:space-y-0 md:text-left"
 >
   <a href="https://github.com/workingonstudio/workingon.studio">
     last updated: {DateTime.fromISO(date).toFormat("ccc',' dd LLL y TT ZZZ")}
