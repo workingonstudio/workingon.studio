@@ -35,8 +35,8 @@
     {
       icon: "carbon:flagging-taxi",
       href: "/contact",
-      title: "contact",
-      subtitle: ".mail",
+      title: "hire",
+      subtitle: ".me",
       description: "bother me with admin.",
     },
   ];
@@ -69,7 +69,7 @@
     </a>
     <div class="social flex flex-row gap-4">
       {#each socials as { icon, href, title, style }}
-        <a {href} aria-label={title} {title} class="flex items-center">
+        <a {href} aria-label={title} {title} class="flex items-center w-6 h-6">
           <iconify-icon {icon} class={style}></iconify-icon>
         </a>
       {/each}

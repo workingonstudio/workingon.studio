@@ -18,8 +18,9 @@
       <small class="text-body flex flex-row gap-1">
         <span class="text-xl">*</span>
         <span>
-          Each time you visit this page my day rate increases by £10. If it takes you too long to decide anything this
-          is your punishment.
+          Each time you visit this page my day rate increases by £10.
+          <br />
+          If it takes you too long to decide anything this is your punishment.
         </span>
       </small>
     </div>
