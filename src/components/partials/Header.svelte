@@ -14,7 +14,7 @@
     scrolled = window.scrollY > 0;
   }
 
-  let showMenu = false;
+  $: showMenu = false;
 
   let navItems = [
     {
@@ -68,7 +68,7 @@
 
 <div class="sticky top-0 bg-gray-950/80 backdrop-blur-sm">
   <!-- prettier-ignore -->
-  <header class="group flex flex-row items-center justify-between transition-all duration-200 {scrolled ? 'py-4' : 'py-4 md:py-12'}">
+  <header class="group flex flex-row items-center border-b-1 border-slate-900 justify-between transition-all duration-200 {scrolled ? 'py-4' : 'py-4 md:py-12'}">
     <a href="/" class="cursor-pointer">
       <!-- prettier-ignore -->
       <h1 class="font-display inline-block {scrolled ? 'text-sm' : 'text-xl'}">workingon<span>.studio</span></h1>
@@ -87,7 +87,7 @@
   <nav
     class="{showMenu
       ? 'flex'
-      : 'hidden'} flex-col items-start border-y-1 border-slate-900 transition-all duration-300 lg:flex {scrolled
+      : 'hidden'} flex-col items-start border-b-1 border-slate-900 transition-all duration-300 lg:flex {scrolled
       ? 'py-4'
       : 'py-6'} text-xs"
   >

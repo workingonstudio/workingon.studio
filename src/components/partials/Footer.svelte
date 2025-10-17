@@ -27,13 +27,15 @@
   ];
 </script>
 
-<footer class="mt-12 flex flex-col items-center justify-between border-t-1 border-slate-900 py-6 md:flex-row">
+<footer
+  class="mt-12 flex flex-col justify-between gap-2 border-t-1 border-slate-900 py-6 lg:flex-row lg:items-center lg:gap-0"
+>
   <!-- prettier-ignore -->
   <div class="flex flex-col">
     <a href="/" class="group text-primary text-md font-display -mb-1">wo<span class="flicker text-muted text-xxs">.studio</span></a>
     <a href="/"><small class="uppercase text-muted text-xxs">workingonstudio ltd, no: 12345678</small></a>
   </div>
-  <ul class="text-muted flex flex-row gap-6">
+  <ul class="text-muted flex flex-row gap-x-6 gap-y-2 last:flex-wrap last:lg:flex-nowrap">
     {#each links as { icon, href, text }}
       <li class="flex flex-row items-center">
         <a {href} class="text-xxs flex gap-2 uppercase">
