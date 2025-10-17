@@ -13,7 +13,7 @@
       <!-- prettier-ignore -->
       <p>
         {#each actionList as item}
-          <span class="hidden sm:inline-block">working on</span>...{item}.
+          ...{item}.<br/>
         {/each}
       </p>
     </div>

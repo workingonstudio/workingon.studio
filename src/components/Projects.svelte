@@ -8,11 +8,9 @@
 <div class="group mx-4 mt-14 mb-16 w-full">
   <div class="space-y-12">
     <h1>
-      {daysSince} days passed.
+      {daysSince} days passed. 3 projects shipped.
       <br />
-      Three projects shipped.
-      <br />
-      Three more in the dock.
+      3 more in the dock.
     </h1>
     <div class="flex max-w-xl flex-col gap-12">
       <p>I don’t make things for people. I make them for me and share them.</p>

@@ -1,4 +1,10 @@
 <script lang="ts">
+  export let currentPath = "/";
+
+  function isActive(path: string) {
+    return currentPath === path;
+  }
+
   let navItems = [
     {
       icon: "carbon:delivery-parcel",
@@ -64,7 +70,7 @@
   <nav class="flex flex-col items-start border-y-1 border-slate-900 py-6 text-xs">
     <ul class="flex w-full flex-row">
       {#each navItems as { icon, href, title, subtitle, description }}
-        <li class="group">
+        <li class="group {isActive(href) ? 'active' : ''}">
           <iconify-icon {icon} class="text-lg text-gray-500"></iconify-icon>
           <a {href}>
             <!-- prettier-ignore -->
@@ -104,10 +110,25 @@
             @apply text-body text-xs;
           }
         }
+        /* Active state styles - only when not hovering anything */
+        &.active h2 span {
+          @apply text-shadow-glow motion-safe:animate-flicker text-yellow-300;
+        }
       }
     }
+    /* When hovering, fade everything except the hovered item */
     &:has(li:hover) li:not(:hover) {
       @apply opacity-30 delay-100;
+    }
+
+    /* When hovering, remove active styles from active item if it's not being hovered */
+    &:has(li:hover) li.active:not(:hover) h2 span {
+      @apply text-gray-500 text-shadow-none motion-safe:animate-none;
+    }
+
+    /* When NOT hovering, fade non-active items */
+    &:not(:has(li:hover)):has(li.active) li:not(.active) {
+      @apply opacity-30;
     }
   }
 

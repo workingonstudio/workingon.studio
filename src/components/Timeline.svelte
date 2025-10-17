@@ -73,15 +73,13 @@
 <div class="group mx-4 mt-14 mb-16 w-full">
   <div class="space-y-12">
     <h1>
-      {result.totalCommits} Commits.
-      <br />
-      {result.totalMerges} Merges.
-      <br />
-      {result.totalPRs} Pull Requests.
+      {result.totalCommits} commits, {result.totalMerges} merges, {result.totalPRs} pull requests and only 1 rebase.
     </h1>
     <div class="flex max-w-xl flex-col gap-12">
       <p>
-        Design isn’t neat. It’s organised chaos. It’s a ball of string that slowly unravels.
+        Design isn’t neat. It’s organised chaos.
+        <br />
+        It’s a ball of string that slowly unravels.
         <br />
         Huh...Just like me.
       </p>
@@ -89,15 +87,15 @@
   </div>
 </div>
 
-<section class="timeline-section mx-4 mt-32 flex max-w-2xl flex-col gap-12">
+<section class="timeline-section mx-4 flex max-w-2xl flex-col gap-12">
   <div class="timeline-reveal group flex flex-col gap-12">
     <div class="timeline-groups flex flex-col">
       {#each groupedEntries as group}
         <div class="date-group">
-          <h3 class="date-header my-12">
+          <h3 class="date-header mb-12">
             {group.date}
           </h3>
-          <ul class="timeline-entries flex flex-col gap-12">
+          <ul class="timeline-entries mb-12 flex flex-col gap-12">
             {#each group.entries as entry}
               <li class="timeline-entry space-y-2" data-type={entry.type}>
                 <div class="entry-content space-y-3">

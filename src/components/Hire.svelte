@@ -6,7 +6,7 @@
     <h1>
       Currently available for consultancy gigs.
       <br />
-      You know, you pay me £500 / day.
+      You know, you pay me £500/day*.
       <br />
       I tell you what to do.
     </h1>
@@ -15,6 +15,13 @@
         Whether you take my advice is entirely up to you. I don’t care. I’ll be riding into the sunset with a sack of
         money.
       </p>
+      <small class="text-body flex flex-row gap-1">
+        <span class="text-xl">*</span>
+        <span>
+          Each time you visit this page my day rate increases by £10. If it takes you too long to decide anything this
+          is your punishment.
+        </span>
+      </small>
     </div>
   </div>
 </div>
@@ -34,7 +41,7 @@
     font-feature-settings: "ss01" 1;
   }
   a {
-    @apply text-primary text-3xl hover:underline;
+    @apply text-primary text-3xl underline hover:no-underline;
   }
   p {
     @apply text-body text-xl/relaxed;

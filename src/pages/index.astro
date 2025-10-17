@@ -4,11 +4,13 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/partials/Header.svelte";
 import Home from "../components/Home.svelte";
 import Footer from "../components/partials/Footer.svelte";
+
+const currentPath = Astro.url.pathname;
 ---
 
 <Layout title="workingon.studio">
   <div class="flex flex-1 flex-col justify-between">
-    <Header text="workingon.studio" client:load />
+    <Header text="workingon.studio" client:load {currentPath} />
     <Home />
     <Footer client:load />
   </div>

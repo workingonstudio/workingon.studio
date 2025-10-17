@@ -3,11 +3,12 @@ import Layout from "../layouts/Layout.astro";
 import Finance from "../components/Finance.svelte";
 import Header from "../components/partials/Header.svelte";
 import Footer from "../components/partials/Footer.svelte";
+const currentPath = Astro.url.pathname;
 ---
 
-<Layout title="workingon.studio - Finance">
+<Layout title="workingon.studio - Finances">
   <div class="flex flex-1 flex-col justify-between bg-gray-950 text-gray-100">
-    <Header text="finance.csv" client:load />
+    <Header text="finance.csv" client:load {currentPath} />
     <Finance />
     <Footer client:load />
   </div>
