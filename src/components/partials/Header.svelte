@@ -5,6 +5,11 @@
     return currentPath === path;
   }
 
+  let scrolled: boolean = false;
+  function handleScroll() {
+    scrolled = window.scrollY > 0;
+  }
+
   let navItems = [
     {
       icon: "carbon:delivery-parcel",
@@ -38,36 +43,43 @@
 
   let socials = [
     {
-      icon: "fa7-brands:threads",
-      title: "Follow on Threads",
-      href: "https://www.threads.com/@workingon.studio",
+      icon: "simple-icons:substack",
+      title: "Follow on Substack",
+      href: "https://https://aquietfracture.substack.com/",
+      style: "text-sm",
     },
+
     {
-      icon: "fa7-brands:square-linkedin",
-      title: "Follow on LinkedIn",
-      href: "https://www.linkedin.com/company/workingonstudio/about/",
-    },
-    {
-      icon: "fa7-brands:github",
+      icon: "simple-icons:github",
       title: "Follow on Github",
       href: "https://github.com/workingonstudio",
+      style: "text-md",
     },
   ];
 </script>
 
+<svelte:window on:scroll={handleScroll} />
+
 <div class="sticky top-0 bg-gray-950/80 backdrop-blur-sm">
-  <header class="group flex flex-row items-center justify-between py-12">
+  <!-- prettier-ignore -->
+  <header class="group flex flex-row items-center justify-between transition-all duration-200 {scrolled ? 'py-4' : 'py-12'}">
     <a href="/" class="cursor-pointer">
       <!-- prettier-ignore -->
-      <h1 class="font-display inline-block text-xl">workingon<span>.studio</span></h1>
+      <h1 class="font-display inline-block {scrolled ? 'text-xl' : 'text-sm'}">workingon<span>.studio</span></h1>
     </a>
-    <ul class="social flex flex-row gap-4">
-      {#each socials as { icon, href, title }}
-        <li><a {href} aria-label={title} {title}><iconify-icon {icon} class="text-md"></iconify-icon></a></li>
+    <div class="social flex flex-row gap-4">
+      {#each socials as { icon, href, title, style }}
+        <a {href} aria-label={title} {title} class="flex items-center">
+          <iconify-icon {icon} class={style}></iconify-icon>
+        </a>
       {/each}
-    </ul>
+    </div>
   </header>
-  <nav class="flex flex-col items-start border-y-1 border-slate-900 py-6 text-xs">
+  <nav
+    class="flex flex-col items-start border-y-1 border-slate-900 transition-all duration-300 {scrolled
+      ? 'py-4'
+      : 'py-6'} text-xs"
+  >
     <ul class="flex w-full flex-row">
       {#each navItems as { icon, href, title, subtitle, description }}
         <li class="group {isActive(href) ? 'active' : ''}">
@@ -75,7 +87,7 @@
           <a {href}>
             <!-- prettier-ignore -->
             <h2>{title}<span>{subtitle}</span></h2>
-            <p>{description}</p>
+            <p class="transition-all duration-200">{description}</p>
           </a>
         </li>
       {/each}
@@ -133,12 +145,10 @@
   }
 
   .social {
-    li {
-      a {
-        @apply text-muted;
-        &:hover {
-          @apply text-primary transition-colors duration-300;
-        }
+    a {
+      @apply text-muted;
+      &:hover {
+        @apply text-primary transition-colors duration-300;
       }
     }
   }

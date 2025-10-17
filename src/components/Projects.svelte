@@ -13,7 +13,7 @@
       3 more in the dock.
     </h1>
     <div class="flex max-w-xl flex-col gap-12">
-      <p>I don’t make things for people. I make them for me and share them.</p>
+      <p>I don’t make things for you. I make them for me and share them.</p>
     </div>
   </div>
 </div>
