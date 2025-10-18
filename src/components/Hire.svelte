@@ -2,15 +2,43 @@
   import PageHeader from "./partials/PageHeader.svelte";
   import { onMount } from "svelte";
   import { dayRate } from "../stores/dayRate";
+  import { get } from "svelte/store";
+
+  let displayRate = 500;
 
   onMount(() => {
+    // Get the CURRENT rate BEFORE incrementing
+    const startRate = get(dayRate).rate;
+
+    // Now increment
     dayRate.incrementVisit();
+
+    // Get the NEW rate
+    const target = get(dayRate).rate;
+
+    // Animate from start to target
+    const duration = 800;
+    const startTime = Date.now();
+
+    function animate() {
+      const elapsed = Date.now() - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const easeProgress = 1 - Math.pow(1 - progress, 3);
+
+      displayRate = Math.round(startRate + (target - startRate) * easeProgress);
+
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      }
+    }
+
+    animate();
   });
 </script>
 
 <PageHeader>
   <h1>
-    Currently available for consultancy gigs. You know, you pay me £{$dayRate.rate}/day*. I tell you what to do.
+    Currently available for consultancy gigs. You know, you pay me £{displayRate}/day*. I tell you what to do.
   </h1>
   <div class="flex max-w-xl flex-col gap-12">
     <p>
