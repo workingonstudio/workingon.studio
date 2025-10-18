@@ -10,10 +10,9 @@ import Footer from "@components/partials/Footer.svelte";
 
 export interface Props {
   title: string;
-  headerText: string;
 }
 
-const { title, headerText } = Astro.props;
+const { title } = Astro.props;
 const currentURL = new URL(Astro.url.pathname, Astro.site).href;
 const publishDate = new Date().toISOString();
 const currentPath = Astro.url.pathname;
@@ -72,7 +71,8 @@ const nudicaMonoFontUrl = import.meta.env.NUDICA_MONO_FONT_CSS_URL;
       is:inline
       type="module"
       src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    ></script>
+    >
+    </script>
 
     <meta name="generator" content={Astro.generator} />
 
@@ -88,7 +88,7 @@ const nudicaMonoFontUrl = import.meta.env.NUDICA_MONO_FONT_CSS_URL;
   <body>
     <main class="mx-[5%] flex min-h-screen flex-1 flex-col md:mx-[10%]">
       <div class="flex flex-1 flex-col justify-between gap-24">
-        <Header text={headerText} client:load {currentPath} />
+        <Header client:load {currentPath} />
         <div class="flex grow-1 flex-col justify-start gap-24 2xl:flex-row">
           <slot />
         </div>
