@@ -1,5 +1,5 @@
 <script lang="ts">
-  import PageHeader from "./partials/PageHeader.svelte";
+  import PageHeader from "@components/partials/PageHeader.svelte";
   import projectData from "@data/projects.json";
   import { DateTime } from "luxon";
   const launchDate = DateTime.fromISO("2025-08-27");
