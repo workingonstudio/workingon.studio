@@ -1,55 +1,94 @@
 <script lang="ts">
+  import PageHeader from "@components/partials/PageHeader.svelte";
+
   import financeData from "../data/finance.json";
 
   $: totalClass = totalIncome - totalExpenses >= 0 ? "text-green-500" : "text-red-500";
 
-  let totalIncome = financeData.entries.reduce((acc, currentItem) => {
-    return acc + currentItem.in;
+  let totalIncome = financeData.entries.reduce((acc, month) => {
+    return (
+      acc +
+      month.items.reduce((itemAcc, item) => {
+        return itemAcc + item.in;
+      }, 0)
+    );
   }, 0);
 
-  let totalExpenses = financeData.entries.reduce((acc, currentItem) => {
-    return acc + currentItem.out;
+  let totalExpenses = financeData.entries.reduce((acc, month) => {
+    return (
+      acc +
+      month.items.reduce((itemAcc, item) => {
+        return itemAcc + item.out;
+      }, 0)
+    );
   }, 0);
 
   $: netTotal =
     totalIncome - totalExpenses >= 0
       ? `£${(totalIncome - totalExpenses).toFixed(2)}`
-      : `-£${Math.abs(totalIncome - totalExpenses).toFixed(2)}`;
+      : `£${Math.abs(totalIncome - totalExpenses).toFixed(2)}`;
 </script>
 
-<section class="flex max-w-md flex-col space-y-7">
-  <div class="space-y-1">
-    <span class="text-xxs inline-flex text-gray-500">Current Balance</span>
-    <h3 class="font-nudciaMono text-2xl {totalClass}">{netTotal}</h3>
+<PageHeader>
+  <h1>
+    Currently <span class={totalClass}>{netTotal}</span>
+    in the red.
+  </h1>
+  <div class="flex max-w-xl flex-col gap-12">
+    <p>I am actually thankful that it's in the red. Gives me time to think of a color for when it's in the black.</p>
   </div>
+</PageHeader>
 
-  <div class="flex flex-col" role="table" aria-label="Financial transactions">
-    <!-- Header -->
-    <div class="text-xxs flex pb-2 text-gray-500" role="rowgroup">
-      <div class="flex w-full" role="row">
-        <span class="flex-1 text-left" role="columnheader">Description</span>
-        <span class="w-28 text-right" role="columnheader">In</span>
-        <span class="w-28 text-right" role="columnheader">Out</span>
+<section class="flex flex-col gap-7 2xl:mt-5 2xl:w-5xl">
+  {#each financeData.entries as { date, items }}
+    <div class="flex flex-col" role="table" aria-label="Financial transactions">
+      <!-- Header -->
+      <div class="text-xxs text-primary flex pb-12" role="rowgroup">
+        <div class="flex w-full" role="row">
+          <span class="flex-1 text-left text-3xl" role="columnheader">{date}</span>
+          <span class="w-28 text-right" role="columnheader">
+            <span class="h-8 w-8">
+              <iconify-icon icon="carbon:arrow-down-right" class="text-3xl" />
+            </span>
+          </span>
+          <span class="w-28 text-right" role="columnheader">
+            <span class="h-8 w-8">
+              <iconify-icon icon="carbon:arrow-up-right" class="text-3xl" />
+            </span>
+          </span>
+        </div>
+      </div>
+
+      <!-- Rows -->
+      <div class="finance-rows text-body flex flex-col text-xl" role="rowgroup">
+        {#each items as { description, out }}
+          <div class="finance-row flex cursor-default pb-4 transition-colors duration-150 ease-in-out" role="row">
+            <span class="flex-1 truncate" role="cell">{description}</span>
+            <span class="w-28 text-right" role="cell"></span>
+            <span class="w-28 text-right" role="cell">-£{out.toFixed(2)}</span>
+          </div>
+        {/each}
       </div>
     </div>
-
-    <!-- Rows -->
-    <div class="finance-rows flex flex-col text-sm" role="rowgroup">
-      {#each financeData.entries as item}
-        <div class="finance-row flex cursor-default pb-4 transition-colors duration-150 ease-in-out" role="row">
-          <span class="flex-1" role="cell">{item.description}</span>
-          <span class="w-28 text-right" role="cell"></span>
-          <span class="w-28 text-right" role="cell">-£{item.out.toFixed(2)}</span>
-        </div>
-      {/each}
-    </div>
-  </div>
+  {/each}
 </section>
 
 <style>
   @reference "../styles/global.css";
   .finance-rows:hover .finance-row:not(:hover) {
-    @apply text-gray-500 delay-100;
+    @apply opacity-40 delay-100;
+  }
+
+  .finance-rows:hover {
+    @apply text-primary;
+  }
+
+  .finance-row:not(:hover) {
+    @apply text-body delay-100;
+  }
+
+  .finance-row {
+    @apply text-sm transition-opacity duration-200 md:text-base lg:text-xl;
   }
 
   .finance-row:focus {

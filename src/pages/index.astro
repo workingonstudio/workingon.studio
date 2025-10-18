@@ -1,15 +1,9 @@
 ---
 // src/pages/index.astro
 import Layout from "../layouts/Layout.astro";
-import Header from "../components/partials/Header.svelte";
 import Home from "../components/Home.svelte";
-import Footer from "../components/partials/Footer.svelte";
 ---
 
 <Layout title="workingon.studio">
-  <div class="flex flex-1 flex-col justify-between">
-    <Header text="workingon.studio" client:load />
-    <Home />
-    <Footer client:load />
-  </div>
+  <Home />
 </Layout>

@@ -1,47 +1,56 @@
 [
   {
-    "icon": "mail-reply",
     "name": "Dad Reply",
-    "description": "Instantly reply to your emails with minimal effort and maximum dad energy.",
-    "version": 1.0,
-    "status": "live",
-    "tags": ["Paid", "Free"],
+    "description": "Created as a joke. Became a thing.",
+    "version": "1.5.2",
+    "status": "shipped",
+    "tags": [
+      { "icon": "carbon:currency-dollar", "text": "paid" },
+      { "icon": "carbon:magic-wand", "text": "free" }
+    ],
     "link": "dad-reply"
   },
   {
-    "icon": "boolean",
     "name": "Solidarity",
-    "description": "A Chrome Extension that makes you feel less shit about looking for work.",
-    "version": 1.1,
-    "status": "live",
-    "tags": ["Free"],
+    "description": "Helps you feel less shit about looking for work.",
+    "version": "1.0.1",
+    "status": "shipped",
+    "tags": [{ "icon": "carbon:magic-wand", "text": "free" }],
     "link": "solidarity"
   },
   {
-    "icon": "rain-drop",
+    "name": "workingon.studio",
+    "description": "This will literally bring you back here.",
+    "version": "2.0.55",
+    "status": "shipped",
+    "tags": [{ "icon": "carbon:magic-wand", "text": "free" }],
+    "link": "/"
+  },
+  {
     "name": "Hidden Current",
     "description": "It's not about how much AI is costing you, but how much it's costing us.",
     "version": 0.5,
     "status": "draft",
-    "tags": ["Free"],
+    "tags": [{ "icon": "carbon:magic-wand", "text": "free" }],
     "link": "/"
   },
   {
-    "icon": "noodle-bowl",
     "name": "Design Dojo",
     "description": "If you've ever said you were a ninja, it's time to prove it in the dojo.",
     "version": 0.1,
     "status": "draft",
-    "tags": ["Paid", "Free"],
+    "tags": [
+      { "icon": "carbon:currency-dollar", "text": "paid" },
+      { "icon": "carbon:magic-wand", "text": "free" }
+    ],
     "link": "/"
   },
   {
-    "icon": "application",
     "name": "Only 98",
     "description": "How much will you spend to be truly unique? Sustainable uniqueness vs wasteful exclusivity.",
     "version": 0.1,
     "status": "draft",
-    "tags": ["Paid"],
+    "tags": [{ "icon": "carbon:currency-dollar", "text": "paid" }],
     "link": "/"
   }
 ]
