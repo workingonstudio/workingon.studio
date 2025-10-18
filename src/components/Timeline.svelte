@@ -73,7 +73,7 @@
 
 <PageHeader>
   <h1>
-    {result.totalCommits} commits, {result.totalMerges} merges, {result.totalPRs} pull requests and only 1 rebase.
+    {result.totalCommits} commits. {result.totalMerges} merges. {result.totalPRs} pull requests. One rebase.
   </h1>
   <div class="flex max-w-xl flex-col gap-12">
     <p>
@@ -86,7 +86,7 @@
   </div>
 </PageHeader>
 
-<section class="timeline-section flex max-w-2xl flex-col gap-12 lg:mx-2">
+<section class="timeline-section flex max-w-2xl flex-col gap-12 lg:mx-2 2xl:mt-5 2xl:w-5xl">
   <div class="timeline-reveal group flex flex-col gap-12">
     <div class="timeline-groups flex flex-col">
       {#each groupedEntries as group}

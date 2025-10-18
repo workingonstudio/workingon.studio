@@ -8,14 +8,18 @@
 
 <PageHeader>
   <h1>
-    {daysSince} days passed. 3 projects shipped. 3 more in the dock.
+    {daysSince} days passed.
+    <br />
+    3 projects shipped.
+    <br />
+    3 more in the dock.
   </h1>
   <div class="flex max-w-xl flex-col gap-12">
     <p>I don’t make things for you. I make them for me and share them.</p>
   </div>
 </PageHeader>
 
-<section class="mx-2 max-w-2xl">
+<section class="mx-2 max-w-2xl 2xl:mt-5">
   <ul class="project-list mb-10 flex flex-col gap-12">
     {#each projectData as { name, description, version, status, tags, link }, index}
       {#if index <= 2}

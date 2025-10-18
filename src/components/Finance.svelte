@@ -35,11 +35,11 @@
     in the red.
   </h1>
   <div class="flex max-w-xl flex-col gap-12">
-    <p>You know if I ever go into the black it’s gonna be a tough colour choice.</p>
+    <p>I am actually thankful that it's in the red. Gives me time to think of a color for when it's in the black.</p>
   </div>
 </PageHeader>
 
-<section class="flex flex-col gap-7 lg:mx-2">
+<section class="flex flex-col gap-7 2xl:mt-5 2xl:w-5xl">
   {#each financeData.entries as { date, items }}
     <div class="flex flex-col" role="table" aria-label="Financial transactions">
       <!-- Header -->
@@ -75,15 +75,20 @@
 
 <style>
   @reference "../styles/global.css";
+  .finance-rows:hover .finance-row:not(:hover) {
+    @apply opacity-40 delay-100;
+  }
+
   .finance-rows:hover {
-    @apply text-primary delay-100;
+    @apply text-primary;
   }
 
   .finance-row:not(:hover) {
     @apply text-body delay-100;
   }
+
   .finance-row {
-    @apply text-sm md:text-base lg:text-xl;
+    @apply text-sm transition-opacity duration-200 md:text-base lg:text-xl;
   }
 
   .finance-row:focus {

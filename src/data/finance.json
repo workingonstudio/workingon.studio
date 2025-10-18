@@ -7,7 +7,7 @@
         {
           "description": "Virtual office",
           "in": 0,
-          "out": 24.99
+          "out": 27.99
         },
         {
           "description": "Proton Unlimited",
@@ -21,6 +21,11 @@
         },
         {
           "description": "Railway",
+          "in": 0,
+          "out": 4.8
+        },
+        {
+          "description": "Github",
           "in": 0,
           "out": 4.8
         }

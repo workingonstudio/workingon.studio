@@ -1,7 +1,7 @@
 <script lang="ts">
 </script>
 
-<div class="group max-w-6xl lg:mx-2">
+<div class="group flex flex-col lg:mx-2 2xl:w-5xl">
   <div class="space-y-12">
     <slot />
   </div>
