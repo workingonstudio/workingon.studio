@@ -5,6 +5,8 @@
   "scripts": {
     "dev": "npm run timeline:generate && astro dev",
     "build": "npm run timeline:generate && astro build",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "preview": "astro preview",
     "astro": "astro",
     "timeline:generate": "node scripts/generateTimeline.js",
@@ -24,6 +26,11 @@
   },
   "devDependencies": {
     "@types/luxon": "^3.7.1",
-    "@types/node": "^20.19.11"
+    "@types/node": "^20.19.11",
+    "@types/umami": "^2.10.1",
+    "prettier": "^3.6.2",
+    "prettier-plugin-astro": "^0.14.1",
+    "prettier-plugin-svelte": "^3.4.0",
+    "prettier-plugin-tailwindcss": "^0.6.14"
   }
 }

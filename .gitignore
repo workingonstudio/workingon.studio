@@ -29,6 +29,5 @@ public/fonts/nudica/
 public/fonts/nudica-mono/
 
 # Timeline data - raw GitHub API responses
-src/data/timeline-github.json
 src/data/timeline.json
 src/data/.timeline-cache
