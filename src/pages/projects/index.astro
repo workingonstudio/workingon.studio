@@ -7,10 +7,6 @@ import Footer from "@components/partials/Footer.svelte";
 const currentPath = Astro.url.pathname;
 ---
 
-<Layout title="workingon.studio - Projects">
-  <div class="flex flex-1 flex-col justify-between bg-gray-950">
-    <Header text="projects.list" client:load {currentPath} />
-    <Projects client:load />
-    <Footer client:load />
-  </div>
+<Layout title="workingon.studio - Projects" headerText="projects.list">
+  <Projects client:load />
 </Layout>

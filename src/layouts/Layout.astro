@@ -5,13 +5,18 @@ import Analytics from "./partials/Analytics.astro";
 import { ClientRouter } from "astro:transitions";
 import { AstroSeo } from "@astrolib/seo";
 
+import Header from "@components/partials/Header.svelte";
+import Footer from "@components/partials/Footer.svelte";
+
 export interface Props {
   title: string;
+  headerText: string;
 }
 
-const { title } = Astro.props;
+const { title, headerText } = Astro.props;
 const currentURL = new URL(Astro.url.pathname, Astro.site).href;
 const publishDate = new Date().toISOString();
+const currentPath = Astro.url.pathname;
 
 // Get font URLs from environment variables
 const nudicaFontUrl = import.meta.env.NUDICA_FONT_CSS_URL;
@@ -81,8 +86,14 @@ const nudicaMonoFontUrl = import.meta.env.NUDICA_MONO_FONT_CSS_URL;
     <title>{title}</title>
   </head>
   <body>
-    <main class="mx-[5%] flex min-h-screen flex-1 md:mx-[10%]">
-      <slot />
+    <main class="mx-[5%] flex min-h-screen flex-1 flex-col md:mx-[10%]">
+      <div class="flex flex-1 flex-col justify-between gap-24">
+        <Header text={headerText} client:load {currentPath} />
+        <div class="flex h-full flex-col justify-start gap-24">
+          <slot />
+        </div>
+        <Footer client:load />
+      </div>
     </main>
   </body>
 </html>

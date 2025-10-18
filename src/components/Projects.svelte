@@ -8,9 +8,7 @@
 
 <PageHeader>
   <h1>
-    {daysSince} days passed. 3 projects shipped.
-    <br />
-    3 more in the dock.
+    {daysSince} days passed. 3 projects shipped. 3 more in the dock.
   </h1>
   <div class="flex max-w-xl flex-col gap-12">
     <p>I don’t make things for you. I make them for me and share them.</p>
