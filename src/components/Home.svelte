@@ -1,31 +1,29 @@
 <script lang="ts">
- const actionList = ["standing up for delight", "pulling back the curtain", "calling out the bullshit"];
+  import PageHeader from "./partials/PageHeader.svelte";
+  const actionList = ["standing up for delight", "pulling back the curtain", "calling out the bullshit"];
 </script>
 
-<div class="group w-full md:w-3xl">
-  <div class="space-y-12">
+<PageHeader>
+  <!-- prettier-ignore -->
+  <h1>
+    Design has been prioritising the wrong thing for too long. F<span></span>k metrics, let’s make cool shit again.
+  </h1>
+  <div class="flex max-w-xl flex-col gap-12">
+    <p>I design for myself, and the only people that ever mattered.</p>
     <!-- prettier-ignore -->
-    <h1>
-      We've been prioritising the wrong things for too long. I make things that force you to look at what you're actually doing<span>.</span>
-    </h1>
-    <div class="max-w-md">
-      {#each actionList as item}
-        <!-- prettier-ignore -->
-        <p class="leading-7">
-          <span class="hidden sm:inline-block">working on</span>...{item}.
-        </p>
-      {/each}
-    </div>
-    <div>
-      <p>working on...a new site.</p>
-    </div>
+    <p>
+        {#each actionList as item}
+          ...{item}.<br/>
+        {/each}
+      </p>
   </div>
-</div>
+</PageHeader>
 
 <style>
   @reference "@styles/global.css";
-
-  p {
-    @apply text-body;
+  h1 {
+    span {
+      @apply before:content-["\2217\2217"];
+    }
   }
 </style>

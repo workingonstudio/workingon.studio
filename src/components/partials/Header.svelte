@@ -1,33 +1,30 @@
 <script lang="ts">
-  import { slide, fade } from "svelte/transition";
-  import { cubicOut, cubicInOut } from "svelte/easing";
+  export let currentPath = "/";
 
-  export let text: string;
-  let headerText: string;
-  let dotText: string;
-
-  function grabHeader(text: string) {
-    let stringLength = text.length;
-    headerText = text.slice(0, text.indexOf("."));
-    dotText = text.slice(text.indexOf("."), stringLength);
+  function isActive(path: string) {
+    return currentPath === path;
   }
-
-  let isClosed = true;
-  $: icon = isClosed ? "carbon:add" : "carbon:close";
-
-  let isSpinning = false;
 
   function toggleMenu() {
-    isSpinning = true;
-    setTimeout(() => {
-      isClosed = !isClosed;
-    }, 200);
-    setTimeout(() => {
-      isSpinning = false;
-    }, 400);
+    showMenu = !showMenu;
   }
 
-  grabHeader(text);
+  let scrolled: boolean = false;
+  let ticking: boolean = false;
+  function handleScroll() {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        const newScrolled = window.scrollY > 5;
+        if (scrolled !== newScrolled) {
+          scrolled = newScrolled;
+        }
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }
+
+  $: showMenu = false;
 
   let navItems = [
     {
@@ -42,7 +39,7 @@
       href: "/finances",
       title: "finances",
       subtitle: ".csv",
-      description: "financials coming in/out of the studio.",
+      description: "financials in/out of the studio.",
     },
     {
       icon: "carbon:branch",
@@ -51,58 +48,84 @@
       subtitle: ".git",
       description: "every update, every change.",
     },
+    {
+      icon: "carbon:flagging-taxi",
+      href: "/contact",
+      title: "hire",
+      subtitle: ".me",
+      description: "bother me with admin.",
+    },
+  ];
+
+  let socials = [
+    {
+      icon: "simple-icons:substack",
+      title: "Follow on Substack",
+      href: "https://https://aquietfracture.substack.com/",
+      style: "text-sm",
+    },
+
+    {
+      icon: "simple-icons:github",
+      title: "Follow on Github",
+      href: "https://github.com/workingonstudio",
+      style: "text-md",
+    },
   ];
 </script>
 
-<div class="sticky top-0 space-y-6 bg-gray-950/80 py-8 backdrop-blur-sm">
-  <header class="group flex flex-row items-center justify-between">
+<svelte:window on:scroll={handleScroll} />
+
+<div class="sticky top-0 bg-gray-950/80 backdrop-blur-sm">
+  <!-- prettier-ignore -->
+  <header class="group flex flex-row items-center border-b-1 border-slate-900 justify-between transition-all ease-out duration-200 {scrolled ? 'py-4' : 'py-12'}">
     <a href="/" class="cursor-pointer">
       <!-- prettier-ignore -->
-      <h1 class="font-display inline-block">{headerText}<span>{dotText}</span></h1>
+      <h1 class="font-display inline-block {scrolled ? 'text-sm' : 'text-xl'}">workingon<span>.studio</span></h1>
     </a>
-    <button type="button" onclick={toggleMenu} aria-label="Toggle menu">
-      <iconify-icon
-        {icon}
-        class="text-2xl text-gray-500 transition-colors duration-500 hover:cursor-pointer hover:text-gray-100 {isSpinning
-          ? 'spinning'
-          : ''}"
-      ></iconify-icon>
-    </button>
+    <div class="social flex flex-row gap-4">
+      {#each socials as { icon, href, title, style }}
+        <a {href} aria-label={title} {title} class="items-center hidden lg:flex justify-center w-6 h-6">
+          <iconify-icon {icon} class={style}></iconify-icon>
+        </a>
+      {/each}
+      <button type="button" onclick={toggleMenu} class="hover:*:text-primary w-6 h-6 cursor-pointer flex lg:hidden">
+        <iconify-icon icon="carbon:{showMenu ? 'close-large' : 'menu'}" class=" text-2xl text-gray-500"></iconify-icon>
+      </button>
+    </div>
   </header>
-  {#if !isClosed}
-    <nav
-      class="flex flex-col items-start text-xs"
-      in:slide={{ duration: 300, easing: cubicOut }}
-      out:slide={{ duration: 300, easing: cubicInOut, delay: 250 }}
-    >
-      <ul
-        class="flex w-full flex-col gap-4"
-        in:fade={{ duration: 300, easing: cubicOut, delay: 250 }}
-        out:fade={{ duration: 300, easing: cubicInOut }}
-      >
-        {#each navItems as { icon, href, title, subtitle, description }}
-          <li class="group">
-            <iconify-icon {icon} class="text-lg text-gray-500"></iconify-icon>
-            <a {href}>
-              <!-- prettier-ignore -->
-              <h2>{title}<span>{subtitle}</span></h2>
-              <p>{description}</p>
-            </a>
-          </li>
-        {/each}
-      </ul>
-    </nav>
-  {/if}
+  <nav
+    class="{showMenu
+      ? 'flex'
+      : 'hidden'} flex-col items-start border-b-1 border-slate-900 transition-all duration-300 ease-out lg:flex {scrolled
+      ? 'py-4'
+      : 'py-6'} text-xs"
+  >
+    <ul class="flex w-full flex-col lg:flex-row">
+      {#each navItems as { icon, href, title, subtitle, description }}
+        <li class="group {isActive(href) ? 'active' : ''}">
+          <iconify-icon {icon} class="flex h-[18px] w-[18px] text-lg text-gray-500 lg:hidden xl:flex"></iconify-icon>
+          <a {href} onclick={toggleMenu}>
+            <!-- prettier-ignore -->
+            <h2>{title}<span>{subtitle}</span></h2>
+            <p class="transition-all duration-200 ease-out">{description}</p>
+          </a>
+        </li>
+      {/each}
+    </ul>
+  </nav>
 </div>
 
 <style>
   @reference "@styles/global.css";
-  h1,
+  h1 {
+    @apply text-xl;
+  }
   h2 {
     @apply text-base;
   }
   h1 span {
-    @apply text-shadow-glow motion-safe:animate-flicker sm:group-hover:text-shadow-glow sm:group-hover:motion-safe:animate-flicker text-xs text-yellow-300 sm:text-gray-500 sm:text-shadow-none sm:group-hover:text-yellow-300 sm:motion-safe:animate-none;
+    @apply text-shadow-glow motion-safe:animate-flicker sm:group-hover:text-shadow-glow sm:group-hover:motion-safe:animate-flicker text-sm text-yellow-300 sm:text-gray-500 sm:text-shadow-none sm:group-hover:text-yellow-300 sm:motion-safe:animate-none;
   }
 
   h2 span {
@@ -111,7 +134,7 @@
 
   nav {
     ul {
-      @apply gap-6;
+      @apply justify-between gap-6;
       li {
         @apply flex flex-row items-center gap-4 transition-opacity duration-300;
         a {
@@ -120,27 +143,34 @@
             @apply text-body text-xs;
           }
         }
+        /* Active state styles - only when not hovering anything */
+        &.active h2 span {
+          @apply text-shadow-glow motion-safe:animate-flicker text-yellow-300;
+        }
       }
     }
+    /* When hovering, fade everything except the hovered item */
     &:has(li:hover) li:not(:hover) {
       @apply opacity-30 delay-100;
     }
-  }
 
-  button {
-    @apply h-6 w-6;
-  }
-
-  .spinning {
-    animation: spin-once 1000ms ease-in-out;
-  }
-
-  @keyframes spin-once {
-    from {
-      transform: rotate(0deg);
+    /* When hovering, remove active styles from active item if it's not being hovered */
+    &:has(li:hover) li.active:not(:hover) h2 span {
+      @apply text-gray-500 text-shadow-none motion-safe:animate-none;
     }
-    to {
-      transform: rotate(360deg);
+
+    /* When NOT hovering, fade non-active items */
+    &:not(:has(li:hover)):has(li.active) li:not(.active) {
+      @apply opacity-30;
+    }
+  }
+
+  .social {
+    a {
+      @apply text-muted;
+      &:hover {
+        @apply text-primary transition-colors duration-300;
+      }
     }
   }
 </style>

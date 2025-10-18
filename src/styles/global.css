@@ -40,18 +40,25 @@
       background-color: var(--color-primary);
       color: var(--color-bg-main);
     }
+    @apply text-pretty;
   }
   h1,
   h2,
   h3,
   h4 {
     font-family: var(--font-display);
+    font-feature-settings: "ss01" 1;
+    @apply text-primary;
   }
   h1 {
-    @apply text-3xl leading-relaxed md:text-4xl;
+    @apply text-4xl/12 md:text-6xl/22;
+  }
+  h2 {
+    @apply text-3xl;
   }
   p {
     font-family: var(--font-nudicaMono);
+    @apply text-body lg:text-xl/relaxed;
   }
 }
 
