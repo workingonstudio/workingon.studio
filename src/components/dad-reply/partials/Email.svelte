@@ -51,7 +51,7 @@
 
 <div class="flex flex-col space-y-8 overflow-hidden">
   <div class="mb-8 space-y-5">
-    <EmailFrom avatarFilename="mario.jpeg" fromName="Mario Fernando" fromEmail="mario@workingon.studio" toEmail="you" />
+    <EmailFrom avatarFilename="mario.jpeg" fromName="Mario L'sage" fromEmail="mario@workingon.studio" toEmail="you" />
     <div class="ml-0 space-y-5 *:font-['Arial'] *:text-black! sm:ml-12">
       <p>Hey,</p>
       <p>
@@ -60,7 +60,7 @@
         Let me know if anything's changed.
       </p>
       <div class="flex flex-col gap-1">
-        <strong class="text-xs md:text-sm">Mario Fernando</strong>
+        <strong class="text-xs md:text-sm">Mario L'sage</strong>
         <small>Sr. Full Stack Software Engineer</small>
       </div>
     </div>
