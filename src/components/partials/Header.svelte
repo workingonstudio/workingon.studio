@@ -48,6 +48,11 @@
       subtitle: ".git",
       description: "every update, every change.",
     },
+<<<<<<< Updated upstream
+=======
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
     {
       icon: "carbon:flagging-taxi",
       href: "/contact",
@@ -61,7 +66,11 @@
     {
       icon: "simple-icons:substack",
       title: "Follow on Substack",
+<<<<<<< Updated upstream
       href: "https://https://aquietfracture.substack.com/",
+=======
+      href: "https://aquietfracture.substack.com/",
+>>>>>>> Stashed changes
       style: "text-sm",
     },
 
@@ -71,6 +80,10 @@
       href: "https://github.com/workingonstudio",
       style: "text-md",
     },
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
   ];
 </script>
 
