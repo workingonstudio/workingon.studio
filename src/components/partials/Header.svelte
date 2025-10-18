@@ -68,7 +68,7 @@
 
 <div class="sticky top-0 bg-gray-950/80 backdrop-blur-sm">
   <!-- prettier-ignore -->
-  <header class="group flex flex-row items-center border-b-1 border-slate-900 justify-between transition-all duration-200 {scrolled ? 'py-4' : 'py-4 md:py-12'}">
+  <header class="group flex flex-row items-center border-b-1 border-slate-900 justify-between transition-all duration-200 {scrolled ? 'py-4' : 'py-12'}">
     <a href="/" class="cursor-pointer">
       <!-- prettier-ignore -->
       <h1 class="font-display inline-block {scrolled ? 'text-sm' : 'text-xl'}">workingon<span>.studio</span></h1>

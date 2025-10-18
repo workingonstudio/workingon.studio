@@ -1,4 +1,6 @@
 <script lang="ts">
+  import PageHeader from "./partials/PageHeader.svelte";
+
   import financeData from "../data/finance.json";
 
   $: totalClass = totalIncome - totalExpenses >= 0 ? "text-green-500" : "text-red-500";
@@ -27,19 +29,17 @@
       : `£${Math.abs(totalIncome - totalExpenses).toFixed(2)}`;
 </script>
 
-<div class="group mx-4 mt-14 mb-16 w-full">
-  <div class="space-y-12">
-    <h1>
-      Currently <span class={totalClass}>{netTotal}</span>
-      in the red.
-    </h1>
-    <div class="flex max-w-xl flex-col gap-12">
-      <p>You know if I ever go into the black it’s gonna be a tough colour choice.</p>
-    </div>
+<PageHeader>
+  <h1>
+    Currently <span class={totalClass}>{netTotal}</span>
+    in the red.
+  </h1>
+  <div class="flex max-w-xl flex-col gap-12">
+    <p>You know if I ever go into the black it’s gonna be a tough colour choice.</p>
   </div>
-</div>
+</PageHeader>
 
-<section class="mx-4 flex flex-col gap-7">
+<section class="flex flex-col gap-7 lg:mx-2">
   {#each financeData.entries as { date, items }}
     <div class="flex flex-col" role="table" aria-label="Financial transactions">
       <!-- Header -->
@@ -81,6 +81,9 @@
 
   .finance-row:not(:hover) {
     @apply text-body delay-100;
+  }
+  .finance-row {
+    @apply text-sm md:text-base lg:text-xl;
   }
 
   .finance-row:focus {

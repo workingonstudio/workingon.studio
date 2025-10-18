@@ -1,4 +1,5 @@
 <script>
+  import PageHeader from "./partials/PageHeader.svelte";
   import { DateTime } from "luxon";
   export let timelineData;
   // Group entries by date
@@ -70,24 +71,22 @@
   const result = getGitHubStats(timelineData);
 </script>
 
-<div class="group mx-4 mt-14 mb-16 w-full">
-  <div class="space-y-12">
-    <h1>
-      {result.totalCommits} commits, {result.totalMerges} merges, {result.totalPRs} pull requests and only 1 rebase.
-    </h1>
-    <div class="flex max-w-xl flex-col gap-12">
-      <p>
-        Design isn’t neat. It’s organised chaos.
-        <br />
-        It’s a ball of string that slowly unravels.
-        <br />
-        Huh...Just like me.
-      </p>
-    </div>
+<PageHeader>
+  <h1>
+    {result.totalCommits} commits, {result.totalMerges} merges, {result.totalPRs} pull requests and only 1 rebase.
+  </h1>
+  <div class="flex max-w-xl flex-col gap-12">
+    <p>
+      Design isn’t neat. It’s organised chaos.
+      <br />
+      It’s a ball of string that slowly unravels.
+      <br />
+      Huh...Just like me.
+    </p>
   </div>
-</div>
+</PageHeader>
 
-<section class="timeline-section mx-4 flex max-w-2xl flex-col gap-12">
+<section class="timeline-section flex max-w-2xl flex-col gap-12 lg:mx-2">
   <div class="timeline-reveal group flex flex-col gap-12">
     <div class="timeline-groups flex flex-col">
       {#each groupedEntries as group}
