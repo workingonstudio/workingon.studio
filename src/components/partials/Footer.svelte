@@ -30,17 +30,6 @@
 <footer
   class="mt-12 flex flex-col justify-between gap-2 border-t-1 border-slate-900 py-6 lg:flex-row lg:items-center lg:gap-0"
 >
-  <a href="https://github.com/workingonstudio/workingon.studio">
-    last updated: {DateTime.fromISO(date).toFormat("ccc',' dd LLL y TT ZZZ")}
-  </a>
-  <a
-    href="https://find-and-update.company-information.service.gov.uk/company/16700615"
-    class="order-last flex flex-row items-center justify-center gap-1 md:order-first md:justify-normal"
-  >
-    <iconify-icon icon="material-symbols:copyright-outline-rounded" class="text-sm"></iconify-icon>
-    <span>workingonstudio ltd, no: 16700615</span>
-  </a>
-  ======= >>>>>>> Stashed changes
   <!-- prettier-ignore -->
   <div class="flex flex-col">
     <a href="/" class="group text-primary text-md font-display -mb-1">wo<span class="flicker text-muted text-xxs">.studio</span></a>
