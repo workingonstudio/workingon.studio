@@ -63,7 +63,7 @@
       <div class="finance-rows text-body flex flex-col text-xl" role="rowgroup">
         {#each items as { description, out }}
           <div class="finance-row flex cursor-default pb-4 transition-colors duration-150 ease-in-out" role="row">
-            <span class="flex-1" role="cell">{description}</span>
+            <span class="flex-1 truncate" role="cell">{description}</span>
             <span class="w-28 text-right" role="cell"></span>
             <span class="w-28 text-right" role="cell">-£{out.toFixed(2)}</span>
           </div>

@@ -6,17 +6,7 @@
 
   let displayRate = 500;
 
-  onMount(() => {
-    // Get the CURRENT rate BEFORE incrementing
-    const startRate = get(dayRate).rate;
-
-    // Now increment
-    dayRate.incrementVisit();
-
-    // Get the NEW rate
-    const target = get(dayRate).rate;
-
-    // Animate from start to target
+  function animateRate(startRate: number, targetRate: number) {
     const duration = 800;
     const startTime = Date.now();
 
@@ -25,7 +15,7 @@
       const progress = Math.min(elapsed / duration, 1);
       const easeProgress = 1 - Math.pow(1 - progress, 3);
 
-      displayRate = Math.round(startRate + (target - startRate) * easeProgress);
+      displayRate = Math.round(startRate + (targetRate - startRate) * easeProgress);
 
       if (progress < 1) {
         requestAnimationFrame(animate);
@@ -33,6 +23,14 @@
     }
 
     animate();
+  }
+
+  onMount(() => {
+    const startRate = get(dayRate).rate;
+    dayRate.incrementVisit();
+    const target = get(dayRate).rate;
+
+    animateRate(startRate, target);
   });
 </script>
 
@@ -49,12 +47,12 @@
       <span class="text-xl">*</span>
       <!-- prettier-ignore -->
       <div class="flex flex-col gap-4">
-        <p>Each time you visit this page my day rate <strong>increases by £10</strong>*.</p>
-        <div class="flex flex-row gap-1">
-          <span class="text-xl">*</span>
+        <p class="text-sm">Each time you visit this page my day rate <strong>increases by £10</strong>&#42;.</p>
+        <div class="flex flex-row gap-1 items-start">
+          <span class="text-lg">&#42;</span>
           <div class="flex flex-col gap-1">
             <p class="text-xs">If it takes you too long to decide anything this is your punishment.</p>
-            <p class="text-xs">Clicking my email email will reset it.</p>
+            <p class="text-xs">Sending an email will reset it.</p>
           </div>
         </div>
       </div>
@@ -63,29 +61,38 @@
 </PageHeader>
 
 <section class="mb-10 max-w-2xl space-y-4 lg:mx-2 2xl:mt-5 2xl:w-5xl">
-  <a class="flex flex-col gap-4" href="mailto:hello.luckily704@passmail.com" onclick={dayRate.reset}>
+  <div class="flex flex-col gap-4">
     <div class="flex flex-col gap-6 lg:flex-row lg:items-center">
-      <iconify-icon icon="carbon:mail-all" class="text-3xl text-gray-500" />
-      <span>hello.luckily704@passmail.com</span>
+      <span class="h-8 w-8">
+        <iconify-icon icon="carbon:mail-all" class="text-3xl text-gray-500" />
+      </span>
+      <div class="flex flex-row items-center gap-2">
+        <a
+          href="mailto:sigh.extra.admin@workingon.studio?subject=Can%20I/We%20work%20with%20you%3F&"
+          onclick={() => {
+            const currentRate = displayRate;
+            dayRate.reset();
+            animateRate(currentRate, 500);
+          }}
+        >
+          sigh.extra.admin@workingon.studio
+        </a>
+      </div>
     </div>
     <p class="text-sm lg:ml-14">
       This will forward to my inbox.
       <br />
       You think I’m just gonna put it here for bots to grab.
     </p>
-  </a>
+  </div>
 </section>
 
 <style>
   @reference "@styles/global.css";
   a {
-    span {
-      @apply text-primary text-lg underline lg:text-3xl;
-    }
+    @apply text-primary text-lg underline lg:text-3xl;
     &:hover {
-      span {
-        @apply no-underline;
-      }
+      @apply no-underline;
     }
   }
 </style>

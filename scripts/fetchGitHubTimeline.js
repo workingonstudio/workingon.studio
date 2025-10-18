@@ -128,7 +128,9 @@ function generateVersionForCommit(commit, allCommitsInOrder, tagsWithDates) {
 
   if (tagsWithDates.length === 0) {
     const commitIndex = allCommitsInOrder.findIndex((c) => c.sha === commit.sha);
-    return `v1.0.${commitIndex + 1}`;
+    const minor = Math.floor(commitIndex / 15);
+    const patch = commitIndex % 15;
+    return `v1.${minor}.${patch}`;
   }
 
   let relevantTag = null;
@@ -157,9 +159,13 @@ function generateVersionForCommit(commit, allCommitsInOrder, tagsWithDates) {
   const versionParts = tagWithoutV.split(".");
   const major = parseInt(versionParts[0]) || 1;
   const minor = parseInt(versionParts[1]) || 0;
-  const patch = parseInt(versionParts[2]) || 0;
 
-  return `v${major}.${minor}.${patch + incrementalIndex}`;
+  // Every 15 commits = new minor version
+  // Major version only changes via git tags
+  const newMinor = minor + Math.floor(incrementalIndex / 15);
+  const newPatch = incrementalIndex % 15;
+
+  return `v${major}.${newMinor}.${newPatch}`;
 }
 
 function formatDate(isoString) {

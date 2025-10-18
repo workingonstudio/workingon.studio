@@ -109,11 +109,11 @@
                       </span>
                     </p>
                   {:else}
-                    <p class="text-body text-sm/relaxed text-pretty">
+                    <p class="text-pretty">
                       {entry.message}
                     </p>
                   {/if}
-                  <ul class="entry-meta text-xxs text-primary flex flex-row gap-6">
+                  <ul class="entry-meta text-xxs text-primary flex flex-col gap-6 md:flex-row">
                     {#if entry.branchMerged && entry.intoBranch}
                       <li>
                         <span class="h-[18px] w-[18px]">
@@ -169,9 +169,6 @@
   }
   h3 {
     @apply text-3xl;
-  }
-  p {
-    @apply text-body text-xl/relaxed;
   }
   .entry-meta {
     li {
