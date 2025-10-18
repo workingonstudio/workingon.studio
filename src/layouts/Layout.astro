@@ -1,19 +1,17 @@
 ---
 import "../styles/global.css";
 
-const isDev = import.meta.env.DEV;
-const umamiScriptURL = import.meta.env.UMAMI_SCRIPT_URL;
-const umamiWebsiteID = isDev
-  ? import.meta.env.UMAMI_ID_DEV
-  : import.meta.env.UMAMI_ID_PROD;
-
-console.log("Final values:", { isDev, umamiScriptURL, umamiWebsiteID });
+import Analytics from "./partials/Analytics.astro";
+import { ClientRouter } from "astro:transitions";
+import { AstroSeo } from "@astrolib/seo";
 
 export interface Props {
   title: string;
 }
 
 const { title } = Astro.props;
+const currentURL = new URL(Astro.url.pathname, Astro.site).href;
+const publishDate = new Date().toISOString();
 
 // Get font URLs from environment variables
 const nudicaFontUrl = import.meta.env.NUDICA_FONT_CSS_URL;
@@ -21,79 +19,69 @@ const nudicaMonoFontUrl = import.meta.env.NUDICA_MONO_FONT_CSS_URL;
 ---
 
 <!doctype html>
-<html
-  lang="en"
-  class="dark bg-gray-950">
+<html lang="en" class="dark">
   <head>
+    <AstroSeo
+      {title}
+      description="We've been prioritising the wrong things for too long. I make things that force you to look at what you're actually doing."
+      canonical={currentURL}
+      ,
+      openGraph={{
+        url: currentURL,
+        title: title,
+        description:
+          "We've been prioritising the wrong things for too long. I make things that force you to look at what you're actually doing.",
+        images: [
+          {
+            url: Astro.site + "site-default-opengraph.png",
+            height: 600,
+            width: 1200,
+          },
+          {
+            url: Astro.site + "site-square-opengraph.png",
+            height: 1080,
+            width: 1080,
+          },
+        ],
+        site_name: "workingon.studio",
+        article: {
+          publishedTime: publishDate,
+          modifiedTime: publishDate,
+          authors: ["Paul Mackenzie"],
+        },
+      }}
+    />
     <meta charset="UTF-8" />
-    <meta
-      name="description"
-      content="A creative studio producing cultural mirror products"
-    />
-    <meta
-      name="theme-color"
-      content="#030712"
-    />
-    <meta
-      name="apple-mobile-web-app-status-bar-style"
-      content="black-translucent"
-    />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="/favicon.svg"
-    />
-    <link
-      rel="preconnect"
-      href="https://fonts.googleapis.com"
-    />
-    <link
-      rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin
-    />
+    <meta name="theme-color" content="#030712" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,500;1,500&family=Space+Grotesk:wght@500&display=swap"
       rel="stylesheet"
     />
-    <meta
-      name="generator"
-      content={Astro.generator}
-    />
-
     <script
       is:inline
-      defer
-      data-website-id={umamiWebsiteID}
-      src={umamiScriptURL}
+      type="module"
+      src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
     ></script>
 
+    <meta name="generator" content={Astro.generator} />
+
+    <Analytics />
+    <ClientRouter />
+
     <!-- CDN Font Stylesheets -->
-    {
-      nudicaFontUrl && (
-        <link
-          rel="stylesheet"
-          href={nudicaFontUrl}
-        />
-      )
-    }
-    {
-      nudicaMonoFontUrl && (
-        <link
-          rel="stylesheet"
-          href={nudicaMonoFontUrl}
-        />
-      )
-    }
+    {nudicaFontUrl && <link rel="stylesheet" href={nudicaFontUrl} />}
+    {nudicaMonoFontUrl && <link rel="stylesheet" href={nudicaMonoFontUrl} />}
 
     <title>{title}</title>
   </head>
-  <body class="selection:bg-gray-100 selection:text-gray-950 bg-gray-950">
-    <main class="min-h-screen flex-1 flex mx-[5%] md:mx-[10%]">
+  <body>
+    <main class="mx-[5%] flex min-h-screen flex-1 md:mx-[10%]">
       <slot />
     </main>
   </body>

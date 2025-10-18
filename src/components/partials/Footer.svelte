@@ -5,20 +5,26 @@
 </script>
 
 <footer
-  class="flex flex-col space-y-2 md:flex-row md:justify-between md:items-center text-gray-600 text-[11px] py-8"
+  class="text-xxs flex flex-col items-center space-y-2 py-8 text-center sm:items-start md:flex-row md:justify-between md:space-y-0 md:text-left"
 >
+  <a href="https://github.com/workingonstudio/workingon.studio">
+    last updated: {DateTime.fromISO(date).toFormat("ccc',' dd LLL y TT ZZZ")}
+  </a>
   <a
     href="https://find-and-update.company-information.service.gov.uk/company/16700615"
-    class="hover:text-gray-00"
+    class="order-last flex flex-row items-center justify-center gap-1 md:order-first md:justify-normal"
   >
-    <span class="font-display">&#169;</span> workingonstudio ltd, no: 16700615
+    <iconify-icon icon="material-symbols:copyright-outline-rounded" class="text-sm"></iconify-icon>
+    <span>workingonstudio ltd, no: 16700615</span>
   </a>
-  <span
-    >last updated: {DateTime.fromISO(date).toFormat(
-      "ccc',' dd LLL y TT ZZZ"
-    )}</span
-  >
 </footer>
 
 <style>
+  @reference "@styles/global.css";
+  footer {
+    @apply text-muted;
+    a {
+      @apply transition-all delay-100 hover:text-gray-100;
+    }
+  }
 </style>

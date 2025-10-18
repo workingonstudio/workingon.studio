@@ -6,11 +6,53 @@
 }
 
 @theme {
-  --font-sans: "nudica_monomedium", "Azeret Mono", ui-monospace, SFMono-Regular;
+  --font-nudicaMono: "nudica_monomedium", "Azeret Mono", ui-monospace, SFMono-Regular;
   --font-display: "nudicamedium", "Space Grotesk", ui-sans-serif, system-ui;
-  --text-shadow-glow: 0 0 5px #f0b100, 0 0 15px #f0b100, 0 0 30px #f0b100,
-    0 0 60px rgba(255, 0, 0, 0.5);
+
+  --text-shadow-glow:
+    0 0 5px #f0b100, 0 0 15px #f0b100, 0 0 30px #f0b100, 0 0 60px rgba(255, 0, 0, 0.5);
+
   --animate-flicker: flicker 3s infinite;
+
+  --text-xxs: 0.6875rem;
+  --text-xxs--line-height: calc(1 / 0.6875);
+
+  --color-primary: theme(colors.gray.100);
+  --color-body: theme(colors.gray.400);
+  --color-muted: theme(colors.gray.500);
+
+  --color-bg-main: theme(colors.gray.950);
+
+  --screen-sm: 40rem; /* 640px */
+  --screen-md: 48rem; /* 768px */
+  --screen-lg: 64rem; /* 1024px */
+  --screen-xl: 80rem; /* 1280px */
+  --screen-2xl: 96rem; /* 1536px */
+  --screen-3xl: 112rem; /* 1792px */
+}
+
+@layer base {
+  body {
+    background-color: var(--color-bg-main);
+    font-family: var(--font-nudicaMono);
+    color: var(--color-primary);
+    ::selection {
+      background-color: var(--color-primary);
+      color: var(--color-bg-main);
+    }
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+  }
+  h1 {
+    @apply text-3xl leading-relaxed md:text-4xl;
+  }
+  p {
+    font-family: var(--font-nudicaMono);
+  }
 }
 
 @keyframes flicker {

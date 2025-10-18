@@ -1,14 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Finance from "../components/Finance.svelte"
+import Finance from "../components/Finance.svelte";
 import Header from "../components/partials/Header.svelte";
 import Footer from "../components/partials/Footer.svelte";
 ---
 
 <Layout title="workingon.studio - Finance">
-  <div class="bg-gray-950 flex flex-1 flex-col justify-between text-gray-100">
-    <Header text="finance.log" client:load />
-      <Finance />
-    <Footer />
+  <div class="flex flex-1 flex-col justify-between bg-gray-950 text-gray-100">
+    <Header text="finance.csv" client:load />
+    <Finance />
+    <Footer client:load />
   </div>
 </Layout>
