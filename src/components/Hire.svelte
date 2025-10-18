@@ -21,12 +21,16 @@
 </PageHeader>
 
 <section class="mb-10 max-w-2xl space-y-4 lg:mx-2">
-  <a class="flex flex-col gap-3" href="mailto:hello.luckily704@passmail.com">
+  <a class="flex flex-col gap-4" href="mailto:hello.luckily704@passmail.com">
     <div class="flex flex-col gap-6 lg:flex-row lg:items-center">
       <iconify-icon icon="carbon:mail-all" class="text-3xl text-gray-500" />
       <span>hello.luckily704@passmail.com</span>
     </div>
-    <p class="lg:ml-14">This will forward to my inbox. You think I’m just gonna put it here for bots to grab.</p>
+    <p class="text-sm lg:ml-14">
+      This will forward to my inbox.
+      <br />
+      You think I’m just gonna put it here for bots to grab.
+    </p>
   </a>
 </section>
 

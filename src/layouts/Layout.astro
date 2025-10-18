@@ -89,7 +89,7 @@ const nudicaMonoFontUrl = import.meta.env.NUDICA_MONO_FONT_CSS_URL;
     <main class="mx-[5%] flex min-h-screen flex-1 flex-col md:mx-[10%]">
       <div class="flex flex-1 flex-col justify-between gap-24">
         <Header text={headerText} client:load {currentPath} />
-        <div class="flex h-full flex-col justify-start gap-24">
+        <div class="flex grow-1 flex-col justify-start gap-24">
           <slot />
         </div>
         <Footer client:load />
