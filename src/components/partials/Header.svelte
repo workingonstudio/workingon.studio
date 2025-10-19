@@ -9,20 +9,29 @@
     showMenu = !showMenu;
   }
 
-  let scrolled: boolean = false;
+  // Smooth scroll tracking
+  let scrollProgress: number = 0;
   let ticking: boolean = false;
+
+  const SCROLL_START = 0;
+  const SCROLL_END = 50; // Distance in pixels to complete transition
+
   function handleScroll() {
     if (!ticking) {
       window.requestAnimationFrame(() => {
-        const newScrolled = window.scrollY > 5;
-        if (scrolled !== newScrolled) {
-          scrolled = newScrolled;
-        }
+        const scrollY = window.scrollY;
+        // Calculate progress from 0 to 1
+        scrollProgress = Math.min(Math.max((scrollY - SCROLL_START) / (SCROLL_END - SCROLL_START), 0), 1);
         ticking = false;
       });
       ticking = true;
     }
   }
+
+  // Interpolate values based on scroll progress
+  $: paddingY = 12 - scrollProgress * 8; // From py-12 to py-4
+  $: fontSize = 1.25 - scrollProgress * 0.25; // From text-xl (1.25rem) to text-base (1rem)
+  $: navPaddingY = 6 - scrollProgress * 2; // From 6 to 2 (Tailwind spacing scale)
 
   $: showMenu = false;
 
@@ -76,12 +85,15 @@
 
 <svelte:window on:scroll={handleScroll} />
 
-<div class="sticky top-0 bg-gray-950/80 backdrop-blur-sm">
+<div
+  class="sticky top-0 bg-gray-950/80 backdrop-blur-sm"
+  style="--padding-y: {paddingY}; --font-size: {fontSize}; --nav-padding-y: {navPaddingY};"
+>
   <!-- prettier-ignore -->
-  <header class="group flex flex-row items-center border-b-1 border-slate-900 justify-between transition-all ease-out duration-200 {scrolled ? 'py-4' : 'py-12'}">
+  <header class="header-scroll group flex flex-row items-center border-b-1 border-slate-900 justify-between transition-all ease-out duration-200">
     <a href="/" class="cursor-pointer">
       <!-- prettier-ignore -->
-      <h1 class="font-display inline-block {scrolled ? 'text-sm' : 'text-xl'}">workingon<span>.studio</span></h1>
+      <h1 class="font-display inline-block header-title">workingon<span>.studio</span></h1>
     </a>
     <div class="social flex flex-row gap-4">
       {#each socials as { icon, href, title, style }}
@@ -97,9 +109,7 @@
   <nav
     class="{showMenu
       ? 'flex'
-      : 'hidden'} flex-col items-start border-b-1 border-slate-900 transition-all duration-300 ease-out lg:flex {scrolled
-      ? 'py-4'
-      : 'py-6'} text-xs"
+      : 'hidden'} nav-scroll flex-col items-start border-b-1 border-slate-900 text-xs transition-all duration-300 ease-out lg:flex"
   >
     <ul class="flex w-full flex-col lg:flex-row">
       {#each navItems as { icon, href, title, subtitle, description }}
@@ -172,5 +182,22 @@
         @apply text-primary transition-colors duration-300;
       }
     }
+  }
+
+  .header-scroll {
+    padding-top: calc(var(--padding-y) * 0.25rem);
+    padding-bottom: calc(var(--padding-y) * 0.25rem);
+    transition: all 300ms ease-out;
+  }
+
+  .header-title {
+    font-size: calc(var(--font-size) * 1rem);
+    transition: all 300ms ease-out;
+  }
+
+  .nav-scroll {
+    padding-top: calc(var(--nav-padding-y) * 0.25rem);
+    padding-bottom: calc(var(--nav-padding-y) * 0.25rem);
+    transition: all 300ms ease-out;
   }
 </style>
