@@ -35,7 +35,7 @@
     in the red.
   </h1>
   <div class="flex max-w-xl flex-col gap-12">
-    <p>I am actually thankful that it's in the red. Gives me time to think of a color for when it's in the black.</p>
+    <p>Every penny in, every penny out. No hiding the reality of running a studio.</p>
   </div>
 </PageHeader>
 

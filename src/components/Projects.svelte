@@ -15,7 +15,7 @@
     3 more in the dock.
   </h1>
   <div class="flex max-w-xl flex-col gap-12">
-    <p>I built these things because I wanted them to exist, my brain was full, and they needed to go somewhere.</p>
+    <p>Things I made because I was tired of not seeing them. Each one works. That's the point.</p>
   </div>
 </PageHeader>
 
