@@ -63,7 +63,7 @@
 <section class="mb-10 max-w-2xl space-y-4 lg:mx-2 2xl:mt-5 2xl:w-5xl">
   <div class="flex flex-col gap-4">
     <div class="flex flex-col gap-6 lg:flex-row lg:items-center">
-      <span class="h-8 w-8">
+      <span class="flex h-8 w-8 items-center">
         <iconify-icon icon="carbon:mail-all" class="text-3xl text-gray-500" />
       </span>
       <div class="flex flex-row items-center gap-2">
