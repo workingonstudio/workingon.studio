@@ -77,7 +77,7 @@
   </h1>
   <div class="flex max-w-xl flex-col gap-12">
     <p>
-      Design isn’t neat. It’s organised chaos.
+      Creation isn’t neat. It’s organised chaos.
       <br />
       It’s a ball of string that slowly unravels.
       <br />

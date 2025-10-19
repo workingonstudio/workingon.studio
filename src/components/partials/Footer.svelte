@@ -33,7 +33,7 @@
   <!-- prettier-ignore -->
   <div class="flex flex-col">
     <a href="/" class="group text-primary text-md font-display -mb-1">wo<span class="flicker text-muted text-xxs">.studio</span></a>
-    <a href="/"><small class="uppercase text-muted text-xxs">workingonstudio ltd, no: 12345678</small></a>
+    <a href="https://find-and-update.company-information.service.gov.uk/company/16700615"><small class="uppercase text-muted text-xxs">workingonstudio ltd, no: 16700615</small></a>
   </div>
   <ul class="text-muted flex flex-row gap-x-6 gap-y-2 last:flex-wrap last:lg:flex-nowrap">
     {#each links as { icon, href, text }}
