@@ -29,9 +29,8 @@
   }
 
   // Interpolate values based on scroll progress
-  $: paddingY = 12 - scrollProgress * 8; // From py-12 to py-4
+  $: paddingY = 48 - scrollProgress * 24; // From 48px (py-12) to 24px (py-6)
   $: fontSize = 1.25 - scrollProgress * 0.25; // From text-xl (1.25rem) to text-base (1rem)
-  $: navPaddingY = 6 - scrollProgress * 2; // From 6 to 2 (Tailwind spacing scale)
 
   $: showMenu = false;
 
@@ -85,12 +84,9 @@
 
 <svelte:window on:scroll={handleScroll} />
 
-<div
-  class="sticky top-0 bg-gray-950/80 backdrop-blur-sm"
-  style="--padding-y: {paddingY}; --font-size: {fontSize}; --nav-padding-y: {navPaddingY};"
->
+<div class="bg-gray-950" style="--padding-y: {paddingY}; --font-size: {fontSize};">
   <!-- prettier-ignore -->
-  <header class="header-scroll group flex flex-row items-center border-b-1 border-slate-900 justify-between transition-all ease-out duration-200">
+  <header class="header-scroll group flex flex-row items-center border-b-1 border-slate-900/50 justify-between transition-all ease-out duration-200">
     <a href="/" class="cursor-pointer">
       <!-- prettier-ignore -->
       <h1 class="font-display inline-block header-title">workingon<span>.studio</span></h1>
@@ -109,7 +105,7 @@
   <nav
     class="{showMenu
       ? 'flex'
-      : 'hidden'} nav-scroll flex-col items-start border-b-1 border-slate-900 text-xs transition-all duration-300 ease-out lg:flex"
+      : 'hidden'} nav-scroll box-border flex-col items-start border-b-1 border-slate-900/50 text-xs transition-all duration-300 ease-out lg:flex"
   >
     <ul class="flex w-full flex-col lg:flex-row">
       {#each navItems as { icon, href, title, subtitle, description }}
@@ -185,8 +181,8 @@
   }
 
   .header-scroll {
-    padding-top: calc(var(--padding-y) * 0.25rem);
-    padding-bottom: calc(var(--padding-y) * 0.25rem);
+    padding-top: calc(var(--padding-y) * 1px);
+    padding-bottom: calc(var(--padding-y) * 1px);
     transition: all 300ms ease-out;
   }
 
@@ -196,8 +192,7 @@
   }
 
   .nav-scroll {
-    padding-top: calc(var(--nav-padding-y) * 0.25rem);
-    padding-bottom: calc(var(--nav-padding-y) * 0.25rem);
+    @apply py-6;
     transition: all 300ms ease-out;
   }
 </style>

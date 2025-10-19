@@ -76,13 +76,7 @@
     {result.totalCommits} commits. {result.totalMerges} merges. {result.totalPRs} pull requests. One rebase.
   </h1>
   <div class="flex max-w-xl flex-col gap-12">
-    <p>
-      Design isn’t neat. It’s organised chaos.
-      <br />
-      It’s a ball of string that slowly unravels.
-      <br />
-      Huh...Just like me.
-    </p>
+    <p>This site is in a constant state of change. Tweaked to death, and improved. And here’s the proof.</p>
   </div>
 </PageHeader>
 
