@@ -68,14 +68,14 @@
       </span>
       <div class="flex flex-row items-center gap-2">
         <a
-          href="mailto:sigh.extra.admin@workingon.studio?subject=Can%20I/We%20work%20with%20you%3F&"
+          href="mailto:extra.admin@workingon.studio?subject=Can%20I/We%20work%20with%20you%3F&"
           onclick={() => {
             const currentRate = displayRate;
             dayRate.reset();
             animateRate(currentRate, 500);
           }}
         >
-          sigh.extra.admin@workingon.studio
+          extra.admin@workingon.studio
         </a>
       </div>
     </div>
