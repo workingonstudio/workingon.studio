@@ -27,14 +27,14 @@ const nudicaMonoFontUrl = import.meta.env.NUDICA_MONO_FONT_CSS_URL;
   <head>
     <AstroSeo
       {title}
-      description="Design has been prioritising the wrong thing for too long. F∗∗k metrics, let’s make cool shit again."
+      description="I'm tired of designing for metrics…tired of designing to make numbers go up…tired of playing to the wrong audience. Aren't you?"
       canonical={currentURL}
       ,
       openGraph={{
         url: currentURL,
         title: title,
         description:
-          "Design has been prioritising the wrong thing for too long. F∗∗k metrics, let’s make cool shit again.",
+          "I'm tired of designing for metrics…tired of designing to make numbers go up…tired of playing to the wrong audience. Aren't you?",
         images: [
           {
             url: Astro.site + "site-default-opengraph.png",
@@ -71,7 +71,8 @@ const nudicaMonoFontUrl = import.meta.env.NUDICA_MONO_FONT_CSS_URL;
       is:inline
       type="module"
       src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    ></script>
+    >
+    </script>
 
     <meta name="generator" content={Astro.generator} />
 
@@ -85,9 +86,13 @@ const nudicaMonoFontUrl = import.meta.env.NUDICA_MONO_FONT_CSS_URL;
     <title>{title}</title>
   </head>
   <body>
+    <div class="sticky top-0 mb-12 shadow-2xl shadow-gray-950">
+      <div class="mx-[5%] flex flex-col md:mx-[10%]">
+        <Header client:load {currentPath} />
+      </div>
+    </div>
     <main class="mx-[5%] flex min-h-screen flex-1 flex-col md:mx-[10%]">
       <div class="flex flex-1 flex-col justify-between gap-24">
-        <Header client:load {currentPath} />
         <div class="flex grow-1 flex-col justify-start gap-24 2xl:flex-row">
           <slot />
         </div>

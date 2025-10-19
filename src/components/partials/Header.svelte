@@ -31,7 +31,6 @@
   // Interpolate values based on scroll progress
   $: paddingY = 48 - scrollProgress * 24; // From 48px (py-12) to 24px (py-6)
   $: fontSize = 1.25 - scrollProgress * 0.25; // From text-xl (1.25rem) to text-base (1rem)
-  $: navPaddingY = 24 - scrollProgress * 16; // From 24px (py-6) to 8px (py-2)
 
   $: showMenu = false;
 
@@ -85,10 +84,7 @@
 
 <svelte:window on:scroll={handleScroll} />
 
-<div
-  class="sticky top-0 bg-gray-950/80 backdrop-blur-sm"
-  style="--padding-y: {paddingY}; --font-size: {fontSize}; --nav-padding-y: {navPaddingY};"
->
+<div class="bg-gray-950" style="--padding-y: {paddingY}; --font-size: {fontSize};">
   <!-- prettier-ignore -->
   <header class="header-scroll group flex flex-row items-center border-b-1 border-slate-900/50 justify-between transition-all ease-out duration-200">
     <a href="/" class="cursor-pointer">
@@ -191,13 +187,12 @@
   }
 
   .header-title {
-    /* font-size: calc(var(--font-size) * 1rem); */
+    font-size: calc(var(--font-size) * 1rem);
     transition: all 300ms ease-out;
   }
 
   .nav-scroll {
-    padding-top: calc(var(--nav-padding-y) * 1px);
-    padding-bottom: calc(var(--nav-padding-y) * 1px);
+    @apply py-6;
     transition: all 300ms ease-out;
   }
 </style>
