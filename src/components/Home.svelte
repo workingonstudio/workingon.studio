@@ -1,5 +1,5 @@
 <script lang="ts">
-  import PageHeader from "./partials/PageHeader.svelte";
+  import PageHeader from "@components/partials/PageHeader.svelte";
 </script>
 
 <PageHeader>
