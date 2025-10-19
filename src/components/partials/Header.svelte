@@ -29,9 +29,9 @@
   }
 
   // Interpolate values based on scroll progress
-  $: paddingY = 12 - scrollProgress * 8; // From py-12 to py-4
+  $: paddingY = 48 - scrollProgress * 24; // From 48px (py-12) to 24px (py-6)
   $: fontSize = 1.25 - scrollProgress * 0.25; // From text-xl (1.25rem) to text-base (1rem)
-  $: navPaddingY = 6 - scrollProgress * 2; // From 6 to 2 (Tailwind spacing scale)
+  $: navPaddingY = 24 - scrollProgress * 16; // From 24px (py-6) to 8px (py-2)
 
   $: showMenu = false;
 
@@ -109,7 +109,7 @@
   <nav
     class="{showMenu
       ? 'flex'
-      : 'hidden'} nav-scroll flex-col items-start border-b-1 border-slate-900 text-xs transition-all duration-300 ease-out lg:flex"
+      : 'hidden'} nav-scroll box-border flex-col items-start border-b-1 border-slate-900 text-xs transition-all duration-300 ease-out lg:flex"
   >
     <ul class="flex w-full flex-col lg:flex-row">
       {#each navItems as { icon, href, title, subtitle, description }}
@@ -185,19 +185,19 @@
   }
 
   .header-scroll {
-    padding-top: calc(var(--padding-y) * 0.25rem);
-    padding-bottom: calc(var(--padding-y) * 0.25rem);
+    padding-top: calc(var(--padding-y) * 1px);
+    padding-bottom: calc(var(--padding-y) * 1px);
     transition: all 300ms ease-out;
   }
 
   .header-title {
-    font-size: calc(var(--font-size) * 1rem);
+    /* font-size: calc(var(--font-size) * 1rem); */
     transition: all 300ms ease-out;
   }
 
   .nav-scroll {
-    padding-top: calc(var(--nav-padding-y) * 0.25rem);
-    padding-bottom: calc(var(--nav-padding-y) * 0.25rem);
+    padding-top: calc(var(--nav-padding-y) * 1px);
+    padding-bottom: calc(var(--nav-padding-y) * 1px);
     transition: all 300ms ease-out;
   }
 </style>
