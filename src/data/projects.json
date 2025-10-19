@@ -21,7 +21,7 @@
   {
     "name": "workingon.studio",
     "description": "This will literally bring you back here.",
-    "version": "2.0.55",
+    "version": "3.0.0",
     "status": "shipped",
     "tags": [{ "icon": "carbon:magic-wand", "text": "free" }],
     "link": "/"
