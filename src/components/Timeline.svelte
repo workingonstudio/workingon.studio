@@ -1,4 +1,5 @@
 <script>
+  import PageHeader from "./partials/PageHeader.svelte";
   import { DateTime } from "luxon";
   export let timelineData;
   // Group entries by date
@@ -29,29 +30,68 @@
   }
 
   $: groupedEntries = groupByDate(timelineData?.entries);
+
+  function shortenText(text, maxLength = 30) {
+    if (text.length <= maxLength) return text;
+    return text.slice(0, maxLength) + "...";
+  }
+
+  function getGitHubStats(timelineData) {
+    const stats = {
+      totalCommits: 0,
+      totalMerges: 0,
+      totalPRs: 0,
+    };
+
+    const uniquePRs = new Set();
+
+    timelineData.entries.forEach((entry) => {
+      // Clean the message
+      if (entry.message.startsWith(":")) {
+        entry.message = entry.message.replace(/^:\s*/, "");
+      }
+
+      stats.totalCommits++;
+
+      if (entry.isMerge === true) {
+        stats.totalMerges++;
+      }
+
+      if (entry.prNumber) {
+        uniquePRs.add(entry.prNumber);
+      }
+    });
+
+    stats.totalPRs = uniquePRs.size;
+
+    return stats;
+  }
+
+  // Usage
+  const result = getGitHubStats(timelineData);
 </script>
 
-<section class="timeline-section mt-32 max-w-md space-y-12">
-  <div class="timeline-reveal group space-y-12">
-    <div class="timeline-groups mb-6 space-y-6">
+<PageHeader>
+  <h1>
+    {result.totalCommits} commits. {result.totalMerges} merges. {result.totalPRs} pull requests. One rebase.
+  </h1>
+  <div class="flex max-w-xl flex-col gap-12">
+    <p>This site is in a constant state of change. Tweaked to death, and improved. And here’s the proof.</p>
+  </div>
+</PageHeader>
+
+<section class="timeline-section flex max-w-2xl flex-col gap-12 lg:mx-2 2xl:mt-5 2xl:w-5xl">
+  <div class="timeline-reveal group flex flex-col gap-12">
+    <div class="timeline-groups flex flex-col">
       {#each groupedEntries as group}
         <div class="date-group">
-          <h3 class="date-header">
+          <h3 class="date-header mb-12">
             {group.date}
           </h3>
-
-          <ul class="timeline-entries space-y-6">
+          <ul class="timeline-entries mb-12 flex flex-col gap-12">
             {#each group.entries as entry}
               <li class="timeline-entry space-y-2" data-type={entry.type}>
-                <div class="entry-meta text-xxs flex flex-row justify-between text-gray-500">
-                  <span class="time">
-                    {DateTime.fromISO(entry.date).toFormat("TT ZZ")}
-                  </span>
-                  <span class="version-debug">
-                    {entry.version}
-                  </span>
-                </div>
-                <div class="entry-content space-y-1">
+                <div class="entry-content space-y-3">
                   {#if entry.branchMerged && entry.intoBranch}
                     <p class="message text-sm text-gray-100">
                       <span class="merge-info">
@@ -63,13 +103,49 @@
                       </span>
                     </p>
                   {:else}
-                    <p class="text-sm/relaxed text-pretty text-gray-100 first-letter:capitalize">
+                    <p class="text-pretty">
                       {entry.message}
                     </p>
                   {/if}
-                  {#if entry.branchMerged && entry.intoBranch}{:else}
-                    <span class="branch-display text-xxs text-gray-500">{entry.branchDisplay}</span>
-                  {/if}
+                  <ul class="entry-meta text-xxs text-primary flex flex-col gap-6 md:flex-row">
+                    {#if entry.branchMerged && entry.intoBranch}
+                      <li>
+                        <span class="h-[18px] w-[18px]">
+                          <iconify-icon
+                            icon="carbon:direction-merge-filled"
+                            width="18"
+                            height="18"
+                            class="text-yellow-300"
+                          ></iconify-icon>
+                        </span>
+                        Merge
+                      </li>
+                    {:else}
+                      <li class="branch-display">
+                        <span class="h-[18px] w-[18px]">
+                          <iconify-icon icon="carbon:branch" width="18" height="18" class="text-body"></iconify-icon>
+                        </span>
+                        {shortenText(entry.branchDisplay)}
+                      </li>
+                    {/if}
+                    <li class="version-debug">
+                      <span class="h-[18px] w-[18px]">
+                        <iconify-icon icon="carbon:version" width="18" height="18" class="text-body"></iconify-icon>
+                      </span>
+                      {entry.version}
+                    </li>
+                    <li class="time">
+                      <span class="h-[18px] w-[18px]">
+                        <iconify-icon
+                          icon="carbon:network-time-protocol"
+                          width="18"
+                          height="18"
+                          class="text-body"
+                        ></iconify-icon>
+                      </span>
+                      {DateTime.fromISO(entry.date).toFormat("TT ZZ")}
+                    </li>
+                  </ul>
                 </div>
               </li>
             {/each}
@@ -82,9 +158,15 @@
 
 <style>
   @reference "@styles/global.css";
+  h1 {
+    font-feature-settings: "ss01" 1;
+  }
   h3 {
-    @apply text-xxs rounded-full font-mono;
-    @apply mb-6 bg-gray-800 px-3 py-1 text-gray-400;
-    @apply inline-flex items-center;
+    @apply text-3xl;
+  }
+  .entry-meta {
+    li {
+      @apply flex flex-row items-center gap-3 text-sm uppercase;
+    }
   }
 </style>

@@ -1,15 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Header from "../components/partials/Header.svelte";
-import Footer from "../components/partials/Footer.svelte";
 import Timeline from "../components/Timeline.svelte";
 import timelineData from "../data/timeline.json";
 ---
 
-<Layout title="workingon.studio">
-  <div class="flex flex-1 flex-col justify-between bg-gray-950 text-gray-100">
-    <Header text="progress.git" client:load />
-    <Timeline {timelineData} />
-    <Footer client:load />
-  </div>
+<Layout title="workingon.studio - Progress">
+  <Timeline {timelineData} />
 </Layout>

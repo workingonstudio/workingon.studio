@@ -59,9 +59,6 @@
       </ul>
     </div>
   </footer>
-  <div class="px-0 text-[10px] md:px-4 [&_a]:hover:!text-blue-600">
-    <Footer />
-  </div>
 </div>
 
 <style>

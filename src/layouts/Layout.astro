@@ -5,6 +5,9 @@ import Analytics from "./partials/Analytics.astro";
 import { ClientRouter } from "astro:transitions";
 import { AstroSeo } from "@astrolib/seo";
 
+import Header from "@components/partials/Header.svelte";
+import Footer from "@components/partials/Footer.svelte";
+
 export interface Props {
   title: string;
 }
@@ -12,6 +15,7 @@ export interface Props {
 const { title } = Astro.props;
 const currentURL = new URL(Astro.url.pathname, Astro.site).href;
 const publishDate = new Date().toISOString();
+const currentPath = Astro.url.pathname;
 
 // Get font URLs from environment variables
 const nudicaFontUrl = import.meta.env.NUDICA_FONT_CSS_URL;
@@ -19,18 +23,18 @@ const nudicaMonoFontUrl = import.meta.env.NUDICA_MONO_FONT_CSS_URL;
 ---
 
 <!doctype html>
-<html lang="en" class="dark">
+<html lang="en" class="dark" class="scroll-smooth">
   <head>
     <AstroSeo
       {title}
-      description="We've been prioritising the wrong things for too long. I make things that force you to look at what you're actually doing."
+      description="I'm tired of designing for metrics…tired of designing to make numbers go up…tired of playing to the wrong audience. Aren't you?"
       canonical={currentURL}
       ,
       openGraph={{
         url: currentURL,
         title: title,
         description:
-          "We've been prioritising the wrong things for too long. I make things that force you to look at what you're actually doing.",
+          "I'm tired of designing for metrics…tired of designing to make numbers go up…tired of playing to the wrong audience. Aren't you?",
         images: [
           {
             url: Astro.site + "site-default-opengraph.png",
@@ -67,7 +71,8 @@ const nudicaMonoFontUrl = import.meta.env.NUDICA_MONO_FONT_CSS_URL;
       is:inline
       type="module"
       src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    ></script>
+    >
+    </script>
 
     <meta name="generator" content={Astro.generator} />
 
@@ -81,8 +86,18 @@ const nudicaMonoFontUrl = import.meta.env.NUDICA_MONO_FONT_CSS_URL;
     <title>{title}</title>
   </head>
   <body>
-    <main class="mx-[5%] flex min-h-screen flex-1 md:mx-[10%]">
-      <slot />
+    <div class="sticky top-0 mb-12 shadow-2xl shadow-gray-950">
+      <div class="mx-[5%] flex flex-col md:mx-[10%]">
+        <Header client:load {currentPath} />
+      </div>
+    </div>
+    <main class="mx-[5%] flex min-h-screen flex-1 flex-col md:mx-[10%]">
+      <div class="flex flex-1 flex-col justify-between gap-24">
+        <div class="flex grow-1 flex-col justify-start gap-24 2xl:flex-row">
+          <slot />
+        </div>
+        <Footer client:load />
+      </div>
     </main>
   </body>
 </html>

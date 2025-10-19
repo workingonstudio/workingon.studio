@@ -1,30 +1,80 @@
 {
-  "generated" :  "2025-09-06T21:33:20.962Z",
-  "entries" : [
+  "generated": "2025-09-06T21:33:20.962Z",
+  "entries": [
     {
-      "description" : "Domain name",
-      "in" : 0,
-      "out" : 9.77
+      "date": "October",
+      "items": [
+        {
+          "description": "Virtual office",
+          "in": 0,
+          "out": 27.99
+        },
+        {
+          "description": "Proton Unlimited",
+          "in": 0,
+          "out": 10.59
+        },
+        {
+          "description": "Claude Pro",
+          "in": 0,
+          "out": 17.0
+        },
+        {
+          "description": "Railway",
+          "in": 0,
+          "out": 4.8
+        },
+        {
+          "description": "Github",
+          "in": 0,
+          "out": 4.8
+        }
+      ]
     },
     {
-      "description" : "Company registration",
-      "in": 0,
-      "out": 15.00
-    },
-    {
-      "description" : "Virtual office",
-      "in": 0,
-      "out": 24.99
-    },
-    {
-      "description": "Email service",
-      "in": 0,
-      "out": 1.00
-    },
-    {
-      "description": "Claude Pro",
-      "in": 0,
-      "out": 17.00
+      "date": "September",
+      "items": [
+        {
+          "description": "Domain name",
+          "in": 0,
+          "out": 9.77
+        },
+        {
+          "description": "Domain name",
+          "in": 0,
+          "out": 99.0
+        },
+        {
+          "description": "Domain name",
+          "in": 0,
+          "out": 12.0
+        },
+        {
+          "description": "Company registration",
+          "in": 0,
+          "out": 15.0
+        },
+        {
+          "description": "Virtual office",
+          "in": 0,
+          "out": 27.99
+        },
+        {
+          "description": "Proton Mail",
+          "in": 0,
+          "out": 1.0
+        },
+        {
+          "description": "Claude Pro",
+          "in": 0,
+          "out": 17.0
+        },
+        {
+          "description": "Github",
+          "in": 0,
+          "out": 4.8
+        }
+      ]
     }
   ]
 }
