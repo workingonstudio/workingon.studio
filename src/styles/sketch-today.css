@@ -34,4 +34,12 @@
     font-family: var(--font-montserrat);
     color: var(--color-main);
   }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @apply font-bold;
+  }
 }

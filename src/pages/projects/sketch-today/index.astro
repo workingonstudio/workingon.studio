@@ -1,8 +1,14 @@
 ---
 import SketchToday from "@layouts/SketchToday.astro";
 import Header from "@components/sketch-today/Header.svelte";
+import Hero from "@components/sketch-today/partials/Hero.svelte";
+import ResourceList from "@components/sketch-today/ResourceList.svelte";
 ---
 
 <SketchToday title="Sketch Today">
-  <Header />
+  <div class="flex w-full flex-col">
+    <Header />
+    <Hero />
+    <ResourceList />
+  </div>
 </SketchToday>
