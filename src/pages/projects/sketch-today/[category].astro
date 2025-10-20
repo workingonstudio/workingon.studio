@@ -1,0 +1,25 @@
+---
+import SketchToday from "@layouts/SketchToday.astro";
+import Header from "@components/sketch-today/Header.svelte";
+
+export function getStaticPaths() {
+  return [
+    { params: { category: "icons" } },
+    { params: { category: "palettes" } },
+    { params: { category: "components" } },
+    { params: { category: "plugins" } },
+  ];
+}
+
+const { category } = Astro.params;
+const capitalizedCategory = category.charAt(0).toUpperCase() + category.slice(1);
+
+// Fetch your data based on category
+// const resources = await getResourcesByCategory(category);
+---
+
+<SketchToday title={"Sketch Today - " + capitalizedCategory}>
+  <div class="flex w-full flex-col">
+    <Header />
+  </div>
+</SketchToday>

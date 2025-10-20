@@ -3,9 +3,8 @@
 
 <nav class="flex flex-row items-center">
   <ul class="text-body flex flex-row gap-6 rounded-full bg-stone-100 px-6 text-xs">
-    <li><a href="/">Why?</a></li>
-    <li><a href="/">News</a></li>
-    <li><a href="/">Community</a></li>
+    <li><a href="/">About</a></li>
+    <li><a href="/">FAQ</a></li>
   </ul>
   <a class="rss px-3" href="/" aria-label="Subscribe to Rss">
     <iconify-icon icon="heroicons:rss-solid" class="text-md"></iconify-icon>

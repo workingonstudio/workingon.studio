@@ -9,7 +9,7 @@
         <iconify-icon icon="material-symbols:diamond-shine-outline" class="icon"></iconify-icon>
       </div>
       <span class="font-bold">Sketch Today</span>
-      <span class="text-body hidden text-xs font-medium md:flex">Modern Sketch Resources</span>
+      <span class="text-body hidden text-xs font-medium md:flex">Modern Sketch Resources.</span>
     </a>
   </div>
   <Navigation />
