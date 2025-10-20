@@ -64,7 +64,7 @@
   <div class="flex flex-col gap-4">
     <div class="flex flex-col gap-6 lg:flex-row lg:items-center">
       <span class="flex h-8 w-8 items-center">
-        <iconify-icon icon="carbon:mail-all" class="text-3xl text-gray-500" />
+        <iconify-icon icon="carbon:mail-all" class="text-3xl text-gray-500"></iconify-icon>
       </span>
       <div class="flex flex-row items-center gap-2">
         <a
