@@ -1,18 +1,14 @@
 ---
 import SketchToday from "@layouts/SketchToday.astro";
-import Header from "@components/sketch-today/Header.svelte";
 import Hero from "@components/sketch-today/partials/Hero.svelte";
 import CategoryFilters from "@components/sketch-today/partials/CategoryFilters.svelte";
 import ResourceList from "@components/sketch-today/ResourceList.svelte";
 ---
 
 <SketchToday title="Sketch Today">
-  <div class="flex w-full flex-col">
-    <Header />
-    <Hero />
-    <div class="flex flex-col gap-16">
-      <CategoryFilters />
-      <ResourceList />
-    </div>
+  <Hero />
+  <div class="flex flex-col gap-16">
+    <CategoryFilters />
+    <ResourceList />
   </div>
 </SketchToday>

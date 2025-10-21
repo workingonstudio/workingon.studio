@@ -1,6 +1,5 @@
 ---
 import SketchToday from "@layouts/SketchToday.astro";
-import Header from "@components/sketch-today/Header.svelte";
 import ResourceList from "@components/sketch-today/ResourceList.svelte";
 
 export function getStaticPaths() {
@@ -19,20 +18,17 @@ const capitalizedCategory = category.charAt(0).toUpperCase() + category.slice(1)
 ---
 
 <SketchToday title={"Sketch Today - " + capitalizedCategory}>
-  <div class="flex w-full flex-col">
-    <Header />
-    <div class="flex flex-col gap-16 py-18">
-      <div class="flex flex-col">
-        <div class="flex flex-col items-start gap-3">
-          <div class="icon flex rounded-sm bg-violet-100 p-1">
-            <iconify-icon icon="heroicons:swatch-16-solid" class="text-gray-800"></iconify-icon>
-          </div>
-          <h1>Color Palettes.</h1>
-          <p class="text-body text-lg">The most up-to-date color variables.</p>
+  <div class="flex flex-col gap-16 py-18">
+    <div class="flex flex-col">
+      <div class="flex flex-col items-start gap-3">
+        <div class="icon flex rounded-sm bg-violet-100 p-1">
+          <iconify-icon icon="heroicons:swatch-16-solid" class="text-gray-800"></iconify-icon>
         </div>
+        <h1>Color Palettes.</h1>
+        <p class="text-body text-lg">The most up-to-date color variables.</p>
       </div>
-      <ResourceList />
     </div>
+    <ResourceList />
   </div>
 
   <style>

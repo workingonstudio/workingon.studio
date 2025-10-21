@@ -17,50 +17,47 @@ const capitalizedCategory = category.charAt(0).toUpperCase() + category.slice(1)
 ---
 
 <SketchToday title={"Sketch Today - " + capitalizedCategory}>
-  <div class="flex w-full flex-col">
-    <Header />
-    <div class="flex py-18">
-      <div class="flex flex-col gap-8">
-        <div class="flex flex-col items-start gap-3">
-          <div class="icon flex rounded-sm bg-violet-100 p-1">
-            <iconify-icon icon="heroicons:swatch-16-solid" class="text-gray-800"></iconify-icon>
-          </div>
-          <h1>{resource.title}</h1>
-          <p class="text-body text-lg">The most up-to-date color variables.</p>
+  <div class="flex py-18">
+    <div class="flex flex-col gap-8">
+      <div class="flex flex-col items-start gap-3">
+        <div class="icon flex rounded-sm bg-violet-100 p-1">
+          <iconify-icon icon="heroicons:swatch-16-solid" class="text-gray-800"></iconify-icon>
         </div>
-        <div class="text-main flex w-2xl flex-col text-base/relaxed">
-          <p>
-            What took me a few hours will now take you just a click (or two). Grab this library to
-            use the lastest tailwind colors in Sketch.
-          </p>
-        </div>
-        <div class="options flex flex-row gap-3">
-          <a href="/" class="hover:text-main bg-main flex flex-row text-white">
-            <!-- prettier-ignore -->
-            <iconify-icon icon="heroicons:arrow-down-tray-16-solid" class="text-base"></iconify-icon>
-            <span>Download</span>
-          </a>
-          <a href="/" class="hover:text-main text-main flex flex-row">
-            <!-- prettier-ignore -->
-            <iconify-icon icon="heroicons:arrow-top-right-on-square-16-solid" class="text-base"></iconify-icon>
-            <span>Workspace</span>
-          </a>
-          <a href="/" class="hover:text-main text-main flex flex-row">
-            <!-- prettier-ignore -->
-            <iconify-icon icon="heroicons:code-bracket-16-solid" class="text-base"></iconify-icon>
-            <span>Github</span>
-          </a>
-          <a href="/" class="hover:text-main text-main flex flex-row">
-            <!-- prettier-ignore -->
-            <iconify-icon icon="heroicons:link-16-solid" class="text-base"></iconify-icon>
-            <span>tailwind.com</span>
-          </a>
-          <a href="/" class="hover:text-main text-main flex flex-row">
-            <!-- prettier-ignore -->
-            <iconify-icon icon="heroicons:share-16-solid" class="text-base"></iconify-icon>
-            <span>Share</span>
-          </a>
-        </div>
+        <h1>{resource.title}</h1>
+        <p class="text-body text-lg">The most up-to-date color variables.</p>
+      </div>
+      <div class="text-main flex w-2xl flex-col text-base/relaxed">
+        <p>
+          What took me a few hours will now take you just a click (or two). Grab this library to use
+          the lastest tailwind colors in Sketch.
+        </p>
+      </div>
+      <div class="options flex flex-row gap-3">
+        <a href="/" class="hover:text-main bg-main flex flex-row text-white">
+          <!-- prettier-ignore -->
+          <iconify-icon icon="heroicons:arrow-down-tray-16-solid" class="text-base"></iconify-icon>
+          <span>Download</span>
+        </a>
+        <a href="/" class="hover:text-main text-main flex flex-row">
+          <!-- prettier-ignore -->
+          <iconify-icon icon="heroicons:arrow-top-right-on-square-16-solid" class="text-base"></iconify-icon>
+          <span>Workspace</span>
+        </a>
+        <a href="/" class="hover:text-main text-main flex flex-row">
+          <!-- prettier-ignore -->
+          <iconify-icon icon="heroicons:code-bracket-16-solid" class="text-base"></iconify-icon>
+          <span>Github</span>
+        </a>
+        <a href="/" class="hover:text-main text-main flex flex-row">
+          <!-- prettier-ignore -->
+          <iconify-icon icon="heroicons:link-16-solid" class="text-base"></iconify-icon>
+          <span>tailwind.com</span>
+        </a>
+        <a href="/" class="hover:text-main text-main flex flex-row">
+          <!-- prettier-ignore -->
+          <iconify-icon icon="heroicons:share-16-solid" class="text-base"></iconify-icon>
+          <span>Share</span>
+        </a>
       </div>
     </div>
   </div>

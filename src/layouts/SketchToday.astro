@@ -5,6 +5,11 @@ import Analytics from "./partials/Analytics.astro";
 import { ClientRouter } from "astro:transitions";
 import { AstroSeo } from "@astrolib/seo";
 
+import Header from "@components/sketch-today/Header.svelte";
+
+let currentPath = Astro.url.pathname;
+let isHome = currentPath === "/projects/sketch-today/";
+
 export interface Props {
   title: string;
 }
@@ -74,7 +79,10 @@ const publishDate = new Date().toISOString();
   </head>
   <body>
     <main class="mx-[5%] flex flex-1 pt-9 md:mx-[10%]">
-      <slot />
+      <div class="flex w-full flex-col">
+        <Header client:load {currentPath} {isHome} />
+        <slot />
+      </div>
     </main>
   </body>
 </html>

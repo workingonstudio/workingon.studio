@@ -1,16 +1,20 @@
 <script lang="ts">
   import Navigation from "./partials/Navigation.svelte";
+  export let currentPath;
+  export let isHome;
 </script>
 
 <header class="flex w-full flex-row items-center justify-between">
-  <div class="flex flex-row gap-3">
-    <a class="group flex flex-row items-center gap-3" href="/">
+  <div class="flex flex-row items-center gap-3">
+    <a class="group flex flex-row items-center gap-3" href="/projects/sketch-today/">
       <div class="logo-mark">
         <iconify-icon icon="material-symbols:diamond-shine-outline" class="icon"></iconify-icon>
       </div>
-      <span class="font-bold">SketchTo.day</span>
-      <span class="text-body hidden text-xs font-medium md:flex">Modern Sketch Resources.</span>
+      <span class="font-bold">Sketch Today</span>
     </a>
+    <span class="text-body hidden text-xs font-medium md:flex">
+      {isHome ? "Modern Sketch Resources." : currentPath}
+    </span>
   </div>
   <Navigation />
 </header>
