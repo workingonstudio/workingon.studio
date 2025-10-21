@@ -4,14 +4,10 @@
   export let description: string;
   export let iconSet: string = "heroicons";
   export let icon: string;
-  export let bgColor: string;
-  export let bgIconColor: string;
-  export let borderColor: string;
-  export let textColor: string;
 </script>
 
-<a href="/" class="flex flex-row items-center gap-3 rounded-lg border p-3 {type} {borderColor} {bgColor} {textColor}">
-  <div class="icon flex rounded-sm {bgIconColor} p-1">
+<a href="/" class="resource {type}">
+  <div class="icon flex rounded-sm p-1">
     <iconify-icon icon="{iconSet}:{icon}" class="text-gray-800"></iconify-icon>
   </div>
   <div class="flex flex-col gap-0.5">

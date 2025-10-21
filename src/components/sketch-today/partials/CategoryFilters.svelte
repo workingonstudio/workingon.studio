@@ -1,11 +1,6 @@
 <script lang="ts">
   let tags = [
     {
-      label: "all",
-      bgColor: "bg-gray-800",
-      textColor: "text-white",
-    },
-    {
       label: "palettes",
       bgColor: "bg-violet-50",
       textColor: "text-violet-500",
@@ -34,14 +29,15 @@
 </script>
 
 <div class="flex flex-row gap-3">
+  <button type="button" class="tag bg-gray-800 text-white hover:text-gray-800">All</button>
   {#each tags as { label, bgColor, textColor }}
-    <button type="button" class="tag {bgColor} {textColor}">{label}</button>
+    <button type="button" class="tag {bgColor} {textColor} hover:bg-transparent">{label}</button>
   {/each}
 </div>
 
 <style>
   @reference "@styles/sketch-today.css";
   .tag {
-    @apply rounded-lg px-3 py-1 text-xs font-semibold capitalize;
+    @apply cursor-pointer rounded-lg px-3 py-1 text-xs font-semibold capitalize hover:bg-transparent;
   }
 </style>
