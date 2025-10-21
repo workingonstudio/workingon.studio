@@ -2,6 +2,7 @@
 import SketchToday from "@layouts/SketchToday.astro";
 import Header from "@components/sketch-today/Header.svelte";
 import Hero from "@components/sketch-today/partials/Hero.svelte";
+import CategoryFilters from "@components/sketch-today/partials/CategoryFilters.svelte";
 import ResourceList from "@components/sketch-today/ResourceList.svelte";
 ---
 
@@ -9,6 +10,9 @@ import ResourceList from "@components/sketch-today/ResourceList.svelte";
   <div class="flex w-full flex-col">
     <Header />
     <Hero />
-    <ResourceList />
+    <div class="flex flex-col gap-16">
+      <CategoryFilters />
+      <ResourceList />
+    </div>
   </div>
 </SketchToday>

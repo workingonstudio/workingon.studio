@@ -1,38 +1,7 @@
 <script lang="ts">
   import Resource from "./partials/Resource.svelte";
+  import CategoryFilters from "./partials/CategoryFilters.svelte";
 
-  let tags = [
-    {
-      label: "all",
-      bgColor: "bg-gray-800",
-      textColor: "text-white",
-    },
-    {
-      label: "palettes",
-      bgColor: "bg-violet-50",
-      textColor: "text-violet-500",
-    },
-    {
-      label: "icons",
-      bgColor: "bg-orange-50",
-      textColor: "text-orange-500",
-    },
-    {
-      label: "plugins",
-      bgColor: "bg-pink-50",
-      textColor: "text-pink-500",
-    },
-    {
-      label: "components",
-      bgColor: "bg-blue-50",
-      textColor: "text-blue-500",
-    },
-    {
-      label: "soon",
-      bgColor: "bg-stone-100",
-      textColor: "text-stone-500",
-    },
-  ];
   let resources = [
     {
       type: "palette",
@@ -88,11 +57,6 @@
 </script>
 
 <div class="flex flex-col gap-16">
-  <div class="flex flex-row gap-3">
-    {#each tags as { label, bgColor, textColor }}
-      <button type="button" class="tag {bgColor} {textColor}">{label}</button>
-    {/each}
-  </div>
   <div class="grid auto-rows-auto grid-cols-1 gap-3 lg:grid-cols-3 lg:gap-6 2xl:grid-cols-4">
     {#each resources as resource}
       <Resource {...resource} />
@@ -102,7 +66,4 @@
 
 <style>
   @reference "@styles/sketch-today.css";
-  .tag {
-    @apply rounded-lg px-3 py-1 text-xs font-semibold capitalize;
-  }
 </style>
