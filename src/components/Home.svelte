@@ -5,7 +5,7 @@
 <PageHeader>
   <!-- prettier-ignore -->
   <h1>
-    I'm tired of designing for metrics&#8230;tired of designing to make numbers go up&#8230;tired of playing to the wrong audience.Aren't you?
+    I'm tired of designing for metrics&#8230;tired of designing to make numbers go up&#8230;tired of playing to the wrong audience. Aren't you?
   </h1>
   <div class="flex max-w-xl flex-col gap-12">
     <p>
