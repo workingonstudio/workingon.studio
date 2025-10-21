@@ -6,9 +6,6 @@
     <li><a href="/">About</a></li>
     <li><a href="/">FAQ</a></li>
   </ul>
-  <a class="rss px-3" href="/" aria-label="Subscribe to Rss">
-    <iconify-icon icon="heroicons:rss-20-solid" class="text-md"></iconify-icon>
-  </a>
 </nav>
 
 <style>

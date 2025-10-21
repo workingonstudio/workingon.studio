@@ -1,43 +1,15 @@
 <script lang="ts">
   import Resource from "./partials/Resource.svelte";
-
-  let resources = [
-    {
-      type: "palette",
-      title: "Tailwind 4.0.1 Colors",
-      description: "The most up-to-date color variables.",
-      icon: "swatch-16-solid",
-    },
-    {
-      type: "icon",
-      title: "Heroicons",
-      description: "Beautiful hand-crafted SVG icons.",
-      icon: "square-2-stack-16-solid",
-    },
-    {
-      type: "plugin",
-      title: "Sort Layers",
-      description: "Sort by name, position, or type.",
-      icon: "squares-plus-16-solid",
-    },
-    {
-      type: "soon",
-      title: "Lucide Icons",
-      description: "Beautiful & consistent icons.",
-      icon: "square-2-stack-16-solid",
-    },
-    {
-      type: "component",
-      title: "IBM Carbon",
-      description: "IBM Design Language Library",
-      icon: "cube-transparent-16-solid",
-    },
-  ];
+  import icons from "@data/sketch-today/icons.json";
+  import palettes from "@data/sketch-today/palettes.json";
+  import plugins from "@data/sketch-today/plugins.json";
+  import system from "@data/sketch-today/systems.json";
+  export let resourceList;
 </script>
 
 <div class="flex flex-col gap-16">
-  <div class="grid auto-rows-auto grid-cols-1 gap-3 lg:grid-cols-3 lg:gap-6 2xl:grid-cols-4">
-    {#each resources as resource}
+  <div class="grid auto-rows-auto grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 lg:gap-6 2xl:grid-cols-4">
+    {#each resourceList as resource}
       <Resource {...resource} />
     {/each}
   </div>

@@ -16,7 +16,7 @@
       textColor: "text-pink-500",
     },
     {
-      label: "components",
+      label: "systems",
       bgColor: "bg-blue-50",
       textColor: "text-blue-500",
     },

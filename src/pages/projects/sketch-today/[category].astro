@@ -1,34 +1,68 @@
 ---
 import SketchToday from "@layouts/SketchToday.astro";
 import ResourceList from "@components/sketch-today/ResourceList.svelte";
+import iconsData from "@data/sketch-today/icons.json";
+import palettesData from "@data/sketch-today/palettes.json";
+import systemsData from "@data/sketch-today/systems.json";
+import pluginsData from "@data/sketch-today/plugins.json";
 
 export function getStaticPaths() {
   return [
     { params: { category: "icons" } },
     { params: { category: "palettes" } },
-    { params: { category: "components" } },
+    { params: { category: "systems" } },
     { params: { category: "plugins" } },
   ];
 }
+
 const { category } = Astro.params;
+
+const dataMap = {
+  icons: iconsData,
+  palettes: palettesData,
+  systems: systemsData,
+  plugins: pluginsData,
+};
+
+const resourceList = dataMap[category as keyof typeof dataMap];
 const capitalizedCategory = category.charAt(0).toUpperCase() + category.slice(1);
 
-// Fetch your data based on category
-// const resources = await getResourcesByCategory(category);
+let iconset: string = "heroicons:";
+let icon: string = "";
+let bgColor: string = "";
+
+switch (category) {
+  case "icons":
+    icon = iconset + "square-2-stack-16-solid";
+    bgColor = "bg-orange-100";
+    break;
+  case "palettes":
+    icon = iconset + "swatch-16-solid";
+    bgColor = "bg-violet-100";
+    break;
+  case "plugins":
+    icon = iconset + "squares-plus-16-solid";
+    bgColor = "bg-pink-100";
+    break;
+  case "systems":
+    icon = iconset + "cube-transparent-16-solid";
+    bgColor = "bg-blue-100";
+    break;
+}
 ---
 
 <SketchToday title={"Sketch Today - " + capitalizedCategory}>
   <div class="flex flex-col gap-16 py-18">
     <div class="flex flex-col">
       <div class="flex flex-col items-start gap-3">
-        <div class="icon flex rounded-sm bg-violet-100 p-1">
-          <iconify-icon icon="heroicons:swatch-16-solid" class="text-gray-800"></iconify-icon>
+        <div class={`icon ${bgColor} flex rounded-sm p-1`}>
+          <iconify-icon icon={icon} class="text-gray-800"></iconify-icon>
         </div>
-        <h1>Color Palettes.</h1>
-        <p class="text-body text-lg">The most up-to-date color variables.</p>
+        <h1>{capitalizedCategory}.</h1>
+        <p class="text-body text-lg">The most up-to-date {category}.</p>
       </div>
     </div>
-    <ResourceList />
+    <ResourceList client:load {resourceList} />
   </div>
 
   <style>

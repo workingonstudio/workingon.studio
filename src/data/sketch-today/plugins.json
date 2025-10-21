@@ -1,0 +1,18 @@
+[
+  {
+    "category": "plugins",
+    "type": "plugin",
+    "slug": "sort-layers",
+    "title": "Sort Layers",
+    "description": "Sort by name, position, or type.",
+    "released": true,
+    "links": [
+      {
+        "download": "",
+        "workspace": "",
+        "github": "",
+        "source": ""
+      }
+    ]
+  }
+]

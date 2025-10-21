@@ -1,30 +1,60 @@
 ---
 import SketchToday from "@layouts/SketchToday.astro";
-import Header from "@components/sketch-today/Header.svelte";
-
-import resources from "@data/sketch-today/palettes.json";
+import iconsData from "@data/sketch-today/icons.json";
+import palettesData from "@data/sketch-today/palettes.json";
+import systemsData from "@data/sketch-today/systems.json";
+import pluginsData from "@data/sketch-today/plugins.json";
 
 export async function getStaticPaths() {
-  return resources.map((resource) => ({
+  const resourceList = [...iconsData, ...palettesData, ...systemsData, ...pluginsData];
+
+  return resourceList.map((resource) => ({
     params: { category: resource.category, slug: resource.slug },
     props: { resource },
   }));
 }
 
-const { category, slug } = Astro.params;
+const { category } = Astro.params;
 const { resource } = Astro.props;
-const capitalizedCategory = category.charAt(0).toUpperCase() + category.slice(1);
+const capitalizedCategory = category!.charAt(0).toUpperCase() + category!.slice(1);
+
+let iconset: string = "heroicons:";
+let icon: string = "";
+let bgColor: string = "";
+
+switch (resource.type) {
+  case "icon":
+    icon = iconset + "square-2-stack-16-solid";
+    bgColor = "bg-orange-100";
+    break;
+  case "palette":
+    icon = iconset + "swatch-16-solid";
+    bgColor = "bg-violet-100";
+    break;
+  case "plugin":
+    icon = iconset + "squares-plus-16-solid";
+    bgColor = "bg-pink-100";
+    break;
+  case "system":
+    icon = iconset + "cube-transparent-16-solid";
+    bgColor = "bg-blue-100";
+    break;
+}
+
+if (!resource.released) {
+  bgColor = "bg-stone-200";
+}
 ---
 
 <SketchToday title={"Sketch Today - " + capitalizedCategory}>
   <div class="flex py-18">
     <div class="flex flex-col gap-8">
       <div class="flex flex-col items-start gap-3">
-        <div class="icon flex rounded-sm bg-violet-100 p-1">
-          <iconify-icon icon="heroicons:swatch-16-solid" class="text-gray-800"></iconify-icon>
+        <div class={`icon ${bgColor} flex rounded-sm p-1`}>
+          <iconify-icon icon={icon} class="text-gray-800"></iconify-icon>
         </div>
         <h1>{resource.title}</h1>
-        <p class="text-body text-lg">The most up-to-date color variables.</p>
+        <p class="text-body text-lg">{resource.description}</p>
       </div>
       <div class="text-main flex w-2xl flex-col text-base/relaxed">
         <p>

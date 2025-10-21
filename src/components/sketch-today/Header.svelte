@@ -2,6 +2,8 @@
   import Navigation from "./partials/Navigation.svelte";
   export let currentPath;
   export let isHome;
+
+  const [category, slug] = currentPath.split("sketch-today/")[1].split("/");
 </script>
 
 <header class="flex w-full flex-row items-center justify-between">
@@ -12,9 +14,25 @@
       </div>
       <span class="font-bold">Sketch Today</span>
     </a>
-    <span class="text-body hidden text-xs font-medium md:flex">
-      {isHome ? "Modern Sketch Resources." : currentPath}
-    </span>
+    <ul class="pagination flex flex-row gap-1">
+      {#if isHome}
+        <li>Modern Sketch Resources.</li>
+      {:else if slug}
+        <li>
+          <iconify-icon icon="heroicons:chevron-right-16-solid" class="text-base text-gray-400"></iconify-icon>
+          <a href="/projects/sketch-today/{category}">{category}</a>
+        </li>
+        <li>
+          <iconify-icon icon="heroicons:chevron-right-16-solid" class="text-base text-gray-400"></iconify-icon>
+          {slug}
+        </li>
+      {:else}
+        <li>
+          <iconify-icon icon="heroicons:chevron-right-16-solid" class="text-base text-gray-400"></iconify-icon>
+          {category}
+        </li>
+      {/if}
+    </ul>
   </div>
   <Navigation />
 </header>
@@ -26,6 +44,11 @@
     .icon {
       @apply text-lg text-white;
       @apply group-hover:text-primary;
+    }
+  }
+  .pagination {
+    li {
+      @apply text-body flex flex-row items-center gap-1 text-xs font-medium capitalize last:font-semibold;
     }
   }
 </style>

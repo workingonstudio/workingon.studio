@@ -1,8 +1,50 @@
 [
   {
     "category": "icons",
-    "slug": "heroicons",
+    "type": "icon",
+    "slug": "hero-icons",
     "title": "Heroicons",
-    "description": "Beautiful hand-crafted SVG icons"
+    "description": "Beautiful hand-crafted SVG icons.",
+    "released": true,
+    "links": [
+      {
+        "download": "",
+        "workspace": "",
+        "github": "",
+        "source": ""
+      }
+    ]
+  },
+  {
+    "category": "icons",
+    "type": "icon",
+    "slug": "carbon-icons",
+    "title": "Carbon Icons",
+    "description": "Icon set created by IBM.",
+    "released": true,
+    "links": [
+      {
+        "download": "",
+        "workspace": "",
+        "github": "",
+        "source": ""
+      }
+    ]
+  },
+  {
+    "category": "icons",
+    "type": "icon",
+    "slug": "lucide-icons",
+    "title": "Lucide Icons",
+    "description": "Icon set created by IBM.",
+    "released": false,
+    "links": [
+      {
+        "download": "",
+        "workspace": "",
+        "github": "",
+        "source": ""
+      }
+    ]
   }
 ]

@@ -65,7 +65,7 @@
         @apply bg-pink-100;
       }
     }
-    &.component {
+    &.system {
       @apply border-blue-100 bg-blue-50 text-blue-500;
       .icon {
         @apply bg-blue-100;

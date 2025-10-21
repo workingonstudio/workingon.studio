@@ -1,14 +1,34 @@
 [
   {
     "category": "palettes",
-    "slug": "tailwind-v4",
+    "type": "palette",
+    "slug": "tailwind",
     "title": "Tailwind 4.0.1 Colors",
-    "description": "The most up-to-date color variables."
+    "description": "The most up-to-date color variables.",
+    "released": true,
+    "links": [
+      {
+        "download": "",
+        "workspace": "",
+        "github": "",
+        "source": ""
+      }
+    ]
   },
   {
     "category": "palettes",
-    "slug": "material",
+    "type": "palette",
+    "slug": "google-material",
     "title": "Google Material Colors",
-    "description": "Material default color variables."
+    "description": "Material default color variables.",
+    "released": false,
+    "links": [
+      {
+        "download": "",
+        "workspace": "",
+        "github": "",
+        "source": ""
+      }
+    ]
   }
 ]
