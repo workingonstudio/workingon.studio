@@ -31,9 +31,8 @@
         ></iconify-icon>
         Try Penpot
       </a>
-      <span class="btn flex scale-none! flex-row items-center gap-3 border-none!">Just wait&#8230;</span>
     </div>
-    <small>* if you're a good designer you could use powerpoint for all I care.</small>
+    <small>* you could always run Coral Draw through a VM?</small>
   </div>
 </div>
 
