@@ -24,7 +24,7 @@
     "version": "1.0.0",
     "status": "shipped",
     "tags": [{ "icon": "carbon:magic-wand", "text": "free" }],
-    "link": "figma-down"
+    "link": "is-figma-down"
   },
   {
     "name": "workingon.studio",
