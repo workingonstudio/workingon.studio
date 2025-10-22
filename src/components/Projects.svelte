@@ -23,12 +23,15 @@
   <ul class="project-list mb-10 flex flex-col gap-12">
     {#each projectData as { name, description, version, status, tags, link }, index}
       {#if index <= 3}
-        <li class="project-item">
+        <li class="project-item group">
           <a href={link} class="space-y-4">
             <div class="content space-y-3">
               <div class="flex flex-col gap-6 lg:flex-row lg:items-center">
                 <span class="h-8 w-8">
-                  <iconify-icon icon="carbon:arrow-up-right" class="text-3xl text-gray-500"></iconify-icon>
+                  <iconify-icon
+                    icon="carbon:arrow-up-right"
+                    class="group-hover:text-primary text-3xl text-gray-500 transition-colors duration-300"
+                  ></iconify-icon>
                 </span>
                 <h2 class="flex flex-row items-center gap-2">{name}</h2>
               </div>
@@ -69,12 +72,5 @@
   @reference "@styles/global.css";
   .meta {
     @apply text-sm uppercase lg:ml-14;
-  }
-  .project-list:hover .project-item:not(:hover) {
-    @apply opacity-20 transition-opacity delay-100 duration-300 ease-in-out;
-  }
-
-  .project-item {
-    @apply transition-opacity delay-100 duration-300 ease-in-out;
   }
 </style>
