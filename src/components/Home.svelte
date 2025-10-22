@@ -28,9 +28,4 @@
 
 <style>
   @reference "@styles/global.css";
-  h1 {
-    span {
-      @apply before:content-["\2217\2217"];
-    }
-  }
 </style>

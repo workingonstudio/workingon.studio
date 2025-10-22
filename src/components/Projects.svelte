@@ -22,7 +22,7 @@
 <section class="mx-0 max-w-2xl md:mx-2 2xl:mt-5">
   <ul class="project-list mb-10 flex flex-col gap-12">
     {#each projectData as { name, description, version, status, tags, link }, index}
-      {#if index <= 2}
+      {#if index <= 3}
         <li class="project-item">
           <a href={link} class="space-y-4">
             <div class="content space-y-3">
