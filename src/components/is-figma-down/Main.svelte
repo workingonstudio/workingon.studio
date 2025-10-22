@@ -24,7 +24,7 @@
         ></iconify-icon>
         Try Sketch
       </a>
-      <a href="https://penpot.app/?ref=workingon.studio" class="btn flex flex-row items-center gap-3">
+      <a href="https://penpot.app?ref=workingon.studio" class="btn flex flex-row items-center gap-3">
         <iconify-icon
           icon="material-symbols:design-services-outline-rounded"
           class="group-spin-drop relative top-[1px] text-base text-emerald-400"
