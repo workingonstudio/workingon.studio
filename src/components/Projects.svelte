@@ -10,7 +10,7 @@
   <h1>
     {daysSince} days passed.
     <br />
-    3 projects shipped.
+    4 projects shipped.
     <br />
     3 more in the dock.
   </h1>
