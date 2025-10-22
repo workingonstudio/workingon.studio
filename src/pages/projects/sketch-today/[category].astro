@@ -33,19 +33,19 @@ let bgColor: string = "";
 
 switch (category) {
   case "icons":
-    icon = iconset + "square-2-stack-16-solid";
+    icon = iconset + "square-2-stack";
     bgColor = "bg-orange-100";
     break;
   case "palettes":
-    icon = iconset + "swatch-16-solid";
+    icon = iconset + "swatch";
     bgColor = "bg-violet-100";
     break;
   case "plugins":
-    icon = iconset + "squares-plus-16-solid";
+    icon = iconset + "squares-plus";
     bgColor = "bg-pink-100";
     break;
   case "systems":
-    icon = iconset + "cube-transparent-16-solid";
+    icon = iconset + "cube-transparent";
     bgColor = "bg-blue-100";
     break;
 }
@@ -55,10 +55,12 @@ switch (category) {
   <div class="flex flex-col gap-16 py-18">
     <div class="flex flex-col">
       <div class="flex flex-col items-start gap-3">
-        <div class={`icon ${bgColor} flex rounded-sm p-1`}>
-          <iconify-icon icon={icon} class="text-gray-800"></iconify-icon>
+        <div class="flex flex-row items-center gap-4">
+          <div class={`icon ${bgColor} flex rounded-lg p-1`}>
+            <iconify-icon icon={icon} class="text-2xl text-gray-800"></iconify-icon>
+          </div>
+          <h1>{capitalizedCategory}.</h1>
         </div>
-        <h1>{capitalizedCategory}.</h1>
         <p class="text-body text-lg">The most up-to-date {category}.</p>
       </div>
     </div>

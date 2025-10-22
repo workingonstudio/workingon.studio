@@ -21,7 +21,7 @@
       textColor: "text-blue-500",
     },
     {
-      label: "soon",
+      label: "todo",
       bgColor: "bg-stone-100",
       textColor: "text-stone-500",
     },

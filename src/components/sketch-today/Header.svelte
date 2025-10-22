@@ -19,16 +19,16 @@
         <li>Modern Sketch Resources.</li>
       {:else if slug}
         <li>
-          <iconify-icon icon="heroicons:chevron-right-16-solid" class="text-base text-gray-400"></iconify-icon>
+          <iconify-icon icon="heroicons:chevron-right-16-solid" class="icon"></iconify-icon>
           <a href="/projects/sketch-today/{category}">{category}</a>
         </li>
         <li>
-          <iconify-icon icon="heroicons:chevron-right-16-solid" class="text-base text-gray-400"></iconify-icon>
+          <iconify-icon icon="heroicons:chevron-right-16-solid" class="icon"></iconify-icon>
           {slug}
         </li>
       {:else}
         <li>
-          <iconify-icon icon="heroicons:chevron-right-16-solid" class="text-base text-gray-400"></iconify-icon>
+          <iconify-icon icon="heroicons:chevron-right-16-solid" class="icon"></iconify-icon>
           {category}
         </li>
       {/if}
@@ -49,6 +49,9 @@
   .pagination {
     li {
       @apply text-body flex flex-row items-center gap-1 text-xs font-medium capitalize last:font-semibold;
+      &.icon {
+        @apply text-base text-gray-400;
+      }
     }
   }
 </style>

@@ -1,5 +1,6 @@
 ---
 import SketchToday from "@layouts/SketchToday.astro";
+import Buttons from "@components/sketch-today/partials/Buttons.svelte";
 import iconsData from "@data/sketch-today/icons.json";
 import palettesData from "@data/sketch-today/palettes.json";
 import systemsData from "@data/sketch-today/systems.json";
@@ -24,19 +25,19 @@ let bgColor: string = "";
 
 switch (resource.type) {
   case "icon":
-    icon = iconset + "square-2-stack-16-solid";
+    icon = iconset + "square-2-stack";
     bgColor = "bg-orange-100";
     break;
   case "palette":
-    icon = iconset + "swatch-16-solid";
+    icon = iconset + "swatch";
     bgColor = "bg-violet-100";
     break;
   case "plugin":
-    icon = iconset + "squares-plus-16-solid";
+    icon = iconset + "squares-plus";
     bgColor = "bg-pink-100";
     break;
   case "system":
-    icon = iconset + "cube-transparent-16-solid";
+    icon = iconset + "cube-transparent";
     bgColor = "bg-blue-100";
     break;
 }
@@ -50,45 +51,21 @@ if (!resource.released) {
   <div class="flex py-18">
     <div class="flex flex-col gap-8">
       <div class="flex flex-col items-start gap-3">
-        <div class={`icon ${bgColor} flex rounded-sm p-1`}>
-          <iconify-icon icon={icon} class="text-gray-800"></iconify-icon>
+        <div class="flex flex-row items-center gap-4">
+          <div class={`icon ${bgColor} flex rounded-lg p-1`}>
+            <iconify-icon icon={icon} class="text-2xl text-gray-800"></iconify-icon>
+          </div>
+          <h1>{resource.title}</h1>
         </div>
-        <h1>{resource.title}</h1>
         <p class="text-body text-lg">{resource.description}</p>
       </div>
-      <div class="text-main flex w-2xl flex-col text-base/relaxed">
+      <div class="text-main flex w-full max-w-2xl flex-col text-base/relaxed">
         <p>
           What took me a few hours will now take you just a click (or two). Grab this library to use
           the lastest tailwind colors in Sketch.
         </p>
       </div>
-      <div class="options flex flex-row gap-3">
-        <a href="/" class="hover:text-main bg-main flex flex-row text-white">
-          <!-- prettier-ignore -->
-          <iconify-icon icon="heroicons:arrow-down-tray-16-solid" class="text-base"></iconify-icon>
-          <span>Download</span>
-        </a>
-        <a href="/" class="hover:text-main text-main flex flex-row">
-          <!-- prettier-ignore -->
-          <iconify-icon icon="heroicons:arrow-top-right-on-square-16-solid" class="text-base"></iconify-icon>
-          <span>Workspace</span>
-        </a>
-        <a href="/" class="hover:text-main text-main flex flex-row">
-          <!-- prettier-ignore -->
-          <iconify-icon icon="heroicons:code-bracket-16-solid" class="text-base"></iconify-icon>
-          <span>Github</span>
-        </a>
-        <a href="/" class="hover:text-main text-main flex flex-row">
-          <!-- prettier-ignore -->
-          <iconify-icon icon="heroicons:link-16-solid" class="text-base"></iconify-icon>
-          <span>tailwind.com</span>
-        </a>
-        <a href="/" class="hover:text-main text-main flex flex-row">
-          <!-- prettier-ignore -->
-          <iconify-icon icon="heroicons:share-16-solid" class="text-base"></iconify-icon>
-          <span>Share</span>
-        </a>
-      </div>
+      <Buttons links={resource.links} />
     </div>
   </div>
 </SketchToday>
@@ -97,8 +74,5 @@ if (!resource.released) {
   @reference "@styles/sketch-today.css";
   h1 {
     @apply text-4xl;
-  }
-  a {
-    @apply items-center gap-3 rounded-lg px-3 py-3 text-xs font-semibold transition-colors duration-300 hover:bg-stone-100;
   }
 </style>
