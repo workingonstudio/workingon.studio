@@ -4,7 +4,7 @@
     "type": "icon",
     "slug": "hero-icons",
     "title": "Heroicons",
-    "description": "Beautiful hand-crafted SVG icons.",
+    "tagline": "Beautiful hand-crafted SVG icons.",
     "released": true,
     "links": [
       {
@@ -20,7 +20,7 @@
     "type": "icon",
     "slug": "carbon-icons",
     "title": "Carbon Icons",
-    "description": "Icon set created by IBM.",
+    "tagline": "Icon set created by IBM.",
     "released": true,
     "links": [
       {
@@ -36,7 +36,7 @@
     "type": "icon",
     "slug": "lucide-icons",
     "title": "Lucide Icons",
-    "description": "Beautiful & consistent icons.",
+    "tagline": "Beautiful & consistent icons.",
     "released": false,
     "links": [
       {

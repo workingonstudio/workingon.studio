@@ -4,7 +4,7 @@
     "type": "plugin",
     "slug": "sort-layers",
     "title": "Sort Layers",
-    "description": "Sort by name, position, or type.",
+    "tagline": "Sort by name, position, or type.",
     "released": true,
     "links": [
       {
@@ -18,9 +18,25 @@
   {
     "category": "plugins",
     "type": "plugin",
-    "slug": "instance sync",
-    "title": "Instance sync",
-    "description": "Sync symbol names after changes.",
+    "slug": "instance-sync",
+    "title": "Instance Sync",
+    "tagline": "Sync symbol names after changes.",
+    "released": true,
+    "links": [
+      {
+        "download": "",
+        "workspace": "",
+        "github": "",
+        "source": ""
+      }
+    ]
+  },
+  {
+    "category": "plugins",
+    "type": "plugin",
+    "slug": "rename-color-palettes",
+    "title": "Rename Color Palettes",
+    "tagline": "Find and replace text in color variable names.",
     "released": true,
     "links": [
       {

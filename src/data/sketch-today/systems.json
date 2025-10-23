@@ -4,7 +4,7 @@
     "type": "system",
     "slug": "ibm-carbon",
     "title": "IBM Carbon",
-    "description": "IBM Carbon design system.",
+    "tagline": "IBM Carbon design system.",
     "released": true,
     "links": [
       {

@@ -1,7 +1,7 @@
 <script lang="ts">
   export let type: string;
   export let title: string;
-  export let description: string;
+  export let tagline: string;
   export let released: boolean;
   export let slug: string;
   export let iconSet: string = "heroicons";
@@ -34,7 +34,7 @@
     </div>
     <div class="flex flex-col gap-0.5">
       <h4 class="text-sm font-semibold">{title}</h4>
-      <p class="text-xs">{description}</p>
+      <p class="text-xs">{tagline}</p>
     </div>
   </a>
 {:else}
@@ -44,7 +44,7 @@
     </div>
     <div class="flex flex-col gap-0.5">
       <h4 class="text-sm font-semibold">{title}</h4>
-      <p class="text-xs">{description}</p>
+      <p class="text-xs">{tagline}</p>
     </div>
   </div>
 {/if}

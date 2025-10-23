@@ -16,7 +16,4 @@
       @apply block py-3;
     }
   }
-  .rss {
-    @apply text-main hover:text-amber-500;
-  }
 </style>

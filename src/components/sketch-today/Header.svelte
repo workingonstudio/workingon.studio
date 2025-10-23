@@ -49,9 +49,6 @@
   .pagination {
     li {
       @apply text-body flex flex-row items-center gap-1 text-xs font-medium capitalize last:font-semibold;
-      &.icon {
-        @apply text-base text-gray-400;
-      }
     }
   }
 </style>

@@ -4,7 +4,7 @@
     "type": "palette",
     "slug": "tailwind",
     "title": "Tailwind 4.0.1 Colors",
-    "description": "The most up-to-date color variables.",
+    "tagline": "The most up-to-date color variables.",
     "released": true,
     "links": [
       {
@@ -20,7 +20,7 @@
     "type": "palette",
     "slug": "google-material",
     "title": "Google Material Colors",
-    "description": "Material default color variables.",
+    "tagline": "Material default color variables.",
     "released": false,
     "links": [
       {
