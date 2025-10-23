@@ -7,9 +7,11 @@
 
 <div id="pro" class="flex flex-col gap-24 py-30">
   <SectionHeader
-    emoji="🔑"
-    header="Unlock more with Pro."
-    body="Get an advanced button, remove the branding link and add 3 custom Emoji."
+    emoji="🔓"
+    header="Pro Trial unlocked."
+    body="Get an advanced button and 3 custom Emoji replies.*"
+    hasFootnote
+    footnote="trial ends once I have implimented payments."
   />
   <div class="flex flex-col items-center justify-center gap-12 py-12 text-pretty lg:flex-row">
     <div class="flex w-90 flex-col md:w-3/5 lg:w-2/5">
@@ -36,7 +38,7 @@
     <div class="order-first flex w-90 flex-col items-start gap-6 md:w-2/3 lg:order-0 lg:w-2/5">
       <div class="flex flex-row gap-2">
         <Badge text="More options" bgColor="bg-blue-100" />
-        <Badge text="Pro" bgColor="bg-orange-100" />
+        <Badge text="Pro trial" bgColor="bg-orange-100" />
       </div>
       <div class="flex flex-col gap-3">
         <h4>Add custom Emoji.</h4>
@@ -49,7 +51,7 @@
     <div class="flex w-90 flex-col items-start gap-6 md:w-2/3 lg:w-2/5">
       <div class="flex flex-row gap-2">
         <Badge text="More control" bgColor="bg-blue-100" />
-        <Badge text="Pro" bgColor="bg-orange-100" />
+        <Badge text="Pro trial" bgColor="bg-orange-100" />
       </div>
       <div class="flex flex-col gap-3">
         <h4>Advanced button.</h4>

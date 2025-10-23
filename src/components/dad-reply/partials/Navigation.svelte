@@ -18,10 +18,10 @@
       <a href="#how" onclick={handleClose}>How it works</a>
     </li>
     <li>
-      <a href="#pro" onclick={handleClose}>Unlock Pro</a>
+      <a href="#pro" onclick={handleClose}>Pro trial</a>
     </li>
     <li>
-      <a href="#pricing" onclick={handleClose}><del>Pricing</del></a>
+      <a href="#pricing" onclick={handleClose}>Pricing</a>
     </li>
     <li class="flex flex-col">
       <a

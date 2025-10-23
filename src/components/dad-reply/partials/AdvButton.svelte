@@ -14,7 +14,7 @@
   $: buttonOptions = [
     {
       emoji: "👍",
-      text: "Got it",
+      text: "Dad Reply",
       class: "active",
     },
     {

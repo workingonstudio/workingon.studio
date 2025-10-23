@@ -16,8 +16,8 @@
     <Emoji class_="mr-2 emoji" emoji="👍" />
     <span class="leading-none">Dad Reply</span>
   </a>
-  <button type="button" aria-label="Toggle tone menu" onclick={switchEmojiTone}>
-    <iconify-icon icon="material-symbols:stroke-full" class="cursor-pointer text-sm"></iconify-icon>
+  <button type="button" aria-label="Toggle tone menu" onclick={switchEmojiTone} title="Change tone">
+    <iconify-icon icon="material-symbols:refresh" class="cursor-pointer text-sm"></iconify-icon>
   </button>
 </div>
 

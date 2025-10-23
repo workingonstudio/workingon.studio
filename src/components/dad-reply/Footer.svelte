@@ -8,7 +8,9 @@
   <footer class="card space-y-6 p-6 shadow-lg md:p-12">
     <div class="flex flex-row items-center gap-6">
       <Emoji class_="text-xl" emoji="👋" />
-      <Badge text="v1.5.1" />
+      <a href="/projects/dad-reply/changelog/" title="View Changelog" class="flex">
+        <Badge text={"v1.5.3"} />
+      </a>
     </div>
     <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between md:gap-0">
       <div class="flex w-2xs flex-col gap-4">
@@ -40,6 +42,10 @@
         </div>
       </div>
       <ul class="space-y-3 md:space-y-2">
+        <li>
+          <iconify-icon icon="material-symbols:change-history-outline-rounded" class="mr-2 h-4 w-4"></iconify-icon>
+          <a href="/projects/dad-reply/changelog/">Changlog</a>
+        </li>
         <li>
           <iconify-icon icon="material-symbols:support" class="mr-2 h-4 w-4"></iconify-icon>
           <a href="mailto:support@workingon.studio">Support</a>

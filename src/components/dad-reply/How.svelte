@@ -33,7 +33,7 @@
       <div class="flex flex-row items-end gap-4">
         <span class="the-shadow relative mb-6 rounded-full bg-white">
           <span class="z-10">
-            <MailButton text="Got it" />
+            <MailButton text="Dad Reply" />
           </span>
           <div class="absolute top-6 -z-10 h-full w-full rounded-full border border-dashed border-slate-400"></div>
         </span>
@@ -65,7 +65,7 @@
       </div>
       <div class="relative flex h-9 flex-row items-end gap-4 lg:ml-12">
         <div class="absolute flex w-full flex-row items-stretch gap-3">
-          <MailButton text="Got it" />
+          <MailButton text="Dad Reply" />
           <div class="flex flex-1 rounded-full border border-dashed border-neutral-200 bg-neutral-50/80 md:h-9"></div>
           <div class="flex flex-1 rounded-full border border-dashed border-neutral-200 bg-neutral-50/80 md:h-9"></div>
         </div>
