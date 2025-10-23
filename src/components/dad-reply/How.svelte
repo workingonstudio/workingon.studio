@@ -1,6 +1,7 @@
 <script lang="ts">
   import Badge from "./partials/Badge.svelte";
   import MailButton from "./partials/MailButton.svelte";
+  import Emoji from "./partials/Emoji.svelte";
   import EmailFrom from "./partials/EmailFrom.svelte";
   import SectionHeader from "./partials/SectionHeader.svelte";
 </script>
@@ -53,7 +54,7 @@
           toEmail="sam.malone@cheersbar.net"
         />
         <div class="ml-0 flex flex-col gap-2 sm:ml-12">
-          👍
+          <Emoji class_="mr-2 emoji" emoji="👍" />
           <a
             class="text-xxs font-[Arial] font-normal text-slate-400 md:text-xs"
             href="https://chromewebstore.google.com/detail/ddkeoflblemlolckmnhihhabplfmogop"
@@ -96,7 +97,7 @@
             toEmail="andrew@workingon.studio"
           />
           <div class="ml-0 flex flex-col gap-2 md:ml-12">
-            👍
+            <Emoji class_="mr-2 emoji" emoji="👍" />
             <a
               class="text-xxs font-[Arial] font-normal text-slate-400 md:text-xs"
               href="https://chromewebstore.google.com/detail/ddkeoflblemlolckmnhihhabplfmogop"
@@ -115,7 +116,7 @@
             toEmail="liz@workingon.studio"
           />
           <div class="ml-0 flex flex-col gap-2 md:ml-12">
-            👍
+            <Emoji class_="mr-2 emoji" emoji="👍" />
             <a
               class="text-xxs font-[Arial] font-normal text-slate-400 md:text-xs"
               href="https://chromewebstore.google.com/detail/ddkeoflblemlolckmnhihhabplfmogop"
@@ -134,7 +135,7 @@
             toEmail="thomas@workingon.studio"
           />
           <div class="ml-0 flex flex-col gap-2 md:ml-12">
-            👍
+            <Emoji class_="mr-2 emoji" emoji="👍" />
             <a
               class="text-xxs font-[Arial] font-normal text-slate-400 md:text-xs"
               href="https://chromewebstore.google.com/detail/ddkeoflblemlolckmnhihhabplfmogop"

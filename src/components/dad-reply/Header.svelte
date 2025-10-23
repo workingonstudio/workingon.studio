@@ -19,7 +19,9 @@
         <Logo />
         <div class="inline-flex items-center gap-2">
           <Badge text={"Pro Trial Edition"} bgColor="bg-orange-100" />
-          <Badge text={"v1.5.1"} />
+          <a href="/projects/dad-reply/changelog/" title="View Changelog">
+            <Badge text={"v1.5.3"} />
+          </a>
         </div>
       </div>
       <button
