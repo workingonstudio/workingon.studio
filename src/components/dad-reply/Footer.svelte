@@ -76,7 +76,7 @@
     li {
       @apply flex flex-row gap-1 hover:text-blue-600;
       a {
-        @apply text-xs;
+        @apply text-xs hover:underline;
       }
     }
   }

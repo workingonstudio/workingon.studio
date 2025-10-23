@@ -1,0 +1,30 @@
+---
+import DadReply from "@layouts/DadReply.astro";
+import * as SDContent from "@docs/dadreply/changelog.md";
+const { Content } = SDContent;
+---
+
+<DadReply title="Dad Reply - Universal Acknowledgment - Change log">
+  <div class="container mx-auto flex w-full flex-col">
+    <Content />
+  </div>
+</DadReply>
+
+<style>
+  @reference "@styles/dad-reply.css";
+  .container {
+    @apply px-4 py-6 text-pretty md:w-3xl;
+    h2 {
+      @apply py-8;
+    }
+    h4 {
+      @apply mb-2;
+    }
+    ul {
+      @apply mb-6;
+    }
+    li {
+      @apply list-inside list-disc gap-2 text-slate-500;
+    }
+  }
+</style>
