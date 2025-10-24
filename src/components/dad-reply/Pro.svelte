@@ -75,8 +75,75 @@
       </div>
     </div>
   </div>
+  <div class="flex flex-col items-center justify-center gap-12 py-12 text-pretty lg:flex-row">
+    <div class="flex w-90 flex-col md:w-3/5 lg:w-2/5">
+      <div class="the-shadow rounded-2xl border border-gray-300 p-6">
+        <ul class="triggerList flex flex-col gap-4">
+          <li>
+            <strong>When</strong>
+            <div>
+              <span class="action">Reply</span>
+              <span class="action">equals</span>
+              <span class="emoji">🔥</span>
+            </div>
+          </li>
+          <li>
+            <strong>Trigger</strong>
+            <div>
+              <span class="action">Tag</span>
+              <span>as</span>
+              <span class="action border border-red-200! bg-red-100">Hot lead</span>
+            </div>
+            <div>
+              <span class="action">Move</span>
+              <span>to</span>
+              <span class="action border border-blue-200! bg-blue-100">High Priority</span>
+            </div>
+            <div>
+              <span class="action">Increase</span>
+              <span class="action">Lead score</span>
+              <span>by</span>
+              <span class="action border border-emerald-200! bg-emerald-100">50</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="order-first flex w-90 flex-col items-start gap-6 md:w-2/3 lg:order-0 lg:w-2/5">
+      <div class="flex flex-row gap-2">
+        <Badge text="More focus" bgColor="bg-blue-100" />
+        <Badge text="Pro trial" bgColor="bg-orange-100" />
+      </div>
+      <div class="flex flex-col gap-3">
+        <h4>Trigger software you already use.*</h4>
+        <p>Finally you can do something with those notification emails, from your inbox.</p>
+        <small>* or are being forced to use.</small>
+      </div>
+    </div>
+  </div>
 </div>
 
 <style>
   @reference "@styles/dad-reply.css";
+  .triggerList {
+    @apply text-sm;
+    li {
+      @apply flex flex-col gap-4;
+      strong {
+        @apply text-xs uppercase;
+      }
+      div {
+        @apply flex flex-row items-stretch gap-2;
+        span {
+          @apply text-xxs font-semibold;
+          &.action {
+            @apply rounded-md border border-gray-300 px-2 py-0.5;
+          }
+          &.emoji {
+            @apply flex items-center rounded-md border border-gray-300 px-1;
+          }
+        }
+      }
+    }
+  }
 </style>

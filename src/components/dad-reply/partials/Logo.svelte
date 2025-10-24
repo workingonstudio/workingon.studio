@@ -16,7 +16,7 @@
     <Emoji class_="mr-2 emoji" emoji="👍" />
     <span class="leading-none">Dad Reply</span>
   </a>
-  <button type="button" aria-label="Toggle tone menu" onclick={switchEmojiTone} title="Change tone">
+  <button class="menu-toggle" type="button" aria-label="Toggle tone menu" onclick={switchEmojiTone} title="Change tone">
     <iconify-icon icon="material-symbols:refresh" class="cursor-pointer text-sm"></iconify-icon>
   </button>
 </div>
@@ -28,7 +28,7 @@
     @apply text-base md:text-xl;
   }
 
-  button {
+  .menu-toggle {
     @apply invisible flex items-center transition-all duration-150;
     @apply rounded-md border border-gray-300;
     @apply px-0.5 py-0.5;
