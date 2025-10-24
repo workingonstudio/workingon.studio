@@ -7,7 +7,7 @@
 
   let containerRef: any;
 
-  let selectedIndex = 0;
+  let selectedIndex = 1;
 
   $: currentButton = buttonOptions[selectedIndex];
 
@@ -15,21 +15,21 @@
     {
       emoji: "👍",
       text: "Dad Reply",
+      class: "",
+    },
+    {
+      emoji: "🔥",
+      text: "Hot lead",
       class: "active",
     },
     {
-      emoji: "🎖️",
-      text: "Feature",
+      emoji: "📞",
+      text: "Need to call",
       class: "",
     },
     {
-      emoji: "🐛",
-      text: "Bug",
-      class: "",
-    },
-    {
-      emoji: "🛟",
-      text: "Issue",
+      emoji: "❄️",
+      text: "Cold lead",
       class: "",
     },
   ];

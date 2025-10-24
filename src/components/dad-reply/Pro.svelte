@@ -42,8 +42,8 @@
       </div>
       <div class="flex flex-col gap-3">
         <h4>Add custom Emoji.</h4>
-        <p>Ideal for being more ambiguous, or email triage for your Codebase.*</p>
-        <small>* Pair with Github Actions for full automation.</small>
+        <p>Ideal for being more ambiguous, or email triage for your Codebase, CRM or Support system.*</p>
+        <small>* you'll need to sort out the automation, obviously.</small>
       </div>
     </div>
   </div>

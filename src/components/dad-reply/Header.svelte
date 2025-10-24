@@ -28,7 +28,7 @@
         type="button"
         on:click|preventDefault={openMenu}
         aria-label="Toggle navigation"
-        class="group flex cursor-pointer items-center rounded-lg border border-gray-300 p-1 transition-all duration-200 hover:border-transparent lg:hidden"
+        class="group flex cursor-pointer items-center rounded-lg border border-gray-300 p-1 opacity-0 transition-all duration-600 hover:border-transparent hover:opacity-100 lg:hidden"
       >
         <iconify-icon
           icon="material-symbols:{iconName}"
