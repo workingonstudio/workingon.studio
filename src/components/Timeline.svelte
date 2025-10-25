@@ -93,7 +93,7 @@
               <li class="timeline-entry space-y-2" data-type={entry.type}>
                 <div class="entry-content space-y-3">
                   {#if entry.branchMerged && entry.intoBranch}
-                    <p class="message text-sm text-gray-100">
+                    <p class="message text-gray-100">
                       <span class="merge-info">
                         <span class="merged-branch">
                           {entry.branchDisplay === entry.branchMerged ? entry.intoBranch : entry.branchDisplay}
