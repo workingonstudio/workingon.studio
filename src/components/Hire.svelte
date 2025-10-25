@@ -45,14 +45,14 @@
     </p>
     <small class="text-body flex flex-row gap-1">
       <span class="text-xl">*</span>
-      <!-- prettier-ignore -->
       <div class="flex flex-col gap-4">
-        <p class="text-sm">Each time you visit this page my day rate <strong>increases by £10</strong>&#42;.</p>
-        <div class="flex flex-row gap-1 items-start">
-          <span class="text-lg">&#42;</span>
-          <div class="flex flex-col gap-1">
-            <p class="text-xs">If it takes you too long to decide anything this is your punishment.</p>
-          </div>
+        <div class="flex flex-col gap-1">
+          <p class="text-sm/relaxed">
+            Each time you visit this page my day rate <strong>increases by £10</strong>
+            .
+            <br />
+            If it takes you too long to decide anything this is your punishment.
+          </p>
         </div>
       </div>
     </small>
