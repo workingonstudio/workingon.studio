@@ -1,7 +1,7 @@
 ### 🪵
 ## Changelog
 
-#### v1.5.3 - 23 Oct 2025
+#### v1.5.3 (submitted) - 23 Oct 2025 
 - Updating settings page layout.
 - Allowing to editing of reply label label (not the emoji).
 - Switching the default button copy back to Dad Reply.

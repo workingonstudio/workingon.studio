@@ -79,7 +79,7 @@
   <div class="relative ml-0 flex flex-row gap-3 sm:ml-12">
     <div class="relative flex flex-row">
       {#if showTryToggle}
-        <div class="z-10" class:{}>
+        <div class="z-10 hidden md:flex" class:{}>
           <div class="*:absolute *:top-3.5 *:-left-0.5">
             <Indicator />
           </div>

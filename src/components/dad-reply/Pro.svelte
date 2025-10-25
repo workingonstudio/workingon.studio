@@ -76,30 +76,38 @@
     </div>
   </div>
   <div class="flex flex-col items-center justify-center gap-12 py-12 text-pretty lg:flex-row">
-    <div class="flex w-90 flex-col md:w-3/5 lg:w-2/5">
-      <div class="the-shadow rounded-2xl border border-gray-300 p-6">
+    <div class="flex w-90 flex-col gap-4 md:w-3/5 lg:w-2/5">
+      <div class="flex flex-col gap-4 rounded-bl-xl border-b-1 border-l-1 border-gray-300 pb-12 pl-12 lg:p-12">
         <ul class="triggerList flex flex-col gap-4">
           <li>
-            <strong>When</strong>
-            <div>
-              <span class="action">Reply</span>
-              <span class="action">equals</span>
+            <strong>If</strong>
+            <div class="flex flex-row rounded-lg border border-gray-300 p-2">
+              <span class="action">reply</span>
+              <span>is</span>
+              <span class="action">equal</span>
+              <span>to</span>
               <span class="emoji">🔥</span>
             </div>
           </li>
           <li>
-            <strong>Trigger</strong>
-            <div>
+            <strong>Then</strong>
+            <div class="flex flex-row rounded-lg border border-gray-300 p-2">
               <span class="action">Tag</span>
               <span>as</span>
               <span class="action border border-red-200! bg-red-100">Hot lead</span>
             </div>
-            <div>
+          </li>
+          <li>
+            <strong>And</strong>
+            <div class="flex flex-row rounded-lg border border-gray-300 px-2 py-2">
               <span class="action">Move</span>
               <span>to</span>
               <span class="action border border-blue-200! bg-blue-100">High Priority</span>
             </div>
-            <div>
+          </li>
+          <li>
+            <strong>And</strong>
+            <div class="flex flex-row rounded-lg border border-gray-300 px-2 py-2">
               <span class="action">Increase</span>
               <span class="action">Lead score</span>
               <span>by</span>
@@ -128,19 +136,19 @@
   .triggerList {
     @apply text-sm;
     li {
-      @apply flex flex-col gap-4;
+      @apply flex flex-row items-center gap-4;
       strong {
-        @apply text-xs uppercase;
+        @apply text-text-muted w-8 text-xs uppercase;
       }
       div {
-        @apply flex flex-row items-stretch gap-2;
+        @apply flex flex-row items-center gap-2;
         span {
           @apply text-xxs font-semibold;
           &.action {
             @apply rounded-md border border-gray-300 px-2 py-0.5;
           }
           &.emoji {
-            @apply flex items-center rounded-md border border-gray-300 px-1;
+            @apply flex items-center rounded-md border border-gray-300 px-1 py-0.5;
           }
         }
       }
