@@ -1,5 +1,14 @@
+<!-- Logo.svelte -->
 <script lang="ts">
   import Emoji from "./Emoji.svelte";
+  import { selectedTone } from "@stores/dadreply/toneStore";
+
+  function switchEmojiTone() {
+    const tones = ["tone-1", "tone-2", "tone-3", "tone-4", "tone-5", "tone-6"];
+    const currentIndex = tones.indexOf($selectedTone);
+    const nextIndex = (currentIndex + 1) % tones.length;
+    $selectedTone = tones[nextIndex];
+  }
 </script>
 
 <div class="group flex items-center gap-3 font-bold tracking-tight">
@@ -7,9 +16,9 @@
     <Emoji class_="mr-2 emoji" emoji="👍" />
     <span class="leading-none">Dad Reply</span>
   </a>
-  <!-- <button type="button">
-    <iconify-icon icon="material-symbols:more-horiz" class="cursor-pointer text-sm"></iconify-icon>
-  </button> -->
+  <button class="menu-toggle" type="button" aria-label="Toggle tone menu" onclick={switchEmojiTone} title="Change tone">
+    <iconify-icon icon="material-symbols:refresh" class="cursor-pointer text-sm"></iconify-icon>
+  </button>
 </div>
 
 <style>
@@ -19,12 +28,12 @@
     @apply text-base md:text-xl;
   }
 
-  /* button {
+  .menu-toggle {
     @apply invisible flex items-center transition-all duration-150;
-    @apply rounded-m border border-gray-300;
+    @apply rounded-md border border-gray-300;
     @apply px-0.5 py-0.5;
     @apply group-hover:visible;
-  } */
+  }
 
   a.thumb-swing :global(.emoji) {
     display: inline-block;

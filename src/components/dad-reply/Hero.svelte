@@ -23,6 +23,8 @@
       </div>
       <!-- prettier-ignore -->
       <h1>
+        Tag, Assign, Prioritise.
+        <br/>
         Email triage in one click.*
         <br />
         Don't type. Decide.

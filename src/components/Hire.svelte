@@ -52,7 +52,6 @@
           <span class="text-lg">&#42;</span>
           <div class="flex flex-col gap-1">
             <p class="text-xs">If it takes you too long to decide anything this is your punishment.</p>
-            <p class="text-xs">Sending an email will reset it.</p>
           </div>
         </div>
       </div>
@@ -80,9 +79,7 @@
       </div>
     </div>
     <p class="text-sm lg:ml-14">
-      This will forward to my inbox.
-      <br />
-      You think I’m just gonna put it here for bots to grab.
+      If I don't reply within 7 days, assume it's a no, I'm on holiday, or dead. Whatever makes you feel better.
     </p>
   </div>
 </section>
