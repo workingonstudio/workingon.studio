@@ -6,14 +6,10 @@
     "title": "Sort Layers",
     "tagline": "Sort by name, position, or type.",
     "released": true,
-    "links": [
-      {
-        "download": "",
-        "workspace": "",
-        "github": "",
-        "source": ""
-      }
-    ]
+    "links": {
+      "download": "",
+      "github": ""
+    }
   },
   {
     "category": "plugins",
@@ -22,14 +18,10 @@
     "title": "Instance Sync",
     "tagline": "Sync symbol names after changes.",
     "released": true,
-    "links": [
-      {
-        "download": "",
-        "workspace": "",
-        "github": "",
-        "source": ""
-      }
-    ]
+    "links": {
+      "download": "",
+      "github": ""
+    }
   },
   {
     "category": "plugins",
@@ -38,13 +30,9 @@
     "title": "Rename Color Palettes",
     "tagline": "Find and replace text in color variable names.",
     "released": true,
-    "links": [
-      {
-        "download": "",
-        "workspace": "",
-        "github": "",
-        "source": ""
-      }
-    ]
+    "links": {
+      "download": "",
+      "github": ""
+    }
   }
 ]

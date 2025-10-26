@@ -6,13 +6,11 @@
     "title": "IBM Carbon",
     "tagline": "IBM Carbon design system.",
     "released": true,
-    "links": [
-      {
-        "download": "",
-        "workspace": "",
-        "github": "",
-        "source": ""
-      }
-    ]
+    "links": {
+      "download": "",
+      "workspace": "",
+      "github": "",
+      "source": ""
+    }
   }
 ]

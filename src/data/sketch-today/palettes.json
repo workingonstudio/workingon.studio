@@ -6,14 +6,12 @@
     "title": "Tailwind 4.0.1 Colors",
     "tagline": "The most up-to-date color variables.",
     "released": true,
-    "links": [
-      {
-        "download": "",
-        "workspace": "",
-        "github": "",
-        "source": ""
-      }
-    ]
+    "links": {
+      "download": "",
+      "workspace": "",
+      "github": "",
+      "source": ""
+    }
   },
   {
     "category": "palettes",
@@ -22,13 +20,11 @@
     "title": "Google Material Colors",
     "tagline": "Material default color variables.",
     "released": false,
-    "links": [
-      {
-        "download": "",
-        "workspace": "",
-        "github": "",
-        "source": ""
-      }
-    ]
+    "links": {
+      "download": "",
+      "workspace": "",
+      "github": "",
+      "source": ""
+    }
   }
 ]

@@ -1,6 +1,6 @@
 ---
 import SketchToday from "@layouts/SketchToday.astro";
-import Buttons from "@components/sketch-today/partials/Buttons.svelte";
+import SlugButtons from "@components/sketch-today/partials/SlugButtons.svelte";
 import iconsData from "@data/sketch-today/icons.json";
 import palettesData from "@data/sketch-today/palettes.json";
 import systemsData from "@data/sketch-today/systems.json";
@@ -65,7 +65,7 @@ if (!resource.released) {
           the lastest tailwind colors in Sketch.
         </p>
       </div>
-      <Buttons links={resource.links} />
+      <SlugButtons links={resource.links} />
     </div>
   </div>
 </SketchToday>

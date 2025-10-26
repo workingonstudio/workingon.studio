@@ -13,7 +13,7 @@
   --color-primary-hover: theme(colors.blue.700);
   --color-main: theme(colors.gray.800);
   --color-body: theme(colors.gray.500);
-  --color-muted: theme(colors.slate.400);
+  --color-muted: theme(colors.gray.400);
 
   --text-xxs: 0.6875rem;
   --text-xxs--line-height: calc(1 / 0.6875);

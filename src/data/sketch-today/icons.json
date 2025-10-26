@@ -6,14 +6,12 @@
     "title": "Heroicons",
     "tagline": "Beautiful hand-crafted SVG icons.",
     "released": true,
-    "links": [
-      {
-        "download": "",
-        "workspace": "",
-        "github": "",
-        "source": ""
-      }
-    ]
+    "links": {
+      "download": "/",
+      "workspace": "/",
+      "github": "/",
+      "source": "/"
+    }
   },
   {
     "category": "icons",
@@ -22,14 +20,10 @@
     "title": "Carbon Icons",
     "tagline": "Icon set created by IBM.",
     "released": true,
-    "links": [
-      {
-        "download": "",
-        "workspace": "",
-        "github": "",
-        "source": ""
-      }
-    ]
+    "links": {
+      "download": "/",
+      "source": "/"
+    }
   },
   {
     "category": "icons",
@@ -38,13 +32,11 @@
     "title": "Lucide Icons",
     "tagline": "Beautiful & consistent icons.",
     "released": false,
-    "links": [
-      {
-        "download": "",
-        "workspace": "",
-        "github": "",
-        "source": ""
-      }
-    ]
+    "links": {
+      "download": "/",
+      "workspace": "/",
+      "github": "/",
+      "source": "/"
+    }
   }
 ]

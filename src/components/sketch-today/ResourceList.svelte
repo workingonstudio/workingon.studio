@@ -1,9 +1,5 @@
 <script lang="ts">
   import Resource from "./partials/Resource.svelte";
-  import icons from "@data/sketch-today/icons.json";
-  import palettes from "@data/sketch-today/palettes.json";
-  import plugins from "@data/sketch-today/plugins.json";
-  import system from "@data/sketch-today/systems.json";
   export let resourceList;
 </script>
 

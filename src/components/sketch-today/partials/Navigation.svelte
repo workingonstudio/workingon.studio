@@ -1,7 +1,7 @@
 <script lang="ts">
 </script>
 
-<nav class="flex flex-row items-center">
+<nav class="flex flex-row items-center gap-4">
   <ul class="text-body flex flex-row gap-6 rounded-full bg-stone-100 px-6 text-xs">
     <li><a href="/">About</a></li>
     <li><a href="/">FAQ</a></li>
