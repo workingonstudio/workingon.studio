@@ -5,12 +5,15 @@
     "slug": "hero-icons",
     "title": "Heroicons",
     "tagline": "Beautiful hand-crafted SVG icons.",
+    "description": "Without creating this library designing this site would have been a nightmare. All yours now.",
     "released": true,
     "links": {
       "download": "/",
       "workspace": "/",
-      "github": "/",
-      "source": "/"
+      "source": {
+        "label": "heroicons.com",
+        "url": "https://heroicons.com"
+      }
     }
   },
   {
@@ -19,10 +22,14 @@
     "slug": "carbon-icons",
     "title": "Carbon Icons",
     "tagline": "Icon set created by IBM.",
+    "description": "",
     "released": true,
     "links": {
-      "download": "/",
-      "source": "/"
+      "download": "https://carbondesignsystem.com/designing/kits/sketch/#get-the-kit",
+      "source": {
+        "label": "carbondesignsystem.com",
+        "url": "https://carbondesignsystem.com/elements/icons/library/"
+      }
     }
   },
   {
@@ -31,12 +38,16 @@
     "slug": "lucide-icons",
     "title": "Lucide Icons",
     "tagline": "Beautiful & consistent icons.",
+    "description": "",
     "released": false,
     "links": {
       "download": "/",
       "workspace": "/",
       "github": "/",
-      "source": "/"
+      "source": {
+        "label": "",
+        "url": ""
+      }
     }
   }
 ]

@@ -5,12 +5,14 @@
     "slug": "ibm-carbon",
     "title": "IBM Carbon",
     "tagline": "IBM Carbon design system.",
+    "description": "It's no surprise that IBM are using Sketch. You know how cautious they were when they bought RedHat?",
     "released": true,
     "links": {
-      "download": "",
-      "workspace": "",
-      "github": "",
-      "source": ""
+      "download": "https://carbondesignsystem.com/designing/kits/sketch/#get-the-kit",
+      "source": {
+        "label": "carbondesignsystem.com",
+        "url": "https://carbondesignsystem.com/designing/kits/sketch/#get-the-kit"
+      }
     }
   }
 ]

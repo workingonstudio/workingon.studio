@@ -5,10 +5,11 @@
     "slug": "sort-layers",
     "title": "Sort Layers",
     "tagline": "Sort by name, position, or type.",
+    "description": "I don't understand why this just isn't a thing. Sort layers by name. A-Z, Z-A etc.",
     "released": true,
     "links": {
-      "download": "",
-      "github": ""
+      "download": "/",
+      "github": "/"
     }
   },
   {
@@ -17,10 +18,11 @@
     "slug": "instance-sync",
     "title": "Instance Sync",
     "tagline": "Sync symbol names after changes.",
+    "description": "If you're anything like me you rename your main symbols. This will sync those changes.",
     "released": true,
     "links": {
-      "download": "",
-      "github": ""
+      "download": "/",
+      "github": "/"
     }
   },
   {
@@ -29,10 +31,11 @@
     "slug": "rename-color-palettes",
     "title": "Rename Color Palettes",
     "tagline": "Find and replace text in color variable names.",
-    "released": true,
+    "description": "",
+    "released": false,
     "links": {
-      "download": "",
-      "github": ""
+      "download": "/",
+      "github": "/"
     }
   }
 ]

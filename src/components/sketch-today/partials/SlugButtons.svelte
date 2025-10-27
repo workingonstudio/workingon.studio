@@ -1,5 +1,5 @@
 <script lang="ts">
-  export let links;
+  export let urls: Record<string, string | { label: string; url: string }>;
   let iconset = "heroicons:";
 
   function getIcon(value: string) {
@@ -7,25 +7,43 @@
       case "download":
         return iconset + "arrow-down-tray-16-solid";
       case "workspace":
-        return iconset + "arrow-top-right-on-square-16-solid";
+        return iconset + "arrow-up-right-16-solid";
       case "github":
         return iconset + "code-bracket-16-solid";
       case "source":
         return iconset + "link-16-solid";
     }
   }
+
+  // Process links once
+  const processedLinks = Object.entries(urls).map(([key, link]) => {
+    const url = typeof link === "string" ? link : link.url;
+    let label = typeof link === "string" ? key : link.label || key;
+
+    // Make source lowercase
+    if (key === "source") {
+      label = label.toLowerCase();
+    }
+
+    return {
+      key,
+      url,
+      label,
+      icon: getIcon(key),
+    };
+  });
 </script>
 
 <div class="options flex flex-row gap-3">
-  {#each Object.entries(links) as [value, link]}
-    <a href="" class={value}>
-      <iconify-icon icon={getIcon(value)} class="text-base"></iconify-icon>
-      <span>{value}</span>
+  {#each processedLinks as link}
+    <a href={link.url} class={link.key}>
+      <iconify-icon icon={link.icon} class="text-base"></iconify-icon>
+      <span class={link.key === "source" ? "lowercase" : "capitalize"}>{link.label}</span>
     </a>
   {/each}
   <a href="">
     <iconify-icon icon="heroicons:share-16-solid" class="text-base"></iconify-icon>
-    <span>share</span>
+    <span>Share</span>
   </a>
 </div>
 
@@ -35,7 +53,7 @@
     @apply items-center gap-3 rounded-lg px-3 py-3 hover:bg-stone-100;
     @apply hover:text-main text-main flex flex-row;
     @apply transition-colors duration-300;
-    @apply text-xs font-semibold capitalize;
+    @apply text-xs font-semibold;
     &:first-child {
       @apply bg-main hover:text-main text-white hover:bg-stone-100;
     }

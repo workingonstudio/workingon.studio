@@ -5,12 +5,15 @@
     "slug": "tailwind",
     "title": "Tailwind 4.0.1 Colors",
     "tagline": "The most up-to-date color variables.",
+    "description": "What took me a few hours will now take you just a click (or two). Grab this library to use the lastest tailwind colors in Sketch.",
     "released": true,
     "links": {
-      "download": "",
-      "workspace": "",
-      "github": "",
-      "source": ""
+      "download": "/",
+      "workspace": "/",
+      "source": {
+        "label": "tailwind.com",
+        "url": "https://tailwindcss.com/docs/colors"
+      }
     }
   },
   {
@@ -19,12 +22,16 @@
     "slug": "google-material",
     "title": "Google Material Colors",
     "tagline": "Material default color variables.",
+    "description": "",
     "released": false,
     "links": {
-      "download": "",
-      "workspace": "",
-      "github": "",
-      "source": ""
+      "download": "/",
+      "workspace": "/",
+      "github": "/",
+      "source": {
+        "label": "",
+        "url": ""
+      }
     }
   }
 ]
