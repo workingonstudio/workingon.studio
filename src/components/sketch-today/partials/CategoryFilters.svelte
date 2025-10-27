@@ -23,7 +23,7 @@
       textColor: "text-blue-500",
     },
     {
-      label: "todo",
+      label: "soon",
       bgColor: "bg-stone-100",
       textColor: "text-stone-500",
     },

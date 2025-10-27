@@ -9,7 +9,7 @@
   $: filteredResources =
     $activeFilter === "all"
       ? resourceList
-      : $activeFilter === "todo"
+      : $activeFilter === "soon"
         ? resourceList.filter((r: any) => r.released === false)
         : resourceList.filter((r: any) => r.category === $activeFilter);
 </script>
