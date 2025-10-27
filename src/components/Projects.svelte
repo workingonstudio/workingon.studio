@@ -69,7 +69,7 @@
 </section>
 
 <style>
-  @reference "@styles/global.css";
+  @reference "@styles/main.css";
   .meta {
     @apply text-sm uppercase lg:ml-14;
   }

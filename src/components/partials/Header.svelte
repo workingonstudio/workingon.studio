@@ -123,7 +123,7 @@
 </div>
 
 <style>
-  @reference "@styles/global.css";
+  @reference "@styles/main.css";
   h1 {
     @apply text-xl;
   }
