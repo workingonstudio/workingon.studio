@@ -27,5 +27,5 @@
 </PageHeader>
 
 <style>
-  @reference "@styles/global.css";
+  @reference "@styles/main.css";
 </style>

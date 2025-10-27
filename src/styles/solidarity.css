@@ -1,28 +1,21 @@
-@import "tailwindcss";
-
-* {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+/* Solidarity Theme - Warm, community-focused emerald aesthetic */
+@import "./base.css";
 
 @theme {
+  /* Typography */
   --font-mulish: "Mulish", sans-serif;
   --font-lora: "Lora", serif;
   --font-brockmann: "brockmannmedium", sans-serif;
 
+  /* Colors */
   --color-primary: theme(colors.emerald.300);
   --color-primary-hover: theme(colors.emerald.500);
   --color-text: theme(colors.stone.900);
   --color-text-body: theme(colors.stone.700);
   --color-text-muted: theme(colors.stone.400);
+  --color-bg: theme(colors.stone.50);
 
-  --screen-sm: 40rem; /* 640px */
-  --screen-md: 48rem; /* 768px */
-  --screen-lg: 64rem; /* 1024px */
-  --screen-xl: 80rem; /* 1280px */
-  --screen-2xl: 96rem; /* 1536px */
-  --screen-3xl: 112rem; /* 1792px */
-
+  /* Animations */
   --animate-spin-drop: spin-drop 300ms ease-in-out forwards;
   --animate-spin-drop-reverse: spin-drop-reverse 300ms ease-in-out forwards;
 }
@@ -63,8 +56,9 @@
 
 @layer base {
   html {
-    background: var(--color-stone-50);
+    background: var(--color-bg);
   }
+
   body {
     font-family: var(--font-lora);
     color: var(--color-text);
@@ -72,8 +66,8 @@
       background: var(--color-primary);
       @apply text-white;
     }
-    @apply text-base;
   }
+
   h1,
   h2,
   h3,
@@ -103,11 +97,6 @@
   small {
     color: var(--color-text-muted);
     @apply text-xs;
-  }
-  a,
-  button,
-  input[type="submit"] {
-    @apply transition-colors delay-100 ease-in-out;
   }
 }
 

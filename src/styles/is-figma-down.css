@@ -1,29 +1,18 @@
-@import "tailwindcss";
+@import "./base.css";
 
-* {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+/* Is Figma Down Theme - Minimal, status-page aesthetic */
 
 @theme {
-  --font-geist: "Geist", sans-serif;
+  /* Typography */
   --font-inter: "Inter", sans-serif;
 
+  /* Colors */
   --color-primary: theme(colors.blue.600);
   --color-primary-hover: theme(colors.blue.700);
   --color-text: theme(colors.white);
   --color-text-body: theme(colors.slate.500);
   --color-text-muted: theme(colors.slate.400);
-
-  --text-xxs: 0.6875rem;
-  --text-xxs--line-height: calc(1 / 0.6875);
-
-  --screen-sm: 40rem; /* 640px */
-  --screen-md: 48rem; /* 768px */
-  --screen-lg: 64rem; /* 1024px */
-  --screen-xl: 80rem; /* 1280px */
-  --screen-2xl: 96rem; /* 1536px */
-  --screen-3xl: 112rem; /* 1792px */
+  --color-bg: theme(colors.slate.950);
 }
 
 @layer base {
@@ -34,8 +23,8 @@
       background: var(--color-primary);
       @apply text-white;
     }
-    @apply text-base;
   }
+
   h1,
   h2,
   h3,

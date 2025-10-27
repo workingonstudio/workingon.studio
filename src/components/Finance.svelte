@@ -74,7 +74,7 @@
 </section>
 
 <style>
-  @reference "../styles/global.css";
+  @reference "../styles/main.css";
   .finance-rows:hover .finance-row:not(:hover) {
     @apply opacity-40 delay-100;
   }
