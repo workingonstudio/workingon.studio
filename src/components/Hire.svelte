@@ -85,7 +85,7 @@
 </section>
 
 <style>
-  @reference "@styles/global.css";
+  @reference "@styles/main.css";
   a {
     @apply text-primary text-lg underline lg:text-3xl;
     &:hover {

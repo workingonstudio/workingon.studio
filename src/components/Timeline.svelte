@@ -157,7 +157,7 @@
 </section>
 
 <style>
-  @reference "@styles/global.css";
+  @reference "@styles/main.css";
   h1 {
     font-feature-settings: "ss01" 1;
   }
