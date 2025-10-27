@@ -38,7 +38,7 @@
   h4 {
     font-family: var(--font-display);
     font-feature-settings: "ss01" 1;
-    @apply text-primary;
+    @apply text-primary tracking-tight text-pretty;
   }
 
   h1 {
