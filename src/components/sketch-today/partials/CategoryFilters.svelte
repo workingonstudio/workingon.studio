@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { activeFilter } from "@stores/sketch-today/filterStore";
+
   let tags = [
     {
       label: "palettes",
@@ -26,12 +28,20 @@
       textColor: "text-stone-500",
     },
   ];
+
+  function setFilter(category: string) {
+    $activeFilter = category;
+  }
 </script>
 
 <div class="flex flex-row gap-3">
-  <button type="button" class="tag bg-gray-800 text-white hover:text-gray-800">All</button>
+  <button type="button" onclick={() => setFilter("all")} class="tag bg-gray-800 text-white hover:text-gray-800">
+    All
+  </button>
   {#each tags as { label, bgColor, textColor }}
-    <button type="button" class="tag {bgColor} {textColor} hover:bg-transparent">{label}</button>
+    <button type="button" onclick={() => setFilter(label)} class="tag {bgColor} {textColor} hover:bg-transparent">
+      {label}
+    </button>
   {/each}
 </div>
 

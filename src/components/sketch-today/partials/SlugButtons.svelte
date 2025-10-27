@@ -2,6 +2,8 @@
   export let urls: Record<string, string | { label: string; url: string }>;
   let iconset = "heroicons:";
 
+  let shareButtonText = "Share";
+
   function getIcon(value: string) {
     switch (value) {
       case "download":
@@ -41,19 +43,21 @@
       <span class={link.key === "source" ? "lowercase" : "capitalize"}>{link.label}</span>
     </a>
   {/each}
-  <a href="">
+  <button type="button">
     <iconify-icon icon="heroicons:share-16-solid" class="text-base"></iconify-icon>
-    <span>Share</span>
-  </a>
+    <span>{shareButtonText}</span>
+  </button>
 </div>
 
 <style>
   @reference "@styles/sketch-today.css";
-  a {
+  a,
+  button {
     @apply items-center gap-3 rounded-lg px-3 py-3 hover:bg-stone-100;
     @apply hover:text-main text-main flex flex-row;
     @apply transition-colors duration-300;
     @apply text-xs font-semibold;
+    @apply cursor-pointer;
     &:first-child {
       @apply bg-main hover:text-main text-white hover:bg-stone-100;
     }
