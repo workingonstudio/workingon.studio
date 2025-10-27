@@ -29,17 +29,31 @@
     },
   ];
 
-  function setFilter(category: string) {
-    $activeFilter = category;
+  function toggleFilter(category: string) {
+    if ($activeFilter === category) {
+      $activeFilter = "all";
+    } else {
+      $activeFilter = category;
+    }
   }
 </script>
 
 <div class="flex flex-row gap-3">
-  <button type="button" onclick={() => setFilter("all")} class="tag bg-gray-800 text-white hover:text-gray-800">
+  <button
+    type="button"
+    onclick={() => ($activeFilter = "all")}
+    class="tag {$activeFilter === 'all' ? 'bg-gray-800 text-white' : 'bg-transparent text-gray-800'}"
+    class:active={$activeFilter === "all"}
+  >
     All
   </button>
   {#each tags as { label, bgColor, textColor }}
-    <button type="button" onclick={() => setFilter(label)} class="tag {bgColor} {textColor} hover:bg-transparent">
+    <button
+      type="button"
+      onclick={() => toggleFilter(label)}
+      class="tag {textColor} {$activeFilter === label ? bgColor : 'bg-transparent'}"
+      class:active={$activeFilter === label}
+    >
       {label}
     </button>
   {/each}
@@ -48,6 +62,6 @@
 <style>
   @reference "@styles/sketch-today.css";
   .tag {
-    @apply cursor-pointer rounded-lg px-3 py-1 text-xs font-semibold capitalize hover:bg-transparent;
+    @apply cursor-pointer rounded-lg px-3 py-1 text-xs font-semibold capitalize;
   }
 </style>
