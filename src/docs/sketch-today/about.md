@@ -15,6 +15,8 @@ Eventually prices will continue to rise. The limitations of browser based techno
 
 After leaving, swiftly. I started freelancing. And then...[Sketch](/) launched.
 
+Next came the golden era (not that I am an old man shouting at clouds). But design catapulted into the 21st century, with designers firmly at the helm. We had services created like Zeplin, Abstract and Invision (RIP).
+
 ### Creating the pieces.
 
 One of the big problems that people face when switching to Sketch (or back to Sketch). Is that they become accustomed to having resources at their fingertips. 

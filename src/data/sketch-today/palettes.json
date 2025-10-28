@@ -8,8 +8,8 @@
     "description": "What took me a few hours will now take you just a click (or two). Grab this library to use the lastest tailwind colors in Sketch.",
     "released": true,
     "links": {
-      "download": "/",
-      "workspace": "/",
+      "download": "https://www.sketch.com/s/bd591522-473c-4e1e-8fdb-51436d756c27/color-variables",
+      "workspace": "https://www.sketch.com/s/bd591522-473c-4e1e-8fdb-51436d756c27/color-variables",
       "source": {
         "label": "tailwind.com",
         "url": "https://tailwindcss.com/docs/colors"
