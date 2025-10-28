@@ -3,6 +3,10 @@
   import Badge from "./partials/Badge.svelte";
   import Navigation from "./partials/Navigation.svelte";
 
+  import { selectedTone, applyTone } from "@stores/dadreply/toneStore";
+  import { changeFavicon } from "@utils/dad-reply/faviconChanger";
+  import { onMount } from "svelte";
+
   let iconName: string;
   let isOpen: boolean = false;
   $: iconName = isOpen ? "close-small-outline-rounded" : "menu-rounded";
@@ -10,6 +14,18 @@
   function openMenu() {
     isOpen = !isOpen;
   }
+
+  // Update favicon whenever tone changes
+  $: if ($selectedTone) {
+    const tonedEmoji = applyTone("👍", $selectedTone);
+    changeFavicon(tonedEmoji);
+  }
+
+  // Set initial favicon on mount
+  onMount(() => {
+    const tonedEmoji = applyTone("👍", $selectedTone);
+    changeFavicon(tonedEmoji);
+  });
 </script>
 
 <div class="sticky top-0 z-[1000] mb-2 flex w-full bg-white/80 shadow-sm shadow-white backdrop-blur-sm">
@@ -19,14 +35,16 @@
         <Logo />
         <div class="inline-flex items-center gap-2">
           <Badge text={"Pro Trial Edition"} bgColor="bg-orange-100" />
-          <Badge text={"v1.5.1"} />
+          <a href="/projects/dad-reply/changelog/" title="View Changelog" class="flex">
+            <Badge text={"v1.5.3"} />
+          </a>
         </div>
       </div>
       <button
         type="button"
         on:click|preventDefault={openMenu}
         aria-label="Toggle navigation"
-        class="group flex cursor-pointer items-center rounded-lg border border-gray-300 p-1 transition-all duration-200 hover:border-transparent lg:hidden"
+        class="group flex cursor-pointer items-center rounded-lg border border-gray-300 p-1 transition-all duration-600 hover:border-transparent lg:hidden"
       >
         <iconify-icon
           icon="material-symbols:{iconName}"

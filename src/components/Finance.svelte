@@ -48,12 +48,12 @@
           <span class="flex-1 text-left text-3xl" role="columnheader">{date}</span>
           <span class="w-28 text-right" role="columnheader">
             <span class="h-8 w-8">
-              <iconify-icon icon="carbon:arrow-down-right" class="text-3xl" />
+              <iconify-icon icon="carbon:arrow-down-right" class="text-3xl"></iconify-icon>
             </span>
           </span>
           <span class="w-28 text-right" role="columnheader">
             <span class="h-8 w-8">
-              <iconify-icon icon="carbon:arrow-up-right" class="text-3xl" />
+              <iconify-icon icon="carbon:arrow-up-right" class="text-3xl"></iconify-icon>
             </span>
           </span>
         </div>
@@ -74,7 +74,7 @@
 </section>
 
 <style>
-  @reference "../styles/global.css";
+  @reference "../styles/main.css";
   .finance-rows:hover .finance-row:not(:hover) {
     @apply opacity-40 delay-100;
   }

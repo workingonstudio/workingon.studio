@@ -18,20 +18,13 @@
       <a href="#how" onclick={handleClose}>How it works</a>
     </li>
     <li>
-      <a href="#pro" onclick={handleClose}>Unlock Pro</a>
+      <a href="#pro" onclick={handleClose} class="flex flex-row items-center justify-center gap-2 lg:justify-start">
+        <Indicator />
+        Pro trial
+      </a>
     </li>
     <li>
-      <a href="#pricing" onclick={handleClose}><del>Pricing</del></a>
-    </li>
-    <li class="flex flex-col">
-      <a
-        href="#earlybird"
-        onclick={handleClick}
-        class="flex flex-row items-center justify-center gap-2 lg:justify-start"
-      >
-        <Indicator />
-        Early bird offer
-      </a>
+      <a href="#pricing" onclick={handleClose}>Pricing</a>
     </li>
     <li>
       <a

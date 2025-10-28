@@ -97,7 +97,7 @@
           <iconify-icon {icon} class={style}></iconify-icon>
         </a>
       {/each}
-      <button type="button" onclick={toggleMenu} class="hover:*:text-primary w-6 h-6 cursor-pointer flex lg:hidden">
+      <button type="button" onclick={toggleMenu} aria-label="Toggle menu" class="hover:*:text-primary w-6 h-6 cursor-pointer flex lg:hidden">
         <iconify-icon icon="carbon:{showMenu ? 'close-large' : 'menu'}" class=" text-2xl text-gray-500"></iconify-icon>
       </button>
     </div>
@@ -123,7 +123,7 @@
 </div>
 
 <style>
-  @reference "@styles/global.css";
+  @reference "@styles/main.css";
   h1 {
     @apply text-xl;
   }
