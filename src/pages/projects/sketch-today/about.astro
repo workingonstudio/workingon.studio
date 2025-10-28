@@ -1,0 +1,32 @@
+---
+import SketchToday from "@layouts/SketchToday.astro";
+import Hero from "@components/sketch-today/partials/Hero.svelte";
+
+let subtitle: string = "About";
+let title: string = "What's all this then?";
+---
+
+<SketchToday title="Sketch Today">
+  <Hero {subtitle} {title} />
+  <div class="flex w-full flex-col md:w-2xl">
+    <div class="note flex flex-row items-center gap-4">
+      <iconify-icon
+        icon="heroicons:pencil-square"
+        class="flex h-6 w-6 flex-col items-center justify-center text-lg text-blue-500"
+      ></iconify-icon>
+      <div class="flex flex-col">
+        <strong class="text-xxs">NOTE</strong>
+        <p class="text-xs">
+          This was conceived before AWS shit the bed the other week, and Figma went down.
+        </p>
+      </div>
+    </div>
+  </div>
+</SketchToday>
+
+<style>
+  @reference "@styles/sketch-today.css";
+  .note {
+    @apply rounded-lg border border-blue-100 bg-blue-50 p-4 text-sm text-blue-950;
+  }
+</style>

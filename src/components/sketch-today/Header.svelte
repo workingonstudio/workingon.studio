@@ -3,12 +3,12 @@
   export let currentPath;
   export let isHome;
 
-  const [category, slug] = currentPath.split("sketch-today/")[1].split("/");
+  const [category, slug] = currentPath.split("sketch-today/")[1]?.split("/") || [];
 </script>
 
 <header class="flex w-full flex-row items-center justify-between">
   <div class="flex flex-row items-center gap-3">
-    <a class="group flex flex-row items-center gap-3" href="/projects/sketch-today/">
+    <a class="group flex flex-row items-center gap-3" href="/projects/sketch-today">
       <div class="logo-mark">
         <iconify-icon icon="material-symbols:diamond-shine-outline" class="icon"></iconify-icon>
       </div>

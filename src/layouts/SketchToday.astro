@@ -8,7 +8,7 @@ import { AstroSeo } from "@astrolib/seo";
 import Header from "@components/sketch-today/Header.svelte";
 
 let currentPath = Astro.url.pathname;
-let isHome = currentPath === "/projects/sketch-today/";
+let isHome = currentPath === "/projects/sketch-today";
 
 export interface Props {
   title: string;
@@ -78,7 +78,8 @@ const publishDate = new Date().toISOString();
       is:inline
       type="module"
       src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    ></script>
+    >
+    </script>
 
     <meta name="generator" content={Astro.generator} />
 

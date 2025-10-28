@@ -11,6 +11,14 @@
     "link": "dad-reply"
   },
   {
+    "name": "Sketch Today",
+    "description": "A collection of modern Sketch resources.",
+    "version": "1.0.0",
+    "status": "shipped",
+    "tags": [{ "icon": "carbon:magic-wand", "text": "free" }],
+    "link": "sketch-today"
+  },
+  {
     "name": "Solidarity",
     "description": "Helps you feel less shit about looking for work.",
     "version": "1.0.1",
