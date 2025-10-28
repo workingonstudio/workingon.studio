@@ -4,7 +4,7 @@
 <nav class="flex flex-row items-center gap-4">
   <ul class="text-body flex flex-row gap-6 rounded-full bg-stone-100 px-6 text-xs">
     <li><a href="/projects/sketch-today/about">About</a></li>
-    <li><a href="/">FAQ</a></li>
+    <li><a href="/projects/sketch-today/faq">FAQ</a></li>
   </ul>
 </nav>
 
