@@ -15,7 +15,7 @@ Not yet. Right now this is my mission. And I am the gatekeeper of this house. I'
 
 > Why did you create this?
 
-Because I have an old Macbook. And right now running 3 tabs in design software burns my legs. So for the sake of my health my legs, and my ears, I decided to give Sketch another go.
+Because I have an old Macbook. And right now running 3 tabs in design software burns my legs, and makes the fans blow harder than an OG PS4. So for the sake of my health, my legs, and my ears, I decided to give Sketch another go.
 
 With that I needed some resources that I relied on. Mainly [Tailwind colors](/projects/sketch-today/palettes/tailwind/). That was the catalyst.
 
