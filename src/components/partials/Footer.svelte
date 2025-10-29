@@ -62,8 +62,7 @@
   @reference "@styles/main.css";
   footer ul {
     li {
-      a,
-      small {
+      a {
         @apply hover:text-primary;
         @apply text-xxs flex uppercase;
       }
