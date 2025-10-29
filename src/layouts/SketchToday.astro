@@ -23,21 +23,21 @@ const publishDate = new Date().toISOString();
   <head>
     <AstroSeo
       {title}
-      description=""
+      description="A collection of modern resources for Sketch."
       canonical={currentURL}
       ,
       openGraph={{
         url: currentURL,
         title: title,
-        description: "",
+        description: "A collection of modern resources for Sketch.",
         images: [
           {
-            url: Astro.site + "",
+            url: Astro.site + "opengraph/site-default.png",
             height: 600,
             width: 1200,
           },
           {
-            url: Astro.site + "",
+            url: Astro.site + "opengraph/site-square.png",
             height: 1080,
             width: 1080,
           },
@@ -77,7 +77,8 @@ const publishDate = new Date().toISOString();
       is:inline
       type="module"
       src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    ></script>
+    >
+    </script>
 
     <meta name="generator" content={Astro.generator} />
 
