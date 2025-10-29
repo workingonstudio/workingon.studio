@@ -4,12 +4,9 @@ import Layout from "@layouts/Layout.astro";
 import Header from "@components/partials/Header.svelte";
 import Projects from "@components/Projects.svelte";
 import Footer from "@components/partials/Footer.svelte";
+const currentPath = Astro.url.pathname;
 ---
 
-<Layout title="workingon.studio">
-  <div class="flex flex-1 flex-col justify-between bg-gray-950">
-    <Header text="projects.list" client:load />
-    <Projects client:load />
-    <Footer client:load />
-  </div>
+<Layout title="workingon.studio - Projects">
+  <Projects client:load />
 </Layout>

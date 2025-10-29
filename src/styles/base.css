@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+/* Global font smoothing for all themes */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Common theme tokens used across all products */
+@theme {
+  /* Shared breakpoints */
+  --screen-sm: 40rem; /* 640px */
+  --screen-md: 48rem; /* 768px */
+  --screen-lg: 64rem; /* 1024px */
+  --screen-xl: 80rem; /* 1280px */
+  --screen-2xl: 96rem; /* 1536px */
+  --screen-3xl: 112rem; /* 1792px */
+
+  /* Shared text sizes */
+  --text-xxs: 0.6875rem;
+  --text-xxs--line-height: calc(1 / 0.6875);
+}
+
+/* Base typography rules - products can override in their theme layers */
+@layer base {
+  body {
+    ::selection {
+      background: var(--color-primary);
+    }
+    @apply text-base;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--color-text);
+    @apply text-pretty;
+  }
+
+  p {
+    color: var(--color-text-body);
+    @apply leading-relaxed;
+  }
+
+  small {
+    color: var(--color-text-muted);
+    @apply text-xs;
+  }
+
+  a,
+  button,
+  input[type="submit"] {
+    @apply transition-colors delay-100 ease-in-out;
+  }
+}

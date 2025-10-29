@@ -1,6 +1,7 @@
 <script lang="ts">
   import Badge from "./partials/Badge.svelte";
   import MailButton from "./partials/MailButton.svelte";
+  import Emoji from "./partials/Emoji.svelte";
   import EmailFrom from "./partials/EmailFrom.svelte";
   import SectionHeader from "./partials/SectionHeader.svelte";
 </script>
@@ -32,7 +33,7 @@
       <div class="flex flex-row items-end gap-4">
         <span class="the-shadow relative mb-6 rounded-full bg-white">
           <span class="z-10">
-            <MailButton text="Got it" />
+            <MailButton text="Dad Reply" />
           </span>
           <div class="absolute top-6 -z-10 h-full w-full rounded-full border border-dashed border-slate-400"></div>
         </span>
@@ -53,7 +54,7 @@
           toEmail="sam.malone@cheersbar.net"
         />
         <div class="ml-0 flex flex-col gap-2 sm:ml-12">
-          👍
+          <Emoji class_="mr-2 emoji" emoji="👍" />
           <a
             class="text-xxs font-[Arial] font-normal text-slate-400 md:text-xs"
             href="https://chromewebstore.google.com/detail/ddkeoflblemlolckmnhihhabplfmogop"
@@ -64,7 +65,7 @@
       </div>
       <div class="relative flex h-9 flex-row items-end gap-4 lg:ml-12">
         <div class="absolute flex w-full flex-row items-stretch gap-3">
-          <MailButton text="Got it" />
+          <MailButton text="Dad Reply" />
           <div class="flex flex-1 rounded-full border border-dashed border-neutral-200 bg-neutral-50/80 md:h-9"></div>
           <div class="flex flex-1 rounded-full border border-dashed border-neutral-200 bg-neutral-50/80 md:h-9"></div>
         </div>
@@ -96,7 +97,7 @@
             toEmail="andrew@workingon.studio"
           />
           <div class="ml-0 flex flex-col gap-2 md:ml-12">
-            👍
+            <Emoji class_="mr-2 emoji" emoji="👍" />
             <a
               class="text-xxs font-[Arial] font-normal text-slate-400 md:text-xs"
               href="https://chromewebstore.google.com/detail/ddkeoflblemlolckmnhihhabplfmogop"
@@ -115,7 +116,7 @@
             toEmail="liz@workingon.studio"
           />
           <div class="ml-0 flex flex-col gap-2 md:ml-12">
-            👍
+            <Emoji class_="mr-2 emoji" emoji="👍" />
             <a
               class="text-xxs font-[Arial] font-normal text-slate-400 md:text-xs"
               href="https://chromewebstore.google.com/detail/ddkeoflblemlolckmnhihhabplfmogop"
@@ -134,7 +135,7 @@
             toEmail="thomas@workingon.studio"
           />
           <div class="ml-0 flex flex-col gap-2 md:ml-12">
-            👍
+            <Emoji class_="mr-2 emoji" emoji="👍" />
             <a
               class="text-xxs font-[Arial] font-normal text-slate-400 md:text-xs"
               href="https://chromewebstore.google.com/detail/ddkeoflblemlolckmnhihhabplfmogop"

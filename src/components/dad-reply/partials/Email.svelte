@@ -7,6 +7,7 @@
   import Indicator from "./Indicator.svelte";
   let showReply = false;
   let showShare = false;
+  let showTryToggle = true;
 
   let replyCollection = [
     {
@@ -41,8 +42,11 @@
         replyShown = [...replyShown, replyCollection[currentIndex]];
         currentIndex++;
       }
+      showTryToggle = false;
     }, 100);
   }
+
+  function toggleTryLabel() {}
 
   function toggleForward() {
     showShare = true;
@@ -73,7 +77,17 @@
     {/if}
   </div>
   <div class="relative ml-0 flex flex-row gap-3 sm:ml-12">
-    <MailButton text="Try it" clickable={true} onclick={toggleReply} disabled={isDisabled} />
+    <div class="relative flex flex-row">
+      {#if showTryToggle}
+        <div class="z-10 hidden md:flex" class:{}>
+          <div class="*:absolute *:top-3.5 *:-left-0.5">
+            <Indicator />
+          </div>
+          <span class="absolute top-2 -left-12 rounded-full bg-blue-600 px-2 py-0.5 text-[9px] text-white">Try it</span>
+        </div>
+      {/if}
+      <MailButton text="Dad Reply" clickable={true} onclick={toggleReply} disabled={isDisabled} />
+    </div>
     <MailButton type="email" href="hello@workingon.studio" text="Reply" iconName="material-symbols:reply-rounded" />
     <div class="lg:hidden xl:flex">
       <MailButton text="Forward" clickable={true} onclick={toggleForward} iconName="material-symbols:forward" />
