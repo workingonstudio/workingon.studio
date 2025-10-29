@@ -49,7 +49,7 @@
   });
 </script>
 
-<div class="options flex flex-col items-start gap-3 md:flex-row">
+<div class="options grid grid-flow-row grid-cols-2 gap-3 md:auto-cols-max md:grid-flow-col md:grid-cols-none">
   {#each processedLinks as link}
     <a href={link.url} class={link.key}>
       <iconify-icon icon={link.icon} class="text-base"></iconify-icon>
@@ -57,7 +57,10 @@
     </a>
   {/each}
   <button type="button" on:click={getShareLink}>
-    <iconify-icon icon="heroicons:{isCopied ? 'check-16-solid' : 'link-16-solid'}" class="text-base"></iconify-icon>
+    <iconify-icon
+      icon="heroicons:{isCopied ? 'check-16-solid' : 'link-16-solid'}"
+      class="text-base {isCopied ? 'text-emerald-500' : ''}"
+    ></iconify-icon>
     <span>{isCopied ? "Copied to clipboard" : "Copy Link"}</span>
   </button>
 </div>
