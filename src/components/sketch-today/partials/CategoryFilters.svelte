@@ -38,7 +38,7 @@
   }
 </script>
 
-<div class="flex flex-row gap-3">
+<div class="sticky top-2 flex snap-mandatory flex-row gap-3 overflow-x-auto bg-stone-50 py-4 md:overflow-visible">
   <button
     type="button"
     onclick={() => ($activeFilter = "all")}

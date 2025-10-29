@@ -36,7 +36,7 @@
   });
 </script>
 
-<div class="options flex flex-row gap-3">
+<div class="options flex flex-col items-start gap-3 md:flex-row">
   {#each processedLinks as link}
     <a href={link.url} class={link.key}>
       <iconify-icon icon={link.icon} class="text-base"></iconify-icon>

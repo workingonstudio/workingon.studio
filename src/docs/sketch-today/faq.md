@@ -1,6 +1,6 @@
 ---
-subtitle: "Erm...I have a question." 
-title: "FAQ"
+subtitle: "FAQ" 
+title: "Erm...I have a question."
 ---
 
 No one has asked these. I am just guessing at this point. But 'answers to questions you might have' doesn't have a good acronym.
@@ -25,4 +25,8 @@ Because it's just me. You think I have all the time in the world. I am currently
 
 > Can you prioritise a particular resource for me?
 
-Yes. I can. But that won't be free. My day rate is £500, feel free to [get in touch](/contact).
+Yes. I can. But that won't be free. My day rate is £500, sound good? [Get in touch](/contact).
+
+> Can I host these elsewhere?
+
+Firstly why? Nothing is hosted here. They are either on Github, or they're on Sketch Workspaces. If you mean so you can generate ad revenue, then, no.

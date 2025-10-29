@@ -1,6 +1,6 @@
 ---
-subtitle: "What's all this then?" 
-title: "About"
+subtitle: "About" 
+title: "What's all this then?"
 ---
 
 It's never about the software, it's the person that's using it. 
@@ -15,7 +15,7 @@ Eventually prices will continue to rise. The limitations of browser based techno
 
 After leaving, swiftly. I started freelancing. And then...[Sketch](/) launched.
 
-Next came the golden era (not that I am an old man shouting at clouds). But design catapulted into the 21st century, with designers firmly at the helm. We had services created like Zeplin, Abstract and Invision (RIP).
+Next came the golden era (gather round the stump of the lemon tree children). But design catapulted into the 21st century, with designers firmly at the helm. We had services created like Zeplin, Abstract and Invision (RIP).
 
 ### Creating the pieces.
 
