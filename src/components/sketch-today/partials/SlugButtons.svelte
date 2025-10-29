@@ -2,7 +2,20 @@
   export let urls: Record<string, string | { label: string; url: string }>;
   let iconset = "heroicons:";
 
-  let shareButtonText = "Share";
+  let isCopied = false;
+
+  async function getShareLink() {
+    try {
+      await navigator.clipboard.writeText(window.location.href);
+      isCopied = true;
+      setTimeout(() => {
+        isCopied = false;
+      }, 1000);
+    } catch (err) {
+      console.error("Failed to copy:", err);
+      // Optionally show an error state
+    }
+  }
 
   function getIcon(value: string) {
     switch (value) {
@@ -43,9 +56,9 @@
       <span class={link.key === "source" ? "lowercase" : "capitalize"}>{link.label}</span>
     </a>
   {/each}
-  <button type="button">
-    <iconify-icon icon="heroicons:share-16-solid" class="text-base"></iconify-icon>
-    <span>{shareButtonText}</span>
+  <button type="button" on:click={getShareLink}>
+    <iconify-icon icon="heroicons:{isCopied ? 'check-16-solid' : 'link-16-solid'}" class="text-base"></iconify-icon>
+    <span>{isCopied ? "Copied to clipboard" : "Copy Link"}</span>
   </button>
 </div>
 

@@ -50,7 +50,7 @@
   .logo-mark {
     @apply bg-main flex rounded-lg p-1 group-hover:bg-stone-50;
     .icon {
-      @apply text-lg text-white;
+      @apply size-[18px] text-lg text-white;
       @apply group-hover:text-primary pointer-events-none;
     }
   }
