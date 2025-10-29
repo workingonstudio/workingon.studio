@@ -1,17 +1,26 @@
 <script lang="ts">
   import Navigation from "./partials/Navigation.svelte";
-  export let currentPath;
-  export let isHome;
 
-  const [category, slug] = currentPath.split("sketch-today/")[1]?.split("/") || [];
+  export let category: string | undefined = undefined;
+  export let slug: string | undefined = undefined;
+
+  $: isHome = !category && !slug;
+
+  $: formattedSlug = slug ? slug.split("-").join(" ") : "";
 </script>
 
 <header class="relative flex w-full flex-row items-center justify-between">
   <div class="flex flex-row items-center gap-3">
-    <a class="group flex flex-row items-center gap-3" href="/projects/sketch-today">
+    <a
+      class="group flex flex-row items-center gap-3"
+      href="/projects/sketch-today"
+      data-astro-prefetch
+      aria-label="Home"
+    >
       <div class="logo-mark">
         <iconify-icon icon="material-symbols:diamond-shine-outline" class="icon"></iconify-icon>
       </div>
+      <span class="font-bold">Sketch Today</span>
     </a>
     <ul class="pagination flex flex-row gap-1">
       {#if isHome}
@@ -23,7 +32,7 @@
         </li>
         <li>
           <iconify-icon icon="heroicons:chevron-right-16-solid" class="icon"></iconify-icon>
-          {slug}
+          {formattedSlug}
         </li>
       {:else}
         <li>
@@ -42,7 +51,7 @@
     @apply bg-main flex rounded-lg p-1 group-hover:bg-stone-50;
     .icon {
       @apply text-lg text-white;
-      @apply group-hover:text-primary;
+      @apply group-hover:text-primary pointer-events-none;
     }
   }
   .pagination {

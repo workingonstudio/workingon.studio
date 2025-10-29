@@ -1,20 +1,19 @@
 ---
 import "../styles/sketch-today.css";
-
 import Analytics from "./partials/Analytics.astro";
 import { ClientRouter } from "astro:transitions";
 import { AstroSeo } from "@astrolib/seo";
 
 import Header from "@components/sketch-today/Header.svelte";
 
-let currentPath = Astro.url.pathname;
-let isHome = currentPath === "/projects/sketch-today";
-
-export interface Props {
+interface Props {
   title: string;
+  category?: string;
+  slug?: string;
 }
 
-const { title } = Astro.props;
+const { title, category, slug } = Astro.props;
+
 const currentURL = new URL(Astro.url.pathname, Astro.site).href;
 const publishDate = new Date().toISOString();
 ---
@@ -90,7 +89,7 @@ const publishDate = new Date().toISOString();
   <body>
     <main class="mx-[5%] flex h-max flex-1 flex-col py-9 md:mx-[10%]">
       <div class="flex flex-col">
-        <Header client:load {currentPath} {isHome} />
+        <Header {category} {slug} client:load />
         <slot />
       </div>
     </main>

@@ -32,6 +32,7 @@
     @apply cursor-pointer rounded-lg border border-stone-100 bg-stone-100 p-1 group-hover:border-stone-200;
   }
   nav {
+    @apply transition-all duration-200;
     &.open {
       @apply absolute top-12 right-0;
       ul {

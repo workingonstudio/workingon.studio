@@ -15,9 +15,14 @@ export async function getStaticPaths() {
   }));
 }
 
-const { category } = Astro.params;
+const { category, slug } = Astro.params;
 const { resource } = Astro.props;
 const capitalizedCategory = category!.charAt(0).toUpperCase() + category!.slice(1);
+
+const formattedSlug = slug!
+  .split("-")
+  .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+  .join(" ");
 
 let iconset: string = "heroicons:";
 let icon: string = "";
@@ -47,7 +52,11 @@ if (!resource.released) {
 }
 ---
 
-<SketchToday title={"Sketch Today - " + capitalizedCategory}>
+<SketchToday
+  title={"Sketch Today - " + capitalizedCategory + " - " + formattedSlug}
+  {category}
+  {slug}
+>
   <div class="flex py-18">
     <div class="flex flex-col gap-8">
       <div class="flex flex-col items-start gap-3">
