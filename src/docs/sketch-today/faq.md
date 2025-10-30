@@ -20,7 +20,7 @@ Because I have an old Macbook. And right now running 3 tabs in design software b
 
 With that I needed some resources that I relied on. Mainly [Tailwind colors](/projects/sketch-today/palettes/tailwind/). That was the catalyst.
 
-> Some of the resources are marked 'Soon' what's that about?
+> Some of the resources are marked 'soon' what's that about?
 
 Because it's just me. You think I have all the time in the world. I am currently trying to get to a point where I am not eating beans from a can with a rusty fork.
 
