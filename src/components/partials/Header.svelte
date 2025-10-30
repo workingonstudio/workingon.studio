@@ -75,8 +75,8 @@
 
     {
       icon: "simple-icons:github",
-      title: "Follow on Github",
-      href: "https://github.com/workingonstudio",
+      title: "This site on Github",
+      href: "https://github.com/workingonstudio/workingon.studio",
       style: "text-md",
     },
   ];
