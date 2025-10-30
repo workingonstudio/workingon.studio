@@ -5,8 +5,10 @@
   let isCopied = false;
 
   async function getShareLink() {
+    const currentUrl = window.location.href;
+    const getPath = currentUrl.split('sketch-today/')[1]; // Gets "icons/hero-icons/"
     try {
-      await navigator.clipboard.writeText(window.location.href);
+      await navigator.clipboard.writeText("https://sketchto.day/" + getPath);
       isCopied = true;
       setTimeout(() => {
         isCopied = false;
