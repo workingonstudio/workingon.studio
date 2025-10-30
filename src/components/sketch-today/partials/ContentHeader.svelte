@@ -1,6 +1,6 @@
 <script lang="ts">
   export let icon: string = "heroicons:bars-3-bottom-left";
-  export let bgColor: string = "bg-stone-100";
+  export let bgColor: string = "bg-emerald-100";
   export let header: string;
   export let subtitle: string;
 </script>

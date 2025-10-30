@@ -48,7 +48,7 @@
 <style>
   @reference "@styles/sketch-today.css";
   .logo-mark {
-    @apply bg-main flex rounded-lg p-1 group-hover:bg-stone-50;
+    @apply bg-main flex rounded-lg p-1 group-hover:bg-transparent;
     .icon {
       @apply size-[18px] text-lg text-white;
       @apply group-hover:text-primary pointer-events-none;
