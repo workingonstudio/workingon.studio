@@ -1,5 +1,6 @@
 ---
 import SketchToday from "@layouts/SketchToday.astro";
+import ContentHeader from "@components/sketch-today/partials/ContentHeader.svelte";
 import SlugButtons from "@components/sketch-today/partials/SlugButtons.svelte";
 import iconsData from "@data/sketch-today/icons.json";
 import palettesData from "@data/sketch-today/palettes.json";
@@ -60,13 +61,7 @@ if (!resource.released) {
   <div class="flex py-18">
     <div class="flex flex-col gap-8">
       <div class="flex flex-col items-start gap-3">
-        <div class="flex flex-col items-start gap-4 md:flex-row md:items-center">
-          <div class={`icon ${bgColor} flex rounded-lg p-1`}>
-            <iconify-icon icon={icon} class="text-2xl text-gray-800"></iconify-icon>
-          </div>
-          <h1>{resource.title}</h1>
-        </div>
-        <p class="text-body text-lg">{resource.tagline}</p>
+        <ContentHeader {icon} {bgColor} header={resource.title} subtitle={resource.tagline}/>
       </div>
       <div class="text-main flex w-full max-w-2xl flex-col text-base/relaxed text-pretty">
         <p>{resource.description}</p>

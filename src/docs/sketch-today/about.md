@@ -1,6 +1,7 @@
 ---
-subtitle: "About" 
-title: "What's all this then?"
+subtitle: "What's all this then?" 
+title: "About"
+icon: "heroicons:square-3-stack-3d"
 ---
 
 It's never about the software, it's the person that's using it. 

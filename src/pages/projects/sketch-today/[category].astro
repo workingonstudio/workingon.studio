@@ -1,5 +1,6 @@
 ---
 import SketchToday from "@layouts/SketchToday.astro";
+import ContentHeader from "@components/sketch-today/partials/ContentHeader.svelte";
 import ResourceList from "@components/sketch-today/ResourceList.svelte";
 import iconsData from "@data/sketch-today/icons.json";
 import palettesData from "@data/sketch-today/palettes.json";
@@ -54,15 +55,7 @@ switch (category) {
 <SketchToday title={"Sketch Today - " + capitalizedCategory} {category}>
   <div class="flex flex-col gap-16 py-18">
     <div class="flex flex-col">
-      <div class="flex flex-col items-start gap-3">
-        <div class="flex flex-col items-start gap-4 md:flex-row md:items-center">
-          <div class={`icon ${bgColor} flex rounded-lg p-1`}>
-            <iconify-icon icon={icon} class="text-2xl text-gray-800"></iconify-icon>
-          </div>
-          <h1>{capitalizedCategory}.</h1>
-        </div>
-        <p class="text-body text-lg">The most up-to-date {category}.</p>
-      </div>
+      <ContentHeader {icon} {bgColor} header={category} subtitle={"The most up-to-date " + category + "."}/>
     </div>
     <ResourceList client:load {resourceList} />
   </div>
@@ -70,7 +63,7 @@ switch (category) {
   <style>
     @reference "@styles/sketch-today.css";
     h1 {
-      @apply text-4xl;
+      @apply text-4xl capitalize;
     }
   </style>
 </SketchToday>

@@ -1,6 +1,7 @@
 ---
-subtitle: "FAQ" 
-title: "Erm...I have a question."
+title: "FAQ" 
+subtitle: "Erm...I have a question."
+icon: "heroicons:chat-bubble-oval-left-ellipsis"
 ---
 
 No one has asked these. I am just guessing at this point. But 'answers to questions you might have' doesn't have a good acronym.
