@@ -1,0 +1,72 @@
+@import "./base.css";
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @apply transition-all duration-200;
+}
+
+@theme {
+  --font-montserrat: "Montserrat", sans-serif;
+
+  --color-primary: theme(colors.amber.500);
+  --color-primary-hover: theme(colors.blue.700);
+  --color-main: theme(colors.gray.800);
+  --color-body: theme(colors.gray.500);
+  --color-muted: theme(colors.gray.400);
+}
+
+@layer base {
+  html {
+    background: var(--color-stone-50);
+  }
+  body {
+    font-family: var(--font-montserrat);
+    color: var(--color-main);
+    font-weight: var(--font-weight-medium);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @apply font-bold;
+  }
+}
+
+@layer components {
+  .resource {
+    @apply flex flex-row items-center gap-3 rounded-lg border p-3;
+    &.palette {
+      @apply border-violet-100 bg-violet-50 text-violet-500;
+      .icon {
+        @apply bg-violet-100;
+      }
+    }
+    &.icon {
+      @apply border-orange-100 bg-orange-50 text-orange-500;
+      .icon {
+        @apply bg-orange-100;
+      }
+    }
+    &.plugin {
+      @apply border-pink-100 bg-pink-50 text-pink-500;
+      .icon {
+        @apply bg-pink-100;
+      }
+    }
+    &.system {
+      @apply border-blue-100 bg-blue-50 text-blue-500;
+      .icon {
+        @apply bg-blue-100;
+      }
+    }
+    &.soon {
+      @apply border-stone-200 bg-stone-100 text-stone-500;
+      .icon {
+        @apply bg-stone-200;
+      }
+    }
+  }
+}

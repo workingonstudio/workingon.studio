@@ -1,0 +1,79 @@
+---
+import SketchToday from "@layouts/SketchToday.astro";
+import ContentHeader from "@components/sketch-today/partials/ContentHeader.svelte";
+import SlugButtons from "@components/sketch-today/partials/SlugButtons.svelte";
+import iconsData from "@data/sketch-today/icons.json";
+import palettesData from "@data/sketch-today/palettes.json";
+import systemsData from "@data/sketch-today/systems.json";
+import pluginsData from "@data/sketch-today/plugins.json";
+
+export async function getStaticPaths() {
+  const resourceList = [...iconsData, ...palettesData, ...systemsData, ...pluginsData];
+
+  return resourceList.map((resource) => ({
+    params: { category: resource.category, slug: resource.slug },
+    props: { resource },
+  }));
+}
+
+const { category, slug } = Astro.params;
+const { resource } = Astro.props;
+const capitalizedCategory = category!.charAt(0).toUpperCase() + category!.slice(1);
+
+const formattedSlug = slug!
+  .split("-")
+  .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+  .join(" ");
+
+let iconset: string = "heroicons:";
+let icon: string = "";
+let bgColor: string = "";
+
+switch (resource.type) {
+  case "icon":
+    icon = iconset + "square-2-stack";
+    bgColor = "bg-orange-100";
+    break;
+  case "palette":
+    icon = iconset + "swatch";
+    bgColor = "bg-violet-100";
+    break;
+  case "plugin":
+    icon = iconset + "squares-plus";
+    bgColor = "bg-pink-100";
+    break;
+  case "system":
+    icon = iconset + "cube-transparent";
+    bgColor = "bg-blue-100";
+    break;
+}
+
+if (!resource.released) {
+  bgColor = "bg-stone-200";
+}
+---
+
+<SketchToday
+  title={"Sketch Today - " + capitalizedCategory + " - " + formattedSlug}
+  {category}
+  {slug}
+>
+  <div class="flex py-18">
+    <div class="flex flex-col gap-8">
+      <div class="flex flex-col items-start gap-3">
+        <ContentHeader {icon} {bgColor} header={resource.title} subtitle={resource.tagline}/>
+      </div>
+      <div class="text-main flex w-full max-w-2xl flex-col text-base/relaxed text-pretty">
+        <p>{resource.description}</p>
+      </div>
+      <SlugButtons urls={resource.links} client:load />
+    </div>
+  </div>
+</SketchToday>
+
+<style>
+  @reference "@styles/sketch-today.css";
+  h1 {
+    @apply text-4xl;
+  }
+</style>

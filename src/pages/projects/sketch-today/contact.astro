@@ -1,0 +1,39 @@
+---
+import SketchToday from "@layouts/SketchToday.astro";
+import ContentHeader from "@components/sketch-today/partials/ContentHeader.svelte"
+import * as SDContent from "@docs/sketch-today/contact.md";
+const { frontmatter, Content } = SDContent;
+
+let subtitle: string = frontmatter.subtitle;
+let title: string = frontmatter.title;
+let icon: string = frontmatter.icon;
+---
+
+<SketchToday title="Sketch Today - Contact">
+  <div class="flex flex-col gap-16 py-18">
+    <div class="flex flex-col">
+      <ContentHeader {subtitle} header={title} {icon} />
+    </div>
+  </div>
+  <div class="flex w-full flex-col gap-6 md:w-2xl">
+    <section class="flex flex-col gap-6">
+      <Content />
+    </section>
+  </div>
+</SketchToday>
+
+<style>
+  @reference "@styles/sketch-today.css";
+  section {
+    @apply text-main text-pretty;
+    a {
+      @apply underline hover:no-underline;
+    }
+    h3 {
+      @apply text-xl font-bold;
+    }
+  }
+  .note {
+    @apply rounded-lg border border-blue-100 bg-blue-50 p-4 text-sm text-blue-950;
+  }
+</style>

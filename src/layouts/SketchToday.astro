@@ -1,0 +1,98 @@
+---
+import "../styles/sketch-today.css";
+import Analytics from "./partials/Analytics.astro";
+import { ClientRouter } from "astro:transitions";
+import { AstroSeo } from "@astrolib/seo";
+
+import Header from "@components/sketch-today/Header.svelte";
+
+interface Props {
+  title: string;
+  category?: string;
+  slug?: string;
+}
+
+const { title, category, slug } = Astro.props;
+
+const currentURL = new URL(Astro.url.pathname, Astro.site).href;
+const publishDate = new Date().toISOString();
+---
+
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <AstroSeo
+      {title}
+      description="A collection of modern resources for Sketch."
+      canonical={currentURL}
+      ,
+      openGraph={{
+        url: currentURL,
+        title: title,
+        description: "A collection of modern resources for Sketch.",
+        images: [
+          {
+            url: Astro.site + "sketch-today/opengraph/site-default.png",
+            height: 600,
+            width: 1200,
+          },
+          {
+            url: Astro.site + "sketch-today/opengraph/site-square.png",
+            height: 1080,
+            width: 1080,
+          },
+        ],
+        site_name: "sketchto.day",
+        article: {
+          publishedTime: publishDate,
+          modifiedTime: publishDate,
+          authors: ["Paul Mackenzie"],
+        },
+      }}
+    />
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#030712" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/sketch-today/favicon-light.svg"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/sketch-today/favicon-dark.svg"
+      media="(prefers-color-scheme: dark)"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      is:inline
+      type="module"
+      src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
+    >
+    </script>
+
+    <meta name="generator" content={Astro.generator} />
+
+    <Analytics productName="Sketch Today" />
+    <ClientRouter />
+
+    <title>{title}</title>
+  </head>
+  <body>
+    <main class="mx-[5%] flex h-max flex-1 flex-col py-9 md:mx-[10%]">
+      <div class="flex flex-col">
+        <Header {category} {slug} client:load />
+        <slot />
+      </div>
+    </main>
+  </body>
+</html>

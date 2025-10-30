@@ -1,0 +1,69 @@
+---
+import SketchToday from "@layouts/SketchToday.astro";
+import ContentHeader from "@components/sketch-today/partials/ContentHeader.svelte";
+import ResourceList from "@components/sketch-today/ResourceList.svelte";
+import iconsData from "@data/sketch-today/icons.json";
+import palettesData from "@data/sketch-today/palettes.json";
+import systemsData from "@data/sketch-today/systems.json";
+import pluginsData from "@data/sketch-today/plugins.json";
+
+export function getStaticPaths() {
+  return [
+    { params: { category: "icons" } },
+    { params: { category: "palettes" } },
+    { params: { category: "systems" } },
+    { params: { category: "plugins" } },
+  ];
+}
+
+const { category } = Astro.params;
+
+const dataMap = {
+  icons: iconsData,
+  palettes: palettesData,
+  systems: systemsData,
+  plugins: pluginsData,
+};
+
+const resourceList = dataMap[category as keyof typeof dataMap];
+const capitalizedCategory = category.charAt(0).toUpperCase() + category.slice(1);
+
+let iconset: string = "heroicons:";
+let icon: string = "";
+let bgColor: string = "";
+
+switch (category) {
+  case "icons":
+    icon = iconset + "square-2-stack";
+    bgColor = "bg-orange-100";
+    break;
+  case "palettes":
+    icon = iconset + "swatch";
+    bgColor = "bg-violet-100";
+    break;
+  case "plugins":
+    icon = iconset + "squares-plus";
+    bgColor = "bg-pink-100";
+    break;
+  case "systems":
+    icon = iconset + "cube-transparent";
+    bgColor = "bg-blue-100";
+    break;
+}
+---
+
+<SketchToday title={"Sketch Today - " + capitalizedCategory} {category}>
+  <div class="flex flex-col gap-16 py-18">
+    <div class="flex flex-col">
+      <ContentHeader {icon} {bgColor} header={category} subtitle={"The most up-to-date " + category + "."}/>
+    </div>
+    <ResourceList client:load {resourceList} />
+  </div>
+
+  <style>
+    @reference "@styles/sketch-today.css";
+    h1 {
+      @apply text-4xl capitalize;
+    }
+  </style>
+</SketchToday>

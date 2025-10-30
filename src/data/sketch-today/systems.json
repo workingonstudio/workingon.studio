@@ -1,0 +1,18 @@
+[
+  {
+    "category": "systems",
+    "type": "system",
+    "slug": "IBM-carbon",
+    "title": "IBM Carbon",
+    "tagline": "IBM Carbon design system.",
+    "description": "Sleek and sharp design system. From the people that brought you a computer that can beat a Grandmaster.",
+    "released": true,
+    "links": {
+      "download": "https://carbondesignsystem.com/designing/kits/sketch/#get-the-kit",
+      "source": {
+        "label": "carbondesignsystem.com",
+        "url": "https://carbondesignsystem.com/designing/kits/sketch/#get-the-kit"
+      }
+    }
+  }
+]

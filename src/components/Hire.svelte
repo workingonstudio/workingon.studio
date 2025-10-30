@@ -36,7 +36,9 @@
 
 <PageHeader>
   <h1>
-    Currently available for consultancy gigs. You know, you pay me £{displayRate}/day*. I tell you what to do.
+    Currently available for consultancy gigs. You know, you pay me £{displayRate}/day*.
+    <br class="hidden xl:flex" />
+    I tell you what to do.
   </h1>
   <div class="flex max-w-xl flex-col gap-12">
     <p>
@@ -48,8 +50,7 @@
       <div class="flex flex-col gap-4">
         <div class="flex flex-col gap-1">
           <p class="text-sm/relaxed">
-            Each time you visit this page my day rate <strong>increases by £10</strong>
-            .
+            Each time you visit this page my day rate <strong>increases by £10.</strong>
             <br />
             If it takes you too long to decide anything this is your punishment.
           </p>
