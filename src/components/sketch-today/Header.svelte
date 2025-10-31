@@ -20,7 +20,9 @@
       <div class="logo-mark">
         <iconify-icon icon="material-symbols:diamond-shine-outline" class="icon"></iconify-icon>
       </div>
-      <span class="font-bold">Sketch Today</span>
+      {#if isHome}
+        <span class="font-bold">Sketch Today</span>
+      {/if}
     </a>
     <ul class="pagination flex flex-row gap-1">
       {#if isHome}
