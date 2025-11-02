@@ -22,10 +22,9 @@ const publishDate = new Date().toISOString();
 <html lang="en" class="dark">
   <head>
     <AstroSeo
-      {title}
+      title={title}
       description="A collection of modern resources for Sketch."
       canonical={currentURL}
-      ,
       openGraph={{
         url: currentURL,
         title: title,
@@ -43,11 +42,7 @@ const publishDate = new Date().toISOString();
           },
         ],
         site_name: "sketchto.day",
-        article: {
-          publishedTime: publishDate,
-          modifiedTime: publishDate,
-          authors: ["Paul Mackenzie"],
-        },
+        type: "website"
       }}
     />
     <meta charset="UTF-8" />

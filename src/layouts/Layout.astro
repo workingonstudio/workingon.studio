@@ -30,7 +30,6 @@ const nudicaMonoFontUrl = import.meta.env.NUDICA_MONO_FONT_CSS_URL;
       {title}
       description="I'm tired of designing for metrics…tired of designing to make numbers go up…tired of playing to the wrong audience. Aren't you?"
       canonical={currentURL}
-      ,
       openGraph={{
         url: currentURL,
         title: title,
@@ -49,11 +48,7 @@ const nudicaMonoFontUrl = import.meta.env.NUDICA_MONO_FONT_CSS_URL;
           },
         ],
         site_name: "workingon.studio",
-        article: {
-          publishedTime: publishDate,
-          modifiedTime: publishDate,
-          authors: ["Paul Mackenzie"],
-        },
+        type: "website"
       }}
     />
     <meta charset="UTF-8" />
