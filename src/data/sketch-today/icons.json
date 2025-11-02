@@ -8,7 +8,7 @@
     "description": "Without creating this library designing this site would have been a nightmare. All yours now.",
     "released": true,
     "links": {
-      "download": "https://www.sketch.com/s/66316f3d-9471-4e3c-9644-d57ba32f4b19",
+      "download": "sketch://add-library/cloud/66316f3d-9471-4e3c-9644-d57ba32f4b19",
       "workspace": "https://www.sketch.com/s/66316f3d-9471-4e3c-9644-d57ba32f4b19",
       "source": {
         "label": "heroicons.com",
@@ -38,15 +38,14 @@
     "slug": "lucide-icons",
     "title": "Lucide Icons",
     "tagline": "Beautiful & consistent icons.",
-    "description": "",
-    "released": false,
+    "description": "1,641 icons. Downloaded. Sorted. And turned into a library. You better be grateful.",
+    "released": true,
     "links": {
-      "download": "/",
-      "workspace": "/",
-      "github": "/",
+      "download": "sketch://add-library/cloud/b25074ba-4722-438c-85bf-59cac8032ec3",
+      "workspace": "https://www.sketch.com/s/b25074ba-4722-438c-85bf-59cac8032ec3",
       "source": {
-        "label": "",
-        "url": ""
+        "label": "lucide.dev",
+        "url": "https://lucide.dev/"
       }
     }
   }
