@@ -52,6 +52,7 @@
   p {
     font-family: var(--font-nudicaMono);
     @apply text-body lg:text-xl/relaxed;
+    @apply text-pretty;
   }
 }
 
