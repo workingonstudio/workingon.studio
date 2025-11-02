@@ -21,7 +21,6 @@ const publishDate = new Date().toISOString();
       title={longTitle}
       description="Instantly reply to your emails with minimal effort and maximum dad energy."
       canonical={currentURL}
-      ,
       openGraph={{
         url: currentURL,
         title: title,
@@ -39,11 +38,7 @@ const publishDate = new Date().toISOString();
           },
         ],
         site_name: "dadreply.com",
-        article: {
-          publishedTime: publishDate,
-          modifiedTime: publishDate,
-          authors: ["Paul Mackenzie"],
-        },
+        type: "site"
       }}
     />
     <meta charset="UTF-8" />

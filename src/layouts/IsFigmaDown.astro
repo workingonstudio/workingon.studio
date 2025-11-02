@@ -22,7 +22,6 @@ const publishDate = new Date().toISOString();
       title={longTitle}
       description="The unofficial status of a well know SaaS product."
       canonical={currentURL}
-      ,
       openGraph={{
         url: currentURL,
         title: title,
@@ -40,11 +39,7 @@ const publishDate = new Date().toISOString();
           },
         ],
         site_name: "isfigmadown.com",
-        article: {
-          publishedTime: publishDate,
-          modifiedTime: publishDate,
-          authors: ["Paul Mackenzie"],
-        },
+        type: "site"
       }}
     />
     <meta charset="UTF-8" />
