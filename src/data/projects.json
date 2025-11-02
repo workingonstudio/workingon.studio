@@ -2,7 +2,7 @@
   {
     "name": "Dad Reply",
     "description": "Created as a joke. Became a thing.",
-    "version": "1.5.2",
+    "version": "1.5.3",
     "status": "shipped",
     "tags": [
       { "icon": "carbon:currency-dollar", "text": "paid" },
