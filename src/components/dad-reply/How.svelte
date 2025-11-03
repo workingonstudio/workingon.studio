@@ -19,8 +19,8 @@
       <Badge text="Nothing to learn" bgColor="bg-blue-100" />
       <div class="flex flex-col gap-3">
         <h4>Added directly in Gmail.</h4>
-        <p>Sitting along side the reply button like it’s always been there.*</p>
-        <small>* Unlike my dad.</small>
+        <p>Right next to the reply button, like it's always been there.*</p>
+        <small>* unlike my dad.</small>
       </div>
     </div>
     <div
