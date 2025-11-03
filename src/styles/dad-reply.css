@@ -35,7 +35,7 @@
   }
 
   h1 {
-    @apply text-center text-2xl/8 md:text-5xl/17 lg:text-left;
+    @apply text-center text-3xl/12 md:text-5xl/17 lg:text-left;
   }
 
   h2 {
