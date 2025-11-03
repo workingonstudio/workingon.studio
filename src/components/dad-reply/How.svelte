@@ -7,13 +7,6 @@
 </script>
 
 <div id="how" class="flex flex-col gap-24">
-  <SectionHeader
-    emoji="🧐"
-    header="As ridiculous as it sounds."
-    body="The perfect companion for <s>the email power user</s>
-      email."
-  />
-
   <div class="flex flex-col items-center justify-center gap-12 py-12 text-pretty lg:flex-row">
     <div class="flex w-90 flex-col items-start gap-6 md:w-2/3 lg:w-2/5">
       <Badge text="Nothing to learn" bgColor="bg-blue-100" />

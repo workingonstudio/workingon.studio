@@ -53,7 +53,7 @@
   <SectionHeader
     emoji="🎟️"
     header="Download and get access to a Pro trial."
-    body="Until I figure out payments*, I'm letting you trial the Pro features."
+    body="Until I figure out payments, you get to trial the Pro features.*"
     hasFootnote
     footnote="Technically, if I die before that happens, free stuff for you!"
   />

@@ -23,11 +23,7 @@
       </div>
       <!-- prettier-ignore -->
       <h1>
-        Tag, Assign, Prioritise.
-        <br/>
-        Email triage in one click.*
-        <br />
-        Don't type. Decide.
+        Email replies without<br/>the email part.*
       </h1>
     </div>
     <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-center lg:justify-normal">
