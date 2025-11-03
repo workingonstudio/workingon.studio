@@ -16,20 +16,20 @@
       <div class="flex flex-col gap-3 px-4 py-4">
         <div class="flex flex-row items-center gap-3">
           <iconify-icon icon="material-symbols:drag-indicator" class="h-6 w-6 text-2xl"></iconify-icon>
-          <button class="rounded-lg border border-slate-300 px-3 py-2">🔥</button>
-          <div class="flex flex-grow rounded-lg border border-slate-300 px-2.5 py-2.5 text-sm">Hot lead</div>
+          <button class="rounded-lg border border-slate-300 px-3 py-2">🐛</button>
+          <div class="flex flex-grow rounded-lg border border-slate-300 px-2.5 py-2.5 text-sm">Bug</div>
         </div>
         <div
           class="the-shadow flex scale-110 flex-row items-center gap-3 rounded-lg border border-slate-300 bg-white p-2"
         >
           <iconify-icon icon="material-symbols:drag-indicator" class="h-7 w-auto text-2xl"></iconify-icon>
-          <button class="rounded-lg border border-slate-300 px-3 py-2">📞</button>
-          <div class="flex flex-grow rounded-lg border border-slate-300 px-2.5 py-2.5 text-sm">Need to call</div>
+          <button class="rounded-lg border border-slate-300 px-3 py-2">🎯</button>
+          <div class="flex flex-grow rounded-lg border border-slate-300 px-2.5 py-2.5 text-sm">Feature</div>
         </div>
         <div class="flex flex-row items-center gap-3">
           <iconify-icon icon="material-symbols:drag-indicator" class="h-6 w-6 text-2xl"></iconify-icon>
-          <button class="rounded-lg border border-slate-300 px-3 py-2">❄️</button>
-          <div class="flex flex-grow rounded-lg border border-slate-300 px-2.5 py-2.5 text-sm">Cold lead</div>
+          <button class="rounded-lg border border-slate-300 px-3 py-2">🔥</button>
+          <div class="flex flex-grow rounded-lg border border-slate-300 px-2.5 py-2.5 text-sm">Critical</div>
         </div>
       </div>
     </div>
@@ -84,7 +84,7 @@
               <span>is</span>
               <span class="action">equal</span>
               <span>to</span>
-              <span class="emoji">🔥</span>
+              <span class="emoji">🐛</span>
             </div>
           </li>
           <li>
@@ -92,7 +92,7 @@
             <div class="flex flex-row rounded-lg border border-gray-300 p-2">
               <span class="action">Tag</span>
               <span>as</span>
-              <span class="action border border-red-200! bg-red-100">Hot lead</span>
+              <span class="action border border-red-200! bg-red-100">Bug</span>
             </div>
           </li>
           <li>
@@ -100,16 +100,15 @@
             <div class="flex flex-row rounded-lg border border-gray-300 px-2 py-2">
               <span class="action">Move</span>
               <span>to</span>
-              <span class="action border border-blue-200! bg-blue-100">High Priority</span>
+              <span class="action border border-blue-200! bg-blue-100">Backlog</span>
             </div>
           </li>
           <li>
             <strong>And</strong>
             <div class="flex flex-row rounded-lg border border-gray-300 px-2 py-2">
-              <span class="action">Increase</span>
-              <span class="action">Lead score</span>
-              <span>by</span>
-              <span class="action border border-emerald-200! bg-emerald-100">50</span>
+              <span class="action">Assign</span>
+              <span>to</span>
+              <span class="action border border-emerald-200! bg-emerald-100">Engineering</span>
             </div>
           </li>
         </ul>

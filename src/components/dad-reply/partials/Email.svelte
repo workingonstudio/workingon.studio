@@ -59,9 +59,7 @@
     <div class="ml-0 space-y-5 *:font-['Arial'] *:text-black! sm:ml-12">
       <p>Hey,</p>
       <p>
-        Just wanted to confirm we're still on track for the Friday deadline?
-        <br />
-        Let me know if anything's changed.
+       Quick update, meeting notes from today's standup are in the doc. Give it a look when you get a chance and let me know if I missed anything.
       </p>
       <div class="flex flex-col gap-1">
         <strong class="text-xs md:text-sm">Mario L'sage</strong>
