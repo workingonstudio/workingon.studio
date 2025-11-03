@@ -75,7 +75,7 @@
       <Badge text="Automatic send" bgColor="bg-blue-100" />
       <div class="flex flex-col gap-3">
         <h4>Reply with a single click.</h4>
-        <p>No need to compose, just a single click, and Dad Reply does the rest.</p>
+        <p>No composing, no more pleasantries. A single click and Dad Reply does the rest.</p>
       </div>
     </div>
   </div>
