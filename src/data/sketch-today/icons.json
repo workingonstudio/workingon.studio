@@ -48,5 +48,22 @@
         "url": "https://lucide.dev/"
       }
     }
+  },
+  {
+    "category": "icons",
+    "type": "icon",
+    "slug": "font-awesome",
+    "title": "Font Awesome",
+    "tagline": "The internet's favorite icon library",
+    "description": "Covering Font Awesome (Free/Pro). For Regular/Solid/Brands. Will updated for more styles soon.",
+    "released": true,
+    "links": {
+      "download": "sketch://add-library/cloud/8a7589b4-96c2-48f6-b5b2-f08153b8b5be",
+      "workspace": "https://www.sketch.com/s/8a7589b4-96c2-48f6-b5b2-f08153b8b5be",
+      "source": {
+        "label": "fontawesome.com",
+        "url": "https://fontawesome.com/"
+      }
+    }
   }
 ]
