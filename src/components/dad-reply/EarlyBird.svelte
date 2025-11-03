@@ -64,7 +64,7 @@
         <span class="cursor-default text-4xl">🐦‍⬛</span>
         <h2>Early bird offer!</h2>
         <p class="text-pretty">
-          If I ever do get payments sorted, I'll send you a discount code for 33% off a yearly subscription, for life*.
+          When payments launch, I'll send you a discount code for 33% off yearly, for life.*.
         </p>
         <small>* mine or yours, makes no difference.</small>
       </div>

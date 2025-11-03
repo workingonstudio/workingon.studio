@@ -9,29 +9,27 @@
   <SectionHeader
     emoji="🔓"
     header="Pro Trial unlocked."
-    body="Get an advanced button and 3 custom Emoji replies.*"
-    hasFootnote
-    footnote="trial ends once I have implimented payments."
+    body="Get an advanced button and 3 custom Emoji replies."
   />
   <div class="flex flex-col items-center justify-center gap-12 py-12 text-pretty lg:flex-row">
     <div class="flex w-90 flex-col md:w-3/5 lg:w-2/5">
       <div class="flex flex-col gap-3 px-4 py-4">
         <div class="flex flex-row items-center gap-3">
           <iconify-icon icon="material-symbols:drag-indicator" class="h-6 w-6 text-2xl"></iconify-icon>
-          <button class="rounded-lg border border-slate-300 px-3 py-2">🎖️</button>
-          <div class="flex flex-grow rounded-lg border border-slate-300 px-2.5 py-2.5 text-sm">Feature</div>
+          <button class="rounded-lg border border-slate-300 px-3 py-2">🐛</button>
+          <div class="flex flex-grow rounded-lg border border-slate-300 px-2.5 py-2.5 text-sm">Bug</div>
         </div>
         <div
           class="the-shadow flex scale-110 flex-row items-center gap-3 rounded-lg border border-slate-300 bg-white p-2"
         >
           <iconify-icon icon="material-symbols:drag-indicator" class="h-7 w-auto text-2xl"></iconify-icon>
-          <button class="rounded-lg border border-slate-300 px-3 py-2">🐛</button>
-          <div class="flex flex-grow rounded-lg border border-slate-300 px-2.5 py-2.5 text-sm">Bug</div>
+          <button class="rounded-lg border border-slate-300 px-3 py-2">🎯</button>
+          <div class="flex flex-grow rounded-lg border border-slate-300 px-2.5 py-2.5 text-sm">Feature</div>
         </div>
         <div class="flex flex-row items-center gap-3">
           <iconify-icon icon="material-symbols:drag-indicator" class="h-6 w-6 text-2xl"></iconify-icon>
-          <button class="rounded-lg border border-slate-300 px-3 py-2">🛟</button>
-          <div class="flex flex-grow rounded-lg border border-slate-300 px-2.5 py-2.5 text-sm">Issue</div>
+          <button class="rounded-lg border border-slate-300 px-3 py-2">🔥</button>
+          <div class="flex flex-grow rounded-lg border border-slate-300 px-2.5 py-2.5 text-sm">Critical</div>
         </div>
       </div>
     </div>
@@ -42,7 +40,7 @@
       </div>
       <div class="flex flex-col gap-3">
         <h4>Add custom Emoji.</h4>
-        <p>Ideal for being more ambiguous, or email triage for your Codebase, CRM or Support system.*</p>
+        <p>Turn replies into actions. Tag bugs, assign features, triage support tickets - all with one click.*</p>
         <small>* you'll need to sort out the automation, obviously.</small>
       </div>
     </div>
@@ -55,8 +53,8 @@
       </div>
       <div class="flex flex-col gap-3">
         <h4>Advanced button.</h4>
-        <p>What good are 3 Emoji if you can't use them? With access to the advanced button that's how.*</p>
-        <small>* Yes you can set to instantly send on select.</small>
+        <p>Choose between your custom replies before sending. Or set it to instant - send if you're feeling decisive.*</p>
+        <small>*One click, multiple options. Your call.</small>
       </div>
     </div>
     <div
@@ -86,7 +84,7 @@
               <span>is</span>
               <span class="action">equal</span>
               <span>to</span>
-              <span class="emoji">🔥</span>
+              <span class="emoji">🐛</span>
             </div>
           </li>
           <li>
@@ -94,7 +92,7 @@
             <div class="flex flex-row rounded-lg border border-gray-300 p-2">
               <span class="action">Tag</span>
               <span>as</span>
-              <span class="action border border-red-200! bg-red-100">Hot lead</span>
+              <span class="action border border-red-200! bg-red-100">Bug</span>
             </div>
           </li>
           <li>
@@ -102,16 +100,15 @@
             <div class="flex flex-row rounded-lg border border-gray-300 px-2 py-2">
               <span class="action">Move</span>
               <span>to</span>
-              <span class="action border border-blue-200! bg-blue-100">High Priority</span>
+              <span class="action border border-blue-200! bg-blue-100">Backlog</span>
             </div>
           </li>
           <li>
             <strong>And</strong>
             <div class="flex flex-row rounded-lg border border-gray-300 px-2 py-2">
-              <span class="action">Increase</span>
-              <span class="action">Lead score</span>
-              <span>by</span>
-              <span class="action border border-emerald-200! bg-emerald-100">50</span>
+              <span class="action">Assign</span>
+              <span>to</span>
+              <span class="action border border-emerald-200! bg-emerald-100">Engineering</span>
             </div>
           </li>
         </ul>
@@ -124,7 +121,7 @@
       </div>
       <div class="flex flex-col gap-3">
         <h4>Trigger software you already use.*</h4>
-        <p>Finally you can do something with those notification emails, from your inbox.</p>
+        <p>Those notification emails from Jira, GitHub, Zendesk? They can finally do something useful.</p>
         <small>* or are being forced to use.</small>
       </div>
     </div>

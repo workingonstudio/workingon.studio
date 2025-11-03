@@ -23,11 +23,7 @@
       </div>
       <!-- prettier-ignore -->
       <h1>
-        Tag, Assign, Prioritise.
-        <br/>
-        Email triage in one click.*
-        <br />
-        Don't type. Decide.
+        Email replies without<br/>the email part.*
       </h1>
     </div>
     <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-center lg:justify-normal">
@@ -44,7 +40,7 @@
       </div>
     </div>
     <div class="w-full space-y-8 text-center lg:w-5/6 lg:text-left">
-      <small>* "But&#8230;Outlook already does this" &mdash; you're using Outlook, sit down.</small>
+      <small>* Acknowledgment without engagement. Finally.</small>
     </div>
   </div>
   <div class="card email-container the-shadow flex-1 md:order-none lg:max-w-3xl">

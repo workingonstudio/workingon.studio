@@ -7,20 +7,13 @@
 </script>
 
 <div id="how" class="flex flex-col gap-24">
-  <SectionHeader
-    emoji="🧐"
-    header="As ridiculous as it sounds."
-    body="The perfect companion for <s>the email power user</s>
-      email."
-  />
-
   <div class="flex flex-col items-center justify-center gap-12 py-12 text-pretty lg:flex-row">
     <div class="flex w-90 flex-col items-start gap-6 md:w-2/3 lg:w-2/5">
       <Badge text="Nothing to learn" bgColor="bg-blue-100" />
       <div class="flex flex-col gap-3">
         <h4>Added directly in Gmail.</h4>
-        <p>Sitting along side the reply button like it’s always been there.*</p>
-        <small>* Unlike my dad.</small>
+        <p>Right next to the reply button, like it's always been there.*</p>
+        <small>* unlike my dad.</small>
       </div>
     </div>
     <div
@@ -75,75 +68,7 @@
       <Badge text="Automatic send" bgColor="bg-blue-100" />
       <div class="flex flex-col gap-3">
         <h4>Reply with a single click.</h4>
-        <p>No need to compose, just a single click, and Dad Reply does the rest.</p>
-      </div>
-    </div>
-  </div>
-  <div class="flex flex-col items-center justify-center gap-12 py-12 text-pretty lg:flex-row">
-    <div class="flex w-90 flex-col items-start gap-6 md:w-2/3 lg:w-2/5">
-      <Badge text="Save time" bgColor="bg-blue-100" />
-      <div class="flex flex-col gap-3">
-        <h4>Approve in seconds.</h4>
-        <p>No more pleasantries when a simple response will do. Give people the answers they need faster.</p>
-      </div>
-    </div>
-    <div class="flex flex-col items-center -space-y-12 lg:w-2/5">
-      <div class="flex w-100 scale-85 flex-col rounded-xl border border-gray-300 p-8">
-        <div class="relative flex flex-col gap-4">
-          <EmailFrom
-            avatarFilename="me-shoe.png"
-            fromName="You"
-            fromEmail="paul@workingon.studio"
-            toEmail="andrew@workingon.studio"
-          />
-          <div class="ml-0 flex flex-col gap-2 md:ml-12">
-            <Emoji class_="mr-2 emoji" emoji="👍" />
-            <a
-              class="text-xxs font-[Arial] font-normal text-slate-400 md:text-xs"
-              href="https://chromewebstore.google.com/detail/ddkeoflblemlolckmnhihhabplfmogop"
-            >
-              via dad reply
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="the-shadow z-10 flex w-100 flex-col rounded-xl border border-gray-300 bg-white p-8">
-        <div class="flex flex-col gap-4">
-          <EmailFrom
-            avatarFilename="me-shoe.png"
-            fromName="You"
-            fromEmail="paul@workingon.studio"
-            toEmail="liz@workingon.studio"
-          />
-          <div class="ml-0 flex flex-col gap-2 md:ml-12">
-            <Emoji class_="mr-2 emoji" emoji="👍" />
-            <a
-              class="text-xxs font-[Arial] font-normal text-slate-400 md:text-xs"
-              href="https://chromewebstore.google.com/detail/ddkeoflblemlolckmnhihhabplfmogop"
-            >
-              via dad reply
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="flex w-100 scale-85 flex-col rounded-xl border border-gray-300 p-8">
-        <div class="relative flex flex-col gap-4">
-          <EmailFrom
-            avatarFilename="me-shoe.png"
-            fromName="Paul Mackenzie"
-            fromEmail="paul@workingon.studio"
-            toEmail="thomas@workingon.studio"
-          />
-          <div class="ml-0 flex flex-col gap-2 md:ml-12">
-            <Emoji class_="mr-2 emoji" emoji="👍" />
-            <a
-              class="text-xxs font-[Arial] font-normal text-slate-400 md:text-xs"
-              href="https://chromewebstore.google.com/detail/ddkeoflblemlolckmnhihhabplfmogop"
-            >
-              via dad reply
-            </a>
-          </div>
-        </div>
+        <p>No composing, no more pleasantries. A single click and Dad Reply does the rest.</p>
       </div>
     </div>
   </div>

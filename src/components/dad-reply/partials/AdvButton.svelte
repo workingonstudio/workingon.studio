@@ -18,18 +18,18 @@
       class: "",
     },
     {
-      emoji: "🔥",
-      text: "Hot lead",
+      emoji: "🐛",
+      text: "Bug",
       class: "active",
     },
     {
-      emoji: "📞",
-      text: "Need to call",
+      emoji: "🎯",
+      text: "Feature",
       class: "",
     },
     {
-      emoji: "❄️",
-      text: "Cold lead",
+      emoji: "🔥",
+      text: "Critical",
       class: "",
     },
   ];
