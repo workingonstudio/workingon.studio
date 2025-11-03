@@ -53,7 +53,7 @@
       </div>
       <div class="flex flex-col gap-3">
         <h4>Advanced button.</h4>
-        <p>Choose between your custom replies before sending. Or set it to instant-send if you're feeling decisive.*</p>
+        <p>Choose between your custom replies before sending. Or set it to instant - send if you're feeling decisive.*</p>
         <small>*One click, multiple options. Your call.</small>
       </div>
     </div>
