@@ -81,7 +81,7 @@
           <div class="*:absolute *:top-3.5 *:-left-0.5">
             <Indicator />
           </div>
-          <span class="absolute top-2 -left-12 rounded-full bg-blue-600 px-2 py-0.5 text-[9px] text-white">Try it</span>
+          <span class="absolute top-2 -left-12 font-bold rounded-full bg-blue-600 px-2 py-0.5 text-xxs text-white">Try it</span>
         </div>
       {/if}
       <MailButton text="Dad Reply" clickable={true} onclick={toggleReply} disabled={isDisabled} />
