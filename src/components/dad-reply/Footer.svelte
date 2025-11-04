@@ -1,7 +1,6 @@
 <script lang="ts">
   import Emoji from "./partials/Emoji.svelte";
   import Badge from "./partials/Badge.svelte";
-  import Footer from "@components/partials/Footer.svelte";
 </script>
 
 <div>
@@ -9,7 +8,7 @@
     <div class="flex flex-row items-center gap-6">
       <Emoji class_="text-xl" emoji="👋" />
       <a href="/projects/dad-reply/changelog/" title="View Changelog" class="flex">
-        <Badge text={"v1.5.3"} />
+        <Badge text={"v1.5.4"} />
       </a>
     </div>
     <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between md:gap-0">

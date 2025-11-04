@@ -2,11 +2,6 @@
   import Indicator from "./Indicator.svelte";
 
   let { isOpen = false, onClose } = $props();
-  function handleClick() {
-    document.getElementById("email")?.focus({ preventScroll: true });
-    onClose();
-  }
-
   function handleClose() {
     onClose();
   }
