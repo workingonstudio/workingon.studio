@@ -55,7 +55,7 @@
     @apply md:relative md:bottom-0;
     @apply mr-0 px-4 py-6 sm:px-8 sm:py-12;
     @apply rounded-xl;
-    @apply lg:-mr-[calc(50vw-50%)] lg:rounded-none lg:rounded-l-xl lg:pr-0;
+    @apply lg:-mr-[calc(50vw-50%)] lg:rounded-none lg:rounded-l-xl;
     @apply 2xl:-mr-[calc(25vw-25%)] 2xl:rounded-xl;
   }
 </style>
