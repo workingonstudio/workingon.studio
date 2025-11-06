@@ -1,6 +1,9 @@
 ### 🪵
 ## Changelog
 
+#### v1.5.5 - 6 Nov 2025 (submitted)
+- Updating logic that targets the Reply button. Auto sending is back baby.
+
 #### v1.5.4 - 3 Nov 2025
 - Updating store listing, and images. Stupid Google forcing version changes for any update.
 
