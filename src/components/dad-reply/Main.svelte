@@ -8,9 +8,11 @@
   import Footer from "./Footer.svelte";
   import Banner from "./partials/Banner.svelte";
   import Pro from "./Pro.svelte";
+  import AlertBanner from "./partials/AlertBanner.svelte";
 </script>
 
-<Banner />
+<AlertBanner />
+<!-- <Banner /> -->
 <Header />
 <main class="mx-auto flex max-w-full flex-col px-4 md:max-w-6xl md:pt-0">
   <Hero />
