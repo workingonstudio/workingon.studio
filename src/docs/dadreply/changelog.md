@@ -1,7 +1,7 @@
 ### 🪵
 ## Changelog
 
-#### v1.5.5 - 6 Nov 2025 (submitted)
+#### v1.5.5 - 6 Nov 2025
 - Updating logic that targets the Reply button. Auto sending is back baby.
 
 #### v1.5.4 - 3 Nov 2025
