@@ -11,8 +11,8 @@
   import AlertBanner from "./partials/AlertBanner.svelte";
 </script>
 
-<AlertBanner />
-<!-- <Banner /> -->
+<!-- <AlertBanner /> -->
+<Banner />
 <Header />
 <main class="mx-auto flex max-w-full flex-col px-4 md:max-w-6xl md:pt-0">
   <Hero />
