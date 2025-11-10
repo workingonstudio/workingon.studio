@@ -38,11 +38,11 @@
   h4 {
     font-family: var(--font-display);
     font-feature-settings: "ss01" 1;
-    @apply text-primary tracking-tight text-pretty;
+    @apply text-primary tracking-tight text-balance;
   }
 
   h1 {
-    @apply text-4xl/12 md:text-6xl/22;
+    @apply text-4xl/12 md:text-7xl/27;
   }
 
   h2 {

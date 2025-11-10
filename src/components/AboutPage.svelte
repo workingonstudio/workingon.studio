@@ -5,7 +5,7 @@
 <PageHeader>
   <!-- prettier-ignore -->
   <h1>
-    The internet’s been ruined by the coin men, marketers, SEO bros, and MBAs.
+    The internet’s been ruined by the coin men, marketers, SEO bros, MBAs and referral codes.
   </h1>
   <div class="flex max-w-xl flex-col gap-12">
     <p>It’s time to call out the bullshit, by making it impossible to ignore.</p>

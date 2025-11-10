@@ -36,9 +36,7 @@
 
 <PageHeader>
   <h1>
-    Currently available for consultancy gigs. You know, you pay me £{displayRate}/day*.
-    <br class="hidden xl:flex" />
-    I tell you what to do.
+    Consultancy gigs. £{displayRate}/day*. I tell you what to do.
   </h1>
   <div class="flex max-w-xl flex-col gap-12">
     <p>
