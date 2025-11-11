@@ -5,14 +5,14 @@
 <ul class="project-list mb-10 flex flex-col gap-12">
   {#each projectData as { name, description, version, status, tags, link }, index}
     {#if index <= 4}
-      <li class="project-item group">
+      <li class="project-item">
         <a href={link === "/" ? link : `/projects/${link}`} class="space-y-4">
           <div class="content space-y-3">
             <div class="flex flex-col gap-6 lg:flex-row lg:items-center">
               <span class="h-8 w-8">
                 <iconify-icon
                   icon="carbon:arrow-up-right"
-                  class="group-hover:text-primary text-3xl text-gray-500 transition-colors duration-300"
+                  class="text-3xl text-gray-500 transition-colors duration-300"
                 ></iconify-icon>
               </span>
               <h2 class="flex flex-row items-center gap-2">{name}</h2>

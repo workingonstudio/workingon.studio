@@ -40,7 +40,7 @@
       href: "/about",
       title: "about",
       subtitle: ".txt",
-      description: "more questions answered."
+      description: "more questions answered.",
     },
     {
       icon: "carbon:delivery-parcel",
