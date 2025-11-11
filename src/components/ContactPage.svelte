@@ -36,7 +36,7 @@
 
 <PageHeader>
   <h1>
-    Consultancy gigs. £{displayRate}/day*. I tell you what to do.
+    Design gigs. £{displayRate}/day*. I tell you what to do.
   </h1>
   <div class="flex max-w-xl flex-col gap-12">
     <p>

@@ -2,6 +2,7 @@
   import PageHeader from "@components/partials/PageHeader.svelte";
   import { DateTime } from "luxon";
   import ProjectList from "./partials/ProjectList.svelte";
+  import ArticleList from "./partials/ArticleList.svelte";
   const launchDate = DateTime.fromISO("2025-08-27");
   const daysSince = Math.floor(DateTime.now().diff(launchDate, "days").days);
 </script>
@@ -12,7 +13,7 @@
   </h1>
   <section class="flex max-w-xl flex-col gap-12">
     <p>
-      This studio has existed for {daysSince} days and shipped 5 projects. With 3 more in the dry dock waiting to be completed.
+      This studio has existed for {daysSince} days and shipped 5 projects. With 3 more in the dry dock waiting to be deployed.
     </p>
     <p>
       Combined they’ve garnered well over 500k impressions. Impressive. 
@@ -21,9 +22,11 @@
   </section>
 </PageHeader>
 
-<section class="flex max-w-xl flex-col gap-24">
+<section class="flex max-w-2xl flex-col gap-24 2xl:mt-6">
   <h2>projects</h2>
   <ProjectList />
+  <h2>Writing</h2>
+  <ArticleList />
 </section>
 
 <style>
