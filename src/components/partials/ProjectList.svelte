@@ -1,12 +1,12 @@
 <script lang="ts">
-  import projectData from "@data/projects.json";  
+  import projectData from "@data/projects.json";
 </script>
 
 <ul class="project-list mb-10 flex flex-col gap-12">
   {#each projectData as { name, description, version, status, tags, link }, index}
     {#if index <= 4}
       <li class="project-item group">
-        <a href={link === '/' ? link : `/projects/${link}`} class="space-y-4">
+        <a href={link === "/" ? link : `/projects/${link}`} class="space-y-4">
           <div class="content space-y-3">
             <div class="flex flex-col gap-6 lg:flex-row lg:items-center">
               <span class="h-8 w-8">
@@ -51,6 +51,18 @@
 
 <style>
   @reference "@styles/main.css";
+  .project-list:has(.project-item:hover) .project-item:not(:hover) {
+    @apply opacity-20 transition-opacity duration-200;
+  }
+  .project-item {
+    @apply transition-opacity duration-200;
+  }
+  .project-item a {
+    @apply text-body transition-colors duration-200;
+  }
+  .project-item:hover a {
+    @apply text-primary;
+  }
   .meta {
     @apply text-sm uppercase lg:ml-14;
   }

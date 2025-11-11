@@ -8,16 +8,12 @@
 </script>
 
 <PageHeader>
-  <h1>
-    Holding a social mirror to the hellscape that is the modern internet.
-  </h1>
+  <h1>Holding a social mirror to the hellscape that is the modern internet.</h1>
   <section class="flex max-w-xl flex-col gap-12">
     <p>
       This studio has existed for {daysSince} days and shipped 5 projects. With 3 more in the dry dock waiting to be deployed.
     </p>
-    <p>
-      Combined they’ve garnered well over 500k impressions. Impressive. 
-    </p>
+    <p>Combined they’ve garnered well over 500k impressions. Impressive.</p>
     <p>I couldn’t give a shit.</p>
   </section>
 </PageHeader>
@@ -25,7 +21,7 @@
 <section class="flex max-w-2xl flex-col gap-24 2xl:mt-6">
   <h2>projects</h2>
   <ProjectList />
-  <h2>Writing</h2>
+  <h2>writing</h2>
   <ArticleList />
 </section>
 
