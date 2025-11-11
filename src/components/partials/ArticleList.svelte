@@ -27,7 +27,7 @@
   {#each articles as { title, description, href }}
     <li>
       <a {href}>
-        <div class="flex flex-row items-center gap-6">
+        <div class="flex flex-col gap-6 md:flex-row md:items-center">
           <span class="flex h-8 w-8 items-center">
             <iconify-icon
               icon="carbon:license-draft"
@@ -36,7 +36,7 @@
           </span>
           <h2>{title}</h2>
         </div>
-        <p class="ml-14">{description}</p>
+        <p class="md:ml-14">{description}</p>
       </a>
     </li>
   {/each}

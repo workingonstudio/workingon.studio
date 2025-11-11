@@ -28,9 +28,9 @@
 <style>
   @reference "@styles/main.css";
   h1 {
-    @apply text-4xl/12 md:text-8xl/36;
+    @apply text-5xl/18 md:text-8xl/36;
   }
   h2 {
-    @apply text-3xl md:text-7xl;
+    @apply text-5xl/18 md:text-7xl;
   }
 </style>

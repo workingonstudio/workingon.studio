@@ -21,7 +21,7 @@
               {description}
             </p>
           </div>
-          <ul class="meta flex flex-row gap-6">
+          <ul class="meta flex flex-col gap-2 md:flex-row md:gap-6">
             <li class="flex flex-row items-center gap-3">
               <span class="h-[18px] w-[18px]">
                 <iconify-icon icon="carbon:delivery" class="text-body text-[18px]"></iconify-icon>
