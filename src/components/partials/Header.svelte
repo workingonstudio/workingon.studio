@@ -36,6 +36,13 @@
 
   let navItems = [
     {
+      icon: "carbon:document-multiple-01",
+      href: "/about",
+      title: "about",
+      subtitle: ".txt",
+      description: "more questions answered.",
+    },
+    {
       icon: "carbon:delivery-parcel",
       href: "/projects/",
       title: "projects",
@@ -144,9 +151,9 @@
       li {
         @apply flex flex-row items-center gap-4 transition-opacity duration-300;
         a {
-          @apply flex w-full flex-col justify-between gap-1;
+          @apply flex w-full flex-col justify-between;
           p {
-            @apply text-body text-xs;
+            @apply text-body text-xs text-gray-500;
           }
         }
         /* Active state styles - only when not hovering anything */

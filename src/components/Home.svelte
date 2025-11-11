@@ -1,32 +1,36 @@
 <script lang="ts">
   import PageHeader from "@components/partials/PageHeader.svelte";
+  import { DateTime } from "luxon";
+  import ProjectList from "./partials/ProjectList.svelte";
+  import ArticleList from "./partials/ArticleList.svelte";
+  const launchDate = DateTime.fromISO("2025-08-27");
+  const daysSince = Math.floor(DateTime.now().diff(launchDate, "days").days);
 </script>
 
 <PageHeader>
-  <!-- prettier-ignore -->
-  <h1>
-    I'm tired of designing for metrics&#8230;tired of designing to make numbers go up&#8230;tired of playing to the wrong audience. Aren't you?
-  </h1>
-  <div class="flex max-w-xl flex-col gap-12">
+  <h1>Holding a social mirror to the hellscape that is the modern internet.</h1>
+  <section class="flex max-w-xl flex-col gap-12">
     <p>
-      They're not users, they're not customers, they’re not clients, or partners, they're people. Messy humans, with issues far greater
-      than &#x0022I'd best get this report done&#x0022.
+      This studio has existed for {daysSince} days and shipped 5 projects. With 3 more in the dry dock waiting to be deployed.
     </p>
-    <p>
-      They’re humans that don’t need to be talked to like idiots. The world isn’t all sunshine and rainbows. They don’t
-      need to be manipulated, told that if they just buy &#x0022this thing&#x0022 their life will be complete.
-    </p>
-    <p>This is just a ride. And I’d much rather make it the best ride than trick them into thinking it is.</p>
-    <p>So I'm building products that reflect that. Cultural mirrors. Things that make the invisible visible. Design that centers people, not conversion rates.</p>
-    <p>
-      This game is broken.
-      <br />
-      I’m making a new one.
-    </p>
-    <p>Wanna play?</p>
-  </div>
+    <p>Combined they’ve garnered well over 500k impressions. Impressive.</p>
+    <p>I couldn’t give a shit.</p>
+  </section>
 </PageHeader>
+
+<section class="flex max-w-2xl flex-col gap-24 2xl:mt-6">
+  <h2>projects</h2>
+  <ProjectList />
+  <h2>writing</h2>
+  <ArticleList />
+</section>
 
 <style>
   @reference "@styles/main.css";
+  h1 {
+    @apply text-5xl/18 md:text-8xl/36;
+  }
+  h2 {
+    @apply text-5xl/18 md:text-7xl;
+  }
 </style>

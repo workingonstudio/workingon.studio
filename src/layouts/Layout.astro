@@ -48,7 +48,7 @@ const nudicaMonoFontUrl = import.meta.env.NUDICA_MONO_FONT_CSS_URL;
           },
         ],
         site_name: "workingon.studio",
-        type: "website"
+        type: "website",
       }}
     />
     <meta charset="UTF-8" />
@@ -67,8 +67,7 @@ const nudicaMonoFontUrl = import.meta.env.NUDICA_MONO_FONT_CSS_URL;
       is:inline
       type="module"
       src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    >
-    </script>
+    ></script>
 
     <meta name="generator" content={Astro.generator} />
 
@@ -82,12 +81,12 @@ const nudicaMonoFontUrl = import.meta.env.NUDICA_MONO_FONT_CSS_URL;
     <title>{title}</title>
   </head>
   <body>
-    <div class="sticky top-0 mb-12 shadow-2xl shadow-gray-950">
-      <div class="mx-[5%] flex flex-col md:mx-[10%]">
+    <div class="sticky top-0 z-50 mb-12 shadow-2xl shadow-gray-950">
+      <div class="mx-[5%] flex flex-col">
         <Header client:load {currentPath} />
       </div>
     </div>
-    <main class="mx-[5%] flex min-h-screen flex-1 flex-col md:mx-[10%]">
+    <main class="mx-[5%] flex min-h-screen flex-1 flex-col">
       <div class="flex flex-1 flex-col justify-between gap-24">
         <div class="flex grow-1 flex-col justify-start gap-24 2xl:flex-row">
           <slot />
