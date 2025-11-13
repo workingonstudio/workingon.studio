@@ -12,7 +12,6 @@ export interface Props {
 const { title } = Astro.props;
 const longTitle = title + " - workingon.studio";
 const currentURL = new URL(Astro.url.pathname, Astro.site).href;
-const publishDate = new Date().toISOString();
 ---
 
 <html lang="en" class="scroll-smooth bg-white">
@@ -28,17 +27,29 @@ const publishDate = new Date().toISOString();
         images: [
           {
             url: Astro.site + "dad-reply/opengraph/site-default.png",
-            height: 600,
+            height: 630,
             width: 1200,
+            alt: "Dad Reply - Email replies without the email part",
           },
           {
             url: Astro.site + "dad-reply/opengraph/site-square.png",
-            height: 1080,
-            width: 1080,
+            height: 1200,
+            width: 1200,
+            alt: "Dad Reply - Email replies without the email part",
+          },
+          {
+            url: Astro.site + "dad-reply/opengraph/site-minimum.png",
+            height: 315,
+            width: 600,
+            alt: "Dad Reply - Email replies without the email part",
           },
         ],
         site_name: "dadreply.com",
-        type: "site"
+        type: "website",
+      }}
+      twitter={{
+        cardType: "summary_large_image",
+        handle: "@prmack",
       }}
     />
     <meta charset="UTF-8" />
