@@ -13,7 +13,7 @@
 >
   <div class="mx-auto flex flex-1 flex-row items-center sm:justify-center">
     <div class="text-text flex-inline flex items-center gap-4">
-      <span class="text-2xl">🐦‍⬛</span>
+      <span class="text-2xl">🕊️</span>
       <span class="text-left text-xs font-semibold sm:text-sm">
         Early bird offer Get 33% off a yearly subscription until you die (or I do).
       </span>
