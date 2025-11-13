@@ -8,7 +8,7 @@
 </script>
 
 <PageHeader>
-  <h1>Holding a social mirror to the hellscape that is the modern internet.</h1>
+  <h1>Exposing the hellscape that’s the modern internet.</h1>
   <section class="flex max-w-xl flex-col gap-12">
     <p>
       This studio has existed for {daysSince} days and shipped 5 projects. With 3 more in the dry dock waiting to be deployed.

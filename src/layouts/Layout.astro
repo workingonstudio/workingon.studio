@@ -15,7 +15,6 @@ export interface Props {
 
 const { title } = Astro.props;
 const currentURL = new URL(Astro.url.pathname, Astro.site).href;
-const publishDate = new Date().toISOString();
 const currentPath = Astro.url.pathname;
 
 // Get font URLs from environment variables
@@ -28,27 +27,39 @@ const nudicaMonoFontUrl = import.meta.env.NUDICA_MONO_FONT_CSS_URL;
   <head>
     <AstroSeo
       {title}
-      description="I'm tired of designing for metrics…tired of designing to make numbers go up…tired of playing to the wrong audience. Aren't you?"
+      description="Creating products that expose the absurdity of digital life. Cultural mirrors for the modern internet."
       canonical={currentURL}
       openGraph={{
         url: currentURL,
         title: title,
         description:
-          "I'm tired of designing for metrics…tired of designing to make numbers go up…tired of playing to the wrong audience. Aren't you?",
+          "Creating products that expose the absurdity of digital life. Cultural mirrors for the modern internet.",
         images: [
           {
             url: Astro.site + "site-default.png",
-            height: 600,
+            height: 630,
             width: 1200,
+            alt: "workingon.studio - Exposing the hellscape that's the modern internet.",
           },
           {
             url: Astro.site + "site-square.png",
-            height: 1080,
-            width: 1080,
+            height: 1200,
+            width: 1200,
+            alt: "workingon.studio - Exposing the hellscape that's the modern internet.",
+          },
+          {
+            url: Astro.site + "site-minimum.png",
+            height: 315,
+            width: 600,
+            alt: "workingon.studio - Exposing the hellscape that's the modern internet.",
           },
         ],
         site_name: "workingon.studio",
         type: "website",
+      }}
+      twitter={{
+        cardType: "summary_large_image",
+        handle: "@prmack",
       }}
     />
     <meta charset="UTF-8" />
