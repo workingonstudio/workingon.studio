@@ -15,7 +15,6 @@ interface Props {
 const { title, category, slug } = Astro.props;
 
 const currentURL = new URL(Astro.url.pathname, Astro.site).href;
-const publishDate = new Date().toISOString();
 ---
 
 <!doctype html>
@@ -34,16 +33,19 @@ const publishDate = new Date().toISOString();
             url: Astro.site + "sketch-today/opengraph/site-default.png",
             height: 630,
             width: 1200,
+            alt: "Sketch Today - A collection of modern resources for Sketch",
           },
           {
             url: Astro.site + "sketch-today/opengraph/site-square.png",
             height: 1200,
             width: 1200,
+            alt: "Sketch Today - A collection of modern resources for Sketch",
           },
           {
             url: Astro.site + "sketch-today/opengraph/site-minimum.png",
             height: 600,
             width: 315,
+            alt: "Sketch Today - A collection of modern resources for Sketch",
           },
         ],
         site_name: "sketchto.day",
