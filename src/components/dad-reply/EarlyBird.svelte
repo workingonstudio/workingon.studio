@@ -61,11 +61,9 @@
   {#if !$isSubmitting && !$submittedEmail.submitted}
     <div class="flex flex-col items-center justify-center gap-12 md:flex-row">
       <div class="flex w-full flex-col space-y-4 md:w-md">
-        <span class="cursor-default text-4xl">🐦‍⬛</span>
+        <span class="cursor-default text-4xl">🕊️</span>
         <h2>Early bird offer!</h2>
-        <p class="text-pretty">
-          When payments launch, I'll send you a discount code for 33% off yearly, for life.*.
-        </p>
+        <p class="text-pretty">When payments launch, I'll send you a discount code for 33% off yearly, for life.*.</p>
         <small>* mine or yours, makes no difference.</small>
       </div>
       <div class="card w-full space-y-6 shadow-lg md:w-md">
