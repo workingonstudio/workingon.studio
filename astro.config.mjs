@@ -4,11 +4,13 @@ import svelte from "@astrojs/svelte";
 import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 
+import sitemap from "@astrojs/sitemap";
+
 export default defineConfig({
   site: process.env.SITE_URL || (import.meta.env.DEV 
     ? "http://localhost:4321"
     : "https://workingon.studio"),
-  integrations: [svelte()],
+  integrations: [svelte(), sitemap()],
   prefetch: true,
   vite: {
     plugins: [tailwindcss()],

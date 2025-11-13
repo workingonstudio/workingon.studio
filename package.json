@@ -14,6 +14,7 @@
     "timeline:status": "node -e \"const fs=require('fs'); const t=JSON.parse(fs.readFileSync('src/data/timeline.json')); console.log('Source:', t.source||'local-git', '| Generated:', new Date(t.generated).toLocaleString());\""
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.6.0",
     "@astrojs/svelte": "^7.1.0",
     "@astrolib/seo": "^1.0.0-beta.8",
     "@felte/validator-zod": "^1.0.18",
