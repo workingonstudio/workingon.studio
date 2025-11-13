@@ -1,6 +1,4 @@
 <script lang="ts">
-  import { submittedEmail } from "@stores/dadreply/email";
-
   function handleClick() {
     document.getElementById("email")?.focus();
   }
