@@ -15,7 +15,7 @@ export default defineConfig({
     fonts: [
       // Main site
       {
-        provider: fontProviders.google(),
+        provider: fontProviders.bunny(),
         name: "Azeret Mono",
         cssVariable: "--font-azeret-mono",
         display: "swap",
@@ -23,7 +23,7 @@ export default defineConfig({
         styles: ['normal', 'italic']
       },
       {
-        provider: fontProviders.google(),
+        provider: fontProviders.bunny(),
         name: "Space Grotesk",
         cssVariable: "--font-space-grotesk",
         display: "swap",
@@ -32,7 +32,7 @@ export default defineConfig({
       
       // Sketch Today
       {
-        provider: fontProviders.google(),
+        provider: fontProviders.bunny(),
         name: "Montserrat",
         cssVariable: "--font-montserrat",
         display: "swap",
@@ -42,14 +42,14 @@ export default defineConfig({
       
       // Dad Reply
       {
-        provider: fontProviders.google(),
+        provider: fontProviders.fontsource(),
         name: "Geist",
         cssVariable: "--font-geist",
         display: "swap",
-        weights: [400, 600]
+        weights: [400, 700]
       },
       {
-        provider: fontProviders.google(),
+        provider: fontProviders.bunny(),
         name: "Poppins",
         cssVariable: "--font-poppins",
         display: "swap",
@@ -57,7 +57,7 @@ export default defineConfig({
         styles: ['normal', 'italic']
       },
       {
-        provider: fontProviders.google(),
+        provider: fontProviders.bunny(),
         name: "Roboto",
         cssVariable: "--font-roboto",
         display: "swap",
@@ -66,7 +66,7 @@ export default defineConfig({
       
       // Solidarity
       {
-        provider: fontProviders.google(),
+        provider: fontProviders.bunny(),
         name: "Lora",
         cssVariable: "--font-lora",
         display: "swap",
@@ -74,22 +74,16 @@ export default defineConfig({
         styles: ['normal', 'italic']
       },
       {
-        provider: fontProviders.google(),
+        provider: fontProviders.bunny(),
         name: "Mulish",
         cssVariable: "--font-mulish",
         display: "swap",
         weights: [700]
       },
-      {
-        provider: fontProviders.google(),
-        name: "Seaweed Script",
-        cssVariable: "--font-seaweed-script",
-        display: "swap"
-      },
       
       // Is Figma Down
       {
-        provider: fontProviders.google(),
+        provider: fontProviders.bunny(),
         name: "Inter",
         cssVariable: "--font-inter",
         display: "swap",
