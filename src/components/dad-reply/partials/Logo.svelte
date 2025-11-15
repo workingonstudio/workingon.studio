@@ -14,7 +14,7 @@
 <div class="group flex items-center gap-3 font-bold tracking-tight">
   <a href="#top" class="thumb-swing">
     <Emoji class_="mr-2 emoji" emoji="👍" />
-    <span class="leading-none">Dad Reply</span>
+    <span class="leading-none font-semibold">Dad Reply</span>
   </a>
   <button class="menu-toggle" type="button" aria-label="Toggle tone menu" onclick={switchEmojiTone} title="Change tone">
     <iconify-icon icon="material-symbols:refresh" class="cursor-pointer text-sm"></iconify-icon>

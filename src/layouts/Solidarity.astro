@@ -5,6 +5,7 @@ import { AstroSeo } from "@astrolib/seo";
 
 import Analytics from "./partials/Analytics.astro";
 import { ClientRouter } from "astro:transitions";
+import { Font } from "astro:assets";
 
 export interface Props {
   title: string;
@@ -42,7 +43,7 @@ const publishDate = new Date().toISOString();
           },
         ],
         site_name: "workingon.studio",
-        type: "site"
+        type: "site",
       }}
     />
     <meta charset="UTF-8" />
@@ -51,12 +52,9 @@ const publishDate = new Date().toISOString();
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/solidarity/favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Seaweed+Script&display=swap"
-      rel="stylesheet"
-    />
+    <Font cssVariable="--font-lora" preload />
+    <Font cssVariable="--font-mulish" preload />
+    <Font cssVariable="--font-seaweed-script" preload />
 
     <script
       is:inline

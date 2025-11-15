@@ -2,6 +2,8 @@
 import "../styles/base.css";
 import "../styles/main.css";
 
+import { Font } from "astro:assets";
+
 import Analytics from "./partials/Analytics.astro";
 import { ClientRouter } from "astro:transitions";
 import { AstroSeo } from "@astrolib/seo";
@@ -69,18 +71,13 @@ const nudicaMonoFontUrl = import.meta.env.NUDICA_MONO_FONT_CSS_URL;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="image/png" href="/favicon.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,500;1,500&family=Space+Grotesk:wght@500&display=swap"
-      rel="stylesheet"
-    />
+    <Font cssVariable="--font-azeret-mono" preload />
+    <Font cssVariable="--font-space-grotesk" preload />
     <script
       is:inline
       type="module"
       src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    >
-    </script>
+    ></script>
 
     <meta name="generator" content={Astro.generator} />
 

@@ -4,6 +4,7 @@ import "../styles/dad-reply.css";
 import Analytics from "./partials/Analytics.astro";
 import { AstroSeo } from "@astrolib/seo";
 import { ClientRouter } from "astro:transitions";
+import { Font } from "astro:assets";
 
 export interface Props {
   title: string;
@@ -58,12 +59,10 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="/dad-reply/favicon.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
+    <Font cssVariable="--font-geist" preload />
+    <Font cssVariable="--font-poppins" preload />
+    <Font cssVariable="--font-roboto" preload />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded"
       rel="stylesheet"

@@ -5,6 +5,7 @@ import "../styles/is-figma-down.css";
 import Analytics from "./partials/Analytics.astro";
 import { AstroSeo } from "@astrolib/seo";
 import { ClientRouter } from "astro:transitions";
+import { Font } from "astro:assets";
 
 export interface Props {
   title: string;
@@ -47,14 +48,7 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="/is-figma-down/favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-      rel="stylesheet"
-    />
+    <Font cssVariable="--font-inter" preload />
     <link
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded"
       rel="stylesheet"

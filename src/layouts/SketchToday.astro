@@ -3,6 +3,7 @@ import "../styles/sketch-today.css";
 import Analytics from "./partials/Analytics.astro";
 import { ClientRouter } from "astro:transitions";
 import { AstroSeo } from "@astrolib/seo";
+import { Font } from "astro:assets";
 
 import Header from "@components/sketch-today/Header.svelte";
 
@@ -74,12 +75,7 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
       href="/sketch-today/favicon-dark.svg"
       media="(prefers-color-scheme: dark)"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
+    <Font cssVariable="--font-montserrat" preload />
     <script
       is:inline
       type="module"
