@@ -21,6 +21,7 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
 <!doctype html>
 <html lang="en" class="dark">
   <head>
+    <meta charset="UTF-8" />
     <AstroSeo
       title={title}
       description="A collection of modern resources for Sketch."
@@ -58,7 +59,6 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
         handle: "@prmack",
       }}
     />
-    <meta charset="UTF-8" />
     <meta name="theme-color" content="#030712" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -80,8 +80,7 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
       is:inline
       type="module"
       src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    >
-    </script>
+    ></script>
 
     <meta name="generator" content={Astro.generator} />
 

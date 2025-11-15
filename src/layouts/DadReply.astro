@@ -17,6 +17,7 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
 
 <html lang="en" class="scroll-smooth bg-white">
   <head>
+    <meta charset="UTF-8" />
     <AstroSeo
       title={longTitle}
       description="Instantly reply to your emails with minimal effort and maximum dad energy."
@@ -53,7 +54,6 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
         handle: "@prmack",
       }}
     />
-    <meta charset="UTF-8" />
     <meta name="theme-color" content="#FFFFFF" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
@@ -71,9 +71,10 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
       is:inline
       type="module"
       src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    ></script>
-    <script is:inline src="https://kit.fontawesome.com/180e1f6a33.js" crossorigin="anonymous">
+    >
     </script>
+    <script is:inline src="https://kit.fontawesome.com/180e1f6a33.js" crossorigin="anonymous"
+    ></script>
     <meta name="generator" content={Astro.generator} />
     <Analytics productName="Dad Reply" />
     <ClientRouter />
