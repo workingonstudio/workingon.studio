@@ -83,7 +83,7 @@ export default defineConfig({
       
       // Is Figma Down
       {
-        provider: fontProviders.bunny(),
+        provider: fontProviders.fontsource(),
         name: "Inter",
         cssVariable: "--font-inter",
         display: "swap",
