@@ -1,0 +1,13 @@
+{
+  "category": "plugins",
+  "type": "plugin",
+  "slug": "sort-layers",
+  "title": "Sort Layers",
+  "tagline": "Sort by name, position, or type.",
+  "description": "I don't understand why this just isn't a thing. Sort layers by name. A-Z, Z-A etc.",
+  "released": true,
+  "links": {
+    "download": "https://github.com/workingonstudio/sort-layers.sketchplugin/releases/download/v1.0.0/sort-layers.sketchplugin.zip",
+    "github": "https://github.com/workingonstudio/sort-layers.sketchplugin/releases/tag/v1.0.0"
+  }
+}

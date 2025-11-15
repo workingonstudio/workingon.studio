@@ -1,0 +1,17 @@
+{
+  "category": "icons",
+  "type": "icon",
+  "slug": "lucide-icons",
+  "title": "Lucide Icons",
+  "tagline": "Beautiful & consistent icons.",
+  "description": "1,641 icons. Downloaded. Sorted. And turned into a library. You better be grateful.",
+  "released": true,
+  "links": {
+    "download": "sketch://add-library/cloud/b25074ba-4722-438c-85bf-59cac8032ec3",
+    "workspace": "https://www.sketch.com/s/b25074ba-4722-438c-85bf-59cac8032ec3",
+    "source": {
+      "label": "lucide.dev",
+      "url": "https://lucide.dev/"
+    }
+  }
+}

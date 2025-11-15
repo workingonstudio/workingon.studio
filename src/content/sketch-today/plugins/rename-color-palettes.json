@@ -1,0 +1,13 @@
+{
+  "category": "plugins",
+  "type": "plugin",
+  "slug": "rename-color-palettes",
+  "title": "Rename Color Palettes",
+  "tagline": "Find and replace text in color variable names.",
+  "description": "",
+  "released": false,
+  "links": {
+    "download": "/",
+    "github": "/"
+  }
+}

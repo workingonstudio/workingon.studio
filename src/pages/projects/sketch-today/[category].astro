@@ -2,30 +2,28 @@
 import SketchToday from "@layouts/SketchToday.astro";
 import ContentHeader from "@components/sketch-today/partials/ContentHeader.svelte";
 import ResourceList from "@components/sketch-today/ResourceList.svelte";
-import iconsData from "@data/sketch-today/icons.json";
-import palettesData from "@data/sketch-today/palettes.json";
-import systemsData from "@data/sketch-today/systems.json";
-import pluginsData from "@data/sketch-today/plugins.json";
+import { getCollection } from "astro:content";
 
-export function getStaticPaths() {
-  return [
-    { params: { category: "icons" } },
-    { params: { category: "palettes" } },
-    { params: { category: "systems" } },
-    { params: { category: "plugins" } },
-  ];
+export async function getStaticPaths() {
+  const allResources = await getCollection("sketch-today");
+
+  // Get unique categories
+  const categories = [...new Set(allResources.map((entry) => entry.data.category))];
+
+  return categories.map((category) => {
+    const resourceList = allResources
+      .filter((entry) => entry.data.category === category)
+      .map((entry) => entry.data);
+
+    return {
+      params: { category },
+      props: { resourceList },
+    };
+  });
 }
 
+const { resourceList } = Astro.props;
 const { category } = Astro.params;
-
-const dataMap = {
-  icons: iconsData,
-  palettes: palettesData,
-  systems: systemsData,
-  plugins: pluginsData,
-};
-
-const resourceList = dataMap[category as keyof typeof dataMap];
 const capitalizedCategory = category.charAt(0).toUpperCase() + category.slice(1);
 
 let iconset: string = "heroicons:";
@@ -55,7 +53,12 @@ switch (category) {
 <SketchToday title={"Sketch Today - " + capitalizedCategory} {category}>
   <div class="flex flex-col gap-16 py-18">
     <div class="flex flex-col">
-      <ContentHeader {icon} {bgColor} header={category} subtitle={"The most up-to-date " + category + "."}/>
+      <ContentHeader
+        {icon}
+        {bgColor}
+        header={category}
+        subtitle={"The most up-to-date " + category + "."}
+      />
     </div>
     <ResourceList client:load {resourceList} />
   </div>

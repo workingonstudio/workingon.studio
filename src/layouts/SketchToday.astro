@@ -3,6 +3,7 @@ import "../styles/sketch-today.css";
 import Analytics from "./partials/Analytics.astro";
 import { ClientRouter } from "astro:transitions";
 import { AstroSeo } from "@astrolib/seo";
+import { Font } from "astro:assets";
 
 import Header from "@components/sketch-today/Header.svelte";
 
@@ -20,6 +21,7 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
 <!doctype html>
 <html lang="en" class="dark">
   <head>
+    <meta charset="UTF-8" />
     <AstroSeo
       title={title}
       description="A collection of modern resources for Sketch."
@@ -57,7 +59,6 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
         handle: "@prmack",
       }}
     />
-    <meta charset="UTF-8" />
     <meta name="theme-color" content="#030712" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -74,18 +75,12 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
       href="/sketch-today/favicon-dark.svg"
       media="(prefers-color-scheme: dark)"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
+    <Font cssVariable="--font-montserrat" preload />
     <script
       is:inline
       type="module"
       src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    >
-    </script>
+    ></script>
 
     <meta name="generator" content={Astro.generator} />
 

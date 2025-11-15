@@ -1,0 +1,13 @@
+{
+  "category": "plugins",
+  "type": "plugin",
+  "slug": "instance-sync",
+  "title": "Instance Sync",
+  "tagline": "Sync symbol names after changes.",
+  "description": "If you're anything like me you rename your main symbols. This will sync those changes.",
+  "released": true,
+  "links": {
+    "download": "https://github.com/workingonstudio/instance-sync.sketchplugin/releases/download/v1.0.0/instance-sync.sketchplugin.zip",
+    "github": "https://github.com/workingonstudio/instance-sync.sketchplugin/releases/tag/v1.0.0"
+  }
+}

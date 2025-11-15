@@ -1,0 +1,16 @@
+{
+  "category": "icons",
+  "type": "icon",
+  "slug": "carbon-icons",
+  "title": "Carbon Icons",
+  "tagline": "Icon set created by IBM.",
+  "description": "Sharp. Comprehensive. Looks great at small sizes.",
+  "released": true,
+  "links": {
+    "download": "sketch://add-library/cloud/028e0598-591e-428c-a490-f6ec64b15ea7",
+    "source": {
+      "label": "carbondesignsystem.com",
+      "url": "https://carbondesignsystem.com/elements/icons/library/"
+    }
+  }
+}
