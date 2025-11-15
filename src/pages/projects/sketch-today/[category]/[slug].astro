@@ -2,17 +2,14 @@
 import SketchToday from "@layouts/SketchToday.astro";
 import ContentHeader from "@components/sketch-today/partials/ContentHeader.svelte";
 import SlugButtons from "@components/sketch-today/partials/SlugButtons.svelte";
-import iconsData from "@data/sketch-today/icons.json";
-import palettesData from "@data/sketch-today/palettes.json";
-import systemsData from "@data/sketch-today/systems.json";
-import pluginsData from "@data/sketch-today/plugins.json";
+import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
-  const resourceList = [...iconsData, ...palettesData, ...systemsData, ...pluginsData];
+  const allResources = await getCollection("sketch-today");
 
-  return resourceList.map((resource) => ({
-    params: { category: resource.category, slug: resource.slug },
-    props: { resource },
+  return allResources.map((entry) => ({
+    params: { category: entry.data.category, slug: entry.data.slug },
+    props: { resource: entry.data },
   }));
 }
 
@@ -61,7 +58,7 @@ if (!resource.released) {
   <div class="flex py-18">
     <div class="flex flex-col gap-8">
       <div class="flex flex-col items-start gap-3">
-        <ContentHeader {icon} {bgColor} header={resource.title} subtitle={resource.tagline}/>
+        <ContentHeader {icon} {bgColor} header={resource.title} subtitle={resource.tagline} />
       </div>
       <div class="text-main flex w-full max-w-2xl flex-col text-base/relaxed text-pretty">
         <p>{resource.description}</p>

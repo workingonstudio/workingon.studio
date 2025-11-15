@@ -1,0 +1,18 @@
+{
+  "category": "palettes",
+  "type": "palette",
+  "slug": "google-material",
+  "title": "Google Material Colors",
+  "tagline": "Material default color variables.",
+  "description": "",
+  "released": false,
+  "links": {
+    "download": "/",
+    "workspace": "/",
+    "github": "/",
+    "source": {
+      "label": "",
+      "url": ""
+    }
+  }
+}

@@ -4,12 +4,10 @@ import Hero from "@components/sketch-today/partials/Hero.svelte";
 import CategoryFilters from "@components/sketch-today/partials/CategoryFilters.svelte";
 import ResourceList from "@components/sketch-today/ResourceList.svelte";
 
-import icons from "@data/sketch-today/icons.json";
-import palettes from "@data/sketch-today/palettes.json";
-import plugins from "@data/sketch-today/plugins.json";
-import systems from "@data/sketch-today/systems.json";
+import { getCollection, type CollectionEntry } from "astro:content";
 
-const resourceList = [...icons, ...palettes, ...plugins, ...systems];
+const allResources = await getCollection("sketch-today");
+const resourceList = allResources.map((entry: CollectionEntry<"sketch-today">) => entry.data);
 ---
 
 <SketchToday title="Sketch Today">
