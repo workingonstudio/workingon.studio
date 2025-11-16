@@ -1,6 +1,7 @@
 <script lang="ts">
   import Header from "./Header.svelte";
   import Form from "./Form.svelte";
+  import Badge from "./Badge.svelte";
 </script>
 
 <Header />
@@ -21,9 +22,10 @@
   </section>
   <section class="progress flex flex-col gap-12">
     <div class="flex flex-col gap-6">
-      <div class="flex flex-row gap-4">
+      <div class="flex flex-row items-center gap-4">
         <iconify-icon icon="material-symbols:deployed-code-update-outline-rounded" class="text-2xl"></iconify-icon>
         <h4>Current release</h4>
+        <Badge label="v0.5" />
       </div>
       <ul>
         <li>support for Material icons (regular, 24 x 24).</li>
@@ -33,9 +35,10 @@
       </ul>
     </div>
     <div class="flex flex-col gap-6">
-      <div class="flex flex-row gap-4">
+      <div class="flex flex-row items-center gap-4">
         <iconify-icon icon="material-symbols:arrow-right-alt-rounded" class="text-2xl"></iconify-icon>
         <h4>Next release</h4>
+        <Badge label="v0.8" />
       </div>
       <ul>
         <li>support for full Material icons.</li>

@@ -35,7 +35,7 @@
   }
 
   h1 {
-    @apply text-3xl/12 lg:text-6xl/21;
+    @apply text-5xl/16 lg:text-6xl/21;
   }
 
   h2 {
