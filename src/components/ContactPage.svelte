@@ -40,7 +40,7 @@
   </h1>
   <div class="flex max-w-xl flex-col gap-12">
     <p>
-      Whether you take my advice is entirely up to you. I don’t care. I’ll be riding into the sunset with a sack of
+      Whether you take my advice is entirely up to you. I'll have done my bit, riding into the sunset with a sack of
       money.
     </p>
     <small class="text-body flex flex-row gap-1">
@@ -50,7 +50,7 @@
           <p class="text-sm/relaxed">
             Each time you visit this page my day rate <strong>increases by £10.</strong>
             <br />
-            If it takes you too long to decide anything this is your punishment.
+            If it takes you too long to decide, this is your punishment.
           </p>
         </div>
       </div>
