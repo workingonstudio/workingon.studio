@@ -1,0 +1,68 @@
+---
+import "../styles/base.css";
+import "../styles/glyph-palette.css";
+
+import Analytics from "./partials/Analytics.astro";
+import { AstroSeo } from "@astrolib/seo";
+import { ClientRouter } from "astro:transitions";
+import { Font } from "astro:assets";
+
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+const longTitle = title + " - workingon.studio";
+const currentURL = new URL(Astro.url.pathname, Astro.site).href;
+---
+
+<html lang="en" class="scroll-smooth">
+  <meta charset="UTF-8" />
+
+  <AstroSeo
+    title={longTitle}
+    description=""
+    canonical={currentURL}
+    openGraph={{
+      url: currentURL,
+      title: title,
+      description: "",
+      images: [
+        {
+          url: Astro.site + "",
+          height: 600,
+          width: 1200,
+        },
+        {
+          url: Astro.site + "",
+          height: 1080,
+          width: 1080,
+        },
+      ],
+      site_name: "",
+      type: "site",
+    }}
+  />
+  <meta name="theme-color" content="" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- <link rel="icon" type="image/png" href="/glyph-palette/favicon.svg" /> -->
+  <Font cssVariable="--font-cabinet-grotesk" preload />
+  <Font cssVariable="--font-satoshi" preload />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
+  <script
+    is:inline
+    type="module"
+    src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
+  ></script>
+  <script is:inline src="https://kit.fontawesome.com/180e1f6a33.js" crossorigin="anonymous">
+  </script>
+  <meta name="generator" content={Astro.generator} />
+  <Analytics productName="Glyph Palette" />
+  <ClientRouter />
+
+  <body>
+    <slot />
+  </body>
+</html>

@@ -88,7 +88,27 @@ export default defineConfig({
         cssVariable: "--font-inter",
         display: "swap",
         weights: [400, 600]
-      }
+      },
+
+      // Glyph Palette
+      {
+        provider : fontProviders.fontshare(),
+        name: "Cabinet Grotesk",
+        cssVariable : "--font-cabinet-grotesk",
+        display: "swap",
+        weights: [600, 700],
+        styles: ['normal']
+      },
+
+      {
+        provider : fontProviders.fontshare(),
+        name: "Satoshi",
+        cssVariable : "--font-satoshi",
+        display: "swap",
+        weights: [500, 700],
+        styles: ['normal']
+      },
+
     ]
   },
   vite: {
