@@ -2,6 +2,7 @@
   import Header from "./Header.svelte";
   import Form from "./Form.svelte";
   import Changelog from "./Changelog.svelte";
+  import Plugin from "./Plugin.svelte";
 
   export let changelogData;
 </script>
@@ -24,6 +25,7 @@
   </section>
   <Changelog {changelogData} />
 </div>
+<Plugin />
 
 <style>
   @reference "@styles/glyph-palette.css";
