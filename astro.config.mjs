@@ -9,7 +9,18 @@ export default defineConfig({
   site: process.env.SITE_URL || (import.meta.env.DEV 
     ? "http://localhost:4321"
     : "https://workingon.studio"),
-  integrations: [svelte(), sitemap()],
+  integrations: [svelte(), sitemap({
+    filter: (page) => {
+      // Remove duplicate URLs - keep the canonical versions
+      const duplicates = [
+        '/projects/dadreply/',
+        '/projects/sketchtoday/',
+        '/projects/glyphpalette',
+        '/projects/solidarity/Main/'
+      ];
+      return !duplicates.some(dup => page.includes(dup));
+    },
+  })],
   prefetch: true,
   experimental: {
     fonts: [
