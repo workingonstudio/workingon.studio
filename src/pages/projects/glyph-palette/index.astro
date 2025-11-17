@@ -1,10 +1,19 @@
 ---
 import GlyphPalette from "@layouts/GlyphPalette.astro";
 import Main from "@components/glyph-palette/Main.svelte";
+
+import { getCollection } from "astro:content";
+
+const allChangelogs = await getCollection("changelogs");
+const productChangelogs = allChangelogs
+  .filter((entry) => entry.data.product === "glyph-palette")
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+const changelogData = productChangelogs.map((entry) => entry.data);
 ---
 
 <GlyphPalette title="Glyph Palette">
   <div class="mx-auto flex max-w-full flex-col px-4 md:max-w-6xl md:pt-0">
-    <Main />
+    <Main {changelogData} />
   </div>
 </GlyphPalette>

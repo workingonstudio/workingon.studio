@@ -1,0 +1,8 @@
+{
+  "product": "glyph-palette",
+  "version": "0.0.5",
+  "date": "2025-11-17T00:00:00.000Z",
+  "status": "current",
+  "icon": "material-symbols:deployed-code-update-outline-rounded",
+  "items": ["support for Material icons (regular, 24 x 24).", "insert as svg."]
+}
