@@ -4,7 +4,7 @@
   import Changelog from "./Changelog.svelte";
   import Plugin from "./Plugin.svelte";
 
-  export let changelogData;
+  export let productChangelogs;
 </script>
 
 <Header />
@@ -28,7 +28,7 @@
     </div>
     <Plugin />
   </div>
-  <Changelog {changelogData} />
+  <Changelog {productChangelogs} />
 </div>
 
 <style>

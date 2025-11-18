@@ -1,6 +1,10 @@
 {
   "product": "glyph-palette",
-  "version": "0.2.0",
+  "version": {
+    "major": 0,
+    "minor": 2,
+    "patch": 0
+  },
   "date": "2025-11-17T00:00:00.000Z",
   "status": "future",
   "icon": "material-symbols:event-upcoming-rounded",

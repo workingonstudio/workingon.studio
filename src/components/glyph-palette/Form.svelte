@@ -36,7 +36,7 @@
     button {
       @apply bg-primary rounded-md border-2 border-transparent px-4 py-2 text-base font-bold transition-colors duration-250;
       &:hover {
-        @apply text-text cursor-pointer border-2 border-orange-300 bg-white;
+        @apply text-text cursor-pointer bg-gray-200;
       }
     }
   }

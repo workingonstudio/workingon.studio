@@ -1,15 +1,15 @@
 <script lang="ts">
   import Badge from "./Badge.svelte";
-  export let changelogData;
+  export let productChangelogs;
 </script>
 
 <section class="progress flex flex-col gap-12">
-  {#each changelogData as { version, date, status, icon, items }}
+  {#each productChangelogs as { version, date, status, icon, items }}
     <div class="flex flex-col gap-6">
       <div class="flex flex-row items-center gap-4">
         <iconify-icon {icon} class="text-2xl"></iconify-icon>
         <h4>{status} release</h4>
-        <Badge label={"v" + version} />
+        <Badge label={`v${version.major}.${version.minor}.${version.patch}`} />
       </div>
       <ul>
         {#each items as item}
