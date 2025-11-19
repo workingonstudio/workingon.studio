@@ -8,7 +8,7 @@
       latest alpha.
     </p>
   </div>
-  <form action="" class="flex flex-row gap-3">
+  <form action="" class="flex flex-col gap-3 md:flex-row">
     <label for="email" class="flex flex-1 flex-row items-center gap-3">
       <iconify-icon icon="material-symbols:mail-outline-rounded" class="text-text"></iconify-icon>
       <input type="email" id="email" />

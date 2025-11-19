@@ -2,7 +2,7 @@
   import Icon from "./Icon.svelte";
 </script>
 
-<div class="flex flex-row gap-6">
+<div class="flex flex-col gap-12 md:flex-row md:gap-6">
   <div class="feature">
     <Icon icon="manage-search-rounded" />
     <div class="flex flex-col gap-1">
@@ -32,7 +32,7 @@
 <style>
   @reference "@styles/glyph-palette.css";
   .feature {
-    @apply flex w-1/3 flex-col gap-6;
+    @apply flex w-full flex-col gap-6 md:w-1/3;
     span {
       @apply flex items-center rounded-full bg-orange-300 px-2 py-0.5 text-[9px] uppercase;
     }

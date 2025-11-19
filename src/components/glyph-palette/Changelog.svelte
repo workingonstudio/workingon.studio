@@ -4,15 +4,15 @@
   export let productChangelogs;
 </script>
 
-<div class="flex flex-row justify-between gap-6">
-  <div class="flex w-xl flex-col gap-6">
+<div class="flex flex-col justify-between gap-12 md:flex-row md:gap-6">
+  <div class="flex w-full flex-col gap-6 md:w-xl">
     <Icon icon="map-search-outline-rounded" />
     <div class="flex flex-col gap-3">
       <h2>Roadmap.</h2>
       <p class="text-xl">No Gantt chart here. Just a list of features, and improvements I hope to add.</p>
     </div>
   </div>
-  <div class="flex w-md flex-col gap-6">
+  <div class="flex w-full flex-col gap-6 md:w-md">
     {#each productChangelogs as { version, date, status, icon, items }}
       <div class="flex flex-col gap-6 rounded-2xl bg-stone-100 p-6">
         <div class="flex flex-row items-center gap-4">

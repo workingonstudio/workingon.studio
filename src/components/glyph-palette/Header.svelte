@@ -10,7 +10,7 @@
       <Badge label="v0.5" />
     </div>
   </div>
-  <nav>
+  <nav class="hidden sm:inline">
     <ul class="flex flex-row gap-6">
       <li><a href="/">Roadmap</a></li>
       <li class="flex items-center gap-1">
