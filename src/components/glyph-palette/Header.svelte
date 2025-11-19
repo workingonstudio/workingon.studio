@@ -2,7 +2,7 @@
   import Badge from "./Badge.svelte";
 </script>
 
-<header class="flex flex-row items-center justify-between">
+<header id="top" class="flex flex-row items-center justify-between">
   <div class="flex flex-row items-center gap-6">
     <a href="/" class="logo">glyph.palette</a>
     <div class="flex flex-row gap-3">
@@ -11,9 +11,12 @@
     </div>
   </div>
   <nav>
-    <ul class="flex flex-row gap-3">
+    <ul class="flex flex-row gap-6">
       <li><a href="/">Roadmap</a></li>
-      <li><a href="/">Changelog</a></li>
+      <li class="flex items-center gap-1">
+        <a href="https://sketchto.day">Sketchto.day</a>
+        <iconify-icon icon="material-symbols:open-in-new"></iconify-icon>
+      </li>
     </ul>
   </nav>
 </header>
@@ -27,6 +30,9 @@
     }
     nav {
       @apply text-xs uppercase;
+      a {
+        @apply hover:underline;
+      }
     }
   }
 </style>
