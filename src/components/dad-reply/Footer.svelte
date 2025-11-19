@@ -8,7 +8,7 @@
     <div class="flex flex-row items-center gap-6">
       <Emoji class_="text-xl" emoji="👋" />
       <a href="/projects/dad-reply/changelog/" title="View Changelog" class="flex">
-        <Badge text={"v1.5.5"} />
+        <Badge text={"v1.5.6"} />
       </a>
     </div>
     <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between md:gap-0">
