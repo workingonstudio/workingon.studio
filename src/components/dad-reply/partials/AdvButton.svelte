@@ -7,7 +7,7 @@
 
   let containerRef: any;
 
-  let selectedIndex = 1;
+  let selectedIndex = 2;
 
   $: currentButton = buttonOptions[selectedIndex];
 
