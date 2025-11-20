@@ -28,13 +28,16 @@
         <span class="text-text-body rounded-full bg-orange-100 px-2 py-0.5 text-[9px]">Soon</span>
       </div>
     </div>
-    <div class="quote flex flex-col gap-1">
-      <blockquote cite="https://x.com/rrhoover/status/1954983479135047766">
-        Y'all building AGI when you could be innovating like this.
-      </blockquote>
-      <a href="https://x.com/rrhoover/status/1954983479135047766" target="_blank">
-        Ryan Hoover. Founder of Product Hunt.
-      </a>
+    <div class="quote flex flex-row items-center gap-6">
+      <span class="text-xl">💬</span>
+      <div class="flex flex-col gap-1">
+        <blockquote cite="https://x.com/rrhoover/status/1954983479135047766">
+          Y'all building AGI when you could be innovating like this.
+        </blockquote>
+        <a href="https://x.com/rrhoover/status/1954983479135047766" target="_blank">
+          Ryan Hoover. Founder of Product Hunt.
+        </a>
+      </div>
     </div>
   </div>
   <div class="card email-container the-shadow flex-1 md:order-none lg:max-w-3xl">

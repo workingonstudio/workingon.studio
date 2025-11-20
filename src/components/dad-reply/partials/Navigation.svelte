@@ -25,6 +25,7 @@
       <a
         href="https://chromewebstore.google.com/detail/ddkeoflblemlolckmnhihhabplfmogop"
         class="text-blue-600 underline hover:!no-underline"
+        data-umami-event="clicked-install-header"
       >
         Add to Chrome
       </a>

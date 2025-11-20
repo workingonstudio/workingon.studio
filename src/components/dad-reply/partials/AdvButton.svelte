@@ -1,4 +1,3 @@
-<!-- src/components/dad-reply/partials/NewButton.svelte -->
 <script lang="ts">
   import Emoji from "./Emoji.svelte";
 
