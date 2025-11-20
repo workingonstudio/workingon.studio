@@ -1,4 +1,3 @@
-<!-- src/components/dad-reply/partials/NewButton.svelte -->
 <script lang="ts">
   import Emoji from "./Emoji.svelte";
 
@@ -7,7 +6,7 @@
 
   let containerRef: any;
 
-  let selectedIndex = 1;
+  let selectedIndex = 2;
 
   $: currentButton = buttonOptions[selectedIndex];
 
