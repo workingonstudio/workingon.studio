@@ -7,7 +7,7 @@ function createDayRateStore() {
 
   // Initialize from localStorage if available
   const stored = isBrowser ? localStorage.getItem("dayRate") : null;
-  const initial = stored ? JSON.parse(stored) : { visits: 0, rate: 500 };
+  const initial = stored ? JSON.parse(stored) : { visits: 0 };
 
   const { subscribe, set, update } = writable(initial);
 
@@ -17,7 +17,6 @@ function createDayRateStore() {
       update((state) => {
         const newState = {
           visits: state.visits + 1,
-          rate: state.rate + 10,
         };
         if (isBrowser) {
           localStorage.setItem("dayRate", JSON.stringify(newState));
@@ -25,12 +24,13 @@ function createDayRateStore() {
         return newState;
       }),
     reset: () => {
-      const resetState = { visits: 0, rate: 500 };
+      const resetState = { visits: 0 };
       if (isBrowser) {
         localStorage.setItem("dayRate", JSON.stringify(resetState));
       }
       set(resetState);
     },
+    getBaseRate: (visits) => 500 + visits * 10,
   };
 }
 
