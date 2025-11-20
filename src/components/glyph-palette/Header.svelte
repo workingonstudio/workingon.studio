@@ -12,7 +12,7 @@
   </div>
   <nav class="hidden sm:inline">
     <ul class="flex flex-row gap-6">
-      <li><a href="/">Roadmap</a></li>
+      <li><a href="#roadmap">Roadmap</a></li>
       <li class="flex items-center gap-1">
         <a href="https://sketchto.day">Sketchto.day</a>
         <iconify-icon icon="material-symbols:open-in-new"></iconify-icon>

@@ -4,7 +4,7 @@
   export let icon: boolean;
   export let iconRef: string = "";
   export let downloadLink: string = "/";
-  export let position: string = "header";
+  export let position: string = "hero";
 </script>
 
 <a href={downloadLink} class="btn cursor-pointer gap-2.5 {style}" data-umami-event="clicked-install-{position}">

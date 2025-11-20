@@ -4,7 +4,7 @@
   export let productChangelogs;
 </script>
 
-<div class="flex flex-col justify-between gap-12 md:flex-row md:gap-6">
+<div id="roadmap" class="flex flex-col justify-between gap-12 md:flex-row md:gap-6">
   <div class="flex w-full flex-col gap-6 md:w-xl">
     <Icon icon="map-search-outline-rounded" />
     <div class="flex flex-col gap-3">
