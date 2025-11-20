@@ -79,6 +79,7 @@
             style="{style} w-full"
             {label}
             downloadLink="https://chromewebstore.google.com/detail/ddkeoflblemlolckmnhihhabplfmogop"
+            position="pricing"
           />
         {/if}
       </div>
