@@ -19,6 +19,14 @@
     "link": "sketch-today"
   },
   {
+    "name": "Glyph Palette",
+    "description": "A modern icon plugin for Sketch.",
+    "version": "0.0.5",
+    "status": "shipped",
+    "tags": [{ "icon": "carbon:magic-wand", "text": "free" }],
+    "link": "glyph-palette"
+  },
+  {
     "name": "Solidarity",
     "description": "Helps you feel less shit about looking for work.",
     "version": "1.0.1",
