@@ -7,7 +7,7 @@
     <a href="/" class="logo">glyph.palette</a>
     <div class="flex flex-row gap-3">
       <Badge label="Alpha" bgColor="bg-orange-300" />
-      <Badge label="v0.5" />
+      <Badge label="v0.0.5" />
     </div>
   </div>
   <nav class="hidden sm:inline">

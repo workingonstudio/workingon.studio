@@ -58,7 +58,7 @@
         {#if !$isValid}
           <iconify-icon icon="material-symbols:mail-outline-rounded" class="text-text"></iconify-icon>
         {:else if $isSubmitting}
-          <iconify-icon icon="material-symbols:progress-activity" class="text-text"></iconify-icon>
+          <iconify-icon icon="material-symbols:progress-activity" class="text-text animate-spin"></iconify-icon>
         {:else}
           <iconify-icon icon="material-symbols:check-circle-rounded" class="text-green-600"></iconify-icon>
         {/if}
