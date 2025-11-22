@@ -31,4 +31,8 @@
 </div>
 
 <style>
+  @reference "@styles/glyph-palette.css";
+  small {
+    @apply text-gray-500;
+  }
 </style>
