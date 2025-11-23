@@ -53,6 +53,17 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
         cardType: "summary_large_image",
         handle: "@prmack",
       }}
+      ,
+      additionalMetaTags={[
+        {
+          name: "twitter:image",
+          content: Astro.site + "/dad-reply/opengraph/site-square.png",
+        },
+        {
+          name: "twitter:url",
+          content: "https://dadreply.com",
+        },
+      ]}
     />
     <meta name="theme-color" content="#FFFFFF" />
     <meta name="mobile-web-app-capable" content="yes" />
@@ -71,10 +82,9 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
       is:inline
       type="module"
       src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    >
-    </script>
-    <script is:inline src="https://kit.fontawesome.com/180e1f6a33.js" crossorigin="anonymous"
     ></script>
+    <script is:inline src="https://kit.fontawesome.com/180e1f6a33.js" crossorigin="anonymous">
+    </script>
     <meta name="generator" content={Astro.generator} />
     <Analytics productName="Dad Reply" />
     <ClientRouter />
