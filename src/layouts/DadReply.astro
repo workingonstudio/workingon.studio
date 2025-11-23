@@ -53,6 +53,17 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
         cardType: "summary_large_image",
         handle: "@prmack",
       }}
+      ,
+      additionalMetaTags={[
+        {
+          name: "twitter:image",
+          content: "dad-reply/opengraph/site-square.png",
+        },
+        {
+          name: "twitter:url",
+          content: "https://dadreply.com",
+        },
+      ]}
     />
     <meta name="theme-color" content="#FFFFFF" />
     <meta name="mobile-web-app-capable" content="yes" />
