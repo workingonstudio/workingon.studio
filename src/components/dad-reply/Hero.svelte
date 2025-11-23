@@ -14,7 +14,6 @@
       <h1>
         One-click emoji<br/>replies for Gmail.
       </h1>
-      <p>Email replies without the email part.</p>
     </div>
     <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-center lg:justify-normal">
       <DownloadButton
