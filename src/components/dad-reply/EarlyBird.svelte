@@ -22,8 +22,6 @@
         const formBody =
           "source=website&" +
           "userGroup=earlybird&" +
-          "product=" +
-          encodeURIComponent("Dad Reply") +
           "&mailingLists=" +
           encodeURIComponent("cmi7nt8xr95570iwx1quicmro") +
           "&email=" +
