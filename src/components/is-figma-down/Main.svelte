@@ -32,7 +32,9 @@
         Try Penpot
       </a>
     </div>
-    <small>* you could always run Coral Draw through a VM?</small>
+    <small>
+      Service provided by <a href="https://wo.studio">workingon.studio</a>
+    </small>
   </div>
 </div>
 

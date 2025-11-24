@@ -22,12 +22,12 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
 
     <AstroSeo
       title={longTitle}
-      description="The unofficial status of a well know SaaS product."
+      description="The unofficial status of a well known SaaS product."
       canonical={currentURL}
       openGraph={{
         url: currentURL,
         title: title,
-        description: "The unofficial status of a well know SaaS product.",
+        description: "The unofficial status of a well known SaaS product.",
         images: [
           {
             url: Astro.site + "",
@@ -65,10 +65,9 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
       is:inline
       type="module"
       src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    >
-    </script>
-    <script is:inline src="https://kit.fontawesome.com/180e1f6a33.js" crossorigin="anonymous"
     ></script>
+    <script is:inline src="https://kit.fontawesome.com/180e1f6a33.js" crossorigin="anonymous">
+    </script>
     <meta name="generator" content={Astro.generator} />
     <Analytics productName="Figma Down" />
     <ClientRouter />
