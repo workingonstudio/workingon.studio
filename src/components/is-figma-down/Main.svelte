@@ -33,7 +33,7 @@
       </a>
     </div>
     <small>
-      Service provided by <a href="https://wo.studio">workingon.studio</a>
+      Service provided by <a href="/">workingon.studio</a>
     </small>
   </div>
 </div>
