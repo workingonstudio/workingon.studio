@@ -64,6 +64,13 @@ const nudicaMonoFontUrl = import.meta.env.NUDICA_MONO_FONT_CSS_URL;
         cardType: "summary_large_image",
         handle: "@prmack",
       }}
+      ,
+      additionalMetaTags={[
+        {
+          name: "twitter:image",
+          content: Astro.site + "site-default.webp",
+        },
+      ]}
     />
 
     <meta name="theme-color" content="#030712" />
@@ -78,8 +85,7 @@ const nudicaMonoFontUrl = import.meta.env.NUDICA_MONO_FONT_CSS_URL;
       is:inline
       type="module"
       src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    >
-    </script>
+    ></script>
 
     <meta name="generator" content={Astro.generator} />
 

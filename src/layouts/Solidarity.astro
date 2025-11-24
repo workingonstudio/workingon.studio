@@ -46,6 +46,18 @@ const publishDate = new Date().toISOString();
         site_name: "workingon.studio",
         type: "site",
       }}
+      ,
+      twitter={{
+        cardType: "summary_large_image",
+        handle: "@prmack",
+      }}
+      ,
+      additionalMetaTags={[
+        {
+          name: "twitter:image",
+          content: Astro.site + "solidarity/opengraph/site-default.webp",
+        },
+      ]}
     />
     <meta name="theme-color" content="#FAFAF9" />
     <meta name="mobile-web-app-capable" content="yes" />

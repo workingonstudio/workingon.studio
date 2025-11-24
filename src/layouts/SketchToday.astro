@@ -58,6 +58,17 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
         cardType: "summary_large_image",
         handle: "@prmack",
       }}
+      ,
+      additionalMetaTags={[
+        {
+          name: "twitter:image",
+          content: Astro.site + "sketch-today/opengraph/site-default.webp",
+        },
+        {
+          name: "twitter:url",
+          content: "https://sketchto.day",
+        },
+      ]}
     />
     <meta name="theme-color" content="#030712" />
     <meta name="mobile-web-app-capable" content="yes" />
@@ -80,8 +91,7 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
       is:inline
       type="module"
       src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    >
-    </script>
+    ></script>
 
     <meta name="generator" content={Astro.generator} />
 
