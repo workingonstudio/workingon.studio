@@ -25,7 +25,7 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
       openGraph={{
         url: currentURL,
         title: title,
-        description: "One-click emoji replies for Gmail.",
+        description: "Reply in one click. No typing. No thinking. Just send it.",
         images: [
           {
             url: Astro.site + "dad-reply/opengraph/site-default.webp",
@@ -82,10 +82,9 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
       is:inline
       type="module"
       src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    >
-    </script>
-    <script is:inline src="https://kit.fontawesome.com/180e1f6a33.js" crossorigin="anonymous"
     ></script>
+    <script is:inline src="https://kit.fontawesome.com/180e1f6a33.js" crossorigin="anonymous">
+    </script>
     <meta name="generator" content={Astro.generator} />
     <Analytics productName="Dad Reply" />
     <ClientRouter />
