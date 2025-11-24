@@ -42,6 +42,13 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
       site_name: "isfigmadown.com",
       type: "site",
     }}
+    ,
+    additionalMetaTags={[
+      {
+        name: "twitter:url",
+        content: "https://isfigmadown.com",
+      },
+    ]}
   />
   <meta name="theme-color" content="#020618" />
   <meta name="mobile-web-app-capable" content="yes" />
