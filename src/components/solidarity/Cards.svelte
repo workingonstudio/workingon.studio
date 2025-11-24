@@ -1,7 +1,6 @@
 <script lang="ts">
   import { toggleStore } from "@stores/solidarity/toggle";
   import Card from "./partials/Card.svelte";
-  import Toggle from "@components/solidarity/partials/Toggle.svelte";
 
   let originalUsers = [
     {

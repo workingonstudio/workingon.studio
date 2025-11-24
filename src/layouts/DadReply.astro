@@ -20,27 +20,27 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
     <meta charset="UTF-8" />
     <AstroSeo
       title={longTitle}
-      description="Instantly reply to your emails with minimal effort and maximum dad energy."
+      description="One-click emoji replies for Gmail."
       canonical={currentURL}
       openGraph={{
         url: currentURL,
         title: title,
-        description: "Instantly reply to your emails with minimal effort and maximum dad energy.",
+        description: "One-click emoji replies for Gmail.",
         images: [
           {
-            url: Astro.site + "dad-reply/opengraph/site-default.png",
+            url: Astro.site + "dad-reply/opengraph/site-default.webp",
             height: 630,
             width: 1200,
             alt: "Dad Reply - Email replies without the email part",
           },
           {
-            url: Astro.site + "dad-reply/opengraph/site-square.png",
+            url: Astro.site + "dad-reply/opengraph/site-square.webp",
             height: 1200,
             width: 1200,
             alt: "Dad Reply - Email replies without the email part",
           },
           {
-            url: Astro.site + "dad-reply/opengraph/site-minimum.png",
+            url: Astro.site + "dad-reply/opengraph/site-minimum.webp",
             height: 315,
             width: 600,
             alt: "Dad Reply - Email replies without the email part",
@@ -57,7 +57,7 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
       additionalMetaTags={[
         {
           name: "twitter:image",
-          content: Astro.site + "/dad-reply/opengraph/site-square.png",
+          content: Astro.site + "/dad-reply/opengraph/site-square.webp",
         },
         {
           name: "twitter:url",

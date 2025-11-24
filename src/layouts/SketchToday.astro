@@ -32,19 +32,19 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
         description: "A collection of modern resources for Sketch.",
         images: [
           {
-            url: Astro.site + "sketch-today/opengraph/site-default.png",
+            url: Astro.site + "sketch-today/opengraph/site-default.webp",
             height: 630,
             width: 1200,
             alt: "Sketch Today - A collection of modern resources for Sketch",
           },
           {
-            url: Astro.site + "sketch-today/opengraph/site-square.png",
+            url: Astro.site + "sketch-today/opengraph/site-square.webp",
             height: 1200,
             width: 1200,
             alt: "Sketch Today - A collection of modern resources for Sketch",
           },
           {
-            url: Astro.site + "sketch-today/opengraph/site-minimum.png",
+            url: Astro.site + "sketch-today/opengraph/site-minimum.webp",
             height: 600,
             width: 315,
             alt: "Sketch Today - A collection of modern resources for Sketch",
@@ -80,7 +80,8 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
       is:inline
       type="module"
       src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    ></script>
+    >
+    </script>
 
     <meta name="generator" content={Astro.generator} />
 
