@@ -22,11 +22,23 @@
         iconRef="chrome"
         downloadLink="https://chromewebstore.google.com/detail/ddkeoflblemlolckmnhihhabplfmogop"
       />
-      <div class="btn relative cursor-default items-center gap-2 text-gray-400">
+      <div class="flex flex-row justify-center">
+        <a
+          href="https://www.producthunt.com/products/dad-reply?embed=true&utm_source=badge-top-post-badge&utm_medium=badge&utm_source=badge-dad&#0045;reply"
+          target="_blank"
+          style="width:210px;"
+        >
+          <img
+            src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=1003794&theme=neutral&period=daily&t=1763999025084"
+            alt="Dad&#0032;Reply - Auto&#0045;respond&#0032;with&#0032;a&#0032;👍&#0032;&#0045;&#0032;Minimal&#0032;effort&#0032;&#0045;&#0032;Maximum&#0032;ambiguity | Product Hunt"
+          />
+        </a>
+      </div>
+      <!-- <div class="btn relative cursor-default items-center gap-2 text-gray-400">
         <iconify-icon icon="fa7-brands:firefox" class="text-xl"></iconify-icon>
         Add to Firefox
         <span class="text-text-body rounded-full bg-orange-100 px-2 py-0.5 text-[9px]">Soon</span>
-      </div>
+      </div> -->
     </div>
     <div class="quote flex flex-row items-center gap-6">
       <span class="text-xl">💬</span>
@@ -55,7 +67,6 @@
       @apply text-xs;
     }
   }
-
   .email-container {
     @apply md:w-2/3;
     @apply md:relative md:bottom-0;

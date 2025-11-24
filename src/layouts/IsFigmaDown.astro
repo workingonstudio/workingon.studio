@@ -17,57 +17,61 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
 ---
 
 <html lang="en" class="scroll-smooth bg-[#1E1E1E]">
-  <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
 
-  <AstroSeo
-    title={longTitle}
-    description="The unofficial status of a well know SaaS product."
-    canonical={currentURL}
-    openGraph={{
-      url: currentURL,
-      title: title,
-      description: "The unofficial status of a well know SaaS product.",
-      images: [
+    <AstroSeo
+      title={longTitle}
+      description="The unofficial status of a well known SaaS product."
+      canonical={currentURL}
+      openGraph={{
+        url: currentURL,
+        title: title,
+        description: "The unofficial status of a well known SaaS product.",
+        images: [
+          {
+            url: Astro.site + "",
+            height: 600,
+            width: 1200,
+          },
+          {
+            url: Astro.site + "",
+            height: 1080,
+            width: 1080,
+          },
+        ],
+        site_name: "isfigmadown.com",
+        type: "site",
+      }}
+      ,
+      additionalMetaTags={[
         {
-          url: Astro.site + "",
-          height: 600,
-          width: 1200,
+          name: "twitter:url",
+          content: "https://isfigmadown.com",
         },
-        {
-          url: Astro.site + "",
-          height: 1080,
-          width: 1080,
-        },
-      ],
-      site_name: "isfigmadown.com",
-      type: "site",
-    }}
-    ,
-    additionalMetaTags={[
-      {
-        name: "twitter:url",
-        content: "https://isfigmadown.com",
-      },
-    ]}
-  />
-  <meta name="theme-color" content="#020618" />
-  <meta name="mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" href="/is-figma-down/favicon.svg" />
-  <Font cssVariable="--font-inter" preload />
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
-  <script
-    is:inline
-    type="module"
-    src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-  ></script>
-  <script is:inline src="https://kit.fontawesome.com/180e1f6a33.js" crossorigin="anonymous">
-  </script>
-  <meta name="generator" content={Astro.generator} />
-  <Analytics productName="Figma Down" />
-  <ClientRouter />
-
+      ]}
+    />
+    <meta name="theme-color" content="#020618" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/is-figma-down/favicon.svg" />
+    <Font cssVariable="--font-inter" preload />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded"
+      rel="stylesheet"
+    />
+    <script
+      is:inline
+      type="module"
+      src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
+    ></script>
+    <script is:inline src="https://kit.fontawesome.com/180e1f6a33.js" crossorigin="anonymous">
+    </script>
+    <meta name="generator" content={Astro.generator} />
+    <Analytics productName="Figma Down" />
+    <ClientRouter />
+  </head>
   <body>
     <slot />
   </body>
