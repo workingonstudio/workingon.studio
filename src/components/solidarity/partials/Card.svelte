@@ -15,7 +15,7 @@
 <div class={itemAlign}>
   {#if overlay}
     <img
-      src="/solidarity/otw-overlay.png"
+      src="/solidarity/otw-overlay.webp"
       alt="otw overlay"
       class="overlay absolute {sizeClass} fade-spin-scale-in rounded-full"
       out:fade={{ duration: 1000 }}

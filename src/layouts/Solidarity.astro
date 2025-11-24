@@ -33,12 +33,12 @@ const publishDate = new Date().toISOString();
         description: "A Chrome Extension that makes you feel less s**t about looking for work.",
         images: [
           {
-            url: Astro.site + "solidarity/opengraph/site-default.png",
+            url: Astro.site + "solidarity/opengraph/site-default.webp",
             height: 600,
             width: 1200,
           },
           {
-            url: Astro.site + "solidarity/opengraph/site-square.png",
+            url: Astro.site + "solidarity/opengraph/site-square.webp",
             height: 1080,
             width: 1080,
           },
@@ -46,6 +46,18 @@ const publishDate = new Date().toISOString();
         site_name: "workingon.studio",
         type: "site",
       }}
+      ,
+      twitter={{
+        cardType: "summary_large_image",
+        handle: "@prmack",
+      }}
+      ,
+      additionalMetaTags={[
+        {
+          name: "twitter:image",
+          content: Astro.site + "solidarity/opengraph/site-default.webp",
+        },
+      ]}
     />
     <meta name="theme-color" content="#FAFAF9" />
     <meta name="mobile-web-app-capable" content="yes" />
@@ -59,8 +71,7 @@ const publishDate = new Date().toISOString();
       is:inline
       type="module"
       src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    >
-    </script>
+    ></script>
 
     <!-- CDN Font Stylesheets -->
     {brockmannFontUrl && <link rel="stylesheet" href={brockmannFontUrl} />}
