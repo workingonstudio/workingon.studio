@@ -1,10 +1,12 @@
 <script lang="ts">
   import PageHeader from "@components/partials/PageHeader.svelte";
-  import { onMount } from "svelte";
+  import { onMount, onDestroy } from "svelte";
   import { dayRate } from "../stores/dayRate";
   import { get } from "svelte/store";
 
   let displayRate = 500;
+  let timeInterval: ReturnType<typeof setInterval> | null = null;
+  let pageLoadTime = 0;
 
   function animateRate(startRate: number, targetRate: number) {
     const duration = 800;
@@ -15,7 +17,7 @@
       const progress = Math.min(elapsed / duration, 1);
       const easeProgress = 1 - Math.pow(1 - progress, 3);
 
-      displayRate = Math.round(startRate + (targetRate - startRate) * easeProgress);
+      displayRate = Math.round((startRate + (targetRate - startRate) * easeProgress) * 10) / 10;
 
       if (progress < 1) {
         requestAnimationFrame(animate);
@@ -25,36 +27,59 @@
     animate();
   }
 
-  onMount(() => {
-    const startRate = get(dayRate).rate;
-    dayRate.incrementVisit();
-    const target = get(dayRate).rate;
+  function startTimeBasedIncrement(baseRate: number) {
+    pageLoadTime = Date.now();
 
-    animateRate(startRate, target);
+    // Update every 100ms (10 times per second for smooth pence updates)
+    timeInterval = setInterval(() => {
+      const elapsedSeconds = (Date.now() - pageLoadTime) / 1000;
+      displayRate = Math.round((baseRate + elapsedSeconds) * 10) / 10;
+    }, 100);
+  }
+
+  onMount(() => {
+    const currentState = get(dayRate);
+    const oldBaseRate = dayRate.getBaseRate(currentState.visits);
+
+    // Increment visit count
+    dayRate.incrementVisit();
+
+    const newState = get(dayRate);
+    const newBaseRate = dayRate.getBaseRate(newState.visits);
+
+    // Animate to new base rate
+    animateRate(oldBaseRate, newBaseRate);
+
+    // After animation, start the time-based increment
+    setTimeout(() => {
+      startTimeBasedIncrement(newBaseRate);
+    }, 800);
+  });
+
+  onDestroy(() => {
+    if (timeInterval !== null) {
+      clearInterval(timeInterval);
+    }
   });
 </script>
 
 <PageHeader>
+  <!-- prettier-ignore -->
   <h1>
-    Design gigs. £{displayRate}/day*. I tell you what to do.
+    Hire me for design gigs. £<span class="tabular-nums">{displayRate.toFixed(2)}</span>/day*. I tell you what to do.
   </h1>
   <div class="flex max-w-xl flex-col gap-12">
+    <div class="flex flex-row gap-2">
+      <p>&#42;</p>
+      <p class="text-sm">
+        This rate increases every second you're here. If it takes too long for you to decide about how much you're
+        willing to pay me, you'll be a nightmare to work with.
+      </p>
+    </div>
     <p>
-      Whether you take my advice is entirely up to you. I don’t care. I’ll be riding into the sunset with a sack of
+      Whether you take my advice is entirely up to you. I'll have done my bit, riding into the sunset with a sack of
       money.
     </p>
-    <small class="text-body flex flex-row gap-1">
-      <span class="text-xl">*</span>
-      <div class="flex flex-col gap-4">
-        <div class="flex flex-col gap-1">
-          <p class="text-sm/relaxed">
-            Each time you visit this page my day rate <strong>increases by £10.</strong>
-            <br />
-            If it takes you too long to decide anything this is your punishment.
-          </p>
-        </div>
-      </div>
-    </small>
   </div>
 </PageHeader>
 
@@ -70,7 +95,19 @@
           onclick={() => {
             const currentRate = displayRate;
             dayRate.reset();
+
+            // Clear the time interval
+            if (timeInterval !== null) {
+              clearInterval(timeInterval);
+            }
+
+            // Animate back to base rate
             animateRate(currentRate, 500);
+
+            // Restart time-based increment after animation
+            setTimeout(() => {
+              startTimeBasedIncrement(500);
+            }, 800);
           }}
         >
           hello@workingon.studio

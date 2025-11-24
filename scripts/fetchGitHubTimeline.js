@@ -1,4 +1,4 @@
-// scripts/fetchGitHubTimeline.js - INCREMENTAL VERSION
+// scripts/fetchGitHubTimeline.js - INCREMENTAL VERSION WITH EARLY FILTERING
 import dotenv from "dotenv";
 import fs from "fs";
 import path from "path";
@@ -46,7 +46,6 @@ function getLastCommitDate() {
   }
 }
 
-// Your existing helper functions (keep these as-is)
 function findPRForCommit(prCommitsMap, commit) {
   return prCommitsMap[commit.sha] || null;
 }
@@ -160,8 +159,6 @@ function generateVersionForCommit(commit, allCommitsInOrder, tagsWithDates) {
   const major = parseInt(versionParts[0]) || 1;
   const minor = parseInt(versionParts[1]) || 0;
 
-  // Every 15 commits = new minor version
-  // Major version only changes via git tags
   const newMinor = minor + Math.floor(incrementalIndex / 15);
   const newPatch = incrementalIndex % 15;
 
@@ -194,7 +191,6 @@ async function fetchGitHubTimeline() {
   console.log("🚀 Fetching timeline from GitHub API (INCREMENTAL MODE)...");
   console.log(`📁 Repository: ${GITHUB_OWNER}/${GITHUB_REPO}`);
 
-  // Get last commit date from existing timeline
   const lastCommitDate = getLastCommitDate();
   const sinceParam = lastCommitDate ? { since: lastCommitDate } : {};
 
@@ -208,7 +204,7 @@ async function fetchGitHubTimeline() {
     });
     console.log(`✅ Found ${branches.length} branches`);
 
-    // Fetch NEW commits only
+    // Fetch commits from all branches
     console.log(
       lastCommitDate
         ? `📦 Fetching commits since ${lastCommitDate}...`
@@ -227,7 +223,7 @@ async function fetchGitHubTimeline() {
           repo: GITHUB_REPO,
           sha: branch.name,
           per_page: 100,
-          ...sinceParam, // Only fetch commits since last update
+          ...sinceParam,
         });
 
         branchCommits.forEach((commit) => {
@@ -243,21 +239,40 @@ async function fetchGitHubTimeline() {
           }
         });
 
-        console.log(`   ✅ Found ${branchCommits.length} new commits on ${branch.name}`);
+        console.log(`   ✅ Found ${branchCommits.length} commits on ${branch.name}`);
       } catch (error) {
         console.warn(`   ⚠️  Could not fetch commits from branch ${branch.name}: ${error.message}`);
       }
     }
 
-    console.log(`📦 Total new commits found: ${allCommits.length}`);
+    console.log(`📦 Total commits fetched: ${allCommits.length}`);
 
-    // If no new commits, we're done!
-    if (allCommits.length === 0) {
+    // Load existing timeline EARLY to filter out commits we already have
+    const timelineFile = path.join(process.cwd(), "src", "data", "timeline-github.json");
+    let existingEntries = [];
+
+    if (fs.existsSync(timelineFile)) {
+      const existingTimeline = JSON.parse(fs.readFileSync(timelineFile, "utf8"));
+      existingEntries = existingTimeline.entries || [];
+      console.log(`📝 Loaded ${existingEntries.length} existing timeline entries`);
+    }
+
+    // Filter out commits we already have BEFORE doing expensive API calls
+    const existingShas = new Set(existingEntries.map((entry) => entry.hash));
+    const genuinelyNewCommits = allCommits.filter(
+      (commit) => !existingShas.has(commit.sha.substring(0, 7))
+    );
+
+    console.log(`📦 Already in timeline: ${allCommits.length - genuinelyNewCommits.length}`);
+    console.log(`📦 Genuinely new commits: ${genuinelyNewCommits.length}`);
+
+    // Early exit if no new commits
+    if (genuinelyNewCommits.length === 0) {
       console.log("✅ Timeline is already up to date!");
       return;
     }
 
-    // Fetch PRs for new commits
+    // Fetch PRs for new commits only
     console.log("🔄 Fetching pull requests...");
     const pulls = await octokit.paginate(octokit.rest.pulls.list, {
       owner: GITHUB_OWNER,
@@ -268,7 +283,12 @@ async function fetchGitHubTimeline() {
       per_page: 100,
     });
 
+    // Build set of new commit SHAs to check
+    const newCommitShas = new Set(genuinelyNewCommits.map((c) => c.sha));
+
     const prCommitsMap = {};
+    let prsChecked = 0;
+
     for (const pr of pulls) {
       try {
         const prCommits = await octokit.paginate(octokit.rest.pulls.listCommits, {
@@ -278,22 +298,29 @@ async function fetchGitHubTimeline() {
           per_page: 100,
         });
 
-        prCommits.forEach((commit) => {
-          prCommitsMap[commit.sha] = pr;
-        });
+        // Only process if this PR contains any of our new commits
+        const hasNewCommits = prCommits.some((c) => newCommitShas.has(c.sha));
+        if (hasNewCommits) {
+          prCommits.forEach((commit) => {
+            prCommitsMap[commit.sha] = pr;
+          });
+          prsChecked++;
+        }
       } catch (error) {
         console.warn(`   ⚠️  Could not fetch commits for PR #${pr.number}`);
       }
     }
 
-    // Get detailed commit stats
+    console.log(`📋 Checked ${prsChecked} relevant PRs out of ${pulls.length} total`);
+
+    // Get detailed commit stats for NEW commits only
     console.log("📊 Fetching detailed commit stats...");
     const detailedCommits = [];
 
-    for (let i = 0; i < allCommits.length; i++) {
-      const commit = allCommits[i];
+    for (let i = 0; i < genuinelyNewCommits.length; i++) {
+      const commit = genuinelyNewCommits[i];
       console.log(
-        `📊 Getting stats for commit ${i + 1}/${allCommits.length}: ${commit.sha.substring(0, 7)}`
+        `📊 Getting stats for commit ${i + 1}/${genuinelyNewCommits.length}: ${commit.sha.substring(0, 7)}`
       );
 
       try {
@@ -316,15 +343,14 @@ async function fetchGitHubTimeline() {
     // Get tags
     const tagsWithDates = await getTagsWithDates(octokit, GITHUB_OWNER, GITHUB_REPO);
 
-    // Load existing timeline to merge
-    const timelineFile = path.join(process.cwd(), "src", "data", "timeline-github.json");
-    let existingEntries = [];
-
-    if (fs.existsSync(timelineFile)) {
-      const existingTimeline = JSON.parse(fs.readFileSync(timelineFile, "utf8"));
-      existingEntries = existingTimeline.entries || [];
-      console.log(`📝 Loaded ${existingEntries.length} existing timeline entries`);
-    }
+    // Build complete commit list for version generation (existing + new)
+    const allCommitsForVersioning = [
+      ...existingEntries.map((e) => ({
+        sha: e.hash,
+        commit: { committer: { date: e.date } },
+      })),
+      ...detailedCommits,
+    ];
 
     // Process new commits
     const newEntries = detailedCommits.map((commit) => {
@@ -358,7 +384,7 @@ async function fetchGitHubTimeline() {
       }
 
       return {
-        version: generateVersionForCommit(commit, detailedCommits, tagsWithDates),
+        version: generateVersionForCommit(commit, allCommitsForVersioning, tagsWithDates),
         hash: commit.sha.substring(0, 7),
         message: (() => {
           let msg = commit.commit.message.split("\n")[0];

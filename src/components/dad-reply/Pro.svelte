@@ -2,15 +2,10 @@
   import Badge from "./partials/Badge.svelte";
   import AdvButton from "./partials/AdvButton.svelte";
   import SectionHeader from "./partials/SectionHeader.svelte";
-  import MailButton from "./partials/MailButton.svelte";
 </script>
 
 <div id="pro" class="flex flex-col gap-24 py-30">
-  <SectionHeader
-    emoji="🔓"
-    header="Pro Trial unlocked."
-    body="Get an advanced button and 3 custom Emoji replies."
-  />
+  <SectionHeader emoji="🔓" header="Pro Trial unlocked." body="Get an advanced button and 3 custom Emoji replies." />
   <div class="flex flex-col items-center justify-center gap-12 py-12 text-pretty lg:flex-row">
     <div class="flex w-90 flex-col md:w-3/5 lg:w-2/5">
       <div class="flex flex-col gap-3 px-4 py-4">
@@ -53,7 +48,9 @@
       </div>
       <div class="flex flex-col gap-3">
         <h4>Advanced button.</h4>
-        <p>Choose between your custom replies before sending. Or set it to instant - send if you're feeling decisive.*</p>
+        <p>
+          Choose between your custom replies before sending. Or set it to instant - send if you're feeling decisive.*
+        </p>
         <small>*One click, multiple options. Your call.</small>
       </div>
     </div>

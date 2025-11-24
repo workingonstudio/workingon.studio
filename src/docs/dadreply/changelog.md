@@ -1,6 +1,10 @@
 ### 🪵
 ## Changelog
 
+#### v1.5.6 - 20 Nov 2025
+- Updating Chrome store title, and description.
+- Adding underline to 'via Dad Reply' links.
+
 #### v1.5.5 - 6 Nov 2025
 - Updating logic that targets the Reply button. Auto sending is back baby.
 

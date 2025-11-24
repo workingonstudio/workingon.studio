@@ -20,27 +20,27 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
     <meta charset="UTF-8" />
     <AstroSeo
       title={longTitle}
-      description="Instantly reply to your emails with minimal effort and maximum dad energy."
+      description="One-click emoji replies for Gmail."
       canonical={currentURL}
       openGraph={{
         url: currentURL,
         title: title,
-        description: "Instantly reply to your emails with minimal effort and maximum dad energy.",
+        description: "Reply in one click. No typing. No thinking. Just send it.",
         images: [
           {
-            url: Astro.site + "dad-reply/opengraph/site-default.png",
+            url: Astro.site + "dad-reply/opengraph/site-default.webp",
             height: 630,
             width: 1200,
             alt: "Dad Reply - Email replies without the email part",
           },
           {
-            url: Astro.site + "dad-reply/opengraph/site-square.png",
+            url: Astro.site + "dad-reply/opengraph/site-square.webp",
             height: 1200,
             width: 1200,
             alt: "Dad Reply - Email replies without the email part",
           },
           {
-            url: Astro.site + "dad-reply/opengraph/site-minimum.png",
+            url: Astro.site + "dad-reply/opengraph/site-minimum.webp",
             height: 315,
             width: 600,
             alt: "Dad Reply - Email replies without the email part",
@@ -53,6 +53,17 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
         cardType: "summary_large_image",
         handle: "@prmack",
       }}
+      ,
+      additionalMetaTags={[
+        {
+          name: "twitter:image",
+          content: Astro.site + "dad-reply/opengraph/site-default.webp",
+        },
+        {
+          name: "twitter:url",
+          content: "https://dadreply.com",
+        },
+      ]}
     />
     <meta name="theme-color" content="#FFFFFF" />
     <meta name="mobile-web-app-capable" content="yes" />
@@ -71,10 +82,9 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
       is:inline
       type="module"
       src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    >
-    </script>
-    <script is:inline src="https://kit.fontawesome.com/180e1f6a33.js" crossorigin="anonymous"
     ></script>
+    <script is:inline src="https://kit.fontawesome.com/180e1f6a33.js" crossorigin="anonymous">
+    </script>
     <meta name="generator" content={Astro.generator} />
     <Analytics productName="Dad Reply" />
     <ClientRouter />
