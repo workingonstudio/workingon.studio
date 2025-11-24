@@ -1,6 +1,6 @@
 {
-  "generated": "2025-11-24T13:16:10.434Z",
-  "lastBuild": "24 November 2025 at 13:16:10 GMT",
+  "generated": "2025-11-24T14:02:44.525Z",
+  "lastBuild": "24 November 2025 at 14:02:44 GMT",
   "source": "github-api-octokit",
   "repository": "workingonstudio/workingon.studio",
   "currentBranch": "main",
@@ -35,10 +35,7 @@
       "statsText": "+5559 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/3260f6265c01106e8898a760f2cf338c61cebdb8",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -67,10 +64,7 @@
       "statsText": "+11 -3 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/7abca90741ec5fea91529c7ff776ec20088121db",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -99,10 +93,7 @@
       "statsText": "+3 -1 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/a67714d5d8d5a4aecf589feb22eff87e93132d6f",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -131,10 +122,7 @@
       "statsText": "+1 -1 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/dd054ca4fd95322460b9bd4150c5c528c19fb2b2",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -163,10 +151,7 @@
       "statsText": "-1 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/3ec99abf5dffedeb2bcfc3e03e50daff8660d257",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -195,10 +180,7 @@
       "statsText": "+2 -2 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/92c5b4c2b3c889e8145a59e8b28f78a5a1879aca",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -227,10 +209,7 @@
       "statsText": "+2 -2 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/0fe9c6dd68fbb62d1c46c479c89f27e8bf292169",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -259,10 +238,7 @@
       "statsText": "+48 -1 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/526645a9d95197362a890506b0904c58d15029bd",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -291,10 +267,7 @@
       "statsText": "+4 -4 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/511c71a16473202ce5f576bf065fb6fba5d9eef8",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -323,10 +296,7 @@
       "statsText": "+14 -12 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/c4354f122c3093a05db5b5a8b5b1712fba165d28",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -355,10 +325,7 @@
       "statsText": "+563 -20 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/f7750ebd321a1db721039aca34e763a2a679d75b",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -387,10 +354,7 @@
       "statsText": "+36 -16 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/3eab7978ca738fa41e4ae95159d7cb983c0f9928",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -419,10 +383,7 @@
       "statsText": "+166 -160 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/81c810c5563bd90df7b66478a2464edbe80ca417",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -451,10 +412,7 @@
       "statsText": "+16 -18 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/f9e3358e4e11365b0002934fd7fdba8305c32c38",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -483,10 +441,7 @@
       "statsText": "+5 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/4cd52b38203ab97d982b412b82da81c26b71b073",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -515,10 +470,7 @@
       "statsText": "+5 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/5770bc628b35beadd8692a65bc58670b30e68910",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -547,10 +499,7 @@
       "statsText": "+6 -2 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/f16085ffd0ffeeab37c46ae81e526f0c20600881",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -579,10 +528,7 @@
       "statsText": "+17 -20 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/30704a690268eff13f43f1b190f1fc4904353d49",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -611,10 +557,7 @@
       "statsText": "+2 -1 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/4ba07f609c9c6fc15abf92191453166290cdfda8",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -643,10 +586,7 @@
       "statsText": "+98 -48 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/86ca694fa16b3356673f212a5086ba7444c4e7c5",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -675,10 +615,7 @@
       "statsText": "+391 -96 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/4e1e6be0962cda1cd39fcec10f096bfca49c601e",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -707,10 +644,7 @@
       "statsText": "+361 -26 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/d00f9b4a3ba6d6317a94cc6cf4f62f5e771999d0",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -739,10 +673,7 @@
       "statsText": "+153 -25 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/7ba8f57c58916b1a752441b263eb55328fc4a547",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -771,10 +702,7 @@
       "statsText": "+52 -26 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/2ebaacab821b691fc489b33fbd3e77068c1576f7",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -803,10 +731,7 @@
       "statsText": "+75 -38 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/2aebf60ca2c9430d136e2043aebdaed3a185f2db",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -835,10 +760,7 @@
       "statsText": "+66 -62 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/44d0a0676f6793e34dc23c335c02e7e9b107f319",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -867,10 +789,7 @@
       "statsText": "+75 -21 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/88ee6150fcb078e8f099d3e525a757cdd2df6d87",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -899,10 +818,7 @@
       "statsText": "+1527 -25 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/54c5641b7f82ee4b35f38038add7bd6d34653b97",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -931,10 +847,7 @@
       "statsText": "+137 -26 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/a890f79964bd7fd76e6da1941c04cb0967fd607a",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -963,10 +876,7 @@
       "statsText": "+3 -5 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/c4384b6098f623ba92b7d499c8bcfb321060e97a",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -995,10 +905,7 @@
       "statsText": "+498 -224 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/1fa476c30d818459fb2190fbd91c3205cfabc19c",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -1027,10 +934,7 @@
       "statsText": "+498 -224 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/9b6f3f8c047568816c24de37f439de6a92d2e354",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -1059,10 +963,7 @@
       "statsText": "+113 -12 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/2210f7ffc4ab74036f90fd4e2f231a98f4da5d73",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -1091,10 +992,7 @@
       "statsText": "+5 -751 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/4db85b7072311ef681130eaa2f816439d1f748d7",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -1125,10 +1023,7 @@
       "statsText": "",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/bbd6dd3183420742a1f63076498a6568bc27d857",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -1157,10 +1052,7 @@
       "statsText": "+63 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/47a3f414c94bdf56dabca3dacbb4eb9d029f34eb",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -1189,10 +1081,7 @@
       "statsText": "+826 -3 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/cdfc887c7c7bd1b42633ef2cf6193b37b4cc1cc1",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -1209,8 +1098,8 @@
         "files": 7
       },
       "type": "merge",
-      "branch": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-      "branchDisplay": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
+      "branch": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
       "branchMerged": null,
       "intoBranch": null,
       "isMerge": true,
@@ -1219,10 +1108,7 @@
       "statsText": "+791 -278 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/e54816eb7876ffd2a8f73c15818db593f1ee2af7",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -1251,10 +1137,7 @@
       "statsText": "+2 -1 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/c7e621c76816862090716a86df48d87ec25bcb5f",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -1283,10 +1166,7 @@
       "statsText": "+103 -32 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/055664f0aaed9a0141588ea238e3e7d4f32662e8",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -1315,10 +1195,7 @@
       "statsText": "",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/86e55b3acb04d84adc9520f37fdb60af401ab7ce",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -1347,10 +1224,7 @@
       "statsText": "-825 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/7777d3c098811a33619729e00e5d6a55d7dde7a8",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -1379,10 +1253,7 @@
       "statsText": "+17 -17 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/bbe42b6f89a12edbebf892bf01bc7e0f3cce3515",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -1399,8 +1270,8 @@
         "files": 3
       },
       "type": "merge",
-      "branch": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-      "branchDisplay": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
+      "branch": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
       "branchMerged": null,
       "intoBranch": null,
       "isMerge": true,
@@ -1409,10 +1280,7 @@
       "statsText": "+107 -860 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/0d5e45b3cf0e3b7f04df5448eff9499701298b74",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -1441,10 +1309,7 @@
       "statsText": "",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/212cff1445dcfb9438c7c2f202cfde48caf56e43",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -1473,10 +1338,7 @@
       "statsText": "+6 -14 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/69a8cc62058736358cdafa6d7fa2958af6e66ad7",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -1505,10 +1367,7 @@
       "statsText": "+3 -2 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/d2e074bb081b2b9745aaf6b3ebacece8a40f1d2f",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -1537,10 +1396,7 @@
       "statsText": "+2 -2 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/c715359dfb761afc059b438159b9a0bb0144d346",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -1569,10 +1425,7 @@
       "statsText": "+2 -2 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/f17298b60bfd95e6d787b7c8aa069575e2e8034d",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -1601,10 +1454,7 @@
       "statsText": "+4 -3 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/7b2fedcb105a9154e2272fc824b90a9b655adc42",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -1633,10 +1483,7 @@
       "statsText": "+111 -118 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/4b6d22a5cec5474329bf45122d69918fca53cf0c",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -1665,10 +1512,7 @@
       "statsText": "+5 -1 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/98bbaf61be61ab0555ff24806d740152328dba8c",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -1697,10 +1541,7 @@
       "statsText": "+3 -1 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/26449bdb5a6f8901c432d1e925e29176cba2bf41",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -1729,10 +1570,7 @@
       "statsText": "+3 -3 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/1eefe7e0683bdaaf44be43b767991d28b994e4d9",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -1761,10 +1599,7 @@
       "statsText": "+2 -2 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/22d3f79b4af268453f67be45ba0a7bda9aeff4b1",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -1793,10 +1628,7 @@
       "statsText": "+136 -143 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/4b342d99fba335a999cac09cba1bf2c52a90f484",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -1825,10 +1657,7 @@
       "statsText": "+4 -2 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/48a870e694c82abdb1b1f008030478fd57a831f3",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -1845,8 +1674,8 @@
         "files": 6
       },
       "type": "merge",
-      "branch": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-      "branchDisplay": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
+      "branch": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
       "branchMerged": null,
       "intoBranch": null,
       "isMerge": true,
@@ -1855,10 +1684,7 @@
       "statsText": "+139 -144 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/5b29f3013479b3f36addfbcc98d9e277349caf6f",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -1887,10 +1713,7 @@
       "statsText": "+2 -2 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/c31c2460b44856569b813db409354d416758acf9",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -1919,10 +1742,7 @@
       "statsText": "+2 -2 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/f25c7134ea55b83dce3c8c4fffd2cc2b6bd86006",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -1939,8 +1759,8 @@
         "files": 2
       },
       "type": "merge",
-      "branch": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-      "branchDisplay": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
+      "branch": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
       "branchMerged": null,
       "intoBranch": null,
       "isMerge": true,
@@ -1949,10 +1769,7 @@
       "statsText": "+2 -2 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/b565717d450f984b19b1941c58653d3ac3d6b510",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -1969,8 +1786,8 @@
         "files": 0
       },
       "type": "release",
-      "branch": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-      "branchDisplay": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
+      "branch": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
       "branchMerged": null,
       "intoBranch": null,
       "isMerge": false,
@@ -1981,10 +1798,7 @@
       "statsText": "",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/e87c64aab7f444297d54643ba9a043a8cb39668d",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -2013,10 +1827,7 @@
       "statsText": "+44 -30 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/d00842fcc0365637b18e7b201320c83f692a175e",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -2045,10 +1856,7 @@
       "statsText": "+2 -3 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/0e64b7cce09633c650b885ecd4d7af6856a81a4c",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -2077,10 +1885,7 @@
       "statsText": "+44 -30 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/1d00afe93f14b56762e7dc662d7e5d1820015632",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -2109,10 +1914,7 @@
       "statsText": "",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/88633f7ac960af28e69b199514ea7d618cfb5b5d",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -2141,10 +1943,7 @@
       "statsText": "+2 -3 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/971eccd36564ecfcb57c08e3564d7973ba7fb30b",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -2173,10 +1972,7 @@
       "statsText": "+2 -2 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/608258f6521089109be33c9184b7e83d44ffe227",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -2193,8 +1989,8 @@
         "files": 3
       },
       "type": "merge",
-      "branch": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-      "branchDisplay": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
+      "branch": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
       "branchMerged": null,
       "intoBranch": null,
       "isMerge": true,
@@ -2203,10 +1999,7 @@
       "statsText": "+46 -33 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/be2dfee0849d885e22d19b76f1777519ac5a5662",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -2235,10 +2028,7 @@
       "statsText": "+2 -2 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/d6a9e866af23a25e7fdd93161f3ac4fd3ee9b3fe",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -2267,10 +2057,7 @@
       "statsText": "+1 -1 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/be6733b2fc5c84ec9873efbd246d3c50f8e2556e",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -2287,8 +2074,8 @@
         "files": 2
       },
       "type": "merge",
-      "branch": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-      "branchDisplay": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
+      "branch": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
       "branchMerged": null,
       "intoBranch": null,
       "isMerge": true,
@@ -2297,10 +2084,7 @@
       "statsText": "+3 -3 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/131f8d3bdd1560ec53943a2b72210a471489063c",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -2331,10 +2115,7 @@
       "statsText": "",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/b569e9749523c35b96a5cd76585ecf1d02c4ad9a",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -2363,10 +2144,7 @@
       "statsText": "+28 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/08f11aac6bb2efcb3eae0133b57c733794ffedd2",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -2395,10 +2173,7 @@
       "statsText": "+119 -30 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/ab096556dddb75049f8505f4fcf4801ca35c1fbe",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -2427,10 +2202,7 @@
       "statsText": "+60 -24 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/7cc76a300d1f0e677197bc63fc325fb1f1970238",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -2459,10 +2231,7 @@
       "statsText": "+155 -2 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/527ec9217796b7d0deb14bc105484930199a6fa8",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -2491,10 +2260,7 @@
       "statsText": "+128 -119 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/2209ee4201407f4b69aec544dcdaf57e3679f4af",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -2523,10 +2289,7 @@
       "statsText": "+43 -21 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/181a3b1acd5fe17b25576ee605bdf785dad8b8d8",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -2555,10 +2318,7 @@
       "statsText": "+23 -4 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/76dcab83216c62042ec09a79a0e11e7aa035d563",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -2587,10 +2347,7 @@
       "statsText": "+9 -5 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/6b1af31791abd40895bec5d6e2b9b28e0851e47e",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -2619,10 +2376,7 @@
       "statsText": "+181 -127 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/942729dafe7da4d6252e1e57331a1bca77bc9e23",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -2651,10 +2405,7 @@
       "statsText": "+16 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/d1d2ce765ac78296be6b3b384968802bc11cfbcb",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -2683,10 +2434,7 @@
       "statsText": "+16 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/f8d4f77d8beb7cfdbbc1a3dd8a9d2abbddc66890",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -2715,10 +2463,7 @@
       "statsText": "+326 -103 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/14f6f122b57335e207863c26df592922d03e73b1",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -2747,10 +2492,7 @@
       "statsText": "+1 -1 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/646d815cbb6532dec2b19e555707892f00db4285",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -2779,10 +2521,7 @@
       "statsText": "+68 -22 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/d3cc260c227888ee407b04c5051b772584c6daf6",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -2799,8 +2538,8 @@
         "files": 1
       },
       "type": "merge",
-      "branch": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-      "branchDisplay": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
+      "branch": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
       "branchMerged": null,
       "intoBranch": null,
       "isMerge": true,
@@ -2809,10 +2548,7 @@
       "statsText": "+68 -22 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/57754334cc49664317906323029afd53ebef8711",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -2841,10 +2577,7 @@
       "statsText": "+13 -10 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/3b18b67c9465c30d2a17ec5ea1dc834efb4ab9c1",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -2873,10 +2606,7 @@
       "statsText": "-2 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/f24a3fb78bbd69a96391a1e0f1ecf9fa2c97e08f",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -2893,8 +2623,8 @@
         "files": 4
       },
       "type": "merge",
-      "branch": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-      "branchDisplay": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
+      "branch": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
       "branchMerged": null,
       "intoBranch": null,
       "isMerge": true,
@@ -2903,10 +2633,7 @@
       "statsText": "+12 -11 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/3c0f26a46e8c6bc9b28c137e8bf6bb6efdb10440",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -2935,10 +2662,7 @@
       "statsText": "+12 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/7b71b346dfed054bd48b8d6d2eeada169b0056d2",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -2955,8 +2679,8 @@
         "files": 1
       },
       "type": "merge",
-      "branch": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-      "branchDisplay": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
+      "branch": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
       "branchMerged": null,
       "intoBranch": null,
       "isMerge": true,
@@ -2965,10 +2689,7 @@
       "statsText": "+12 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/5b50cdcf72e05e4b08284304a32aac702c222c49",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -2985,8 +2706,8 @@
         "files": 0
       },
       "type": "transparency",
-      "branch": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-      "branchDisplay": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
+      "branch": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
       "branchMerged": null,
       "intoBranch": null,
       "isMerge": false,
@@ -2997,10 +2718,7 @@
       "statsText": "",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/726b2201c0d4e5a45bf64940ac85786d7a3540dc",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -3029,10 +2747,7 @@
       "statsText": "+1 -1 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/53b150b398dd1e5782fdc7a6b33cd20cfe3c4e10",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -3061,10 +2776,7 @@
       "statsText": "+1 -1 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/bb9b01ce5ae54bdb2b75f97cf1c265fbf28f266c",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -3081,8 +2793,8 @@
         "files": 2
       },
       "type": "merge",
-      "branch": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-      "branchDisplay": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
+      "branch": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
       "branchMerged": null,
       "intoBranch": null,
       "isMerge": true,
@@ -3091,10 +2803,7 @@
       "statsText": "+2 -2 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/e1b6995a8905b401596b7aa89986753e15b1d723",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -3123,10 +2832,7 @@
       "statsText": "+2 -2 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/a840905bc8f0bc8053a73749e390c130f9578cdd",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -3143,8 +2849,8 @@
         "files": 1
       },
       "type": "merge",
-      "branch": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-      "branchDisplay": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
+      "branch": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
       "branchMerged": null,
       "intoBranch": null,
       "isMerge": true,
@@ -3153,10 +2859,7 @@
       "statsText": "+2 -2 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/71da0d82b11b4920817408cc5641b897ce1f1192",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -3173,8 +2876,8 @@
         "files": 1
       },
       "type": "feature",
-      "branch": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-      "branchDisplay": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
+      "branch": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
       "branchMerged": null,
       "intoBranch": null,
       "isMerge": false,
@@ -3183,10 +2886,7 @@
       "statsText": "+3 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/fcada567b2e03dfb5e00869e82b0a6ec1a578163",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -3203,8 +2903,8 @@
         "files": 1
       },
       "type": "feature",
-      "branch": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-      "branchDisplay": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
+      "branch": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
       "branchMerged": null,
       "intoBranch": null,
       "isMerge": false,
@@ -3213,10 +2913,7 @@
       "statsText": "+1 -2 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/93be5f042044a7cc515e3d22da8585eb65d0fc1f",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -3233,8 +2930,8 @@
         "files": 1
       },
       "type": "feature",
-      "branch": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-      "branchDisplay": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
+      "branch": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
       "branchMerged": null,
       "intoBranch": null,
       "isMerge": false,
@@ -3243,10 +2940,7 @@
       "statsText": "+7 -3 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/a4b875f6eef537286d8b0712c875701f815dcf94",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -3263,8 +2957,8 @@
         "files": 1
       },
       "type": "feature",
-      "branch": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-      "branchDisplay": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
+      "branch": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
       "branchMerged": null,
       "intoBranch": null,
       "isMerge": false,
@@ -3273,10 +2967,7 @@
       "statsText": "+1 -1 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/7271be597dfc7d9c1b31e38eaabf6a00c71738c4",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -3293,8 +2984,8 @@
         "files": 1
       },
       "type": "feature",
-      "branch": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-      "branchDisplay": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
+      "branch": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
       "branchMerged": null,
       "intoBranch": null,
       "isMerge": false,
@@ -3303,10 +2994,7 @@
       "statsText": "+1 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/33aa9a3e90836f6be837ef589bf17d3f38c36a0a",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -3323,8 +3011,8 @@
         "files": 2
       },
       "type": "release",
-      "branch": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-      "branchDisplay": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
+      "branch": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
       "branchMerged": null,
       "intoBranch": null,
       "isMerge": false,
@@ -3335,10 +3023,7 @@
       "statsText": "+136 -93 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/7d19ab9bf46fbb97acbad032b4c77acd899626a4",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -3355,8 +3040,8 @@
         "files": 2
       },
       "type": "release",
-      "branch": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-      "branchDisplay": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
+      "branch": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
       "branchMerged": null,
       "intoBranch": null,
       "isMerge": false,
@@ -3367,10 +3052,7 @@
       "statsText": "+112 -83 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/527d99d960394b6a02e6183693c881a27f3ceaba",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -3399,10 +3081,7 @@
       "statsText": "",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/f71feb6692e60361936417c51804eb73bba71fae",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -3431,7 +3110,7 @@
       "statsText": "+34 -29 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/01352cc7ebc25cb1697a98d84961004c51d5a876",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -3460,7 +3139,7 @@
       "statsText": "+180 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/c1af8c141b2cdf775f457daf740b5e83bbeb7e96",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -3489,7 +3168,7 @@
       "statsText": "+140 -34 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/4db270449f377cf59bff5c6815b5a27f97352409",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -3518,7 +3197,7 @@
       "statsText": "+14 -15 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/531c04b14a17c24252e01570cf7ae28ad7f50668",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -3547,7 +3226,7 @@
       "statsText": "+1 -1 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/d023bd8bbf65fb634a2e51392a33547434001244",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -3576,7 +3255,7 @@
       "statsText": "+43 -3 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/adeceaab3c2263b11fe4a3563c26a2d49c867d50",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -3605,7 +3284,7 @@
       "statsText": "+96 -41 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/fa67ed9cecf6704e6fc45f678d8f05c7c3bfd0f5",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -3634,7 +3313,7 @@
       "statsText": "",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/e4916d1a31c4a72a05ccf044fedc60dde479b2fd",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -3663,7 +3342,7 @@
       "statsText": "+165 -5718 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/aaeeeae2c92ebb1b0c6a4ff35e7499d404150d91",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -3692,7 +3371,7 @@
       "statsText": "+23 -11 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/8e89f9c315029fdfd494a33dc6d2bfdbf79f8a58",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -3721,7 +3400,7 @@
       "statsText": "+23 -15 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/3f0af446575c8ce0f64ac85ead186dc0280b0f1e",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -3750,7 +3429,7 @@
       "statsText": "+5731 -2 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/5fdc0ac930294cb60b094163e4dc8d28eca8fe95",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -3779,7 +3458,7 @@
       "statsText": "+1 -24 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/ecd9881231f0dd3cede5c279878d8914326532ed",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -3808,7 +3487,7 @@
       "statsText": "+22 -36 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/7d54f7c3b852654faa4b59f55e62103f6c4ad202",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -3837,7 +3516,7 @@
       "statsText": "+26 -23 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/bae7844b30cb539e48006f69066a6daffd1ae848",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -3866,7 +3545,7 @@
       "statsText": "+19 -2 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/fe45aef7982fc37674914c72c79012da773de489",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -3895,7 +3574,7 @@
       "statsText": "+114 -16 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/6b59ca69989b2aa39933328686342338c4d33e17",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -3924,7 +3603,7 @@
       "statsText": "+1 -1 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/fd359ebc21e480397e467d4c1e9ed40dd851e58d",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -3953,7 +3632,7 @@
       "statsText": "+14 -12 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/95c0b4ed2439bd0f72c131712633d8fa8633504f",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -3982,7 +3661,7 @@
       "statsText": "+2 -2 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/2d8e175b949e21425dcfffa53fa6ecf7cd910f7e",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -4011,7 +3690,7 @@
       "statsText": "+43 -20 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/8d33b003e43120963155ca486cfaf4e26f588e6c",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -4040,7 +3719,7 @@
       "statsText": "+46 -10 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/f10b175e41e3c59c6566dd550c35930bac8a7cee",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -4069,7 +3748,7 @@
       "statsText": "+159 -14 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/c0bb65ba007fcd0b5e00bda099bf783b1841c7c8",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -4098,7 +3777,7 @@
       "statsText": "-83 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/24f1d489aa54a13d1e8066092fcf11199409a4e6",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -4127,7 +3806,7 @@
       "statsText": "+37 -91 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/78ff56f64a911e73dfa207d853f41e6d14420b09",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -4156,7 +3835,7 @@
       "statsText": "+184 -252 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/c0c309456a9e815ead0eedc6631fe5478abd5649",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -4185,7 +3864,7 @@
       "statsText": "+115 -5 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/2ca4d170c0f8612d023623fe18f90a54c129533f",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -4214,7 +3893,7 @@
       "statsText": "+17 -8 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/863e3049f7e9ec4cc5975092d9bbbf7b28a52775",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -4243,7 +3922,7 @@
       "statsText": "+125 -6 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/429eabd09e8bd419ccaad932ddfbac1af318f4d0",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -4272,7 +3951,7 @@
       "statsText": "+26 -5 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/e61fa4d175877f776968e26999fdea5a94528e25",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -4301,7 +3980,7 @@
       "statsText": "+105 -12 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/d872504f8d220d720217eba878fe7151653728e7",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -4330,7 +4009,7 @@
       "statsText": "+10 -9 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/46c5c10d0da7b67b29ed288386f4cb34cc15b824",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -4359,7 +4038,7 @@
       "statsText": "+134 -30 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/d6dd11ee17d1cf0da07042ff470327df7f3bfc9e",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -4388,7 +4067,7 @@
       "statsText": "",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/b4ae535b9e3faa737f4eba54a6c171917ae03263",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -4417,7 +4096,7 @@
       "statsText": "+3 -3 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/a0d798d344af48b618abc0c420a3573e9555cd03",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -4446,7 +4125,7 @@
       "statsText": "+134 -30 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/24a0f56c20856dcfbb0ecfc3cd49b868c243218d",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -4475,7 +4154,7 @@
       "statsText": "+36 -14 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/6feb3050bad4add3464a05d162c54795fe213e1c",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -4506,7 +4185,9 @@
       "statsText": "+5 -4 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/ad2339bc5d10fb95be85064ccf493daf53cb7f02",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029"
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+        "dev",
+        "main"
       ]
     },
     {
@@ -4533,7 +4214,7 @@
       "statsText": "+55 -23 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/b80765806e92b887fd473ca438e967b3f72f1616",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -4562,7 +4243,7 @@
       "statsText": "+62 -49 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/defb7f9bb28195ed7e2912c8eeccb91b07c67b82",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -4591,7 +4272,7 @@
       "statsText": "+1 -1 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/207e958576a488bc5bd9222a07457d6b37748ebb",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -4620,7 +4301,7 @@
       "statsText": "+42 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/3ea08fddf14844afe29f765e6e0eca0ea8f9e559",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -4649,7 +4330,7 @@
       "statsText": "+56 -14 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/78daeb6e9e6eb429fd5732feead1565a74156d4d",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -4678,7 +4359,7 @@
       "statsText": "+24 -7 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/649bedda8c4fc8c5b8e7040016cc7ab6b5a86fb5",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -4707,7 +4388,7 @@
       "statsText": "+105 -4 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/d09cb6c418795db9f89857a1d8c7e3dd96f0d805",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -4736,7 +4417,7 @@
       "statsText": "+7 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/c2a56aece68da3612910481761b7983e4122711a",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -4765,7 +4446,7 @@
       "statsText": "+6 -6 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/ab2faaa0e66b1a57321da598a9b988e7fc6ea0f9",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -4794,7 +4475,7 @@
       "statsText": "+6 -6 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/b2e28b84adad574296c07b7b9cf2add9fe779e54",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -4823,7 +4504,7 @@
       "statsText": "+219 -99 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/e4b9843d6b0529c4815ab6e19e190f3b1fe7ebb5",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -4852,7 +4533,7 @@
       "statsText": "+2 -2 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/82ab798cf819cfa19c216132f0d7db662080b6de",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -4881,7 +4562,7 @@
       "statsText": "+18 -15 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/c85effadab6c8275b457578a4a1efb067e891e92",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -4910,7 +4591,7 @@
       "statsText": "+228 -98 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/4e313c9fd6b9a3156cabf9079a2c7cef09d0a890",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -4939,7 +4620,7 @@
       "statsText": "+6 -6 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/edef9c8b8f6f19cf4bbb82648fc6ee9f79292c9e",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -4968,7 +4649,7 @@
       "statsText": "+98 -1 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/dad76ac81fcbfb6b8b72d3bbe0bb7266bb3b4b59",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -4997,7 +4678,7 @@
       "statsText": "+143 -88 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/03728012625f965db684e48ff8e006fce127b092",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -5026,7 +4707,7 @@
       "statsText": "+4 -4 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/52455b551e26c75b744ee7d4d614f749bff1670b",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -5055,10 +4736,7 @@
       "statsText": "+71 -27 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/f76fd17d0ab164768cfe6fc19c2c7c508f2cf0cb",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -5075,8 +4753,8 @@
         "files": 1
       },
       "type": "merge",
-      "branch": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-      "branchDisplay": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
+      "branch": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
       "branchMerged": null,
       "intoBranch": null,
       "isMerge": true,
@@ -5085,10 +4763,7 @@
       "statsText": "+71 -27 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/c63a21ae229d58c39dc3cb6b1cb3540a93a24c84",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -5117,7 +4792,7 @@
       "statsText": "+10 -21 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/dfbc6bae0f1a2a7681927c11677f948b17749e85",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -5146,7 +4821,7 @@
       "statsText": "+8 -19 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/6400c1a115a2ce959010ad542a16f27a52fb6299",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -5175,7 +4850,7 @@
       "statsText": "+8 -19 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/9721a1add900917b8101d2bc2e29bee960e35eac",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -5192,8 +4867,8 @@
         "files": 1
       },
       "type": "feature",
-      "branch": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-      "branchDisplay": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
+      "branch": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
       "branchMerged": null,
       "intoBranch": null,
       "isMerge": false,
@@ -5204,10 +4879,7 @@
       "statsText": "+7 -2 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/6274d186abc31071b10c0e54ec8126c13ea0cf90",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -5236,10 +4908,7 @@
       "statsText": "+4 -6 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/0376ed4858daeae6c72352fd05647b8110e86e8d",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -5256,8 +4925,8 @@
         "files": 1
       },
       "type": "merge",
-      "branch": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-      "branchDisplay": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
+      "branch": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
       "branchMerged": null,
       "intoBranch": null,
       "isMerge": true,
@@ -5266,10 +4935,7 @@
       "statsText": "+4 -6 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/814d0416b394157a109c8819dda3b3e11abf056e",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -5286,8 +4952,8 @@
         "files": 1
       },
       "type": "feature",
-      "branch": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-      "branchDisplay": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
+      "branch": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
       "branchMerged": null,
       "intoBranch": null,
       "isMerge": false,
@@ -5296,10 +4962,7 @@
       "statsText": "+8 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/581eac4b6d5b0762deb4a6a018ace3ddcebbc235",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -5316,8 +4979,8 @@
         "files": 1
       },
       "type": "feature",
-      "branch": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-      "branchDisplay": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
+      "branch": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
       "branchMerged": null,
       "intoBranch": null,
       "isMerge": false,
@@ -5326,10 +4989,7 @@
       "statsText": "-8 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/70efaf172081a668579e4167208094d2af7de571",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -5346,8 +5006,8 @@
         "files": 2
       },
       "type": "feature",
-      "branch": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-      "branchDisplay": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
+      "branch": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
       "branchMerged": null,
       "intoBranch": null,
       "isMerge": false,
@@ -5356,10 +5016,7 @@
       "statsText": "+11 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/e6936ce04735f49275c4e6a608be1a0f5f7db6e7",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -5376,8 +5033,8 @@
         "files": 1
       },
       "type": "feature",
-      "branch": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-      "branchDisplay": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
+      "branch": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
       "branchMerged": null,
       "intoBranch": null,
       "isMerge": false,
@@ -5386,10 +5043,7 @@
       "statsText": "-7 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/4044540cbaaeebd6d14b47a4b727423b09fc503d",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -5418,7 +5072,7 @@
       "statsText": "+82 -9 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/297c28b1ccf3aaecf5dfe4e42a969600c335d85b",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -5447,7 +5101,7 @@
       "statsText": "+80 -8 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/643ba952831cb5b0c81f2452eb9d6529ee5f7e11",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -5476,7 +5130,7 @@
       "statsText": "+80 -8 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/907302919b7455fb29b4da957af9485f2acc0b55",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -5505,7 +5159,7 @@
       "statsText": "+1 -8 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/0d8b83c9b9c786276a1b06699b92ecb56d1acbb3",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -5534,7 +5188,9 @@
       "statsText": "+80 -29 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/87ff261508b32c30860791a5ca428c945e2c573b",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029"
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+        "dev",
+        "main"
       ]
     },
     {
@@ -5561,7 +5217,7 @@
       "statsText": "+31 -8 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/212ffbe63f7b588f36ee1ded368ddec9a24c1a67",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -5590,7 +5246,7 @@
       "statsText": "+31 -8 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/c5aeae712886a922d744f25cff8e87a39c2611ea",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -5619,7 +5275,7 @@
       "statsText": "+32 -6 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/419dd03c5373e581ef7f54e0c3c2ade4c9c55d76",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -5648,7 +5304,7 @@
       "statsText": "+11 -11 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/2273808b773a2ec39fd6e8c5dc025dbf50202277",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -5677,7 +5333,7 @@
       "statsText": "+53 -1 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/b02aef6cad1bca9d5ce2ade8441f01bbe19f7627",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -5706,7 +5362,7 @@
       "statsText": "+53 -1 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/541be4b207a8ca1beb2b5681315e2516680ae6ff",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -5735,7 +5391,7 @@
       "statsText": "+43 -34 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/b60a2e0d0f7982e788e150a1f666bc84f6d51178",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -5764,7 +5420,7 @@
       "statsText": "+184 -27 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/a91008cbe7c95e966d45acd3c124ef096dd99bc3",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -5793,7 +5449,7 @@
       "statsText": "+1 -1 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/463ba566f1351e3aaae132d079bcd6932dd74750",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -5822,7 +5478,7 @@
       "statsText": "+42 -8 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/6d7097ecb43bc3d9c6723bcbe0ab3ae4c98aec83",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -5851,7 +5507,7 @@
       "statsText": "+127 -52 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/072743c9c3b50f00c3f9caafd07a7b7464f371a1",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -5880,7 +5536,7 @@
       "statsText": "+163 -54 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/24b794ba2f06b73d53911bce77a7a4f2f9dfec64",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -5909,7 +5565,7 @@
       "statsText": "+4 -1 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/7a457afae14f02a8de1a45140608dd01c0ef7fb8",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -5938,7 +5594,7 @@
       "statsText": "+205 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/50b1007a52315cf6758af5ab3b4060a010fd8744",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -5967,7 +5623,7 @@
       "statsText": "+121 -50 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/1a7d1d4d51f9ff8c16a2c5697c345d379d9380d0",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -5996,7 +5652,7 @@
       "statsText": "+3 -2 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/020bff7b90bed6d73501d7e9ec319db145808ff3",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -6025,7 +5681,7 @@
       "statsText": "+42 -1 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/b66100d1ef9dfacbf89c88bc6b7192f2d563ea56",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -6054,7 +5710,7 @@
       "statsText": "+65 -6 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/34a8bd19e60a7b0b699b3ce4b33dbe8c50667a36",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -6083,7 +5739,7 @@
       "statsText": "+88 -29 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/4d2d978707fd8053ee436fb0a7c5d4fad8fc1a85",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -6112,7 +5768,7 @@
       "statsText": "+40 -6 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/ce9d2d01db73fa07ebda712ce9e0732c86c8df14",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -6141,7 +5797,7 @@
       "statsText": "+50 -20 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/e273542eed4396464c2054f33cc186c4d757875e",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -6170,7 +5826,7 @@
       "statsText": "+13 -5 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/36c4223004d3d93471d440cf8cbd4e2736a15427",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -6199,7 +5855,7 @@
       "statsText": "+8 -1 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/259b2f6f4375e2963eb23eb32f9422f499cd6b2f",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -6228,7 +5884,7 @@
       "statsText": "+8 -3 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/38ce7a383a69b9c96c84585ab3989d0a4458646c",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -6257,7 +5913,7 @@
       "statsText": "+4 -4 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/c07f441fa26e6cd3597cbdbd34c5d4302023830f",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -6286,7 +5942,7 @@
       "statsText": "+61 -23 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/cdc6cb6c4a4021237178affda1ff61ce581fbc04",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -6315,7 +5971,7 @@
       "statsText": "+45 -14 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/2e4afde457ab3212a343dc59cd166150c15caf18",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -6344,7 +6000,7 @@
       "statsText": "+1 -1 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/1451ba14e0bfa61bec72e15d795e6315ba7381e9",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -6373,7 +6029,7 @@
       "statsText": "+22 -14 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/9e3698006befe5aa8075d1474bff2b96ee91038e",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -6402,7 +6058,7 @@
       "statsText": "+56 -26 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/045776bcb1c56261876d76bc94b17081526ae6e4",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -6431,7 +6087,7 @@
       "statsText": "+10 -4 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/fa63324f4cb4c42ffdb013421145163806adfa50",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -6460,7 +6116,7 @@
       "statsText": "+6 -196 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/ff8e999d7a1f855b285c7191724a184de4c95554",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -6477,8 +6133,8 @@
         "files": 1
       },
       "type": "feature",
-      "branch": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-      "branchDisplay": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
+      "branch": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
       "branchMerged": null,
       "intoBranch": null,
       "isMerge": false,
@@ -6487,10 +6143,7 @@
       "statsText": "+2 -2 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/f1ac4209b8df9564b298b41883a542d7ff9c0e79",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -6519,7 +6172,7 @@
       "statsText": "+27 -29 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/13dec68ef7ed5e4470a82ea9b9fca84a4819ec63",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -6548,7 +6201,7 @@
       "statsText": "+12 -3 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/332dd5deb7e3cc4715b5c5758fa8a2fca2804c16",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -6577,7 +6230,7 @@
       "statsText": "+111 -250 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/f27c433fafd116a911a5dd28560baee833238da8",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -6606,7 +6259,7 @@
       "statsText": "+692 -242 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/ba395afb73c092b5accff969cafc8c9dcf247be5",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -6635,7 +6288,7 @@
       "statsText": "+44 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/cfd67a8e1a66ca8e6a4037e566b9181f5fbe2d26",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -6664,7 +6317,7 @@
       "statsText": "+648 -242 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/a941e8ed250074b3ea54b82417eac596a892605b",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -6693,7 +6346,7 @@
       "statsText": "+4 -1 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/839af46986d7b14cc2aea9c0ca920c2da0b9fdfb",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -6722,7 +6375,7 @@
       "statsText": "+115 -19 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/33c5dd5ce61006914c54af7bb73f31305f871dfe",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -6751,7 +6404,7 @@
       "statsText": "",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/04709815d7e0752de474778e9edaa6862cfa8aea",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -6780,7 +6433,7 @@
       "statsText": "+42 -30 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/9ee39d2ec11f240028ef6888cc093b37d02b464f",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -6809,7 +6462,7 @@
       "statsText": "+2 -21 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/20dfb5636034d64a4a2da345483041198717e911",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -6838,7 +6491,7 @@
       "statsText": "+22 -14 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/9626c02af3903a16ddf29281c2ee784175f5aeb8",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -6867,7 +6520,7 @@
       "statsText": "+10 -7 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/ca5f1a70caaf9ded7fa9f39ef660b727fa31d644",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -6896,7 +6549,7 @@
       "statsText": "+7 -3 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/a9cf41ec11fecaaf584c615022d07246229f110d",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -6925,7 +6578,7 @@
       "statsText": "+36 -12 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/efc54df9be41bd5b4a8accacbe0342b060a727f7",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -6954,7 +6607,7 @@
       "statsText": "+41 -27 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/1d8c8692f10342a20a8640f1af2934e27dc69fb5",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -6983,7 +6636,7 @@
       "statsText": "+16 -10 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/e6c783b8b0ae4640583c8ab48e0a4d295270545c",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -7012,7 +6665,7 @@
       "statsText": "+223 -72 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/e1028c62dde778ddf702315590fef9caeb628965",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -7041,7 +6694,7 @@
       "statsText": "+17 -10 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/01c3685c4dd4e2cc0fe7ff79be03f48229bfb34b",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -7070,7 +6723,9 @@
       "statsText": "+2 -2 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/efb80805e8a513115bed25a07f49758e5fb3e5de",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-73ea615029"
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+        "dev",
+        "main"
       ]
     },
     {
@@ -7085,8 +6740,8 @@
         "files": 1
       },
       "type": "feature",
-      "branch": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-      "branchDisplay": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
+      "branch": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
       "branchMerged": null,
       "intoBranch": null,
       "isMerge": false,
@@ -7095,9 +6750,7 @@
       "statsText": "+1 -1 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/114ba2070549938dcac53bb471fd68c55012ec5b",
       "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-        "dependabot/npm_and_yarn/types/node-24.7.0",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -7126,7 +6779,7 @@
       "statsText": "+3 -9 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/338f84099139f9f9af74a7ccbd2e0be7f3c6a72a",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -7155,7 +6808,7 @@
       "statsText": "+35 -19 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/e00c7c4495a794da17dd2b1a1260354ea2f8eba4",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -7184,7 +6837,7 @@
       "statsText": "+87 -39 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/0f06980356f7bbaf2fa3fbb3d01bb1b6e87184d1",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -7213,7 +6866,7 @@
       "statsText": "+2 -2 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/5714694e2986444428828314d7e8bfdb7c82b5fb",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -7242,7 +6895,7 @@
       "statsText": "+32 -9 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/9546db1f0fd6c5423e1be17220feefdce21bca7f",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -7271,7 +6924,7 @@
       "statsText": "+379 -4 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/0231409f7a8c900862c43d4a38a715a9368a912c",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -7300,7 +6953,7 @@
       "statsText": "+14 -8 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/8b249fa584c5b5ff18438a778aec3bb42f1190af",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -7329,7 +6982,7 @@
       "statsText": "+43 -37 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/263303f9fe17312cb11d6ff350607142aaef96a8",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -7358,7 +7011,7 @@
       "statsText": "+13 -10 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/4f66fcbb1c92e29c754088f98f65d9c89e8cb563",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -7387,7 +7040,7 @@
       "statsText": "+21 -16 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/6251ba9cf48b6d59b22ef3d47c8fccf2cb106651",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -7416,7 +7069,7 @@
       "statsText": "+17 -17 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/dbf88e778747ff45d89bf4f1480780fa83e5d5eb",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -7445,7 +7098,7 @@
       "statsText": "+18 -21 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/005ca6d1c66b1b91253b8f51020a898aaffd5ab4",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -7474,7 +7127,7 @@
       "statsText": "+10 -10 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/4fa748c179e6ee205d6a7646fb3a45f75edb3089",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -7503,7 +7156,7 @@
       "statsText": "+14 -7 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/17430995700eb510b70395a293b1b43ec265edfc",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -7532,7 +7185,7 @@
       "statsText": "+24 -18 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/7778e9aac82c2eb7b6a184668ca024bedfa9b7ab",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -7561,7 +7214,7 @@
       "statsText": "+118 -36 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/852194eee3258ae626d455d595aac7b5be560a78",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -7590,7 +7243,7 @@
       "statsText": "+41 -23 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/2b2da0e562b1d69b2f8e2c96bf32201b002a3a22",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -7619,7 +7272,7 @@
       "statsText": "+11 -1 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/9df35fe2ce70a59e5a8acf23244b3a8d0522cdb6",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -7648,7 +7301,7 @@
       "statsText": "+10 -5 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/113faa61d5b043a36066d3cda4916d6ada820572",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -7677,7 +7330,7 @@
       "statsText": "+1 -1 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/0cd77942805d1a9acb6927dca0e5cb3612c9b39f",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -7706,7 +7359,7 @@
       "statsText": "+260 -130 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/3f0ad8e933c66ba85f9de5a627d876b1577e755d",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -7735,7 +7388,7 @@
       "statsText": "+8 -4 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/5e7ba0478e9f7bc5cd4e1ba3179feb2bf18f35c0",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -7764,7 +7417,7 @@
       "statsText": "+17 -16 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/1b0df23aebcdb5c50946f05ae32a9e7268e48753",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -7793,7 +7446,7 @@
       "statsText": "+27 -29 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/3d7266d49dfe8d3b6083062577693766ece45056",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -7822,7 +7475,7 @@
       "statsText": "+3 -3 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/df8f4b950962a0c4eef9188bc0621a38b6656a57",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -7851,7 +7504,7 @@
       "statsText": "+1 -1 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/e6237557140b383cd36134a7b4d10d9d0d47398b",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -7880,7 +7533,7 @@
       "statsText": "+20 -16 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/dd1d7dcdb7478e1fba50d0ccb810da08e905d81c",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -7909,7 +7562,7 @@
       "statsText": "+10 -11 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/aaa4207020cef7e2e0a12e45a590c42af14b0943",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -7938,7 +7591,7 @@
       "statsText": "+3 -3 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/1a2ebc09f3c421f07e450cf886483d447802cf28",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -7967,7 +7620,7 @@
       "statsText": "+1 -6 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/f38db16b33ad2e15f577b2df11d8086118947aee",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -7996,7 +7649,7 @@
       "statsText": "+2 -2 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/657615ad2469e858ac340a39c3a4ed6618b12fcd",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -8025,7 +7678,7 @@
       "statsText": "+8 -2 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/76f9fd764e67eb8060555065c4d589921a825fae",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -8054,7 +7707,7 @@
       "statsText": "+34 -9 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/978ba65836f28b16357612a4e086c6dd42d9410c",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -8083,7 +7736,7 @@
       "statsText": "+2335 -476 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/b769d7bc398e47d42ecbe5631baab4b93aac6860",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -8112,7 +7765,7 @@
       "statsText": "+17 -15 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/1ca215ebaf2cfdf1a3c0a98f4673b09bb2bdc84b",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -8141,7 +7794,7 @@
       "statsText": "",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/8f4353f91651227e376aa6707e35525861cca22b",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -8170,42 +7823,13 @@
       "statsText": "+8 -1 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/a1f67dbed41701e606b7f386dc4b3c6eb4358781",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
     },
     {
       "version": "v1.7.4",
-      "hash": "51f9eb1",
-      "message": ": Bump the minor-patch-updates group across 1 directory with 7 updates.",
-      "date": "2025-10-06T10:09:50Z",
-      "author": "dependabot[bot]",
-      "stats": {
-        "insertions": 493,
-        "deletions": 380,
-        "files": 2
-      },
-      "type": "feature",
-      "branch": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-      "branchDisplay": "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049",
-      "branchMerged": null,
-      "intoBranch": null,
-      "isMerge": false,
-      "prNumber": 36,
-      "prTitle": "[DEPS]: Bump the minor-patch-updates group across 1 directory with 7 updates",
-      "bracketTags": [
-        "deps"
-      ],
-      "formattedDate": "6 October 2025 at 11:09:50 GMT+01:00",
-      "statsText": "+493 -380 lines",
-      "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/51f9eb1d0b04f44bd2d38e17d0e5ddde4afefa1a",
-      "allBranches": [
-        "dependabot/npm_and_yarn/minor-patch-updates-8d940bf049"
-      ]
-    },
-    {
-      "version": "v1.7.5",
       "hash": "16492fc",
       "message": ": Bump @types/node from 20.19.11 to 24.7.0.",
       "date": "2025-10-06T10:22:27Z",
@@ -8230,11 +7854,13 @@
       "statsText": "+12 -10 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/16492fcf9da95366d0e238d6d82707f9c88107ab",
       "allBranches": [
-        "dependabot/npm_and_yarn/types/node-24.7.0"
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+        "dev",
+        "main"
       ]
     },
     {
-      "version": "v1.7.6",
+      "version": "v1.7.5",
       "hash": "73a4b47",
       "message": "Updating SEO tags. Adding og:image. Updating config to allow for correct URL display on DEV.",
       "date": "2025-10-06T10:52:55Z",
@@ -8257,13 +7883,13 @@
       "statsText": "+35 -5 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/73a4b47ba10885072b45f98b035d2c5c77c57c7e",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
     },
     {
-      "version": "v1.7.7",
+      "version": "v1.7.6",
       "hash": "48b7bf4",
       "message": "Adding Sero headers for main site, and solidarity.",
       "date": "2025-10-06T13:09:01Z",
@@ -8286,13 +7912,13 @@
       "statsText": "+72 -12 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/48b7bf40306bcec09ff835fc6404524ff3a914d4",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
     },
     {
-      "version": "v1.7.8",
+      "version": "v1.7.7",
       "hash": "11576be",
       "message": "Merge pull request feat/seo-update.",
       "date": "2025-10-06T13:29:19Z",
@@ -8315,13 +7941,13 @@
       "statsText": "+106 -16 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/11576be2ee1fa89cfd326814a67ce4b2a49dd7b5",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
     },
     {
-      "version": "v1.7.9",
+      "version": "v1.7.8",
       "hash": "084c125",
       "message": "Adding favicons. Adding utility for dynamic favicon.",
       "date": "2025-10-06T14:04:37Z",
@@ -8344,7 +7970,7 @@
       "statsText": "+68 -8 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/084c1259940e3f727092ecfd12382b6a6cdcadf0",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -8373,7 +7999,7 @@
       "statsText": "+19 -3 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/73a47d6c76f3a36897045685a1b823566cbcdba7",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -8402,7 +8028,7 @@
       "statsText": "+68 -8 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/b1c565367e8304956d82bc78e6b319daa0b503d1",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -8431,7 +8057,7 @@
       "statsText": "+19 -3 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/ddf22807e1d459a20879f85b7dbe3d80fa72f788",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -8460,7 +8086,7 @@
       "statsText": "+1 -1 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/aa461ed3311c0633ac16e8540bbfe716f0f38ad8",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -8489,7 +8115,7 @@
       "statsText": "+7 -3 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/6d8598728d1202ed28cd36f996e6a900f6009a17",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -8506,8 +8132,8 @@
         "files": 98
       },
       "type": "merge",
-      "branch": "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+      "branch": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
       "branchMerged": null,
       "intoBranch": null,
       "isMerge": true,
@@ -8516,7 +8142,7 @@
       "statsText": "+3510 -437 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/94cf642bb59e9f5d66942e700f940fb405a67f70",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -8533,8 +8159,8 @@
         "files": 1
       },
       "type": "feature",
-      "branch": "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+      "branch": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
       "branchMerged": null,
       "intoBranch": null,
       "isMerge": false,
@@ -8543,7 +8169,7 @@
       "statsText": "+1 -5 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/da43bf669e03c52a3415064f281b3d273aca3789",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -8560,8 +8186,8 @@
         "files": 0
       },
       "type": "release",
-      "branch": "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+      "branch": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
       "branchMerged": null,
       "intoBranch": null,
       "isMerge": false,
@@ -8570,7 +8196,7 @@
       "statsText": "",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/107ac8e40482fe1cfbf53bc734305ec8770e1dca",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -8599,7 +8225,7 @@
       "statsText": "+3274 -1 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/c245043d80e64b813159fd20d106fcc666d066f1",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -8628,7 +8254,7 @@
       "statsText": "+5276 -322 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/6146b2d5a748487441f40f5abedc7ae53912693b",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -8657,7 +8283,7 @@
       "statsText": "+1 -5 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/89d846e0d9f38dab3cfbc8fbb7ccda4db936b1d8",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -8674,8 +8300,8 @@
         "files": 3
       },
       "type": "merge",
-      "branch": "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+      "branch": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
       "branchMerged": null,
       "intoBranch": null,
       "isMerge": true,
@@ -8684,7 +8310,7 @@
       "statsText": "+8545 -318 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/30b51a082a31c99d361772fb3b7f4ead4bdcad66",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -8713,7 +8339,7 @@
       "statsText": "+23 -3 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/ae8fc236a72e8522b9537b0412b3c2996758fa9d",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -8742,7 +8368,7 @@
       "statsText": "",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/cb44fb281c397690a94c6f505d0b8ed8c73c761d",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -8759,8 +8385,8 @@
         "files": 3
       },
       "type": "merge",
-      "branch": "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+      "branch": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
       "branchMerged": null,
       "intoBranch": null,
       "isMerge": true,
@@ -8769,7 +8395,7 @@
       "statsText": "+23 -3 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/a9912a1cd3cc17aedf63880107edf26bb1be8365",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -8786,8 +8412,8 @@
         "files": 1
       },
       "type": "feature",
-      "branch": "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+      "branch": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
       "branchMerged": null,
       "intoBranch": null,
       "isMerge": false,
@@ -8796,7 +8422,7 @@
       "statsText": "+1 -1 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/13af0df9cd2d8df2a7002edc05156a7140d5e29a",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -8825,7 +8451,7 @@
       "statsText": "+24 -14 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/62eed85d9a262b60639c5983b4f426fa483b8ce4",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -8842,8 +8468,8 @@
         "files": 5
       },
       "type": "merge",
-      "branch": "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+      "branch": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
       "branchMerged": null,
       "intoBranch": null,
       "isMerge": true,
@@ -8852,7 +8478,7 @@
       "statsText": "+24 -14 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/c67d0fb2fb203971dcb2a226aebf90ac53dc43c8",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -8881,7 +8507,7 @@
       "statsText": "+3 -4 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/19bf5bf8fb5c925176f1ffde6fbd85953a19fbde",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -8910,7 +8536,7 @@
       "statsText": "+8 -6 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/703fc4f695059d9893319887d99de62888cce2da",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -8927,8 +8553,8 @@
         "files": 5
       },
       "type": "merge",
-      "branch": "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+      "branch": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
       "branchMerged": null,
       "intoBranch": null,
       "isMerge": true,
@@ -8937,7 +8563,7 @@
       "statsText": "+11 -10 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/7edbb1fe70db1dec0f6e11e966643cf0f3f7864a",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -8966,7 +8592,7 @@
       "statsText": "+114 -59 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/9de9cf011ba0402233e3cbf5f876d4176bc57b4b",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -8995,7 +8621,7 @@
       "statsText": "+44 -34 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/d08de55b466a8223b95978ae3adc6cc693e45a4a",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -9024,7 +8650,7 @@
       "statsText": "+143 -78 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/78fbc4e71bd782ba5e699170d9d068763ce7729c",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -9041,8 +8667,8 @@
         "files": 14
       },
       "type": "merge",
-      "branch": "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+      "branch": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
       "branchMerged": null,
       "intoBranch": null,
       "isMerge": true,
@@ -9051,7 +8677,7 @@
       "statsText": "+143 -78 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/bfb5969633c2485c6a8fe57a009eb043b081f824",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -9080,7 +8706,7 @@
       "statsText": "+4 -3 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/8873c06677392840f67ddc90d5db3833079d59d4",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -9097,8 +8723,8 @@
         "files": 1
       },
       "type": "merge",
-      "branch": "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+      "branch": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
       "branchMerged": null,
       "intoBranch": null,
       "isMerge": true,
@@ -9107,7 +8733,7 @@
       "statsText": "+4 -3 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/f01102ffec897c8de6e1d072062a5c42fdaf312a",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -9136,7 +8762,7 @@
       "statsText": "+5 -6 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/b36cf95d86e09f73c6f6edff00189aa9885c0107",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -9165,7 +8791,7 @@
       "statsText": "",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/ffcd88d5f90e9be7fe54d0bf1e6c95383a59d9c7",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -9182,8 +8808,8 @@
         "files": 2
       },
       "type": "merge",
-      "branch": "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+      "branch": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
       "branchMerged": null,
       "intoBranch": null,
       "isMerge": true,
@@ -9192,7 +8818,7 @@
       "statsText": "+5 -6 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/e0749255ef3d6c34caf91bedd54aa08b6d671d04",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -9221,7 +8847,7 @@
       "statsText": "+71 -27 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/3c47a3418f69e241456f4b90fa777e5d36db27c7",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -9238,8 +8864,8 @@
         "files": 9
       },
       "type": "merge",
-      "branch": "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+      "branch": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
       "branchMerged": null,
       "intoBranch": null,
       "isMerge": true,
@@ -9248,7 +8874,7 @@
       "statsText": "+71 -27 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/e08df9f97d2d45e2850186ebb471f25ed2139a0c",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -9277,7 +8903,7 @@
       "statsText": "+1 -1 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/8c9f4306f796363c1b00b9f86964833d9d0327c4",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -9306,7 +8932,7 @@
       "statsText": "",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/e2c64917db1cc08c796e576c40d7c9182a33a883",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -9323,8 +8949,8 @@
         "files": 1
       },
       "type": "merge",
-      "branch": "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+      "branch": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
       "branchMerged": null,
       "intoBranch": null,
       "isMerge": true,
@@ -9333,7 +8959,7 @@
       "statsText": "+1 -1 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/063630b7a3e9483f1c40598b1a524f01c9da8499",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -9362,7 +8988,7 @@
       "statsText": "",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/87ed5d5bcd1f7eca24e3e06280aec3d902fe053b",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -9391,7 +9017,7 @@
       "statsText": "",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/204270c9a5129abf251ce402898d741bd1c53900",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -9408,8 +9034,8 @@
         "files": 4
       },
       "type": "merge",
-      "branch": "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
-      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+      "branch": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
       "branchMerged": null,
       "intoBranch": null,
       "isMerge": true,
@@ -9418,7 +9044,7 @@
       "statsText": "",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/7c6b05887946ad5bed1d2cde544e2f7d7e8f37b1",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a",
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -9447,6 +9073,7 @@
       "statsText": "+1 -2 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/56d45ad018e33551dce32024d166f16e410f78a0",
       "allBranches": [
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -9475,7 +9102,9 @@
       "statsText": "+445 -323 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/007e88261d03a287361a41c22ab2e0ba31aa2e68",
       "allBranches": [
-        "dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a"
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+        "dev",
+        "main"
       ]
     },
     {
@@ -9502,6 +9131,7 @@
       "statsText": "+54 -19 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/8139cc6a2151ef2f69d87ca3c42c9d9def979fc2",
       "allBranches": [
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -9530,6 +9160,7 @@
       "statsText": "+31 -18 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/8e90f85f37b5f9e0d37dad81779c17b6c6a260ef",
       "allBranches": [
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
@@ -9558,12 +9189,42 @@
       "statsText": "+64 -41 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/0f465805f2decb50d41ddc300490a626844ddca2",
       "allBranches": [
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
     },
     {
       "version": "v2.2.8",
+      "hash": "93f355d",
+      "message": "Updating and styling navigation. Adding fa icons using Iconify not a Kit.",
+      "date": "2025-10-12T10:35:39Z",
+      "author": "Paul Mackenzie",
+      "stats": {
+        "insertions": 66,
+        "deletions": 87,
+        "files": 4
+      },
+      "type": "feature",
+      "branch": "workingon/feat/site-refresh",
+      "branchDisplay": "workingon/feat/site-refresh",
+      "branchMerged": null,
+      "intoBranch": null,
+      "isMerge": false,
+      "prNumber": 53,
+      "prTitle": "Site overhaul",
+      "bracketTags": [],
+      "formattedDate": "12 October 2025 at 11:35:39 GMT+01:00",
+      "statsText": "+66 -87 lines",
+      "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/93f355d07aac82ca6706cb9eddfb250f0363c26d",
+      "allBranches": [
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+        "dev",
+        "main"
+      ]
+    },
+    {
+      "version": "v2.2.9",
       "hash": "7a2d30f",
       "message": "Styling each how section. Creating new component for email sentfrom info. Moving from fa to iconify.",
       "date": "2025-10-12T15:07:56Z",
@@ -9586,12 +9247,13 @@
       "statsText": "+118 -39 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/7a2d30f340fa6b0dc0cb6b050b61bb0724eaa500",
       "allBranches": [
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
     },
     {
-      "version": "v2.2.9",
+      "version": "v2.2.10",
       "hash": "190b22a",
       "message": "Adjusting layout to center. Changing email names.",
       "date": "2025-10-12T16:57:53Z",
@@ -9614,12 +9276,13 @@
       "statsText": "+13 -12 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/190b22a11823292f27b4e995313b969ab851a6cf",
       "allBranches": [
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
     },
     {
-      "version": "v2.2.10",
+      "version": "v2.2.11",
       "hash": "8a17c6c",
       "message": "Adding navigation. Updating earlybird section and banner with new emoji.",
       "date": "2025-10-12T19:52:20Z",
@@ -9642,12 +9305,13 @@
       "statsText": "+26 -21 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/8a17c6c9b5e004ed22a66c2258bd54be9d11cca9",
       "allBranches": [
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
     },
     {
-      "version": "v2.2.11",
+      "version": "v2.2.12",
       "hash": "3f0e531",
       "message": "Banner now clickable. Removed coming soon. Tweaking navigation.",
       "date": "2025-10-12T20:33:54Z",
@@ -9670,12 +9334,13 @@
       "statsText": "+15 -14 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/3f0e531ca7e043ac93e6e0f3f8df6a6fd28a78fa",
       "allBranches": [
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
     },
     {
-      "version": "v2.2.12",
+      "version": "v2.2.13",
       "hash": "6ad11c3",
       "message": "Copy update. Reducing padding on example emails.",
       "date": "2025-10-13T05:06:20Z",
@@ -9698,12 +9363,13 @@
       "statsText": "+11 -8 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/6ad11c36626737a34e151f2b7f8d06c7b0751a34",
       "allBranches": [
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
     },
     {
-      "version": "v2.2.13",
+      "version": "v2.2.14",
       "hash": "d20277d",
       "message": "Adding the start of the Pro section. Updating spacing.",
       "date": "2025-10-13T06:07:55Z",
@@ -9726,12 +9392,13 @@
       "statsText": "+56 -13 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/d20277dcacbe127927cf07f784e1a025812969ec",
       "allBranches": [
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
     },
     {
-      "version": "v2.2.14",
+      "version": "v2.3.0",
       "hash": "dee3cf3",
       "message": "Fixing layout shift due to icon load.",
       "date": "2025-10-13T06:12:03Z",
@@ -9754,12 +9421,13 @@
       "statsText": "+2 -2 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/dee3cf3fad6d48b874b68f0f18b39c326220dc87",
       "allBranches": [
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
     },
     {
-      "version": "v2.3.0",
+      "version": "v2.3.1",
       "hash": "340f215",
       "message": "Adding multi-emoji copy. Including google featured, and rating in header.",
       "date": "2025-10-13T15:39:54Z",
@@ -9782,12 +9450,13 @@
       "statsText": "+49 -16 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/340f215d9260776340a37f655ef0ee963b5e8ae0",
       "allBranches": [
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
     },
     {
-      "version": "v2.3.1",
+      "version": "v2.3.2",
       "hash": "7e482cd",
       "message": "Adding firefox button.",
       "date": "2025-10-13T15:54:13Z",
@@ -9810,12 +9479,13 @@
       "statsText": "+9 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/7e482cda4e0ce6c7031dd3262887541efc2074e9",
       "allBranches": [
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
     },
     {
-      "version": "v2.3.2",
+      "version": "v2.3.3",
       "hash": "b943469",
       "message": "Updating examples and copy. Creating navigation component.",
       "date": "2025-10-14T06:58:24Z",
@@ -9838,12 +9508,13 @@
       "statsText": "+144 -133 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/b9434694c12997611360889d077b31253a52db2c",
       "allBranches": [
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
     },
     {
-      "version": "v2.3.3",
+      "version": "v2.3.4",
       "hash": "d73c0f2",
       "message": "Making navigation responsive.",
       "date": "2025-10-14T13:21:58Z",
@@ -9866,12 +9537,13 @@
       "statsText": "+57 -27 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/d73c0f2680b12bd8fd04171a61caa69e5cedcd58",
       "allBranches": [
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
     },
     {
-      "version": "v2.3.4",
+      "version": "v2.3.5",
       "hash": "8b6cb8f",
       "message": "Adding more responsive styles. Adding indicator component.",
       "date": "2025-10-15T12:23:58Z",
@@ -9894,12 +9566,13 @@
       "statsText": "+71 -58 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/8b6cb8fd3e9113f150a7879f376c9f55717588e5",
       "allBranches": [
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
     },
     {
-      "version": "v2.3.5",
+      "version": "v2.3.6",
       "hash": "98c1f17",
       "message": "Splitting out components. More responsive styles.",
       "date": "2025-10-15T18:57:29Z",
@@ -9922,12 +9595,13 @@
       "statsText": "+93 -111 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/98c1f17ffd21ae91d02883c236fafb946e961e03",
       "allBranches": [
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
     },
     {
-      "version": "v2.3.6",
+      "version": "v2.3.7",
       "hash": "9959348",
       "message": "Further responsive styles.",
       "date": "2025-10-15T19:41:32Z",
@@ -9950,12 +9624,13 @@
       "statsText": "+18 -13 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/995934814bd53438b16e5c3a6425f1be973b80ec",
       "allBranches": [
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
     },
     {
-      "version": "v2.3.7",
+      "version": "v2.3.8",
       "hash": "222da7d",
       "message": "Final responsive styles.",
       "date": "2025-10-15T19:56:16Z",
@@ -9978,12 +9653,13 @@
       "statsText": "+7 -4 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/222da7d445d5d6a8973e64816981b431450c4fdb",
       "allBranches": [
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
     },
     {
-      "version": "v2.3.8",
+      "version": "v2.3.9",
       "hash": "cf6544f",
       "message": "Merge pull request feat/dadreply-how-section.",
       "date": "2025-10-15T20:00:58Z",
@@ -10006,12 +9682,42 @@
       "statsText": "+524 -235 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/cf6544f58b33994f1a3d3565f528c91589ee19e1",
       "allBranches": [
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
     },
     {
-      "version": "v2.3.9",
+      "version": "v2.3.10",
+      "hash": "6bbeb7f",
+      "message": "Merge branch 'dev' into feat/homepage-update.",
+      "date": "2025-10-15T20:03:47Z",
+      "author": "Paul Mackenzie",
+      "stats": {
+        "insertions": 524,
+        "deletions": 235,
+        "files": 27
+      },
+      "type": "merge",
+      "branch": "workingon/feat/site-refresh",
+      "branchDisplay": "workingon/feat/site-refresh",
+      "branchMerged": "dev",
+      "intoBranch": "feat/homepage-update",
+      "isMerge": true,
+      "prNumber": 53,
+      "prTitle": "Site overhaul",
+      "bracketTags": [],
+      "formattedDate": "15 October 2025 at 21:03:47 GMT+01:00",
+      "statsText": "+524 -235 lines",
+      "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/6bbeb7f9c3cadc74fd83ac03c5434db4f6a3408a",
+      "allBranches": [
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+        "dev",
+        "main"
+      ]
+    },
+    {
+      "version": "v2.3.11",
       "hash": "fcb1a43",
       "message": "Updating Open Graph images for Dad Reply.",
       "date": "2025-10-15T20:16:59Z",
@@ -10034,12 +9740,13 @@
       "statsText": "",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/fcb1a4319e538d5af37c5390ac4bacd9d839972c",
       "allBranches": [
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
     },
     {
-      "version": "v2.3.10",
+      "version": "v2.3.12",
       "hash": "abc32f2",
       "message": "Merge pull request workingonstudio/dev.",
       "date": "2025-10-15T20:18:40Z",
@@ -10050,8 +9757,8 @@
         "files": 31
       },
       "type": "merge",
-      "branch": "dev",
-      "branchDisplay": "dev",
+      "branch": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
       "branchMerged": null,
       "intoBranch": null,
       "isMerge": true,
@@ -10060,12 +9767,42 @@
       "statsText": "+524 -236 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/abc32f2ba28086955ecd5fd7b8d7de103ad79a18",
       "allBranches": [
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
     },
     {
-      "version": "v2.3.11",
+      "version": "v2.3.13",
+      "hash": "8860bde",
+      "message": "Merge branch 'dev' into feat/homepage-update.",
+      "date": "2025-10-15T20:19:19Z",
+      "author": "Paul Mackenzie",
+      "stats": {
+        "insertions": 0,
+        "deletions": 0,
+        "files": 4
+      },
+      "type": "merge",
+      "branch": "workingon/feat/site-refresh",
+      "branchDisplay": "workingon/feat/site-refresh",
+      "branchMerged": "dev",
+      "intoBranch": "feat/homepage-update",
+      "isMerge": true,
+      "prNumber": 53,
+      "prTitle": "Site overhaul",
+      "bracketTags": [],
+      "formattedDate": "15 October 2025 at 21:19:19 GMT+01:00",
+      "statsText": "",
+      "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/8860bde41dc0f26edb635b5040a8aac8650a6d3e",
+      "allBranches": [
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+        "dev",
+        "main"
+      ]
+    },
+    {
+      "version": "v2.3.14",
       "hash": "73e2545",
       "message": "Fixing navigation padding on mobile.",
       "date": "2025-10-15T20:27:27Z",
@@ -10076,8 +9813,8 @@
         "files": 1
       },
       "type": "feature",
-      "branch": "dev",
-      "branchDisplay": "dev",
+      "branch": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
       "branchMerged": null,
       "intoBranch": null,
       "isMerge": false,
@@ -10086,12 +9823,42 @@
       "statsText": "+1 -1 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/73e254565900147addb495e902bd59aeee8f2769",
       "allBranches": [
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
     },
     {
-      "version": "v2.3.12",
+      "version": "v2.4.0",
+      "hash": "f2e0655",
+      "message": "Merge branch 'main' into feat/homepage-update.",
+      "date": "2025-10-15T20:27:51Z",
+      "author": "Paul Mackenzie",
+      "stats": {
+        "insertions": 1,
+        "deletions": 1,
+        "files": 1
+      },
+      "type": "merge",
+      "branch": "workingon/feat/site-refresh",
+      "branchDisplay": "workingon/feat/site-refresh",
+      "branchMerged": "main",
+      "intoBranch": "feat/homepage-update",
+      "isMerge": true,
+      "prNumber": 53,
+      "prTitle": "Site overhaul",
+      "bracketTags": [],
+      "formattedDate": "15 October 2025 at 21:27:51 GMT+01:00",
+      "statsText": "+1 -1 lines",
+      "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/f2e065558bf39159a4476fcd044b0c61ceb6d463",
+      "allBranches": [
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+        "dev",
+        "main"
+      ]
+    },
+    {
+      "version": "v2.4.1",
       "hash": "6e3f62a",
       "message": "Altering name on Dad Reply homepage.",
       "date": "2025-10-15T20:37:19Z",
@@ -10102,8 +9869,8 @@
         "files": 1
       },
       "type": "feature",
-      "branch": "dev",
-      "branchDisplay": "dev",
+      "branch": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
+      "branchDisplay": "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
       "branchMerged": null,
       "intoBranch": null,
       "isMerge": false,
@@ -10112,12 +9879,13 @@
       "statsText": "+2 -2 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/6e3f62ab77156d677b4b1e334b53b7e235eff2a9",
       "allBranches": [
+        "dependabot/npm_and_yarn/npm_and_yarn-3c67cbb9cd",
         "dev",
         "main"
       ]
     },
     {
-      "version": "v2.0.1",
+      "version": "v2.4.2",
       "hash": "5a898a5",
       "message": "Initial setup. Adding Header.",
       "date": "2025-10-15T23:35:40Z",
@@ -10146,7 +9914,7 @@
       ]
     },
     {
-      "version": "v2.0.2",
+      "version": "v2.4.3",
       "hash": "13527a0",
       "message": "Styling header. Adding Navigation.",
       "date": "2025-10-16T06:13:00Z",
@@ -10175,7 +9943,7 @@
       ]
     },
     {
-      "version": "v2.0.3",
+      "version": "v2.4.4",
       "hash": "3a2068e",
       "message": "Styling interactions.",
       "date": "2025-10-16T06:42:37Z",
@@ -10204,7 +9972,7 @@
       ]
     },
     {
-      "version": "v2.0.4",
+      "version": "v2.4.5",
       "hash": "aa22c36",
       "message": "Updating copy on homepage.",
       "date": "2025-10-16T12:48:57Z",
@@ -10233,7 +10001,7 @@
       ]
     },
     {
-      "version": "v2.0.5",
+      "version": "v2.4.6",
       "hash": "14c2fe3",
       "message": "Updating Home, Projects, Timeline with news styling.",
       "date": "2025-10-17T00:43:29Z",
@@ -10262,7 +10030,7 @@
       ]
     },
     {
-      "version": "v2.0.6",
+      "version": "v2.4.7",
       "hash": "3eb90c2",
       "message": "Adding updating finance data. Adding active states on navigation.",
       "date": "2025-10-17T08:36:17Z",
@@ -10291,7 +10059,7 @@
       ]
     },
     {
-      "version": "v2.0.7",
+      "version": "v2.4.8",
       "hash": "391d470",
       "message": "Adding animations on scroll.",
       "date": "2025-10-17T10:17:53Z",
@@ -10320,7 +10088,7 @@
       ]
     },
     {
-      "version": "v2.0.8",
+      "version": "v2.4.9",
       "hash": "4122cf1",
       "message": "Adding new footer. Removing footer from other pages.",
       "date": "2025-10-17T15:33:38Z",
@@ -10349,7 +10117,7 @@
       ]
     },
     {
-      "version": "v2.0.9",
+      "version": "v2.4.10",
       "hash": "b084c3e",
       "message": "Beginning responsive styles.",
       "date": "2025-10-17T18:30:19Z",
@@ -10378,7 +10146,7 @@
       ]
     },
     {
-      "version": "v2.0.10",
+      "version": "v2.4.11",
       "hash": "dca6640",
       "message": "Basic menu toggle.",
       "date": "2025-10-17T18:58:25Z",
@@ -10407,7 +10175,7 @@
       ]
     },
     {
-      "version": "v2.0.11",
+      "version": "v2.4.12",
       "hash": "43e36a5",
       "message": "Changing openMenu to toggleMenu.",
       "date": "2025-10-17T19:00:36Z",
@@ -10436,7 +10204,7 @@
       ]
     },
     {
-      "version": "v2.0.12",
+      "version": "v2.4.13",
       "hash": "0fed12f",
       "message": "Fixing footer layout on smaller screens.",
       "date": "2025-10-17T19:15:11Z",
@@ -10465,7 +10233,7 @@
       ]
     },
     {
-      "version": "v2.0.13",
+      "version": "v2.4.14",
       "hash": "32f3d08",
       "message": "Increasing h2 size on small screens. Adding text-pretty to all header tags.",
       "date": "2025-10-17T19:18:22Z",
@@ -10494,7 +10262,7 @@
       ]
     },
     {
-      "version": "v2.0.14",
+      "version": "v2.5.0",
       "hash": "2cf0d2c",
       "message": "Separating page header. Removing unnecessary local styles.",
       "date": "2025-10-18T06:43:20Z",
@@ -10523,7 +10291,7 @@
       ]
     },
     {
-      "version": "v2.1.0",
+      "version": "v2.5.1",
       "hash": "3dbf603",
       "message": "Complete refactor of layout. No more repeated content.",
       "date": "2025-10-18T08:28:44Z",
@@ -10552,7 +10320,7 @@
       ]
     },
     {
-      "version": "v2.1.1",
+      "version": "v2.5.2",
       "hash": "cc5ecd0",
       "message": "Altering size of email sub-text.",
       "date": "2025-10-18T08:48:35Z",
@@ -10581,7 +10349,7 @@
       ]
     },
     {
-      "version": "v2.1.2",
+      "version": "v2.5.3",
       "hash": "22054eb",
       "message": "Adding responsive styles for larger screens.",
       "date": "2025-10-18T14:50:28Z",
@@ -10610,7 +10378,7 @@
       ]
     },
     {
-      "version": "v2.1.3",
+      "version": "v2.5.4",
       "hash": "443af19",
       "message": "Merge branch 'dev' into workingon/feat/site-refresh.",
       "date": "2025-10-18T14:50:59Z",
@@ -10639,7 +10407,7 @@
       ]
     },
     {
-      "version": "v2.1.4",
+      "version": "v2.5.5",
       "hash": "56a7775",
       "message": "Removing unnecessary props from Layout.astro. Upating hiring copy.",
       "date": "2025-10-18T15:26:53Z",
@@ -10668,7 +10436,7 @@
       ]
     },
     {
-      "version": "v2.1.5",
+      "version": "v2.5.6",
       "hash": "90f5c89",
       "message": "Updating animations for daily rate, and header on scroll.",
       "date": "2025-10-18T15:49:53Z",
@@ -10697,7 +10465,7 @@
       ]
     },
     {
-      "version": "v2.1.6",
+      "version": "v2.5.7",
       "hash": "97a5c1a",
       "message": "Altering dayrate logic. Adding more reponsive styles.",
       "date": "2025-10-18T21:51:52Z",
@@ -10726,7 +10494,7 @@
       ]
     },
     {
-      "version": "v2.1.7",
+      "version": "v2.5.8",
       "hash": "1777be9",
       "message": "Merge pull request workingon/feat/site-refresh.",
       "date": "2025-10-18T22:06:33Z",
@@ -10755,7 +10523,7 @@
       ]
     },
     {
-      "version": "v2.1.8",
+      "version": "v2.5.9",
       "hash": "543cf85",
       "message": "Updating open graph images. Sorting icon pop on footer.",
       "date": "2025-10-18T22:08:07Z",
@@ -10784,7 +10552,7 @@
       ]
     },
     {
-      "version": "v2.1.9",
+      "version": "v2.5.10",
       "hash": "bfd7072",
       "message": "Fixing merge conflicts due to git stash.",
       "date": "2025-10-18T22:11:35Z",
@@ -10813,7 +10581,7 @@
       ]
     },
     {
-      "version": "v2.1.10",
+      "version": "v2.5.11",
       "hash": "9a1d127",
       "message": "Merge branch 'main' into dependabot/npm_and_yarn/types/node-24.7.0.",
       "date": "2025-10-18T22:19:44Z",
@@ -10842,7 +10610,7 @@
       ]
     },
     {
-      "version": "v2.1.11",
+      "version": "v2.5.12",
       "hash": "51faa21",
       "message": "Merge branch 'main' into dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a.",
       "date": "2025-10-18T22:20:55Z",
@@ -10871,7 +10639,7 @@
       ]
     },
     {
-      "version": "v2.1.12",
+      "version": "v2.5.13",
       "hash": "14ead49",
       "message": "Merge branch 'main' into dependabot/npm_and_yarn/npm_and_yarn-73ea615029.",
       "date": "2025-10-18T22:22:11Z",
@@ -10900,7 +10668,7 @@
       ]
     },
     {
-      "version": "v2.1.13",
+      "version": "v2.5.14",
       "hash": "b058cc0",
       "message": "Merge pull request dependabot/npm_and_yarn/npm_and_yarn-8821e1ae2a.",
       "date": "2025-10-18T22:26:30Z",
@@ -10927,7 +10695,7 @@
       ]
     },
     {
-      "version": "v2.1.14",
+      "version": "v2.6.0",
       "hash": "4175e2e",
       "message": "Merge branch 'main' into dependabot/npm_and_yarn/types/node-24.7.0.",
       "date": "2025-10-18T22:26:45Z",
@@ -10956,7 +10724,7 @@
       ]
     },
     {
-      "version": "v2.2.0",
+      "version": "v2.6.1",
       "hash": "1da51a2",
       "message": "Merge pull request dependabot/npm_and_yarn/types/node-24.7.0.",
       "date": "2025-10-18T22:28:56Z",
@@ -10983,7 +10751,7 @@
       ]
     },
     {
-      "version": "v2.2.1",
+      "version": "v2.6.2",
       "hash": "909e1bf",
       "message": "Merge branch 'main' into dependabot/npm_and_yarn/npm_and_yarn-73ea615029.",
       "date": "2025-10-18T22:29:10Z",
@@ -11012,7 +10780,7 @@
       ]
     },
     {
-      "version": "v2.2.2",
+      "version": "v2.6.3",
       "hash": "98a56a0",
       "message": "Merge pull request dependabot/npm_and_yarn/npm_and_yarn-73ea615029.",
       "date": "2025-10-18T22:32:08Z",
@@ -11039,7 +10807,7 @@
       ]
     },
     {
-      "version": "v2.2.3",
+      "version": "v2.6.4",
       "hash": "17f24aa",
       "message": "Removing stash artifacts.",
       "date": "2025-10-18T22:32:41Z",
@@ -11068,7 +10836,7 @@
       ]
     },
     {
-      "version": "v2.2.4",
+      "version": "v2.6.5",
       "hash": "df10827",
       "message": "Merge branch 'main' into dev.",
       "date": "2025-10-18T22:33:48Z",
@@ -11097,7 +10865,7 @@
       ]
     },
     {
-      "version": "v2.2.5",
+      "version": "v2.6.6",
       "hash": "4330bd5",
       "message": "Merge branch 'dev' into sketchtoday/feat/navigation.",
       "date": "2025-10-18T22:35:48Z",
@@ -11126,7 +10894,7 @@
       ]
     },
     {
-      "version": "v2.2.6",
+      "version": "v2.6.7",
       "hash": "2d8511c",
       "message": "Updating animation for header on scroll. Now much smoother.",
       "date": "2025-10-19T06:23:27Z",
@@ -11155,7 +10923,7 @@
       ]
     },
     {
-      "version": "v2.2.7",
+      "version": "v2.6.8",
       "hash": "c00ca85",
       "message": "Merge branch 'dev' into sketchtoday/feat/navigation.",
       "date": "2025-10-19T06:24:21Z",
@@ -11184,7 +10952,7 @@
       ]
     },
     {
-      "version": "v2.2.8",
+      "version": "v2.6.9",
       "hash": "2f0cc00",
       "message": "Further tweaks to animation.",
       "date": "2025-10-19T06:33:44Z",
@@ -11213,7 +10981,7 @@
       ]
     },
     {
-      "version": "v2.2.9",
+      "version": "v2.6.10",
       "hash": "0c7c35a",
       "message": "Improving homepage copy.",
       "date": "2025-10-19T07:34:14Z",
@@ -11242,7 +11010,7 @@
       ]
     },
     {
-      "version": "v2.2.10",
+      "version": "v2.6.11",
       "hash": "0f5fa90",
       "message": "Updating header with shadow. Updating copy on Projects page. Removing dynamic padding on navigation.",
       "date": "2025-10-19T09:44:49Z",
@@ -11271,7 +11039,7 @@
       ]
     },
     {
-      "version": "v2.2.11",
+      "version": "v2.6.12",
       "hash": "953e95c",
       "message": "Updating footer link to Companies House. Fixing copy for timeline.",
       "date": "2025-10-19T09:56:40Z",
@@ -11300,7 +11068,7 @@
       ]
     },
     {
-      "version": "v2.2.12",
+      "version": "v2.6.13",
       "hash": "a674b3f",
       "message": "Updating project copy. Tweaking homepage copy.",
       "date": "2025-10-19T16:29:36Z",
@@ -11329,7 +11097,7 @@
       ]
     },
     {
-      "version": "v2.2.13",
+      "version": "v2.6.14",
       "hash": "8990f5c",
       "message": "Updating copy, far less try hard.",
       "date": "2025-10-19T16:40:04Z",
@@ -16184,6 +15952,116 @@
       "formattedDate": "23 November 2025 at 11:56:55 GMT",
       "statsText": "+13 -4 lines",
       "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/d0cbe8e65acaadb5783642b7bf96e1b86215ea01",
+      "allBranches": [
+        "dev",
+        "main"
+      ]
+    },
+    {
+      "version": "v4.2.9",
+      "hash": "191127d",
+      "message": "Converting all Opengraph images to webp.",
+      "date": "2025-11-24T12:54:13Z",
+      "author": "Paul Mackenzie",
+      "stats": {
+        "insertions": 20,
+        "deletions": 23,
+        "files": 33
+      },
+      "type": "feature",
+      "branch": "dev",
+      "branchDisplay": "dev",
+      "branchMerged": null,
+      "intoBranch": null,
+      "isMerge": false,
+      "prNumber": 89,
+      "prTitle": "Fixes and Chores",
+      "bracketTags": [],
+      "formattedDate": "24 November 2025 at 12:54:13 GMT",
+      "statsText": "+20 -23 lines",
+      "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/191127d52594445d0b3c40a264619f728a9992f5",
+      "allBranches": [
+        "dev",
+        "main"
+      ]
+    },
+    {
+      "version": "v4.2.10",
+      "hash": "0278ff9",
+      "message": "Adding better images for Twitter cards. Including correct url displays.",
+      "date": "2025-11-24T13:03:05Z",
+      "author": "Paul Mackenzie",
+      "stats": {
+        "insertions": 43,
+        "deletions": 7,
+        "files": 5
+      },
+      "type": "feature",
+      "branch": "dev",
+      "branchDisplay": "dev",
+      "branchMerged": null,
+      "intoBranch": null,
+      "isMerge": false,
+      "prNumber": 89,
+      "prTitle": "Fixes and Chores",
+      "bracketTags": [],
+      "formattedDate": "24 November 2025 at 13:03:05 GMT",
+      "statsText": "+43 -7 lines",
+      "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/0278ff990437136fda08495df2109e5651c1e3ab",
+      "allBranches": [
+        "dev",
+        "main"
+      ]
+    },
+    {
+      "version": "v4.2.11",
+      "hash": "3ad479f",
+      "message": "Updating commit fetch script to only bring in new commits since last run.",
+      "date": "2025-11-24T13:21:03Z",
+      "author": "Paul Mackenzie",
+      "stats": {
+        "insertions": 6108,
+        "deletions": 33,
+        "files": 2
+      },
+      "type": "feature",
+      "branch": "dev",
+      "branchDisplay": "dev",
+      "branchMerged": null,
+      "intoBranch": null,
+      "isMerge": false,
+      "prNumber": 89,
+      "prTitle": "Fixes and Chores",
+      "bracketTags": [],
+      "formattedDate": "24 November 2025 at 13:21:03 GMT",
+      "statsText": "+6108 -33 lines",
+      "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/3ad479f35b3a9e0b4445ced0a93218d4be211003",
+      "allBranches": [
+        "dev",
+        "main"
+      ]
+    },
+    {
+      "version": "v4.2.12",
+      "hash": "7eb9fa8",
+      "message": "Merge pull request workingonstudio/dev.",
+      "date": "2025-11-24T13:34:51Z",
+      "author": "Paul Mackenzie",
+      "stats": {
+        "insertions": 6164,
+        "deletions": 56,
+        "files": 36
+      },
+      "type": "merge",
+      "branch": "dev",
+      "branchDisplay": "dev",
+      "branchMerged": null,
+      "intoBranch": null,
+      "isMerge": true,
+      "bracketTags": [],
+      "formattedDate": "24 November 2025 at 13:34:51 GMT",
+      "statsText": "+6164 -56 lines",
+      "githubUrl": "https://github.com/workingonstudio/workingon.studio/commit/7eb9fa883b7e5c2ddbeffb370982cba60f59d12c",
       "allBranches": [
         "dev",
         "main"

@@ -283,7 +283,12 @@ async function fetchGitHubTimeline() {
       per_page: 100,
     });
 
+    // Build set of new commit SHAs to check
+    const newCommitShas = new Set(genuinelyNewCommits.map((c) => c.sha));
+
     const prCommitsMap = {};
+    let prsChecked = 0;
+
     for (const pr of pulls) {
       try {
         const prCommits = await octokit.paginate(octokit.rest.pulls.listCommits, {
@@ -293,13 +298,20 @@ async function fetchGitHubTimeline() {
           per_page: 100,
         });
 
-        prCommits.forEach((commit) => {
-          prCommitsMap[commit.sha] = pr;
-        });
+        // Only process if this PR contains any of our new commits
+        const hasNewCommits = prCommits.some((c) => newCommitShas.has(c.sha));
+        if (hasNewCommits) {
+          prCommits.forEach((commit) => {
+            prCommitsMap[commit.sha] = pr;
+          });
+          prsChecked++;
+        }
       } catch (error) {
         console.warn(`   ⚠️  Could not fetch commits for PR #${pr.number}`);
       }
     }
+
+    console.log(`📋 Checked ${prsChecked} relevant PRs out of ${pulls.length} total`);
 
     // Get detailed commit stats for NEW commits only
     console.log("📊 Fetching detailed commit stats...");
@@ -330,6 +342,15 @@ async function fetchGitHubTimeline() {
 
     // Get tags
     const tagsWithDates = await getTagsWithDates(octokit, GITHUB_OWNER, GITHUB_REPO);
+
+    // Build complete commit list for version generation (existing + new)
+    const allCommitsForVersioning = [
+      ...existingEntries.map((e) => ({
+        sha: e.hash,
+        commit: { committer: { date: e.date } },
+      })),
+      ...detailedCommits,
+    ];
 
     // Process new commits
     const newEntries = detailedCommits.map((commit) => {
@@ -363,7 +384,7 @@ async function fetchGitHubTimeline() {
       }
 
       return {
-        version: generateVersionForCommit(commit, detailedCommits, tagsWithDates),
+        version: generateVersionForCommit(commit, allCommitsForVersioning, tagsWithDates),
         hash: commit.sha.substring(0, 7),
         message: (() => {
           let msg = commit.commit.message.split("\n")[0];
