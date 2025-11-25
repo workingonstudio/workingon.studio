@@ -8,9 +8,5 @@
   "date": "2025-11-17T00:00:00.000Z",
   "status": "future",
   "icon": "material-symbols:event-upcoming-rounded",
-  "items": [
-    "support for full Material icons.",
-    "category separation.",
-    "fixed sizes (16 x 16, 24 x 24)."
-  ]
+  "items": ["insert as symbol.", "send to symbol page.", "prefix symbol name."]
 }

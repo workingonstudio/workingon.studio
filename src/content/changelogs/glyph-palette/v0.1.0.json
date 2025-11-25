@@ -8,5 +8,9 @@
   "date": "2025-11-17T00:00:00.000Z",
   "status": "next",
   "icon": "material-symbols:double-arrow-rounded",
-  "items": ["insert as symbol.", "send to symbol page.", "prefix symbol name."]
+  "items": [
+    "support for full Material icons.",
+    "category separation.",
+    "fixed sizes (16 x 16, 24 x 24)."
+  ]
 }

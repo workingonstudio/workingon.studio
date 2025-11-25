@@ -1,7 +1,7 @@
 <script lang="ts">
   import Header from "./Header.svelte";
   import Hero from "./Hero.svelte";
-  import Changelog from "./Changelog.svelte";
+  import Roadmap from "./Roadmap.svelte";
   import Features from "./Features.svelte";
   import Footer from "./Footer.svelte";
 
@@ -12,7 +12,7 @@
 <div class="flex flex-col gap-36">
   <Hero />
   <Features />
-  <Changelog {productChangelogs} />
+  <Roadmap {productChangelogs} />
 </div>
 <Footer />
 
