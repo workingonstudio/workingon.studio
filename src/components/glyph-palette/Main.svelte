@@ -13,8 +13,8 @@
   <Hero />
   <Features />
   <Roadmap {productChangelogs} />
+  <Footer />
 </div>
-<Footer />
 
 <style>
   @reference "@styles/glyph-palette.css";

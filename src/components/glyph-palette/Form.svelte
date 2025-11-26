@@ -73,7 +73,9 @@
     <div class="flex flex-col gap-2">
       <h3>Thanks for signing up.</h3>
       <p>
-        Check your email, inc. spam, you'll need to confirm your address. You'll then get a link to the Alpha build.
+        Check your email, inc. spam, you'll need to confirm your address.
+        <br />
+        You'll then get a link to the Alpha build.
       </p>
     </div>
   {/if}

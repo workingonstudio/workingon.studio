@@ -14,8 +14,8 @@
     <ul class="flex flex-row gap-6">
       <li><a href="#roadmap">Roadmap</a></li>
       <li class="flex items-center gap-1">
-        <a href="https://sketchto.day">Sketchto.day</a>
-        <iconify-icon icon="material-symbols:open-in-new"></iconify-icon>
+        <a href="https://sketchto.day?ref=glyphpalette" target="_blank">Sketchto.day</a>
+        <iconify-icon icon="material-symbols:open-in-new" class="size-3"></iconify-icon>
       </li>
     </ul>
   </nav>

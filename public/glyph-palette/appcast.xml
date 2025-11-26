@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Glyph Palette</title>
+    <link>https://glyphpalette.com</link>
+    <description>A modern icon plugin for Sketch.</description>
+    <language>en</language>
+    <item>
+      <title>v0.0.5</title>
+      <description>
+        <![CDATA[
+          <ul>
+            <li>Initial alpha release</li>
+            <li>Browse and insert Material Symbols icons</li>
+            <li>Search functionality with instant filtering</li>
+            <li>Virtual scrolling for performance</li>
+          </ul>
+        ]]>
+      </description>
+      <enclosure url="" sparkle:version="0.0.5" type="application/octet-stream"/>
+    </item>
+  </channel>
+</rss>

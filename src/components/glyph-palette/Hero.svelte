@@ -33,6 +33,6 @@
 <style>
   @reference "@styles/glyph-palette.css";
   small {
-    @apply text-gray-500;
+    @apply text-sm text-gray-500;
   }
 </style>

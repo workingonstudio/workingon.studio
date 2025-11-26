@@ -16,7 +16,7 @@
     {#each productChangelogs as { version, date, status, icon, items }}
       <div class="flex flex-col gap-6 rounded-2xl bg-stone-100 p-6">
         <div class="flex flex-row items-center gap-4">
-          <iconify-icon {icon} class="text-2xl"></iconify-icon>
+          <iconify-icon {icon} class="size-6 text-2xl"></iconify-icon>
           <h4>{status} release</h4>
           <Badge label={`v${version.major}.${version.minor}.${version.patch}`} bgColor="bg-stone-200" />
         </div>
@@ -33,7 +33,7 @@
 <style>
   @reference "@styles/glyph-palette.css";
   h2 {
-    @apply text-5xl;
+    @apply text-3xl md:text-5xl;
   }
   h4 {
     @apply first-letter:uppercase;
