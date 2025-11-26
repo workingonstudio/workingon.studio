@@ -10,7 +10,7 @@ const allResources = await getCollection("sketch-today");
 const resourceList = allResources.map((entry: CollectionEntry<"sketch-today">) => entry.data);
 ---
 
-<SketchToday title="Sketch Today">
+<SketchToday title="Sketch Today - A collection of modern resources for Sketch.">
   <Hero />
   <div class="flex flex-col gap-8">
     <CategoryFilters client:idle />
