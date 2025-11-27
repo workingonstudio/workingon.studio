@@ -21,7 +21,7 @@
   {
     "name": "Glyph Palette",
     "description": "A modern icon plugin for Sketch.",
-    "version": "0.0.5",
+    "version": "0.5.0",
     "status": "shipped",
     "tags": [{ "icon": "carbon:magic-wand", "text": "free" }],
     "link": "glyph-palette"

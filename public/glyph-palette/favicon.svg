@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="128px" height="128px" viewBox="0 0 128 128" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>favicon</title>
+    <defs>
+        <path d="M12,0 L116,0 C122.627417,-1.21743675e-15 128,5.372583 128,12 L128,116 C128,122.627417 122.627417,128 116,128 L12,128 C5.372583,128 4.05812251e-16,122.627417 0,116 L0,12 C-8.11624501e-16,5.372583 5.372583,8.11624501e-16 12,0 Z" id="path-1"></path>
+        <path d="M0,0 L96,0 L96,96 L0,96 L0,0 Z" id="path-2"></path>
+    </defs>
+    <g id="favicon" stroke="none" fill="none" xlink:href="#path-1">
+        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+        <g id="Material/Icon/Wrapped" stroke-dasharray="9,6" transform="translate(16, 16)" xlink:href="#path-2">
+            <use stroke="#FFB86A" stroke-width="3" xlink:href="#path-2"></use>
+            <text id="Icon-Name" font-family="CabinetGrotesk-Extrabold, Cabinet Grotesk" font-size="72" font-weight="700" fill="#1E2939">
+                <tspan x="22.08" y="75">G</tspan>
+            </text>
+            <rect id="Rectangle" fill="#FF8904" fill-rule="evenodd" x="-6" y="-6" width="15" height="15"></rect>
+            <rect id="Rectangle" fill="#FF8904" fill-rule="evenodd" x="-6" y="87" width="15" height="15"></rect>
+            <rect id="Rectangle" fill="#FF8904" fill-rule="evenodd" x="88.5" y="88.5" width="15" height="15"></rect>
+            <rect id="Rectangle" fill="#FF8904" fill-rule="evenodd" x="88.5" y="-6" width="15" height="15"></rect>
+        </g>
+    </g>
+</svg>
