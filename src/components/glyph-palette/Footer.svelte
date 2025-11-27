@@ -1,6 +1,26 @@
 <script lang="ts">
   import { DateTime } from "luxon";
   let date = DateTime.now().year;
+
+  let copied = false;
+  let timeoutId: any;
+
+  async function copyEmail() {
+    if (copied) return;
+
+    try {
+      await navigator.clipboard.writeText("support@workingon.studio");
+      copied = true;
+
+      if (timeoutId) clearTimeout(timeoutId);
+
+      timeoutId = setTimeout(() => {
+        copied = false;
+      }, 2000);
+    } catch (error) {
+      console.error("Failed to copy:", error);
+    }
+  }
 </script>
 
 <footer class="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center md:gap-0">
@@ -28,10 +48,13 @@
           <iconify-icon icon="material-symbols:alternate-email-rounded" class="size-3.5"></iconify-icon>
           prmack
         </a>
-        <a href="mailto:support@workingon.studio" class="flex flex-row">
-          <iconify-icon icon="material-symbols:mail-outline-rounded" class="size-3.5"></iconify-icon>
-          support@workingon.studio
-        </a>
+        <button type="button" class="flex cursor-pointer flex-row" title="Copy address" on:click={copyEmail}>
+          <iconify-icon
+            icon="material-symbols:{copied ? 'check' : 'mail-outline-rounded'}"
+            class="size-3.5"
+          ></iconify-icon>
+          {copied ? "Copied to clipboard" : "support@workingon.studio"}
+        </button>
       </div>
     </div>
   </section>
@@ -64,7 +87,8 @@
       }
     }
     .buttons {
-      a {
+      a,
+      button {
         @apply items-center gap-2 rounded-lg bg-gray-900 px-2 py-1 text-sm font-bold text-gray-100 hover:bg-stone-200 hover:text-gray-900;
       }
     }
