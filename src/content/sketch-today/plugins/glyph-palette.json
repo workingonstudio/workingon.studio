@@ -1,0 +1,16 @@
+{
+  "category": "plugins",
+  "type": "plugin",
+  "slug": "glyph-palette",
+  "title": "Glyph Palette",
+  "tagline": "A modern icon plugin.",
+  "description": "Bring 100’s of modern icon sets directly to into your .sketch files, with full control over size, stroke, and color. Currently in Alpha.",
+  "released": true,
+  "links": {
+    "download": "https://glyphpalette.com/",
+    "source": {
+      "label": "glyphpalette.com",
+      "url": "https://glyphpalette.com/"
+    }
+  }
+}

@@ -1,5 +1,21 @@
 import { defineCollection, z } from "astro:content";
 
+const changelogCollection = defineCollection({
+  type: "data",
+  schema: z.object({
+    product: z.enum(["dad-reply", "solidarity", "sketch-today", "glyph-palette"]),
+    version: z.object({
+      major: z.number(),
+      minor: z.number(),
+      patch: z.number(),
+    }),
+    date: z.coerce.date(),
+    status: z.enum(["current", "next", "future"]),
+    icon: z.string(),
+    items: z.array(z.string()),
+  }),
+});
+
 const sketchTodayCollection = defineCollection({
   type: "data",
   schema: z.object({
@@ -26,4 +42,5 @@ const sketchTodayCollection = defineCollection({
 
 export const collections = {
   "sketch-today": sketchTodayCollection,
+  changelogs: changelogCollection,
 };
