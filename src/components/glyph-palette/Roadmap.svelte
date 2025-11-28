@@ -9,7 +9,9 @@
     <Icon icon="map-search-outline-rounded" />
     <div class="flex flex-col gap-3">
       <h2>Roadmap.</h2>
-      <p class="text-xl">No Gantt chart here. Just a list of features, and improvements I hope to add.</p>
+      <p class="text-xl">
+        No Gantt chart here. Just a list of features and improvements I hope to add in the coming months.
+      </p>
     </div>
   </div>
   <div class="flex w-full flex-col gap-6 md:w-md">
