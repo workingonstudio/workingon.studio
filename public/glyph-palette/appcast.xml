@@ -6,6 +6,18 @@
     <description>A modern icon plugin for Sketch.</description>
     <language>en</language>
     <item>
+      <title>v0.5.2</title>
+      <description>
+        <![CDATA[
+          <ul>
+            <li>Switched to modern JSON appcast format</li>
+          </ul>
+        ]]>
+      </description>
+      <pubDate>Fri, 29 Nov 2024 11:06:00 +0000</pubDate>
+      <enclosure url="https://workingon.studio/glyph-palette/downloads/glyph-palette-v0.5.3.sketchplugin.zip" sparkle:version="7" length="202933" type="application/octet-stream"/>
+    </item>
+    <item>
       <title>v0.5.1</title>
       <description>
         <![CDATA[
@@ -14,7 +26,7 @@
           </ul>
         ]]>
       </description>
-      <pubDate>Thu, 28 Nov 2024 08:22:00 +0000</pubDate>
+      <pubDate>Thu, 28 Nov 2024 12:00:00 +0000</pubDate>
       <enclosure url="https://workingon.studio/glyph-palette/downloads/glyph-palette-v0.5.1.sketchplugin.zip" sparkle:version="6" length="201614" type="application/octet-stream"/>
     </item>
     <item>
