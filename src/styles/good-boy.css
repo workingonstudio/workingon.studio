@@ -1,0 +1,63 @@
+@import "./base.css";
+
+@theme {
+  /* Typography */
+  --font-oswald: "Oswald", sans-serif;
+  --font-satoshi: "Satoshi", sans-serif;
+
+  /* Colors */
+  --color-primary: theme(colors.orange.300);
+  --color-primary-hover: theme(colors.orange.400);
+  --color-text: theme(colors.stone.800);
+  --color-text-body: theme(colors.stone.600);
+  --color-text-muted: theme(colors.stone.400);
+  --color-bg: theme(colors.white);
+}
+
+@layer base {
+  body {
+    font-family: var(--font-satoshi);
+    color: var(--color-text);
+    background: var(--color-bg);
+    &::selection {
+      background: var(--color-primary);
+      color: var(--color-text);
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-oswald);
+    color: var(--color-text);
+    @apply font-semibold tracking-tight text-pretty;
+  }
+
+  h1 {
+    @apply text-5xl/16 lg:text-7xl/21;
+  }
+
+  h2 {
+    @apply text-xl md:text-3xl;
+  }
+
+  h3 {
+    @apply text-lg md:text-2xl;
+  }
+
+  h4 {
+    @apply text-xl font-medium;
+  }
+
+  p {
+    color: var(--color-text-body);
+    @apply leading-relaxed;
+    @apply text-sm md:text-base;
+  }
+
+  small {
+    color: var(--color-text-muted);
+    @apply text-xs;
+  }
+}
