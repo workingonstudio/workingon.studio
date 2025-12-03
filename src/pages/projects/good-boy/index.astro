@@ -2,11 +2,15 @@
 import GoodBoy from "@layouts/GoodBoy.astro";
 import Main from "@components/good-boy/Main.svelte";
 import Features from "@components/good-boy/partials/Features.svelte";
+import Footer from "@components/good-boy/partials/Footer.svelte";
 ---
 
 <GoodBoy title="GoodBoy">
-  <div class="mx-[5%] flex min-h-screen flex-1 flex-col py-20">
-    <Main />
-    <Features />
+  <div class="mx-[5%] my-[5%] flex flex-1 flex-col justify-between 2xl:my-0 2xl:h-svh">
+    <div class="flex h-full flex-col justify-start gap-24 md:justify-center">
+      <Main />
+      <Features />
+    </div>
+    <Footer />
   </div>
 </GoodBoy>

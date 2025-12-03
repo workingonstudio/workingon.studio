@@ -21,11 +21,11 @@
   ];
 </script>
 
-<div class="flex flex-row justify-center">
-  <div class="flex flex-row justify-between gap-12">
+<div class="flex flex-row justify-center pb-30 2xl:pb-0">
+  <div class="flex flex-col justify-between gap-12 md:flex-row">
     {#each features as { icon, title, description }, index}
-      <div class="flex w-sm flex-col gap-3">
-        <div class="relative flex flex-row items-center gap-3">
+      <div class="flex w-sm flex-col gap-3 md:w-full xl:w-sm">
+        <div class="relative flex flex-row items-center gap-3 md:flex-col md:items-start xl:flex-row xl:items-center">
           {#if index === 0}
             <Comment pos="bottom-10 -right-8" comment={{ time: "14 mins ago.", content: "This copy is great!" }} />
           {/if}
