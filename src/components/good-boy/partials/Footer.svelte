@@ -13,23 +13,23 @@
         pos="bottom-8 left-16 hidden 2xl:inline-flex"
         comment={{ time: "2 mins ago.", content: "Perfect font pairing" }}
       />
-      <iconify-icon icon="lucide:text-initial" class="text-base"></iconify-icon>
+      <iconify-icon icon="lucide:text-initial" class="size-4 text-base"></iconify-icon>
       <div class="flex flex-row gap-1">
-        <a href="">Oswald</a>
+        <a href="https://www.fontshare.com/fonts/oswald">Oswald</a>
         <span>+</span>
-        <a href="/">Inter</a>
+        <a href="https://rsms.me/inter/">Inter</a>
       </div>
     </li>
     <li class="flex flex-row items-center gap-2">
-      <iconify-icon icon="lucide:paintbrush" class="text-base"></iconify-icon>
+      <iconify-icon icon="lucide:paintbrush" class="size-4 text-base"></iconify-icon>
       <div class="flex flex-row gap-1">
-        <a href="">Designed in Sketch</a>
+        <a href="https://sketch.com">Designed in Sketch</a>
       </div>
     </li>
     <li class="flex flex-row items-center gap-2">
-      <iconify-icon icon="lucide:copyright" class="text-base"></iconify-icon>
+      <iconify-icon icon="lucide:copyright" class="size-4 text-base"></iconify-icon>
       <div class="flex flex-row gap-1">
-        <a href="">Copywrite 2025</a>
+        <a href="/">copywrite 2025</a>
       </div>
     </li>
   </ul>
@@ -37,4 +37,11 @@
 
 <style>
   @reference "@styles/good-boy.css";
+  ul {
+    li {
+      a {
+        @apply hover:underline;
+      }
+    }
+  }
 </style>

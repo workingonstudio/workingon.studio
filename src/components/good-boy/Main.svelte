@@ -3,14 +3,18 @@
 </script>
 
 <div class="flex flex-col gap-24">
-  <Comment pos="left-10 hidden md:inline-flex" />
+  <Comment pos="left-10 hidden md:inline-flex" delay={800} />
   <div class="logo flex flex-row items-center gap-2 place-self-center">
     <iconify-icon icon="lucide:dog" class="size-6 text-2xl"></iconify-icon>
-    <a href="">GoodBoy</a>
+    <a href="/">GoodBoy</a>
   </div>
   <div class="mb-18 flex flex-col justify-center gap-30">
     <div class="relative flex flex-col gap-6 place-self-center text-center">
-      <Comment pos="md:-right-[200px] -top-12" comment={{ time: "3 mins ago.", content: "This is so clean!" }} />
+      <Comment
+        pos="md:-right-[200px] -top-12"
+        comment={{ time: "3 mins ago.", content: "This is so clean!" }}
+        delay={1200}
+      />
       <h1>Get the praise you crave.</h1>
       <p class="text-xl">The only Figma plugin you need to feel like you’re doing a good job.</p>
     </div>
@@ -18,6 +22,7 @@
       <Comment
         pos="md:-right-[235px] -right-40 -top-16"
         comment={{ time: "1 hour ago.", content: "This button is amazing." }}
+        delay={1600}
       />
       <button type="button" class="flex flex-row items-center gap-4">
         <iconify-icon icon="logos:figma" class="text-xl"></iconify-icon>

@@ -8,9 +8,9 @@ import Footer from "@components/good-boy/partials/Footer.svelte";
 <GoodBoy title="GoodBoy">
   <div class="mx-[5%] my-[5%] flex flex-1 flex-col justify-between 2xl:my-0 2xl:h-svh">
     <div class="flex h-full flex-col justify-start gap-24 md:justify-center">
-      <Main />
-      <Features />
+      <Main client:load />
+      <Features client:load />
     </div>
-    <Footer />
+    <Footer client:load />
   </div>
 </GoodBoy>
