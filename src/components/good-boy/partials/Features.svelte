@@ -1,4 +1,6 @@
 <script lang="ts">
+  import Comment from "./Comment.svelte";
+
   const features = [
     {
       icon: "lucide:ban",
@@ -21,9 +23,12 @@
 
 <div class="flex flex-row justify-center">
   <div class="flex flex-row justify-between gap-12">
-    {#each features as { icon, title, description }}
+    {#each features as { icon, title, description }, index}
       <div class="flex w-sm flex-col gap-3">
-        <div class="flex flex-row items-center gap-3">
+        <div class="relative flex flex-row items-center gap-3">
+          {#if index === 0}
+            <Comment pos="bottom-10 -right-8" comment={{ time: "14 mins ago.", content: "This copy is great!" }} />
+          {/if}
           <iconify-icon {icon} class="text-2xl"></iconify-icon>
           <h4>{title}</h4>
         </div>

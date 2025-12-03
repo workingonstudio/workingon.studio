@@ -2,18 +2,20 @@
   import Comment from "./partials/Comment.svelte";
 </script>
 
+<Comment pos="left-10" />
 <div class="mb-20 flex flex-col gap-23">
   <div class="logo flex flex-row items-center gap-2 place-self-center">
     <iconify-icon icon="lucide:dog" class="size-6 text-2xl"></iconify-icon>
     <a href="">GoodBoy</a>
   </div>
   <div class="mb-18 flex flex-col justify-center gap-30">
-    <div class="flex flex-col gap-6 text-center">
+    <div class="relative flex flex-col gap-6 place-self-center text-center">
+      <Comment pos="-right-[200px] -top-10" comment={{ time: "3 mins ago.", content: "This is so clean!" }} />
       <h1>Get the praise you crave.</h1>
       <p class="text-xl">The only Figma plugin you need to feel like you’re doing a good job.</p>
     </div>
     <div class="relative flex flex-col place-self-center">
-      <Comment positionX="left-45" positionY="bottom-16" />
+      <Comment pos="-right-[235px] -top-16" comment={{ time: "1 hour ago.", content: "This button is amazing." }} />
       <button type="button" class="flex flex-row items-center gap-4">
         <iconify-icon icon="logos:figma" class="text-xl"></iconify-icon>
         Add to Figma
