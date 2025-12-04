@@ -40,7 +40,7 @@
   .logo {
     @apply items-end;
     a {
-      @apply mb-3 rounded-xl rounded-bl-none border border-stone-900 bg-stone-800 px-3 py-0.5 pb-1 font-[Oswald] text-base font-medium text-stone-50;
+      @apply mb-3 rounded-xl rounded-bl-none border border-stone-900 bg-stone-800 px-3 py-0.5 pb-1 text-base text-stone-50;
       &:hover {
         @apply border border-stone-200 bg-stone-100 text-stone-800 transition-colors;
       }
