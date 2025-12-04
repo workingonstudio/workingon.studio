@@ -102,7 +102,15 @@ export default defineConfig({
         weights: [500, 700],
         styles: ['normal']
       },
-
+      // Good Boy
+      { 
+        provider: fontProviders.fontshare(),
+        name: "Oswald",
+        cssVariable: "--font-oswald",
+        display: "swap",
+        weights: [600],
+        styles: ['normal']
+      }
     ]
   },
   vite: {
