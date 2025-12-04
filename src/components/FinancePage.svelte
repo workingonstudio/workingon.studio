@@ -39,7 +39,7 @@
   </div>
 </PageHeader>
 
-<section class="flex flex-col gap-7 2xl:mt-5 2xl:w-5xl">
+<section class="mx-0 flex flex-col gap-7 md:mx-2 2xl:mt-5">
   {#each financeData.entries as { date, items }}
     <div class="flex flex-col" role="table" aria-label="Financial transactions">
       <!-- Header -->

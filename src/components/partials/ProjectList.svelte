@@ -4,7 +4,7 @@
 
 <ul class="project-list mb-10 flex flex-col gap-12">
   {#each projectData as { name, description, version, status, tags, link }, index}
-    {#if index <= 4}
+    {#if index <= 5}
       <li class="project-item">
         <a href={link === "/" ? link : `/projects/${link}`} class="space-y-4">
           <div class="content space-y-3">
@@ -22,20 +22,20 @@
             </p>
           </div>
           <ul class="meta flex flex-col gap-2 md:flex-row md:gap-6">
-            <li class="flex flex-row items-center gap-3">
+            <li class="flex flex-row items-center gap-2">
               <span class="h-[18px] w-[18px]">
                 <iconify-icon icon="carbon:delivery" class="text-body text-[18px]"></iconify-icon>
               </span>
               <span>{status}</span>
             </li>
-            <li class="flex flex-row items-center gap-3">
+            <li class="flex flex-row items-center gap-2">
               <span class="h-[18px] w-[18px]">
                 <iconify-icon icon="carbon:version" class="text-body text-[18px]"></iconify-icon>
               </span>
               <span>v{version}</span>
             </li>
             {#each tags as { icon, text }}
-              <li class="flex flex-row items-center gap-3">
+              <li class="flex flex-row items-center gap-2">
                 <span class="h-[18px] w-[18px]">
                   <iconify-icon {icon} class="text-body text-[18px]"></iconify-icon>
                 </span>
@@ -64,6 +64,6 @@
     @apply text-primary;
   }
   .meta {
-    @apply text-sm uppercase lg:ml-14;
+    @apply text-xxs font-bold uppercase lg:ml-14;
   }
 </style>

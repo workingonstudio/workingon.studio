@@ -1,8 +1,7 @@
 <script lang="ts">
   import PageHeader from "@components/partials/PageHeader.svelte";
-  import { onMount, onDestroy } from "svelte";
+  import { onMount } from "svelte";
   import { dayRate } from "../stores/dayRate";
-  import { get } from "svelte/store";
 
   let displayRate = 500;
   let timeInterval: ReturnType<typeof setInterval> | null = null;
@@ -38,28 +37,7 @@
   }
 
   onMount(() => {
-    const currentState = get(dayRate);
-    const oldBaseRate = dayRate.getBaseRate(currentState.visits);
-
-    // Increment visit count
-    dayRate.incrementVisit();
-
-    const newState = get(dayRate);
-    const newBaseRate = dayRate.getBaseRate(newState.visits);
-
-    // Animate to new base rate
-    animateRate(oldBaseRate, newBaseRate);
-
-    // After animation, start the time-based increment
-    setTimeout(() => {
-      startTimeBasedIncrement(newBaseRate);
-    }, 800);
-  });
-
-  onDestroy(() => {
-    if (timeInterval !== null) {
-      clearInterval(timeInterval);
-    }
+    startTimeBasedIncrement(displayRate);
   });
 </script>
 

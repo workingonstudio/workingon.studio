@@ -23,24 +23,7 @@ export default defineConfig({
   })],
   prefetch: true,
   experimental: {
-    fonts: [
-      // Main site
-      {
-        provider: fontProviders.bunny(),
-        name: "Azeret Mono",
-        cssVariable: "--font-azeret-mono",
-        display: "swap",
-        weights: [500],
-        styles: ['normal', 'italic']
-      },
-      {
-        provider: fontProviders.bunny(),
-        name: "Space Grotesk",
-        cssVariable: "--font-space-grotesk",
-        display: "swap",
-        weights: [500]
-      },
-      
+    fonts: [    
       // Sketch Today
       {
         provider: fontProviders.bunny(),
