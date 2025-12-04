@@ -24,10 +24,13 @@
         comment={{ time: "1 hour ago.", content: "This button is amazing." }}
         delay={1600}
       />
-      <button type="button" class="flex flex-row items-center gap-4">
+      <a
+        href="https://www.figma.com/community/plugin/1578374402716063422"
+        class="button flex flex-row items-center gap-4"
+      >
         <iconify-icon icon="logos:figma" class="text-xl"></iconify-icon>
         Add to Figma
-      </button>
+      </a>
     </div>
   </div>
 </div>
@@ -43,7 +46,7 @@
       }
     }
   }
-  button {
+  .button {
     @apply cursor-pointer place-self-center rounded-lg border border-stone-600 bg-stone-800 px-4 py-2 font-[Roboto] font-semibold tracking-wide text-stone-50 ring ring-stone-800 text-shadow-sm;
   }
 </style>
