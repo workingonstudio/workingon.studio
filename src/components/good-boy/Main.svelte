@@ -6,7 +6,7 @@
   <Comment pos="left-10 hidden md:inline-flex" delay={800} />
   <div class="logo flex flex-row items-center gap-2 place-self-center">
     <iconify-icon icon="lucide:dog" class="size-6 text-2xl"></iconify-icon>
-    <a href="/">GoodBoy</a>
+    <a href="/projects/good-boy">GoodBoy</a>
   </div>
   <div class="mb-18 flex flex-col justify-center gap-30">
     <div class="relative flex flex-col gap-6 place-self-center text-center">
