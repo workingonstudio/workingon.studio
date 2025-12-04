@@ -4,7 +4,7 @@
 
 <ul class="project-list mb-10 flex flex-col gap-12">
   {#each projectData as { name, description, version, status, tags, link }, index}
-    {#if index <= 4}
+    {#if index <= 6}
       <li class="project-item">
         <a href={link === "/" ? link : `/projects/${link}`} class="space-y-4">
           <div class="content space-y-3">

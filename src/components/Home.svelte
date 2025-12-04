@@ -11,7 +11,7 @@
   <h1>Creating products that expose the absurdity of digital life. Cultural mirrors for the modern internet.</h1>
   <section class="flex max-w-xl flex-col gap-12">
     <p>
-      This studio has existed for {daysSince} days and shipped 5 projects. With 3 more in the dry dock waiting to be deployed.
+      This studio has existed for {daysSince} days and shipped 7 projects. With 3 more in the dry dock waiting to be deployed.
     </p>
     <p>Combined they’ve garnered well over 500k impressions. Impressive.</p>
     <p>I couldn’t give a shit.</p>

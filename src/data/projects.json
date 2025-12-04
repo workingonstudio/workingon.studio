@@ -27,6 +27,14 @@
     "link": "glyph-palette"
   },
   {
+    "name": "Good Boy",
+    "description": "Get the praise that you crave",
+    "version": "1.0.0",
+    "status": "shipped",
+    "tags": [{ "icon": "carbon:magic-wand", "text": "free" }],
+    "link": "good-boy"
+  },
+  {
     "name": "Solidarity",
     "description": "Helps you feel less shit about looking for work.",
     "version": "1.0.1",
