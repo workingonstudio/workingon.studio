@@ -27,7 +27,7 @@
       <div class="flex w-sm flex-col gap-3 md:w-full xl:w-sm">
         <div class="relative flex flex-row items-center gap-3 md:flex-col md:items-start xl:flex-row xl:items-center">
           {#if index === 0}
-            <Comment pos="bottom-10 -right-8" comment={{ time: "14 mins ago.", content: "This copy is great!" }} />
+            <Comment pos="bottom-10 left-8 md:-right-8" comment={{ time: "14 mins ago.", content: "Great copy!" }} />
           {/if}
           <iconify-icon {icon} class="size-6 text-2xl"></iconify-icon>
           <h4>{title}</h4>

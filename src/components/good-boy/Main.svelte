@@ -11,7 +11,7 @@
   <div class="mb-18 flex flex-col justify-center gap-30">
     <div class="relative flex flex-col gap-6 place-self-center text-center">
       <Comment
-        pos="md:-right-[200px] -top-12"
+        pos="md:-right-[200px] -top-16 right-10"
         comment={{ time: "3 mins ago.", content: "This is so clean!" }}
         delay={1200}
       />
@@ -20,8 +20,8 @@
     </div>
     <div class="relative flex flex-col place-self-center">
       <Comment
-        pos="md:-right-[235px] -right-40 -top-16"
-        comment={{ time: "1 hour ago.", content: "This button is amazing." }}
+        pos="md:-right-[235px] -right-25 -top-16"
+        comment={{ time: "1 hour ago.", content: "Love this button." }}
         delay={1600}
       />
       <a
