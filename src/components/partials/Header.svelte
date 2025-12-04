@@ -66,7 +66,7 @@
     {
       icon: "carbon:flagging-taxi",
       href: "/contact",
-      title: "hire",
+      title: "contact",
       subtitle: ".me",
       description: "bother me with admin.",
     },
