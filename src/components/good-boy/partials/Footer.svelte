@@ -4,8 +4,8 @@
 
 <footer class="relative flex flex-row items-center justify-between py-6 text-[11px]">
   <Comment pos="bottom-12 left-6" comment={{ time: "Just now.", content: "You need to visit this site." }} />
-  <a href="/" class="logo">
-    <img src="/good-boy/logo-small-horizontal.svg" />
+  <a href="/" class="logo" aria-label="GoodBoy logo">
+    <img src="/good-boy/logo-small-horizontal.svg" alt="icon of a cute dogs head" />
   </a>
   <ul class="flex flex-row gap-3">
     <li class="relative flex flex-row items-center gap-2">
