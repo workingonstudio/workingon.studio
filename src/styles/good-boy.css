@@ -60,4 +60,7 @@
     color: var(--color-text-muted);
     @apply text-xs;
   }
+  .logo {
+    font-family: var(--font-oswald);
+  }
 }
