@@ -20,12 +20,13 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
     <meta charset="UTF-8" />
     <AstroSeo
       title={longTitle}
-      description=""
+      description="Get the praise you crave. The only Figma plugin you need to feel like you’re doing a good job."
       canonical={currentURL}
       openGraph={{
         url: currentURL,
         title: title,
-        description: "",
+        description:
+          "Get the praise you crave. The only Figma plugin you need to feel like you’re doing a good job.",
         images: [
           {
             url: Astro.site + "good-boy/opengraph/site-default.webp",
@@ -63,7 +64,7 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
         },
       ]}
     />
-    <meta name="theme-color" content="#FAFAF9" />
+    <meta name="theme-color" content="#FFFFFF" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -75,7 +76,8 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
       is:inline
       type="module"
       src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    ></script>
+    >
+    </script>
     <meta name="generator" content={Astro.generator} />
     <Analytics productName="Good Boy" />
     <ClientRouter />
