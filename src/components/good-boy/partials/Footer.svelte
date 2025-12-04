@@ -2,15 +2,15 @@
   import Comment from "./Comment.svelte";
 </script>
 
-<footer class="relative flex flex-row items-center justify-between py-6 text-[11px]">
-  <Comment pos="bottom-12 left-6" comment={{ time: "Just now.", content: "You need to visit this site." }} />
+<footer class="relative flex flex-col justify-between gap-4 py-6 text-[11px] md:flex-row md:items-center md:gap-0">
+  <Comment pos="md:bottom-12 -top-10 left-6" comment={{ time: "Just now.", content: "You need to visit this site." }} />
   <a href="/" class="logo" aria-label="GoodBoy logo">
     <img src="/good-boy/logo-small-horizontal.svg" alt="icon of a cute dogs head" />
   </a>
-  <ul class="flex flex-row gap-3">
+  <ul class="flex flex-col gap-3 md:flex-row">
     <li class="relative flex flex-row items-center gap-2">
       <Comment
-        pos="bottom-8 left-16 hidden 2xl:inline-flex"
+        pos="md:bottom-8 bottom-0 left-16 hidden 2xl:inline-flex"
         comment={{ time: "2 mins ago.", content: "Perfect font pairing" }}
       />
       <iconify-icon icon="lucide:text-initial" class="size-4 text-base"></iconify-icon>
