@@ -5,12 +5,12 @@
 
   export let typefaces = [
     {
-      family: "nudica",
-      href: "https://www.atipofoundry.com/fonts/nudica",
+      family: "Satoshi",
+      href: "https://www.fontshare.com/fonts/satoshi",
     },
     {
-      family: "nudica mono",
-      href: "https://www.atipofoundry.com/fonts/nudica-mono",
+      family: "Inter",
+      href: "https://rsms.me/inter/",
     },
   ];
 </script>

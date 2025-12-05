@@ -19,7 +19,7 @@
   </div>
 </PageHeader>
 
-<section class="mx-0 max-w-2xl md:mx-2 2xl:mt-5">
+<section class="mx-0 md:mx-2 2xl:mt-5">
   <ProjectList />
 </section>
 

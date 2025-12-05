@@ -93,7 +93,9 @@
       </div>
     </div>
     <p class="text-sm lg:ml-14">
-      If I don't reply within 7 days, assume it's a no, I'm on holiday, or dead. Whatever makes you feel better.
+      If I don't reply within 7 days, assume it's a no, I'm on holiday, or dead.
+      <br />
+      Whatever makes you feel better.
     </p>
   </div>
 </section>

@@ -18,7 +18,7 @@
   </section>
 </PageHeader>
 
-<section class="flex max-w-2xl flex-col gap-24 2xl:mt-6">
+<section class="flex flex-col gap-24 2xl:mt-6">
   <h2>projects.</h2>
   <ProjectList />
   <h2>writing.</h2>

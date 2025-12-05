@@ -2,7 +2,7 @@
   import projectData from "@data/projects.json";
 </script>
 
-<ul class="project-list mb-10 flex flex-col gap-12">
+<ul class="project-list grid auto-cols-max grid-cols-1 gap-3 md:grid-cols-2">
   {#each projectData as { name, description, version, status, tags, link }, index}
     {#if index <= 6}
       <li class="project-item">
@@ -12,7 +12,7 @@
               <span class="h-8 w-8">
                 <iconify-icon
                   icon="carbon:arrow-up-right"
-                  class="text-3xl text-gray-500 transition-colors duration-300"
+                  class="mt-1 text-3xl text-gray-500 transition-colors duration-300"
                 ></iconify-icon>
               </span>
               <h2 class="flex flex-row items-center gap-2">{name}</h2>
@@ -51,19 +51,13 @@
 
 <style>
   @reference "@styles/main.css";
-  .project-list:has(.project-item:hover) .project-item:not(:hover) {
-    @apply opacity-20 transition-opacity duration-200;
-  }
   .project-item {
-    @apply transition-opacity duration-200;
-  }
-  .project-item a {
-    @apply text-body transition-colors duration-200;
-  }
-  .project-item:hover a {
-    @apply text-primary;
+    @apply rounded-xl p-4;
+    &:hover {
+      @apply bg-stone-100;
+    }
   }
   .meta {
-    @apply text-xxs font-bold uppercase lg:ml-14;
+    @apply text-xxs text-muted font-bold uppercase lg:ml-14;
   }
 </style>
