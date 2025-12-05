@@ -64,7 +64,7 @@
       description: "every update, every change.",
     },
     {
-      icon: "carbon:flagging-taxi",
+      icon: "carbon:send-alt",
       href: "/contact",
       title: "contact",
       subtitle: ".me",
@@ -122,7 +122,7 @@
     <ul class="flex w-full flex-col lg:flex-row">
       {#each navItems as { icon, href, title, subtitle, description }}
         <li class="group {isActive(href) ? 'active' : ''}">
-          <iconify-icon {icon} class="flex h-[18px] w-[18px] text-lg text-gray-500 lg:hidden xl:flex"></iconify-icon>
+          <iconify-icon {icon} class="flex size-[18px] text-lg text-gray-500 lg:hidden xl:flex"></iconify-icon>
           <a {href} onclick={toggleMenu}>
             <!-- prettier-ignore -->
             <h2>{title}<span>{subtitle}</span></h2>

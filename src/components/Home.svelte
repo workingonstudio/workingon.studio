@@ -8,7 +8,7 @@
 </script>
 
 <PageHeader>
-  <h1>Creating products that expose the absurdity of digital life. Cultural mirrors for the modern internet.</h1>
+  <h1>I design, build, and ship digital tools that work. And make a point.</h1>
   <section class="flex max-w-xl flex-col gap-12">
     <p>
       This studio has existed for {daysSince} days and shipped 7 projects. With 3 more in the dry dock waiting to be deployed.
@@ -28,6 +28,6 @@
 <style>
   @reference "@styles/main.css";
   h2 {
-    @apply text-5xl/18 md:text-7xl;
+    @apply text-4xl/18 md:text-6xl;
   }
 </style>

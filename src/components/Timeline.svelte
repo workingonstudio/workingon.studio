@@ -166,7 +166,7 @@
   }
   .entry-meta {
     li {
-      @apply flex flex-row items-center gap-3 text-sm uppercase;
+      @apply text-xxs flex flex-row items-center gap-2 uppercase;
     }
   }
 </style>

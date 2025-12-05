@@ -23,7 +23,25 @@ export default defineConfig({
   })],
   prefetch: true,
   experimental: {
-    fonts: [    
+    fonts: [
+      // Main
+      {
+        provider : fontProviders.fontshare(),
+        name: "Satoshi",
+        cssVariable : "--font-satoshi",
+        display: "swap",
+        weights: [500, 700],
+        styles: ['normal']
+      },
+
+      {
+        provider: fontProviders.bunny(),
+        name: "Inter",
+        cssVariable: "--font-inter",
+        display: "swap",
+        weights: [400, 600]
+      },
+
       // Sketch Today
       {
         provider: fontProviders.bunny(),
@@ -73,16 +91,7 @@ export default defineConfig({
         cssVariable: "--font-mulish",
         display: "swap",
         weights: [700]
-      },
-      
-      // Is Figma Down
-      {
-        provider: fontProviders.fontsource(),
-        name: "Inter",
-        cssVariable: "--font-inter",
-        display: "swap",
-        weights: [400, 600]
-      },
+      },      
 
       // Glyph Palette
       {
@@ -94,14 +103,6 @@ export default defineConfig({
         styles: ['normal']
       },
 
-      {
-        provider : fontProviders.fontshare(),
-        name: "Satoshi",
-        cssVariable : "--font-satoshi",
-        display: "swap",
-        weights: [500, 700],
-        styles: ['normal']
-      },
       // Good Boy
       { 
         provider: fontProviders.fontshare(),
