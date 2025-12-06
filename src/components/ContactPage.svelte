@@ -37,7 +37,9 @@
   }
 
   onMount(() => {
-    startTimeBasedIncrement(displayRate);
+    setTimeout(() => {
+      startTimeBasedIncrement(displayRate);
+    }, 500);
   });
 </script>
 

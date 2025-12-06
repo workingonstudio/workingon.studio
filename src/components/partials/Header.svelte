@@ -43,7 +43,7 @@
       description: "more questions answered.",
     },
     {
-      icon: "carbon:delivery-parcel",
+      icon: "carbon:box",
       href: "/projects/",
       title: "projects",
       subtitle: ".list",

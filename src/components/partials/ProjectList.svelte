@@ -11,7 +11,7 @@
             <div class="flex flex-col gap-6 lg:flex-row lg:items-center">
               <span class="mt-1 size-6">
                 <iconify-icon
-                  icon="carbon:arrow-up-right"
+                  icon="carbon:delivery-parcel"
                   class="arrow text-2xl text-gray-500 transition-colors duration-300"
                 ></iconify-icon>
               </span>
@@ -22,12 +22,6 @@
             </p>
           </div>
           <ul class="meta flex flex-col gap-2 md:flex-row md:gap-6">
-            <li class="flex flex-row items-center gap-2">
-              <span class="size-4">
-                <iconify-icon icon="carbon:delivery" class="text-body text-base"></iconify-icon>
-              </span>
-              <span>{status}</span>
-            </li>
             <li class="flex flex-row items-center gap-2">
               <span class="size-4">
                 <iconify-icon icon="carbon:version" class="text-body text-base"></iconify-icon>
