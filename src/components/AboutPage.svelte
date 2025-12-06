@@ -5,33 +5,18 @@
 <PageHeader>
   <!-- prettier-ignore -->
   <h1>
-    The internet’s been ruined by the coin men, marketers, SEO bros, MBAs and referral codes.
+    16 years building for the internet and I still believe it has the power to change the world
   </h1>
   <div class="flex max-w-xl flex-col gap-12">
-    <p>It’s time to call out the bullshit, by making it impossible to ignore.</p>
+    <p>A lot has changed.</p>
   </div>
 </PageHeader>
 
 <section class="flex max-w-xl flex-col gap-12 lg:mx-2 2xl:mt-5 2xl:w-5xl">
   <p>
-    They're not users, they're not customers, they’re not clients, or partners, they're people. Messy humans, with
-    issues far greater than &#x0022I'd best get this report done&#x0022.
+    But there will always be humans at the helm. And it’s those humans that I design for. Messy ones. Those that stress
+    over what’s for dinner. How can I be a better person? Who can I reach out to for help? Who needs me?
   </p>
-  <p>
-    They’re humans that don’t need to be talked to like idiots. The world isn’t all sunshine and rainbows. They don’t
-    need to be manipulated, told that if they just buy &#x0022this thing&#x0022 their life will be complete.
-  </p>
-  <p>This is just a ride. And I’d much rather make it the best ride than trick them into thinking it is.</p>
-  <p>
-    So I'm building products that reflect that. Cultural mirrors. Things that make the invisible visible. Design that
-    centers people, not conversion rates.
-  </p>
-  <p>
-    This game is broken.
-    <br />
-    I’m making a new one.
-  </p>
-  <p>Wanna play?</p>
 </section>
 
 <style>

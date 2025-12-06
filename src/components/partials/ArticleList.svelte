@@ -27,13 +27,11 @@
   {#each articles as { title, description, href }}
     <li>
       <a {href}>
-        <div class="flex flex-col gap-6 md:flex-row md:items-center">
-          <span class="flex h-8 w-8 items-center">
-            <iconify-icon
-              icon="carbon:license-draft"
-              class="text-2xl text-gray-500 transition-colors duration-300"
-            ></iconify-icon>
-          </span>
+        <div class="flex flex-col gap-5 md:flex-row md:items-center">
+          <iconify-icon
+            icon="carbon:license-draft"
+            class="mt-0 size-8 text-2xl text-gray-500 transition-colors duration-300 md:mt-1.5"
+          ></iconify-icon>
           <h2>{title}</h2>
         </div>
         <p class="md:ml-14">{description}</p>
@@ -44,22 +42,15 @@
 
 <style>
   @reference "@styles/main.css";
-  .articles:has(a:hover) a:not(:hover) {
-    @apply opacity-20;
-  }
   .articles {
     @apply flex flex-col gap-12;
     a {
       @apply flex flex-col gap-2 transition-opacity duration-200;
-      h2 {
-        @apply text-3xl;
+      &:hover {
+        h2 {
+          @apply underline;
+        }
       }
-    }
-    a:not(:hover) {
-      @apply text-body;
-    }
-    a:hover {
-      @apply text-primary;
     }
   }
 </style>
