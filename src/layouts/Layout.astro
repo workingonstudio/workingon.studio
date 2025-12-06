@@ -21,7 +21,6 @@ const currentPath = Astro.url.pathname;
 
 // Get font URLs from environment variables
 const nudicaFontUrl = import.meta.env.NUDICA_FONT_CSS_URL;
-const nudicaMonoFontUrl = import.meta.env.NUDICA_MONO_FONT_CSS_URL;
 ---
 
 <!doctype html>
@@ -94,7 +93,6 @@ const nudicaMonoFontUrl = import.meta.env.NUDICA_MONO_FONT_CSS_URL;
 
     <!-- CDN Font Stylesheets -->
     {nudicaFontUrl && <link rel="stylesheet" href={nudicaFontUrl} />}
-    {nudicaMonoFontUrl && <link rel="stylesheet" href={nudicaMonoFontUrl} />}
 
     <title>{title}</title>
   </head>

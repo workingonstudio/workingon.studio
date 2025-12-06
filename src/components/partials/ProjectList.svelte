@@ -12,7 +12,7 @@
               <span class="mt-1 size-6">
                 <iconify-icon
                   icon="carbon:arrow-up-right"
-                  class="text-2xl text-gray-500 transition-colors duration-300"
+                  class="arrow text-2xl text-gray-500 transition-colors duration-300"
                 ></iconify-icon>
               </span>
               <h2 class="flex flex-row items-center gap-2">{name}</h2>

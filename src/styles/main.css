@@ -1,4 +1,4 @@
-/* Main Site Theme - Dark aesthetic with custom nudica fonts */
+/* Main Site Theme */
 @import "./base.css";
 
 @theme {
@@ -13,11 +13,6 @@
   --color-muted: theme(colors.gray.400);
   --color-text: theme(colors.gray.100);
   --color-bg-main: theme(colors.stone.50);
-
-  /* Effects */
-  --text-shadow-glow:
-    0 0 5px #f0b100, 0 0 15px #f0b100, 0 0 30px #f0b100, 0 0 60px rgba(255, 0, 0, 0.5);
-  --animate-flicker: flicker 3s infinite;
 }
 
 @layer base {
@@ -49,7 +44,6 @@
   }
 
   p {
-    font-family: var(--font-nudicaMono);
     @apply text-body lg:text-xl/relaxed;
     @apply text-pretty;
   }
