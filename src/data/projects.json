@@ -23,7 +23,7 @@
   {
     "name": "Glyph Palette",
     "tagline": "A modern icon plugin for Sketch.",
-    "description": "A Sketch plugin that helps manage and organise the most popular icon sets.",
+    "description": "Search and add icons from popular icon sets in Sketch.",
     "version": "0.5.0",
     "status": "shipped",
     "tags": [{ "icon": "carbon:magic-wand", "text": "free" }],
@@ -41,7 +41,7 @@
   {
     "name": "Solidarity",
     "tagline": "Helps you feel less shit about looking for work.",
-    "description": "Chrome extension that shows everyone is #opentowork softening job hunting.",
+    "description": "Chrome extension that shows everyone is #opentowork.",
     "version": "1.0.1",
     "status": "shipped",
     "tags": [{ "icon": "carbon:magic-wand", "text": "free" }],
