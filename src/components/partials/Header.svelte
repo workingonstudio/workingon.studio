@@ -74,22 +74,16 @@
 
   let socials = [
     {
-      icon: "simple-icons:twitter",
+      icon: "fa7-brands:x-twitter",
       title: "Follow on Twitter",
       href: "https://twitter.com/prmack",
-      style: "text-sm",
+      style: "text-2xl",
     },
     {
-      icon: "simple-icons:substack",
-      title: "Follow on Substack",
-      href: "https://aquietfracture.substack.com/",
-      style: "text-sm",
-    },
-    {
-      icon: "simple-icons:github",
+      icon: "fa7-brands:github",
       title: "This site on Github",
       href: "https://github.com/workingonstudio/workingon.studio",
-      style: "text-md",
+      style: "text-2xl",
     },
   ];
 </script>
