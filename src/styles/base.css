@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@view-transition {
+  navigation: auto;
+}
+
 /* Global font smoothing for all themes */
 * {
   -webkit-font-smoothing: antialiased;

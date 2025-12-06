@@ -5,7 +5,6 @@ import "../styles/main.css";
 import { Font } from "astro:assets";
 
 import Analytics from "./partials/Analytics.astro";
-import { ClientRouter } from "astro:transitions";
 import { AstroSeo } from "@astrolib/seo";
 
 import Header from "@components/partials/Header.svelte";
@@ -84,13 +83,11 @@ const nudicaFontUrl = import.meta.env.NUDICA_FONT_CSS_URL;
       is:inline
       type="module"
       src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    >
-    </script>
+    ></script>
 
     <meta name="generator" content={Astro.generator} />
 
     <Analytics />
-    <ClientRouter />
 
     <!-- CDN Font Stylesheets -->
     {nudicaFontUrl && <link rel="stylesheet" href={nudicaFontUrl} />}
