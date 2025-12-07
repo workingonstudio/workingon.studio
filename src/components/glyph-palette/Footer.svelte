@@ -78,9 +78,6 @@
 <style>
   @reference "@styles/glyph-palette.css";
   footer {
-    h2 {
-      @apply text-5xl;
-    }
     ul {
       li {
         @apply text-text-body text-sm before:mr-2 before:content-['─'];

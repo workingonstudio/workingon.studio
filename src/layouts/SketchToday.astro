@@ -1,7 +1,6 @@
 ---
 import "../styles/sketch-today.css";
 import Analytics from "./partials/Analytics.astro";
-import { ClientRouter } from "astro:transitions";
 import { AstroSeo } from "@astrolib/seo";
 import { Font } from "astro:assets";
 
@@ -96,7 +95,6 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
     <meta name="generator" content={Astro.generator} />
 
     <Analytics productName="Sketch Today" />
-    <ClientRouter />
 
     <title>{title}</title>
   </head>

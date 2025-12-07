@@ -5,22 +5,22 @@
 
   export let typefaces = [
     {
-      family: "nudica",
-      href: "https://www.atipofoundry.com/fonts/nudica",
+      family: "Satoshi",
+      href: "https://www.fontshare.com/fonts/satoshi",
     },
     {
-      family: "nudica mono",
-      href: "https://www.atipofoundry.com/fonts/nudica-mono",
+      family: "Inter",
+      href: "https://rsms.me/inter/",
     },
   ];
 </script>
 
 <footer
-  class="mt-12 flex flex-col justify-between gap-2 border-t-1 border-slate-900 py-6 lg:flex-row lg:items-center lg:gap-0"
+  class="mt-12 flex flex-col justify-between gap-2 border-t-1 border-gray-200/50 py-6 lg:flex-row lg:items-center lg:gap-0"
 >
   <!-- prettier-ignore -->
   <div class="flex flex-col company-info">
-    <a href="/" class="group text-primary text-md font-display">wo<span class="flicker text-muted text-xxs">.studio</span></a>
+    <a href="/" class="group text-primary text-md font-display">wo<span class="text-muted text-xxs">.studio</span></a>
     <a href="https://find-and-update.company-information.service.gov.uk/company/16700615"><small class="uppercase text-muted text-xxs">workingonstudio ltd, no: 16700615</small></a>
   </div>
   <ul class="text-muted flex flex-row gap-x-6 gap-y-2 last:flex-wrap last:lg:flex-nowrap">
@@ -64,11 +64,8 @@
     li {
       a {
         @apply hover:text-primary;
-        @apply text-xxs flex uppercase;
+        @apply text-xxs flex font-bold uppercase;
       }
     }
-  }
-  .flicker {
-    @apply text-shadow-glow motion-safe:animate-flicker text-yellow-300;
   }
 </style>

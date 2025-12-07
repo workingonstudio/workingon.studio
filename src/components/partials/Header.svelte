@@ -36,14 +36,14 @@
 
   let navItems = [
     {
-      icon: "carbon:document-multiple-01",
+      icon: "carbon:idea",
       href: "/about",
       title: "about",
       subtitle: ".txt",
       description: "more questions answered.",
     },
     {
-      icon: "carbon:delivery-parcel",
+      icon: "carbon:box",
       href: "/projects/",
       title: "projects",
       subtitle: ".list",
@@ -64,9 +64,9 @@
       description: "every update, every change.",
     },
     {
-      icon: "carbon:flagging-taxi",
+      icon: "carbon:send-alt",
       href: "/contact",
-      title: "hire",
+      title: "contact",
       subtitle: ".me",
       description: "bother me with admin.",
     },
@@ -74,29 +74,28 @@
 
   let socials = [
     {
-      icon: "simple-icons:substack",
-      title: "Follow on Substack",
-      href: "https://aquietfracture.substack.com/",
-      style: "text-sm",
+      icon: "fa7-brands:x-twitter",
+      title: "Follow on Twitter",
+      href: "https://twitter.com/prmack",
+      style: "text-2xl",
     },
-
     {
-      icon: "simple-icons:github",
+      icon: "fa7-brands:github",
       title: "This site on Github",
       href: "https://github.com/workingonstudio/workingon.studio",
-      style: "text-md",
+      style: "text-2xl",
     },
   ];
 </script>
 
 <svelte:window on:scroll={handleScroll} />
 
-<div class="bg-gray-950" style="--padding-y: {paddingY}; --font-size: {fontSize};">
+<div class="bg-bg-main" style="--padding-y: {paddingY}; --font-size: {fontSize};">
   <!-- prettier-ignore -->
-  <header class="header-scroll group flex flex-row items-center border-b-1 border-slate-900/50 justify-between transition-all ease-out duration-200">
+  <header class="header-scroll group flex flex-row items-center border-b-1 border-gray-200/50 justify-between transition-all ease-out duration-200">
     <a href="/" class="cursor-pointer">
       <!-- prettier-ignore -->
-      <h1 class="font-display inline-block header-title">workingon<span>.studio</span></h1>
+      <h1 class="font-display font-medium inline-block header-title">workingon<span>.studio</span></h1>
     </a>
     <div class="social flex flex-row gap-4">
       {#each socials as { icon, href, title, style }}
@@ -112,12 +111,12 @@
   <nav
     class="{showMenu
       ? 'flex'
-      : 'hidden'} nav-scroll box-border flex-col items-start border-b-1 border-slate-900/50 text-xs transition-all duration-300 ease-out lg:flex"
+      : 'hidden'} nav-scroll box-border flex-col items-start border-b-1 border-gray-200/50 text-xs transition-all duration-300 ease-out lg:flex"
   >
     <ul class="flex w-full flex-col lg:flex-row">
       {#each navItems as { icon, href, title, subtitle, description }}
         <li class="group {isActive(href) ? 'active' : ''}">
-          <iconify-icon {icon} class="flex h-[18px] w-[18px] text-lg text-gray-500 lg:hidden xl:flex"></iconify-icon>
+          <iconify-icon {icon} class="flex size-[18px] text-lg text-gray-500 lg:hidden xl:flex"></iconify-icon>
           <a {href} onclick={toggleMenu}>
             <!-- prettier-ignore -->
             <h2>{title}<span>{subtitle}</span></h2>
@@ -135,14 +134,14 @@
     @apply text-xl;
   }
   h2 {
-    @apply text-base;
+    @apply text-base font-normal;
   }
   h1 span {
-    @apply text-shadow-glow motion-safe:animate-flicker sm:group-hover:text-shadow-glow sm:group-hover:motion-safe:animate-flicker text-sm text-yellow-300 sm:text-gray-500 sm:text-shadow-none sm:group-hover:text-yellow-300 sm:motion-safe:animate-none;
+    @apply text-sm text-gray-500;
   }
 
   h2 span {
-    @apply group-hover:text-shadow-glow group-hover:motion-safe:animate-flicker text-xs text-gray-500 group-hover:text-yellow-300;
+    @apply text-xs text-gray-500;
   }
 
   nav {
@@ -155,10 +154,6 @@
           p {
             @apply text-body text-xs text-gray-500;
           }
-        }
-        /* Active state styles - only when not hovering anything */
-        &.active h2 span {
-          @apply text-shadow-glow motion-safe:animate-flicker text-yellow-300;
         }
       }
     }

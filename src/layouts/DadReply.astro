@@ -3,7 +3,6 @@ import "../styles/dad-reply.css";
 
 import Analytics from "./partials/Analytics.astro";
 import { AstroSeo } from "@astrolib/seo";
-import { ClientRouter } from "astro:transitions";
 import { Font } from "astro:assets";
 
 export interface Props {
@@ -87,7 +86,6 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
     </script>
     <meta name="generator" content={Astro.generator} />
     <Analytics productName="Dad Reply" />
-    <ClientRouter />
   </head>
   <body id="top">
     <slot />

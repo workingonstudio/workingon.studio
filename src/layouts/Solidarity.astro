@@ -4,7 +4,6 @@ import "../styles/solidarity.css";
 import { AstroSeo } from "@astrolib/seo";
 
 import Analytics from "./partials/Analytics.astro";
-import { ClientRouter } from "astro:transitions";
 import { Font } from "astro:assets";
 
 export interface Props {
@@ -78,7 +77,6 @@ const publishDate = new Date().toISOString();
 
     <meta name="generator" content={Astro.generator} />
     <Analytics productName="Solidarity" />
-    <ClientRouter />
     <title>{title}</title>
   </head>
   <body id="top">
