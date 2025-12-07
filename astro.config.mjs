@@ -33,7 +33,6 @@ export default defineConfig({
         weights: [500, 700],
         styles: ['normal']
       },
-
       {
         provider: fontProviders.bunny(),
         name: "Inter",
@@ -78,7 +77,7 @@ export default defineConfig({
       
       // Solidarity
       {
-        provider: fontProviders.bunny(),
+        provider: fontProviders.fontshare(),
         name: "Lora",
         cssVariable: "--font-lora",
         display: "swap",
