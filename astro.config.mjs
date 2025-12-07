@@ -11,14 +11,15 @@ export default defineConfig({
     : "https://workingon.studio"),
   integrations: [svelte(), sitemap({
     filter: (page) => {
-      // Remove duplicate URLs - keep the canonical versions
-      const duplicates = [
-        '/projects/dadreply/',
-        '/projects/sketchtoday/',
+      // Exclude non-canonical routes (handled by middleware redirects)
+      const excludePatterns = [
+        '/projects/dadreply',
+        '/projects/sketchtoday',
         '/projects/glyphpalette',
+        '/projects/goodboy',
         '/projects/solidarity/Main/'
       ];
-      return !duplicates.some(dup => page.includes(dup));
+      return !excludePatterns.some(pattern => page.includes(pattern));
     },
   })],
   prefetch: true,

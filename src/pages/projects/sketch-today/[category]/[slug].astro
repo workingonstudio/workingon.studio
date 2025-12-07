@@ -63,7 +63,7 @@ if (!resource.released) {
       <div class="text-main flex w-full max-w-2xl flex-col text-base/relaxed text-pretty">
         <p>{resource.description}</p>
       </div>
-      <SlugButtons urls={resource.links} client:load />
+      <SlugButtons urls={resource.links} client:idle />
     </div>
   </div>
 </SketchToday>

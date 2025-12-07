@@ -90,7 +90,8 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
       is:inline
       type="module"
       src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    ></script>
+    >
+    </script>
 
     <meta name="generator" content={Astro.generator} />
 
@@ -101,7 +102,7 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
   <body>
     <main class="mx-[5%] flex h-max flex-1 flex-col py-9 md:mx-[10%]">
       <div class="flex flex-col">
-        <Header {category} {slug} client:load />
+        <Header {category} {slug} client:idle />
         <slot />
       </div>
     </main>
