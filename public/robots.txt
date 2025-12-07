@@ -1,0 +1,29 @@
+# workingon.studio robots.txt
+# Allow all crawlers - we're transparent here
+
+User-agent: *
+Allow: /
+
+# Main sitemap
+Sitemap: https://workingon.studio/sitemap-index.xml
+
+# Crawl-delay for polite bots (optional, adjust if needed)
+# Crawl-delay: 1
+
+# Disallow staging/draft content if you add it later
+# Disallow: /drafts/
+# Disallow: /staging/
+
+# Allow all product pages explicitly
+Allow: /projects/dad-reply/
+Allow: /projects/solidarity/
+Allow: /projects/glyph-palette/
+Allow: /projects/good-boy/
+Allow: /projects/sketch-today/
+Allow: /projects/is-figma-down/
+
+# Disallow duplicate routes (they redirect anyway)
+Disallow: /projects/dadreply
+Disallow: /projects/glyphpalette
+Disallow: /projects/goodboy
+Disallow: /projects/sketchtoday
