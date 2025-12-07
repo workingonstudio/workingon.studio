@@ -46,20 +46,17 @@
 <PageHeader>
   <!-- prettier-ignore -->
   <h1>
-    Wanna work with me? £<span class="tabular-nums">{displayRate.toFixed(2)}</span>/day*. I tell you what to do.
+    Want to work together? £<span class="tabular-nums">{displayRate.toFixed(2)}</span>/day*. I tell you what to do.
   </h1>
   <div class="flex max-w-xl flex-col gap-12">
+    <p>Take my advice or don't. Either way, I'm riding into the sunset with a sack of money.</p>
     <div class="flex flex-row gap-2">
       <p>&#42;</p>
       <p class="text-sm">
-        This rate increases every second you're here. If it takes too long for you to decide about how much you're
-        willing to pay me, you'll be a nightmare to work with.
+        This rate increases every second you're here. If it takes you too long to decide, you'll be a nightmare to work
+        with.
       </p>
     </div>
-    <p>
-      Whether you take my advice is entirely up to you. I'll have done my bit, riding into the sunset with a sack of
-      money.
-    </p>
   </div>
 </PageHeader>
 

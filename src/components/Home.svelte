@@ -8,16 +8,11 @@
 </script>
 
 <PageHeader>
-  <h1>
-    I design, build, <em>and</em>
-    ship digital tools that work. And make a point.
-  </h1>
+  <h1>I build tools that work. And make you question why you needed them.</h1>
   <section class="flex max-w-xl flex-col gap-8">
-    <p>
-      This studio has existed for {daysSince} days and shipped 7 projects.
-    </p>
-    <p>They're a mixture of helpful tools and ones that aim directly at the status quo of online culture.</p>
-    <p>So take a look. You might feel something.</p>
+    <p>I've shipped 7 products in {daysSince} days.</p>
+    <p>Some solve actual problems. Others expose the absurdity of online culture. All of them work.</p>
+    <p>Pick one. It might make you uncomfortable.</p>
   </section>
 </PageHeader>
 

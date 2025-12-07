@@ -1,0 +1,63 @@
+---
+// src/components/partials/StructuredData.astro
+// Adds JSON-LD structured data for better SEO
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Paul Mackenzie",
+  url: "https://workingon.studio",
+  description:
+    "Designer and developer creating cultural mirror products. 16 years building for the internet.",
+  jobTitle: "Designer & Developer",
+  knowsAbout: ["Product Design", "Web Development", "UX Design", "Cultural Commentary"],
+  sameAs: ["https://twitter.com/prmack", "https://github.com/workingonstudio"],
+  email: "hello@workingon.studio",
+  hasOccupation: {
+    "@type": "Occupation",
+    name: "Design Consultant",
+    occupationLocation: {
+      "@type": "Country",
+      name: "United Kingdom",
+    },
+  },
+};
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "workingon.studio",
+  legalName: "workingonstudio ltd",
+  url: "https://workingon.studio",
+  logo: "https://workingon.studio/favicon.svg",
+  description:
+    "A creative technology studio creating cultural mirror products - functional digital tools that make unconscious behaviors visible.",
+  founder: {
+    "@type": "Person",
+    name: "Paul Mackenzie",
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    email: "hello@workingon.studio",
+    contactType: "Customer Service",
+  },
+  sameAs: ["https://twitter.com/prmack", "https://github.com/workingonstudio"],
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "workingon.studio",
+  url: "https://workingon.studio",
+  description:
+    "I build tools that work and make you question why you needed them. Cultural mirror products for the modern internet.",
+  author: {
+    "@type": "Person",
+    name: "Paul Mackenzie",
+  },
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />

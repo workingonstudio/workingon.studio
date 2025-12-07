@@ -5,6 +5,7 @@ import "../styles/main.css";
 import { Font } from "astro:assets";
 
 import Analytics from "./partials/Analytics.astro";
+import StructuredData from "./partials/StructuredData.astro";
 import { AstroSeo } from "@astrolib/seo";
 
 import Header from "@components/partials/Header.svelte";
@@ -12,9 +13,12 @@ import Footer from "@components/partials/Footer.svelte";
 
 export interface Props {
   title: string;
+  description?: string;
 }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
+const defaultDescription =
+  "I build tools that work and make you question why you needed them. Cultural mirror products for the modern internet.";
 const currentURL = new URL(Astro.url.pathname, Astro.site).href;
 const currentPath = Astro.url.pathname;
 
@@ -30,13 +34,12 @@ const nudicaFontUrl = import.meta.env.NUDICA_FONT_CSS_URL;
     <Font cssVariable="--font-satoshi" preload />
     <AstroSeo
       {title}
-      description="Creating products that expose the absurdity of digital life. Cultural mirrors for the modern internet."
+      description={description || defaultDescription}
       canonical={currentURL}
       openGraph={{
         url: currentURL,
         title: title,
-        description:
-          "Creating products that expose the absurdity of digital life. Cultural mirrors for the modern internet.",
+        description: description || defaultDescription,
         images: [
           {
             url: Astro.site + "site-default.webp",
@@ -83,11 +86,13 @@ const nudicaFontUrl = import.meta.env.NUDICA_FONT_CSS_URL;
       is:inline
       type="module"
       src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    ></script>
+    >
+    </script>
 
     <meta name="generator" content={Astro.generator} />
 
     <Analytics />
+    <StructuredData />
 
     <!-- CDN Font Stylesheets -->
     {nudicaFontUrl && <link rel="stylesheet" href={nudicaFontUrl} />}
@@ -105,7 +110,7 @@ const nudicaFontUrl = import.meta.env.NUDICA_FONT_CSS_URL;
         <div class="flex grow-1 flex-col justify-start gap-24 2xl:flex-row">
           <slot />
         </div>
-        <Footer client:visable />
+        <Footer client:visible />
       </div>
     </main>
   </body>
