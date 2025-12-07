@@ -46,7 +46,7 @@
 <PageHeader>
   <!-- prettier-ignore -->
   <h1>
-    Hire me for design gigs. £<span class="tabular-nums">{displayRate.toFixed(2)}</span>/day*. I tell you what to do.
+    Wanna work with me? £<span class="tabular-nums">{displayRate.toFixed(2)}</span>/day*. I tell you what to do.
   </h1>
   <div class="flex max-w-xl flex-col gap-12">
     <div class="flex flex-row gap-2">
@@ -66,9 +66,7 @@
 <section class="mb-10 max-w-2xl space-y-4 lg:mx-2 2xl:mt-5 2xl:w-5xl">
   <div class="flex flex-col gap-4">
     <div class="flex flex-col gap-6 lg:flex-row lg:items-center">
-      <span class="flex h-8 w-8 items-center">
-        <iconify-icon icon="carbon:mail-all" class="text-3xl text-gray-500"></iconify-icon>
-      </span>
+      <iconify-icon icon="carbon:mail-all" class="mt-0 size-8 text-3xl text-gray-500 md:mt-1"></iconify-icon>
       <div class="flex flex-row items-center gap-2">
         <a
           href="mailto:hello@workingon.studio?subject=Can%20I/We%20work%20with%20you%3F&"

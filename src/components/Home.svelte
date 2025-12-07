@@ -31,7 +31,7 @@
 <style>
   @reference "@styles/main.css";
   h1 {
-    @apply text-4xl/12 md:text-8xl/tight;
+    @apply text-4xl/12 md:text-6xl/tight lg:text-8xl/tight;
   }
   h2 {
     @apply text-4xl/18 md:text-6xl;
