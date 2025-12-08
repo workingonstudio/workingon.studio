@@ -1,6 +1,13 @@
 <script>
   let articles = [
     {
+      title: "Design's not dead. We just gave in.",
+      subtitle: "What happens when creativity becomes compliance.",
+      excerpt:
+        "Our shyness and empathy has allowed the needle of needs to swing too far in favour of leaders, rather than users.",
+      href: "https://aquietfracture.substack.com/p/designs-not-dead-we-just-gave-in",
+    },
+    {
       title: "It's an art form, prepare to put in the work.",
       subtitle: "What it takes to become a better designer.",
       excerpt: "It’s time to stop flogging that horse, drag it to the abattoir, and start grinding the burgers.",
@@ -20,20 +27,16 @@
         "Asking them to distill that into a 3-4 hour design task? It’s the equivalent of asking a comedian to make you laugh on the spot.",
       href: "https://aquietfracture.substack.com/p/its-time-to-kill-the-design-challenge",
     },
-    {
-      title: "Design's not dead. We just gave in.",
-      subtitle: "What happens when creativity becomes compliance.",
-      excerpt:
-        "Our shyness and empathy has allowed the needle of needs to swing too far in favour of leaders, rather than users.",
-      href: "https://aquietfracture.substack.com/p/designs-not-dead-we-just-gave-in",
-    },
   ];
 </script>
 
 <ul class="articles">
   {#each articles as { title, subtitle, excerpt, href }}
-    <li class="flex flex-col gap-4 md:flex-row">
-      <iconify-icon icon="carbon:blog" class="text-muted mt-0 size-8 text-2xl md:mt-1.5"></iconify-icon>
+    <li class="group flex flex-col gap-4 md:flex-row">
+      <iconify-icon
+        icon="carbon:blog"
+        class="text-muted group-hover:text-primary mt-0 size-8 text-2xl transition-colors duration-300 md:mt-1.5"
+      ></iconify-icon>
       <a {href}>
         <h2>{title}</h2>
         <div class="flex flex-col gap-0.5">

@@ -1,4 +1,6 @@
 <script lang="ts">
+  import ThemeToggle from "./ThemeToggle.svelte";
+
   export let currentPath = "/";
 
   function isActive(path: string) {
@@ -71,21 +73,6 @@
       description: "bother me with admin.",
     },
   ];
-
-  let socials = [
-    {
-      icon: "fa7-brands:x-twitter",
-      title: "Follow on Twitter",
-      href: "https://twitter.com/prmack",
-      style: "text-2xl",
-    },
-    {
-      icon: "fa7-brands:github",
-      title: "This site on Github",
-      href: "https://github.com/workingonstudio/workingon.studio",
-      style: "text-2xl",
-    },
-  ];
 </script>
 
 <svelte:window on:scroll={handleScroll} />
@@ -97,12 +84,8 @@
       <!-- prettier-ignore -->
       <h1 class="font-display font-medium inline-block header-title">workingon<span>.studio</span></h1>
     </a>
-    <div class="social flex flex-row gap-4">
-      {#each socials as { icon, href, title, style }}
-        <a {href} aria-label={title} {title} class="items-center hidden lg:flex justify-center w-6 h-6">
-          <iconify-icon {icon} class={style}></iconify-icon>
-        </a>
-      {/each}
+    <div class="flex flex-row gap-4 items-center">
+      <ThemeToggle />
       <button type="button" onclick={toggleMenu} aria-label="Toggle menu" class="hover:*:text-primary w-6 h-6 cursor-pointer flex lg:hidden">
         <iconify-icon icon="carbon:{showMenu ? 'close-large' : 'menu'}" class=" text-2xl text-muted"></iconify-icon>
       </button>
@@ -170,15 +153,6 @@
     /* When NOT hovering, fade non-active items */
     &:not(:has(li:hover)):has(li.active) li:not(.active) {
       @apply opacity-30;
-    }
-  }
-
-  .social {
-    a {
-      @apply text-muted;
-      &:hover {
-        @apply text-primary transition-colors duration-300;
-      }
     }
   }
 

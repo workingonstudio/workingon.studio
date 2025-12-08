@@ -30,6 +30,15 @@ const nudicaFontUrl = import.meta.env.NUDICA_FONT_CSS_URL;
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
+    <script is:inline>
+      const theme =
+        localStorage.getItem("workingon-theme") ||
+        (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+
+      if (theme !== "light") {
+        document.documentElement.classList.add(theme);
+      }
+    </script>
     <Font cssVariable="--font-inter" preload />
     <Font cssVariable="--font-satoshi" preload />
     <AstroSeo

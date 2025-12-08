@@ -5,10 +5,10 @@
 <ul class="grid auto-cols-max grid-cols-1 space-y-14 md:grid-cols-2">
   {#each projectData as { projectIcon, name, tagline, version, description, tags, link }, index}
     {#if index <= 6}
-      <li class="project-item flex flex-col gap-5 md:flex-row">
+      <li class="project-item group flex flex-col gap-5 md:flex-row">
         <iconify-icon
           icon={projectIcon}
-          class="mt-0 size-6 text-2xl text-gray-500 transition-colors duration-300 md:mt-1.5"
+          class="icon group-hover:text-primary text-muted mt-0 size-6 text-2xl transition-colors duration-300 md:mt-1.5"
         ></iconify-icon>
         <a href={link === "/" ? link : `/projects/${link}`} class="flex flex-col gap-4">
           <div class="flex flex-col gap-2">
