@@ -1,6 +1,6 @@
 ---
 import SketchToday from "@layouts/SketchToday.astro";
-import ContentHeader from "@components/sketch-today/partials/ContentHeader.svelte"
+import ContentHeader from "@components/sketch-today/partials/ContentHeader.svelte";
 import * as SDContent from "@docs/sketch-today/contact.md";
 const { frontmatter, Content } = SDContent;
 
@@ -25,7 +25,7 @@ let icon: string = frontmatter.icon;
 <style>
   @reference "@styles/sketch-today.css";
   section {
-    @apply text-main text-pretty;
+    @apply text-body text-pretty;
     a {
       @apply underline hover:no-underline;
     }

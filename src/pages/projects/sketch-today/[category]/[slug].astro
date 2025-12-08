@@ -60,7 +60,7 @@ if (!resource.released) {
       <div class="flex flex-col items-start gap-3">
         <ContentHeader {icon} {bgColor} header={resource.title} subtitle={resource.tagline} />
       </div>
-      <div class="text-main flex w-full max-w-2xl flex-col text-base/relaxed text-pretty">
+      <div class="text-body flex w-full max-w-2xl flex-col text-base/relaxed text-pretty">
         <p>{resource.description}</p>
       </div>
       <SlugButtons urls={resource.links} client:idle />

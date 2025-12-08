@@ -16,7 +16,7 @@
 </script>
 
 <footer
-  class="mt-12 flex flex-col justify-between gap-2 border-t-1 border-gray-200/50 py-6 lg:flex-row lg:items-center lg:gap-0"
+  class="border-muted/10 mt-12 flex flex-col justify-between gap-2 border-t-1 py-6 lg:flex-row lg:items-center lg:gap-0"
 >
   <!-- prettier-ignore -->
   <div class="flex flex-col company-info">
@@ -25,23 +25,17 @@
   </div>
   <ul class="text-muted flex flex-row gap-x-6 gap-y-2 last:flex-wrap last:lg:flex-nowrap">
     <li class="flex flex-row items-center gap-2">
-      <div class="flex h-3.5 w-3.5">
-        <iconify-icon icon="carbon:development" class="text-sm"></iconify-icon>
-      </div>
+      <iconify-icon icon="carbon:development" class="size-3.5 text-sm"></iconify-icon>
       <a href="https://astro.build/">astro</a>
       <div class="relative -top-[1px]">+</div>
       <a href="https://svelte.dev/">Svelte</a>
     </li>
     <li class="flex flex-row items-center gap-2">
-      <div class="flex h-3.5 w-3.5">
-        <iconify-icon icon="carbon:data-analytics" class="text-sm"></iconify-icon>
-      </div>
+      <iconify-icon icon="carbon:data-analytics" class="size-3.5 text-sm"></iconify-icon>
       <a href="https://umami.is/" class="">Umami</a>
     </li>
     <li class="flex flex-row items-center gap-2">
-      <div class="flex h-3.5 w-3.5">
-        <iconify-icon icon="carbon:text-font" class="text-sm"></iconify-icon>
-      </div>
+      <iconify-icon icon="carbon:text-font" class="size-3.5 text-sm"></iconify-icon>
       {#each typefaces as { family, href }, index}
         <a {href} class="">{family}</a>
         {#if index < typefaces.length - 1}
@@ -50,9 +44,7 @@
       {/each}
     </li>
     <li class="flex flex-row items-center gap-2">
-      <div class="flex h-3.5 w-3.5">
-        <iconify-icon icon="carbon:update-now" class="text-sm"></iconify-icon>
-      </div>
+      <iconify-icon icon="carbon:update-now" class="size-3.5 text-sm"></iconify-icon>
       <a href="https://github.com/workingonstudio/workingon.studio/commits/main/">{date}</a>
     </li>
   </ul>
@@ -63,7 +55,7 @@
   footer ul {
     li {
       a {
-        @apply hover:text-primary;
+        @apply hover:text-primary hover:underline;
         @apply text-xxs flex font-bold uppercase;
       }
     }

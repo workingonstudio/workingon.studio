@@ -1,4 +1,6 @@
 <script lang="ts">
+  import ThemeToggle from "./ThemeToggle.svelte";
+
   export let currentPath = "/";
 
   function isActive(path: string) {
@@ -71,52 +73,33 @@
       description: "bother me with admin.",
     },
   ];
-
-  let socials = [
-    {
-      icon: "fa7-brands:x-twitter",
-      title: "Follow on Twitter",
-      href: "https://twitter.com/prmack",
-      style: "text-2xl",
-    },
-    {
-      icon: "fa7-brands:github",
-      title: "This site on Github",
-      href: "https://github.com/workingonstudio/workingon.studio",
-      style: "text-2xl",
-    },
-  ];
 </script>
 
 <svelte:window on:scroll={handleScroll} />
 
 <div class="bg-bg-main" style="--padding-y: {paddingY}; --font-size: {fontSize};">
   <!-- prettier-ignore -->
-  <header class="header-scroll group flex flex-row items-center border-b-1 border-gray-200/50 justify-between transition-all ease-out duration-200">
+  <header class="header-scroll group flex flex-row items-center border-b-1 border-muted/10 justify-between transition-all ease-out duration-200">
     <a href="/" class="cursor-pointer">
       <!-- prettier-ignore -->
       <h1 class="font-display font-medium inline-block header-title">workingon<span>.studio</span></h1>
     </a>
-    <div class="social flex flex-row gap-4">
-      {#each socials as { icon, href, title, style }}
-        <a {href} aria-label={title} {title} class="items-center hidden lg:flex justify-center w-6 h-6">
-          <iconify-icon {icon} class={style}></iconify-icon>
-        </a>
-      {/each}
+    <div class="flex flex-row gap-4 items-center">
+      <ThemeToggle />
       <button type="button" onclick={toggleMenu} aria-label="Toggle menu" class="hover:*:text-primary w-6 h-6 cursor-pointer flex lg:hidden">
-        <iconify-icon icon="carbon:{showMenu ? 'close-large' : 'menu'}" class=" text-2xl text-gray-500"></iconify-icon>
+        <iconify-icon icon="carbon:{showMenu ? 'close-large' : 'menu'}" class=" text-2xl text-muted"></iconify-icon>
       </button>
     </div>
   </header>
   <nav
     class="{showMenu
       ? 'flex'
-      : 'hidden'} nav-scroll box-border flex-col items-start border-b-1 border-gray-200/50 text-xs transition-all duration-300 ease-out lg:flex"
+      : 'hidden'} nav-scroll border-muted/10 box-border flex-col items-start border-b-1 text-xs transition-all duration-300 ease-out lg:flex"
   >
     <ul class="flex w-full flex-col lg:flex-row">
       {#each navItems as { icon, href, title, subtitle, description }}
         <li class="group {isActive(href) ? 'active' : ''}">
-          <iconify-icon {icon} class="flex size-[18px] text-lg text-gray-500 lg:hidden xl:flex"></iconify-icon>
+          <iconify-icon {icon} class="text-muted flex size-[18px] text-lg lg:hidden xl:flex"></iconify-icon>
           <a {href} onclick={toggleMenu}>
             <!-- prettier-ignore -->
             <h2>{title}<span>{subtitle}</span></h2>
@@ -137,11 +120,11 @@
     @apply text-base font-normal;
   }
   h1 span {
-    @apply text-sm text-gray-500;
+    @apply text-muted text-sm;
   }
 
   h2 span {
-    @apply text-xs text-gray-500;
+    @apply text-muted text-xs;
   }
 
   nav {
@@ -152,7 +135,7 @@
         a {
           @apply flex w-full flex-col justify-between;
           p {
-            @apply text-body text-xs text-gray-500;
+            @apply text-body text-muted text-xs;
           }
         }
       }
@@ -164,21 +147,12 @@
 
     /* When hovering, remove active styles from active item if it's not being hovered */
     &:has(li:hover) li.active:not(:hover) h2 span {
-      @apply text-gray-500 text-shadow-none motion-safe:animate-none;
+      @apply text-muted text-shadow-none motion-safe:animate-none;
     }
 
     /* When NOT hovering, fade non-active items */
     &:not(:has(li:hover)):has(li.active) li:not(.active) {
       @apply opacity-30;
-    }
-  }
-
-  .social {
-    a {
-      @apply text-muted;
-      &:hover {
-        @apply text-primary transition-colors duration-300;
-      }
     }
   }
 

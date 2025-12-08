@@ -13,6 +13,6 @@
 <style>
   @reference "@styles/sketch-today.css";
   h1 {
-    @apply text-2xl;
+    @apply text-header text-2xl;
   }
 </style>

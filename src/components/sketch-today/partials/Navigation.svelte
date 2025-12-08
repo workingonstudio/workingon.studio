@@ -22,7 +22,7 @@
   on:click|preventDefault={openMenu}
 >
   <div class="buttonWrapper flex flex-col items-center justify-center">
-    <iconify-icon icon="material-symbols:{iconName}" class="text-body group-hover:text-main text-lg"></iconify-icon>
+    <iconify-icon icon="material-symbols:{iconName}" class="text-body group-hover:text-body text-lg"></iconify-icon>
   </div>
 </button>
 
@@ -43,7 +43,7 @@
       }
     }
     a {
-      @apply hover:text-main font-bold;
+      @apply hover:text-header font-bold;
       @apply block py-3;
     }
   }
