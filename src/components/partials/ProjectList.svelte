@@ -3,20 +3,22 @@
 </script>
 
 <ul class="grid auto-cols-max grid-cols-1 space-y-14 md:grid-cols-2">
-  {#each projectData as { name, tagline, version, description, tags, link }, index}
+  {#each projectData as { projectIcon, name, tagline, version, description, tags, link }, index}
     {#if index <= 6}
       <li class="project-item flex flex-col gap-5 md:flex-row">
         <iconify-icon
-          icon="carbon:delivery-parcel"
-          class="mt-0 text-2xl text-gray-500 transition-colors duration-300 md:mt-1.5"
+          icon={projectIcon}
+          class="mt-0 size-6 text-2xl text-gray-500 transition-colors duration-300 md:mt-1.5"
         ></iconify-icon>
-        <a href={link === "/" ? link : `/projects/${link}`} class="flex flex-col gap-2">
-          <div class="flex flex-col gap-1.5">
+        <a href={link === "/" ? link : `/projects/${link}`} class="flex flex-col gap-4">
+          <div class="flex flex-col gap-2">
             <h2>{name}</h2>
-            <p class="font-satoshi">{tagline}</p>
+            <div class="flex flex-col gap-0.5">
+              <p class="font-satoshi text-xl">{tagline}</p>
+              <p class="text-muted text-base">{description}</p>
+            </div>
           </div>
           <div class="flex flex-col gap-4">
-            <p class="text-sm">{description}</p>
             <ul class="meta flex flex-row gap-4">
               <li class="flex flex-row items-center gap-2">
                 <iconify-icon icon="carbon:version" class="text-body size-4 text-base"></iconify-icon>

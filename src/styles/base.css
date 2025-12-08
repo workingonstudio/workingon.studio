@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
-@view-transition {
-  navigation: auto;
-}
-
 /* Global font smoothing for all themes */
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@view-transition {
+  navigation: auto;
 }
 
 /* Common theme tokens used across all products */
@@ -38,17 +38,17 @@
   h2,
   h3,
   h4 {
-    color: var(--color-text);
+    color: var(--color-primary);
     @apply text-pretty;
   }
 
   p {
-    color: var(--color-text-body);
+    color: var(--color-body);
     @apply leading-relaxed;
   }
 
   small {
-    color: var(--color-text-muted);
+    color: var(--color-muted);
     @apply text-xs;
   }
 

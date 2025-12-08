@@ -16,7 +16,7 @@
 </script>
 
 <footer
-  class="mt-12 flex flex-col justify-between gap-2 border-t-1 border-gray-200/50 py-6 lg:flex-row lg:items-center lg:gap-0"
+  class="border-muted/10 mt-12 flex flex-col justify-between gap-2 border-t-1 py-6 lg:flex-row lg:items-center lg:gap-0"
 >
   <!-- prettier-ignore -->
   <div class="flex flex-col company-info">
@@ -63,7 +63,7 @@
   footer ul {
     li {
       a {
-        @apply hover:text-primary;
+        @apply hover:text-primary hover:underline;
         @apply text-xxs flex font-bold uppercase;
       }
     }

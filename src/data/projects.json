@@ -1,5 +1,6 @@
 [
   {
+    "projectIcon": "carbon:thumbs-up-double",
     "name": "Dad Reply",
     "tagline": "Email replies without the email part.",
     "description": "Chrome extension that allows for rapid emoji responses to update emails.",
@@ -12,6 +13,7 @@
     "link": "dad-reply"
   },
   {
+    "projectIcon": "carbon:folders",
     "name": "Sketch Today",
     "tagline": "A collection of modern Sketch resources.",
     "description": "Resources to get you started when making the inevitable switch to Sketch.",
@@ -21,6 +23,7 @@
     "link": "sketch-today"
   },
   {
+    "projectIcon": "carbon:data-categorical",
     "name": "Glyph Palette",
     "tagline": "A modern icon plugin for Sketch.",
     "description": "Search and add icons from popular icon sets in Sketch.",
@@ -30,6 +33,7 @@
     "link": "glyph-palette"
   },
   {
+    "projectIcon": "carbon:chat-bot",
     "name": "Good Boy",
     "tagline": "Get the praise that you crave",
     "description": "A figma plugin that periodically adds comments of praise and validation.",
@@ -39,6 +43,7 @@
     "link": "good-boy"
   },
   {
+    "projectIcon": "carbon:circle-dash",
     "name": "Solidarity",
     "tagline": "Helps you feel less shit about looking for work.",
     "description": "Chrome extension that shows everyone is #opentowork.",
@@ -48,6 +53,7 @@
     "link": "solidarity"
   },
   {
+    "projectIcon": "carbon:cloud-offline",
     "name": "Is Figma down?",
     "tagline": "The unofficial status.",
     "description": "Site that mimics the Figma status, highlighting the issue with always online.",
@@ -57,6 +63,7 @@
     "link": "is-figma-down"
   },
   {
+    "projectIcon": "carbon:location",
     "name": "workingon.studio",
     "tagline": "This will literally bring you back here.",
     "description": "Click it, you'll give me some dopamine for the extra hits.",
