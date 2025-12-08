@@ -21,7 +21,7 @@
         <iconify-icon icon="material-symbols:diamond-shine-outline" class="icon"></iconify-icon>
       </div>
       {#if isHome}
-        <span class="font-bold">Sketch Today</span>
+        <span class="text-header font-bold">Sketch Today</span>
       {/if}
     </a>
     <ul class="pagination flex flex-row gap-1">
@@ -50,7 +50,7 @@
 <style>
   @reference "@styles/sketch-today.css";
   .logo-mark {
-    @apply bg-main flex rounded-lg p-1 group-hover:bg-transparent;
+    @apply bg-header flex rounded-lg p-1 group-hover:bg-transparent;
     .icon {
       @apply size-[18px] text-lg text-white;
       @apply group-hover:text-primary pointer-events-none;

@@ -38,17 +38,14 @@
   h2,
   h3,
   h4 {
-    color: var(--color-primary);
     @apply text-pretty;
   }
 
   p {
-    color: var(--color-body);
     @apply leading-relaxed;
   }
 
   small {
-    color: var(--color-muted);
     @apply text-xs;
   }
 

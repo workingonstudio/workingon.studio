@@ -6,7 +6,7 @@
 
   async function getShareLink() {
     const currentUrl = window.location.href;
-    const getPath = currentUrl.split('sketch-today/')[1]; // Gets "icons/hero-icons/"
+    const getPath = currentUrl.split("sketch-today/")[1]; // Gets "icons/hero-icons/"
     try {
       await navigator.clipboard.writeText("https://sketchto.day/" + getPath);
       isCopied = true;
@@ -72,12 +72,12 @@
   a,
   button {
     @apply items-center gap-3 rounded-lg px-3 py-3 hover:bg-stone-100;
-    @apply hover:text-main text-main flex flex-row;
+    @apply hover:text-body text-body flex flex-row;
     @apply transition-colors duration-300;
     @apply text-xs font-semibold;
     @apply cursor-pointer;
     &:first-child {
-      @apply bg-main hover:text-main text-white hover:bg-stone-100;
+      @apply bg-header hover:text-body text-white hover:bg-stone-100;
     }
   }
 </style>
