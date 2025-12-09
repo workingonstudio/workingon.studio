@@ -98,7 +98,7 @@
   >
     <ul class="flex w-full flex-col lg:flex-row">
       {#each navItems as { icon, href, title, subtitle, description }}
-        <li class="group {isActive(href) ? 'active' : ''}">
+        <li class="group" class:active={isActive(href)}>
           <iconify-icon {icon} class="text-muted flex size-[18px] text-lg lg:hidden xl:flex"></iconify-icon>
           <a {href} onclick={toggleMenu}>
             <!-- prettier-ignore -->
