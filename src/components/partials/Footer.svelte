@@ -16,7 +16,7 @@
 </script>
 
 <footer
-  class="border-muted/10 mt-12 flex flex-col justify-between gap-2 border-t-1 py-6 lg:flex-row lg:items-center lg:gap-0"
+  class="border-muted/8 mt-12 flex flex-col justify-between gap-2 border-t-1 py-6 lg:flex-row lg:items-center lg:gap-0"
 >
   <!-- prettier-ignore -->
   <div class="flex flex-col company-info">
