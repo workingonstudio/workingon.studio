@@ -17,7 +17,7 @@ function getInitialTheme() {
 // Initialize theme immediately
 if (typeof window !== "undefined") {
   const theme = getInitialTheme();
-  document.documentElement.className = ""; // Clear all
+  document.documentElement.classList.remove("light", "dark", "sunset");
   if (theme !== "light") {
     document.documentElement.classList.add(theme);
   }
