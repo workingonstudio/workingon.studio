@@ -4,7 +4,10 @@
   export let currentPath = "/";
 
   function isActive(path: string) {
-    return currentPath === path;
+    // Normalize both paths by removing trailing slashes for comparison
+    const normalizedCurrent = currentPath.replace(/\/$/, "") || "/";
+    const normalizedPath = path.replace(/\/$/, "") || "/";
+    return normalizedCurrent === normalizedPath;
   }
 
   function toggleMenu() {
