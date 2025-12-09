@@ -65,5 +65,8 @@
         @apply bg-stone-200;
       }
     }
+    &:not(.soon):hover {
+      @apply border-transparent bg-transparent;
+    }
   }
 }
