@@ -5,6 +5,7 @@ import { AstroSeo } from "@astrolib/seo";
 import { Font } from "astro:assets";
 
 import Header from "@components/sketch-today/Header.svelte";
+import Footer from "@components/sketch-today/Footer.svelte";
 
 interface Props {
   title: string;
@@ -100,11 +101,12 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
     <title>{title}</title>
   </head>
   <body>
-    <main class="mx-[5%] flex h-max flex-1 flex-col py-9 md:mx-[10%]">
-      <div class="flex flex-col">
+    <main class="mx-[5%] flex min-h-screen flex-col gap-12 pt-9 md:mx-[10%]">
+      <div class="flex flex-1 flex-col">
         <Header {category} {slug} client:idle />
         <slot />
       </div>
+      <Footer />
     </main>
   </body>
 </html>

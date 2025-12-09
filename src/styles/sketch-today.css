@@ -21,6 +21,10 @@
     font-family: var(--font-montserrat);
     color: var(--color-body);
     font-weight: var(--font-weight-medium);
+    ::selection {
+      background: var(--color-primary);
+      color: var(--color-header);
+    }
   }
 
   h1,
