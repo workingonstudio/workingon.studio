@@ -1,9 +1,9 @@
 <script lang="ts">
 </script>
 
-<footer class="flex flex-row justify-between text-[9px]">
+<footer class="flex flex-col justify-between gap-3 text-[9px] md:flex-row md:gap-0">
   <a href="/">
-    <img src="/sketch-today/logo-small-horizontal.svg" />
+    <img src="/sketch-today/logo-small-horizontal.svg" alt="wo.studio logo" />
   </a>
   <ul class="flex flex-row gap-3">
     <li class="flex flex-row items-center gap-2">

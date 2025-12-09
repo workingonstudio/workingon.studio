@@ -4,7 +4,6 @@
   export let currentPath = "/";
 
   function isActive(path: string) {
-    // Normalize both paths by removing trailing slashes for comparison
     const normalizedCurrent = currentPath.replace(/\/$/, "") || "/";
     const normalizedPath = path.replace(/\/$/, "") || "/";
     return normalizedCurrent === normalizedPath;
@@ -80,9 +79,9 @@
 
 <svelte:window on:scroll={handleScroll} />
 
-<div class="bg-bg-main" style="--padding-y: {paddingY}; --font-size: {fontSize};">
+<div style="--padding-y: {paddingY}; --font-size: {fontSize};">
   <!-- prettier-ignore -->
-  <header class="header-scroll group flex flex-row items-center border-b-1 border-muted/10 justify-between transition-all ease-out duration-200">
+  <header class="header-scroll group flex flex-row items-center justify-between transition-all ease-out duration-200">
     <a href="/" class="cursor-pointer">
       <!-- prettier-ignore -->
       <h1 class="font-display font-medium inline-block header-title">workingon<span>.studio</span></h1>
@@ -97,12 +96,12 @@
   <nav
     class="{showMenu
       ? 'flex'
-      : 'hidden'} nav-scroll border-muted/10 box-border flex-col items-start border-b-1 text-xs transition-all duration-300 ease-out lg:flex"
+      : 'hidden'} nav-scroll border-muted/8 box-border flex-col items-start border-y text-xs transition-all duration-300 ease-out lg:flex lg:items-center"
   >
     <ul class="flex w-full flex-col lg:flex-row">
       {#each navItems as { icon, href, title, subtitle, description }}
         <li class="group" class:active={isActive(href)}>
-          <iconify-icon {icon} class="text-muted flex size-[18px] text-lg lg:hidden xl:flex"></iconify-icon>
+          <iconify-icon {icon} class="text-muted flex size-4.5 text-lg lg:hidden xl:flex"></iconify-icon>
           <a {href} onclick={toggleMenu}>
             <!-- prettier-ignore -->
             <h2>{title}<span>{subtitle}</span></h2>
