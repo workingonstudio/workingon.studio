@@ -72,12 +72,12 @@
   a,
   button {
     @apply items-center gap-3 rounded-lg px-3 py-3 hover:bg-stone-100;
-    @apply hover:text-body text-body flex flex-row;
+    @apply hover:text-header text-body flex flex-row;
     @apply transition-colors duration-300;
     @apply text-xs font-semibold;
     @apply cursor-pointer;
     &:first-child {
-      @apply bg-header hover:text-body text-white hover:bg-stone-100;
+      @apply bg-header hover:text-header text-white hover:bg-stone-100;
     }
   }
 </style>

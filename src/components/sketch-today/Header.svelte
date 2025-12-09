@@ -30,7 +30,7 @@
       {:else if slug}
         <li>
           <iconify-icon icon="heroicons:chevron-right-16-solid" class="icon"></iconify-icon>
-          <a href="/projects/sketch-today/{category}">{category}</a>
+          <a href="/projects/sketch-today/{category}" class="hover:underline">{category}</a>
         </li>
         <li>
           <iconify-icon icon="heroicons:chevron-right-16-solid" class="icon"></iconify-icon>
@@ -58,7 +58,7 @@
   }
   .pagination {
     li {
-      @apply text-body flex flex-row items-center gap-1 text-xs font-medium capitalize last:font-semibold;
+      @apply text-body last:text-header flex flex-row items-center gap-1 text-xs font-medium capitalize last:font-semibold;
     }
   }
 </style>

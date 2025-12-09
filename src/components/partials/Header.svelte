@@ -4,7 +4,10 @@
   export let currentPath = "/";
 
   function isActive(path: string) {
-    return currentPath === path;
+    // Normalize both paths by removing trailing slashes for comparison
+    const normalizedCurrent = currentPath.replace(/\/$/, "") || "/";
+    const normalizedPath = path.replace(/\/$/, "") || "/";
+    return normalizedCurrent === normalizedPath;
   }
 
   function toggleMenu() {
@@ -98,7 +101,7 @@
   >
     <ul class="flex w-full flex-col lg:flex-row">
       {#each navItems as { icon, href, title, subtitle, description }}
-        <li class="group {isActive(href) ? 'active' : ''}">
+        <li class="group" class:active={isActive(href)}>
           <iconify-icon {icon} class="text-muted flex size-[18px] text-lg lg:hidden xl:flex"></iconify-icon>
           <a {href} onclick={toggleMenu}>
             <!-- prettier-ignore -->

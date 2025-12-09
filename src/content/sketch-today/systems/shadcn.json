@@ -1,0 +1,16 @@
+{
+  "category": "systems",
+  "type": "system",
+  "slug": "shadcn",
+  "title": "shadcn",
+  "tagline": "The Foundation for your Design System",
+  "description": "",
+  "released": false,
+  "links": {
+    "download": "https://carbondesignsystem.com/designing/kits/sketch/#get-the-kit",
+    "source": {
+      "label": "carbondesignsystem.com",
+      "url": "https://carbondesignsystem.com/designing/kits/sketch/#get-the-kit"
+    }
+  }
+}

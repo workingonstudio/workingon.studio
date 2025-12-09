@@ -28,86 +28,86 @@ const nudicaFontUrl = import.meta.env.NUDICA_FONT_CSS_URL;
 
 <!doctype html>
 <html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <script is:inline>
-      const theme =
-        localStorage.getItem("workingon-theme") ||
-        (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  <script is:inline>
+    const theme =
+      localStorage.getItem("workingon-theme") ||
+      (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
 
-      if (theme !== "light") {
-        document.documentElement.classList.add(theme);
-      }
-    </script>
-    <Font cssVariable="--font-inter" preload />
-    <Font cssVariable="--font-satoshi" preload />
-    <AstroSeo
-      {title}
-      description={description || defaultDescription}
-      canonical={currentURL}
-      openGraph={{
-        url: currentURL,
-        title: title,
-        description: description || defaultDescription,
-        images: [
-          {
-            url: Astro.site + "site-default.webp",
-            height: 630,
-            width: 1200,
-            alt: "workingon.studio - digital tools that work. And make a point.",
-          },
-          {
-            url: Astro.site + "site-square.webp",
-            height: 1200,
-            width: 1200,
-            alt: "workingon.studio - digital tools that work. And make a point.",
-          },
-          {
-            url: Astro.site + "site-minimum.webp",
-            height: 315,
-            width: 600,
-            alt: "workingon.studio - digital tools that work. And make a point.",
-          },
-        ],
-        site_name: "workingon.studio",
-        type: "website",
-      }}
-      twitter={{
-        cardType: "summary_large_image",
-        handle: "@prmack",
-      }}
-      ,
-      additionalMetaTags={[
+    if (theme !== "light") {
+      document.documentElement.classList.add(theme);
+    }
+  </script>
+
+  <meta charset="UTF-8" />
+  <Font cssVariable="--font-inter" preload />
+  <Font cssVariable="--font-satoshi" preload />
+  <AstroSeo
+    {title}
+    description={description || defaultDescription}
+    canonical={currentURL}
+    openGraph={{
+      url: currentURL,
+      title: title,
+      description: description || defaultDescription,
+      images: [
         {
-          name: "twitter:image",
-          content: Astro.site + "site-default.webp",
+          url: Astro.site + "site-default.webp",
+          height: 630,
+          width: 1200,
+          alt: "workingon.studio - digital tools that work. And make a point.",
         },
-      ]}
-    />
+        {
+          url: Astro.site + "site-square.webp",
+          height: 1200,
+          width: 1200,
+          alt: "workingon.studio - digital tools that work. And make a point.",
+        },
+        {
+          url: Astro.site + "site-minimum.webp",
+          height: 315,
+          width: 600,
+          alt: "workingon.studio - digital tools that work. And make a point.",
+        },
+      ],
+      site_name: "workingon.studio",
+      type: "website",
+    }}
+    twitter={{
+      cardType: "summary_large_image",
+      handle: "@prmack",
+    }}
+    ,
+    additionalMetaTags={[
+      {
+        name: "twitter:image",
+        content: Astro.site + "site-default.webp",
+      },
+    ]}
+  />
 
-    <meta name="theme-color" content="#030712" />
-    <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="image/png" href="/favicon.png" />
-    <script
-      is:inline
-      type="module"
-      src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    >
-    </script>
+  <meta name="theme-color" content="#030712" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <script
+    is:inline
+    type="module"
+    src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
+  >
+  </script>
 
-    <meta name="generator" content={Astro.generator} />
+  <meta name="generator" content={Astro.generator} />
 
-    <Analytics />
-    <StructuredData />
+  <Analytics />
+  <StructuredData />
 
-    <!-- CDN Font Stylesheets -->
-    {nudicaFontUrl && <link rel="stylesheet" href={nudicaFontUrl} />}
+  <!-- CDN Font Stylesheets -->
+  {nudicaFontUrl && <link rel="stylesheet" href={nudicaFontUrl} />}
 
-    <title>{title}</title>
-  </head>
+  <title>{title}</title>
+
   <body>
     <div class="sticky top-0 z-50 mb-12">
       <div class="mx-[5%] flex flex-col">
