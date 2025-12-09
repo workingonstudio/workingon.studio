@@ -29,6 +29,7 @@ const nudicaFontUrl = import.meta.env.NUDICA_FONT_CSS_URL;
 <!doctype html>
 <html lang="en" class="scroll-smooth">
   <head>
+    <meta charset="UTF-8" />
     <script is:inline>
       const theme =
         localStorage.getItem("workingon-theme") ||
@@ -37,7 +38,6 @@ const nudicaFontUrl = import.meta.env.NUDICA_FONT_CSS_URL;
         document.documentElement.classList.add(theme);
       }
     </script>
-    <meta charset="UTF-8" />
     <Font cssVariable="--font-inter" preload />
     <Font cssVariable="--font-satoshi" preload />
     <AstroSeo
@@ -93,8 +93,7 @@ const nudicaFontUrl = import.meta.env.NUDICA_FONT_CSS_URL;
       is:inline
       type="module"
       src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    >
-    </script>
+    ></script>
     <meta name="generator" content={Astro.generator} />
     <Analytics />
     <StructuredData />
