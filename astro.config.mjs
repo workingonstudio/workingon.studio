@@ -22,7 +22,10 @@ export default defineConfig({
       return !excludePatterns.some(pattern => page.includes(pattern));
     },
   })],
-  prefetch: true,
+  prefetch: {
+    prefetchAll: true,
+    defaultStrategy: 'hover'
+  },
   experimental: {
     fonts: [
       // Main
