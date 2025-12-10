@@ -11,5 +11,5 @@
   aria-label="{$theme === 'dark' ? 'Light' : 'Dark'} mode"
   class="text-muted hover:text-body flex size-6 cursor-pointer items-center justify-center"
 >
-  <iconify-icon icon="carbon:contrast" class="text-base" />
+  <iconify-icon icon="carbon:contrast" class="text-base"></iconify-icon>
 </button>
