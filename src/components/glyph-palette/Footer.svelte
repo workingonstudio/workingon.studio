@@ -65,10 +65,7 @@
     <div class="flex flex-col gap-2">
       <a href="#top" class="logo">glyph.palette</a>
       <small>Copywrite {date}</small>
-      <a
-        href="https://workingon.studio?ref=glyphpalette"
-        class="text-text-body hover:text-text text-xs hover:underline"
-      >
+      <a href="https://workingon.studio?ref=glyphpalette" class="text-body hover:text-text text-xs hover:underline">
         workingonstudio ltd, no: 16700615
       </a>
     </div>
@@ -80,7 +77,7 @@
   footer {
     ul {
       li {
-        @apply text-text-body text-sm before:mr-2 before:content-['─'];
+        @apply text-body text-sm before:mr-2 before:content-['─'];
       }
     }
     .buttons {

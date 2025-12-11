@@ -48,10 +48,7 @@
   {#if !submitted}
     <div class="flex flex-col gap-2">
       <h3>Join the Alpha</h3>
-      <p>
-        It’s not a $1000 course thing. It’s a “help me make the product better thing.” Join, get updates, and download
-        the latest alpha.
-      </p>
+      <p>Enter your email to get a download link to the latest version.</p>
     </div>
     <form use:form class="flex flex-col gap-3 md:flex-row">
       <label for="email" class="flex flex-1 flex-row items-center gap-3">
@@ -67,7 +64,7 @@
       <label for="website" class="absolute left-[-9999999px]">
         <input type="text" id="website" name="website" autocomplete="off" tabindex="-1" />
       </label>
-      <button type="submit" class="highlight" disabled={!$isValid}>Join alpha</button>
+      <button type="submit" class="highlight" disabled={!$isValid}>Send link</button>
     </form>
   {:else}
     <div class="flex flex-col gap-2">

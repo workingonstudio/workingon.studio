@@ -4,7 +4,7 @@
   import Plugin from "./Plugin.svelte";
 </script>
 
-<div class="flex flex-col items-center justify-between gap-6 md:flex-row md:gap-0">
+<div class="mt-6 flex flex-col items-center justify-between gap-6 md:flex-row md:gap-0">
   <div class="flex flex-col gap-16">
     <section class="flex w-full flex-col gap-12 lg:w-2xl">
       <div class="hero flex flex-col gap-6">

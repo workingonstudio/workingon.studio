@@ -10,15 +10,15 @@
   --color-primary: theme(colors.blue.600);
   --color-primary-hover: theme(colors.blue.700);
   --color-header: theme(colors.gray.800);
-  --color-text-body: theme(colors.gray.500);
-  --color-text-muted: theme(colors.gray.400);
+  --color-body: theme(colors.gray.700);
+  --color-muted: theme(colors.gray.500);
   --color-bg: theme(colors.stone.50);
 }
 
 @layer base {
   body {
     font-family: var(--font-satoshi);
-    color: var(--color-text);
+    color: var(--color-body);
     background: var(--color-bg);
     &::selection {
       background: var(--color-primary);
@@ -29,10 +29,11 @@
   h1,
   h2,
   h3,
-  h4 {
+  h4,
+  h5 {
     font-family: var(--font-montserrat);
     color: var(--color-header);
-    @apply font-semibold text-pretty;
+    @apply font-semibold;
   }
 
   h1 {
@@ -40,7 +41,7 @@
   }
 
   h2 {
-    @apply text-xl md:text-3xl;
+    @apply text-xl font-bold md:text-5xl;
   }
 
   h3 {

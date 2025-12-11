@@ -20,7 +20,7 @@
         <div class="flex flex-row items-center gap-4">
           <iconify-icon {icon} class="size-6 text-2xl"></iconify-icon>
           <h4>{status} release</h4>
-          <Badge label={`v${version.major}.${version.minor}.${version.patch}`} bgColor="bg-stone-200" />
+          <Badge label={`v${version.major}.${version.minor}.${version.patch}`} />
         </div>
         <ul>
           {#each items as item}
@@ -42,7 +42,7 @@
   }
   ul {
     li {
-      @apply text-text-body before:mr-2 before:content-['─'];
+      @apply text-body before:mr-2 before:content-['─'];
     }
   }
 </style>
