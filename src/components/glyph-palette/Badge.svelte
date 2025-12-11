@@ -1,9 +1,9 @@
 <script lang="ts">
   export let label: string;
-  export let bgColor: string = "bg-gray-100";
+  export let type: string = "";
 </script>
 
-<span class="badge {bgColor}">{label}</span>
+<span class="badge {type}">{label}</span>
 
 <style>
   @reference "@styles/glyph-palette.css";

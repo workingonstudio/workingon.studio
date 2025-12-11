@@ -1,34 +1,34 @@
 <script lang="ts">
   import Badge from "./Badge.svelte";
   let iconlist = [
-    "material-symbols:account-circle",
-    "material-symbols:info",
-    "material-symbols:visibility",
-    "material-symbols:calendar-month",
-    "material-symbols:nest-clock-farsight-analog",
+    "material-symbols:account-circle-outline",
+    "material-symbols:info-outline",
+    "material-symbols:visibility-outline",
+    "material-symbols:calendar-month-outline",
+    "material-symbols:nest-clock-farsight-analog-outline",
     "material-symbols:language",
-    "material-symbols:lock",
-    "material-symbols:error",
-    "material-symbols:visibility-off",
-    "material-symbols:verified",
+    "material-symbols:lock-outline",
+    "material-symbols:error-outline",
+    "material-symbols:visibility-off-outline",
+    "material-symbols:verified-outline",
     "material-symbols:task-alt",
-    "material-symbols:event",
-    "material-symbols:bookmark",
-    "material-symbols:calendar-today",
-    "material-symbols:lightbulb-2",
+    "material-symbols:event-outline",
+    "material-symbols:bookmark-outline",
+    "material-symbols:calendar-today-outline",
+    "material-symbols:lightbulb-2-outline",
     "material-symbols:fingerprint",
     "material-symbols:update",
     "material-symbols:code",
     "material-symbols:priority-high",
-    "material-symbols:build",
-    "material-symbols:supervisor-account",
+    "material-symbols:build-outline",
+    "material-symbols:supervisor-account-outline",
     "material-symbols:search",
-    "material-symbols:home",
+    "material-symbols:home-outline",
     "material-symbols:menu",
     "material-symbols:close",
-    "material-symbols:settings",
-    "material-symbols:check-circle",
-    "material-symbols:favorite",
+    "material-symbols:settings-outline",
+    "material-symbols:check-circle-outline",
+    "material-symbols:favorite-outline",
   ];
 </script>
 
@@ -49,7 +49,7 @@
         aria-label="icon"
         class="flex size-8 items-center justify-center rounded-lg {index === 9 ? 'active' : ''}"
       >
-        <iconify-icon {icon} class="text-2xl text-gray-800"></iconify-icon>
+        <iconify-icon {icon} class="text-2xl {index === 9 ? 'text-blue-50' : 'text-gray-900'}"></iconify-icon>
       </button>
     {/each}
   </div>
@@ -65,7 +65,7 @@
       @apply bg-gray-200;
     }
     &.active {
-      @apply bg-orange-300;
+      @apply bg-primary;
     }
   }
 </style>

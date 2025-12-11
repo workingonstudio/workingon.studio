@@ -21,7 +21,7 @@
     <Icon icon="all-out-outline-rounded" />
     <div class="flex flex-col gap-1">
       <div class="flex flex-row items-center gap-2">
-        <span>soon</span>
+        <span class="highlight">soon</span>
         <h4>Insert as Symbol.</h4>
       </div>
       <p>Add to your design library with the symbol insert option, including prefixing and naming.</p>
@@ -34,7 +34,7 @@
   .feature {
     @apply flex w-full flex-col gap-6 md:w-1/3;
     span {
-      @apply flex items-center rounded-full bg-orange-300 px-2 py-0.5 text-[9px] uppercase;
+      @apply flex items-center rounded-full px-2 py-0.5 text-[9px] text-blue-50 uppercase;
     }
   }
 </style>

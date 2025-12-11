@@ -43,12 +43,12 @@
         <h4>Support</h4>
       </div>
       <p>No official support as of yet. But if you find something that’s broken just let me know.</p>
-      <div class="buttons flex flex-col gap-3 md:flex-row">
-        <a href="https://x.com/prmack" class="flex flex-row">
+      <div class="buttons flex flex-row gap-3">
+        <a href="https://x.com/prmack" class="highlight flex flex-row">
           <iconify-icon icon="material-symbols:alternate-email-rounded" class="size-3.5"></iconify-icon>
           prmack
         </a>
-        <button type="button" class="flex cursor-pointer flex-row" title="Copy address" on:click={copyEmail}>
+        <button type="button" class="highlight flex cursor-pointer flex-row" title="Copy address" on:click={copyEmail}>
           <iconify-icon
             icon="material-symbols:{copied ? 'check' : 'mail-outline-rounded'}"
             class="size-3.5"
@@ -86,7 +86,7 @@
     .buttons {
       a,
       button {
-        @apply items-center gap-2 rounded-lg bg-gray-900 px-2 py-1 text-sm font-bold text-gray-100 hover:bg-stone-200 hover:text-gray-900;
+        @apply items-center gap-2 rounded-xl px-2 py-1 text-sm hover:bg-blue-700;
       }
     }
     @apply py-12;

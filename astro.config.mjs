@@ -51,7 +51,7 @@ export default defineConfig({
         name: "Montserrat",
         cssVariable: "--font-montserrat",
         display: "swap",
-        weights: [500, 700],
+        weights: [500, 600, 700, 900],
         styles: ['normal', 'italic']
       },
       

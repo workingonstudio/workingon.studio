@@ -24,7 +24,7 @@
   </div>
   <div class="flex w-full flex-row justify-end gap-12 md:order-none">
     <div class="hidden pt-6 md:inline">
-      <Icon icon="verified" />
+      <Icon icon="verified-outline" />
     </div>
     <Plugin />
   </div>
