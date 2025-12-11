@@ -17,7 +17,7 @@
           Bring 100’s of modern icon* sets directly to into your .sketch files, with full control over size, stroke, and
           color.
         </p>
-        <small>* it's just Material icons for now. And a vary limited set at that. Hey I am only one man.</small>
+        <small>* it's just Material icons for now. And a very limited set at that. Hey I am only one man.</small>
       </div>
       <Form />
     </section>
