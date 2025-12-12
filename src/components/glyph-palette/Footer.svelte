@@ -23,7 +23,7 @@
   }
 </script>
 
-<footer class="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center md:gap-0">
+<footer class="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
   <section class="flex w-full flex-col gap-6 rounded-2xl bg-stone-100 p-6 md:w-4/5 md:flex-row">
     <div class="flex flex-1 flex-col gap-6">
       <div class="flex flex-row items-center gap-4">

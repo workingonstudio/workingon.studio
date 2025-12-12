@@ -5,9 +5,9 @@
 <div class="bg-bg/90 sticky top-0 z-10 border-b-1 border-stone-100">
   <header id="top" class="mx-auto flex flex-row items-center justify-between px-4 md:max-w-6xl">
     <div class="flex flex-row items-center gap-6">
-      <a href="/projects/glyph-palette" class="logo">glyph.palette</a>
+      <a href="#top" class="logo">glyph.palette</a>
       <div class="flex flex-row gap-3">
-        <Badge label="Alpha" type="highlight" />
+        <Badge label="Beta" type="highlight" />
         <Badge label="v1.0.0" />
       </div>
     </div>

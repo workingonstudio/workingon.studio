@@ -4,7 +4,7 @@
   import timeline from "@data/glyph-palette/timeline.json";
 </script>
 
-<section id="roadmap">
+<section id="roadmap" class="scroll-mt-40">
   <div class="flex flex-col gap-12">
     <div class="flex flex-col items-center gap-6">
       <Icon icon="route-outline" />

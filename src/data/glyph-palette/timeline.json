@@ -2,7 +2,7 @@
   {
     "label": "1st Nov",
     "title": "Initial Idea.",
-    "description": "Originally conceived as individual several icon plugins for popular sets.",
+    "description": "Originally conceived as several individual icon plugins for popular sets.",
     "features": [],
     "current": false
   },
@@ -29,7 +29,7 @@
   },
   {
     "label": "Current",
-    "title": "Major release - v1.0.0",
+    "title": "Beta release - v1.0.0",
     "description": "",
     "features": ["full support for Material icons.", "large redesign.", "fixed sizes (16, 24, 32)"],
     "current": true

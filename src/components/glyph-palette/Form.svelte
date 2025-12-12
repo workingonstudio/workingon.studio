@@ -47,7 +47,7 @@
 <div class="form">
   {#if !submitted}
     <div class="flex flex-col gap-2">
-      <h3>Download the Alpha</h3>
+      <h3>Try the Beta</h3>
       <p>Enter your email to get a download link for the lastest version.</p>
     </div>
     <form use:form class="flex flex-col gap-3 md:flex-row">
