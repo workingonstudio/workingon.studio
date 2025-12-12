@@ -47,8 +47,8 @@
 <div class="form">
   {#if !submitted}
     <div class="flex flex-col gap-2">
-      <h3>Join the Alpha</h3>
-      <p>Enter your email to get a download link to the latest version.</p>
+      <h3>Download the Alpha</h3>
+      <p>Enter your email to get a download link for the lastest version.</p>
     </div>
     <form use:form class="flex flex-col gap-3 md:flex-row">
       <label for="email" class="flex flex-1 flex-row items-center gap-3">
@@ -81,7 +81,7 @@
 <style>
   @reference "@styles/glyph-palette.css";
   .form {
-    @apply flex w-full flex-col gap-6 rounded-xl bg-stone-100 p-6 lg:w-xl;
+    @apply flex w-full flex-col gap-6 rounded-2xl bg-stone-100 p-6 lg:w-xl;
     h3 {
       @apply text-xl;
     }

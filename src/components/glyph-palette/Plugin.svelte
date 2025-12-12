@@ -31,8 +31,10 @@
   ];
 </script>
 
-<div class="flex h-fit w-full flex-col rounded-xl border border-gray-300 bg-white font-[Montserrat] shadow-lg lg:w-lg">
-  <div class="lg relative flex flex-row items-center border-b-1 border-gray-300 px-2.5 py-2">
+<div
+  class="flex h-fit w-full max-w-xl flex-col divide-y-1 divide-gray-300 rounded-xl border border-gray-300 bg-white font-[Montserrat] shadow-lg md:w-lg"
+>
+  <div class="lg relative flex flex-row items-center px-2.5 py-2">
     <ul class="absolute flex flex-row gap-2">
       <li class="size-2.5 rounded-full bg-red-500"></li>
       <li class="size-2.5 rounded-full bg-gray-300"></li>
@@ -40,14 +42,21 @@
     </ul>
     <strong class="text-xxs w-full text-center">Glyph Palette v1.0.0</strong>
   </div>
-  <div class="flex flex-row items-center justify-between border-b-1 border-gray-300 px-4 py-3">
+  <div class="flex flex-row items-center justify-between px-3 py-3 md:px-4">
     <ul class="filters">
       <li class="default">Google Material</li>
       <li class="default">Outline</li>
       <li class="default">24 x 24</li>
+      <li class="default flex flex-row items-center gap-2">
+        <span class="size-2 rounded-full bg-gray-950"></span>
+        <span>34, 34, 34, 1</span>
+      </li>
     </ul>
     <div class="flex flex-row gap-2">
-      <button class="highlight flex flex-row items-center rounded-lg px-2 py-1 text-xs hover:bg-blue-600!" disabled>
+      <button
+        class="highlight hidden flex-row items-center rounded-lg px-2 py-1 text-xs hover:bg-blue-600! md:flex"
+        disabled
+      >
         Update
       </button>
       <button
@@ -57,7 +66,6 @@
       </button>
     </div>
   </div>
-
   <div class="form">
     <div class="flex flex-row gap-6">
       <div class="label">
@@ -96,8 +104,22 @@
         <span class="btn default">Custom</span>
       </div>
     </div>
+    <div class="flex flex-row gap-6">
+      <div class="label">
+        <iconify-icon icon="material-symbols:colors-rounded" class="size-4 text-base"></iconify-icon>
+        <span class="text-xs font-semibold">Color</span>
+      </div>
+      <div class="flex flex-row items-center gap-3">
+        <div class="flex flex-row items-center gap-3 rounded-xl border border-gray-300 px-3 py-2 inset-shadow-sm">
+          <span class="size-2.5 rounded-full bg-gray-950"></span>
+          <span class="text-xs font-semibold">34, 34, 34, 1</span>
+        </div>
+        <span class="btn selected">Rgba</span>
+        <span class="btn default">Hex</span>
+      </div>
+    </div>
   </div>
-  <div class="false-input flex h-13 w-full flex-row items-center border-y-1 border-gray-300 p-4">
+  <div class="false-input flex h-13 w-full flex-row items-center p-4 inset-shadow-sm">
     <iconify-icon icon="material-symbols:search-rounded" class="text-base"></iconify-icon>
   </div>
   <div class="icon-grid grid grid-cols-7 grid-rows-4 justify-items-center gap-x-5 gap-y-2 p-4">

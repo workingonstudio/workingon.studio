@@ -37,11 +37,11 @@
   }
 
   h1 {
-    @apply text-5xl/16 font-black lg:text-6xl/21;
+    @apply text-5xl/16 font-black md:text-6xl/21;
   }
 
   h2 {
-    @apply text-xl font-bold md:text-5xl;
+    @apply text-4xl font-bold md:text-5xl;
   }
 
   h3 {
@@ -54,7 +54,7 @@
 
   p {
     color: var(--color-text-body);
-    @apply leading-relaxed;
+    @apply leading-relaxed text-pretty;
     @apply text-sm md:text-base;
   }
 

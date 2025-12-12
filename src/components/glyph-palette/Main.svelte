@@ -9,7 +9,9 @@
 
 <div class="flex flex-col gap-36">
   <Hero />
-  <Features />
+  <div class="flex flex-col items-center">
+    <Features />
+  </div>
   <Roadmap />
   <Footer />
 </div>
