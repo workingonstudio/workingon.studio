@@ -1,5 +1,4 @@
 <script lang="ts">
-  import Badge from "./Badge.svelte";
   let iconlist = [
     "material-symbols:account-circle-outline",
     "material-symbols:info-outline",
@@ -32,17 +31,76 @@
   ];
 </script>
 
-<div class="flex h-fit w-sm flex-col gap-3 rounded-xl border border-gray-300 bg-white p-4 shadow-lg">
-  <div class="flex justify-end">
-    <div class="header flex w-[225px] flex-row justify-between gap-3">
-      <h3>Glyph.Palette</h3>
-      <Badge label="v0.0.5" />
+<div class="flex h-fit w-full flex-col rounded-xl border border-gray-300 bg-white font-[Montserrat] shadow-lg lg:w-lg">
+  <div class="lg relative flex flex-row items-center border-b-1 border-gray-300 px-2.5 py-2">
+    <ul class="absolute flex flex-row gap-2">
+      <li class="size-2.5 rounded-full bg-red-500"></li>
+      <li class="size-2.5 rounded-full bg-gray-300"></li>
+      <li class="size-2.5 rounded-full bg-green-500"></li>
+    </ul>
+    <strong class="text-xxs w-full text-center">Glyph Palette v1.0.0</strong>
+  </div>
+  <div class="flex flex-row items-center justify-between border-b-1 border-gray-300 px-4 py-3">
+    <ul class="filters">
+      <li class="default">Google Material</li>
+      <li class="default">Outline</li>
+      <li class="default">24 x 24</li>
+    </ul>
+    <div class="flex flex-row gap-2">
+      <button class="highlight flex flex-row items-center rounded-lg px-2 py-1 text-xs hover:bg-blue-600!" disabled>
+        Update
+      </button>
+      <button
+        class="default text-body flex size-7 flex-row items-center justify-center rounded-lg font-semibold hover:bg-stone-50!"
+      >
+        <iconify-icon icon="material-symbols:close-rounded" class="text-base"></iconify-icon>
+      </button>
     </div>
   </div>
-  <div class="false-input flex h-10 w-full flex-row items-center rounded-lg border border-gray-300 p-2">
+
+  <div class="form">
+    <div class="flex flex-row gap-6">
+      <div class="label">
+        <iconify-icon icon="material-symbols:stacks-outline" class="size-4 text-base"></iconify-icon>
+        <span class="text-xs font-semibold">Icons</span>
+      </div>
+      <div class="select">
+        <span>Google Material</span>
+        <iconify-icon
+          icon="material-symbols:keyboard-arrow-down-rounded"
+          class="text-body size-4.5 text-lg"
+        ></iconify-icon>
+      </div>
+    </div>
+    <div class="flex flex-row gap-6">
+      <div class="label">
+        <iconify-icon icon="material-symbols:style-outline" class="size-4 text-base"></iconify-icon>
+        <span class="text-xs font-semibold">Style</span>
+      </div>
+      <div class="flex flex-row gap-3">
+        <span class="btn default">Regular</span>
+        <span class="btn selected">Outline</span>
+        <span class="btn default">Rounded</span>
+        <span class="btn default">Sharp</span>
+      </div>
+    </div>
+    <div class="flex flex-row gap-6">
+      <div class="label">
+        <iconify-icon icon="material-symbols:open-in-full-rounded" class="size-4 text-base"></iconify-icon>
+        <span class="text-xs font-semibold">Size</span>
+      </div>
+      <div class="flex flex-row gap-3">
+        <span class="btn default">16 x 16</span>
+        <span class="btn selected">24 x 24</span>
+        <span class="btn default">32 x 32</span>
+        <span class="btn default">Custom</span>
+      </div>
+    </div>
+  </div>
+  <div class="false-input flex h-13 w-full flex-row items-center border-y-1 border-gray-300 p-4">
     <iconify-icon icon="material-symbols:search-rounded" class="text-base"></iconify-icon>
   </div>
-  <div class="icon-grid grid grid-cols-7 grid-rows-4 gap-x-5 gap-y-2">
+  <div class="icon-grid grid grid-cols-7 grid-rows-4 justify-items-center gap-x-5 gap-y-2 p-4">
     {#each iconlist as icon, index}
       <button
         type="button"
@@ -57,8 +115,23 @@
 
 <style>
   @reference "@styles/glyph-palette.css";
-  h3 {
-    @apply font-cabinet-grotesk text-sm uppercase;
+  .filters {
+    @apply flex flex-row gap-2;
+    li {
+      @apply rounded-lg px-2 py-1 text-[10px] font-semibold;
+    }
+  }
+  .form {
+    @apply flex flex-col gap-4 p-4;
+    .label {
+      @apply flex min-w-16 flex-row items-center gap-2;
+    }
+    .select {
+      @apply flex h-10 w-full flex-row items-center justify-between rounded-lg border border-gray-200 bg-stone-50 p-3 text-xs font-semibold;
+    }
+  }
+  .btn {
+    @apply flex min-h-7 flex-row items-center rounded-lg px-2 py-1 text-xs font-semibold;
   }
   button {
     &:hover {

@@ -24,7 +24,7 @@
     "label": "28th Nov",
     "title": "Minor fix.",
     "description": "",
-    "features": ["support for Material icons (regular, 24 x 24).", "insert as svg."],
+    "features": ["fixing update notification.", "switched to appcast.json."],
     "current": false
   },
   {
@@ -39,6 +39,20 @@
     "title": "Color support.",
     "description": "",
     "features": ["select default color for icons.", "switch between hex / rgba."],
+    "current": false
+  },
+  {
+    "label": "Future",
+    "title": "Additional icon sets.",
+    "description": "",
+    "features": ["Lucide.", "Hero.", "Carbon.", "Phosphor."],
+    "current": false
+  },
+  {
+    "label": "Future",
+    "title": "Insert as Symbol",
+    "description": "",
+    "features": ["add icons as symbols.", "naming and prefixing."],
     "current": false
   }
 ]

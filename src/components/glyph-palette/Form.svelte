@@ -64,7 +64,7 @@
       <label for="website" class="absolute left-[-9999999px]">
         <input type="text" id="website" name="website" autocomplete="off" tabindex="-1" />
       </label>
-      <button type="submit" class="highlight" disabled={!$isValid}>Send link</button>
+      <button type="submit" class="highlight" disabled={!$isValid}>Send me the link</button>
     </form>
   {:else}
     <div class="flex flex-col gap-2">

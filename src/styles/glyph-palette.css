@@ -68,4 +68,10 @@
   .highlight {
     @apply rounded-xl border border-blue-700 bg-blue-600 font-bold text-blue-50 inset-ring inset-ring-blue-500 transition-colors duration-250 text-shadow-xs;
   }
+  .default {
+    @apply border border-stone-200 bg-stone-100 inset-ring inset-ring-white;
+  }
+  .selected {
+    @apply border border-gray-950 bg-gray-800 text-gray-50 inset-ring inset-ring-gray-700;
+  }
 }
