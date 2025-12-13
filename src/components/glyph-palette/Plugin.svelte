@@ -32,7 +32,7 @@
 </script>
 
 <div
-  class="flex h-fit w-full max-w-xl flex-col divide-y-1 divide-gray-300 rounded-xl border border-gray-300 bg-white font-[Montserrat] shadow-lg md:w-lg"
+  class="flex h-fit w-full flex-col divide-y-1 divide-gray-300 rounded-xl border border-gray-300 bg-white font-[Montserrat] shadow-lg md:w-lg"
 >
   <div class="lg relative flex flex-row items-center px-2.5 py-2">
     <ul class="absolute flex flex-row gap-2">
@@ -49,7 +49,7 @@
       <li class="default">24 x 24</li>
       <li class="default flex flex-row items-center gap-2">
         <span class="size-2 rounded-full bg-gray-950"></span>
-        <span>34, 34, 34, 1</span>
+        <span class="hidden md:flex">34, 34, 34, 1</span>
       </li>
     </ul>
     <div class="flex flex-row gap-2">
@@ -146,7 +146,10 @@
   .form {
     @apply flex flex-col gap-4 p-4;
     .label {
-      @apply flex min-w-16 flex-row items-center gap-2;
+      @apply flex flex-row items-center gap-2 md:min-w-16;
+      span {
+        @apply hidden md:flex;
+      }
     }
     .select {
       @apply flex h-10 w-full flex-row items-center justify-between rounded-lg border border-gray-200 bg-stone-50 p-3 text-xs font-semibold;

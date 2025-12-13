@@ -3,7 +3,7 @@
   import Plugin from "./Plugin.svelte";
 </script>
 
-<div class="my-12 flex flex-col items-center justify-between gap-6 md:gap-12 lg:flex-row">
+<div class="my-6 flex flex-col items-center justify-between gap-6 md:my-12 md:gap-12 lg:flex-row">
   <div class="flex flex-col gap-16">
     <section class="flex w-full flex-col items-center gap-12 lg:w-2xl lg:items-start">
       <div class="hero flex flex-col gap-6 text-center md:w-2/3 lg:w-full lg:text-left">

@@ -2,7 +2,9 @@
   import Icon from "./Icon.svelte";
 </script>
 
-<div class="grid w-full grid-cols-1 gap-6 md:w-5/6 md:grid-cols-2 md:gap-20 lg:w-full lg:grid-cols-3">
+<div
+  class="flex w-full flex-col items-center gap-24 md:grid md:w-5/6 md:grid-cols-2 md:gap-20 lg:w-full lg:grid-cols-3"
+>
   <div class="feature">
     <Icon icon="manage-search-rounded" />
     <div class="flex flex-col gap-1">
@@ -34,7 +36,7 @@
   <div class="feature">
     <Icon icon="all-out-outline-rounded" />
     <div class="flex flex-col gap-1">
-      <div class="flex flex-row items-center gap-2">
+      <div class="flex flex-col items-center gap-2 md:flex-row">
         <span class="highlight">soon</span>
         <h4>Add as Symbol.</h4>
       </div>
@@ -44,7 +46,7 @@
   <div class="feature">
     <Icon icon="format-color-fill-rounded" />
     <div class="flex flex-col gap-1">
-      <div class="flex flex-row items-center gap-2">
+      <div class="flex flex-col items-center gap-2 md:flex-row">
         <span class="highlight">soon</span>
         <h4>Custom colors.</h4>
       </div>
@@ -56,7 +58,7 @@
 <style>
   @reference "@styles/glyph-palette.css";
   .feature {
-    @apply flex w-full flex-col gap-6;
+    @apply flex w-80 flex-col items-center gap-6 text-center md:w-full md:items-start md:text-left;
     span {
       @apply flex items-center rounded-full px-2 py-0.5 text-[9px] text-blue-50 uppercase;
     }

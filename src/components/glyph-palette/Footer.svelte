@@ -58,7 +58,7 @@
       </div>
     </div>
   </section>
-  <div class="flex flex-col gap-8">
+  <div class="flex w-full flex-col items-center gap-8 text-center md:w-auto md:items-start md:text-left">
     <a href="https://workingon.studio?ref=glyphpalette">
       <img src="/glyph-palette/logo-small-grayscale.svg" class="w-8" alt="" />
     </a>

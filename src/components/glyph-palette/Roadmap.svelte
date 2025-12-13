@@ -8,7 +8,7 @@
   <div class="flex flex-col gap-12">
     <div class="flex flex-col items-center gap-6">
       <Icon icon="route-outline" />
-      <div class="flex flex-col items-center gap-6">
+      <div class="flex flex-col gap-6 text-center">
         <h2>Roadmap.</h2>
         <p class="text-xl">Conception, current state, and what the future holds.</p>
       </div>
