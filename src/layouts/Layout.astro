@@ -3,6 +3,7 @@ import "../styles/base.css";
 import "../styles/main.css";
 
 import { Font } from "astro:assets";
+import { ClientRouter } from "astro:transitions";
 
 import Analytics from "./partials/Analytics.astro";
 import StructuredData from "./partials/StructuredData.astro";
@@ -31,11 +32,23 @@ const nudicaFontUrl = import.meta.env.NUDICA_FONT_CSS_URL;
   <head>
     <meta charset="UTF-8" />
     <script is:inline>
-      const theme = localStorage.getItem("theme") || "light";
-      if (theme === "dark") {
-        document.documentElement.classList.add("dark");
+      function applyTheme() {
+        const theme = localStorage.getItem("theme") || "light";
+        if (theme === "dark") {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+        }
       }
+
+      // Apply on initial load
+      applyTheme();
+
+      // Reapply after ClientRouter navigation
+      document.addEventListener("astro:after-swap", applyTheme);
     </script>
+
+    <ClientRouter />
     <Font cssVariable="--font-inter" preload />
     <Font cssVariable="--font-satoshi" preload />
     <AstroSeo
@@ -91,7 +104,8 @@ const nudicaFontUrl = import.meta.env.NUDICA_FONT_CSS_URL;
       is:inline
       type="module"
       src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    ></script>
+    >
+    </script>
     <meta name="generator" content={Astro.generator} />
     <Analytics />
     <StructuredData />

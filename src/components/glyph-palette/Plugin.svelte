@@ -54,12 +54,6 @@
     </ul>
     <div class="flex flex-row gap-2">
       <button
-        class="highlight hidden flex-row items-center rounded-lg px-2 py-1 text-xs hover:bg-blue-600! md:flex"
-        disabled
-      >
-        Update
-      </button>
-      <button
         class="default text-body flex size-7 flex-row items-center justify-center rounded-lg font-semibold hover:bg-stone-50!"
       >
         <iconify-icon icon="material-symbols:close-rounded" class="text-base"></iconify-icon>

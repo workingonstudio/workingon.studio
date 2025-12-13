@@ -1,6 +1,8 @@
 ---
 import "../styles/dad-reply.css";
 
+import { ClientRouter } from "astro:transitions";
+
 import Analytics from "./partials/Analytics.astro";
 import { AstroSeo } from "@astrolib/seo";
 import { Font } from "astro:assets";
@@ -17,6 +19,10 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
 <html lang="en" class="scroll-smooth bg-white">
   <head>
     <meta charset="UTF-8" />
+    <Font cssVariable="--font-geist" preload />
+    <Font cssVariable="--font-poppins" preload />
+    <Font cssVariable="--font-roboto" preload />
+    <ClientRouter />
     <AstroSeo
       title={longTitle}
       description="One-click emoji replies for Gmail."
@@ -69,10 +75,6 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="/dad-reply/favicon.png" />
-    <Font cssVariable="--font-geist" preload />
-    <Font cssVariable="--font-poppins" preload />
-    <Font cssVariable="--font-roboto" preload />
-
     <link
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded"
       rel="stylesheet"
@@ -81,9 +83,10 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
       is:inline
       type="module"
       src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    ></script>
-    <script is:inline src="https://kit.fontawesome.com/180e1f6a33.js" crossorigin="anonymous">
+    >
     </script>
+    <script is:inline src="https://kit.fontawesome.com/180e1f6a33.js" crossorigin="anonymous"
+    ></script>
     <meta name="generator" content={Astro.generator} />
     <Analytics productName="Dad Reply" />
   </head>
