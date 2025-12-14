@@ -50,7 +50,7 @@ export default defineConfig({
 
       // Sketch Today
       {
-        provider: fontProviders.bunny(),
+        provider: fontProviders.fontshare(),
         name: "Montserrat",
         cssVariable: "--font-montserrat",
         display: "swap",
@@ -66,10 +66,11 @@ export default defineConfig({
         cssVariable: "--font-geist",
         display: "swap",
         weights: [400, 700],
+        styles: ['normal'],
         subsets: ["latin"]
       },
       {
-        provider: fontProviders.bunny(),
+        provider: fontProviders.fontshare(),
         name: "Poppins",
         cssVariable: "--font-poppins",
         display: "swap",
@@ -83,6 +84,7 @@ export default defineConfig({
         cssVariable: "--font-roboto",
         display: "swap",
         weights: [400],
+        styles: ['normal'],
         subsets: ["latin"]
       },
       
