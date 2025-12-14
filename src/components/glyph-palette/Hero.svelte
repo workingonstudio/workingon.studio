@@ -15,7 +15,7 @@
         <small>* it's just Material icons for now.</small>
       </div>
       <div class="hidden lg:flex">
-        <Form />
+        <Form emailId="desktop" />
       </div>
     </section>
   </div>
@@ -23,7 +23,7 @@
     <Plugin />
   </div>
   <div class="flex lg:hidden">
-    <Form />
+    <Form emailId="mobile" />
   </div>
 </div>
 

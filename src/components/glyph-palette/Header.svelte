@@ -1,7 +1,9 @@
 <script lang="ts">
   import Badge from "./Badge.svelte";
   function handleClick() {
-    document.getElementById("email")?.focus();
+    const isMobile = window.innerWidth < 1024;
+    const id = isMobile ? "mobile" : "desktop";
+    document.getElementById(id)?.focus();
   }
 </script>
 
