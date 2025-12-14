@@ -28,24 +28,24 @@ const capitalizedCategory = category.charAt(0).toUpperCase() + category.slice(1)
 
 let iconset: string = "heroicons:";
 let icon: string = "";
-let bgColor: string = "";
+let textColor: string = "";
 
 switch (category) {
   case "icons":
-    icon = iconset + "square-2-stack";
-    bgColor = "bg-orange-100";
+    icon = iconset + "square-2-stack-solid";
+    textColor = "text-orange-500";
     break;
   case "palettes":
-    icon = iconset + "swatch";
-    bgColor = "bg-violet-100";
+    icon = iconset + "swatch-solid";
+    textColor = "text-violet-500";
     break;
   case "plugins":
-    icon = iconset + "squares-plus";
-    bgColor = "bg-pink-100";
+    icon = iconset + "squares-plus-solid";
+    textColor = "text-pink-500";
     break;
   case "systems":
-    icon = iconset + "cube-transparent";
-    bgColor = "bg-blue-100";
+    icon = iconset + "cube-transparent-solid";
+    textColor = "text-blue-500";
     break;
 }
 ---
@@ -55,7 +55,7 @@ switch (category) {
     <div class="flex flex-col">
       <ContentHeader
         {icon}
-        {bgColor}
+        {textColor}
         header={category}
         subtitle={"The most up-to-date " + category + "."}
       />
