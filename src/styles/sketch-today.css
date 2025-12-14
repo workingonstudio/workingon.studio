@@ -38,7 +38,7 @@
 
 @layer components {
   .resource {
-    @apply flex flex-col gap-3 rounded-2xl border border-stone-200 bg-white p-6;
+    @apply flex h-full flex-col gap-3 rounded-2xl border border-stone-200 bg-white p-6;
     &.palette {
       .icon {
         @apply text-violet-500;

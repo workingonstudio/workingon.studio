@@ -32,7 +32,7 @@
     <iconify-icon icon="{iconSet}:{icon}" class="icon"></iconify-icon>
     <div class="flex flex-col gap-0.5">
       <h4 class="text-header text-sm font-semibold">{title}</h4>
-      <p class="text-xs">{tagline}</p>
+      <p class="text-xs text-pretty">{tagline}</p>
     </div>
   </a>
 {:else}
@@ -40,7 +40,7 @@
     <iconify-icon icon="{iconSet}:{icon}" class="icon"></iconify-icon>
     <div class="flex flex-col gap-0.5">
       <h4 class="text-sm font-semibold">{title}</h4>
-      <p class="text-xs">{tagline}</p>
+      <p class="text-xs text-pretty">{tagline}</p>
     </div>
   </div>
 {/if}
