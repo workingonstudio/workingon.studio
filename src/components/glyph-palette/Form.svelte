@@ -3,6 +3,8 @@
   import { validator } from "@felte/validator-zod";
   import * as zod from "zod";
 
+  export let emailId = "email";
+
   let submitted: boolean = false;
   let submittedEmail: string = "";
 
@@ -51,7 +53,7 @@
       <p>Enter your email to get a download link for the lastest version.</p>
     </div>
     <form use:form class="flex flex-col gap-3 md:flex-row">
-      <label for="email" class="flex flex-1 flex-row items-center gap-3">
+      <label for={emailId} class="flex flex-1 flex-row items-center gap-3">
         {#if !$isValid}
           <iconify-icon icon="material-symbols:mail-outline-rounded" class="text-text"></iconify-icon>
         {:else if $isSubmitting}
@@ -59,7 +61,7 @@
         {:else}
           <iconify-icon icon="material-symbols:check-circle-rounded" class="text-primary"></iconify-icon>
         {/if}
-        <input type="email" id="email" name="email" autocomplete="email" />
+        <input type="email" id={emailId} name="email" autocomplete="email" />
       </label>
       <label for="website" class="absolute left-[-9999999px]">
         <input type="text" id="website" name="website" autocomplete="off" tabindex="-1" />
