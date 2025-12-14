@@ -8,14 +8,14 @@
     <g id="favicon" stroke="none" fill="none" xlink:href="#path-1">
         <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
         <g id="Material/Icon/Wrapped" stroke-dasharray="9,6" transform="translate(16, 16)" xlink:href="#path-2">
-            <use stroke="#FFB86A" stroke-width="3" xlink:href="#path-2"></use>
+            <use stroke="#51A2FF" stroke-width="3" xlink:href="#path-2"></use>
             <text id="Icon-Name" font-family="CabinetGrotesk-Extrabold, Cabinet Grotesk" font-size="72" font-weight="700" fill="#1E2939">
                 <tspan x="22.08" y="75">G</tspan>
             </text>
-            <rect id="Rectangle" fill="#FF8904" fill-rule="evenodd" x="-6" y="-6" width="15" height="15"></rect>
-            <rect id="Rectangle" fill="#FF8904" fill-rule="evenodd" x="-6" y="87" width="15" height="15"></rect>
-            <rect id="Rectangle" fill="#FF8904" fill-rule="evenodd" x="88.5" y="88.5" width="15" height="15"></rect>
-            <rect id="Rectangle" fill="#FF8904" fill-rule="evenodd" x="88.5" y="-6" width="15" height="15"></rect>
+            <rect id="Rectangle" fill="#155DFC" fill-rule="evenodd" x="-6" y="-6" width="15" height="15"></rect>
+            <rect id="Rectangle" fill="#155DFC" fill-rule="evenodd" x="-6" y="87" width="15" height="15"></rect>
+            <rect id="Rectangle" fill="#155DFC" fill-rule="evenodd" x="88.5" y="88.5" width="15" height="15"></rect>
+            <rect id="Rectangle" fill="#155DFC" fill-rule="evenodd" x="88.5" y="-6" width="15" height="15"></rect>
         </g>
     </g>
 </svg>

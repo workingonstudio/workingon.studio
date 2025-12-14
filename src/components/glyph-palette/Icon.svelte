@@ -14,9 +14,9 @@
 <style>
   @reference "@styles/glyph-palette.css";
   .icon {
-    @apply relative flex size-8 items-center justify-center border-1 border-dashed border-orange-300;
+    @apply relative flex size-8 items-center justify-center border-1 border-dashed border-blue-500;
     span {
-      @apply absolute size-1.5 bg-orange-400;
+      @apply bg-primary absolute size-1.5;
       &.top-left {
         @apply -top-1 -left-1;
       }

@@ -51,7 +51,7 @@
   });
 </script>
 
-<div class="options grid grid-flow-row grid-cols-2 gap-3 md:auto-cols-max md:grid-flow-col md:grid-cols-none">
+<div class="options grid grid-flow-row grid-cols-1 gap-3 md:auto-cols-max md:grid-flow-col md:grid-cols-none">
   {#each processedLinks as link}
     <a href={link.url} class={link.key}>
       <iconify-icon icon={link.icon} class="text-base"></iconify-icon>

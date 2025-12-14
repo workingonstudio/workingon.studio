@@ -2,6 +2,8 @@
 import "../styles/base.css";
 import "../styles/is-figma-down.css";
 
+import { ClientRouter } from "astro:transitions";
+
 import Analytics from "./partials/Analytics.astro";
 import { AstroSeo } from "@astrolib/seo";
 import { Font } from "astro:assets";
@@ -18,7 +20,8 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
 <html lang="en" class="scroll-smooth bg-[#1E1E1E]">
   <head>
     <meta charset="UTF-8" />
-
+    <Font cssVariable="--font-inter" preload />
+    <ClientRouter />
     <AstroSeo
       title={longTitle}
       description="The unofficial status of a well known SaaS product."
@@ -55,7 +58,6 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="/is-figma-down/favicon.svg" />
-    <Font cssVariable="--font-inter" preload />
     <link
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded"
       rel="stylesheet"

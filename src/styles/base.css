@@ -6,10 +6,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-@view-transition {
-  navigation: auto;
-}
-
 /* Common theme tokens used across all products */
 @theme {
   /* Shared breakpoints */

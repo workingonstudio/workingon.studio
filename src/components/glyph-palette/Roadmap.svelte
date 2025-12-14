@@ -1,48 +1,63 @@
 <script lang="ts">
-  import Badge from "./Badge.svelte";
-  import Icon from "./Icon.svelte";
-  export let productChangelogs;
+  import Icon from "@components/glyph-palette/Icon.svelte";
+  import Badge from "@components/glyph-palette/Badge.svelte";
+  import timeline from "@data/glyph-palette/timeline.json";
 </script>
 
-<div id="roadmap" class="flex flex-col justify-between gap-12 md:flex-row md:gap-6">
-  <div class="flex w-full flex-col gap-6 md:w-xl">
-    <Icon icon="map-search-outline-rounded" />
-    <div class="flex flex-col gap-3">
-      <h2>Roadmap.</h2>
-      <p class="text-xl">
-        No Gantt chart here. Just a list of features and improvements I hope to add in the coming months.
-      </p>
+<section id="roadmap" class="scroll-mt-40">
+  <div class="flex flex-col gap-12">
+    <div class="flex flex-col items-center gap-6">
+      <Icon icon="route-outline" />
+      <div class="flex flex-col gap-6 text-center">
+        <h2>Roadmap.</h2>
+        <p class="text-xl">Conception, current state, and what the future holds.</p>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {#each timeline as { label, title, description, features, current }}
+        <div class="entry {current ? 'current' : ''}">
+          <Badge {label} type={current ? "highlight" : "bg-stone-200"} />
+          <div class="flex flex-col gap-1">
+            <h5>{title}</h5>
+            {#if description != ""}
+              <p>{description}</p>
+            {/if}
+            {#if features.length != 0}
+              <ul class="text-body flex w-full flex-col gap-0.5 text-sm">
+                {#each features as item}
+                  <li>{item}</li>
+                {/each}
+              </ul>
+            {/if}
+          </div>
+        </div>
+      {/each}
     </div>
   </div>
-  <div class="flex w-full flex-col gap-6 md:w-md">
-    {#each productChangelogs as { version, date, status, icon, items }}
-      <div class="flex flex-col gap-6 rounded-2xl bg-stone-100 p-6">
-        <div class="flex flex-row items-center gap-4">
-          <iconify-icon {icon} class="size-6 text-2xl"></iconify-icon>
-          <h4>{status} release</h4>
-          <Badge label={`v${version.major}.${version.minor}.${version.patch}`} bgColor="bg-stone-200" />
-        </div>
-        <ul>
-          {#each items as item}
-            <li>{item}</li>
-          {/each}
-        </ul>
-      </div>
-    {/each}
-  </div>
-</div>
+</section>
 
 <style>
   @reference "@styles/glyph-palette.css";
-  h2 {
-    @apply text-3xl md:text-5xl;
-  }
-  h4 {
-    @apply first-letter:uppercase;
-  }
-  ul {
+  .entry {
+    @apply flex flex-col items-start gap-3 rounded-2xl bg-stone-100 p-6;
+    h5 {
+      @apply font-semibold;
+    }
+    p {
+      @apply text-sm;
+    }
     li {
-      @apply text-text-body before:mr-2 before:content-['─'];
+      @apply before:mr-1 before:content-['─'];
+    }
+    &.current {
+      @apply bg-blue-100;
+      h5 {
+        @apply text-blue-950;
+      }
+      p,
+      li {
+        @apply text-blue-900;
+      }
     }
   }
 </style>

@@ -47,11 +47,8 @@
 <div class="form">
   {#if !submitted}
     <div class="flex flex-col gap-2">
-      <h3>Join the Alpha</h3>
-      <p>
-        It’s not a $1000 course thing. It’s a “help me make the product better thing.” Join, get updates, and download
-        the latest alpha.
-      </p>
+      <h3>Try the Beta</h3>
+      <p>Enter your email to get a download link for the lastest version.</p>
     </div>
     <form use:form class="flex flex-col gap-3 md:flex-row">
       <label for="email" class="flex flex-1 flex-row items-center gap-3">
@@ -60,14 +57,14 @@
         {:else if $isSubmitting}
           <iconify-icon icon="material-symbols:progress-activity" class="text-text animate-spin"></iconify-icon>
         {:else}
-          <iconify-icon icon="material-symbols:check-circle-rounded" class="text-green-600"></iconify-icon>
+          <iconify-icon icon="material-symbols:check-circle-rounded" class="text-primary"></iconify-icon>
         {/if}
         <input type="email" id="email" name="email" autocomplete="email" />
       </label>
       <label for="website" class="absolute left-[-9999999px]">
         <input type="text" id="website" name="website" autocomplete="off" tabindex="-1" />
       </label>
-      <button type="submit" disabled={!$isValid}>Join alpha</button>
+      <button type="submit" class="highlight" disabled={!$isValid}>Send me the link</button>
     </form>
   {:else}
     <div class="flex flex-col gap-2">
@@ -84,9 +81,9 @@
 <style>
   @reference "@styles/glyph-palette.css";
   .form {
-    @apply flex w-full flex-col gap-6 rounded-xl bg-stone-100 p-6 lg:w-xl;
+    @apply flex w-full flex-col gap-6 rounded-2xl bg-stone-100 p-6 lg:w-xl;
     h3 {
-      @apply font-satoshi text-xl font-bold;
+      @apply text-xl;
     }
     p {
       @apply text-gray-500;
@@ -98,12 +95,15 @@
       }
     }
     button {
-      @apply bg-primary rounded-md border-2 border-transparent px-4 py-2 text-sm font-bold transition-colors duration-250;
+      @apply bg-primary rounded-xl px-4 py-2 text-sm transition-colors duration-250;
       &:hover {
-        @apply cursor-pointer bg-orange-400 text-white;
+        @apply cursor-pointer bg-blue-700;
       }
       &:disabled {
-        @apply cursor-default bg-gray-200 text-gray-500;
+        @apply cursor-default opacity-50;
+        &:hover {
+          @apply bg-primary;
+        }
       }
     }
   }

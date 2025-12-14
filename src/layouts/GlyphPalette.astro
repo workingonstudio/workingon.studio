@@ -1,6 +1,8 @@
 ---
 import "../styles/glyph-palette.css";
 
+import { ClientRouter } from "astro:transitions";
+
 import Analytics from "./partials/Analytics.astro";
 import { AstroSeo } from "@astrolib/seo";
 import { Font } from "astro:assets";
@@ -17,6 +19,10 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
+    <ClientRouter />
+    <Font cssVariable="--font-cabinet-grotesk" preload />
+    <Font cssVariable="--font-montserrat" preload />
+    <Font cssVariable="--font-satoshi" preload />
     <AstroSeo
       title={longTitle}
       description="Bring 100’s of modern icon sets directly to into your .sketch files, with full control over size, stroke, and color."
@@ -69,19 +75,18 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg" href="/glyph-palette/favicon.svg" />
     <link rel="icon" type="image/png" href="/glyph-palette/favicon.png" />
-    <Font cssVariable="--font-cabinet-grotesk" preload />
-    <Font cssVariable="--font-satoshi" preload />
     <script
       is:inline
       type="module"
       src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    ></script>
-    <script is:inline src="https://kit.fontawesome.com/180e1f6a33.js" crossorigin="anonymous">
+    >
     </script>
+    <script is:inline src="https://kit.fontawesome.com/180e1f6a33.js" crossorigin="anonymous"
+    ></script>
     <meta name="generator" content={Astro.generator} />
     <Analytics productName="Glyph Palette" />
   </head>
-  <body>
+  <body id="top">
     <slot />
   </body>
 </html>

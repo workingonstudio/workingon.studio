@@ -22,7 +22,10 @@ export default defineConfig({
       return !excludePatterns.some(pattern => page.includes(pattern));
     },
   })],
-  prefetch: true,
+  prefetch: {
+    prefetchAll: true,
+    defaultStrategy: 'hover'
+  },
   experimental: {
     fonts: [
       // Main
@@ -32,24 +35,28 @@ export default defineConfig({
         cssVariable : "--font-satoshi",
         display: "swap",
         weights: [500, 700],
-        styles: ['normal']
+        styles: ['normal'],
+        subsets: ["latin"]
       },
       {
         provider: fontProviders.bunny(),
         name: "Inter",
         cssVariable: "--font-inter",
         display: "swap",
-        weights: [400, 600]
+        weights: [400, 600],
+        styles: ['normal'],
+        subsets: ["latin"]
       },
 
       // Sketch Today
       {
-        provider: fontProviders.bunny(),
+        provider: fontProviders.fontshare(),
         name: "Montserrat",
         cssVariable: "--font-montserrat",
         display: "swap",
-        weights: [500, 700],
-        styles: ['normal', 'italic']
+        weights: [500, 600, 700, 900],
+        styles: ['normal', 'italic'],
+        subsets: ["latin"]
       },
       
       // Dad Reply
@@ -58,22 +65,27 @@ export default defineConfig({
         name: "Geist",
         cssVariable: "--font-geist",
         display: "swap",
-        weights: [400, 700]
+        weights: [400, 700],
+        styles: ['normal'],
+        subsets: ["latin"]
       },
       {
-        provider: fontProviders.bunny(),
+        provider: fontProviders.fontshare(),
         name: "Poppins",
         cssVariable: "--font-poppins",
         display: "swap",
         weights: [400, 500, 600],
-        styles: ['normal', 'italic']
+        styles: ['normal', 'italic'],
+        subsets: ["latin"]
       },
       {
         provider: fontProviders.bunny(),
         name: "Roboto",
         cssVariable: "--font-roboto",
         display: "swap",
-        weights: [400]
+        weights: [400],
+        styles: ['normal'],
+        subsets: ["latin"]
       },
       
       // Solidarity
@@ -83,14 +95,16 @@ export default defineConfig({
         cssVariable: "--font-lora",
         display: "swap",
         weights: [400, 700],
-        styles: ['normal', 'italic']
+        styles: ['normal', 'italic'],
+        subsets: ["latin"]
       },
       {
         provider: fontProviders.bunny(),
         name: "Mulish",
         cssVariable: "--font-mulish",
         display: "swap",
-        weights: [700]
+        weights: [700],
+        subsets: ["latin"]
       },      
 
       // Glyph Palette
@@ -100,7 +114,8 @@ export default defineConfig({
         cssVariable : "--font-cabinet-grotesk",
         display: "swap",
         weights: [600, 700],
-        styles: ['normal']
+        styles: ['normal'],
+        subsets: ["latin"]
       },
 
       // Good Boy
@@ -110,7 +125,8 @@ export default defineConfig({
         cssVariable: "--font-oswald",
         display: "swap",
         weights: [600],
-        styles: ['normal']
+        styles: ['normal'],
+        subsets: ["latin"]
       }
     ]
   },

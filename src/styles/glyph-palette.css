@@ -2,44 +2,46 @@
 
 @theme {
   /* Typography */
+  --font-montserrat: "Montserrat", sans-serif;
   --font-cabinet-grotesk: "Cabinet Grotesk", sans-serif;
   --font-satoshi: "Satoshi", sans-serif;
 
   /* Colors */
-  --color-primary: theme(colors.orange.300);
-  --color-primary-hover: theme(colors.orange.400);
-  --color-text: theme(colors.gray.800);
-  --color-text-body: theme(colors.gray.500);
-  --color-text-muted: theme(colors.gray.400);
+  --color-primary: theme(colors.blue.600);
+  --color-primary-hover: theme(colors.blue.700);
+  --color-header: theme(colors.gray.800);
+  --color-body: theme(colors.gray.700);
+  --color-muted: theme(colors.gray.500);
   --color-bg: theme(colors.stone.50);
 }
 
 @layer base {
   body {
     font-family: var(--font-satoshi);
-    color: var(--color-text);
+    color: var(--color-body);
     background: var(--color-bg);
     &::selection {
       background: var(--color-primary);
-      color: var(--color-text);
+      @apply text-blue-50;
     }
   }
 
   h1,
   h2,
   h3,
-  h4 {
-    font-family: var(--font-cabinet-grotesk);
-    color: var(--color-text);
-    @apply font-semibold text-pretty;
+  h4,
+  h5 {
+    font-family: var(--font-montserrat);
+    color: var(--color-header);
+    @apply font-semibold;
   }
 
   h1 {
-    @apply text-5xl/16 lg:text-6xl/21;
+    @apply text-5xl/16 font-black md:text-6xl/21;
   }
 
   h2 {
-    @apply text-xl md:text-3xl;
+    @apply text-4xl font-bold md:text-5xl;
   }
 
   h3 {
@@ -47,17 +49,29 @@
   }
 
   h4 {
-    @apply text-xl font-medium;
+    @apply text-xl;
   }
 
   p {
     color: var(--color-text-body);
-    @apply leading-relaxed;
+    @apply leading-relaxed text-pretty;
     @apply text-sm md:text-base;
   }
 
   small {
     color: var(--color-text-muted);
     @apply text-xs;
+  }
+}
+
+@layer components {
+  .highlight {
+    @apply rounded-xl border border-blue-700 bg-blue-600 font-bold text-blue-50 inset-ring inset-ring-blue-500 transition-colors duration-250 text-shadow-xs;
+  }
+  .default {
+    @apply border border-stone-200 bg-stone-100 inset-ring inset-ring-white;
+  }
+  .selected {
+    @apply border border-gray-950 bg-gray-800 text-gray-50 inset-ring inset-ring-gray-700;
   }
 }

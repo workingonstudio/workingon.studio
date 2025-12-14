@@ -38,39 +38,32 @@
 
 @layer components {
   .resource {
-    @apply flex flex-row items-center gap-3 rounded-lg border p-3;
+    @apply flex h-full flex-col gap-3 rounded-2xl border border-stone-200 bg-white p-6;
     &.palette {
-      @apply border-violet-100 bg-violet-50 text-violet-500;
       .icon {
-        @apply bg-violet-100;
+        @apply text-violet-500;
       }
     }
     &.icon {
-      @apply border-orange-100 bg-orange-50 text-orange-500;
       .icon {
-        @apply bg-orange-100;
+        @apply text-orange-500;
       }
     }
     &.plugin {
-      @apply border-pink-100 bg-pink-50 text-pink-500;
       .icon {
-        @apply bg-pink-100;
+        @apply text-pink-500;
       }
     }
     &.system {
-      @apply border-blue-100 bg-blue-50 text-blue-500;
       .icon {
-        @apply bg-blue-100;
+        @apply text-blue-500;
       }
     }
     &.soon {
-      @apply border-stone-200 bg-stone-100 text-stone-500;
-      .icon {
-        @apply bg-stone-200;
-      }
+      @apply opacity-50;
     }
     &:not(.soon):hover {
-      @apply border-transparent bg-transparent;
+      @apply border-stone-200 bg-stone-100;
     }
   }
 }
