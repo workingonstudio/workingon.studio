@@ -1,7 +1,7 @@
 <script lang="ts">
   import Icon from "@components/glyph-palette/Icon.svelte";
   import Badge from "@components/glyph-palette/Badge.svelte";
-  import timeline from "@data/glyph-palette/timeline.json";
+  import roadmap from "@data/glyph-palette/roadmap.json";
 </script>
 
 <section id="roadmap" class="scroll-mt-40">
@@ -14,7 +14,7 @@
       </div>
     </div>
     <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-      {#each timeline as { label, title, description, features, current }}
+      {#each roadmap as { label, title, description, features, current }}
         <div class="entry {current ? 'current' : ''}">
           <Badge {label} type={current ? "highlight" : "bg-stone-200"} />
           <div class="flex flex-col gap-1">

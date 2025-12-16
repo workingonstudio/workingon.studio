@@ -1,0 +1,41 @@
+[
+  {
+    "date": "",
+    "version": "0.5.0",
+    "title": "Initial Release.",
+    "description": "",
+    "features": [
+      "Browse and insert Material Symbols icons.",
+      "Search functionality with instant filtering.",
+      "Virtual scrolling for performance."
+    ]
+  },
+  {
+    "date": "",
+    "version": "0.5.1",
+    "title": "Update sync fix.",
+    "description": "",
+    "features": ["Fixing issue with update notifications."]
+  },
+  {
+    "date": "",
+    "version": "0.5.2",
+    "title": "Switching to appcast.json",
+    "description": "",
+    "features": ["Updates now use more modern notification system."]
+  },
+  {
+    "date": "",
+    "version": "1.0.0",
+    "title": "Beta release",
+    "description": "",
+    "features": ["Full redesign.", "Full support for Material icons.", "Additional size options."]
+  },
+  {
+    "date": "",
+    "version": "1.0.1",
+    "title": "Additional iconsets",
+    "description": "",
+    "features": ["Lucide.", "Carbon.", "Heroicons.", "Adding drag and drop functionality."]
+  }
+]

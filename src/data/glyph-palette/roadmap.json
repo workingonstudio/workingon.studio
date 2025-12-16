@@ -36,16 +36,16 @@
   },
   {
     "label": "Next",
-    "title": "Color support.",
+    "title": "Additional icon sets.",
     "description": "",
-    "features": ["select default color for icons.", "switch between hex / rgba."],
+    "features": ["Lucide.", "Hero.", "Carbon."],
     "current": false
   },
   {
     "label": "Future",
-    "title": "Additional icon sets.",
+    "title": "Color support.",
     "description": "",
-    "features": ["Lucide.", "Hero.", "Carbon.", "Phosphor."],
+    "features": ["select default color for icons.", "switch between hex / rgba."],
     "current": false
   },
   {
