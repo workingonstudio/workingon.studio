@@ -36,6 +36,13 @@
     "version": "1.0.1",
     "title": "Additional iconsets",
     "description": "",
-    "features": ["Lucide.", "Carbon.", "Heroicons.", "Adding drag and drop functionality."]
+    "features": [
+      "Lucide.",
+      "Carbon.",
+      "Heroicons.",
+      "Now using native svg importing.",
+      "Now using native settings panel.",
+      "Caching iconsets."
+    ]
   }
 ]
