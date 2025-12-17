@@ -11,44 +11,52 @@ export default defineConfig({
     : "https://workingon.studio"),
   integrations: [svelte(), sitemap({
     filter: (page) => {
-      // Remove duplicate URLs - keep the canonical versions
-      const duplicates = [
-        '/projects/dadreply/',
-        '/projects/sketchtoday/',
+      // Exclude non-canonical routes (handled by middleware redirects)
+      const excludePatterns = [
+        '/projects/dadreply',
+        '/projects/sketchtoday',
         '/projects/glyphpalette',
+        '/projects/goodboy',
         '/projects/solidarity/Main/'
       ];
-      return !duplicates.some(dup => page.includes(dup));
+      return !excludePatterns.some(pattern => page.includes(pattern));
     },
   })],
-  prefetch: true,
+  prefetch: {
+    prefetchAll: true,
+    defaultStrategy: 'hover'
+  },
   experimental: {
     fonts: [
-      // Main site
+      // Main
       {
-        provider: fontProviders.bunny(),
-        name: "Azeret Mono",
-        cssVariable: "--font-azeret-mono",
+        provider : fontProviders.fontshare(),
+        name: "Satoshi",
+        cssVariable : "--font-satoshi",
         display: "swap",
-        weights: [500],
-        styles: ['normal', 'italic']
+        weights: [500, 700],
+        styles: ['normal'],
+        subsets: ["latin"]
       },
       {
         provider: fontProviders.bunny(),
-        name: "Space Grotesk",
-        cssVariable: "--font-space-grotesk",
+        name: "Inter",
+        cssVariable: "--font-inter",
         display: "swap",
-        weights: [500]
+        weights: [400, 600],
+        styles: ['normal'],
+        subsets: ["latin"]
       },
-      
+
       // Sketch Today
       {
-        provider: fontProviders.bunny(),
+        provider: fontProviders.fontshare(),
         name: "Montserrat",
         cssVariable: "--font-montserrat",
         display: "swap",
-        weights: [500, 700],
-        styles: ['normal', 'italic']
+        weights: [500, 600, 700, 900],
+        styles: ['normal', 'italic'],
+        subsets: ["latin"]
       },
       
       // Dad Reply
@@ -57,48 +65,68 @@ export default defineConfig({
         name: "Geist",
         cssVariable: "--font-geist",
         display: "swap",
-        weights: [400, 700]
+        weights: [400, 700],
+        styles: ['normal'],
+        subsets: ["latin"]
       },
       {
-        provider: fontProviders.bunny(),
+        provider: fontProviders.fontshare(),
         name: "Poppins",
         cssVariable: "--font-poppins",
         display: "swap",
         weights: [400, 500, 600],
-        styles: ['normal', 'italic']
+        styles: ['normal', 'italic'],
+        subsets: ["latin"]
       },
       {
         provider: fontProviders.bunny(),
         name: "Roboto",
         cssVariable: "--font-roboto",
         display: "swap",
-        weights: [400]
+        weights: [400],
+        styles: ['normal'],
+        subsets: ["latin"]
       },
       
       // Solidarity
       {
-        provider: fontProviders.bunny(),
+        provider: fontProviders.fontshare(),
         name: "Lora",
         cssVariable: "--font-lora",
         display: "swap",
         weights: [400, 700],
-        styles: ['normal', 'italic']
+        styles: ['normal', 'italic'],
+        subsets: ["latin"]
       },
       {
         provider: fontProviders.bunny(),
         name: "Mulish",
         cssVariable: "--font-mulish",
         display: "swap",
-        weights: [700]
-      },
-      
-      // Is Figma Down
+        weights: [700],
+        subsets: ["latin"]
+      },      
+
+      // Glyph Palette
       {
-        provider: fontProviders.fontsource(),
-        name: "Inter",
-        cssVariable: "--font-inter",
+        provider : fontProviders.fontshare(),
+        name: "Cabinet Grotesk",
+        cssVariable : "--font-cabinet-grotesk",
         display: "swap",
-        weights: [400, 600]
+        weights: [600, 700],
+        styles: ['normal'],
+        subsets: ["latin"]
+      },
+
+      // Good Boy
+      { 
+        provider: fontProviders.fontshare(),
+        name: "Oswald",
+        cssVariable: "--font-oswald",
+        display: "swap",
+        weights: [600],
+        styles: ['normal'],
+        subsets: ["latin"]
       }
     ]
   },

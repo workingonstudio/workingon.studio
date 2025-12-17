@@ -1,8 +1,10 @@
 [
   {
+    "projectIcon": "carbon:thumbs-up-double",
     "name": "Dad Reply",
-    "description": "Email replies without the email part.",
-    "version": "1.5.5",
+    "tagline": "Email replies without the email part.",
+    "description": "Chrome extension that allows for rapid emoji responses to update emails.",
+    "version": "1.5.6",
     "status": "shipped",
     "tags": [
       { "icon": "carbon:currency-dollar", "text": "paid" },
@@ -11,33 +13,61 @@
     "link": "dad-reply"
   },
   {
+    "projectIcon": "carbon:folders",
     "name": "Sketch Today",
-    "description": "A collection of modern Sketch resources.",
-    "version": "1.0.0",
+    "tagline": "A collection of modern Sketch resources.",
+    "description": "Resources to get you started when making the inevitable switch to Sketch.",
+    "version": "1.2.0",
     "status": "shipped",
     "tags": [{ "icon": "carbon:magic-wand", "text": "free" }],
     "link": "sketch-today"
   },
   {
+    "projectIcon": "carbon:data-categorical",
+    "name": "Glyph Palette",
+    "tagline": "A modern icon plugin for Sketch.",
+    "description": "Search and add icons from popular icon sets in Sketch.",
+    "version": "1.1.1",
+    "status": "shipped",
+    "tags": [{ "icon": "carbon:magic-wand", "text": "free" }],
+    "link": "glyph-palette"
+  },
+  {
+    "projectIcon": "carbon:chat-bot",
+    "name": "Good Boy",
+    "tagline": "Get the praise that you crave",
+    "description": "A Figma plugin that randomly comments low effort praise on your designs.",
+    "version": "1.0.0",
+    "status": "shipped",
+    "tags": [{ "icon": "carbon:magic-wand", "text": "free" }],
+    "link": "good-boy"
+  },
+  {
+    "projectIcon": "carbon:circle-dash",
     "name": "Solidarity",
-    "description": "Helps you feel less shit about looking for work.",
+    "tagline": "Helps you feel less shit about looking for work.",
+    "description": "Chrome extension that shows everyone is #opentowork.",
     "version": "1.0.1",
     "status": "shipped",
     "tags": [{ "icon": "carbon:magic-wand", "text": "free" }],
     "link": "solidarity"
   },
   {
+    "projectIcon": "carbon:cloud-offline",
     "name": "Is Figma down?",
-    "description": "The unofficial status.",
+    "tagline": "The unofficial status.",
+    "description": "Site that mimics the Figma status, highlighting the issue with always online.",
     "version": "1.0.0",
     "status": "shipped",
     "tags": [{ "icon": "carbon:magic-wand", "text": "free" }],
     "link": "is-figma-down"
   },
   {
+    "projectIcon": "carbon:location",
     "name": "workingon.studio",
-    "description": "This will literally bring you back here.",
-    "version": "3.0.0",
+    "tagline": "This will literally bring you back here.",
+    "description": "Click it, you'll give me some dopamine for the extra hits.",
+    "version": "5.0.0",
     "status": "shipped",
     "tags": [{ "icon": "carbon:magic-wand", "text": "free" }],
     "link": "/"

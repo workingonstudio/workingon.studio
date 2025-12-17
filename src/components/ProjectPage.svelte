@@ -10,16 +10,14 @@
   <h1>
     {daysSince} days passed.
     <br />
-    5 projects shipped.
-    <br />
-    3 more in the dock.
+    7 projects shipped.
   </h1>
   <div class="flex max-w-xl flex-col gap-12">
     <p>Things I made because I was tired of not seeing them. Each one works. That's the point.</p>
   </div>
 </PageHeader>
 
-<section class="mx-0 max-w-2xl md:mx-2 2xl:mt-5">
+<section class="mx-0 md:mx-2 2xl:mt-5">
   <ProjectList />
 </section>
 

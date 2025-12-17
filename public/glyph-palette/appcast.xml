@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Glyph Palette</title>
+    <link>https://glyphpalette.com</link>
+    <description>A modern icon plugin for Sketch.</description>
+    <language>en</language>
+    <item>
+      <title>v0.5.2</title>
+      <description>
+        <![CDATA[
+          <ul>
+            <li>Switched to modern JSON appcast format</li>
+          </ul>
+        ]]>
+      </description>
+      <pubDate>Fri, 29 Nov 2024 11:06:00 +0000</pubDate>
+      <enclosure url="https://workingon.studio/glyph-palette/downloads/glyph-palette-v0.5.2.sketchplugin.zip" sparkle:version="7" length="202933" type="application/octet-stream"/>
+    </item>
+    <item>
+      <title>v0.5.1</title>
+      <description>
+        <![CDATA[
+          <ul>
+            <li>Version sync fix</li>
+          </ul>
+        ]]>
+      </description>
+      <pubDate>Thu, 28 Nov 2024 12:00:00 +0000</pubDate>
+      <enclosure url="https://workingon.studio/glyph-palette/downloads/glyph-palette-v0.5.1.sketchplugin.zip" sparkle:version="6" length="201614" type="application/octet-stream"/>
+    </item>
+    <item>
+      <title>v0.5.0</title>
+      <description>
+        <![CDATA[
+          <ul>
+            <li>Initial alpha release</li>
+            <li>Browse and insert Material Symbols icons</li>
+            <li>Search functionality with instant filtering</li>
+            <li>Virtual scrolling for performance</li>
+          </ul>
+        ]]>
+      </description>
+      <pubDate>Wed, 27 Nov 2024 07:47:00 +0000</pubDate>
+      <enclosure url="https://workingon.studio/glyph-palette/downloads/glyph-palette-v0.5.0.sketchplugin.zip" sparkle:version="5" length="203095" type="application/octet-stream"/>
+    </item>
+  </channel>
+</rss>

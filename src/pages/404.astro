@@ -40,10 +40,10 @@ import Layout from "@layouts/Layout.astro";
 <style>
   @reference "../styles/main.css";
   a {
-    @apply text-sm text-lime-500 underline transition-colors delay-100 hover:no-underline;
+    @apply text-xxs text-green-700 underline transition-colors delay-100 hover:no-underline;
   }
   ul {
-    @apply text-sm uppercase;
+    @apply text-xxs uppercase;
     span {
       @apply text-primary;
     }
@@ -52,7 +52,7 @@ import Layout from "@layouts/Layout.astro";
     }
   }
   blockquote {
-    @apply text-body -indent-2 text-2xl/relaxed;
+    @apply text-body -indent-2 text-2xl/relaxed font-medium italic;
     @apply before:content-[open-quote] after:content-[close-quote];
   }
 </style>

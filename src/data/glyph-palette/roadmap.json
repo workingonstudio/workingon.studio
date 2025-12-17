@@ -1,0 +1,58 @@
+[
+  {
+    "label": "1st Nov",
+    "title": "Initial Idea.",
+    "description": "Originally conceived as several individual icon plugins for popular sets.",
+    "features": [],
+    "current": false
+  },
+  {
+    "label": "5th Nov",
+    "title": "Alpha build started.",
+    "description": "Began a basic build to launch on Sketchto.day.",
+    "features": [],
+    "current": false
+  },
+  {
+    "label": "26th Nov",
+    "title": "Launch public Alpha.",
+    "description": "",
+    "features": ["support for Material icons (regular, 24 x 24).", "insert as svg."],
+    "current": false
+  },
+  {
+    "label": "28th Nov",
+    "title": "Minor fix.",
+    "description": "",
+    "features": ["fixing update notification.", "switched to appcast.json."],
+    "current": false
+  },
+  {
+    "label": "15th Dec",
+    "title": "Beta release - v1.0.0",
+    "description": "",
+    "features": ["full support for Material icons.", "large redesign.", "fixed sizes (16, 24, 32)"],
+    "current": false
+  },
+  {
+    "label": "Current",
+    "title": "Added additional icon sets.",
+    "description": "",
+    "features": ["Lucide.", "Hero.", "Carbon."],
+    "current": true
+  },
+  {
+    "label": "Future",
+    "title": "Color support.",
+    "description": "",
+    "features": ["select default color for icons.", "switch between hex / rgba."],
+    "current": false
+  },
+  {
+    "label": "Future",
+    "title": "Insert as Symbol.",
+    "description": "",
+    "features": ["add icons as symbols.", "naming and prefixing."],
+    "current": false
+  }
+]

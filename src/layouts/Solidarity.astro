@@ -1,10 +1,11 @@
 ---
 import "../styles/solidarity.css";
 
+import { ClientRouter } from "astro:transitions";
+
 import { AstroSeo } from "@astrolib/seo";
 
 import Analytics from "./partials/Analytics.astro";
-import { ClientRouter } from "astro:transitions";
 import { Font } from "astro:assets";
 
 export interface Props {
@@ -23,6 +24,9 @@ const publishDate = new Date().toISOString();
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
+    <Font cssVariable="--font-lora" preload />
+    <Font cssVariable="--font-mulish" preload />
+    <ClientRouter />
     <AstroSeo
       title={longTitle}
       description="A Chrome Extension that makes you feel less s**t about looking for work."
@@ -64,21 +68,18 @@ const publishDate = new Date().toISOString();
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/solidarity/favicon.svg" />
-    <Font cssVariable="--font-lora" preload />
-    <Font cssVariable="--font-mulish" preload />
-
     <script
       is:inline
       type="module"
       src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    ></script>
+    >
+    </script>
 
     <!-- CDN Font Stylesheets -->
     {brockmannFontUrl && <link rel="stylesheet" href={brockmannFontUrl} />}
 
     <meta name="generator" content={Astro.generator} />
     <Analytics productName="Solidarity" />
-    <ClientRouter />
     <title>{title}</title>
   </head>
   <body id="top">

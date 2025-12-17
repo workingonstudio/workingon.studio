@@ -29,22 +29,18 @@
 
 {#if released}
   <a href="/projects/sketch-today/{type + 's'}/{slug}/" class="resource {released ? type : 'soon'}">
-    <div class="icon flex rounded-sm p-1">
-      <iconify-icon icon="{iconSet}:{icon}" class="text-gray-800"></iconify-icon>
-    </div>
+    <iconify-icon icon="{iconSet}:{icon}" class="icon"></iconify-icon>
     <div class="flex flex-col gap-0.5">
-      <h4 class="text-sm font-semibold">{title}</h4>
-      <p class="text-xs">{tagline}</p>
+      <h4 class="text-header text-sm font-semibold">{title}</h4>
+      <p class="text-xs text-pretty">{tagline}</p>
     </div>
   </a>
 {:else}
   <div class="resource {released ? type : 'soon'}">
-    <div class="icon flex rounded-sm p-1">
-      <iconify-icon icon="{iconSet}:{icon}" class="text-gray-800"></iconify-icon>
-    </div>
+    <iconify-icon icon="{iconSet}:{icon}" class="icon"></iconify-icon>
     <div class="flex flex-col gap-0.5">
       <h4 class="text-sm font-semibold">{title}</h4>
-      <p class="text-xs">{tagline}</p>
+      <p class="text-xs text-pretty">{tagline}</p>
     </div>
   </div>
 {/if}

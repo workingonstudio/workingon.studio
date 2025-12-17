@@ -24,29 +24,29 @@ const formattedSlug = slug!
 
 let iconset: string = "heroicons:";
 let icon: string = "";
-let bgColor: string = "";
+let textColor: string = "";
 
 switch (resource.type) {
   case "icon":
-    icon = iconset + "square-2-stack";
-    bgColor = "bg-orange-100";
+    icon = iconset + "square-2-stack-solid";
+    textColor = "text-orange-500";
     break;
   case "palette":
-    icon = iconset + "swatch";
-    bgColor = "bg-violet-100";
+    icon = iconset + "swatch-solid";
+    textColor = "text-violet-500";
     break;
   case "plugin":
-    icon = iconset + "squares-plus";
-    bgColor = "bg-pink-100";
+    icon = iconset + "squares-plus-solid";
+    textColor = "text-pink-500";
     break;
   case "system":
-    icon = iconset + "cube-transparent";
-    bgColor = "bg-blue-100";
+    icon = iconset + "cube-transparent-solid";
+    textColor = "text-blue-500";
     break;
 }
 
 if (!resource.released) {
-  bgColor = "bg-stone-200";
+  textColor = "text-stone-500";
 }
 ---
 
@@ -55,15 +55,15 @@ if (!resource.released) {
   {category}
   {slug}
 >
-  <div class="flex py-18">
+  <div class="my-12 flex rounded-2xl border border-stone-200 bg-white p-12">
     <div class="flex flex-col gap-8">
       <div class="flex flex-col items-start gap-3">
-        <ContentHeader {icon} {bgColor} header={resource.title} subtitle={resource.tagline} />
+        <ContentHeader {icon} {textColor} header={resource.title} subtitle={resource.tagline} />
       </div>
-      <div class="text-main flex w-full max-w-2xl flex-col text-base/relaxed text-pretty">
+      <div class="text-body flex w-full max-w-2xl flex-col text-base/relaxed text-pretty">
         <p>{resource.description}</p>
       </div>
-      <SlugButtons urls={resource.links} client:load />
+      <SlugButtons urls={resource.links} client:idle />
     </div>
   </div>
 </SketchToday>

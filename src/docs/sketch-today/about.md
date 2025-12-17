@@ -1,7 +1,7 @@
 ---
 subtitle: "What's all this then?" 
 title: "About"
-icon: "heroicons:square-3-stack-3d"
+icon: "heroicons:square-3-stack-3d-solid"
 ---
 
 One of the big problems that people face when switching to [Sketch](https://sketch.com) (or back to Sketch). Is that they become accustomed to having resources at their fingertips. 

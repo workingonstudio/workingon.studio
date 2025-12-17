@@ -6,7 +6,7 @@
 
   async function getShareLink() {
     const currentUrl = window.location.href;
-    const getPath = currentUrl.split('sketch-today/')[1]; // Gets "icons/hero-icons/"
+    const getPath = currentUrl.split("sketch-today/")[1]; // Gets "icons/hero-icons/"
     try {
       await navigator.clipboard.writeText("https://sketchto.day/" + getPath);
       isCopied = true;
@@ -51,7 +51,7 @@
   });
 </script>
 
-<div class="options grid grid-flow-row grid-cols-2 gap-3 md:auto-cols-max md:grid-flow-col md:grid-cols-none">
+<div class="options grid grid-flow-row grid-cols-1 gap-3 md:auto-cols-max md:grid-flow-col md:grid-cols-none">
   {#each processedLinks as link}
     <a href={link.url} class={link.key}>
       <iconify-icon icon={link.icon} class="text-base"></iconify-icon>
@@ -72,12 +72,12 @@
   a,
   button {
     @apply items-center gap-3 rounded-lg px-3 py-3 hover:bg-stone-100;
-    @apply hover:text-main text-main flex flex-row;
+    @apply hover:text-header text-body flex flex-row;
     @apply transition-colors duration-300;
     @apply text-xs font-semibold;
     @apply cursor-pointer;
     &:first-child {
-      @apply bg-main hover:text-main text-white hover:bg-stone-100;
+      @apply bg-header hover:text-header text-white hover:bg-stone-100;
     }
   }
 </style>

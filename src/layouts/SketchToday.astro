@@ -1,11 +1,14 @@
 ---
 import "../styles/sketch-today.css";
-import Analytics from "./partials/Analytics.astro";
+
 import { ClientRouter } from "astro:transitions";
+
+import Analytics from "./partials/Analytics.astro";
 import { AstroSeo } from "@astrolib/seo";
 import { Font } from "astro:assets";
 
 import Header from "@components/sketch-today/Header.svelte";
+import Footer from "@components/sketch-today/Footer.svelte";
 
 interface Props {
   title: string;
@@ -22,6 +25,8 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
 <html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
+    <Font cssVariable="--font-montserrat" preload />
+    <ClientRouter />
     <AstroSeo
       title={title}
       description="A collection of modern resources for Sketch."
@@ -86,26 +91,26 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
       href="/sketch-today/favicon-dark.svg"
       media="(prefers-color-scheme: dark)"
     />
-    <Font cssVariable="--font-montserrat" preload />
     <script
       is:inline
       type="module"
       src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    ></script>
+    >
+    </script>
 
     <meta name="generator" content={Astro.generator} />
 
     <Analytics productName="Sketch Today" />
-    <ClientRouter />
 
     <title>{title}</title>
   </head>
   <body>
-    <main class="mx-[5%] flex h-max flex-1 flex-col py-9 md:mx-[10%]">
-      <div class="flex flex-col">
-        <Header {category} {slug} client:load />
+    <main class="mx-[5%] flex min-h-screen flex-col gap-12 pt-9 md:mx-[10%]">
+      <div class="flex flex-1 flex-col">
+        <Header {category} {slug} client:idle />
         <slot />
       </div>
+      <Footer />
     </main>
   </body>
 </html>

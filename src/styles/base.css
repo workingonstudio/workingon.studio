@@ -34,17 +34,14 @@
   h2,
   h3,
   h4 {
-    color: var(--color-text);
     @apply text-pretty;
   }
 
   p {
-    color: var(--color-text-body);
     @apply leading-relaxed;
   }
 
   small {
-    color: var(--color-text-muted);
     @apply text-xs;
   }
 
@@ -52,5 +49,31 @@
   button,
   input[type="submit"] {
     @apply transition-colors delay-100 ease-in-out;
+  }
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.5s;
+}
+
+/* Customize the animation */
+::view-transition-old(root) {
+  animation-name: fade-out;
+}
+
+::view-transition-new(root) {
+  animation-name: fade-in;
+}
+
+@keyframes fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
   }
 }

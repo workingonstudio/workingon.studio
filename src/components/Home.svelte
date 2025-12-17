@@ -8,26 +8,27 @@
 </script>
 
 <PageHeader>
-  <h1>Creating products that expose the absurdity of digital life. Cultural mirrors for the modern internet.</h1>
-  <section class="flex max-w-xl flex-col gap-12">
-    <p>
-      This studio has existed for {daysSince} days and shipped 5 projects. With 3 more in the dry dock waiting to be deployed.
-    </p>
-    <p>Combined they’ve garnered well over 500k impressions. Impressive.</p>
-    <p>I couldn’t give a shit.</p>
+  <h1>I build tools that work. And make you question why you needed them.</h1>
+  <section class="flex max-w-xl flex-col gap-8">
+    <p>I've shipped 7 products in {daysSince} days.</p>
+    <p>Some solve actual problems. Others expose the absurdity of online culture. All of them work.</p>
+    <p>Pick one. It might make you uncomfortable.</p>
   </section>
 </PageHeader>
 
-<section class="flex max-w-2xl flex-col gap-24 2xl:mt-6">
-  <h2>projects</h2>
+<section class="flex flex-col gap-24 2xl:mt-6">
+  <h2>projects.</h2>
   <ProjectList />
-  <h2>writing</h2>
+  <h2>writing.</h2>
   <ArticleList />
 </section>
 
 <style>
   @reference "@styles/main.css";
+  h1 {
+    @apply text-4xl/12 md:text-6xl/tight lg:text-8xl/tight;
+  }
   h2 {
-    @apply text-5xl/18 md:text-7xl;
+    @apply text-4xl/18 md:text-6xl;
   }
 </style>

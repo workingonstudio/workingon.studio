@@ -1,8 +1,7 @@
 <script lang="ts">
   import PageHeader from "@components/partials/PageHeader.svelte";
-  import { onMount, onDestroy } from "svelte";
+  import { onMount } from "svelte";
   import { dayRate } from "../stores/dayRate";
-  import { get } from "svelte/store";
 
   let displayRate = 500;
   let timeInterval: ReturnType<typeof setInterval> | null = null;
@@ -38,57 +37,33 @@
   }
 
   onMount(() => {
-    const currentState = get(dayRate);
-    const oldBaseRate = dayRate.getBaseRate(currentState.visits);
-
-    // Increment visit count
-    dayRate.incrementVisit();
-
-    const newState = get(dayRate);
-    const newBaseRate = dayRate.getBaseRate(newState.visits);
-
-    // Animate to new base rate
-    animateRate(oldBaseRate, newBaseRate);
-
-    // After animation, start the time-based increment
     setTimeout(() => {
-      startTimeBasedIncrement(newBaseRate);
-    }, 800);
-  });
-
-  onDestroy(() => {
-    if (timeInterval !== null) {
-      clearInterval(timeInterval);
-    }
+      startTimeBasedIncrement(displayRate);
+    }, 500);
   });
 </script>
 
 <PageHeader>
   <!-- prettier-ignore -->
   <h1>
-    Hire me for design gigs. £<span class="tabular-nums">{displayRate.toFixed(2)}</span>/day*. I tell you what to do.
+    Want to work together? £<span class="tabular-nums">{displayRate.toFixed(2)}</span>/day*. I tell you what to do.
   </h1>
   <div class="flex max-w-xl flex-col gap-12">
+    <p>Take my advice or don't. Either way, I'm riding into the sunset with a sack of money.</p>
     <div class="flex flex-row gap-2">
       <p>&#42;</p>
       <p class="text-sm">
-        This rate increases every second you're here. If it takes too long for you to decide about how much you're
-        willing to pay me, you'll be a nightmare to work with.
+        This rate increases every second you're here. If it takes you too long to decide, you'll be a nightmare to work
+        with.
       </p>
     </div>
-    <p>
-      Whether you take my advice is entirely up to you. I'll have done my bit, riding into the sunset with a sack of
-      money.
-    </p>
   </div>
 </PageHeader>
 
 <section class="mb-10 max-w-2xl space-y-4 lg:mx-2 2xl:mt-5 2xl:w-5xl">
   <div class="flex flex-col gap-4">
     <div class="flex flex-col gap-6 lg:flex-row lg:items-center">
-      <span class="flex h-8 w-8 items-center">
-        <iconify-icon icon="carbon:mail-all" class="text-3xl text-gray-500"></iconify-icon>
-      </span>
+      <iconify-icon icon="carbon:mail-all" class="mt-0 size-8 text-3xl text-gray-500 md:mt-1"></iconify-icon>
       <div class="flex flex-row items-center gap-2">
         <a
           href="mailto:hello@workingon.studio?subject=Can%20I/We%20work%20with%20you%3F&"
@@ -115,7 +90,9 @@
       </div>
     </div>
     <p class="text-sm lg:ml-14">
-      If I don't reply within 7 days, assume it's a no, I'm on holiday, or dead. Whatever makes you feel better.
+      If I don't reply within 7 days, assume it's a no, I'm on holiday, or dead.
+      <br />
+      Whatever makes you feel better.
     </p>
   </div>
 </section>

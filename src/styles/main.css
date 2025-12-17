@@ -1,31 +1,33 @@
-/* Main Site Theme - Dark aesthetic with custom nudica fonts */
+/* Main Site Theme */
 @import "./base.css";
 
 @theme {
   /* Typography */
-  --font-nudicaMono: "nudica_monomedium", "Azeret Mono", ui-monospace, SFMono-Regular;
+  --font-satoshi: "Satoshi", sans-serif;
+  --font-inter: "Inter", sans-serif;
   --font-display: "nudicamedium", "Space Grotesk", ui-sans-serif, system-ui;
 
   /* Colors */
-  --color-primary: theme(colors.gray.100);
-  --color-body: theme(colors.gray.400);
-  --color-muted: theme(colors.gray.500);
-  --color-text: theme(colors.gray.100);
-  --color-text-body: theme(colors.gray.400);
-  --color-text-muted: theme(colors.gray.500);
-  --color-bg-main: theme(colors.gray.950);
+  --color-primary: theme(colors.stone.900);
+  --color-header: theme(colors.gray.900);
+  --color-body: theme(colors.stone.700);
+  --color-muted: theme(colors.stone.500);
+  --color-bg-main: theme(colors.orange.50);
+}
 
-  /* Effects */
-  --text-shadow-glow:
-    0 0 5px #f0b100, 0 0 15px #f0b100, 0 0 30px #f0b100, 0 0 60px rgba(255, 0, 0, 0.5);
-  --animate-flicker: flicker 3s infinite;
+.dark {
+  --color-primary: theme(colors.gray.100);
+  --color-header: theme(colors.gray.100);
+  --color-body: theme(colors.gray.300);
+  --color-muted: theme(colors.gray.400);
+  --color-bg-main: theme(colors.gray.950);
 }
 
 @layer base {
   body {
     background-color: var(--color-bg-main);
-    font-family: var(--font-nudicaMono);
-    color: var(--color-primary);
+    font-family: var(--font-inter);
+    color: var(--color-body);
     ::selection {
       background-color: var(--color-primary);
       color: var(--color-bg-main);
@@ -36,9 +38,9 @@
   h2,
   h3,
   h4 {
-    font-family: var(--font-display);
+    font-family: var(--font-satoshi);
     font-feature-settings: "ss01" 1;
-    @apply text-primary tracking-tight text-balance;
+    @apply text-header font-bold text-balance;
   }
 
   h1 {
@@ -50,55 +52,7 @@
   }
 
   p {
-    font-family: var(--font-nudicaMono);
-    @apply text-body lg:text-xl/relaxed;
+    @apply lg:text-xl/relaxed;
     @apply text-pretty;
-  }
-}
-
-/* Animations */
-@keyframes flicker {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  2% {
-    opacity: 0.9;
-  }
-  4% {
-    opacity: 0.9;
-  }
-  6% {
-    opacity: 0.1;
-  }
-  8% {
-    opacity: 1;
-  }
-  22% {
-    opacity: 0.8;
-  }
-  24% {
-    opacity: 1;
-  }
-  42% {
-    opacity: 0.9;
-  }
-  44% {
-    opacity: 0.6;
-  }
-  46% {
-    opacity: 1;
-  }
-  62% {
-    opacity: 0.7;
-  }
-  64% {
-    opacity: 1;
-  }
-  82% {
-    opacity: 0.4;
-  }
-  84% {
-    opacity: 1;
   }
 }
