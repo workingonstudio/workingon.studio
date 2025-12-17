@@ -5,7 +5,7 @@
     {
       icon: "lucide:ban",
       title: "No need to post to social media.",
-      description: "Get the mindless reactions you would get from posting from the comfort of your figma bubble.",
+      description: "Get the mindless reactions you would get from posting from the comfort of your Figma bubble.",
     },
     {
       icon: "lucide:message-circle-heart",
@@ -16,7 +16,7 @@
     {
       icon: "lucide:circle-check",
       title: "Generic low effort feedback.",
-      description: "You get it elsewhere. Now get it instantly. Nothing too clear. The “make it pop” of figma plugins.",
+      description: "You get it elsewhere. Now get it instantly. Nothing too clear. The “make it pop” of Figma plugins.",
     },
   ];
 </script>
@@ -25,7 +25,7 @@
   <div class="flex flex-col justify-between gap-12 md:flex-row">
     {#each features as { icon, title, description }, index}
       <div class="flex w-sm flex-col gap-3 md:w-full xl:w-sm">
-        <div class="relative flex flex-row items-center gap-3 md:flex-col md:items-start xl:flex-row xl:items-center">
+        <div class="relative flex flex-col gap-3">
           {#if index === 0}
             <Comment pos="bottom-10 left-8 md:-right-8" comment={{ time: "14 mins ago.", content: "Great copy!" }} />
           {/if}

@@ -17,7 +17,7 @@
     "name": "Sketch Today",
     "tagline": "A collection of modern Sketch resources.",
     "description": "Resources to get you started when making the inevitable switch to Sketch.",
-    "version": "1.0.0",
+    "version": "1.2.0",
     "status": "shipped",
     "tags": [{ "icon": "carbon:magic-wand", "text": "free" }],
     "link": "sketch-today"
@@ -27,7 +27,7 @@
     "name": "Glyph Palette",
     "tagline": "A modern icon plugin for Sketch.",
     "description": "Search and add icons from popular icon sets in Sketch.",
-    "version": "1.0.0",
+    "version": "1.1.1",
     "status": "shipped",
     "tags": [{ "icon": "carbon:magic-wand", "text": "free" }],
     "link": "glyph-palette"
@@ -36,7 +36,7 @@
     "projectIcon": "carbon:chat-bot",
     "name": "Good Boy",
     "tagline": "Get the praise that you crave",
-    "description": "A figma plugin that periodically adds comments of praise and validation.",
+    "description": "A Figma plugin that randomly comments low effort praise on your designs.",
     "version": "1.0.0",
     "status": "shipped",
     "tags": [{ "icon": "carbon:magic-wand", "text": "free" }],

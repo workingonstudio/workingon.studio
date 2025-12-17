@@ -48,7 +48,7 @@
 
 <div class="form">
   {#if !submitted}
-    <div class="flex flex-col gap-2">
+    <div class="flex flex-col gap-1">
       <h3>Try the Beta</h3>
       <p>Enter your email to get a download link for the lastest version.</p>
     </div>

@@ -16,7 +16,7 @@
         delay={1200}
       />
       <h1>Get the praise you crave.</h1>
-      <p class="text-xl">The only Figma plugin you need to feel like you’re doing a good job.</p>
+      <p class="text-xl">A Figma plugin that randomly comments low effort praise on your designs.</p>
     </div>
     <div class="relative flex flex-col place-self-center">
       <Comment
@@ -47,6 +47,6 @@
     }
   }
   .button {
-    @apply cursor-pointer place-self-center rounded-lg border border-stone-600 bg-stone-800 px-4 py-2 font-[Roboto] font-semibold tracking-wide text-stone-50 ring ring-stone-800 text-shadow-sm;
+    @apply cursor-pointer place-self-center rounded-lg border border-stone-600 bg-stone-800 px-4 py-2 font-[Roboto] font-semibold tracking-wide text-stone-50 ring ring-stone-800 transition-transform duration-300 text-shadow-sm hover:scale-105;
   }
 </style>
