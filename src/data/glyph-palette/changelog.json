@@ -37,5 +37,12 @@
     "title": "Adding additional iconsets",
     "description": "",
     "features": ["Lucide.", "Carbon.", "Heroicons.", "Now using native svg importing."]
+  },
+  {
+    "date": "",
+    "version": "1.1.1",
+    "title": "Hotfix.",
+    "description": "",
+    "features": ["Fixing insert bug issue."]
   }
 ]

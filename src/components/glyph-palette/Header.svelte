@@ -13,7 +13,7 @@
       <a href="#top" class="logo">glyph.palette</a>
       <div class="flex flex-row gap-3">
         <Badge label="Beta" type="highlight" />
-        <Badge label="v1.1.0" />
+        <Badge label="v1.1.1" />
       </div>
     </div>
     <nav>
