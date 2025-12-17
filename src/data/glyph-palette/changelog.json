@@ -33,16 +33,9 @@
   },
   {
     "date": "",
-    "version": "1.0.1",
-    "title": "Additional iconsets",
+    "version": "1.1.0",
+    "title": "Adding additional iconsets",
     "description": "",
-    "features": [
-      "Lucide.",
-      "Carbon.",
-      "Heroicons.",
-      "Now using native svg importing.",
-      "Now using native settings panel.",
-      "Caching iconsets."
-    ]
+    "features": ["Lucide.", "Carbon.", "Heroicons.", "Now using native svg importing."]
   }
 ]

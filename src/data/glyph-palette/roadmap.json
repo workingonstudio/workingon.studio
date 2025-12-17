@@ -28,18 +28,18 @@
     "current": false
   },
   {
-    "label": "Current",
+    "label": "15th Dec",
     "title": "Beta release - v1.0.0",
     "description": "",
     "features": ["full support for Material icons.", "large redesign.", "fixed sizes (16, 24, 32)"],
-    "current": true
+    "current": false
   },
   {
-    "label": "Next",
-    "title": "Additional icon sets.",
+    "label": "Current",
+    "title": "Added additional icon sets.",
     "description": "",
     "features": ["Lucide.", "Hero.", "Carbon."],
-    "current": false
+    "current": true
   },
   {
     "label": "Future",
@@ -50,7 +50,7 @@
   },
   {
     "label": "Future",
-    "title": "Insert as Symbol",
+    "title": "Insert as Symbol.",
     "description": "",
     "features": ["add icons as symbols.", "naming and prefixing."],
     "current": false

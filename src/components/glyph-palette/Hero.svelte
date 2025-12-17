@@ -12,7 +12,7 @@
           Bring 100’s of modern icon* sets directly to into your .sketch files, with full control over size, stroke, and
           color.
         </p>
-        <small>* it's just Material icons for now.</small>
+        <small>* currently supporting Material, Lucide, Hero, and Carbon.</small>
       </div>
       <div class="hidden lg:flex">
         <Form emailId="desktop" />
