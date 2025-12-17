@@ -1,10 +1,10 @@
 {
   "itemName": "Glyph Palette",
-  "versionID": "1.0.0",
-  "downloadURL": "https://workingon.studio/glyph-palette/downloads/glyph-palette-v1.0.0.sketchplugin.zip",
-  "downloadFileSize": 108539,
-  "creationDate": "Sat, 13 Dec 2025 20:51:51 +0000",
-  "description": "First big update: Includes all styles for Material and set insert sizes.",
+  "versionID": "1.1.0",
+  "downloadURL": "https://workingon.studio/glyph-palette/downloads/glyph-palette-v1.1.0.sketchplugin.zip",
+  "size": 242991,
+  "creationDate": "Sat, 17 Dec 2025 10:05:51 +0000",
+  "description": "Adding Lucide, Hero and Carbon icon sets.",
   "minimumSketchVersion": "3.0",
   "homepage": "https://glyphpalette.com"
 }

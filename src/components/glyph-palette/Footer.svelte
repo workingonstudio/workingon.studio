@@ -31,10 +31,10 @@
         <h4>Changelog</h4>
       </div>
       <ul>
-        <li>Initial alpha release.</li>
-        <li>Browse and insert Material Symbols icons.</li>
-        <li>Search functionality with instant filtering.</li>
-        <li>Virtual scrolling for performance.</li>
+        <li>Adding additional iconsets.</li>
+        <li>Lucide, Hero, Carbon.</li>
+        <li>Using native svg import.</li>
+        <li>Caching iconsets.</li>
       </ul>
     </div>
     <div class="flex flex-1 flex-col gap-6">
