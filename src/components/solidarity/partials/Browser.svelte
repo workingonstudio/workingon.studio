@@ -62,9 +62,9 @@
       </div>
     </div>
     <div
-      class="flex h-full flex-row gap-3 overflow-clip rounded-b-xl border border-t-0 border-gray-300 bg-stone-50 px-6 py-3"
+      class="flex h-full flex-col gap-3 overflow-clip rounded-b-xl border border-t-0 border-gray-300 bg-stone-50 px-6 py-3 md:flex-row"
     >
-      <div class="flex w-1/4 flex-col gap-3">
+      <div class="hidden w-full flex-col gap-3 lg:flex lg:w-1/4">
         <div class="card flex flex-col gap-2">
           <Avatar ring={true} />
           <div class="flex flex-col">
@@ -87,7 +87,7 @@
           </div>
         </div>
       </div>
-      <div class="flex w-2/4 flex-col gap-3">
+      <div class="flex w-full flex-col gap-3 lg:w-2/4">
         {#each feed as { img, name, title, post }}
           <div class="card flex flex-col gap-3">
             <div class="flex flex-row items-center gap-3">
@@ -101,7 +101,7 @@
           </div>
         {/each}
       </div>
-      <div class="flex w-1/4 flex-col gap-3">
+      <div class="w-full flex-col gap-3 sm:hidden lg:flex lg:w-1/4">
         {#each sidebar as { img, name, title }}
           <div class="card">
             <div class="flex flex-row items-center gap-3">

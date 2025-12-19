@@ -9,7 +9,7 @@
       <a href="#top" class="group text-header flex flex-row items-center gap-2">
         <iconify-icon icon="carbon:boolean" class="group-spin-drop text-2xl"></iconify-icon>
         <!-- prettier-ignore -->
-        <span class="flex-inline font-mulish text-base font-extrabold uppercase tracking-[1%]">
+        <span class="flex-inline font-mulish text-sm font-extrabold uppercase tracking-[1%]">
           Solidarity
         </span>
       </a>

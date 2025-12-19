@@ -10,10 +10,12 @@
     <a
       href="https://chromewebstore.google.com/detail/ahahliplongfboaikbajdedefpoifjeb"
       target="_blank"
-      class="btn hidden md:flex"
+      class="btn primary flex"
     >
-      Add to Chrome
+      <span class="hidden md:flex">Add to Chrome</span>
+      <span class="flex md:hidden">View on the Chrome Store</span>
     </a>
+    <a href="#more" class="btn secondary">More info</a>
   </div>
 </section>
 
