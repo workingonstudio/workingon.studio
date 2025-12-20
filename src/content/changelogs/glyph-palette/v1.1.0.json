@@ -5,13 +5,8 @@
     "minor": 1,
     "patch": 0
   },
-  "title": "",
+  "title": "Adding additional iconsets.",
   "description": "",
   "date": "2025-12-17T00:00:00.000Z",
-  "items": [
-    "adding additional iconsets.",
-    "Lucide, Hero, Carbon.",
-    "using native svg import.",
-    "caching iconsets."
-  ]
+  "items": ["Lucide, Hero, Carbon.", "using native svg import.", "caching iconsets."]
 }

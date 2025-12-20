@@ -2,11 +2,11 @@
   "product": "glyph-palette",
   "version": {
     "major": 0,
-    "minor": 8,
-    "patch": 0
+    "minor": 5,
+    "patch": 1
   },
   "title": "",
   "description": "",
   "date": "2025-11-27T00:00:00.000Z",
-  "items": ["fixing update notification", "switching to appcast.json"]
+  "items": ["fixing update notification.", "switching to appcast.json."]
 }
