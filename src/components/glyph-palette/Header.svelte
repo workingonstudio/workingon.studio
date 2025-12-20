@@ -23,6 +23,7 @@
             href="/glyph-palette/downloads/glyph-palette-v1.1.1.sketchplugin.zip"
             download
             class="highlight cursor-pointer rounded-lg px-3 py-1.5 normal-case hover:bg-blue-700 hover:no-underline!"
+            data-umami-event="clicked-download"
           >
             Download v1.1.1
           </a>
