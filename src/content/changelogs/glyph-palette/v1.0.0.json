@@ -6,7 +6,5 @@
     "patch": 0
   },
   "date": "2025-11-17T00:00:00.000Z",
-  "status": "future",
-  "icon": "material-symbols:event-upcoming-rounded",
   "items": ["insert as symbol.", "send to symbol page.", "prefix symbol name."]
 }

@@ -14,16 +14,26 @@
         </p>
         <small>* currently supporting Material, Lucide, Hero, and Carbon.</small>
       </div>
-      <div class="hidden lg:flex">
-        <Form emailId="desktop" />
+      <div class="flex flex-row gap-6">
+        <a
+          href="/glyph-palette/downloads/glyph-palette-v1.1.1.sketchplugin.zip"
+          download
+          class="highlight flex flex-row items-center gap-3 px-4 py-3 text-sm hover:bg-blue-700"
+        >
+          <iconify-icon icon="material-symbols:download-rounded" class="size-5 text-xl"></iconify-icon>
+          Download v1.1.1
+        </a>
+        <a
+          href="/projects/glyph-palette/change-log"
+          class="flex flex-row items-center gap-3 rounded-xl px-4 py-3 text-sm hover:underline"
+        >
+          Changelog
+        </a>
       </div>
     </section>
   </div>
   <div class="flex flex-row gap-12">
     <Plugin />
-  </div>
-  <div class="flex lg:hidden">
-    <Form emailId="mobile" />
   </div>
 </div>
 
@@ -31,5 +41,10 @@
   @reference "@styles/glyph-palette.css";
   small {
     @apply text-sm text-gray-500;
+  }
+  .default {
+    &:hover {
+      @apply border-transparent bg-transparent inset-ring-transparent;
+    }
   }
 </style>

@@ -1,0 +1,15 @@
+{
+  "product": "glyph-palette",
+  "version": {
+    "major": 1,
+    "minor": 1,
+    "patch": 0
+  },
+  "date": "2025-11-17T00:00:00.000Z",
+  "items": [
+    "adding additional iconsets.",
+    "Lucide, Hero, Carbon.",
+    "using native svg import.",
+    "caching iconsets."
+  ]
+}
