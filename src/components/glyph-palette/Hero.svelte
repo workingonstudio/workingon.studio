@@ -9,10 +9,7 @@
       <div class="hero flex flex-col items-center gap-6 text-center md:w-2/3 lg:w-full lg:items-start lg:text-left">
         <Icon icon="diamond-outline" />
         <h1>A modern icon plugin for Sketch.</h1>
-        <p class="w-full text-xl lg:w-xl">
-          Bring 100’s of modern icon* sets directly to into your .sketch files, with full control over size, stroke, and
-          color.
-        </p>
+        <p class="w-full text-xl lg:w-xl">Bring 1000’s of modern icons* directly to into your .sketch files.</p>
         <small>* currently supporting Material, Lucide, Hero, and Carbon.</small>
       </div>
       <div class="flex flex-row gap-6">

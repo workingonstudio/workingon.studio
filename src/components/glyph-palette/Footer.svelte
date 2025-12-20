@@ -85,7 +85,7 @@
     .buttons {
       a,
       button {
-        @apply items-center gap-2 rounded-xl px-2 py-1 text-sm hover:bg-blue-700;
+        @apply items-center gap-2 rounded-lg px-2 py-1 text-sm hover:bg-blue-700;
       }
     }
     @apply py-12;
