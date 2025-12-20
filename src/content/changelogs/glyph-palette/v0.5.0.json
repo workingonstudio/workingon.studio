@@ -5,6 +5,8 @@
     "minor": 5,
     "patch": 2
   },
-  "date": "2025-11-17T00:00:00.000Z",
+  "title": "",
+  "description": "",
+  "date": "2025-11-26T00:00:00.000Z",
   "items": ["support for Material icons (regular, 24 x 24).", "insert as svg."]
 }
