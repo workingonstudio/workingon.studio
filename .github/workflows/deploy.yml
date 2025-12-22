@@ -33,6 +33,15 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
+      # NEW: Cache the timeline file for incremental builds
+      - name: Cache timeline data
+        uses: actions/cache@v4
+        with:
+          path: src/data/timeline-github.json
+          key: timeline-${{ github.sha }}
+          restore-keys: |
+            timeline-
+
       - name: Install dependencies
         run: npm ci
 
