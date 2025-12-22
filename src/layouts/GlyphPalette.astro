@@ -1,6 +1,9 @@
 ---
 import "../styles/glyph-palette.css";
 
+import Header from "@components/glyph-palette/Header.svelte";
+import Footer from "@components/glyph-palette/Footer.svelte";
+
 import { ClientRouter } from "astro:transitions";
 
 import Analytics from "./partials/Analytics.astro";
@@ -87,6 +90,8 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
     <Analytics productName="Glyph Palette" />
   </head>
   <body id="top">
+    <Header />
     <slot />
+    <Footer />
   </body>
 </html>

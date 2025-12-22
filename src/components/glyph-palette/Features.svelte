@@ -3,7 +3,7 @@
 </script>
 
 <div
-  class="flex w-full flex-col items-center gap-24 md:grid md:w-5/6 md:grid-cols-2 md:gap-20 lg:w-full lg:grid-cols-3"
+  class="flex w-full flex-col items-center gap-24 md:mx-auto md:grid md:w-5/6 md:grid-cols-2 md:gap-20 lg:w-full lg:grid-cols-3"
 >
   <div class="feature">
     <Icon icon="manage-search-rounded" />
