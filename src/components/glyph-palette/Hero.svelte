@@ -19,7 +19,6 @@
           class="highlight flex flex-row items-center gap-3 px-4 py-3 text-sm hover:bg-blue-700"
           data-umami-event="clicked-download"
         >
-          <iconify-icon icon="material-symbols:download-rounded" class="size-5 text-xl"></iconify-icon>
           Download v1.1.1
         </a>
         <a
