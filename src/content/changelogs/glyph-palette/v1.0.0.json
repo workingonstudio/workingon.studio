@@ -5,8 +5,8 @@
     "minor": 0,
     "patch": 0
   },
-  "date": "2025-11-17T00:00:00.000Z",
-  "status": "future",
-  "icon": "material-symbols:event-upcoming-rounded",
-  "items": ["insert as symbol.", "send to symbol page.", "prefix symbol name."]
+  "title": "Beta release.",
+  "description": "",
+  "date": "2025-12-15T00:00:00.000Z",
+  "items": ["large redesign.", "full support for Material icons.", "fixed sizes (16, 24, 32)."]
 }

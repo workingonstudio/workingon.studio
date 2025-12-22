@@ -1,16 +1,11 @@
 <script lang="ts">
   import Badge from "./Badge.svelte";
-  function handleClick() {
-    const isMobile = window.innerWidth < 1024;
-    const id = isMobile ? "mobile" : "desktop";
-    document.getElementById(id)?.focus();
-  }
 </script>
 
 <div class="bg-bg/90 sticky top-0 z-10 border-b-1 border-stone-100">
   <header id="top" class="mx-auto flex flex-row items-center justify-between px-4 md:max-w-6xl">
     <div class="flex flex-row items-center gap-6">
-      <a href="#top" class="logo">glyph.palette</a>
+      <a href="/projects/glyph-palette/" class="logo">glyph.palette</a>
       <div class="flex flex-row gap-3">
         <Badge label="Beta" type="highlight" />
         <Badge label="v1.1.1" />
@@ -24,9 +19,14 @@
           <iconify-icon icon="material-symbols:open-in-new" class="size-3"></iconify-icon>
         </li>
         <li>
-          <button on:click={handleClick} class="highlight cursor-pointer rounded-lg px-3 py-1.5 hover:bg-blue-700">
-            Try the Beta
-          </button>
+          <a
+            href="/glyph-palette/downloads/glyph-palette-v1.1.1.sketchplugin.zip"
+            download
+            class="highlight cursor-pointer rounded-lg px-3 py-1.5 normal-case hover:bg-blue-700 hover:no-underline!"
+            data-umami-event="clicked-download"
+          >
+            Download v1.1.1
+          </a>
         </li>
       </ul>
     </nav>

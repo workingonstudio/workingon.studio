@@ -7,14 +7,9 @@
   export let productChangelogs;
 </script>
 
-<div class="flex flex-col gap-36">
-  <Hero />
-  <div class="flex flex-col items-center">
-    <Features />
-  </div>
-  <Roadmap />
-  <Footer />
-</div>
+<Hero />
+<Features />
+<Roadmap />
 
 <style>
   @reference "@styles/glyph-palette.css";

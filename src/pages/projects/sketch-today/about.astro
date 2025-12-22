@@ -10,30 +10,22 @@ let icon: string = frontmatter.icon;
 ---
 
 <SketchToday title="Sketch Today - About">
-  <div class="flex flex-col gap-16 py-18">
-    <div class="flex flex-col">
+  <div class="my-12 flex flex-col rounded-2xl border border-stone-200 bg-white p-12">
+    <div class="flex flex-col gap-8 lg:w-2xl">
       <ContentHeader {subtitle} header={title} {icon} />
+      <div class="content">
+        <Content />
+      </div>
     </div>
-  </div>
-  <div class="flex w-full flex-col gap-6 md:w-2xl">
-    <section class="flex flex-col gap-6">
-      <Content />
-    </section>
   </div>
 </SketchToday>
 
 <style>
   @reference "@styles/sketch-today.css";
-  section {
-    @apply text-pretty;
-    a {
-      @apply underline hover:no-underline;
-    }
-    h3 {
-      @apply text-xl font-bold;
-    }
+  .content {
+    @apply flex flex-col gap-8;
   }
-  .note {
-    @apply rounded-lg border border-blue-100 bg-blue-50 p-4 text-sm text-blue-950;
+  .content :global(a) {
+    @apply text-header underline;
   }
 </style>

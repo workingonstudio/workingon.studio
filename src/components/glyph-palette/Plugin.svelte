@@ -9,7 +9,7 @@
     "material-symbols:lock-outline",
     "material-symbols:error-outline",
     "material-symbols:visibility-off-outline",
-    "material-symbols:verified-outline",
+    "material-symbols:diamond-outline",
     "material-symbols:task-alt",
     "material-symbols:event-outline",
     "material-symbols:bookmark-outline",
