@@ -1,0 +1,22 @@
+---
+import GlyphPalette from "@layouts/GlyphPalette.astro";
+import Changelog from "@components/glyph-palette/Changelog.svelte";
+
+import { getCollection } from "astro:content";
+
+const allChangelogs = await getCollection("changelogs");
+const productChangelogs = allChangelogs
+  .filter((entry) => entry.data.product === "glyph-palette")
+  .sort((a, b) => {
+    const aVer = a.data.version;
+    const bVer = b.data.version;
+    return aVer.major - bVer.major || aVer.minor - bVer.minor || aVer.patch - bVer.patch;
+  })
+  .map((entry) => entry.data);
+---
+
+<GlyphPalette title="Glyph Palette - A modern icon plugin for Sketch.">
+  <div class="mx-auto flex max-w-full flex-col px-4 md:pt-0 lg:max-w-6xl">
+    <Changelog {productChangelogs} client:idle />
+  </div>
+</GlyphPalette>

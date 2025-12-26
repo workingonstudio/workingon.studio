@@ -13,6 +13,16 @@
     "link": "dad-reply"
   },
   {
+    "projectIcon": "carbon:chat-bot",
+    "name": "Good Boy",
+    "tagline": "Get the praise that you crave",
+    "description": "A Figma plugin that randomly comments low effort praise on your designs.",
+    "version": "1.0.0",
+    "status": "shipped",
+    "tags": [{ "icon": "carbon:magic-wand", "text": "free" }],
+    "link": "good-boy"
+  },
+  {
     "projectIcon": "carbon:folders",
     "name": "Sketch Today",
     "tagline": "A collection of modern Sketch resources.",
@@ -32,16 +42,7 @@
     "tags": [{ "icon": "carbon:magic-wand", "text": "free" }],
     "link": "glyph-palette"
   },
-  {
-    "projectIcon": "carbon:chat-bot",
-    "name": "Good Boy",
-    "tagline": "Get the praise that you crave",
-    "description": "A Figma plugin that randomly comments low effort praise on your designs.",
-    "version": "1.0.0",
-    "status": "shipped",
-    "tags": [{ "icon": "carbon:magic-wand", "text": "free" }],
-    "link": "good-boy"
-  },
+
   {
     "projectIcon": "carbon:circle-dash",
     "name": "Solidarity",
@@ -70,33 +71,6 @@
     "version": "5.0.0",
     "status": "shipped",
     "tags": [{ "icon": "carbon:magic-wand", "text": "free" }],
-    "link": "/"
-  },
-  {
-    "name": "Hidden Current",
-    "description": "It's not about how much AI is costing you, but how much it's costing us.",
-    "version": 0.5,
-    "status": "draft",
-    "tags": [{ "icon": "carbon:magic-wand", "text": "free" }],
-    "link": "/"
-  },
-  {
-    "name": "Design Dojo",
-    "description": "If you've ever said you were a ninja, it's time to prove it in the dojo.",
-    "version": 0.1,
-    "status": "draft",
-    "tags": [
-      { "icon": "carbon:currency-dollar", "text": "paid" },
-      { "icon": "carbon:magic-wand", "text": "free" }
-    ],
-    "link": "/"
-  },
-  {
-    "name": "Only 98",
-    "description": "How much will you spend to be truly unique? Sustainable uniqueness vs wasteful exclusivity.",
-    "version": 0.1,
-    "status": "draft",
-    "tags": [{ "icon": "carbon:currency-dollar", "text": "paid" }],
     "link": "/"
   }
 ]

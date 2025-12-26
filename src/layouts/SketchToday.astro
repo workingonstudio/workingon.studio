@@ -25,7 +25,7 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
 <html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
-    <Font cssVariable="--font-montserrat" preload />
+    <Font cssVariable="--font-montserrat" preload={[{ weight: 400 }, { weight: 700 }]} />
     <ClientRouter />
     <AstroSeo
       title={title}
@@ -95,8 +95,7 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
       is:inline
       type="module"
       src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    >
-    </script>
+    ></script>
 
     <meta name="generator" content={Astro.generator} />
 

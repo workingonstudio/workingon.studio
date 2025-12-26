@@ -23,7 +23,9 @@
   }
 </script>
 
-<footer class="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
+<footer
+  class="mx-auto mt-36 flex flex-col items-start justify-between gap-6 px-4 md:max-w-6xl md:flex-row md:items-center"
+>
   <section class="flex w-full flex-col gap-6 rounded-2xl bg-stone-100 p-6 md:w-4/5 md:flex-row">
     <div class="flex flex-1 flex-col gap-6">
       <div class="flex flex-row items-center gap-4">
@@ -83,7 +85,7 @@
     .buttons {
       a,
       button {
-        @apply items-center gap-2 rounded-xl px-2 py-1 text-sm hover:bg-blue-700;
+        @apply items-center gap-2 rounded-lg px-2 py-1 text-sm hover:bg-blue-700;
       }
     }
     @apply py-12;

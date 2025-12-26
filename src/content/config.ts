@@ -9,9 +9,9 @@ const changelogCollection = defineCollection({
       minor: z.number(),
       patch: z.number(),
     }),
+    title: z.string(),
+    description: z.string(),
     date: z.coerce.date(),
-    status: z.enum(["current", "next", "future"]),
-    icon: z.string(),
     items: z.array(z.string()),
   }),
 });

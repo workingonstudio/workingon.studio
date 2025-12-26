@@ -1,0 +1,12 @@
+{
+  "product": "glyph-palette",
+  "version": {
+    "major": 1,
+    "minor": 1,
+    "patch": 1
+  },
+  "title": "",
+  "description": "",
+  "date": "2025-12-17T00:00:00.000Z",
+  "items": ["fixed icon insert issue."]
+}
