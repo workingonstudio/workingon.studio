@@ -1,0 +1,12 @@
+{
+  "product": "glyph-palette",
+  "version": {
+    "major": 1,
+    "minor": 2,
+    "patch": 0
+  },
+  "title": "",
+  "description": "",
+  "date": "2025-12-26T00:00:00.000Z",
+  "items": ["Re-arranged layout", "Added persistent settings."]
+}

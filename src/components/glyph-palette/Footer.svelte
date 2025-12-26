@@ -33,10 +33,8 @@
         <h4>Changelog</h4>
       </div>
       <ul>
-        <li>Adding additional iconsets.</li>
-        <li>Lucide, Hero, Carbon.</li>
-        <li>Using native svg import.</li>
-        <li>Caching iconsets.</li>
+        <li>Re-arranged layout.</li>
+        <li>Added persistent settings.</li>
       </ul>
     </div>
     <div class="flex flex-1 flex-col gap-6">

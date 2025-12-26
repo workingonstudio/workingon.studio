@@ -1,10 +1,10 @@
 {
   "itemName": "Glyph Palette",
-  "versionID": "1.1.1",
-  "downloadURL": "https://workingon.studio/glyph-palette/downloads/glyph-palette-v1.1.1.sketchplugin.zip",
+  "versionID": "1.2.0",
+  "downloadURL": "https://workingon.studio/glyph-palette/downloads/glyph-palette-v1.2.0.sketchplugin.zip",
   "size": 111420,
-  "creationDate": "Sat, 17 Dec 2025 10:57:51 +0000",
-  "description": "Fixing insert bug.",
+  "creationDate": "Fri, 26 Dec 2025 19:17:51 +0000",
+  "description": "New layout. Persistent settings.",
   "minimumSketchVersion": "3.0",
   "homepage": "https://glyphpalette.com"
 }
