@@ -35,6 +35,7 @@
       <ul>
         <li>Re-arranged layout.</li>
         <li>Added persistent settings.</li>
+        <li>Adding shortcut to open (ctrl+shift+g)</li>
       </ul>
     </div>
     <div class="flex flex-1 flex-col gap-6">
