@@ -17,7 +17,7 @@
     </div>
     <nav>
       <ul class="flex flex-row items-center gap-6 text-sm">
-        <li><a href="">Why?</a></li>
+        <li><a href="">How it works</a></li>
         <li><a href="">Add to Chrome</a></li>
       </ul>
     </nav>
