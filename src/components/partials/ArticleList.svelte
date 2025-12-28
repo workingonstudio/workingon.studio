@@ -32,16 +32,15 @@
 
 <ul class="articles">
   {#each articles as { title, subtitle, excerpt, href }}
-    <li class="group flex flex-col gap-4 md:flex-row">
-      <iconify-icon
-        icon="carbon:blog"
-        class="text-muted group-hover:text-primary mt-0 size-8 text-2xl transition-colors duration-300 md:mt-1.5"
-      ></iconify-icon>
+    <li class="group flex flex-col items-start gap-4">
+      <div class="bg-surface flex flex-row rounded-xl p-2">
+        <iconify-icon icon="carbon:blog" class="text-primary size-6 text-2xl"></iconify-icon>
+      </div>
       <a {href}>
         <h2>{title}</h2>
-        <div class="flex flex-col gap-0.5">
-          <p class="font-satoshi text-xl">{subtitle}</p>
-          <p class="text-muted text-base">{excerpt}</p>
+        <div class="flex flex-col gap-4">
+          <p class="text-muted text-base italic">{subtitle}</p>
+          <p>{excerpt}</p>
         </div>
       </a>
     </li>
@@ -51,7 +50,7 @@
 <style>
   @reference "@styles/main.css";
   .articles {
-    @apply flex flex-col gap-12;
+    @apply flex w-full flex-col gap-12 lg:max-w-1/2;
     a {
       @apply flex flex-col gap-2 transition-opacity duration-200;
       &:hover {
