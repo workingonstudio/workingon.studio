@@ -45,7 +45,7 @@
 
 <section class="flex flex-col items-center justify-center gap-8">
   <Toggle />
-  <div class="h-96 rounded-xl shadow-lg">
+  <div class="rounded-xl shadow-lg">
     <div
       class="header flex flex-row items-center justify-between rounded-t-xl border border-gray-300 bg-white px-6 py-4"
     >
@@ -62,7 +62,7 @@
       </div>
     </div>
     <div
-      class="flex h-full flex-col gap-3 overflow-clip rounded-b-xl border border-t-0 border-gray-300 bg-stone-50 px-6 py-3 md:flex-row"
+      class="flex h-full flex-col gap-3 overflow-clip rounded-b-xl border border-t-0 border-gray-300 bg-stone-50 px-6 pt-3 pb-6 md:flex-row"
     >
       <div class="hidden w-full flex-col gap-3 lg:flex lg:w-1/4">
         <div class="card flex flex-col gap-2">
@@ -101,7 +101,7 @@
           </div>
         {/each}
       </div>
-      <div class="w-full flex-col gap-3 sm:hidden lg:flex lg:w-1/4">
+      <div class="hidden w-full flex-col gap-3 lg:flex lg:w-1/4">
         {#each sidebar as { img, name, title }}
           <div class="card">
             <div class="flex flex-row items-center gap-3">

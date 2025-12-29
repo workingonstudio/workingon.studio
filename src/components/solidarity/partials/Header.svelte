@@ -3,7 +3,7 @@
   import Toggle from "@components/solidarity/partials/Toggle.svelte";
 </script>
 
-<div class="header sticky top-0 z-30 my-0 flex flex-1 border-stone-50 bg-stone-50/95 py-6 lg:my-20">
+<div class="header sticky top-0 z-30 my-20 flex flex-1 border-stone-50 bg-stone-50/95 py-6">
   <header class="mx-4 flex w-full flex-row items-center justify-between xl:mx-20">
     <div class="flex flex-row items-center gap-2 md:gap-6">
       <a href="#top" class="group text-header flex flex-row items-center gap-2">

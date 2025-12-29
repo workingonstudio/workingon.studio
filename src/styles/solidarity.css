@@ -48,16 +48,16 @@
   }
 
   h2 {
-    @apply text-xl md:text-2xl;
+    @apply text-4xl/12;
   }
 
   h3 {
-    @apply text-lg;
+    @apply text-2xl;
   }
 
   p {
     color: var(--color-body);
-    @apply text-base leading-relaxed;
+    @apply text-base leading-relaxed text-pretty;
   }
 
   small {
