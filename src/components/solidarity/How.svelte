@@ -5,7 +5,7 @@
   <div class="flex w-full flex-col gap-12 lg:w-lg">
     <div class="flex flex-col gap-3 text-center">
       <h2>How it works.</h2>
-      <p class="text-xl">A LinkedIn extension that makes you feel less shit about looking for work.</p>
+      <p>A LinkedIn extension that makes you feel less shit about looking for work.</p>
     </div>
     <ul>
       <li>

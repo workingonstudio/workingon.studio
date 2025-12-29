@@ -4,8 +4,9 @@ import "@styles/solidarity.css";
 import Solidarity from "@layouts/Solidarity.astro";
 import Header from "@components/solidarity/partials/Header.svelte";
 import Hero from "@components/solidarity/Hero.svelte";
-import How from "@components/solidarity/partials/How.svelte";
 import Browser from "@components/solidarity/partials/Browser.svelte";
+import How from "@components/solidarity/How.svelte";
+import Why from "@components/solidarity/Why.svelte";
 ---
 
 <Solidarity title="Solidarity - No one stands alone when everyone’s #opentowork">
@@ -15,6 +16,7 @@ import Browser from "@components/solidarity/partials/Browser.svelte";
       <Hero />
       <Browser client:load />
       <How />
+      <Why />
     </div>
   </div>
 </Solidarity>

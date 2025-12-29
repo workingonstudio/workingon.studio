@@ -49,7 +49,12 @@
     <div
       class="header flex flex-row items-center justify-between rounded-t-xl border border-gray-300 bg-white px-6 py-4"
     >
-      <iconify-icon icon="fa7-brands:linkedin" class="text-muted size-6 text-3xl"></iconify-icon>
+      <div class="flex flex-row gap-4">
+        <iconify-icon icon="fa7-brands:linkedin" class="text-muted text-3xl"></iconify-icon>
+        <div class="flex w-64 flex-row items-center rounded-full border border-gray-300 px-2">
+          <iconify-icon icon="material-symbols:search-rounded" class="text-xs"></iconify-icon>
+        </div>
+      </div>
       <div class="flex flex-row gap-12">
         <div class="text-muted flex flex-row items-center gap-6">
           <iconify-icon icon="material-symbols:home" class="size-4 text-base"></iconify-icon>
