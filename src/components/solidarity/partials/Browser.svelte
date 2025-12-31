@@ -45,17 +45,17 @@
 
 <section class="flex flex-col items-center justify-center gap-8">
   <Toggle />
-  <div class="rounded-xl shadow-lg">
+  <div class="w-full rounded-xl shadow-lg">
     <div
       class="header flex flex-row items-center justify-between rounded-t-xl border border-gray-300 bg-white px-6 py-4"
     >
       <div class="flex flex-row gap-4">
         <iconify-icon icon="fa7-brands:linkedin" class="text-muted text-3xl"></iconify-icon>
-        <div class="flex w-64 flex-row items-center rounded-full border border-gray-300 px-2">
+        <div class="hidden w-64 flex-row items-center rounded-full border border-gray-300 px-2 md:flex">
           <iconify-icon icon="material-symbols:search-rounded" class="text-xs"></iconify-icon>
         </div>
       </div>
-      <div class="flex flex-row gap-12">
+      <div class="flex flex-row gap-6 md:gap-12">
         <div class="text-muted flex flex-row items-center gap-6">
           <iconify-icon icon="material-symbols:home" class="size-4 text-base"></iconify-icon>
           <iconify-icon icon="material-symbols:group" class="size-4 text-base"></iconify-icon>
