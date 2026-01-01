@@ -7,7 +7,7 @@
       <h2>Why use this?</h2>
       <p>To help soften the idea of looking for work.</p>
     </div>
-    <div class="flex flex-col gap-6 rounded-2xl border border-gray-300 bg-white p-12">
+    <div class="flex flex-col gap-6 rounded-2xl border border-gray-300 bg-white p-6 md:p-12">
       <h3>It starts with the call...</h3>
       <p>
         So you’ve just come off the call with HR and the person running your department. Closed the Zoom/Hangout/Teams
