@@ -26,7 +26,7 @@
 <style>
   @reference "@styles/solidarity.css";
   ul {
-    @apply flex items-center gap-3 md:flex-row;
+    @apply flex flex-col items-center gap-3 md:flex-row;
     li {
       @apply text-muted flex flex-row items-center gap-2 text-xs;
     }

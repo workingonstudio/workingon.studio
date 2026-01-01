@@ -13,7 +13,7 @@
       about looking for work.
     </p>
   </div>
-  <div class="flex flex-row items-start justify-center gap-6">
+  <div class="flex flex-col items-center justify-center gap-6 md:flex-row md:items-start">
     <a
       href="https://chromewebstore.google.com/detail/ahahliplongfboaikbajdedefpoifjeb"
       target="_blank"
