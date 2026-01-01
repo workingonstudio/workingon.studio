@@ -91,20 +91,11 @@ export default defineConfig({
       // Solidarity
       {
         provider: fontProviders.fontshare(),
-        name: "Lora",
-        cssVariable: "--font-lora",
-        display: "swap",
-        weights: [400, 700],
-        styles: ['normal', 'italic'],
-        subsets: ["latin"]
-      },
-      {
-        provider: fontProviders.bunny(),
-        name: "Mulish",
-        cssVariable: "--font-mulish",
+        name: "Zodiak",
+        cssVariable: "--font-zodiak",
         display: "swap",
         weights: [700],
-        subsets: ["latin"]
+        styles: ['normal'],
       },      
 
       // Glyph Palette
