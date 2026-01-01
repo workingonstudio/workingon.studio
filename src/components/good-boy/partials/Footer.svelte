@@ -29,7 +29,7 @@
     <li class="flex flex-row items-center gap-2">
       <iconify-icon icon="lucide:copyright" class="size-4 text-base"></iconify-icon>
       <div class="flex flex-row gap-1">
-        <a href="/">Copywrite 2025</a>
+        <a href="/">Copywrite 2026</a>
       </div>
     </li>
   </ul>

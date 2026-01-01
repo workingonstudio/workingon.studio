@@ -22,7 +22,7 @@
       <span class="hidden md:flex">Add to Chrome</span>
       <span class="flex md:hidden">View on the Chrome Store</span>
     </a>
-    <a href="#more" class="btn secondary">How it works</a>
+    <a href="#how" class="btn secondary">How it works</a>
   </div>
 </section>
 

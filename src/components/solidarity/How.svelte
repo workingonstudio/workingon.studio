@@ -1,9 +1,8 @@
 <script lang="ts">
-  import { builtinModules } from "module";
   import Avatar from "./partials/Avatar.svelte";
 </script>
 
-<section class="flex flex-col items-center">
+<section id="how" class="flex scroll-mt-20 flex-col items-center">
   <div class="flex w-full flex-col gap-12 lg:w-4xl">
     <div class="flex flex-col gap-3 text-center">
       <h2>How it works.</h2>

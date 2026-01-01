@@ -1,7 +1,7 @@
 <script lang="ts">
 </script>
 
-<section class="flex flex-col items-center">
+<section id="why" class="flex scroll-mt-20 flex-col items-center">
   <div class="flex w-full flex-col gap-12 lg:w-2xl">
     <div class="flex flex-col gap-3 text-center">
       <h2>Why use this?</h2>

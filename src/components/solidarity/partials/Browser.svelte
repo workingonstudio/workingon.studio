@@ -45,7 +45,7 @@
 
 <section class="flex flex-col items-center justify-center gap-8">
   <Toggle />
-  <div class="w-full rounded-xl shadow-lg">
+  <div class="w-full rounded-xl shadow-lg md:max-w-7xl">
     <div
       class="header flex flex-row items-center justify-between rounded-t-xl border border-gray-300 bg-white px-6 py-4"
     >
