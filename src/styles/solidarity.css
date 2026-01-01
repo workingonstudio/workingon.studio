@@ -3,21 +3,89 @@
 
 @theme {
   /* Typography */
-  --font-mulish: "Mulish", sans-serif;
-  --font-lora: "Lora", serif;
+  --font-zodiak: "Zodiak", serif;
+  --font-satoshi: "Satoshi", sans-serif;
   --font-brockmann: "brockmannmedium", sans-serif;
 
   /* Colors */
-  --color-primary: theme(colors.emerald.300);
+  --color-primary: theme(colors.emerald.700);
   --color-primary-hover: theme(colors.emerald.500);
-  --color-text: theme(colors.stone.900);
-  --color-text-body: theme(colors.stone.700);
-  --color-text-muted: theme(colors.stone.400);
-  --color-bg: theme(colors.stone.50);
+  --color-header: theme(colors.gray.900);
+  --color-body: theme(colors.gray.600);
+  --color-muted: theme(colors.gray.500);
+  --color-bg: theme(colors.gray.50);
 
   /* Animations */
   --animate-spin-drop: spin-drop 300ms ease-in-out forwards;
   --animate-spin-drop-reverse: spin-drop-reverse 300ms ease-in-out forwards;
+}
+
+@layer base {
+  html {
+    background: var(--color-bg);
+  }
+
+  body {
+    font-family: var(--font-satoshi);
+    color: var(--color-text);
+    &::selection {
+      background: var(--color-primary);
+      @apply text-white;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-zodiak);
+    color: var(--color-header);
+    @apply text-pretty;
+  }
+
+  h1 {
+    @apply text-4xl/12 md:text-5xl/16 lg:text-6xl/20;
+  }
+
+  h2 {
+    @apply text-4xl/12;
+  }
+
+  h3 {
+    @apply text-2xl;
+  }
+
+  p {
+    color: var(--color-body);
+    @apply text-base leading-relaxed text-pretty;
+  }
+
+  small {
+    color: var(--color-muted);
+    @apply text-xs;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply flex-row items-center;
+    @apply rounded-lg;
+    @apply font-satoshi;
+    @apply px-4 py-2.5 text-base font-bold;
+    &.primary {
+      @apply bg-primary border border-emerald-800;
+      @apply text-white;
+      &:hover {
+        @apply hover:bg-emerald-800;
+      }
+    }
+    &.secondary {
+      @apply text-body bg-gray-100;
+      &:hover {
+        @apply bg-transparent;
+      }
+    }
+  }
 }
 
 @layer utilities {
@@ -51,63 +119,5 @@
 
   .group:hover .group-spin-drop {
     animation: spin-drop 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-  }
-}
-
-@layer base {
-  html {
-    background: var(--color-bg);
-  }
-
-  body {
-    font-family: var(--font-lora);
-    color: var(--color-text);
-    &::selection {
-      background: var(--color-primary);
-      @apply text-white;
-    }
-  }
-
-  h1,
-  h2,
-  h3,
-  h4 {
-    font-family: var(--font-brockmann);
-    color: var(--color-text);
-    @apply font-medium text-pretty;
-  }
-
-  h1 {
-    @apply text-3xl/12 lg:text-4xl/14;
-  }
-
-  h2 {
-    @apply text-xl md:text-2xl;
-  }
-
-  h3 {
-    @apply text-lg;
-  }
-
-  p {
-    color: var(--color-text-body);
-    @apply leading-relaxed;
-  }
-
-  small {
-    color: var(--color-text-muted);
-    @apply text-xs;
-  }
-}
-
-@layer components {
-  .btn {
-    @apply flex-row items-center gap-2;
-    @apply rounded-full bg-emerald-300;
-    @apply font-mulish text-sm font-bold text-emerald-900;
-    @apply px-4 py-4 md:py-2 md:pr-4 md:pl-3;
-    &:hover {
-      @apply hover:bg-emerald-200;
-    }
   }
 }

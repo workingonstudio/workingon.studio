@@ -2,30 +2,23 @@
 import "@styles/solidarity.css";
 
 import Solidarity from "@layouts/Solidarity.astro";
-import Header from "@components/solidarity/Header.svelte";
-import Main from "./Main.astro";
-import Cards from "@components/solidarity/Cards.svelte";
-import Footer from "@components/partials/Footer.svelte";
+import Header from "@components/solidarity/partials/Header.svelte";
+import Hero from "@components/solidarity/Hero.svelte";
+import Browser from "@components/solidarity/partials/Browser.svelte";
+import How from "@components/solidarity/How.svelte";
+import Why from "@components/solidarity/Why.svelte";
+import Footer from "@components/solidarity/partials/Footer.svelte";
 ---
 
-<Solidarity title="Solidarity - No one stands alone wheneveryone’s #opentowork">
-  <img src="/solidarity/ring-bg.svg" class="absolute -z-30" />
+<Solidarity title="Solidarity - No one stands alone when everyone’s #opentowork">
   <Header client:idle />
-  <div class="mx-[5%] flex flex-1 flex-col gap-36 pb-24 xl:mx-[10%]">
-    <div class="flex flex-1 flex-col gap-6 lg:flex-row">
-      <section class="flex flex-col gap-11">
-        <Main />
-        <a
-          href="https://chromewebstore.google.com/detail/ahahliplongfboaikbajdedefpoifjeb"
-          target="_blank"
-          class="btn flex justify-center md:hidden"
-        >
-          Download for Chrome
-        </a>
-      </section>
-      <div class="sticky top-65 mt-24 h-full w-full flex-shrink-0 md:mt-48 lg:h-screen lg:w-1/3">
-        <Cards client:idle />
-      </div>
+  <div class="mx-[5%] flex flex-1 flex-col pb-24 xl:mx-[10%]">
+    <div class="flex flex-1 flex-col gap-22">
+      <Hero />
+      <Browser client:load />
+      <How />
+      <Why />
+      <Footer />
     </div>
   </div>
 </Solidarity>
