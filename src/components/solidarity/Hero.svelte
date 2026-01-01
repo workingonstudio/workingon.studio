@@ -8,7 +8,7 @@
       <br class="hidden md:flex" />
       Make everyone wear it.
     </h1>
-    <p class="text-xl">
+    <p class="text-base md:text-xl">
       A LinkedIn extension that makes you feel <span class="underline">less shit</span>
       about looking for work.
     </p>

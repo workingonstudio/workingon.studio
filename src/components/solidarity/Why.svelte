@@ -5,9 +5,10 @@
   <div class="flex w-full flex-col gap-12 lg:w-2xl">
     <div class="flex flex-col gap-3 text-center">
       <h2>Why use this?</h2>
-      <p>Looking for work on is a nightmare. So is LinkedIn.</p>
+      <p>To help soften the idea of looking for work.</p>
     </div>
     <div class="flex flex-col gap-6 rounded-2xl border border-gray-300 bg-white p-12">
+      <h3>It starts with the call...</h3>
       <p>
         So you’ve just come off the call with HR and the person running your department. Closed the Zoom/Hangout/Teams
         window, then the countless others that have been logged out while you were on the call (this actually happened
@@ -32,10 +33,11 @@
         But I digress. The last part of the frantic update is adding the #opentowork banner. If you’re anything like me,
         you already had it set to “visible to recruiters only”. But now it’s visible to everyone.
       </p>
+      <h3>Look I get it, it’s there for a reason.</h3>
       <p>
-        Look I get it, it’s there for a reason. But my god does it feel shit. You’re already in a vulnerable state.
-        Wondering where the next paycheque is going to come from, figuring out what you can cut back on. Goodbye
-        Netflix, goodbye Amazon Prime, goodbye cheeky takeaway. Tipping, what’s that?
+        But my god does it feel shit. You’re already in a vulnerable state. Wondering where the next paycheque is going
+        to come from, figuring out what you can cut back on. Goodbye Netflix, goodbye Amazon Prime, goodbye cheeky
+        takeaway. Tipping, what’s that?
       </p>
       <p>
         You click it. LinkedIn asks if you want to post about it. 'Hey I’ve just been dumped, looking for…' Nah, not
@@ -51,6 +53,18 @@
         success, performance gloating, and countless tips of what I should be doing to get a better chance of finding
         work. How I should be presenting myself. Don’t do that, do this, no not this, that. Comment “help me I’m
         desperate” for my 10 page .pdf.
+      </p>
+      <h3>So what can we do?</h3>
+      <p>
+        Well, what if everyone is #opentowork? I mean everyone. You, your old colleagues (though to be fair if you were
+        let go, it’s not long until they are), the person that gave you the news after reading a Brené Brown quote 10
+        minutes before. Bill Gates.
+      </p>
+      <h3>With Solidarity everyone is #opentowork.</h3>
+      <p>
+        With a single click, everyone will now appear as #opentowork on LinkedIn. That’s it. No options. No menus. No
+        payments (because let’s face it, that certainly isn’t an option right now). No one stands alone when everyone’s
+        #opentowork.
       </p>
     </div>
   </div>

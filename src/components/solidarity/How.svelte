@@ -29,9 +29,9 @@
             </div>
           </div>
           <div class="flex w-full flex-row justify-end p-6 pb-14">
-            <div class="flex flex-row rounded-full bg-blue-600 px-4 py-3 text-sm font-semibold text-blue-50">
+            <a href="" class="flex flex-row rounded-full bg-blue-600 px-4 py-3 text-sm font-semibold text-blue-50">
               Add to Chrome
-            </div>
+            </a>
           </div>
         </div>
         <div class="flex w-full flex-col gap-4 p-14">
@@ -65,7 +65,7 @@
           </div>
           <div class="flex w-full flex-row pb-12">
             <div class="flex w-full flex-row items-center gap-4 border-b-1 border-gray-300 bg-white p-4">
-              <iconify-icon icon="fa7-brands:linkedin" class="text-3xl text-blue-500"></iconify-icon>
+              <iconify-icon icon="fa7-brands:linkedin" class="size-7.5 text-3xl text-blue-500"></iconify-icon>
               <div class="flex w-80 flex-row rounded-full border border-gray-300 px-2 py-2">
                 <iconify-icon icon="material-symbols:search-rounded" class="text-muted text-sm"></iconify-icon>
               </div>
@@ -98,7 +98,7 @@
                 <Avatar img={"/solidarity/avatars/bill.jpeg"} ring dimensions="size-10" />
                 <div class="flex flex-col text-sm">
                   <strong>Bill Gates</strong>
-                  <span class="text-muted">Jr Software developer</span>
+                  <span class="text-muted text-xs">Jr Software developer</span>
                 </div>
               </div>
               <iconify-icon

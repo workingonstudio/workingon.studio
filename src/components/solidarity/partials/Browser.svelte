@@ -50,7 +50,7 @@
       class="header flex flex-row items-center justify-between rounded-t-xl border border-gray-300 bg-white px-6 py-4"
     >
       <div class="flex flex-row gap-4">
-        <iconify-icon icon="fa7-brands:linkedin" class="text-muted text-3xl"></iconify-icon>
+        <iconify-icon icon="fa7-brands:linkedin" class="text-3xl text-blue-500"></iconify-icon>
         <div class="hidden w-64 flex-row items-center rounded-full border border-gray-300 px-2 md:flex">
           <iconify-icon icon="material-symbols:search-rounded" class="text-xs"></iconify-icon>
         </div>

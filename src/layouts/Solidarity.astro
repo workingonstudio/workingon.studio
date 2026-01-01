@@ -38,13 +38,21 @@ const publishDate = new Date().toISOString();
         images: [
           {
             url: Astro.site + "solidarity/opengraph/site-default.webp",
-            height: 600,
+            height: 630,
             width: 1200,
+            alt: "Solidarity - A Chrome Extension that makes you feel less s**t about looking for work.",
           },
           {
             url: Astro.site + "solidarity/opengraph/site-square.webp",
-            height: 1080,
-            width: 1080,
+            height: 1200,
+            width: 1200,
+            alt: "Solidarity - A Chrome Extension that makes you feel less s**t about looking for work.",
+          },
+          {
+            url: Astro.site + "solidarity/opengraph/site-minimum.webp",
+            height: 600,
+            width: 315,
+            alt: "Solidarity - A Chrome Extension that makes you feel less s**t about looking for work.",
           },
         ],
         site_name: "workingon.studio",
@@ -60,6 +68,10 @@ const publishDate = new Date().toISOString();
         {
           name: "twitter:image",
           content: Astro.site + "solidarity/opengraph/site-default.webp",
+        },
+        {
+          name: "twitter:url",
+          content: "https://wo.studio/projects/solidarity",
         },
       ]}
     />
