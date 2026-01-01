@@ -1,7 +1,7 @@
 <script lang="ts">
 </script>
 
-<footer class="flex flex-row justify-between">
+<footer class="flex flex-col items-center justify-between gap-3 md:flex-row">
   <a href="https://wo.studio" title="Visit wo.studio">
     <img src="/solidarity/logo-small-horizontal.svg" alt="wo.studio" />
   </a>
@@ -26,7 +26,7 @@
 <style>
   @reference "@styles/solidarity.css";
   ul {
-    @apply flex flex-row gap-3;
+    @apply flex items-center gap-3 md:flex-row;
     li {
       @apply text-muted flex flex-row items-center gap-2 text-xs;
     }
