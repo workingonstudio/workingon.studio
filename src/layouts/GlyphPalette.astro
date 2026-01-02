@@ -92,6 +92,6 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
   <body id="top">
     <Header />
     <slot />
-    <Footer />
+    <Footer client:visible />
   </body>
 </html>
