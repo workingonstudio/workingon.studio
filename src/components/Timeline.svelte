@@ -221,10 +221,6 @@
     @apply text-xl;
   }
 
-  p {
-    @apply text-base font-medium;
-  }
-
   .date-group {
     @apply flex flex-col gap-12;
   }
@@ -235,6 +231,9 @@
 
   .entry {
     @apply flex flex-col items-start gap-3;
+    p {
+      @apply text-base font-medium;
+    }
   }
 
   .entry-content {
