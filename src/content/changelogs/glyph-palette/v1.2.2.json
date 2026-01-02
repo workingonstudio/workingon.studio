@@ -3,14 +3,15 @@
   "version": {
     "major": 1,
     "minor": 2,
-    "patch": 1
+    "patch": 2
   },
   "title": "",
   "description": "",
   "date": "2025-12-26T00:00:00.000Z",
   "items": [
-    "Re-arranged layout",
+    "Re-arranged layout.",
     "Added persistent settings.",
-    "Adding shortcut to open (ctrl+shift+g)"
+    "Adding shortcut to open (ctrl+shift+g).",
+    "Fixed icon insert issues."
   ]
 }

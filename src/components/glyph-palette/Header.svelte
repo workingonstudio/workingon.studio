@@ -8,7 +8,7 @@
       <a href="/projects/glyph-palette/" class="logo">glyph.palette</a>
       <div class="flex flex-row gap-3">
         <Badge label="Beta" type="highlight" />
-        <Badge label="v1.2.1" />
+        <Badge label="v1.2.2" />
       </div>
     </div>
     <nav>
@@ -25,7 +25,7 @@
             class="highlight cursor-pointer rounded-lg px-3 py-1.5 normal-case hover:bg-blue-700 hover:no-underline!"
             data-umami-event="clicked-download"
           >
-            Download v1.2.1
+            Download v1.2.2
           </a>
         </li>
       </ul>
