@@ -7,11 +7,11 @@
   },
   "title": "",
   "description": "",
-  "date": "2025-12-26T00:00:00.000Z",
+  "date": "2026-01-02T00:00:00.000Z",
   "items": [
     "Re-arranged layout.",
     "Added persistent settings.",
     "Adding shortcut to open (ctrl+shift+g).",
-    "Fixed icon insert issues."
+    "Fixed icon sizing issues."
   ]
 }

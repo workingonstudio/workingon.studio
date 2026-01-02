@@ -1,10 +1,12 @@
 {
   "itemName": "Glyph Palette",
-  "versionID": "1.2.0",
-  "downloadURL": "https://workingon.studio/glyph-palette/downloads/glyph-palette-v1.2.0.sketchplugin.zip",
-  "size": 111420,
-  "creationDate": "Fri, 26 Dec 2025 19:17:51 +0000",
-  "description": "New layout. Persistent settings.",
+  "versionID": "1.2.2",
+  "downloadURL": "https://workingon.studio/glyph-palette/downloads/glyph-palette-v1.2.2.sketchplugin.zip",
+  "size": 113106,
+  "creationDate": "Fri, 2 Jan 2026 12:13:51 +0000",
+  "description": "New layout. Persistent settings. Adding shortcut to open. Fixed icon sizing issues.",
   "minimumSketchVersion": "3.0",
-  "homepage": "https://glyphpalette.com"
+  "homepage": "https://glyphpalette.com",
+  "changelog": "https://workingon.studio/projects/glyph-palette/change-log/",
+  "infoURL": "https://workingon.studio/projects/glyph-palette/"
 }

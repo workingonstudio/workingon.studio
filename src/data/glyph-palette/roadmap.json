@@ -35,10 +35,17 @@
     "current": false
   },
   {
-    "label": "Current",
+    "label": "26th Dec",
     "title": "Added additional icon sets.",
     "description": "",
     "features": ["Lucide.", "Hero.", "Carbon."],
+    "current": false
+  },
+  {
+    "label": "Current",
+    "title": "New layout.",
+    "description": "",
+    "features": ["Persistent settings.", "Adding shortcut to open.", "Fixed icon sizing issues."],
     "current": true
   },
   {
