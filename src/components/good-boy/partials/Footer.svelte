@@ -7,7 +7,7 @@
   <a href="/" class="logo" aria-label="GoodBoy logo">
     <img src="/good-boy/logo-small-horizontal.svg" alt="icon of a cute dogs head" />
   </a>
-  <ul class="flex flex-col gap-3 md:flex-row">
+  <ul class="flex flex-col items-center gap-3 md:flex-row md:items-start">
     <li class="relative flex flex-row items-center gap-2">
       <Comment
         pos="md:bottom-8 bottom-0 left-16 hidden 2xl:inline-flex"
@@ -37,6 +37,9 @@
 
 <style>
   @reference "@styles/good-boy.css";
+  .logo {
+    @apply flex flex-row justify-center;
+  }
   ul {
     li {
       a {
