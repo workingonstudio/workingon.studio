@@ -33,7 +33,7 @@
 <ul class="articles">
   {#each articles as { title, subtitle, excerpt, href }}
     <li class="group flex flex-col items-start gap-4">
-      <div class="bg-surface flex flex-row rounded-xl p-2">
+      <div class="bg-surface border-surface-border flex flex-row rounded-xl border p-2">
         <iconify-icon icon="carbon:blog" class="text-primary size-6 text-2xl"></iconify-icon>
       </div>
       <a {href}>
