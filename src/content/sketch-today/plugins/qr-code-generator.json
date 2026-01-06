@@ -3,11 +3,11 @@
   "type": "plugin",
   "slug": "qr-code-generator",
   "title": "QR Code Generator",
-  "tagline": "Generate a SVG QR code.",
-  "description": "Bring 1000’s of modern icon directly to into your .sketch files, with full control over size, stroke, and color. Currently in Beta.",
+  "tagline": "Generate SVG QR codes.",
+  "description": "Create and insert SVG QR codes into Sketch. With control over dimensions, padding, and color.",
   "released": true,
   "links": {
-    "download": "https://glyphpalette.com/",
-    "github": "https://github.com"
+    "download": "https://github.com/workingonstudio/sketch-qr.sketchplugin/releases/latest/download/sketch-qr.sketchplugin.zip",
+    "github": "https://github.com/workingonstudio/sketch-qr.sketchplugin"
   }
 }
