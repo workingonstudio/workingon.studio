@@ -14,12 +14,12 @@
       </div>
       <div class="flex flex-row gap-6">
         <a
-          href="/glyph-palette/downloads/glyph-palette-v1.1.1.sketchplugin.zip"
+          href="/glyph-palette/downloads/glyph-palette-v1.2.2.sketchplugin.zip"
           download
           class="highlight flex flex-row items-center gap-3 px-4 py-3 text-sm hover:bg-blue-700"
           data-umami-event="clicked-download"
         >
-          Download v1.1.1
+          Download v1.2.2
         </a>
         <a
           href="/projects/glyph-palette/change-log"

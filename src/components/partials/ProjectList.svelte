@@ -2,20 +2,19 @@
   import projectData from "@data/projects.json";
 </script>
 
-<ul class="grid auto-cols-max grid-cols-1 space-y-14 space-x-14 md:grid-cols-2">
+<ul class="grid auto-cols-max grid-cols-1 gap-14 md:grid-cols-2">
   {#each projectData as { projectIcon, name, tagline, description, link }, index}
     {#if index <= 6}
-      <li class="project-item group flex flex-col items-start gap-3">
-        <div class="bg-surface flex flex-row rounded-xl p-2">
+      <li class="project-item group flex flex-col items-start gap-4">
+        <div class="bg-surface border-surface-border flex flex-row rounded-xl border p-2">
           <iconify-icon
             icon={projectIcon}
             class="icon text-primary size-6 text-2xl transition-colors duration-300"
           ></iconify-icon>
         </div>
         <a href={link === "/" ? link : `/projects/${link}`} class="flex flex-col gap-3">
-          <h2 class="flex flex-row items-center gap-4">
+          <h2>
             {name}
-            <iconify-icon icon="carbon:launch" class="size-3 text-sm"></iconify-icon>
           </h2>
           <p class="text-muted text-base italic">{tagline}</p>
           <p>{description}</p>

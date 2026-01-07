@@ -24,15 +24,15 @@
 <div class="flex flex-row justify-center pb-30 2xl:pb-0">
   <div class="flex flex-col justify-between gap-12 md:flex-row">
     {#each features as { icon, title, description }, index}
-      <div class="flex w-sm flex-col gap-3 md:w-full xl:w-sm">
-        <div class="relative flex flex-col gap-3">
+      <div class="flex w-sm flex-col gap-3 md:w-full md:items-start xl:w-sm">
+        <div class="relative flex flex-col items-center gap-3 md:items-start">
           {#if index === 0}
-            <Comment pos="bottom-10 left-8 md:-right-8" comment={{ time: "14 mins ago.", content: "Great copy!" }} />
+            <Comment pos="bottom-20 left-20 md:-right-8" comment={{ time: "14 mins ago.", content: "Great copy!" }} />
           {/if}
           <iconify-icon {icon} class="size-6 text-2xl"></iconify-icon>
           <h4>{title}</h4>
         </div>
-        <p class="text-sm text-pretty">{description}</p>
+        <p class="text-center text-sm text-pretty md:text-left">{description}</p>
       </div>
     {/each}
   </div>

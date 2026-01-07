@@ -44,5 +44,12 @@
     "title": "Hotfix.",
     "description": "",
     "features": ["Fixing insert bug issue."]
+  },
+  {
+    "date": "",
+    "version": "1.2.2",
+    "title": "QOL",
+    "description": "",
+    "features": ["Re-arranged layout", "Added persistent settings."]
   }
 ]
