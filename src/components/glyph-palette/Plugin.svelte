@@ -40,7 +40,7 @@
       <li class="size-2.5 rounded-full bg-gray-300"></li>
       <li class="size-2.5 rounded-full bg-green-500"></li>
     </ul>
-    <strong class="text-xxs w-full text-center">Glyph Palette v1.2.2</strong>
+    <strong class="text-xxs w-full text-center">Glyph Palette v1.3.0</strong>
   </div>
   <div class="false-input flex h-13 w-full flex-row items-center p-4 inset-shadow-sm">
     <iconify-icon icon="material-symbols:search-rounded" class="text-base"></iconify-icon>
