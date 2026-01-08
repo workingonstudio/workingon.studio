@@ -42,10 +42,17 @@
     "current": false
   },
   {
-    "label": "Current",
+    "label": "02 Jan",
     "title": "New layout.",
     "description": "",
     "features": ["Persistent settings.", "Adding shortcut to open.", "Fixed icon sizing issues."],
+    "current": false
+  },
+  {
+    "label": "current",
+    "title": "Darkmode",
+    "description": "",
+    "features": ["Darkmode now matches user theme.", "Removed custom color/size settings."],
     "current": true
   },
   {
