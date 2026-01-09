@@ -33,7 +33,4 @@
       }
     }
   }
-  .meta {
-    @apply text-xxs text-muted font-bold uppercase;
-  }
 </style>

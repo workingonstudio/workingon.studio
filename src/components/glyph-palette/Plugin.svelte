@@ -122,6 +122,7 @@
     <div class="flex flex-row gap-2">
       <button
         class="default text-body flex size-7 flex-row items-center justify-center rounded-lg font-semibold hover:bg-stone-50!"
+        aria-label="fake button"
       >
         <iconify-icon icon="material-symbols:close-rounded" class="text-base"></iconify-icon>
       </button>

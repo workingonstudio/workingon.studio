@@ -40,9 +40,4 @@
   small {
     @apply text-sm text-gray-500;
   }
-  .default {
-    &:hover {
-      @apply border-transparent bg-transparent inset-ring-transparent;
-    }
-  }
 </style>
