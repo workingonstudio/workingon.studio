@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Logo from "@components/partials/Logo.svelte";
   import Avatar from "./Avatar.svelte";
   import Toggle from "./Toggle.svelte";
 
@@ -77,7 +78,7 @@
             <p>Visual Idiot</p>
           </div>
           <a href="https://workingon.studio" class="text-body flex flex-row items-center gap-2 text-xs font-bold">
-            <img src="/logomark.svg" alt="" class="relative top-[1px]" />
+            <Logo width="18px" style="h-full flex flex-row items-center" />
             workingon.studio
           </a>
         </div>

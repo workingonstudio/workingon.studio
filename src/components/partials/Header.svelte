@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Logo from "/logomark.svg?raw";
+  import Logo from "./Logo.svelte";
   import ThemeToggle from "./ThemeToggle.svelte";
 
   export let currentPath = "/";
@@ -85,9 +85,7 @@
   <header class="header-scroll group flex flex-row items-center justify-between transition-all ease-out duration-200">
     <a href="/" class="cursor-pointer">
       <!-- prettier-ignore -->
-      <div class="logo-scroll">
-        {@html Logo}
-      </div>
+      <Logo width={logoWidth} />
     </a>
     <div class="flex flex-row gap-4 items-center">
       <ThemeToggle />
@@ -160,21 +158,6 @@
     padding-top: calc(var(--padding-y) * 1px);
     padding-bottom: calc(var(--padding-y) * 1px);
     transition: all 300ms ease-out;
-  }
-
-  .logo-scroll {
-    width: var(--logo-width);
-    transition: width 300ms ease-out;
-  }
-
-  .logo-scroll :global(svg) {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  .logo-scroll :global(svg path) {
-    @apply fill-current;
   }
 
   .nav-scroll {
