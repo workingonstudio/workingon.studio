@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Logo from "/logomark.svg?raw";
   import ThemeToggle from "./ThemeToggle.svelte";
 
   export let currentPath = "/";
@@ -34,7 +35,7 @@
 
   // Interpolate values based on scroll progress
   $: paddingY = 48 - scrollProgress * 24; // From 48px (py-12) to 24px (py-6)
-  $: fontSize = 1.25 - scrollProgress * 0.25; // From text-xl (1.25rem) to text-base (1rem)
+  $: logoWidth = 26 - scrollProgress * 2; // From 32px to 24px (8px difference)
 
   $: showMenu = false;
 
@@ -79,12 +80,14 @@
 
 <svelte:window on:scroll={handleScroll} />
 
-<div style="--padding-y: {paddingY}; --font-size: {fontSize};">
+<div style="--padding-y: {paddingY}; --logo-width: {logoWidth}px;;">
   <!-- prettier-ignore -->
   <header class="header-scroll group flex flex-row items-center justify-between transition-all ease-out duration-200">
     <a href="/" class="cursor-pointer">
       <!-- prettier-ignore -->
-      <h1 class="font-display font-medium inline-block header-title">workingon<span>.studio</span></h1>
+      <div class="logo-scroll">
+        {@html Logo}
+      </div>
     </a>
     <div class="flex flex-row gap-4 items-center">
       <ThemeToggle />
@@ -115,14 +118,9 @@
 
 <style>
   @reference "@styles/main.css";
-  h1 {
-    @apply text-xl;
-  }
+
   h2 {
     @apply text-base font-normal;
-  }
-  h1 span {
-    @apply text-muted text-sm;
   }
 
   h2 span {
@@ -164,9 +162,19 @@
     transition: all 300ms ease-out;
   }
 
-  .header-title {
-    font-size: calc(var(--font-size) * 1rem);
-    transition: all 300ms ease-out;
+  .logo-scroll {
+    width: var(--logo-width);
+    transition: width 300ms ease-out;
+  }
+
+  .logo-scroll :global(svg) {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .logo-scroll :global(svg path) {
+    @apply fill-current;
   }
 
   .nav-scroll {

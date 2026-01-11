@@ -77,7 +77,7 @@
             <p>Visual Idiot</p>
           </div>
           <a href="https://workingon.studio" class="text-body flex flex-row items-center gap-2 text-xs font-bold">
-            <img src="/logomark-small.svg" alt="" class="relative top-[1px]" />
+            <img src="/logomark.svg" alt="" class="relative top-[1px]" />
             workingon.studio
           </a>
         </div>
