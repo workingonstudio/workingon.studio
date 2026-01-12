@@ -14,6 +14,7 @@
 </div>
 
 <style>
+  @reference "@styles/main.css";
   .logo {
     transition: width 300ms ease-out;
   }
@@ -25,6 +26,6 @@
   }
 
   .logo :global(svg path) {
-    fill: currentColor;
+    @apply fill-header;
   }
 </style>
