@@ -28,11 +28,6 @@
 
 <style>
   @reference "@styles/solidarity.css";
-  h1 {
-    span {
-      @apply underline;
-    }
-  }
   p {
     @apply font-medium;
   }

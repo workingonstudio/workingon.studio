@@ -28,7 +28,10 @@
             </div>
           </div>
           <div class="flex w-full flex-row justify-end p-6 pb-14">
-            <a href="" class="flex flex-row rounded-full bg-blue-600 px-4 py-3 text-sm font-semibold text-blue-50">
+            <a
+              href="https://chromewebstore.google.com/detail/ahahliplongfboaikbajdedefpoifjeb"
+              class="flex flex-row rounded-full bg-blue-600 px-4 py-3 text-sm font-semibold text-blue-50"
+            >
               Add to Chrome
             </a>
           </div>
