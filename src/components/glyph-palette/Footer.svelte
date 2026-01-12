@@ -33,8 +33,9 @@
         <h4>Changelog</h4>
       </div>
       <ul>
-        <li>Darkmode added.</li>
-        <li>Removing non-functioning settings (custom color/size).</li>
+        <li>adding Font Awesome Brands.</li>
+        <li>reverting layout to original.</li>
+        <li>including icon set name on insert.</li>
       </ul>
     </div>
     <div class="flex flex-1 flex-col gap-6">
