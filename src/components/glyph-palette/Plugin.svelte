@@ -40,7 +40,7 @@
       <li class="size-2.5 rounded-full bg-gray-300"></li>
       <li class="size-2.5 rounded-full bg-green-500"></li>
     </ul>
-    <strong class="text-xxs w-full text-center">Glyph Palette v1.3.5</strong>
+    <strong class="text-xxs w-full text-center">Glyph Palette v1.3.6</strong>
   </div>
   <div class="flex flex-row items-center justify-between px-3 py-3 md:px-4">
     <ul class="filters">
