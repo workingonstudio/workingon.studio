@@ -2,17 +2,52 @@
   "generated": "2025-09-06T21:33:20.962Z",
   "entries": [
     {
-      "date" : "November",
+      "date": "December",
       "items": [
         {
           "description": "Coworking Space",
           "in": 0,
-          "out": 72.00
+          "out": 72.0
+        },
+        {
+          "description": "Virtual office",
+          "in": 0,
+          "out": 27.99
+        },
+        {
+          "description": "Proton Unlimited",
+          "in": 0,
+          "out": 10.59
+        },
+        {
+          "description": "Claude Pro",
+          "in": 0,
+          "out": 17.0
+        },
+        {
+          "description": "Railway",
+          "in": 0,
+          "out": 4.8
+        },
+        {
+          "description": "Github",
+          "in": 0,
+          "out": 4.8
+        }
+      ]
+    },
+    {
+      "date": "November",
+      "items": [
+        {
+          "description": "Coworking Space",
+          "in": 0,
+          "out": 72.0
         },
         {
           "description": "Locker key deposit",
-          "in" : 0,
-          "out" : 35.00
+          "in": 0,
+          "out": 35.0
         },
         {
           "description": "Virtual office",

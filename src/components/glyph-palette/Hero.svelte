@@ -19,7 +19,7 @@
           class="highlight flex flex-row items-center gap-3 px-4 py-3 text-sm hover:bg-blue-700"
           data-umami-event="clicked-download"
         >
-          Download v1.3.5
+          Download v1.3.6
         </a>
         <a
           href="/projects/glyph-palette/change-log"
