@@ -33,10 +33,6 @@
     }
   }
 
-  // Interpolate values based on scroll progress
-  $: paddingY = 48 - scrollProgress * 24; // From 48px (py-12) to 24px (py-6)
-  $: logoWidth = 26 - scrollProgress * 2; // From 32px to 24px (8px difference)
-
   $: showMenu = false;
 
   let navItems = [
@@ -48,7 +44,7 @@
       description: "more questions answered.",
     },
     {
-      icon: "carbon:box",
+      icon: "carbon:archive",
       href: "/projects/",
       title: "projects",
       subtitle: ".list",
@@ -72,7 +68,7 @@
       icon: "carbon:send-alt",
       href: "/contact",
       title: "contact",
-      subtitle: ".me",
+      subtitle: ".mail",
       description: "bother me with admin.",
     },
   ];
@@ -80,25 +76,17 @@
 
 <svelte:window on:scroll={handleScroll} />
 
-<div style="--padding-y: {paddingY}; --logo-width: {logoWidth}px;;">
-  <!-- prettier-ignore -->
-  <header class="header-scroll group flex flex-row items-center justify-between transition-all ease-out duration-200">
-    <a href="/" class="cursor-pointer">
-      <!-- prettier-ignore -->
-      <Logo width={logoWidth} />
+<!-- prettier-ignore -->
+<header class="group flex flex-row justify-between items-stretch transition-opacity ease-out duration-200">
+  <div class="flex gap-6">
+    <a href="/" class="flex flex-col p-4 lg:px-4 lg:py-0 border-x border-surface-border transition-none justify-center">
+      <Logo width={32} />
     </a>
-    <div class="flex flex-row gap-4 items-center">
-      <ThemeToggle />
-      <button type="button" onclick={toggleMenu} aria-label="Toggle menu" class="hover:*:text-primary w-6 h-6 cursor-pointer flex lg:hidden">
-        <iconify-icon icon="carbon:{showMenu ? 'close-large' : 'menu'}" class=" text-2xl text-muted"></iconify-icon>
-      </button>
-    </div>
-  </header>
-  <nav
+    <nav
     class="{showMenu
       ? 'flex'
-      : 'hidden'} nav-scroll border-muted/8 box-border flex-col items-start border-y text-xs transition-all duration-300 ease-out lg:flex lg:items-center"
-  >
+      : 'hidden'} nav-scroll box-border flex-col divide-x-muted/20 text-xs transition-all duration-300 ease-out lg:flex"
+    >
     <ul class="flex w-full flex-col lg:flex-row">
       {#each navItems as { icon, href, title, subtitle, description }}
         <li class="group" class:active={isActive(href)}>
@@ -111,12 +99,18 @@
         </li>
       {/each}
     </ul>
-  </nav>
-</div>
+    </nav>
+  </div>
+  <div class="flex flex-row gap-4 items-center border-x border-surface-border p-4">
+    <ThemeToggle />
+    <button type="button" onclick={toggleMenu} aria-label="Toggle menu" class="hover:*:text-primary w-6 h-6 cursor-pointer flex lg:hidden">
+      <iconify-icon icon="carbon:{showMenu ? 'close-large' : 'menu'}" class=" text-2xl text-muted"></iconify-icon>
+    </button>
+  </div>
+</header>
 
 <style>
   @reference "@styles/main.css";
-
   h2 {
     @apply text-base font-normal;
   }
@@ -127,9 +121,9 @@
 
   nav {
     ul {
-      @apply justify-between gap-6;
+      @apply justify-between gap-0 lg:gap-12;
       li {
-        @apply flex flex-row items-center gap-4 transition-opacity duration-300;
+        @apply flex flex-row items-center gap-4 py-4 transition-opacity duration-300 lg:py-6;
         a {
           @apply flex w-full flex-col justify-between;
           p {
@@ -152,16 +146,5 @@
     &:not(:has(li:hover)):has(li.active) li:not(.active) {
       @apply opacity-30;
     }
-  }
-
-  .header-scroll {
-    padding-top: calc(var(--padding-y) * 1px);
-    padding-bottom: calc(var(--padding-y) * 1px);
-    transition: all 300ms ease-out;
-  }
-
-  .nav-scroll {
-    @apply py-6;
-    transition: all 300ms ease-out;
   }
 </style>
