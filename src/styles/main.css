@@ -8,13 +8,13 @@
   --font-display: "nudicamedium", "Space Grotesk", ui-sans-serif, system-ui;
 
   /* Colors */
-  --color-primary: theme(colors.stone.900);
-  --color-header: theme(colors.gray.900);
-  --color-body: theme(colors.stone.700);
-  --color-muted: theme(colors.stone.500);
-  --color-bg-main: theme(colors.orange.50);
-  --color-surface: theme(colors.orange.100);
-  --color-surface-border: theme(colors.orange.200);
+  --color-primary: theme(colors.zinc.900);
+  --color-header: theme(colors.zinc.900);
+  --color-body: theme(colors.zinc.700);
+  --color-muted: theme(colors.zinc.500);
+  --color-bg-main: theme(colors.zinc.50);
+  --color-surface: theme(colors.zinc.100);
+  --color-surface-border: theme(colors.zinc.200);
 }
 
 .dark {

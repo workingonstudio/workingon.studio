@@ -9,15 +9,12 @@
   $: widthStyle = typeof width === "number" ? `${width}px` : width;
 </script>
 
-<div class="logo items-center {style}" style="width: {widthStyle};">
+<div class="logo {style}" style="width: {widthStyle};">
   {@html LogoSvg}
 </div>
 
 <style>
-  .logo {
-    transition: width 300ms ease-out;
-  }
-
+  @reference "@styles/main.css";
   .logo :global(svg) {
     width: 100%;
     height: auto;
@@ -25,6 +22,6 @@
   }
 
   .logo :global(svg path) {
-    fill: currentColor;
+    @apply fill-header;
   }
 </style>
