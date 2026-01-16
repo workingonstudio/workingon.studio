@@ -9,28 +9,8 @@
     const normalizedPath = path.replace(/\/$/, "") || "/";
     return normalizedCurrent === normalizedPath;
   }
-
   function toggleMenu() {
     showMenu = !showMenu;
-  }
-
-  // Smooth scroll tracking
-  let scrollProgress: number = 0;
-  let ticking: boolean = false;
-
-  const SCROLL_START = 0;
-  const SCROLL_END = 50; // Distance in pixels to complete transition
-
-  function handleScroll() {
-    if (!ticking) {
-      window.requestAnimationFrame(() => {
-        const scrollY = window.scrollY;
-        // Calculate progress from 0 to 1
-        scrollProgress = Math.min(Math.max((scrollY - SCROLL_START) / (SCROLL_END - SCROLL_START), 0), 1);
-        ticking = false;
-      });
-      ticking = true;
-    }
   }
 
   $: showMenu = false;
@@ -74,12 +54,10 @@
   ];
 </script>
 
-<svelte:window on:scroll={handleScroll} />
-
 <!-- prettier-ignore -->
 <header class="group flex flex-row justify-between items-stretch transition-opacity ease-out duration-200">
   <div class="flex gap-6">
-    <a href="/" class="flex flex-col p-4 lg:px-4 lg:py-0 border-x border-surface-border transition-none justify-center">
+    <a href="/" title="Home" class="flex flex-col p-4 lg:px-4 lg:py-0 border-x border-surface-border transition-none justify-center">
       <Logo width={32} />
     </a>
     <nav
@@ -90,7 +68,7 @@
     <ul class="flex w-full flex-col lg:flex-row">
       {#each navItems as { icon, href, title, subtitle, description }}
         <li class="group" class:active={isActive(href)}>
-          <iconify-icon {icon} class="text-muted flex size-4.5 text-lg lg:hidden xl:flex"></iconify-icon>
+          <iconify-icon {icon} class="text-muted flex size-6 text-2xl lg:hidden xl:flex"></iconify-icon>
           <a {href} onclick={toggleMenu}>
             <!-- prettier-ignore -->
             <h2>{title}<span>{subtitle}</span></h2>
