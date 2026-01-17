@@ -104,7 +104,8 @@ const nudicaFontUrl = import.meta.env.NUDICA_FONT_CSS_URL;
       is:inline
       type="module"
       src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    ></script>
+    >
+    </script>
     <meta name="generator" content={Astro.generator} />
     <Analytics />
     <StructuredData />
@@ -115,7 +116,7 @@ const nudicaFontUrl = import.meta.env.NUDICA_FONT_CSS_URL;
 
   <body>
     <div
-      class="bg-bg-main/98 border-surface-border sticky top-0 z-50 mb-12 border-y backdrop-blur-sm lg:my-12"
+      class="bg-bg-main/98 border-surface-border sticky top-0 z-50 mb-12 border-y backdrop-blur-sm"
     >
       <div class="mx-0 flex flex-col md:mx-[5%]">
         <Header client:load {currentPath} />
