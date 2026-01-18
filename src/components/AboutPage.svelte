@@ -10,7 +10,6 @@
 </PageHeader>
 
 <section class="flex max-w-xl flex-col gap-12 lg:mx-2 2xl:mt-5 2xl:w-5xl">
-  <p>I'm in my Falling Down era.</p>
   <p>
     16 years. Designed systems used by millions. Made millions for other people's companies. Touched every industry
     except gambling because fuck gambling.
@@ -20,8 +19,8 @@
     what's broken in design.
   </p>
   <p>
-    So I'm building differently now. Cultural mirror products that work and make a point. No more extractive bullshit
-    dressed as "engagement."
+    So I'm building differently now. Products that work and make a point. No more extractive bullshit dressed as
+    "engagement".
   </p>
   <p>
     I also work with teams that run on gut, not graphs. That ship fast and trust their designers (but don't drag me into
