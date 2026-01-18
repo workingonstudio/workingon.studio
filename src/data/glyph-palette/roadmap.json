@@ -42,10 +42,28 @@
     "current": false
   },
   {
-    "label": "Current",
+    "label": "02 Jan",
     "title": "New layout.",
     "description": "",
-    "features": ["Persistent settings.", "Adding shortcut to open.", "Fixed icon sizing issues."],
+    "features": ["persistent settings.", "adding shortcut to open.", "fixed icon sizing issues."],
+    "current": false
+  },
+  {
+    "label": "08 Jan",
+    "title": "Dark mode.",
+    "description": "",
+    "features": ["dark mode now matches user theme.", "removed custom color/size settings."],
+    "current": false
+  },
+  {
+    "label": "current",
+    "title": "Icons addition.",
+    "description": "",
+    "features": [
+      "adding Font Awesome Brands.",
+      "reverting layout to original.",
+      "including icon set name on insert."
+    ],
     "current": true
   },
   {

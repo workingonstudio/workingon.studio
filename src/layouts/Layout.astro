@@ -115,8 +115,10 @@ const nudicaFontUrl = import.meta.env.NUDICA_FONT_CSS_URL;
   </head>
 
   <body>
-    <div class="bg-bg-main/98 shadow-bg-main sticky top-0 z-50 mb-12 shadow-2xl backdrop-blur-sm">
-      <div class="mx-[5%] flex flex-col">
+    <div
+      class="bg-bg-main/98 border-surface-border sticky top-0 z-50 mb-12 border-y backdrop-blur-sm"
+    >
+      <div class="mx-0 flex flex-col md:mx-[5%]">
         <Header client:load {currentPath} />
       </div>
     </div>

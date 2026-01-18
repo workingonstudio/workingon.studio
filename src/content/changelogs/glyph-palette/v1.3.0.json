@@ -1,0 +1,12 @@
+{
+  "product": "glyph-palette",
+  "version": {
+    "major": 1,
+    "minor": 3,
+    "patch": 0
+  },
+  "title": "",
+  "description": "",
+  "date": "2026-01-08T00:00:00.000Z",
+  "items": ["dark mode added.", "removing non-functioning settings (custom color/size)."]
+}

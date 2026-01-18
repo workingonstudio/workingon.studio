@@ -33,10 +33,9 @@
         <h4>Changelog</h4>
       </div>
       <ul>
-        <li>Re-arranged layout.</li>
-        <li>Added persistent settings.</li>
-        <li>Adding shortcut to open (ctrl+shift+g).</li>
-        <li>Fixed icon sizing issues.</li>
+        <li>adding Font Awesome Brands.</li>
+        <li>reverting layout to original.</li>
+        <li>including icon set name on insert.</li>
       </ul>
     </div>
     <div class="flex flex-1 flex-col gap-6">

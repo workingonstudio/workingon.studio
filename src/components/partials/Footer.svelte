@@ -21,12 +21,12 @@
   <!-- prettier-ignore -->
   <div class="flex flex-col company-info">
     <a href="/" class="group text-primary text-md font-display">wo<span class="text-muted text-xxs">.studio</span></a>
-    <a href="https://find-and-update.company-information.service.gov.uk/company/16700615"><small class="uppercase text-muted text-xxs">workingonstudio ltd, no: 16700615</small></a>
+    <a href="https://find-and-update.company-information.service.gov.uk/company/16700615"><small class="text-muted text-xxs">workingonstudio ltd, no: 16700615</small></a>
   </div>
   <ul class="text-muted flex flex-row gap-x-6 gap-y-2 last:flex-wrap last:lg:flex-nowrap">
     <li class="flex flex-row items-center gap-2">
       <iconify-icon icon="carbon:development" class="size-3.5 text-sm"></iconify-icon>
-      <a href="https://astro.build/">astro</a>
+      <a href="https://astro.build/">Astro</a>
       <div class="relative -top-[1px]">+</div>
       <a href="https://svelte.dev/">Svelte</a>
     </li>
@@ -56,7 +56,7 @@
     li {
       a {
         @apply hover:text-primary hover:underline;
-        @apply text-xxs flex font-bold uppercase;
+        @apply text-xxs flex font-bold;
       }
     }
   }

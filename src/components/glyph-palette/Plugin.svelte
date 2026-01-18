@@ -40,21 +40,26 @@
       <li class="size-2.5 rounded-full bg-gray-300"></li>
       <li class="size-2.5 rounded-full bg-green-500"></li>
     </ul>
-    <strong class="text-xxs w-full text-center">Glyph Palette v1.2.2</strong>
+    <strong class="text-xxs w-full text-center">Glyph Palette v1.3.6</strong>
   </div>
-  <div class="false-input flex h-13 w-full flex-row items-center p-4 inset-shadow-sm">
-    <iconify-icon icon="material-symbols:search-rounded" class="text-base"></iconify-icon>
-  </div>
-  <div class="icon-grid grid grid-cols-7 grid-rows-4 justify-items-center gap-x-5 gap-y-2 p-4">
-    {#each iconlist as icon, index}
+  <div class="flex flex-row items-center justify-between px-3 py-3 md:px-4">
+    <ul class="filters">
+      <li class="default">Google Material</li>
+      <li class="default">Outline</li>
+      <li class="default">24 x 24</li>
+      <li class="default flex flex-row items-center gap-2">
+        <span class="size-2 rounded-full bg-gray-950"></span>
+        <span class="hidden md:flex">34, 34, 34, 1</span>
+      </li>
+    </ul>
+    <div class="flex flex-row gap-2">
       <button
-        type="button"
-        aria-label="icon"
-        class="flex size-8 items-center justify-center rounded-lg {index === 9 ? 'active' : ''}"
+        class="default text-body flex size-7 flex-row items-center justify-center rounded-lg font-semibold hover:bg-stone-50!"
+        aria-label="fake button"
       >
-        <iconify-icon {icon} class="text-2xl {index === 9 ? 'text-blue-50' : 'text-gray-900'}"></iconify-icon>
+        <iconify-icon icon="material-symbols:close-rounded" class="text-base"></iconify-icon>
       </button>
-    {/each}
+    </div>
   </div>
   <div class="form">
     <div class="flex flex-row gap-6">
@@ -109,23 +114,19 @@
       </div>
     </div>
   </div>
-  <div class="flex flex-row items-center justify-between px-3 py-3 md:px-4">
-    <ul class="filters">
-      <li class="default">Google Material</li>
-      <li class="default">Outline</li>
-      <li class="default">24 x 24</li>
-      <li class="default flex flex-row items-center gap-2">
-        <span class="size-2 rounded-full bg-gray-950"></span>
-        <span class="hidden md:flex">34, 34, 34, 1</span>
-      </li>
-    </ul>
-    <div class="flex flex-row gap-2">
+  <div class="false-input flex h-13 w-full flex-row items-center p-4 inset-shadow-sm">
+    <iconify-icon icon="material-symbols:search-rounded" class="text-base"></iconify-icon>
+  </div>
+  <div class="icon-grid grid grid-cols-7 grid-rows-4 justify-items-center gap-x-5 gap-y-2 p-4">
+    {#each iconlist as icon, index}
       <button
-        class="default text-body flex size-7 flex-row items-center justify-center rounded-lg font-semibold hover:bg-stone-50!"
+        type="button"
+        aria-label="icon"
+        class="flex size-8 items-center justify-center rounded-lg {index === 9 ? 'active' : ''}"
       >
-        <iconify-icon icon="material-symbols:close-rounded" class="text-base"></iconify-icon>
+        <iconify-icon {icon} class="text-2xl {index === 9 ? 'text-blue-50' : 'text-gray-900'}"></iconify-icon>
       </button>
-    </div>
+    {/each}
   </div>
 </div>
 
@@ -134,7 +135,7 @@
   .filters {
     @apply flex flex-row gap-2;
     li {
-      @apply rounded-lg px-2 py-1 text-[10px] font-semibold;
+      @apply rounded-full px-2 py-1 text-[10px] font-semibold;
     }
   }
   .form {

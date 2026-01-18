@@ -9,9 +9,9 @@
   "description": "",
   "date": "2026-01-02T00:00:00.000Z",
   "items": [
-    "Re-arranged layout.",
-    "Added persistent settings.",
-    "Adding shortcut to open (ctrl+shift+g).",
-    "Fixed icon sizing issues."
+    "re-arranged layout.",
+    "added persistent settings.",
+    "adding shortcut to open (ctrl+shift+g).",
+    "fixed icon sizing issues."
   ]
 }
