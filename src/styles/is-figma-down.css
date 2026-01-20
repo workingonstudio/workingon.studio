@@ -34,7 +34,7 @@
   }
 
   h1 {
-    @apply text-center text-3xl/12 lg:text-left lg:text-4xl/12;
+    @apply text-2xl/12 md:text-4xl/12;
   }
 
   h2 {
