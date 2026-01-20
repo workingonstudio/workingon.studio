@@ -55,20 +55,19 @@
 </script>
 
 <!-- prettier-ignore -->
-<header class="group flex flex-row justify-between items-stretch transition-opacity ease-out duration-200">
-  <div class="flex gap-6">
-    <a href="/" title="Home" class="flex flex-col p-4 lg:px-4 lg:py-0 border-x border-surface-border transition-none justify-center">
+<header class="group flex flex-row items-stretch justify-between transition-opacity ease-out duration-200 border-x border-surface-border">
+  <a href="/" title="Home" class="flex flex-col justify-center p-4 lg:p-4 lg:py-0 transition-none">
       <Logo width={32} />
     </a>
     <nav
     class="{showMenu
       ? 'flex'
-      : 'hidden'} nav-scroll box-border flex-col divide-x-muted/20 text-xs transition-all duration-300 ease-out lg:flex"
+      : 'hidden'} nav-scroll box-border flex-col divide-x-muted/20 flex-1 px-6 text-xs lg:flex border-x border-surface-border"
     >
     <ul class="flex w-full flex-col lg:flex-row">
       {#each navItems as { icon, href, title, subtitle, description }}
         <li class="group" class:active={isActive(href)}>
-          <iconify-icon {icon} class="text-muted flex size-6 text-2xl lg:hidden xl:flex"></iconify-icon>
+          <iconify-icon {icon} class="text-muted flex size-4 lg:size-6 text-2xl lg:hidden xl:flex"></iconify-icon>
           <a {href} onclick={toggleMenu}>
             <!-- prettier-ignore -->
             <h2>{title}<span>{subtitle}</span></h2>
@@ -78,8 +77,8 @@
       {/each}
     </ul>
     </nav>
-  </div>
-  <div class="flex flex-row gap-4 items-center border-x border-surface-border p-4">
+  
+  <div class="flex flex-row gap-4 items-center p-4">
     <ThemeToggle />
     <button type="button" onclick={toggleMenu} aria-label="Toggle menu" class="hover:*:text-primary w-6 h-6 cursor-pointer flex lg:hidden">
       <iconify-icon icon="carbon:{showMenu ? 'close-large' : 'menu'}" class=" text-2xl text-muted"></iconify-icon>
