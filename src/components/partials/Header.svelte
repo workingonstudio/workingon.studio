@@ -20,35 +20,30 @@
       icon: "carbon:idea",
       href: "/about",
       title: "about",
-      subtitle: ".txt",
       description: "more questions answered.",
     },
     {
       icon: "carbon:archive",
       href: "/projects/",
       title: "projects",
-      subtitle: ".list",
       description: "live studio projects.",
     },
     {
       icon: "carbon:piggy-bank-slot",
       href: "/finances",
       title: "finances",
-      subtitle: ".csv",
       description: "financials in/out of the studio.",
     },
     {
       icon: "carbon:branch",
       href: "/progress",
       title: "progress",
-      subtitle: ".git",
       description: "every update, every change.",
     },
     {
       icon: "carbon:send-alt",
       href: "/contact",
       title: "contact",
-      subtitle: ".mail",
       description: "bother me with admin.",
     },
   ];
@@ -64,13 +59,13 @@
       ? 'flex'
       : 'hidden'} nav-scroll box-border flex-col divide-x-muted/20 flex-1 px-6 text-xs lg:flex border-x border-surface-border"
     >
-    <ul class="flex w-full flex-col lg:flex-row">
-      {#each navItems as { icon, href, title, subtitle, description }}
+    <ul class="flex flex-col lg:flex-row">
+      {#each navItems as { icon, href, title, description }}
         <li class="group" class:active={isActive(href)}>
           <iconify-icon {icon} class="text-muted flex size-4 lg:size-6 text-2xl lg:hidden xl:flex"></iconify-icon>
           <a {href} onclick={toggleMenu}>
             <!-- prettier-ignore -->
-            <h2>{title}<span>{subtitle}</span></h2>
+            <h2>{title}</h2>
             <p class="transition-all duration-200 ease-out">{description}</p>
           </a>
         </li>
@@ -98,7 +93,7 @@
 
   nav {
     ul {
-      @apply justify-between gap-0 lg:gap-12;
+      @apply justify-start gap-0 lg:gap-12;
       li {
         @apply flex flex-row items-center gap-4 py-4 transition-opacity duration-300 lg:py-6;
         a {

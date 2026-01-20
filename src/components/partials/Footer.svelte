@@ -56,7 +56,7 @@
     li {
       a {
         @apply hover:text-primary hover:underline;
-        @apply text-xxs flex font-bold;
+        @apply text-xxs flex font-medium;
       }
     }
   }

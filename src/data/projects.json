@@ -13,6 +13,26 @@
     "link": "dad-reply"
   },
   {
+    "projectIcon": "carbon:circle-dash",
+    "name": "Solidarity",
+    "tagline": "Helps you feel less shit about looking for work.",
+    "description": "Chrome extension with a single toggle to show everyone is #opentowork.",
+    "version": "1.0.1",
+    "status": "shipped",
+    "tags": [{ "icon": "carbon:magic-wand", "text": "free" }],
+    "link": "solidarity"
+  },
+  {
+    "projectIcon": "carbon:cloud-offline",
+    "name": "Is Figma down?",
+    "tagline": "The unofficial status.",
+    "description": "Site that mimics the Figma status, highlighting the issue with always online.",
+    "version": "1.0.0",
+    "status": "shipped",
+    "tags": [{ "icon": "carbon:magic-wand", "text": "free" }],
+    "link": "is-figma-down"
+  },
+  {
     "projectIcon": "carbon:chat-bot",
     "name": "Good Boy",
     "tagline": "Get the praise that you crave",
@@ -41,27 +61,6 @@
     "status": "shipped",
     "tags": [{ "icon": "carbon:magic-wand", "text": "free" }],
     "link": "glyph-palette"
-  },
-
-  {
-    "projectIcon": "carbon:circle-dash",
-    "name": "Solidarity",
-    "tagline": "Helps you feel less shit about looking for work.",
-    "description": "Chrome extension with a single toggle to show everyone is #opentowork.",
-    "version": "1.0.1",
-    "status": "shipped",
-    "tags": [{ "icon": "carbon:magic-wand", "text": "free" }],
-    "link": "solidarity"
-  },
-  {
-    "projectIcon": "carbon:cloud-offline",
-    "name": "Is Figma down?",
-    "tagline": "The unofficial status.",
-    "description": "Site that mimics the Figma status, highlighting the issue with always online.",
-    "version": "1.0.0",
-    "status": "shipped",
-    "tags": [{ "icon": "carbon:magic-wand", "text": "free" }],
-    "link": "is-figma-down"
   },
   {
     "projectIcon": "carbon:location",
