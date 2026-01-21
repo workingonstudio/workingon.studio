@@ -56,13 +56,28 @@
     "current": false
   },
   {
-    "label": "current",
+    "label": "12 Jan",
     "title": "Icons addition.",
     "description": "",
     "features": [
       "adding Font Awesome Brands.",
       "reverting layout to original.",
       "including icon set name on insert."
+    ],
+    "current": false
+  },
+  {
+    "label": "current",
+    "title": "Icon's and efficiencies.",
+    "description": "",
+    "features": [
+      "adding Phosphor icons.",
+      "adding Flexsearch.",
+      "improved search with tag mapping.",
+      "adding replace on insert.",
+      "removing labels in settings.",
+      "better caching.",
+      "fixing memory leaks."
     ],
     "current": true
   },
