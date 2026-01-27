@@ -10,47 +10,9 @@
       { "icon": "carbon:currency-dollar", "text": "paid" },
       { "icon": "carbon:magic-wand", "text": "free" }
     ],
-    "link": "dad-reply"
-  },
-  {
-    "projectIcon": "carbon:circle-dash",
-    "name": "Solidarity",
-    "tagline": "Helps you feel less shit about looking for work.",
-    "description": "Chrome extension with a single toggle to show everyone is #opentowork.",
-    "version": "1.0.1",
-    "status": "shipped",
-    "tags": [{ "icon": "carbon:magic-wand", "text": "free" }],
-    "link": "solidarity"
-  },
-  {
-    "projectIcon": "carbon:cloud-offline",
-    "name": "Is Figma down?",
-    "tagline": "The unofficial status.",
-    "description": "Site that mimics the Figma status, highlighting the issue with always online.",
-    "version": "1.0.0",
-    "status": "shipped",
-    "tags": [{ "icon": "carbon:magic-wand", "text": "free" }],
-    "link": "is-figma-down"
-  },
-  {
-    "projectIcon": "carbon:chat-bot",
-    "name": "Good Boy",
-    "tagline": "Get the praise that you crave",
-    "description": "A Figma plugin that randomly comments low effort praise on your designs.",
-    "version": "1.0.0",
-    "status": "shipped",
-    "tags": [{ "icon": "carbon:magic-wand", "text": "free" }],
-    "link": "good-boy"
-  },
-  {
-    "projectIcon": "carbon:folders",
-    "name": "Sketch Today",
-    "tagline": "A collection of modern Sketch resources.",
-    "description": "Resources to get you started when making the inevitable switch to Sketch.",
-    "version": "1.2.0",
-    "status": "shipped",
-    "tags": [{ "icon": "carbon:magic-wand", "text": "free" }],
-    "link": "sketch-today"
+    "img": "dadreply.webp",
+    "link": "dad-reply",
+    "externalLink": "false"
   },
   {
     "projectIcon": "carbon:data-categorical",
@@ -60,7 +22,69 @@
     "version": "1.1.1",
     "status": "shipped",
     "tags": [{ "icon": "carbon:magic-wand", "text": "free" }],
-    "link": "glyph-palette"
+    "img": "glyphpalette.webp",
+    "link": "glyph-palette",
+    "externalLink": "false"
+  },
+  {
+    "projectIcon": "carbon:circle-dash",
+    "name": "Solidarity",
+    "tagline": "Helps you feel less shit about looking for work.",
+    "description": "Chrome extension with a single toggle to show everyone is #opentowork.",
+    "version": "1.0.1",
+    "status": "shipped",
+    "tags": [{ "icon": "carbon:magic-wand", "text": "free" }],
+    "img": "solidarity.webp",
+    "link": "solidarity",
+    "externalLink": "false"
+  },
+  {
+    "projectIcon": "carbon:cloud-offline",
+    "name": "Is Figma down?",
+    "tagline": "The unofficial status.",
+    "description": "Site that mimics the Figma status, highlighting the issue with always online.",
+    "version": "1.0.0",
+    "status": "shipped",
+    "tags": [{ "icon": "carbon:magic-wand", "text": "free" }],
+    "img": "isfigmadown.webp",
+    "link": "is-figma-down",
+    "externalLink": "false"
+  },
+  {
+    "projectIcon": "carbon:chat-bot",
+    "name": "Good Boy",
+    "tagline": "Get the praise that you crave",
+    "description": "A Figma plugin that randomly comments low effort praise on your designs.",
+    "version": "1.0.0",
+    "status": "shipped",
+    "tags": [{ "icon": "carbon:magic-wand", "text": "free" }],
+    "img": "goodboy.webp",
+    "link": "good-boy",
+    "externalLink": "false"
+  },
+  {
+    "projectIcon": "carbon:folders",
+    "name": "Sketch Today",
+    "tagline": "A collection of modern Sketch resources.",
+    "description": "Resources to get you started when making the inevitable switch to Sketch.",
+    "version": "1.2.0",
+    "status": "shipped",
+    "tags": [{ "icon": "carbon:magic-wand", "text": "free" }],
+    "img": "sketchtoday.webp",
+    "link": "sketch-today",
+    "externalLink": "false"
+  },
+  {
+    "projectIcon": "carbon:folders",
+    "name": "Sketch QR",
+    "tagline": "QR codes that last forever.",
+    "description": "Free Sketch plugin that allows you to create and insert SVG QR codes.",
+    "version": "1.2.0",
+    "status": "shipped",
+    "tags": [{ "icon": "carbon:magic-wand", "text": "free" }],
+    "img": "sketchqr.webp",
+    "link": "https://github.com/workingonstudio/sketch-qr.sketchplugin",
+    "externalLink": "true"
   },
   {
     "projectIcon": "carbon:location",
@@ -70,6 +94,8 @@
     "version": "5.0.0",
     "status": "shipped",
     "tags": [{ "icon": "carbon:magic-wand", "text": "free" }],
-    "link": "/"
+    "img": "workingon.webp",
+    "link": "/",
+    "externalLink": "false"
   }
 ]
