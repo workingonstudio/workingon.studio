@@ -41,16 +41,6 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
             height: 630,
             width: 1200,
           },
-          {
-            url: Astro.site + "glyph-palette/opengraph/site-square.webp",
-            height: 1080,
-            width: 1080,
-          },
-          {
-            url: Astro.site + "glyph-palette/opengraph/site-minimum.webp",
-            height: 315,
-            width: 600,
-          },
         ],
         site_name: "glyphpalette.com",
         type: "site",
@@ -82,10 +72,9 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
       is:inline
       type="module"
       src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    >
-    </script>
-    <script is:inline src="https://kit.fontawesome.com/180e1f6a33.js" crossorigin="anonymous"
     ></script>
+    <script is:inline src="https://kit.fontawesome.com/180e1f6a33.js" crossorigin="anonymous">
+    </script>
     <meta name="generator" content={Astro.generator} />
     <Analytics productName="Glyph Palette" />
   </head>
