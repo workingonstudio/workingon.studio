@@ -10,7 +10,7 @@
 <PageHeader>
   <h1>I design, build, and ship software, browser extensions, and plugins. Some solve problems. Some expose them.</h1>
   <section class="flex max-w-xl flex-col gap-8">
-    <p>I've shipped 8 products in {daysSince} days.</p>
+    <p>I've designed, built and shipped 8 products in {daysSince} days.</p>
     <p>Some solve actual problems. Others expose the absurdity of online culture. All of them work.</p>
   </section>
 </PageHeader>
