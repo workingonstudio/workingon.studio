@@ -10,7 +10,7 @@
   <h1>
     {daysSince} days passed.
     <br />
-    8 projects shipped.
+    8 projects, designed, built and shipped.
   </h1>
   <div class="flex max-w-xl flex-col gap-12">
     <p>Things I made because I was tired of not seeing them. Each one works. That's the point.</p>
