@@ -10,16 +10,18 @@
         <Icon icon="diamond-outline" />
         <h1>A modern icon plugin for Sketch.</h1>
         <p class="w-full text-xl lg:w-xl">Bring 1000’s of modern icons* directly to into your .sketch files.</p>
-        <small>* currently supporting Material, Lucide, Hero, Carbon, Phosphor, and Font Awesome Brands.</small>
+        <small>
+          * currently supporting Material, Lucide, Hero, Carbon, Phosphor, Bootstrap and Font Awesome Brands.
+        </small>
       </div>
       <div class="flex flex-row gap-6">
         <a
-          href="/glyph-palette/downloads/glyph-palette-v1.4.0.sketchplugin.zip"
+          href="/glyph-palette/downloads/glyph-palette-v1.4.1.sketchplugin.zip"
           download
           class="highlight flex flex-row items-center gap-3 px-4 py-3 text-sm hover:bg-blue-700"
           data-umami-event="clicked-download"
         >
-          Download v1.4.0
+          Download v1.4.1
         </a>
         <a
           href="/projects/glyph-palette/change-log"
