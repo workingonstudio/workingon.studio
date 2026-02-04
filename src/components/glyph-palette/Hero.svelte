@@ -16,7 +16,7 @@
       </div>
       <div class="flex flex-row gap-6">
         <a
-          href="/glyph-palette/downloads/glyph-palette-v1.4.0.sketchplugin.zip"
+          href="/glyph-palette/downloads/glyph-palette-v1.4.1.sketchplugin.zip"
           download
           class="highlight flex flex-row items-center gap-3 px-4 py-3 text-sm hover:bg-blue-700"
           data-umami-event="clicked-download"
