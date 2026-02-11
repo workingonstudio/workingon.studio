@@ -13,7 +13,7 @@
   --color-body: theme(colors.zinc.700);
   --color-muted: theme(colors.zinc.500);
   --color-bg-main: theme(colors.zinc.50);
-  --color-surface: theme(colors.zinc.100);
+  --color-surface: theme(colors.stone.100);
   --color-surface-border: theme(colors.zinc.200);
 }
 
@@ -44,11 +44,11 @@
   h4 {
     font-family: var(--font-satoshi);
     font-feature-settings: "ss01" 1;
-    @apply text-header font-bold text-balance;
+    @apply text-header font-medium text-balance;
   }
 
   h1 {
-    @apply text-4xl/12 md:text-7xl/tight;
+    @apply text-4xl/12 md:text-6xl/tight;
   }
 
   h2 {

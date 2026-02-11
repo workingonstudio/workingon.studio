@@ -5,14 +5,14 @@
 
   function toggleTheme() {
     $theme = $theme === "dark" ? "light" : "dark";
-    icon = $theme === "dark" ? "carbon:sun" : "carbon:moon";
+    icon = $theme === "dark" ? "ph:sun-bold" : "ph:moon-stars-bold";
   }
 </script>
 
 <button
   onclick={toggleTheme}
   aria-label="{$theme === 'dark' ? 'Light' : 'Dark'} mode"
-  class="text-muted hover:text-body flex size-6 cursor-pointer items-center justify-center"
+  class="text-muted hover:text-body flex size-4 cursor-pointer items-center justify-center"
 >
-  <iconify-icon {icon} class="text-xl"></iconify-icon>
+  <iconify-icon {icon} class="text-base"></iconify-icon>
 </button>
