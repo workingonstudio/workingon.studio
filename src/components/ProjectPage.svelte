@@ -12,12 +12,9 @@
     <br />
     8 projects, designed, built and shipped.
   </h1>
-  <div class="flex max-w-xl flex-col gap-12">
-    <p>Things I made because I was tired of not seeing them. Each one works. That's the point.</p>
-  </div>
 </PageHeader>
 
-<section class="mx-0 md:mx-2 2xl:mt-5">
+<section class="border-surface-border border">
   <ProjectList />
 </section>
 

@@ -56,7 +56,7 @@
   }
 
   p {
-    @apply lg:text-xl/relaxed;
+    @apply text-base;
     @apply text-pretty;
   }
 }

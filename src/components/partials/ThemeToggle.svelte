@@ -5,7 +5,7 @@
 
   function toggleTheme() {
     $theme = $theme === "dark" ? "light" : "dark";
-    icon = $theme === "dark" ? "ph:sun-bold" : "ph:moon-stars-bold";
+    icon = $theme === "dark" ? "ph:sun" : "ph:moon-stars";
   }
 </script>
 

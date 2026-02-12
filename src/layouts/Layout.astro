@@ -109,10 +109,8 @@ const nudicaFontUrl = import.meta.env.NUDICA_FONT_CSS_URL;
       </div>
     </div>
     <main class="mx-16 flex min-h-screen flex-1 flex-col">
-      <div class="flex flex-1 flex-col justify-between gap-24">
-        <div class="flex grow-1 flex-col justify-start gap-24 2xl:flex-row">
-          <slot />
-        </div>
+      <div class="flex grow-1 flex-col justify-start">
+        <slot />
         <Footer client:visible />
       </div>
     </main>

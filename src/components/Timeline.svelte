@@ -125,9 +125,6 @@
   <h1>
     {result.totalCommits} commits. {result.totalMerges} merges. {result.totalPRs} pull requests. One rebase.
   </h1>
-  <div class="flex max-w-xl flex-col gap-12">
-    <p>This site is in a constant state of change. Tweaked to death, and improved. And here's the proof.</p>
-  </div>
 </PageHeader>
 
 <section class="timeline-section flex max-w-2xl flex-col gap-12 lg:mx-2 2xl:mt-5 2xl:w-5xl">
