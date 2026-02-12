@@ -127,85 +127,51 @@
   </h1>
 </PageHeader>
 
-<section class="timeline-section flex max-w-2xl flex-col gap-12 lg:mx-2 2xl:mt-5 2xl:w-5xl">
-  <div class="timeline-reveal group flex flex-col gap-12">
-    <div class="timeline-groups flex flex-col gap-12">
-      {#each groupedEntries as group}
-        <div class="date-group">
-          <div class="date-header">
-            <div class="bg-surface border-surface-border flex flex-col rounded-lg border p-2">
-              <iconify-icon icon="carbon:calendar" class="text-header size-4 text-base"></iconify-icon>
-            </div>
-            <h3>
-              {group.date}
-            </h3>
-          </div>
-          <ul class="timeline-entries flex flex-col gap-8">
-            {#each group.entries as entry}
-              <li class="timeline-entry space-y-2" data-type={entry.type}>
-                <div class="entry-content">
-                  {#if entry.branchMerged && entry.intoBranch}
-                    <div class="entry">
-                      <div class="flex flex-row items-center gap-3">
-                        <div class="bg-surface-border size-2 rounded-full"></div>
-                        <div
-                          class="bg-surface text-xxs text-header border-surface-border flex flex-row items-center rounded-full border px-2 py-0.5"
-                        >
-                          {DateTime.fromISO(entry.date).toFormat("T")}
-                        </div>
-                      </div>
-                      <p>
-                        <span class="merge-info ml-5 flex flex-row items-center gap-2">
-                          <span class="merged-branch">
-                            {entry.branchDisplay === entry.branchMerged ? entry.intoBranch : entry.branchDisplay}
-                          </span>
-                          <iconify-icon icon="carbon:arrow-left"></iconify-icon>
-                          <span class="into-branch">{entry.branchMerged}</span>
-                        </span>
-                      </p>
-                    </div>
-                  {:else}
-                    <div class="entry">
-                      <div class="flex flex-row items-center gap-3">
-                        <div class="bg-surface-border size-2 rounded-full"></div>
-                        <div
-                          class="bg-surface text-xxs text-header border-surface-border flex flex-row items-center rounded-full border px-2 py-0.5"
-                        >
-                          {DateTime.fromISO(entry.date).toFormat("T")}
-                        </div>
-                      </div>
-                      <p class="ml-5">
-                        {entry.message}
-                      </p>
-                    </div>
-                  {/if}
-                  <ul class="entry-meta text-xxs text-primary ml-5 flex gap-3 md:flex-row">
-                    {#if entry.branchMerged && entry.intoBranch}
-                      <li>merge</li>
-                    {:else}
-                      <li class="branch-display">
-                        {shortenText(entry.branchDisplay)}
-                      </li>
-                    {/if}
-                    <li class="version-debug">
-                      {entry.version}
-                    </li>
-                  </ul>
-                </div>
-              </li>
-            {/each}
-          </ul>
-        </div>
-      {/each}
+<section class="timeline-section border-surface-border flex flex-col gap-12 border">
+  <div class="timeline-reveal group border-surface-border divide-surface-border flex w-1/2 flex-col divide-y border-r">
+    {#each groupedEntries as group}
+      <div class="flex flex-col gap-6 px-16 py-12">
+        <h3 class="text-header flex flex-row items-center gap-2 font-medium">
+          {group.date}
+        </h3>
+        <ul class="flex flex-col gap-5">
+          {#each group.entries as entry}
+            <li class="flex flex-col gap-1" data-type={entry.type}>
+              {#if entry.branchMerged && entry.intoBranch}
+                <p class="text-header flex flex-row items-center gap-2 font-medium">
+                  {entry.branchDisplay === entry.branchMerged ? entry.intoBranch : entry.branchDisplay}
+                  <iconify-icon icon="ph:arrow-left-bold"></iconify-icon>
+                  {entry.branchMerged}
+                </p>
+              {:else}
+                <p class="text-header flex flex-row items-center font-medium">
+                  {entry.message}
+                </p>
+              {/if}
+              <ul class="text-xxs text-muted flex gap-3 font-medium">
+                <li>{DateTime.fromISO(entry.date).toFormat("T")}</li>
+                {#if entry.branchMerged && entry.intoBranch}
+                  <li>merge</li>
+                {:else}
+                  <li class="branch-display text-muted font-medium">
+                    {shortenText(entry.branchDisplay)}
+                  </li>
+                {/if}
+                <li>{entry.version}</li>
+              </ul>
+            </li>
+          {/each}
+        </ul>
+      </div>
+    {/each}
 
-      {#if hasMore}
-        <div bind:this={loadMoreTrigger}>
-          {#if isLoadingMore}
-            <p class="text-sm text-gray-400">Loading more commits...</p>
-          {/if}
-        </div>
-      {/if}
-    </div>
+    {#if hasMore}
+      <div bind:this={loadMoreTrigger}>
+        {#if isLoadingMore}
+          <p class="text-sm text-gray-400">Loading more commits...</p>
+        {/if}
+      </div>
+    {/if}
   </div>
 </section>
 
@@ -216,30 +182,5 @@
   }
   h3 {
     @apply text-xl;
-  }
-
-  .date-group {
-    @apply flex flex-col gap-12;
-  }
-
-  .date-header {
-    @apply flex flex-row items-center gap-4;
-  }
-
-  .entry {
-    @apply flex flex-col items-start gap-3;
-    p {
-      @apply text-base font-medium;
-    }
-  }
-
-  .entry-content {
-    @apply flex flex-col gap-5;
-  }
-
-  .entry-meta {
-    li {
-      @apply bg-surface text-xxs text-header border-surface-border flex flex-row items-center rounded-full border px-2 py-0.5;
-    }
   }
 </style>

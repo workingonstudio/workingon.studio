@@ -34,35 +34,27 @@
     Currently <span class={totalClass}>{netTotal}</span>
     in the red.
   </h1>
-  <div class="flex max-w-xl flex-col gap-12">
-    <p>Every penny in, every penny out. No hiding the reality of running a studio.</p>
-  </div>
 </PageHeader>
 
-<section class="mx-0 flex flex-col gap-7 md:mx-2 2xl:mt-5 2xl:w-1/2">
+<section class="border-surface-border divide-surface-border flex flex-col divide-y border">
   {#each financeData.entries as { date, items }}
-    <div class="flex flex-col" role="table" aria-label="Financial transactions">
+    <div class="flex flex-col gap-6 px-16 py-12" role="table" aria-label="Financial transactions">
       <!-- Header -->
-      <div class="text-xxs text-primary flex pb-12" role="rowgroup">
-        <div class="flex w-full" role="row">
-          <span class="flex-1 text-left text-3xl" role="columnheader">{date}</span>
+      <div class="text-xxs text-primary flex" role="rowgroup">
+        <div class="flex w-full items-center" role="row">
+          <h3 class="text-header w-full text-xl font-medium" role="columnheader">{date}</h3>
           <span class="w-28 text-right" role="columnheader">
-            <span class="h-8 w-8">
-              <iconify-icon icon="carbon:arrow-down-right" class="text-3xl"></iconify-icon>
-            </span>
+            <iconify-icon icon="ph:arrow-down-right-bold" class="text-base"></iconify-icon>
           </span>
-          <span class="w-28 text-right" role="columnheader">
-            <span class="h-8 w-8">
-              <iconify-icon icon="carbon:arrow-up-right" class="text-3xl"></iconify-icon>
-            </span>
+          <span class="w-28 text-right text-base" role="columnheader">
+            <iconify-icon icon="ph:arrow-up-right-bold" class="text-base"></iconify-icon>
           </span>
         </div>
       </div>
-
       <!-- Rows -->
-      <div class="finance-rows text-body flex flex-col text-xl" role="rowgroup">
+      <div class="finance-rows flex flex-col gap-3 text-base" role="rowgroup">
         {#each items as { description, out }}
-          <div class="finance-row flex cursor-default pb-4 transition-colors duration-150 ease-in-out" role="row">
+          <div class="finance-row flex cursor-default gap-4 transition-colors duration-150 ease-in-out" role="row">
             <span class="flex-1 truncate" role="cell">{description}</span>
             <span class="w-28 text-right" role="cell"></span>
             <span class="w-28 text-right" role="cell">-£{out.toFixed(2)}</span>
@@ -88,7 +80,7 @@
   }
 
   .finance-row {
-    @apply text-sm transition-opacity duration-200 md:text-base lg:text-xl;
+    @apply transition-opacity duration-200;
   }
 
   .finance-row:focus {

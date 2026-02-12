@@ -52,36 +52,34 @@
   </h1>
 </PageHeader>
 
-<section class="mb-10 max-w-2xl space-y-4 lg:mx-2 2xl:mt-5 2xl:w-5xl">
-  <div class="flex flex-col gap-4">
-    <div class="flex flex-col gap-6 lg:flex-row lg:items-center">
-      <iconify-icon icon="carbon:mail-all" class="mt-0 size-8 text-3xl text-gray-500 md:mt-1"></iconify-icon>
-      <div class="flex flex-row items-center gap-2">
-        <a
-          href="mailto:hello@workingon.studio?subject=Can%20I/We%20work%20with%20you%3F&"
-          onclick={() => {
-            const currentRate = displayRate;
-            dayRate.reset();
+<section class="border-surface-border border px-16 py-12">
+  <div class=" flex flex-col gap-1">
+    <a
+      href="mailto:hello@workingon.studio?subject=Can%20I/We%20work%20with%20you%3F&"
+      onclick={() => {
+        const currentRate = displayRate;
+        dayRate.reset();
 
-            // Clear the time interval
-            if (timeInterval !== null) {
-              clearInterval(timeInterval);
-            }
+        // Clear the time interval
+        if (timeInterval !== null) {
+          clearInterval(timeInterval);
+        }
 
-            // Animate back to base rate
-            animateRate(currentRate, 500);
+        // Animate back to base rate
+        animateRate(currentRate, 500);
 
-            // Restart time-based increment after animation
-            setTimeout(() => {
-              startTimeBasedIncrement(500);
-            }, 800);
-          }}
-        >
-          hello@workingon.studio
-        </a>
-      </div>
-    </div>
-    <p class="text-sm lg:ml-14">
+        // Restart time-based increment after animation
+        setTimeout(() => {
+          startTimeBasedIncrement(500);
+        }, 800);
+      }}
+      class="text-header flex flex-row items-center gap-2 font-medium"
+    >
+      hello@workingon.studio
+      <iconify-icon icon="ph:arrow-up-right-bold"></iconify-icon>
+    </a>
+
+    <p class="text-muted text-sm">
       If I don't reply within 7 days, assume it's a no, I'm on holiday, or dead.
       <br />
       Whatever makes you feel better.
@@ -91,10 +89,4 @@
 
 <style>
   @reference "@styles/main.css";
-  a {
-    @apply text-primary text-lg underline lg:text-3xl;
-    &:hover {
-      @apply no-underline;
-    }
-  }
 </style>
