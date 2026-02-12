@@ -5,6 +5,7 @@
   import ArticleList from "./partials/ArticleList.svelte";
   import WorkHistory from "./partials/WorkHistory.svelte";
   import About from "./partials/About.svelte";
+  import SocialProfiles from "./partials/SocialProfiles.svelte";
   const launchDate = DateTime.fromISO("2025-08-27");
   const daysSince = Math.floor(DateTime.now().diff(launchDate, "days").days);
 </script>
@@ -20,6 +21,7 @@
   <div class="divide-surface-border divide-y-1">
     <About />
     <WorkHistory />
+    <SocialProfiles />
   </div>
   <div class="divide-surface-border divide-y-1">
     <ProjectList />

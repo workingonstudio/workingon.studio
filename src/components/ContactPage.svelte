@@ -50,11 +50,6 @@
   I work with teams that decide fast and ship faster. 
   The rate increases while you think about it.
   </h1>
-  <div class="flex max-w-xl flex-col gap-12">
-    <div class="flex flex-row gap-2">
-      <p class="text-sm">&#42; If it takes you too long to decide, you'll be a nightmare to work with.</p>
-    </div>
-  </div>
 </PageHeader>
 
 <section class="mb-10 max-w-2xl space-y-4 lg:mx-2 2xl:mt-5 2xl:w-5xl">

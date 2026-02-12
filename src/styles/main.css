@@ -14,7 +14,7 @@
   --color-muted: theme(colors.zinc.500);
   --color-bg-main: theme(colors.zinc.50);
   --color-surface: theme(colors.stone.100);
-  --color-surface-border: theme(colors.zinc.200);
+  --color-surface-border: theme(colors.stone.200);
 }
 
 .dark {

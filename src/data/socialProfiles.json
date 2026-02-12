@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Twitter",
+    "href": "https://twitter.com/prmack",
+    "description": "Follow along with my projects, and calling out corporate nonsense."
+  },
+  {
+    "name": "LinkedIn",
+    "href": "https://linkedin.com/in/prmack",
+    "description": "Keep up to date in a somewhat professional manner."
+  },
+  {
+    "name": "Github",
+    "href": "https://github.com/prmack",
+    "description": "Check my stats, and even the repo for this site."
+  }
+]
