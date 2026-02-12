@@ -15,7 +15,7 @@
 <section class="border-surface-border grid grid-cols-2 border border-b-0">
   <div class="border-surface-border border-r">
     <!-- prettier-ignore -->
-    <div class="flex flex-col gap-5 px-16 py-12">
+    <div class="flex flex-col gap-5 px-16 py-12 border-b border-surface-border">
       <p>
         16 years building for the internet. Started at agencies. Moved to startups fast.
       </p>

@@ -173,10 +173,11 @@
       </div>
     {/if}
   </div>
-  <div class="flex grow-0 flex-col gap-6 px-16 py-12">
-    <h3 class="text-xl font-medium">Details</h3>
-    <!-- prettier-ignore -->
-    <ul class="flex-col flex gap-3 text-sm text-muted">
+  <section>
+    <div class="border-surface-border flex flex-col gap-6 border-b px-16 py-12">
+      <h3 class="text-xl font-medium">Details</h3>
+      <!-- prettier-ignore -->
+      <ul class="flex-col flex gap-3 text-sm text-muted">
       <li>Hosted on <a href="https://github.com/workingonstudio/workingon.studio">Github</a> pages.</li>
       <li>Built with <a href="https://astro.build/">Astro</a> and <a href="https://svelte.dev/">Svelte</a>.</li>
       <li>Licenced files hosted on <a href="">CloudFlare</a>.</li>
@@ -184,7 +185,8 @@
       <li>Icons are <a href="https://phosphoricons.com/">Phosphor</a> via <a href="https://iconify.design/">Iconfiy</a>.</li>
       <li>Analytics tracked anonymously via <a href="https://umami.is/">Umami</a> self-hosted via <a href="https://railway.com/">Railway</a>.</li>
     </ul>
-  </div>
+    </div>
+  </section>
 </section>
 
 <style>
