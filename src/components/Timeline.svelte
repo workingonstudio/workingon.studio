@@ -127,8 +127,9 @@
   </h1>
 </PageHeader>
 
-<section class="timeline-section border-surface-border flex flex-col gap-12 border">
-  <div class="timeline-reveal group border-surface-border divide-surface-border flex w-1/2 flex-col divide-y border-r">
+<section class="timeline-section border-surface-border divide-surface-border grid grid-cols-2 divide-x border">
+  <div></div>
+  <div class="timeline-reveal group divide-surface-border flex flex-col divide-y">
     {#each groupedEntries as group}
       <div class="flex flex-col gap-6 px-16 py-12">
         <h3 class="text-header flex flex-row items-center gap-2 font-medium">

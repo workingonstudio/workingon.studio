@@ -13,7 +13,7 @@
 <PageHeader>
   <!-- prettier-ignore -->
   <h1>
-    I <span class="underline">design</span>, <span class="underline">build</span>, and <span class="underline">ship</span> software, browser extensions, and plugins. Some solve problems. Some expose them.
+    I <span class="underline">design</span>, <span class="underline">build</span>, and <span class="underline">ship</span> software. 16 years. 5 exits. Some products solve problems. Some expose them.
   </h1>
 </PageHeader>
 

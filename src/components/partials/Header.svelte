@@ -17,31 +17,26 @@
 
   let navItems = [
     {
-      icon: "carbon:idea",
       href: "/about",
       title: "about",
       description: "more questions answered.",
     },
     {
-      icon: "carbon:archive",
       href: "/projects/",
       title: "projects",
       description: "live studio projects.",
     },
     {
-      icon: "carbon:piggy-bank-slot",
       href: "/finances",
       title: "finances",
       description: "financials in/out of the studio.",
     },
     {
-      icon: "carbon:branch",
       href: "/progress",
       title: "progress",
       description: "every update, every change.",
     },
     {
-      icon: "carbon:send-alt",
       href: "/contact",
       title: "contact",
       description: "bother me with admin.",

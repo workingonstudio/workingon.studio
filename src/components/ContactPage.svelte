@@ -2,6 +2,7 @@
   import PageHeader from "@components/partials/PageHeader.svelte";
   import { onMount } from "svelte";
   import { dayRate } from "../stores/dayRate";
+  import SocialProfiles from "./partials/SocialProfiles.svelte";
 
   let displayRate = 500;
   let timeInterval: ReturnType<typeof setInterval> | null = null;
@@ -53,39 +54,38 @@
 </PageHeader>
 
 <section class="border-surface-border divide-surface-border flex flex-1 divide-x border border-b-0">
-  <div class="flex w-1/2 flex-col gap-1 px-16 py-12">
-    <a
-      href="mailto:hello@workingon.studio?subject=Can%20I/We%20work%20with%20you%3F&"
-      onclick={() => {
-        const currentRate = displayRate;
-        dayRate.reset();
-
-        // Clear the time interval
-        if (timeInterval !== null) {
-          clearInterval(timeInterval);
-        }
-
-        // Animate back to base rate
-        animateRate(currentRate, 500);
-
-        // Restart time-based increment after animation
-        setTimeout(() => {
-          startTimeBasedIncrement(500);
-        }, 800);
-      }}
-      class="text-header flex flex-row items-center gap-2 font-medium"
-    >
-      hello@workingon.studio
-      <iconify-icon icon="ph:arrow-up-right-bold"></iconify-icon>
-    </a>
-
-    <p class="text-muted text-sm">
-      If I don't reply within 7 days, assume it's a no, I'm on holiday, or dead.
-      <br />
-      Whatever makes you feel better.
-    </p>
+  <div class="flex w-1/2 flex-col gap-6 px-16 py-12">
+    <h3 class="text-xl font-medium">Send email</h3>
+    <div class="flex flex-col gap-1">
+      <a
+        href="mailto:hello@workingon.studio?subject=Can%20I/We%20work%20with%20you%3F&"
+        onclick={() => {
+          const currentRate = displayRate;
+          dayRate.reset();
+          // Clear the time interval
+          if (timeInterval !== null) {
+            clearInterval(timeInterval);
+          }
+          // Animate back to base rate
+          animateRate(currentRate, 500);
+          // Restart time-based increment after animation
+          setTimeout(() => {
+            startTimeBasedIncrement(500);
+          }, 800);
+        }}
+        class="text-header flex flex-row items-center gap-2 font-medium"
+      >
+        hello@workingon.studio
+        <iconify-icon icon="ph:arrow-up-right-bold"></iconify-icon>
+      </a>
+      <p class="text-muted text-sm">
+        If I don't reply within 7 days, assume it's a no, I'm on holiday, or dead.
+        <br />
+        Whatever makes you feel better.
+      </p>
+    </div>
   </div>
-  <div class=""></div>
+  <SocialProfiles />
 </section>
 
 <style>
