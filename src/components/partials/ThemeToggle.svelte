@@ -1,11 +1,10 @@
 <script lang="ts">
   import { theme } from "@stores/themeStore";
 
-  let icon = "carbon:sun";
+  $: icon = $theme === "dark" ? "ph:sun" : "ph:moon-stars";
 
   function toggleTheme() {
     $theme = $theme === "dark" ? "light" : "dark";
-    icon = $theme === "dark" ? "ph:sun" : "ph:moon-stars";
   }
 </script>
 

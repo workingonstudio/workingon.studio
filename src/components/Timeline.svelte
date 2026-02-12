@@ -128,11 +128,10 @@
 </PageHeader>
 
 <section class="timeline-section border-surface-border divide-surface-border grid grid-cols-2 divide-x border">
-  <div></div>
   <div class="timeline-reveal group divide-surface-border flex flex-col divide-y">
     {#each groupedEntries as group}
       <div class="flex flex-col gap-6 px-16 py-12">
-        <h3 class="text-header flex flex-row items-center gap-2 font-medium">
+        <h3 class="text-header flex flex-row items-center gap-2 text-xl font-medium">
           {group.date}
         </h3>
         <ul class="flex flex-col gap-5">
@@ -174,6 +173,18 @@
       </div>
     {/if}
   </div>
+  <div class="flex grow-0 flex-col gap-6 px-16 py-12">
+    <h3 class="text-xl font-medium">Details</h3>
+    <!-- prettier-ignore -->
+    <ul class="flex-col flex gap-3 text-sm text-muted">
+      <li>Hosted on <a href="https://github.com/workingonstudio/workingon.studio">Github</a> pages.</li>
+      <li>Built with <a href="https://astro.build/">Astro</a> and <a href="https://svelte.dev/">Svelte</a>.</li>
+      <li>Licenced files hosted on <a href="">CloudFlare</a>.</li>
+      <li>Set with <a href="https://www.fontshare.com/fonts/satoshi">Satoshi</a> and <a href="https://rsms.me/inter/">Inter</a> via <a href="https://www.fontshare.com/">FontShare</a> and <a href="https://fonts.bunny.net/">Bunny</a>.</li>
+      <li>Icons are <a href="https://phosphoricons.com/">Phosphor</a> via <a href="https://iconify.design/">Iconfiy</a>.</li>
+      <li>Analytics tracked anonymously via <a href="https://umami.is/">Umami</a> self-hosted via <a href="https://railway.com/">Railway</a>.</li>
+    </ul>
+  </div>
 </section>
 
 <style>
@@ -181,7 +192,11 @@
   h1 {
     font-feature-settings: "ss01" 1;
   }
-  h3 {
-    @apply text-xl;
+  ul {
+    li {
+      a {
+        @apply underline;
+      }
+    }
   }
 </style>
