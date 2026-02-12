@@ -10,7 +10,7 @@
   </h1>
 </PageHeader>
 
-<section class="border-surface-border border">
+<section class="border-surface-border flex flex-1 border border-b-0">
   <div class="border-surface-border w-1/2 border-r">
     <About />
   </div>

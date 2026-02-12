@@ -17,7 +17,7 @@
   </h1>
 </PageHeader>
 
-<section class="border-surface-border divide-surface-border grid grid-cols-2 divide-x-1 border">
+<section class="border-surface-border divide-surface-border grid grid-cols-2 divide-x-1 border border-b-0">
   <div class="divide-surface-border divide-y-1">
     <About />
     <WorkHistory />

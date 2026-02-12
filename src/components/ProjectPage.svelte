@@ -14,7 +14,7 @@
   </h1>
 </PageHeader>
 
-<section class="border-surface-border border">
+<section class="border-surface-border border border-b-0">
   <ProjectList />
 </section>
 

@@ -50,13 +50,6 @@
     "externalLink": true
   },
   {
-    "name": "workingon.studio",
-    "description": "Click it, you'll give me some dopamine for the extra hits.",
-    "shipped": true,
-    "link": "/",
-    "externalLink": false
-  },
-  {
     "name": "When to work",
     "description": "Find a great time to work together.",
     "shipped": false,

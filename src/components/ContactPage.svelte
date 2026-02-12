@@ -52,8 +52,8 @@
   </h1>
 </PageHeader>
 
-<section class="border-surface-border border px-16 py-12">
-  <div class=" flex flex-col gap-1">
+<section class="border-surface-border divide-surface-border flex flex-1 divide-x border border-b-0">
+  <div class="flex w-1/2 flex-col gap-1 px-16 py-12">
     <a
       href="mailto:hello@workingon.studio?subject=Can%20I/We%20work%20with%20you%3F&"
       onclick={() => {
@@ -85,6 +85,7 @@
       Whatever makes you feel better.
     </p>
   </div>
+  <div class=""></div>
 </section>
 
 <style>
