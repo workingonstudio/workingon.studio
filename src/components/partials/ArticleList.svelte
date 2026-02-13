@@ -24,7 +24,7 @@
 </script>
 
 <section class="content gap-6">
-  <h3 class="text-xl font-medium">Writing</h3>
+  <h2 class="text-xl font-medium">Writing</h2>
   <ul class="flex flex-col gap-5">
     {#each articles as { title, subtitle, href }}
       <li class="flex flex-col gap-1">

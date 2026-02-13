@@ -22,9 +22,6 @@ const defaultDescription =
   "I build tools that work and make you question why you needed them. Cultural mirror products for the modern internet.";
 const currentURL = new URL(Astro.url.pathname, Astro.site).href;
 const currentPath = Astro.url.pathname;
-
-// Get font URLs from environment variables
-const nudicaFontUrl = import.meta.env.NUDICA_FONT_CSS_URL;
 ---
 
 <!doctype html>
@@ -98,7 +95,6 @@ const nudicaFontUrl = import.meta.env.NUDICA_FONT_CSS_URL;
     <Analytics />
     <StructuredData />
     <!-- CDN Font Stylesheets -->
-    {nudicaFontUrl && <link rel="stylesheet" href={nudicaFontUrl} />}
     <title>{title}</title>
   </head>
 

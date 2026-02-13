@@ -3,7 +3,7 @@
 </script>
 
 <section class="content gap-6">
-  <h3 class="text-xl font-medium">Work history</h3>
+  <h2 class="text-xl font-medium">Work history</h2>
   <ul class="flex flex-col gap-5">
     {#each workHistory as { title, company, status }}
       <li class="flex flex-col gap-1">

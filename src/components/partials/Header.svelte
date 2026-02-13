@@ -81,10 +81,6 @@
     @apply text-base font-medium;
   }
 
-  h2 span {
-    @apply text-muted text-xs;
-  }
-
   nav {
     ul {
       @apply justify-between gap-3 lg:gap-12;
@@ -101,11 +97,6 @@
     /* When hovering, fade everything except the hovered item */
     &:has(li:hover) li:not(:hover) {
       @apply opacity-30 delay-100;
-    }
-
-    /* When hovering, remove active styles from active item if it's not being hovered */
-    &:has(li:hover) li.active:not(:hover) h2 span {
-      @apply text-muted text-shadow-none motion-safe:animate-none;
     }
 
     /* When NOT hovering, fade non-active items */
