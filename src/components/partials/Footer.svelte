@@ -50,9 +50,9 @@
       </li>
     </ul>
   </div>
-  <div class="flex w-16 flex-col items-center justify-center transition-none">
+  <a href="#" class="flex w-16 flex-col items-center justify-center transition-none">
     <iconify-icon icon="ph:arrow-up-bold"></iconify-icon>
-  </div>
+  </a>
 </footer>
 
 <style>
