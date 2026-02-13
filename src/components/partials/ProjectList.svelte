@@ -17,7 +17,7 @@
 <div class="divide-surface-border flex flex-col divide-y">
   {#if inDevProjects.length > 0}
     <section class="content gap-6">
-      <h3 class="text-xl font-medium">In development</h3>
+      <h3 class="text-xl font-medium">Currently building</h3>
       <ul class="flex flex-col gap-5">
         {#each inDevProjects as { name, description, link, externalLink }}
           <li class="project-item flex flex-col gap-1">
