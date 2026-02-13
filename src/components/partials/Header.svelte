@@ -50,11 +50,11 @@
       <Logo width={27} />
     </a>
     <nav
-    class="{showMenu
-      ? 'flex'
-      : 'hidden'} nav-scroll box-border flex-col divide-x-muted/20 flex-1 px-16 text-xs lg:flex border-x border-surface-border"
+    class="nav-scroll box-border flex-col divide-x-muted/20 flex-1 p-8 lg:px-16 text-xs lg:flex border-x border-surface-border"
     >
-    <ul class="flex flex-col lg:flex-row">
+    <ul class="flex-col lg:flex-row {showMenu
+      ? 'flex'
+      : 'hidden'}">
       {#each navItems as { href, title, description }}
         <li class="group" class:active={isActive(href)}>
           <a {href} onclick={toggleMenu}>
@@ -69,8 +69,8 @@
   
   <div class="flex flex-row gap-4 items-center p-6">
     <ThemeToggle />
-    <button type="button" onclick={toggleMenu} aria-label="Toggle menu" class="hover:*:text-primary w-6 h-6 cursor-pointer flex lg:hidden">
-      <iconify-icon icon="carbon:{showMenu ? 'close-large' : 'menu'}" class=" text-2xl text-muted"></iconify-icon>
+    <button type="button" onclick={toggleMenu} aria-label="Toggle menu" class="hover:*:text-primary size-4 cursor-pointer flex lg:hidden">
+      <iconify-icon icon="ph:{showMenu ? 'x-bold' : 'list'}" class="size-4 text-muted"></iconify-icon>
     </button>
   </div>
 </header>
@@ -87,9 +87,9 @@
 
   nav {
     ul {
-      @apply justify-between gap-0 lg:gap-12;
+      @apply justify-between gap-3 lg:gap-12;
       li {
-        @apply flex flex-row items-center py-4 transition-opacity duration-300 lg:py-6;
+        @apply flex flex-row items-center transition-opacity duration-300 lg:py-6;
         a {
           @apply flex w-full flex-col justify-between;
           p {

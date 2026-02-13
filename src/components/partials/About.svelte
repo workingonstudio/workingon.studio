@@ -1,7 +1,7 @@
 <script lang="ts">
 </script>
 
-<div class="text-body flex flex-col gap-6 px-16 py-12">
+<div class="text-body flex flex-col gap-6 px-8 py-9 lg:px-16 lg:py-18">
   <p>
     16 years shipping products. I've designed systems for millions of users and been part of 5 exits. I've worked across
     AI, marketing, finance, SaaS, just not gambling. Never gambling.

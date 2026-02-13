@@ -48,7 +48,7 @@
   }
 
   h1 {
-    @apply text-4xl/12 md:text-6xl/tight;
+    @apply text-4xl/12 lg:text-6xl/tight;
   }
 
   h2 {

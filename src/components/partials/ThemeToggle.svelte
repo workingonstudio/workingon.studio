@@ -11,7 +11,7 @@
 <button
   onclick={toggleTheme}
   aria-label="{$theme === 'dark' ? 'Light' : 'Dark'} mode"
-  class="text-muted hover:text-body flex size-4 cursor-pointer items-center justify-center"
+  class="text-muted hover:text-body hidden size-4 cursor-pointer items-center justify-center lg:flex"
 >
   <iconify-icon {icon} class="text-base"></iconify-icon>
 </button>
