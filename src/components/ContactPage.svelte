@@ -82,9 +82,7 @@
           <iconify-icon icon="ph:arrow-up-right-bold"></iconify-icon>
         </a>
         <p class="text-muted text-sm">
-          If I don't reply within 7 days, assume it's a no, I'm on holiday, or dead.
-          <br />
-          Whatever makes you feel better.
+          If I don't reply within 7 days, assume it's a no, I'm on holiday, or dead. Whatever makes you feel better.
         </p>
       </div>
     </div>

@@ -13,12 +13,14 @@
 <PageHeader>
   <!-- prettier-ignore -->
   <h1>
-    I <span class="underline">design</span>, <span class="underline">build</span>, and <span class="underline">ship</span> software. 16 years. 5 exits. Some products solve problems. Some expose them.
+    I <span class="underline">design</span>, <span class="underline">build</span>, and <span class="underline">ship</span> software. Sixteen years designing products. Five exits. Looking for teams that ship.
   </h1>
 </PageHeader>
 
-<section class="border-surface-border divide-surface-border grid grid-cols-1 divide-x border border-b-0 lg:grid-cols-2">
-  <div class="divide-surface-border divide-y-1">
+<section
+  class="border-surface-border divide-surface-border grid grid-cols-1 border border-b-0 lg:grid-cols-2 lg:divide-x"
+>
+  <div class="divide-surface-border border-surface-border divide-y-1 border-b lg:border-b-0">
     <About />
     <WorkHistory />
     <ArticleList />

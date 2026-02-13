@@ -128,7 +128,7 @@
 </PageHeader>
 
 <section
-  class="timeline-section border-surface-border divide-surface-border grid grid-cols-1 divide-x border lg:grid-cols-2"
+  class="timeline-section border-surface-border divide-surface-border grid grid-cols-1 border lg:grid-cols-2 lg:divide-x"
 >
   <section>
     <div class="border-surface-border content flex flex-col gap-6 border-b">

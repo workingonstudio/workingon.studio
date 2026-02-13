@@ -48,7 +48,7 @@
   }
 
   h1 {
-    @apply text-4xl/normal lg:text-6xl/normal;
+    @apply text-3xl/normal sm:text-4xl/normal lg:text-6xl/normal;
   }
 
   h2 {

@@ -28,7 +28,7 @@
       workingonstudio ltd, no: 16700615
     </a>
 
-    <ul class="text-muted text-xxs flex flex-row gap-3">
+    <ul class="text-muted text-xxs hidden flex-row gap-3 lg:flex">
       <li class="flex flex-row items-center gap-1">
         <a href="https://astro.build/">Astro</a>
         <div class="relative -top-[1px]">+</div>
