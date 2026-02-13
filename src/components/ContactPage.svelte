@@ -53,9 +53,11 @@
   </h1>
 </PageHeader>
 
-<section class="border-surface-border divide-surface-border flex flex-1 divide-x border border-b-0">
-  <div class="flex w-1/2 flex-col gap-6">
-    <div class="border-surface-border flex flex-col gap-5 border-b px-16 py-12">
+<section
+  class="border-surface-border divide-surface-border grid grid-cols-1 divide-x-0 divide-y border border-b-0 lg:grid-cols-2 lg:divide-x lg:divide-y-0"
+>
+  <div class=" flex flex-col gap-6">
+    <div class="content border-surface-border gap-5 border-0 lg:border-b">
       <h3 class="text-xl font-medium">Send email</h3>
       <div class="flex flex-col gap-1">
         <a
@@ -87,6 +89,7 @@
       </div>
     </div>
   </div>
+
   <SocialProfiles />
 </section>
 

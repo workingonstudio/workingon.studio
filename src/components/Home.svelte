@@ -17,17 +17,15 @@
   </h1>
 </PageHeader>
 
-<section
-  class="border-surface-border divide-surface-border grid divide-x-0 border border-b-0 lg:grid-cols-2 lg:divide-x-1"
->
+<section class="border-surface-border divide-surface-border grid grid-cols-1 divide-x border border-b-0 lg:grid-cols-2">
   <div class="divide-surface-border divide-y-1">
     <About />
     <WorkHistory />
-    <SocialProfiles />
+    <ArticleList />
   </div>
   <div class="divide-surface-border divide-y-1">
     <ProjectList />
-    <ArticleList />
+    <SocialProfiles />
   </div>
 </section>
 

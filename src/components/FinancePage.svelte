@@ -38,7 +38,7 @@
 
 <section class="border-surface-border divide-surface-border flex flex-col divide-y border border-b-0">
   {#each financeData.entries as { date, items }}
-    <div class="flex flex-col gap-6 px-16 py-12" role="table" aria-label="Financial transactions">
+    <div class="content gap-6" role="table" aria-label="Financial transactions">
       <!-- Header -->
       <div class="text-xxs text-primary flex" role="rowgroup">
         <div class="flex w-full items-center" role="row">

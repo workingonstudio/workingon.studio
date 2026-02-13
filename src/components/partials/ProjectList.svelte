@@ -16,7 +16,7 @@
 
 <div class="divide-surface-border flex flex-col divide-y">
   {#if inDevProjects.length > 0}
-    <section class="flex flex-col gap-6 px-8 py-9 lg:px-16 lg:py-18">
+    <section class="content gap-6">
       <h3 class="text-xl font-medium">In development</h3>
       <ul class="flex flex-col gap-5">
         {#each inDevProjects as { name, description, link, externalLink }}
@@ -37,7 +37,7 @@
   {/if}
 
   {#if liveProjects.length > 0}
-    <section class="flex flex-col gap-6 px-8 py-9 lg:px-16 lg:py-18">
+    <section class="content gap-6">
       <h3 class="text-xl font-medium">Live projects</h3>
       <ul class="flex flex-col gap-5">
         {#each liveProjects as { name, description, link, externalLink }}

@@ -48,7 +48,7 @@
   }
 
   h1 {
-    @apply text-4xl/12 lg:text-6xl/tight;
+    @apply text-4xl/normal lg:text-6xl/normal;
   }
 
   h2 {
@@ -58,5 +58,12 @@
   p {
     @apply text-base;
     @apply text-pretty;
+  }
+}
+
+@layer components {
+  .content {
+    @apply flex flex-col;
+    @apply px-8 py-9 lg:px-16 lg:py-12;
   }
 }

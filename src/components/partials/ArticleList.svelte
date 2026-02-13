@@ -23,7 +23,7 @@
   ];
 </script>
 
-<section class="flex flex-col gap-6 px-8 py-9 lg:px-16 lg:py-18">
+<section class="content gap-6">
   <h3 class="text-xl font-medium">Writing</h3>
   <ul class="flex flex-col gap-5">
     {#each articles as { title, subtitle, href }}

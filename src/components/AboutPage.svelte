@@ -12,10 +12,10 @@
   </h1>
 </PageHeader>
 
-<section class="border-surface-border grid grid-cols-2 border border-b-0">
-  <div class="border-surface-border border-r">
+<section class="border-surface-border grid-1 grid border border-b-0 lg:grid-cols-2">
+  <div class="border-surface-border border-0 lg:border-r">
     <!-- prettier-ignore -->
-    <div class="flex flex-col gap-5 px-16 py-12 border-b border-surface-border">
+    <div class="flex flex-col gap-5 content border-b border-surface-border">
       <p>
         16 years building for the internet. Started at agencies. Moved to startups fast.
       </p>

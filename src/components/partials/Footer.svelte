@@ -20,7 +20,7 @@
   <!-- prettier-ignore -->
   <div class="flex flex-col justify-center items-center w-16 transition-none">
   </div>
-  <div class="border-surface-border flex flex-1 flex-row justify-between border-x px-16 py-3 font-medium">
+  <div class="border-surface-border flex flex-1 flex-row justify-between border-x px-8 py-3 font-medium lg:px-16">
     <a
       href="https://find-and-update.company-information.service.gov.uk/company/16700615"
       class="text-muted text-xxs uppercase"

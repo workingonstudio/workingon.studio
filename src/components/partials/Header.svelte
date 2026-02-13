@@ -50,9 +50,9 @@
       <Logo width={27} />
     </a>
     <nav
-    class="nav-scroll box-border flex-col divide-x-muted/20 flex-1 p-8 lg:px-16 text-xs lg:flex border-x border-surface-border"
+    class="nav-scroll box-border flex-col divide-x-muted/20 flex-1 p-8 lg:px-16 lg:py-0 text-xs lg:flex border-x border-surface-border"
     >
-    <ul class="flex-col lg:flex-row {showMenu
+    <ul class="lg:flex flex-col lg:flex-row {showMenu
       ? 'flex'
       : 'hidden'}">
       {#each navItems as { href, title, description }}

@@ -14,9 +14,9 @@
   </h1>
 </PageHeader>
 
-<section class="border-surface-border grid grid-cols-2 border border-b-0">
-  <div class="border-surface-border border-r">
-    <div class="border-surface-border flex flex-col gap-5 border-b px-16 py-12">
+<section class="border-surface-border grid grid-cols-1 border border-b-0 lg:grid-cols-2">
+  <div class="border-surface-border border-0 lg:border-r">
+    <div class="border-surface-border content flex flex-col gap-5 border-b">
       <p>I've spent the last {daysSince} days, designing and shipping these projects.</p>
       <p>
         Some are fun experiments that expose corporate performance culture. Others are practical tools for <a href="">
