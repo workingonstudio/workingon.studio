@@ -2,6 +2,7 @@
   import PageHeader from "@components/partials/PageHeader.svelte";
   import { onMount } from "svelte";
   import { dayRate } from "../stores/dayRate";
+  import SocialProfiles from "./partials/SocialProfiles.svelte";
 
   let displayRate = 500;
   let timeInterval: ReturnType<typeof setInterval> | null = null;
@@ -50,56 +51,46 @@
   I work with teams that decide fast and ship faster. 
   The rate increases while you think about it.
   </h1>
-  <div class="flex max-w-xl flex-col gap-12">
-    <div class="flex flex-row gap-2">
-      <p class="text-sm">&#42; If it takes you too long to decide, you'll be a nightmare to work with.</p>
-    </div>
-  </div>
 </PageHeader>
 
-<section class="mb-10 max-w-2xl space-y-4 lg:mx-2 2xl:mt-5 2xl:w-5xl">
-  <div class="flex flex-col gap-4">
-    <div class="flex flex-col gap-6 lg:flex-row lg:items-center">
-      <iconify-icon icon="carbon:mail-all" class="mt-0 size-8 text-3xl text-gray-500 md:mt-1"></iconify-icon>
-      <div class="flex flex-row items-center gap-2">
+<section
+  class="border-surface-border divide-surface-border grid grid-cols-1 divide-x-0 divide-y border border-b-0 lg:grid-cols-2 lg:divide-x lg:divide-y-0"
+>
+  <div class=" flex flex-col gap-6">
+    <div class="content border-surface-border gap-5 border-0 lg:border-b">
+      <h3 class="text-xl font-medium">Send email</h3>
+      <div class="flex flex-col gap-1">
         <a
           href="mailto:hello@workingon.studio?subject=Can%20I/We%20work%20with%20you%3F&"
           onclick={() => {
             const currentRate = displayRate;
             dayRate.reset();
-
             // Clear the time interval
             if (timeInterval !== null) {
               clearInterval(timeInterval);
             }
-
             // Animate back to base rate
             animateRate(currentRate, 500);
-
             // Restart time-based increment after animation
             setTimeout(() => {
               startTimeBasedIncrement(500);
             }, 800);
           }}
+          class="text-header flex flex-row items-center gap-2 font-medium"
         >
           hello@workingon.studio
+          <iconify-icon icon="ph:arrow-up-right-bold"></iconify-icon>
         </a>
+        <p class="text-muted text-sm">
+          If I don't reply within 7 days, assume it's a no, I'm on holiday, or dead. Whatever makes you feel better.
+        </p>
       </div>
     </div>
-    <p class="text-sm lg:ml-14">
-      If I don't reply within 7 days, assume it's a no, I'm on holiday, or dead.
-      <br />
-      Whatever makes you feel better.
-    </p>
   </div>
+
+  <SocialProfiles />
 </section>
 
 <style>
   @reference "@styles/main.css";
-  a {
-    @apply text-primary text-lg underline lg:text-3xl;
-    &:hover {
-      @apply no-underline;
-    }
-  }
 </style>

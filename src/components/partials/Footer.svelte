@@ -1,6 +1,7 @@
 <script lang="ts">
   import { DateTime } from "luxon";
   import timelineData from "../../data/timeline-github.json";
+  import Logo from "./Logo.svelte";
   let date = DateTime.fromISO(timelineData.generated).toFormat("ccc',' dd LLL y TT ZZZ");
 
   export let typefaces = [
@@ -15,39 +16,43 @@
   ];
 </script>
 
-<footer
-  class="border-muted/8 mt-12 flex flex-col justify-between gap-2 border-t-1 py-6 lg:flex-row lg:items-center lg:gap-0"
->
+<footer class="border-t-surface-border flex flex-row border-t">
   <!-- prettier-ignore -->
-  <div class="flex flex-col company-info">
-    <a href="/" class="group text-primary text-md font-display">wo<span class="text-muted text-xxs">.studio</span></a>
-    <a href="https://find-and-update.company-information.service.gov.uk/company/16700615"><small class="text-muted text-xxs">workingonstudio ltd, no: 16700615</small></a>
+  <div class="flex flex-col justify-center items-center w-16 transition-none">
   </div>
-  <ul class="text-muted flex flex-row gap-x-6 gap-y-2 last:flex-wrap last:lg:flex-nowrap">
-    <li class="flex flex-row items-center gap-2">
-      <iconify-icon icon="carbon:development" class="size-3.5 text-sm"></iconify-icon>
-      <a href="https://astro.build/">Astro</a>
-      <div class="relative -top-[1px]">+</div>
-      <a href="https://svelte.dev/">Svelte</a>
-    </li>
-    <li class="flex flex-row items-center gap-2">
-      <iconify-icon icon="carbon:data-analytics" class="size-3.5 text-sm"></iconify-icon>
-      <a href="https://umami.is/" class="">Umami</a>
-    </li>
-    <li class="flex flex-row items-center gap-2">
-      <iconify-icon icon="carbon:text-font" class="size-3.5 text-sm"></iconify-icon>
-      {#each typefaces as { family, href }, index}
-        <a {href} class="">{family}</a>
-        {#if index < typefaces.length - 1}
-          <div class="relative -top-[1px]">+</div>
-        {/if}
-      {/each}
-    </li>
-    <li class="flex flex-row items-center gap-2">
-      <iconify-icon icon="carbon:update-now" class="size-3.5 text-sm"></iconify-icon>
-      <a href="https://github.com/workingonstudio/workingon.studio/commits/main/">{date}</a>
-    </li>
-  </ul>
+  <div class="border-surface-border flex flex-1 flex-row justify-between border-x px-8 py-3 font-medium lg:px-16">
+    <a
+      href="https://find-and-update.company-information.service.gov.uk/company/16700615"
+      class="text-muted text-xxs uppercase"
+    >
+      workingonstudio ltd, no: 16700615
+    </a>
+
+    <ul class="text-muted text-xxs hidden flex-row gap-3 lg:flex">
+      <li class="flex flex-row items-center gap-1">
+        <a href="https://astro.build/">Astro</a>
+        <div class="relative -top-[1px]">+</div>
+        <a href="https://svelte.dev/">Svelte</a>
+      </li>
+      <li class="flex flex-row items-center gap-1">
+        <a href="https://umami.is/" class="">Umami</a>
+      </li>
+      <li class="flex flex-row items-center gap-1">
+        {#each typefaces as { family, href }, index}
+          <a {href} class="">{family}</a>
+          {#if index < typefaces.length - 1}
+            <div class="relative -top-[1px]">+</div>
+          {/if}
+        {/each}
+      </li>
+      <li class="flex flex-row items-center gap-2">
+        <a href="https://github.com/workingonstudio/workingon.studio/commits/main/">{date}</a>
+      </li>
+    </ul>
+  </div>
+  <a href="#" class="flex w-16 flex-col items-center justify-center transition-none">
+    <iconify-icon icon="ph:arrow-up-bold"></iconify-icon>
+  </a>
 </footer>
 
 <style>

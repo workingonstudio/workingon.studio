@@ -49,8 +49,8 @@ const nudicaFontUrl = import.meta.env.NUDICA_FONT_CSS_URL;
     </script>
 
     <ClientRouter />
-    <Font cssVariable="--font-inter" preload />
     <Font cssVariable="--font-satoshi" preload />
+    <Font cssVariable="--font-inter" preload />
     <AstroSeo
       {title}
       description={description || defaultDescription}
@@ -92,7 +92,8 @@ const nudicaFontUrl = import.meta.env.NUDICA_FONT_CSS_URL;
       is:inline
       type="module"
       src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    ></script>
+    >
+    </script>
     <meta name="generator" content={Astro.generator} />
     <Analytics />
     <StructuredData />
@@ -102,20 +103,16 @@ const nudicaFontUrl = import.meta.env.NUDICA_FONT_CSS_URL;
   </head>
 
   <body>
-    <div
-      class="bg-bg-main/98 border-surface-border sticky top-0 z-50 mb-12 border-y backdrop-blur-sm"
-    >
-      <div class="mx-0 flex flex-col md:mx-[5%]">
+    <div class="bg-bg-main/98 border-surface-border sticky top-0 z-50 border-y backdrop-blur-sm">
+      <div class="2xl:border-surface-border mx-0 flex flex-col 2xl:mx-[10%] 2xl:border-x">
         <Header client:load {currentPath} />
       </div>
     </div>
-    <main class="mx-[5%] flex min-h-screen flex-1 flex-col">
-      <div class="flex flex-1 flex-col justify-between gap-24">
-        <div class="flex grow-1 flex-col justify-start gap-24 2xl:flex-row">
-          <slot />
-        </div>
-        <Footer client:visible />
+    <main class="mx-0 flex min-h-screen flex-1 flex-col md:mx-16 2xl:mx-[10%]">
+      <div class="flex flex-1 flex-col justify-start">
+        <slot />
       </div>
     </main>
+    <Footer client:visible />
   </body>
 </html>

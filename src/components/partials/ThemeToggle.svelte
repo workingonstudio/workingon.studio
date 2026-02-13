@@ -1,18 +1,17 @@
 <script lang="ts">
   import { theme } from "@stores/themeStore";
 
-  let icon = "carbon:sun";
+  $: icon = $theme === "dark" ? "ph:sun" : "ph:moon-stars";
 
   function toggleTheme() {
     $theme = $theme === "dark" ? "light" : "dark";
-    icon = $theme === "dark" ? "carbon:sun" : "carbon:moon";
   }
 </script>
 
 <button
   onclick={toggleTheme}
   aria-label="{$theme === 'dark' ? 'Light' : 'Dark'} mode"
-  class="text-muted hover:text-body flex size-6 cursor-pointer items-center justify-center"
+  class="text-muted hover:text-body hidden size-4 cursor-pointer items-center justify-center lg:flex"
 >
-  <iconify-icon {icon} class="text-xl"></iconify-icon>
+  <iconify-icon {icon} class="text-base"></iconify-icon>
 </button>

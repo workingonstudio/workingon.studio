@@ -12,15 +12,35 @@
     <br />
     8 projects, designed, built and shipped.
   </h1>
-  <div class="flex max-w-xl flex-col gap-12">
-    <p>Things I made because I was tired of not seeing them. Each one works. That's the point.</p>
-  </div>
 </PageHeader>
 
-<section class="mx-0 md:mx-2 2xl:mt-5">
+<section class="border-surface-border grid grid-cols-1 border border-b-0 lg:grid-cols-2">
+  <div class="border-surface-border border-0 lg:border-r">
+    <div class="border-surface-border content flex flex-col gap-5 border-b">
+      <p>I've spent the last {daysSince} days, designing and shipping these projects.</p>
+      <p>
+        Some are fun experiments that expose corporate performance culture. Others are practical tools for <a href="">
+          Sketch
+        </a>
+        and
+        <a href="">Figma</a>
+        -
+        <a href="">Glyph Palette</a>
+        is officially recognised by Sketch.
+      </p>
+      <!-- prettier-ignore -->
+      <p>
+        Currently building: <a href="">When to Work</a>, a simpler way to find overlap with remote colleagues across timezones.
+      </p>
+      <p>Built with Svelte, compiled to vanilla JavaScript. Fast, lightweight, functional.</p>
+    </div>
+  </div>
   <ProjectList />
 </section>
 
 <style>
   @reference "@styles/main.css";
+  a {
+    @apply underline;
+  }
 </style>
