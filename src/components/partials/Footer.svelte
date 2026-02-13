@@ -37,7 +37,7 @@
       <li class="flex flex-row items-center gap-1">
         <a href="https://umami.is/" class="">Umami</a>
       </li>
-      <li class="flex flex-row items-center gap-2">
+      <li class="flex flex-row items-center gap-1">
         {#each typefaces as { family, href }, index}
           <a {href} class="">{family}</a>
           {#if index < typefaces.length - 1}
