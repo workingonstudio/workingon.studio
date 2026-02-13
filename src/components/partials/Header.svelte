@@ -46,7 +46,7 @@
 
 <!-- prettier-ignore -->
 <header class="group flex flex-row items-stretch justify-between transition-opacity ease-out duration-200">
-  <a href="/" title="Home" class="flex flex-col justify-center items-center w-16 transition-none">
+  <a href="/" title="Home" class="flex flex-col items-center py-6 lg:justify-center w-16 transition-none">
       <Logo width={27} />
     </a>
     <nav
@@ -60,14 +60,14 @@
           <a {href} onclick={toggleMenu}>
             <!-- prettier-ignore -->
             <h2>{title}</h2>
-            <p class="transition-all duration-200 ease-out">{description}</p>
+            <p class="transition-all duration-200 ease-out lg:hidden xl:block">{description}</p>
           </a>
         </li>
       {/each}
     </ul>
     </nav>
   
-  <div class="flex flex-row gap-4 items-center p-6">
+  <div class="flex flex-row gap-4 items-start lg:items-center p-6">
     <ThemeToggle />
     <button type="button" onclick={toggleMenu} aria-label="Toggle menu" class="hover:*:text-primary size-4 cursor-pointer flex lg:hidden">
       <iconify-icon icon="ph:{showMenu ? 'x-bold' : 'list'}" class="size-4 text-muted"></iconify-icon>
