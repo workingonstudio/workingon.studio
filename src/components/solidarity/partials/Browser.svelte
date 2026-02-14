@@ -37,9 +37,9 @@
       title: "Product & UX Design Lead",
     },
     {
-      img: "bill.jpeg",
-      name: "Bill Gates",
-      title: "Jr Software developer",
+      img: "jensen.jpeg",
+      name: "Jensen Huang",
+      title: "Dishwasher, Busboy, Waiter",
     },
   ];
 </script>

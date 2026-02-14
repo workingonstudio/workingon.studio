@@ -97,10 +97,10 @@
               class="flex w-full flex-row items-center justify-between rounded-2xl border border-gray-200 bg-white p-4"
             >
               <div class="flex flex-row gap-3">
-                <Avatar img={"/solidarity/avatars/bill.jpeg"} ring dimensions="size-10" />
+                <Avatar img={"/solidarity/avatars/jensen.jpeg"} ring dimensions="size-10" />
                 <div class="flex flex-col text-sm">
-                  <strong>Bill Gates</strong>
-                  <span class="text-muted text-xs">Jr Software developer</span>
+                  <strong>Jensen Huang</strong>
+                  <span class="text-muted text-xs">Dishwasher, Busboy, Waiter</span>
                 </div>
               </div>
               <iconify-icon
