@@ -3,7 +3,7 @@
 </script>
 
 <section class="content gap-6">
-  <h3 class="text-xl font-medium">Elsewhere</h3>
+  <h2 class="text-xl font-medium">Elsewhere</h2>
   <ul class="flex flex-col gap-5">
     {#each socialProfiles as { name, href, description }}
       <li class="flex flex-col gap-1">

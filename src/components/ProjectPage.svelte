@@ -19,18 +19,17 @@
     <div class="border-surface-border content flex flex-col gap-5 border-b">
       <p>I've spent the last {daysSince} days, designing and shipping these projects.</p>
       <p>
-        Some are fun experiments that expose corporate performance culture. Others are practical tools for <a href="">
-          Sketch
-        </a>
+        Some are fun experiments that expose corporate performance culture. Others are practical tools for
+        <a href="https://figma.com">Figma</a>
         and
-        <a href="">Figma</a>
+        <a href="https://sketch.com">Sketch</a>
         -
-        <a href="">Glyph Palette</a>
+        <a href="https://glyphpalette.com">Glyph Palette</a>
         is officially recognised by Sketch.
       </p>
       <!-- prettier-ignore -->
       <p>
-        Currently building: <a href="">When to Work</a>, a simpler way to find overlap with remote colleagues across timezones.
+        Currently building: <a href="https://whento.work">When to Work</a>, a simpler way to find overlap with remote colleagues across timezones.
       </p>
       <p>Built with Svelte, compiled to vanilla JavaScript. Fast, lightweight, functional.</p>
     </div>

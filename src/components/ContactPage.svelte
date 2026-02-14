@@ -58,7 +58,7 @@
 >
   <div class=" flex flex-col gap-6">
     <div class="content border-surface-border gap-5 border-0 lg:border-b">
-      <h3 class="text-xl font-medium">Send email</h3>
+      <h2 class="text-xl font-medium">Send email</h2>
       <div class="flex flex-col gap-1">
         <a
           href="mailto:hello@workingon.studio?subject=Can%20I/We%20work%20with%20you%3F&"

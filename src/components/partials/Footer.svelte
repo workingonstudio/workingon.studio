@@ -50,7 +50,7 @@
       </li>
     </ul>
   </div>
-  <a href="#" class="flex w-16 flex-col items-center justify-center transition-none">
+  <a href="#top" aria-label="Back to top" class="flex w-16 flex-col items-center justify-center transition-none">
     <iconify-icon icon="ph:arrow-up-bold"></iconify-icon>
   </a>
 </footer>

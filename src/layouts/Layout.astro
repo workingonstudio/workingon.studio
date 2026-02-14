@@ -22,9 +22,6 @@ const defaultDescription =
   "I build tools that work and make you question why you needed them. Cultural mirror products for the modern internet.";
 const currentURL = new URL(Astro.url.pathname, Astro.site).href;
 const currentPath = Astro.url.pathname;
-
-// Get font URLs from environment variables
-const nudicaFontUrl = import.meta.env.NUDICA_FONT_CSS_URL;
 ---
 
 <!doctype html>
@@ -92,17 +89,15 @@ const nudicaFontUrl = import.meta.env.NUDICA_FONT_CSS_URL;
       is:inline
       type="module"
       src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    >
-    </script>
+    ></script>
     <meta name="generator" content={Astro.generator} />
     <Analytics />
     <StructuredData />
     <!-- CDN Font Stylesheets -->
-    {nudicaFontUrl && <link rel="stylesheet" href={nudicaFontUrl} />}
     <title>{title}</title>
   </head>
 
-  <body>
+  <body id="#top">
     <div class="bg-bg-main/98 border-surface-border sticky top-0 z-50 border-y backdrop-blur-sm">
       <div class="2xl:border-surface-border mx-0 flex flex-col 2xl:mx-[10%] 2xl:border-x">
         <Header client:load {currentPath} />
