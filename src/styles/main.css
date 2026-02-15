@@ -55,9 +55,22 @@
     @apply text-3xl;
   }
 
+  h3 {
+    @apply text-xl;
+  }
+
   p {
     @apply text-base;
     @apply text-pretty;
+  }
+}
+
+.article {
+  blockquote {
+    @apply border-surface-border bg-surface rounded-lg border p-4;
+  }
+  a {
+    @apply text-header underline;
   }
 }
 

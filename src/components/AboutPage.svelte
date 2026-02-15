@@ -1,6 +1,5 @@
 <script lang="ts">
   import PageHeader from "@components/partials/PageHeader.svelte";
-  import About from "./partials/About.svelte";
   import WorkHistory from "./partials/WorkHistory.svelte";
   import SocialProfiles from "./partials/SocialProfiles.svelte";
 </script>

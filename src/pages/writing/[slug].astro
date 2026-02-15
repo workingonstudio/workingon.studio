@@ -1,0 +1,31 @@
+---
+import Layout from "@layouts/Layout.astro";
+import PageHeader from "@components/partials/PageHeader.svelte";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("writing");
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+
+<Layout title="workingon.studio - Writing">
+  <PageHeader>
+    <h1>{post.data.title}</h1>
+  </PageHeader>
+
+  <section
+    class="border-surface-border divide-surface-border grid grid-cols-1 border-0 md:border md:border-b-0 lg:grid-cols-2 lg:divide-x"
+  >
+    <div class="article content gap-6">
+      <Content />
+    </div>
+    <div></div>
+  </section>
+</Layout>

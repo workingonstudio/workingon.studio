@@ -40,7 +40,18 @@ const sketchTodayCollection = defineCollection({
   }),
 });
 
+const writingCollection = defineCollection({
+  type: "content",
+  schema: z.object({
+    title: z.string(),
+    description: z.string().optional(),
+    publishedAt: z.date(),
+    draft: z.boolean().default(false),
+  }),
+});
+
 export const collections = {
   "sketch-today": sketchTodayCollection,
   changelogs: changelogCollection,
+  writing: writingCollection,
 };

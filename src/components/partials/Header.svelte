@@ -27,9 +27,9 @@
       description: "live studio projects.",
     },
     {
-      href: "/finances",
-      title: "finances",
-      description: "financials in/out of the studio.",
+      href: "/writing",
+      title: "writing",
+      description: "thoughts on design and creativity.",
     },
     {
       href: "/progress",
