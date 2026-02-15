@@ -54,9 +54,9 @@
 </PageHeader>
 
 <section
-  class="border-surface-border divide-surface-border grid grid-cols-1 divide-x-0 divide-y border border-b-0 lg:grid-cols-2 lg:divide-x lg:divide-y-0"
+  class="border-surface-border grid-1 grid min-h-screen border-0 border-b-0 md:border md:border-b-0 lg:grid-cols-2"
 >
-  <div class=" flex flex-col gap-6">
+  <div class="border-surface-border flex flex-col gap-6 border-r-0 md:border-r-1">
     <div class="content border-surface-border gap-5 border-0 lg:border-b">
       <h2 class="text-xl font-medium">Send email</h2>
       <div class="flex flex-col gap-1">

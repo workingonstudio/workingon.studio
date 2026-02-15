@@ -11,10 +11,8 @@
   </h1>
 </PageHeader>
 
-<section
-  class="border-surface-border divide-surface-border grid min-h-screen grid-cols-1 border-0 md:border md:border-b-0 lg:grid-cols-2 lg:divide-x"
->
-  <div class="content h-full">
+<section class="border-surface-border grid-1 grid min-h-screen border border-b-0 lg:grid-cols-2">
+  <div class="content border-surface-border border-0 lg:border-r">
     <ul class="flex flex-col gap-5">
       {#each posts as post}
         <li class="flex flex-col gap-1">
@@ -32,5 +30,5 @@
       {/each}
     </ul>
   </div>
-  <div class="h-full"></div>
+  <div class="hidden lg:block"></div>
 </section>

@@ -25,9 +25,9 @@
 </PageHeader>
 
 <section
-  class="border-surface-border divide-surface-border grid grid-cols-1 border-0 md:border md:border-b-0 lg:grid-cols-2 lg:divide-x"
+  class="border-surface-border grid-1 grid min-h-screen border-0 border-b-0 md:border md:border-b-0 lg:grid-cols-2"
 >
-  <div class="divide-surface-border border-surface-border divide-y-1 border-b lg:border-b-0">
+  <div class="divide-surface-border border-surface-border divide-y-1 border-r-0 border-b lg:border-r lg:border-b-0">
     <About />
     <WorkHistory />
     <ArticleList header="Writing" {articles} />

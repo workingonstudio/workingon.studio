@@ -14,7 +14,9 @@
   </h1>
 </PageHeader>
 
-<section class="border-surface-border grid grid-cols-1 border border-b-0 lg:grid-cols-2">
+<section
+  class="border-surface-border grid-1 grid min-h-screen border-0 border-b-0 md:border md:border-b-0 lg:grid-cols-2"
+>
   <div class="border-surface-border border-0 lg:border-r">
     <div class="border-surface-border content flex flex-col gap-5 border-b">
       <p>I've spent the last {daysSince} days, designing and shipping these projects.</p>
