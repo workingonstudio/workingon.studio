@@ -18,7 +18,7 @@
 </PageHeader>
 
 <section
-  class="border-surface-border divide-surface-border grid grid-cols-1 border border-b-0 lg:grid-cols-2 lg:divide-x"
+  class="border-surface-border divide-surface-border grid grid-cols-1 border-0 md:border md:border-b-0 lg:grid-cols-2 lg:divide-x"
 >
   <div class="divide-surface-border border-surface-border divide-y-1 border-b lg:border-b-0">
     <About />
