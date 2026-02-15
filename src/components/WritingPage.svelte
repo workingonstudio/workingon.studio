@@ -7,7 +7,7 @@
 <PageHeader>
   <!-- prettier-ignore -->
   <h1>
-    Writing about the state of design, the good, the broken, the quietly beautiful.
+    Writing about design and creativity as it actually is.
   </h1>
 </PageHeader>
 

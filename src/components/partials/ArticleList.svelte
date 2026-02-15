@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   let articles = [
     {
       title: "Design's not dead. We just gave in.",
@@ -21,10 +21,12 @@
       href: "https://aquietfracture.substack.com/p/its-time-to-kill-the-design-challenge",
     },
   ];
+
+  export let header: string;
 </script>
 
 <section class="content gap-6">
-  <h2 class="text-xl font-medium">Writing</h2>
+  <h2 class="text-xl font-medium">{header}</h2>
   <ul class="flex flex-col gap-5">
     {#each articles as { title, subtitle, href }}
       <li class="flex flex-col gap-1">

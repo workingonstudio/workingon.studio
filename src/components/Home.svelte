@@ -23,7 +23,7 @@
   <div class="divide-surface-border border-surface-border divide-y-1 border-b lg:border-b-0">
     <About />
     <WorkHistory />
-    <ArticleList />
+    <ArticleList header="Writing" />
   </div>
   <div class="divide-surface-border divide-y-1">
     <ProjectList />
