@@ -1,76 +1,59 @@
 [
   {
-    "projectIcon": "carbon:thumbs-up-double",
     "name": "Dad Reply",
-    "tagline": "Email replies without the email part.",
     "description": "Chrome extension that allows for rapid emoji responses to update emails.",
-    "version": "1.5.6",
-    "status": "shipped",
-    "tags": [
-      { "icon": "carbon:currency-dollar", "text": "paid" },
-      { "icon": "carbon:magic-wand", "text": "free" }
-    ],
-    "link": "dad-reply"
+    "shipped": true,
+    "link": "dad-reply",
+    "externalLink": false
   },
   {
-    "projectIcon": "carbon:chat-bot",
-    "name": "Good Boy",
-    "tagline": "Get the praise that you crave",
-    "description": "A Figma plugin that randomly comments low effort praise on your designs.",
-    "version": "1.0.0",
-    "status": "shipped",
-    "tags": [{ "icon": "carbon:magic-wand", "text": "free" }],
-    "link": "good-boy"
-  },
-  {
-    "projectIcon": "carbon:folders",
-    "name": "Sketch Today",
-    "tagline": "A collection of modern Sketch resources.",
-    "description": "Resources to get you started when making the inevitable switch to Sketch.",
-    "version": "1.2.0",
-    "status": "shipped",
-    "tags": [{ "icon": "carbon:magic-wand", "text": "free" }],
-    "link": "sketch-today"
-  },
-  {
-    "projectIcon": "carbon:data-categorical",
     "name": "Glyph Palette",
-    "tagline": "A modern icon plugin for Sketch.",
-    "description": "Search and insert over 10,000 icons from popular iconsets. With filters, and size options.",
-    "version": "1.1.1",
-    "status": "shipped",
-    "tags": [{ "icon": "carbon:magic-wand", "text": "free" }],
-    "link": "glyph-palette"
+    "description": "Icon plugin for Sketch. Search and insert over 10,000 icons.",
+    "shipped": true,
+    "link": "glyph-palette",
+    "externalLink": false
   },
-
   {
-    "projectIcon": "carbon:circle-dash",
     "name": "Solidarity",
-    "tagline": "Helps you feel less shit about looking for work.",
     "description": "Chrome extension with a single toggle to show everyone is #opentowork.",
-    "version": "1.0.1",
-    "status": "shipped",
-    "tags": [{ "icon": "carbon:magic-wand", "text": "free" }],
-    "link": "solidarity"
+    "shipped": true,
+    "link": "solidarity",
+    "externalLink": false
   },
   {
-    "projectIcon": "carbon:cloud-offline",
     "name": "Is Figma down?",
-    "tagline": "The unofficial status.",
     "description": "Site that mimics the Figma status, highlighting the issue with always online.",
     "version": "1.0.0",
-    "status": "shipped",
-    "tags": [{ "icon": "carbon:magic-wand", "text": "free" }],
-    "link": "is-figma-down"
+    "shipped": true,
+    "link": "is-figma-down",
+    "externalLink": false
   },
   {
-    "projectIcon": "carbon:location",
-    "name": "workingon.studio",
-    "tagline": "This will literally bring you back here.",
-    "description": "Click it, you'll give me some dopamine for the extra hits.",
-    "version": "5.0.0",
-    "status": "shipped",
-    "tags": [{ "icon": "carbon:magic-wand", "text": "free" }],
-    "link": "/"
+    "name": "Good Boy",
+    "description": "A Figma plugin that randomly comments low effort praise on your designs.",
+    "shipped": true,
+    "link": "good-boy",
+    "externalLink": false
+  },
+  {
+    "name": "Sketch Today",
+    "description": "Resources to get you started when making the inevitable switch to Sketch.",
+    "shipped": true,
+    "link": "sketch-today",
+    "externalLink": false
+  },
+  {
+    "name": "Sketch QR",
+    "description": "Free Sketch plugin that allows you to create and insert SVG QR codes.",
+    "shipped": true,
+    "link": "https://github.com/workingonstudio/sketch-qr.sketchplugin",
+    "externalLink": true
+  },
+  {
+    "name": "When to work",
+    "description": "Find a great time to work together.",
+    "shipped": false,
+    "link": "https://whento.work",
+    "externalLink": true
   }
 ]

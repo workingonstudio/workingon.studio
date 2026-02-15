@@ -29,17 +29,6 @@
   <section class="flex w-full flex-col gap-6 rounded-2xl bg-stone-100 p-6 md:w-4/5 md:flex-row">
     <div class="flex flex-1 flex-col gap-6">
       <div class="flex flex-row items-center gap-4">
-        <iconify-icon icon="material-symbols:update-rounded" class="size-6 text-2xl"></iconify-icon>
-        <h4>Changelog</h4>
-      </div>
-      <ul>
-        <li>adding Font Awesome Brands.</li>
-        <li>reverting layout to original.</li>
-        <li>including icon set name on insert.</li>
-      </ul>
-    </div>
-    <div class="flex flex-1 flex-col gap-6">
-      <div class="flex flex-row items-center gap-4">
         <iconify-icon icon="material-symbols:support" class="size-6 text-2xl"></iconify-icon>
         <h4>Support</h4>
       </div>
@@ -57,6 +46,20 @@
           {copied ? "Copied to clipboard" : "support@workingon.studio"}
         </button>
       </div>
+    </div>
+    <div class="flex flex-1 flex-col gap-6">
+      <div class="flex flex-row items-center gap-4">
+        <iconify-icon icon="material-symbols:update-rounded" class="size-6 text-2xl"></iconify-icon>
+        <h4>Changelog</h4>
+      </div>
+      <ul>
+        <li>adding Phosphor icons.</li>
+        <li>adding Flexsearch and improving search with tag mapping.</li>
+        <li>adding replace on insert if an icon is selected on the canvas.</li>
+        <li>removing labels in settings.</li>
+        <li>better caching.</li>
+        <li>fixing memory leaks.</li>
+      </ul>
     </div>
   </section>
   <div class="flex w-full flex-col items-center gap-8 text-center md:w-auto md:items-start md:text-left">

@@ -3,61 +3,41 @@
     {
       title: "Design's not dead. We just gave in.",
       subtitle: "What happens when creativity becomes compliance.",
-      excerpt:
-        "Our shyness and empathy has allowed the needle of needs to swing too far in favour of leaders, rather than users.",
       href: "https://aquietfracture.substack.com/p/designs-not-dead-we-just-gave-in",
     },
     {
       title: "It's an art form, prepare to put in the work.",
       subtitle: "What it takes to become a better designer.",
-      excerpt: "It’s time to stop flogging that horse, drag it to the abattoir, and start grinding the burgers.",
       href: "https://aquietfracture.substack.com/p/prepare-to-put-in-the-work",
     },
     {
       title: "Look for those that are doing the opposite.",
       subtitle: "They are doing far more important things.",
-      excerpt:
-        "The best designers don't switch their mindset to fit in with the zeitgeist narrative, they look to create the next one.",
       href: "https://aquietfracture.substack.com/p/look-out-for-those-that-are-doing",
     },
     {
       title: "It's time to kill the Design Challenge.",
       subtitle: "Comedians don’t perform on command.",
-      excerpt:
-        "Asking them to distill that into a 3-4 hour design task? It’s the equivalent of asking a comedian to make you laugh on the spot.",
       href: "https://aquietfracture.substack.com/p/its-time-to-kill-the-design-challenge",
     },
   ];
 </script>
 
-<ul class="articles">
-  {#each articles as { title, subtitle, excerpt, href }}
-    <li class="group flex flex-col items-start gap-4">
-      <div class="bg-surface border-surface-border flex flex-row rounded-xl border p-2">
-        <iconify-icon icon="carbon:blog" class="text-primary size-6 text-2xl"></iconify-icon>
-      </div>
-      <a {href}>
-        <h2>{title}</h2>
-        <div class="flex flex-col gap-4">
-          <p class="text-muted text-base italic">{subtitle}</p>
-          <p>{excerpt}</p>
-        </div>
-      </a>
-    </li>
-  {/each}
-</ul>
+<section class="content gap-6">
+  <h2 class="text-xl font-medium">Writing</h2>
+  <ul class="flex flex-col gap-5">
+    {#each articles as { title, subtitle, href }}
+      <li class="flex flex-col gap-1">
+        <a {href} class="text-header flex flex-row items-center gap-2 font-medium hover:underline">
+          {title}
+          <iconify-icon icon="ph:arrow-up-right-bold"></iconify-icon>
+        </a>
+        <p class="text-muted text-sm">{subtitle}</p>
+      </li>
+    {/each}
+  </ul>
+</section>
 
 <style>
   @reference "@styles/main.css";
-  .articles {
-    @apply flex w-full flex-col gap-12 lg:max-w-1/2;
-    a {
-      @apply flex flex-col gap-2 transition-opacity duration-200;
-      &:hover {
-        h2 {
-          @apply underline;
-        }
-      }
-    }
-  }
 </style>

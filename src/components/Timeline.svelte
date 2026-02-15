@@ -125,90 +125,69 @@
   <h1>
     {result.totalCommits} commits. {result.totalMerges} merges. {result.totalPRs} pull requests. One rebase.
   </h1>
-  <div class="flex max-w-xl flex-col gap-12">
-    <p>This site is in a constant state of change. Tweaked to death, and improved. And here's the proof.</p>
-  </div>
 </PageHeader>
 
-<section class="timeline-section flex max-w-2xl flex-col gap-12 lg:mx-2 2xl:mt-5 2xl:w-5xl">
-  <div class="timeline-reveal group flex flex-col gap-12">
-    <div class="timeline-groups flex flex-col gap-12">
-      {#each groupedEntries as group}
-        <div class="date-group">
-          <div class="date-header">
-            <div class="bg-surface border-surface-border flex flex-col rounded-lg border p-2">
-              <iconify-icon icon="carbon:calendar" class="text-header size-4 text-base"></iconify-icon>
-            </div>
-            <h3>
-              {group.date}
-            </h3>
-          </div>
-          <ul class="timeline-entries flex flex-col gap-8">
-            {#each group.entries as entry}
-              <li class="timeline-entry space-y-2" data-type={entry.type}>
-                <div class="entry-content">
-                  {#if entry.branchMerged && entry.intoBranch}
-                    <div class="entry">
-                      <div class="flex flex-row items-center gap-3">
-                        <div class="bg-surface-border size-2 rounded-full"></div>
-                        <div
-                          class="bg-surface text-xxs text-header border-surface-border flex flex-row items-center rounded-full border px-2 py-0.5"
-                        >
-                          {DateTime.fromISO(entry.date).toFormat("T")}
-                        </div>
-                      </div>
-                      <p>
-                        <span class="merge-info ml-5 flex flex-row items-center gap-2">
-                          <span class="merged-branch">
-                            {entry.branchDisplay === entry.branchMerged ? entry.intoBranch : entry.branchDisplay}
-                          </span>
-                          <iconify-icon icon="carbon:arrow-left"></iconify-icon>
-                          <span class="into-branch">{entry.branchMerged}</span>
-                        </span>
-                      </p>
-                    </div>
-                  {:else}
-                    <div class="entry">
-                      <div class="flex flex-row items-center gap-3">
-                        <div class="bg-surface-border size-2 rounded-full"></div>
-                        <div
-                          class="bg-surface text-xxs text-header border-surface-border flex flex-row items-center rounded-full border px-2 py-0.5"
-                        >
-                          {DateTime.fromISO(entry.date).toFormat("T")}
-                        </div>
-                      </div>
-                      <p class="ml-5">
-                        {entry.message}
-                      </p>
-                    </div>
-                  {/if}
-                  <ul class="entry-meta text-xxs text-primary ml-5 flex gap-3 md:flex-row">
-                    {#if entry.branchMerged && entry.intoBranch}
-                      <li>merge</li>
-                    {:else}
-                      <li class="branch-display">
-                        {shortenText(entry.branchDisplay)}
-                      </li>
-                    {/if}
-                    <li class="version-debug">
-                      {entry.version}
-                    </li>
-                  </ul>
-                </div>
-              </li>
-            {/each}
-          </ul>
-        </div>
-      {/each}
-
-      {#if hasMore}
-        <div bind:this={loadMoreTrigger}>
-          {#if isLoadingMore}
-            <p class="text-sm text-gray-400">Loading more commits...</p>
-          {/if}
-        </div>
-      {/if}
+<section
+  class="timeline-section border-surface-border divide-surface-border grid grid-cols-1 border lg:grid-cols-2 lg:divide-x"
+>
+  <section>
+    <div class="border-surface-border content flex flex-col gap-6 border-b">
+      <h3 class="text-xl font-medium">Details</h3>
+      <!-- prettier-ignore -->
+      <ul class="flex-col flex gap-3 text-sm text-muted">
+      <li>Hosted on <a href="https://github.com/workingonstudio/workingon.studio">Github</a> pages.</li>
+      <li>Built with <a href="https://astro.build/">Astro</a> and <a href="https://svelte.dev/">Svelte</a>.</li>
+      <li>Licenced files hosted on <a href="">CloudFlare</a>.</li>
+      <li>Set with <a href="https://www.fontshare.com/fonts/satoshi">Satoshi</a> and <a href="https://rsms.me/inter/">Inter</a> via <a href="https://www.fontshare.com/">FontShare</a> and <a href="https://fonts.bunny.net/">Bunny</a>.</li>
+      <li>Icons are <a href="https://phosphoricons.com/">Phosphor</a> via <a href="https://iconify.design/">Iconfiy</a>.</li>
+      <li>Analytics tracked anonymously via <a href="https://umami.is/">Umami</a> self-hosted via <a href="https://railway.com/">Railway</a>.</li>
+    </ul>
     </div>
+  </section>
+  <div class="timeline-reveal group divide-surface-border flex flex-col divide-y">
+    {#each groupedEntries as group}
+      <div class="content gap-6">
+        <h3 class="text-header flex flex-row items-center gap-2 text-xl font-medium">
+          {group.date}
+        </h3>
+        <ul class="flex flex-col gap-5">
+          {#each group.entries as entry}
+            <li class="flex flex-col gap-1" data-type={entry.type}>
+              {#if entry.branchMerged && entry.intoBranch}
+                <p class="text-header flex flex-row items-center gap-2 font-medium">
+                  {entry.branchDisplay === entry.branchMerged ? entry.intoBranch : entry.branchDisplay}
+                  <iconify-icon icon="ph:arrow-left-bold"></iconify-icon>
+                  {entry.branchMerged}
+                </p>
+              {:else}
+                <p class="text-header flex flex-row items-center font-medium">
+                  {entry.message}
+                </p>
+              {/if}
+              <ul class="text-xxs text-muted flex gap-3 font-medium">
+                <li>{DateTime.fromISO(entry.date).toFormat("T")}</li>
+                {#if entry.branchMerged && entry.intoBranch}
+                  <li>merge</li>
+                {:else}
+                  <li class="branch-display text-muted font-medium">
+                    {shortenText(entry.branchDisplay)}
+                  </li>
+                {/if}
+                <li>{entry.version}</li>
+              </ul>
+            </li>
+          {/each}
+        </ul>
+      </div>
+    {/each}
+
+    {#if hasMore}
+      <div bind:this={loadMoreTrigger}>
+        {#if isLoadingMore}
+          <p class="text-sm text-gray-400">Loading more commits...</p>
+        {/if}
+      </div>
+    {/if}
   </div>
 </section>
 
@@ -217,32 +196,11 @@
   h1 {
     font-feature-settings: "ss01" 1;
   }
-  h3 {
-    @apply text-xl;
-  }
-
-  .date-group {
-    @apply flex flex-col gap-12;
-  }
-
-  .date-header {
-    @apply flex flex-row items-center gap-4;
-  }
-
-  .entry {
-    @apply flex flex-col items-start gap-3;
-    p {
-      @apply text-base font-medium;
-    }
-  }
-
-  .entry-content {
-    @apply flex flex-col gap-5;
-  }
-
-  .entry-meta {
+  ul {
     li {
-      @apply bg-surface text-xxs text-header border-surface-border flex flex-row items-center rounded-full border px-2 py-0.5;
+      a {
+        @apply underline;
+      }
     }
   }
 </style>

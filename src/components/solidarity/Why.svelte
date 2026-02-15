@@ -58,7 +58,7 @@
       <p>
         Well, what if everyone is #opentowork? I mean everyone. You, your old colleagues (though to be fair if you were
         let go, it’s not long until they are), the person that gave you the news after reading a Brené Brown quote 10
-        minutes before. Bill Gates.
+        minutes before. Jensen Huang.
       </p>
       <h3>With Solidarity everyone is #opentowork.</h3>
       <p>

@@ -36,11 +36,6 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
             height: 600,
             width: 1200,
           },
-          {
-            url: Astro.site + "",
-            height: 1080,
-            width: 1080,
-          },
         ],
         site_name: "isfigmadown.com",
         type: "site",
@@ -66,9 +61,10 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
       is:inline
       type="module"
       src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    ></script>
-    <script is:inline src="https://kit.fontawesome.com/180e1f6a33.js" crossorigin="anonymous">
+    >
     </script>
+    <script is:inline src="https://kit.fontawesome.com/180e1f6a33.js" crossorigin="anonymous"
+    ></script>
     <meta name="generator" content={Astro.generator} />
     <Analytics productName="Figma Down" />
   </head>

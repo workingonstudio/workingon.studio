@@ -1,36 +1,59 @@
 <script lang="ts">
   import projectData from "@data/projects.json";
+
+  function getProjectLink(link: string, externalLink?: boolean) {
+    if (externalLink) return link;
+    return link === "/" ? link : `/projects/${link}`;
+  }
+
+  function getLinkProps(externalLink?: boolean) {
+    return externalLink ? { target: "_blank", rel: "noopener noreferrer" } : {};
+  }
+
+  $: liveProjects = projectData.filter((project) => project.shipped);
+  $: inDevProjects = projectData.filter((project) => !project.shipped);
 </script>
 
-<ul class="grid auto-cols-max grid-cols-1 gap-14 md:grid-cols-2">
-  {#each projectData as { projectIcon, name, tagline, description, link }, index}
-    {#if index <= 6}
-      <li class="project-item group flex flex-col items-start gap-4">
-        <div class="bg-surface border-surface-border flex flex-row rounded-xl border p-2">
-          <iconify-icon
-            icon={projectIcon}
-            class="icon text-primary size-6 text-2xl transition-colors duration-300"
-          ></iconify-icon>
-        </div>
-        <a href={link === "/" ? link : `/projects/${link}`} class="flex flex-col gap-3">
-          <h2>
-            {name}
-          </h2>
-          <p class="text-muted text-base italic">{tagline}</p>
-          <p>{description}</p>
-        </a>
-      </li>
-    {/if}
-  {/each}
-</ul>
+<div class="divide-surface-border flex flex-col divide-y">
+  {#if inDevProjects.length > 0}
+    <section class="content gap-6">
+      <h2 class="text-xl font-medium">Currently building</h2>
+      <ul class="flex flex-col gap-5">
+        {#each inDevProjects as { name, description, link, externalLink }}
+          <li class="project-item flex flex-col gap-1">
+            <a
+              href={getProjectLink(link, externalLink)}
+              {...getLinkProps(externalLink)}
+              class="text-header flex flex-row items-center gap-2 font-medium hover:underline"
+            >
+              {name}
+              <iconify-icon icon="ph:arrow-up-right-bold"></iconify-icon>
+            </a>
+            <p class="text-muted text-sm">{description}</p>
+          </li>
+        {/each}
+      </ul>
+    </section>
+  {/if}
 
-<style>
-  @reference "@styles/main.css";
-  a {
-    &:hover {
-      h2 {
-        @apply underline;
-      }
-    }
-  }
-</style>
+  {#if liveProjects.length > 0}
+    <section class="content gap-6">
+      <h2 class="text-xl font-medium">Live projects</h2>
+      <ul class="flex flex-col gap-5">
+        {#each liveProjects as { name, description, link, externalLink }}
+          <li class="project-item flex flex-col gap-1">
+            <a
+              href={getProjectLink(link, externalLink)}
+              {...getLinkProps(externalLink)}
+              class="text-header flex flex-row items-center gap-2 font-medium hover:underline"
+            >
+              {name}
+              <iconify-icon icon="ph:arrow-up-right-bold"></iconify-icon>
+            </a>
+            <p class="text-muted text-sm">{description}</p>
+          </li>
+        {/each}
+      </ul>
+    </section>
+  {/if}
+</div>

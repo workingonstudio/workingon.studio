@@ -1,0 +1,12 @@
+{
+  "product": "glyph-palette",
+  "version": {
+    "major": 1,
+    "minor": 4,
+    "patch": 1
+  },
+  "title": "",
+  "description": "",
+  "date": "2026-02-04T00:00:00.000Z",
+  "items": ["adding Bootstrap icons."]
+}
