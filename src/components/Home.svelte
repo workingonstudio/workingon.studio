@@ -2,10 +2,17 @@
   import PageHeader from "@components/partials/PageHeader.svelte";
   import { DateTime } from "luxon";
   import ProjectList from "./partials/ProjectList.svelte";
-  import ArticleList from "./partials/ArticleList.svelte";
   import WorkHistory from "./partials/WorkHistory.svelte";
   import About from "./partials/About.svelte";
   import SocialProfiles from "./partials/SocialProfiles.svelte";
+  import ArticleList from "./partials/ArticleList.svelte";
+
+  export let articles: Array<{
+    slug: string;
+    title: string;
+    description?: string;
+  }>;
+
   const launchDate = DateTime.fromISO("2025-08-27");
   const daysSince = Math.floor(DateTime.now().diff(launchDate, "days").days);
 </script>
@@ -23,7 +30,7 @@
   <div class="divide-surface-border border-surface-border divide-y-1 border-b lg:border-b-0">
     <About />
     <WorkHistory />
-    <ArticleList header="Writing" />
+    <ArticleList header="Writing" {articles} />
   </div>
   <div class="divide-surface-border divide-y-1">
     <ProjectList />

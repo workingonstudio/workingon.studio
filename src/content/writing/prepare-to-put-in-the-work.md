@@ -62,7 +62,7 @@ There is comfort in that. It will strengthen the part of your brain that tells y
 
 This is a quote from John Cleese, from a talk in 2007 about creativity in management. You can [watch the whole thing](https://youtu.be/Pb5oIIPO62g?t=267), or just listen to it whilst you push pixels around the screen.
 
-Cleese cites a MacKinnon study **Creativity: a multi-faceted phenomenon**[1](#footnote-1) in which he determines that the most creative people are able to sustain a “state of play”. This ‘state’ allows you to mess with ideas without any bias as to whether they are good or not. They’re just ideas.
+Cleese cites a MacKinnon study **Creativity: a multi-faceted phenomenon** [^1] in which he determines that the most creative people are able to sustain a “state of play”. This ‘state’ allows you to mess with ideas without any bias as to whether they are good or not. They’re just ideas.
 
 Sounds good right? But how do you get better at that?
 
@@ -92,7 +92,7 @@ Listen I have worked at big companies. They are slow, stifling, and design decis
 
 If you’re going to listen to anyone, make sure it’s someone that has consistently delivered. Not got lucky once, but has continually created wonderful experiences at multiple companies.
 
-They won’t be spouting about ‘craft’ on social media. They’ll be writing long form, sharing experimental work, or doing actual work. I’ve already written about this so I’ll end there[2](#footnote-2).
+They won’t be spouting about ‘craft’ on social media. They’ll be writing long form, sharing experimental work, or doing actual work. I’ve already written about this so I’ll end there [^2].
 
 ## Put it somewhere.
 
@@ -108,10 +108,8 @@ I’m not saying that if you follow my advice it will be the panacea to all your
 
 I am nudging you in a direction that I feel will benefit you the most. It won’t be software tutorials, or 24 day bootcamps. It will be a library of experience that you can draw from. So next time a shiny new thing comes along, it won’t be scary, you’ll just be excited at the possibilities.
 
-[1](#footnote-anchor-1)
 
-[https://alumniacademy.yale.edu/sites/default/files/2021-06/6-22%20Reading-8MacKinnon.pdf](https://alumniacademy.yale.edu/sites/default/files/2021-06/6-22%20Reading-8MacKinnon.pdf)
 
-[2](#footnote-anchor-2)
+[^1]: https://alumniacademy.yale.edu/sites/default/files/2021-06/6-22%20Reading-8MacKinnon.pdf
 
-[https://aquietfracture.substack.com/p/look-out-for-those-that-are-doing](https://aquietfracture.substack.com/p/look-out-for-those-that-are-doing)
+[^2]: https://workingon.studio/writing/look-out-for-those-that-are-doing

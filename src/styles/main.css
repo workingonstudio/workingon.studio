@@ -71,6 +71,22 @@
   a {
     @apply text-header underline;
   }
+
+  sup {
+    a {
+      @apply text-xxs border-surface-border rounded-sm border px-1 py-0.5 font-semibold no-underline;
+    }
+  }
+  .footnotes {
+    ol {
+      @apply flex flex-col gap-2;
+      li {
+        p {
+          @apply text-sm;
+        }
+      }
+    }
+  }
 }
 
 @layer components {

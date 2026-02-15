@@ -2,8 +2,18 @@
 // src/pages/index.astro
 import Layout from "../layouts/Layout.astro";
 import Home from "../components/Home.svelte";
+import { getCollection } from "astro:content";
+
+const posts = await getCollection("writing");
+const sortedPosts = posts
+  .sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf())
+  .map((post) => ({
+    slug: post.slug,
+    title: post.data.title,
+    description: post.data.description,
+  }));
 ---
 
 <Layout title="workingon.studio - Digital tools that work. And make a point.">
-  <Home />
+  <Home articles={sortedPosts} client:load />
 </Layout>

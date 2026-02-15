@@ -1,8 +1,9 @@
 <script lang="ts">
   import socialProfiles from "@data/socialProfiles.json";
+  export let containerClass = "";
 </script>
 
-<section class="content gap-6">
+<section class="content gap-6 {containerClass}">
   <h2 class="text-xl font-medium">Elsewhere</h2>
   <ul class="flex flex-col gap-5">
     {#each socialProfiles as { name, href, description }}
