@@ -1,17 +1,18 @@
 <script lang="ts">
   import ContentPanel from "./partials/ContentPanel.svelte";
+  import PageLayout from "./partials/PageLayout.svelte";
   export let posts;
 </script>
 
-<ContentPanel borderLeft borderRight>
+<ContentPanel borderBottom>
   <!-- prettier-ignore -->
   <h1>
     Writing about design and creativity as it actually is.
   </h1>
 </ContentPanel>
 
-<section class="border-surface-border grid-1 grid min-h-screen border border-b-0 lg:grid-cols-2">
-  <div class="content border-surface-border border-0 lg:border-r">
+<PageLayout>
+  <ContentPanel>
     <ul class="flex flex-col gap-5">
       {#each posts as post}
         <li class="flex flex-col gap-1">
@@ -28,6 +29,6 @@
         </li>
       {/each}
     </ul>
-  </div>
-  <div class="hidden lg:block"></div>
-</section>
+  </ContentPanel>
+  <div></div>
+</PageLayout>

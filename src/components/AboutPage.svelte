@@ -5,12 +5,12 @@
   import SocialProfiles from "./partials/SocialProfiles.svelte";
 </script>
 
-<ContentPanel borderLeft borderRight>
+<ContentPanel borderBottom>
   <h1>A decade and a bit building for the internet.</h1>
 </ContentPanel>
 
 <PageLayout>
-  <ContentPanel borderRight>
+  <ContentPanel>
     <p>16 years building for the internet. Started at agencies. Moved to startups fast.</p>
     <p>
       Been founding designer at multiple companies. Survived acquisitions. Did 3 incubator batches (500 Startups x2 &
@@ -27,7 +27,7 @@
     </p>
   </ContentPanel>
 
-  <div class="divide-y-surface">
+  <div class="divide-surface-border divide-y">
     <WorkHistory />
     <SocialProfiles />
   </div>

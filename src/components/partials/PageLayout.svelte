@@ -12,10 +12,7 @@
   @reference "@styles/main.css";
 
   .page-layout {
-    @apply border-surface-border grid grid-cols-1;
-    @apply border-y;
-    @apply md:border md:border-b-0;
-    @apply lg:grid-cols-2;
+    @apply divide-surface-border grid grid-cols-1 lg:grid-cols-2 lg:divide-x;
     @apply items-start lg:items-stretch;
   }
 </style>

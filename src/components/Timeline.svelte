@@ -1,6 +1,7 @@
 <script>
   import { onMount, tick } from "svelte";
   import ContentPanel from "./partials/ContentPanel.svelte";
+  import PageLayout from "./partials/PageLayout.svelte";
   import { DateTime } from "luxon";
   export let timelineData;
 
@@ -121,13 +122,13 @@
   const result = getGitHubStats(timelineData);
 </script>
 
-<ContentPanel borderLeft borderRight>
+<ContentPanel borderBottom>
   <h1>
     {result.totalCommits} commits. {result.totalMerges} merges. {result.totalPRs} pull requests. One rebase.
   </h1>
 </ContentPanel>
 
-<section class="border-surface-border grid-1 grid min-h-screen border-0 border-b-0 md:border lg:grid-cols-2">
+<PageLayout>
   <div
     class="timeline-reveal group divide-surface-border border-surface-border flex flex-col divide-y border-r-0 md:border-r-1"
   >
@@ -188,7 +189,7 @@
       <li>Analytics tracked anonymously via <a href="https://umami.is/">Umami</a> self-hosted via <a href="https://railway.com/">Railway</a>.</li>
     </ul>
   </ContentPanel>
-</section>
+</PageLayout>
 
 <style>
   @reference "@styles/main.css";
