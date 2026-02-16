@@ -5,7 +5,7 @@
   import SocialProfiles from "./partials/SocialProfiles.svelte";
 </script>
 
-<ContentPanel>
+<ContentPanel borderBottom>
   <h1>A decade and a bit building for the internet.</h1>
 </ContentPanel>
 
@@ -27,8 +27,10 @@
     </p>
   </ContentPanel>
 
-  <WorkHistory />
-  <SocialProfiles />
+  <div class="divide-surface-border divide-y">
+    <WorkHistory />
+    <SocialProfiles />
+  </div>
 </PageLayout>
 
 <style>

@@ -45,7 +45,7 @@
   });
 </script>
 
-<ContentPanel borderLeft borderRight>
+<ContentPanel borderBottom>
   <!-- prettier-ignore -->
   <h1>
   £<span class="tabular-nums">{displayRate.toFixed(2)}</span>/day*. 
@@ -54,8 +54,8 @@
   </h1>
 </ContentPanel>
 
-<PageLayout>
-  <ContentPanel borderRight>
+<PageLayout variant="full">
+  <ContentPanel>
     <h2 class="text-xl font-medium">Send email</h2>
     <div class="flex flex-col gap-1">
       <a

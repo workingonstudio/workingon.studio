@@ -8,7 +8,7 @@
   const daysSince = Math.floor(DateTime.now().diff(launchDate, "days").days);
 </script>
 
-<ContentPanel borderLeft borderRight>
+<ContentPanel borderBottom>
   <h1>
     {daysSince} days passed.
     <br />
@@ -16,8 +16,8 @@
   </h1>
 </ContentPanel>
 
-<PageLayout variant="full">
-  <ContentPanel borderRight>
+<PageLayout>
+  <ContentPanel>
     <p>I've spent the last {daysSince} days, designing and shipping these projects.</p>
     <p>
       Some are fun experiments that expose corporate performance culture. Others are practical tools for
@@ -35,7 +35,9 @@
     <p>Built with Svelte, compiled to vanilla JavaScript. Fast, lightweight, functional.</p>
   </ContentPanel>
 
-  <ProjectList />
+  <div class="divide-surface-border divide-y">
+    <ProjectList />
+  </div>
 </PageLayout>
 
 <style>

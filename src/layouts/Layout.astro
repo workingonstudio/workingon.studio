@@ -89,7 +89,8 @@ const currentPath = Astro.url.pathname;
       is:inline
       type="module"
       src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    ></script>
+    >
+    </script>
     <meta name="generator" content={Astro.generator} />
     <Analytics />
     <StructuredData />
@@ -104,7 +105,7 @@ const currentPath = Astro.url.pathname;
       </div>
     </div>
     <main
-      class="border-surface-border mx-0 flex min-h-screen flex-1 flex-col md:mx-16 lg:border-x 2xl:mx-[10%]"
+      class="border-surface-border mx-0 flex min-h-screen flex-1 flex-col md:mx-16 md:border-x 2xl:mx-[10%]"
     >
       <div class="flex flex-1 flex-col justify-start">
         <slot />
