@@ -1,6 +1,5 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import PageHeader from "@components/partials/PageHeader.svelte";
 import PageLayout from "@components/partials/PageLayout.svelte";
 import ContentPanel from "@components/partials/ContentPanel.svelte";
 import ArticleList from "@components/partials/ArticleList.svelte";
@@ -32,10 +31,10 @@ const otherPosts = allPosts
 ---
 
 <Layout title={post.data.title}>
-  <PageHeader>
+  <ContentPanel borderLeft borderRight>
     <h1>{post.data.title}</h1>
     <p class="text-medium text-muted text-xl">{post.data.description}</p>
-  </PageHeader>
+  </ContentPanel>
 
   <PageLayout client:load>
     <ContentPanel borderRight client:load>

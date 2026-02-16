@@ -1,5 +1,4 @@
 <script lang="ts">
-  import PageHeader from "@components/partials/PageHeader.svelte";
   import PageLayout from "@components/partials/PageLayout.svelte";
   import ContentPanel from "@components/partials/ContentPanel.svelte";
   import { DateTime } from "luxon";
@@ -9,13 +8,13 @@
   const daysSince = Math.floor(DateTime.now().diff(launchDate, "days").days);
 </script>
 
-<PageHeader>
+<ContentPanel borderLeft borderRight>
   <h1>
     {daysSince} days passed.
     <br />
     8 projects, designed, built and shipped.
   </h1>
-</PageHeader>
+</ContentPanel>
 
 <PageLayout variant="full">
   <ContentPanel borderRight>

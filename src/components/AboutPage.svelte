@@ -1,14 +1,13 @@
 <script lang="ts">
-  import PageHeader from "@components/partials/PageHeader.svelte";
   import PageLayout from "@components/partials/PageLayout.svelte";
   import ContentPanel from "@components/partials/ContentPanel.svelte";
   import WorkHistory from "./partials/WorkHistory.svelte";
   import SocialProfiles from "./partials/SocialProfiles.svelte";
 </script>
 
-<PageHeader>
+<ContentPanel borderLeft borderRight>
   <h1>A decade and a bit building for the internet.</h1>
-</PageHeader>
+</ContentPanel>
 
 <PageLayout>
   <ContentPanel borderRight>
@@ -29,7 +28,7 @@
   </ContentPanel>
 
   <div class="divide-y-surface">
-    <WorkHistory borderBottom />
+    <WorkHistory />
     <SocialProfiles />
   </div>
 </PageLayout>

@@ -1,46 +1,33 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import PageHeader from "@components/partials/PageHeader.svelte";
+import ContentPanel from "@components/partials/ContentPanel.svelte";
+import PageLayout from "@components/partials/PageLayout.svelte";
 ---
 
 <Layout title="404">
-  <PageHeader>
+  <ContentPanel borderRight borderLeft>
     <h1>Are you really lost if you find something?</h1>
-  </PageHeader>
+  </ContentPanel>
 
-  <section class="border-surface-border grid-1 grid border border-b-0 lg:grid-cols-2">
+  <PageLayout>
     <!-- prettier-ignore -->
-    <div class="content">
+    <ContentPanel borderRight>
       <blockquote>Guys like us, that work on ranches, are the loneliest guys in the world. They got no
             family. They don't belong no place. They come to a ranch an' work up a stake, and the
             first thing you know they're poundin' their tail on some other ranch. They ain't got
             nothing to look ahead to.
           </blockquote>
-      <div class="flex flex-col">
-        <ul class="flex flex-row gap-6 text-xs text-gray-500">
-          <li class="flex items-center">
-            <iconify-icon icon="carbon:notebook-reference" class="text-base text-inherit"
-            ></iconify-icon>
-            <span>Of Mice and Men</span>
-          </li>
-          <li class="flex items-center">
-            <iconify-icon icon="carbon:edit" class="text-base text-inherit"></iconify-icon>
-            <span>John Steinbeck</span>
-          </li>
-          <li>
-            <a
+          <div class="flex flex-row gap-2 items-center">
+            <span>Of Mice and Men</span>/<span>John Steinbeck</span>/<a
               href="https://onlineshop.oxfam.org.uk/searchresults?N=&No=0&Rdm=118&Nr=product.active:1&type=search&Nf=sku.listPrice|GT+0&Ns=null&Ntk=&Nrpp=30&Ntt=of%20mice%20and%20men"
-              class="flex items-center"
+              class="flex items-center underline"
               target="_blank"
             >
-              <iconify-icon icon="carbon:shopping-cart-plus" class="mr-2 text-base"></iconify-icon>
               Buy from Oxfam
             </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
+          </div>
+    </ContentPanel>
+  </PageLayout>
 </Layout>
 
 <style>

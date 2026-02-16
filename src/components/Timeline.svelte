@@ -1,6 +1,6 @@
 <script>
   import { onMount, tick } from "svelte";
-  import PageHeader from "./partials/PageHeader.svelte";
+  import ContentPanel from "./partials/ContentPanel.svelte";
   import { DateTime } from "luxon";
   export let timelineData;
 
@@ -121,11 +121,11 @@
   const result = getGitHubStats(timelineData);
 </script>
 
-<PageHeader>
+<ContentPanel borderLeft borderRight>
   <h1>
     {result.totalCommits} commits. {result.totalMerges} merges. {result.totalPRs} pull requests. One rebase.
   </h1>
-</PageHeader>
+</ContentPanel>
 
 <section class="border-surface-border grid-1 grid min-h-screen border-0 border-b-0 md:border lg:grid-cols-2">
   <div
@@ -175,11 +175,11 @@
       </div>
     {/if}
   </div>
-  <section>
-    <div class="border-surface-border content flex flex-col gap-6 border-b">
-      <h3 class="text-xl font-medium">Details</h3>
-      <!-- prettier-ignore -->
-      <ul class="flex-col flex gap-3 text-sm text-muted">
+
+  <ContentPanel>
+    <h3 class="text-xl font-medium">Details</h3>
+    <!-- prettier-ignore -->
+    <ul class="flex-col flex gap-3 text-sm text-muted">
       <li>Hosted on <a href="https://github.com/workingonstudio/workingon.studio">Github</a> pages.</li>
       <li>Built with <a href="https://astro.build/">Astro</a> and <a href="https://svelte.dev/">Svelte</a>.</li>
       <li>Licenced files hosted on <a href="">CloudFlare</a>.</li>
@@ -187,8 +187,7 @@
       <li>Icons are <a href="https://phosphoricons.com/">Phosphor</a> via <a href="https://iconify.design/">Iconfiy</a>.</li>
       <li>Analytics tracked anonymously via <a href="https://umami.is/">Umami</a> self-hosted via <a href="https://railway.com/">Railway</a>.</li>
     </ul>
-    </div>
-  </section>
+  </ContentPanel>
 </section>
 
 <style>
