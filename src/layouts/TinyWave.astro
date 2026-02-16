@@ -1,0 +1,91 @@
+---
+import "../styles/tiny-wave.css";
+
+import { ClientRouter } from "astro:transitions";
+
+import { AstroSeo } from "@astrolib/seo";
+
+import Analytics from "./partials/Analytics.astro";
+import { Font } from "astro:assets";
+
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+const longTitle = title + " - workingon.studio";
+const currentURL = new URL(Astro.url.pathname, Astro.site).href;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <Font cssVariable="--font-satoshi" preload />
+    <ClientRouter />
+    <AstroSeo
+      title={longTitle}
+      description="A Chrome Extension that makes you feel less s**t about looking for work."
+      canonical={currentURL}
+      openGraph={{
+        url: currentURL,
+        title: title,
+        description: "A Chrome Extension that makes you feel less s**t about looking for work.",
+        images: [
+          {
+            url: Astro.site + "solidarity/opengraph/site-default.webp",
+            height: 630,
+            width: 1200,
+            alt: "Solidarity - A Chrome Extension that makes you feel less s**t about looking for work.",
+          },
+        ],
+        site_name: "workingon.studio",
+        type: "site",
+      }}
+      ,
+      twitter={{
+        cardType: "summary_large_image",
+        handle: "@prmack",
+      }}
+      ,
+      additionalMetaTags={[
+        {
+          name: "twitter:image",
+          content: Astro.site + "solidarity/opengraph/site-default.webp",
+        },
+        {
+          name: "twitter:url",
+          content: "https://wo.studio/projects/solidarity",
+        },
+      ]}
+    />
+    <meta name="theme-color" content="#FAFAF9" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/solidarity/favicon-light.svg"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/solidarity/favicon-dark.svg"
+      media="(prefers-color-scheme: dark)"
+    />
+    <script
+      is:inline
+      type="module"
+      src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
+    ></script>
+
+    <meta name="generator" content={Astro.generator} />
+    <Analytics productName="TinyWave" />
+    <title>{title}</title>
+  </head>
+  <body id="top" class="h-full">
+    <slot />
+  </body>
+</html>
