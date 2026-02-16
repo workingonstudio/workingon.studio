@@ -54,7 +54,7 @@
   </h1>
 </ContentPanel>
 
-<PageLayout variant="full">
+<PageLayout>
   <ContentPanel>
     <h2 class="text-xl font-medium">Send email</h2>
     <div class="flex flex-col gap-1">
@@ -84,7 +84,6 @@
       </p>
     </div>
   </ContentPanel>
-
   <SocialProfiles />
 </PageLayout>
 

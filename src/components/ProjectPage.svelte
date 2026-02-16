@@ -17,23 +17,25 @@
 </ContentPanel>
 
 <PageLayout>
-  <ContentPanel>
-    <p>I've spent the last {daysSince} days, designing and shipping these projects.</p>
-    <p>
-      Some are fun experiments that expose corporate performance culture. Others are practical tools for
-      <a href="https://figma.com">Figma</a>
-      and
-      <a href="https://sketch.com">Sketch</a>
-      -
-      <a href="https://glyphpalette.com">Glyph Palette</a>
-      is officially recognised by Sketch.
-    </p>
-    <!-- prettier-ignore -->
-    <p>
-      Currently building: <a href="https://whento.work">When to Work</a>, a simpler way to find overlap with remote colleagues across timezones.
-    </p>
-    <p>Built with Svelte, compiled to vanilla JavaScript. Fast, lightweight, functional.</p>
-  </ContentPanel>
+  <div class="border-surface-border border-b lg:border-0">
+    <ContentPanel>
+      <p>I've spent the last {daysSince} days, designing and shipping these projects.</p>
+      <p>
+        Some are fun experiments that expose corporate performance culture. Others are practical tools for
+        <a href="https://figma.com">Figma</a>
+        and
+        <a href="https://sketch.com">Sketch</a>
+        -
+        <a href="https://glyphpalette.com">Glyph Palette</a>
+        is officially recognised by Sketch.
+      </p>
+      <!-- prettier-ignore -->
+      <p>
+        Currently building: <a href="https://whento.work">When to Work</a>, a simpler way to find overlap with remote colleagues across timezones.
+      </p>
+      <p>Built with Svelte, compiled to vanilla JavaScript. Fast, lightweight, functional.</p>
+    </ContentPanel>
+  </div>
 
   <div class="divide-surface-border divide-y">
     <ProjectList />
