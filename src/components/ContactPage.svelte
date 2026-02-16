@@ -1,5 +1,4 @@
 <script lang="ts">
-  import PageHeader from "@components/partials/PageHeader.svelte";
   import PageLayout from "@components/partials/PageLayout.svelte";
   import ContentPanel from "@components/partials/ContentPanel.svelte";
   import { onMount } from "svelte";
@@ -46,14 +45,14 @@
   });
 </script>
 
-<PageHeader>
+<ContentPanel borderLeft borderRight>
   <!-- prettier-ignore -->
   <h1>
   £<span class="tabular-nums">{displayRate.toFixed(2)}</span>/day*. 
   I work with teams that decide fast and ship faster. 
   The rate increases while you think about it.
   </h1>
-</PageHeader>
+</ContentPanel>
 
 <PageLayout>
   <ContentPanel borderRight>

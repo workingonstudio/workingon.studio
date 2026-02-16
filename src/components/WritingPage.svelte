@@ -1,15 +1,14 @@
 <script lang="ts">
-  import PageHeader from "@components/partials/PageHeader.svelte";
-
+  import ContentPanel from "./partials/ContentPanel.svelte";
   export let posts;
 </script>
 
-<PageHeader>
+<ContentPanel borderLeft borderRight>
   <!-- prettier-ignore -->
   <h1>
     Writing about design and creativity as it actually is.
   </h1>
-</PageHeader>
+</ContentPanel>
 
 <section class="border-surface-border grid-1 grid min-h-screen border border-b-0 lg:grid-cols-2">
   <div class="content border-surface-border border-0 lg:border-r">

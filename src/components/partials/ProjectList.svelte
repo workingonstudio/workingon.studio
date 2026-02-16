@@ -18,9 +18,9 @@
   $: inDevProjects = projectData.filter((project) => !project.shipped);
 </script>
 
-<div class="divide-y-surface" class:panel-border-b={borderBottom} class:panel-border-r={borderRight}>
+<div class="divide-y-surface">
   {#if inDevProjects.length > 0}
-    <ContentPanel noPadding={false} borderBottom>
+    <ContentPanel noPadding={false}>
       <h2 class="text-xl font-medium">Currently building</h2>
       <ul class="stack">
         {#each inDevProjects as { name, description, link, externalLink }}
