@@ -13,8 +13,9 @@
 
   .page-layout {
     @apply border-surface-border grid grid-cols-1;
-    @apply border-0 border-b-0;
+    @apply border-y;
     @apply md:border md:border-b-0;
     @apply lg:grid-cols-2;
+    @apply items-start lg:items-stretch;
   }
 </style>
