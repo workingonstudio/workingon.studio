@@ -1,7 +1,6 @@
 <script lang="ts">
   import ContentPanel from "@components/partials/ContentPanel.svelte";
   import PageLayout from "@components/partials/PageLayout.svelte";
-  import { DateTime } from "luxon";
   import ProjectList from "./partials/ProjectList.svelte";
   import WorkHistory from "./partials/WorkHistory.svelte";
   import About from "./partials/About.svelte";
@@ -13,12 +12,9 @@
     title: string;
     description?: string;
   }>;
-
-  const launchDate = DateTime.fromISO("2025-08-27");
-  const daysSince = Math.floor(DateTime.now().diff(launchDate, "days").days);
 </script>
 
-<ContentPanel borderLeft borderRight>
+<ContentPanel borderBottom>
   <h1>
     I <span class="underline">design</span>
     ,
@@ -30,16 +26,18 @@
 </ContentPanel>
 
 <PageLayout>
-  <!-- Left column: right border desktop, bottom border mobile only -->
-  <div class="divide-y-surface panel-border-r border-b lg:border-b-0">
+  <!-- Left column -->
+  <div class="divide-surface-border divide-y">
     <About />
     <WorkHistory />
-    <ArticleList header="Writing" {articles} />
+    <div class="border-surface-border border-b lg:border-0">
+      <ArticleList header="Writing" {articles} />
+    </div>
   </div>
 
-  <!-- Right column: just dividers -->
-  <div class="divide-y-surface">
-    <ProjectList borderBottom />
+  <!-- Right column -->
+  <div class="divide-surface-border divide-y">
+    <ProjectList />
     <SocialProfiles />
   </div>
 </PageLayout>
