@@ -1,5 +1,9 @@
 <script lang="ts">
+  import ContentPanel from "./ContentPanel.svelte";
   import projectData from "@data/projects.json";
+
+  export let borderBottom: boolean = false;
+  export let borderRight: boolean = false;
 
   function getProjectLink(link: string, externalLink?: boolean) {
     if (externalLink) return link;
@@ -14,11 +18,11 @@
   $: inDevProjects = projectData.filter((project) => !project.shipped);
 </script>
 
-<div class="divide-surface-border flex flex-col divide-y">
+<div class="divide-y-surface" class:panel-border-b={borderBottom} class:panel-border-r={borderRight}>
   {#if inDevProjects.length > 0}
-    <section class="content gap-6">
+    <ContentPanel noPadding={false} borderBottom>
       <h2 class="text-xl font-medium">Currently building</h2>
-      <ul class="flex flex-col gap-5">
+      <ul class="stack">
         {#each inDevProjects as { name, description, link, externalLink }}
           <li class="project-item flex flex-col gap-1">
             <a
@@ -33,13 +37,13 @@
           </li>
         {/each}
       </ul>
-    </section>
+    </ContentPanel>
   {/if}
 
   {#if liveProjects.length > 0}
-    <section class="content gap-6">
+    <ContentPanel noPadding={false}>
       <h2 class="text-xl font-medium">Live projects</h2>
-      <ul class="flex flex-col gap-5">
+      <ul class="stack">
         {#each liveProjects as { name, description, link, externalLink }}
           <li class="project-item flex flex-col gap-1">
             <a
@@ -54,6 +58,6 @@
           </li>
         {/each}
       </ul>
-    </section>
+    </ContentPanel>
   {/if}
 </div>

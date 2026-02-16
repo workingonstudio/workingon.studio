@@ -1,0 +1,52 @@
+---
+import Layout from "@layouts/Layout.astro";
+import PageHeader from "@components/partials/PageHeader.svelte";
+import PageLayout from "@components/partials/PageLayout.svelte";
+import ContentPanel from "@components/partials/ContentPanel.svelte";
+import ArticleList from "@components/partials/ArticleList.svelte";
+import SocialProfiles from "@components/partials/SocialProfiles.svelte";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("writing");
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+
+// Get all posts except current one
+const allPosts = await getCollection("writing");
+const otherPosts = allPosts
+  .filter((p) => p.slug !== post.slug)
+  .sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf())
+  .slice(0, 4) // Latest 4 other articles
+  .map((p) => ({
+    slug: p.slug,
+    title: p.data.title,
+    description: p.data.description,
+  }));
+---
+
+<Layout title={post.data.title}>
+  <PageHeader>
+    <h1>{post.data.title}</h1>
+    <p class="text-medium text-muted text-xl">{post.data.description}</p>
+  </PageHeader>
+
+  <PageLayout client:load>
+    <ContentPanel borderRight client:load>
+      <div class="article">
+        <Content />
+      </div>
+    </ContentPanel>
+
+    <div class="divide-y-surface">
+      <ArticleList header="More Writing" articles={otherPosts} borderBottom client:load />
+      <SocialProfiles borderBottom client:load />
+    </div>
+  </PageLayout>
+</Layout>

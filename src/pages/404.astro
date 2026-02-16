@@ -1,58 +1,52 @@
 ---
 import Layout from "@layouts/Layout.astro";
+import PageHeader from "@components/partials/PageHeader.svelte";
 ---
 
 <Layout title="404">
-  <h1>Are you really lost if you find something?</h1>
-  <div class="flex w-2xl flex-col gap-12">
+  <PageHeader>
+    <h1>Are you really lost if you find something?</h1>
+  </PageHeader>
+
+  <section class="border-surface-border grid-1 grid border border-b-0 lg:grid-cols-2">
     <!-- prettier-ignore -->
-    <blockquote>Guys like us, that work on ranches, are the loneliest guys in the world. They got no
-          family. They don't belong no place. They come to a ranch an' work up a stake, and the
-          first thing you know they're poundin' their tail on some other ranch. They ain't got
-          nothing to look ahead to.
-        </blockquote>
-    <div class="flex flex-col">
-      <ul class="flex flex-row gap-6 text-xs text-gray-500">
-        <li class="flex items-center">
-          <iconify-icon icon="carbon:notebook-reference" class="text-base text-inherit"
-          ></iconify-icon>
-          <span>Of Mice and Men</span>
-        </li>
-        <li class="flex items-center">
-          <iconify-icon icon="carbon:edit" class="text-base text-inherit"></iconify-icon>
-          <span>John Steinbeck</span>
-        </li>
-        <li>
-          <a
-            href="https://onlineshop.oxfam.org.uk/searchresults?N=&No=0&Rdm=118&Nr=product.active:1&type=search&Nf=sku.listPrice|GT+0&Ns=null&Ntk=&Nrpp=30&Ntt=of%20mice%20and%20men"
-            class="flex items-center"
-            target="_blank"
-          >
-            <iconify-icon icon="carbon:shopping-cart-plus" class="mr-2 text-base"></iconify-icon>
-            Buy from Oxfam
-          </a>
-        </li>
-      </ul>
+    <div class="content">
+      <blockquote>Guys like us, that work on ranches, are the loneliest guys in the world. They got no
+            family. They don't belong no place. They come to a ranch an' work up a stake, and the
+            first thing you know they're poundin' their tail on some other ranch. They ain't got
+            nothing to look ahead to.
+          </blockquote>
+      <div class="flex flex-col">
+        <ul class="flex flex-row gap-6 text-xs text-gray-500">
+          <li class="flex items-center">
+            <iconify-icon icon="carbon:notebook-reference" class="text-base text-inherit"
+            ></iconify-icon>
+            <span>Of Mice and Men</span>
+          </li>
+          <li class="flex items-center">
+            <iconify-icon icon="carbon:edit" class="text-base text-inherit"></iconify-icon>
+            <span>John Steinbeck</span>
+          </li>
+          <li>
+            <a
+              href="https://onlineshop.oxfam.org.uk/searchresults?N=&No=0&Rdm=118&Nr=product.active:1&type=search&Nf=sku.listPrice|GT+0&Ns=null&Ntk=&Nrpp=30&Ntt=of%20mice%20and%20men"
+              class="flex items-center"
+              target="_blank"
+            >
+              <iconify-icon icon="carbon:shopping-cart-plus" class="mr-2 text-base"></iconify-icon>
+              Buy from Oxfam
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
+  </section>
 </Layout>
 
 <style>
   @reference "../styles/main.css";
-  a {
-    @apply text-xxs text-green-700 underline transition-colors delay-100 hover:no-underline;
-  }
-  ul {
-    @apply text-xxs uppercase;
-    span {
-      @apply text-primary;
-    }
-    li {
-      @apply gap-2;
-    }
-  }
   blockquote {
-    @apply text-body -indent-2 text-2xl/relaxed font-medium italic;
+    @apply text-body -indent-2 text-xl/relaxed font-medium italic;
     @apply before:content-[open-quote] after:content-[close-quote];
   }
 </style>
