@@ -2,8 +2,8 @@
   import ContentPanel from "./ContentPanel.svelte";
   import projectData from "@data/projects.json";
 
-  export let borderBottom: boolean = false;
-  export let borderRight: boolean = false;
+  export const borderBottom: boolean = false;
+  export const borderRight: boolean = false;
 
   function getProjectLink(link: string, externalLink?: boolean) {
     if (externalLink) return link;
