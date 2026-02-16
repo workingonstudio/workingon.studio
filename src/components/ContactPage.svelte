@@ -1,5 +1,7 @@
 <script lang="ts">
   import PageHeader from "@components/partials/PageHeader.svelte";
+  import PageLayout from "@components/partials/PageLayout.svelte";
+  import ContentPanel from "@components/partials/ContentPanel.svelte";
   import { onMount } from "svelte";
   import { dayRate } from "../stores/dayRate";
   import SocialProfiles from "./partials/SocialProfiles.svelte";
@@ -53,43 +55,39 @@
   </h1>
 </PageHeader>
 
-<section
-  class="border-surface-border grid-1 grid min-h-screen border-0 border-b-0 md:border md:border-b-0 lg:grid-cols-2"
->
-  <div class="border-surface-border flex flex-col gap-6 border-r-0 md:border-r-1">
-    <div class="content border-surface-border gap-5 border-0 lg:border-b">
-      <h2 class="text-xl font-medium">Send email</h2>
-      <div class="flex flex-col gap-1">
-        <a
-          href="mailto:hello@workingon.studio?subject=Can%20I/We%20work%20with%20you%3F&"
-          onclick={() => {
-            const currentRate = displayRate;
-            dayRate.reset();
-            // Clear the time interval
-            if (timeInterval !== null) {
-              clearInterval(timeInterval);
-            }
-            // Animate back to base rate
-            animateRate(currentRate, 500);
-            // Restart time-based increment after animation
-            setTimeout(() => {
-              startTimeBasedIncrement(500);
-            }, 800);
-          }}
-          class="text-header flex flex-row items-center gap-2 font-medium"
-        >
-          hello@workingon.studio
-          <iconify-icon icon="ph:arrow-up-right-bold"></iconify-icon>
-        </a>
-        <p class="text-muted text-sm">
-          If I don't reply within 7 days, assume it's a no, I'm on holiday, or dead. Whatever makes you feel better.
-        </p>
-      </div>
+<PageLayout>
+  <ContentPanel borderRight>
+    <h2 class="text-xl font-medium">Send email</h2>
+    <div class="flex flex-col gap-1">
+      <a
+        href="mailto:hello@workingon.studio?subject=Can%20I/We%20work%20with%20you%3F&"
+        onclick={() => {
+          const currentRate = displayRate;
+          dayRate.reset();
+          // Clear the time interval
+          if (timeInterval !== null) {
+            clearInterval(timeInterval);
+          }
+          // Animate back to base rate
+          animateRate(currentRate, 500);
+          // Restart time-based increment after animation
+          setTimeout(() => {
+            startTimeBasedIncrement(500);
+          }, 800);
+        }}
+        class="text-header flex flex-row items-center gap-2 font-medium"
+      >
+        hello@workingon.studio
+        <iconify-icon icon="ph:arrow-up-right-bold"></iconify-icon>
+      </a>
+      <p class="text-muted text-sm">
+        If I don't reply within 7 days, assume it's a no, I'm on holiday, or dead. Whatever makes you feel better.
+      </p>
     </div>
-  </div>
+  </ContentPanel>
 
   <SocialProfiles />
-</section>
+</PageLayout>
 
 <style>
   @reference "@styles/main.css";

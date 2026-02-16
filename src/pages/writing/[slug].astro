@@ -1,6 +1,8 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import PageHeader from "@components/partials/PageHeader.svelte";
+import PageLayout from "@components/partials/PageLayout.svelte";
+import ContentPanel from "@components/partials/ContentPanel.svelte";
 import ArticleList from "@components/partials/ArticleList.svelte";
 import SocialProfiles from "@components/partials/SocialProfiles.svelte";
 import { getCollection } from "astro:content";
@@ -12,8 +14,6 @@ export async function getStaticPaths() {
     props: { post },
   }));
 }
-
-const containerClass = "border-b border-surface-border";
 
 const { post } = Astro.props;
 const { Content } = await post.render();
@@ -37,15 +37,16 @@ const otherPosts = allPosts
     <p class="text-medium text-muted text-xl">{post.data.description}</p>
   </PageHeader>
 
-  <section
-    class="border-surface-border grid-1 grid min-h-screen border-0 border-b-0 md:border lg:grid-cols-2"
-  >
-    <div class="article content border-surface-border gap-6 border-r">
-      <Content />
+  <PageLayout client:load>
+    <ContentPanel borderRight client:load>
+      <div class="article">
+        <Content />
+      </div>
+    </ContentPanel>
+
+    <div class="divide-y-surface">
+      <ArticleList header="More Writing" articles={otherPosts} borderBottom client:load />
+      <SocialProfiles borderBottom client:load />
     </div>
-    <div class="divide-surface-border divide-y">
-      <ArticleList header="More Writing" articles={otherPosts} {containerClass} client:load />
-      <SocialProfiles {containerClass} />
-    </div>
-  </section>
+  </PageLayout>
 </Layout>

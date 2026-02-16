@@ -1,16 +1,21 @@
 <script lang="ts">
+  import ContentPanel from "./ContentPanel.svelte";
+
   export let header: string;
-  export let containerClass = "";
   export let articles: Array<{
     slug: string;
     title: string;
     description?: string;
   }>;
+
+  // Border props replace the containerClass pattern
+  export let borderBottom: boolean = false;
+  export let borderRight: boolean = false;
 </script>
 
-<section class="content gap-6 {containerClass}">
+<ContentPanel {borderBottom} {borderRight}>
   <h2 class="text-xl font-medium">{header}</h2>
-  <ul class="flex flex-col gap-5">
+  <ul class="stack">
     {#each articles as article}
       <li class="flex flex-col gap-1">
         <a
@@ -26,7 +31,7 @@
       </li>
     {/each}
   </ul>
-</section>
+</ContentPanel>
 
 <style>
   @reference "@styles/main.css";
