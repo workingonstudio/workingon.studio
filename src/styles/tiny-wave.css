@@ -30,7 +30,7 @@
 
 @layer components {
   .btn {
-    @apply rounded-full border border-gray-300 ring ring-gray-100;
+    @apply rounded-full border border-gray-300 bg-white ring ring-gray-100;
     @apply shadow-sm;
     @apply cursor-pointer;
     @apply transition-all duration-300;
