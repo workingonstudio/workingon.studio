@@ -9,7 +9,7 @@
   --color-primary: theme(colors.rose.500);
   --color-primary-hover: theme(colors.rose.600);
   --color-body: theme(colors.slate.900);
-  --color-muted: theme(colors.slate.500);
+  --color-muted: theme(colors.slate.400);
   --color-bg: theme(colors.gray.50);
 }
 

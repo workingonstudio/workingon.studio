@@ -3,6 +3,7 @@ import "@styles/tiny-wave.css";
 
 import TinyWave from "@layouts/TinyWave.astro";
 import Header from "@components/tiny-wave/Header.svelte";
+import Footer from "@components/tiny-wave/Footer.svelte";
 import ToggleMute from "@components/tiny-wave/ToggleMute.svelte";
 ---
 
@@ -14,10 +15,11 @@ import ToggleMute from "@components/tiny-wave/ToggleMute.svelte";
         Start Recording
       </button>
       <ToggleMute client:load />
+      <Footer />
     </div>
   </div>
-
-  <style>
-    @reference "@styles/tiny-wave.css";
-  </style>
 </TinyWave>
+
+<style>
+  @reference "@styles/tiny-wave.css";
+</style>
