@@ -27,6 +27,7 @@ const WAVEFORM_OPTIONS = {
   type: "steps",
   width: 800,
   height: 100,
+  normalize: false,
 } as const;
 
 // Called when the unmute button is clicked
@@ -110,10 +111,10 @@ function tickLiveWaveform(): void {
   console.log(Math.max(...Array.from(dataArray)));
   console.log(Math.min(...Array.from(dataArray)));
 
-  // Normalise to -1 to 1 float range
+  const threshold = 0.02;
   const floatData = Float32Array.from(dataArray, (v) => {
     const normalised = (v - 128) / 128;
-    return Math.abs(normalised) > 0.02 ? normalised * 2.0 : 0;
+    return Math.abs(normalised) > threshold ? normalised : 0;
   });
 
   // Wrap in a real AudioBuffer so linearPath can consume it
