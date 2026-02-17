@@ -4,13 +4,6 @@ import { getAudioData, linearPath } from "waveform-path";
 type PermissionState = "idle" | "granted" | "denied";
 type RecorderStatus = "idle" | "recording" | "stopped";
 
-type WaveformOptions = {
-  samples?: number;
-  type?: "steps" | "mirror" | "bars";
-  width?: number;
-  height?: number;
-};
-
 // State
 let permissionState = $state<PermissionState>("idle");
 let status = $state<RecorderStatus>("idle");
@@ -29,25 +22,41 @@ let chunks: Blob[] = [];
 let animationFrame: number | null = null;
 let timerInterval: ReturnType<typeof setInterval> | null = null;
 
-const WAVEFORM_OPTIONS: WaveformOptions = {
+const WAVEFORM_OPTIONS = {
   samples: 100,
   type: "steps",
   width: 800,
   height: 100,
-};
+} as const;
 
-// Request mic permission on first unmute
+// Called when the unmute button is clicked
 async function requestPermission(): Promise<void> {
   error = null;
   try {
     stream = await navigator.mediaDevices.getUserMedia({ audio: true });
     permissionState = "granted";
     isMuted = false;
+    startLivePreview();
   } catch (err) {
     permissionState = "denied";
     error = "Microphone access denied. Please allow access in your browser settings.";
     stream = null;
   }
+}
+
+// Set up AudioContext and AnalyserNode as soon as permission is granted
+function startLivePreview(): void {
+  if (!stream) return;
+
+  audioContext = new AudioContext();
+  analyser = audioContext.createAnalyser();
+  analyser.fftSize = 2048;
+  analyser.smoothingTimeConstant = 0.8;
+
+  const source = audioContext.createMediaStreamSource(stream);
+  source.connect(analyser);
+
+  tickLiveWaveform();
 }
 
 // Toggle mute on/off (only once permission is granted)
@@ -67,7 +76,6 @@ async function handleMicClick(): Promise<void> {
   } else if (permissionState === "granted") {
     toggleMute();
   }
-  // If denied, do nothing — error state is already set
 }
 
 // Start recording
@@ -76,69 +84,45 @@ async function start(): Promise<void> {
 
   chunks = [];
   elapsedTime = 0;
-  livePath = "";
   finalPath = "";
   error = null;
   status = "recording";
 
-  // Audio context + analyser
-  audioContext = new AudioContext();
-  analyser = audioContext.createAnalyser();
-  analyser.fftSize = 256;
-
-  const source = audioContext.createMediaStreamSource(stream);
-  source.connect(analyser);
-
-  // MediaRecorder
   mediaRecorder = new MediaRecorder(stream);
   mediaRecorder.ondataavailable = (e) => {
     if (e.data.size > 0) chunks.push(e.data);
   };
   mediaRecorder.onstop = handleRecordingStop;
-  mediaRecorder.start(100); // collect in 100ms chunks
+  mediaRecorder.start(100);
 
-  // Timer
   timerInterval = setInterval(() => {
     elapsedTime += 1;
   }, 1000);
-
-  // Live waveform loop
-  tickLiveWaveform();
 }
 
-// Animation loop — reads from analyser and updates livePath
+// Animation loop — uses waveform-path linearPath for consistency with final export
 function tickLiveWaveform(): void {
-  if (!analyser) return;
+  if (!analyser || !audioContext) return;
 
   const bufferLength = analyser.frequencyBinCount;
   const dataArray = new Uint8Array(bufferLength);
   analyser.getByteTimeDomainData(dataArray);
+  console.log(Math.max(...Array.from(dataArray)));
+  console.log(Math.min(...Array.from(dataArray)));
 
-  // Normalise to -1 to 1 range for a centred waveform
-  const normalised = Array.from(dataArray).map((v) => (v - 128) / 128);
+  // Normalise to -1 to 1 float range
+  const floatData = Float32Array.from(dataArray, (v) => {
+    const normalised = (v - 128) / 128;
+    return Math.abs(normalised) > 0.02 ? normalised * 2.0 : 0;
+  });
 
-  // Build a minimal AudioBuffer-like structure for linearPath
-  // waveform-path expects a real AudioBuffer, so we build the path manually
-  livePath = buildLinearPathFromArray(normalised, WAVEFORM_OPTIONS);
+  // Wrap in a real AudioBuffer so linearPath can consume it
+  const audioBuffer = audioContext.createBuffer(1, floatData.length, audioContext.sampleRate);
+  audioBuffer.copyToChannel(floatData, 0);
+
+  livePath = linearPath(audioBuffer, WAVEFORM_OPTIONS);
 
   animationFrame = requestAnimationFrame(tickLiveWaveform);
-}
-
-// Minimal SVG path builder for live preview from raw amplitude array
-function buildLinearPathFromArray(data: number[], options: WaveformOptions): string {
-  const { width = 800, height = 100, samples = 100 } = options;
-  const step = Math.floor(data.length / samples);
-  const midY = height / 2;
-  const points: string[] = [];
-
-  for (let i = 0; i < samples; i++) {
-    const sample = data[i * step] ?? 0;
-    const x = (i / samples) * width;
-    const y = midY + sample * midY;
-    points.push(`${i === 0 ? "M" : "L"}${x.toFixed(2)},${y.toFixed(2)}`);
-  }
-
-  return points.join(" ");
 }
 
 // Stop recording
@@ -170,11 +154,22 @@ async function handleRecordingStop(): Promise<void> {
   } catch (err) {
     error = "Failed to process audio. Please try again.";
   }
+
+  // Restart live preview — mic is still active
+  tickLiveWaveform();
 }
 
 // Reset everything back to idle
 function reset(): void {
-  stop();
+  if (timerInterval) {
+    clearInterval(timerInterval);
+    timerInterval = null;
+  }
+
+  if (animationFrame) {
+    cancelAnimationFrame(animationFrame);
+    animationFrame = null;
+  }
 
   status = "idle";
   livePath = "";
@@ -182,14 +177,12 @@ function reset(): void {
   elapsedTime = 0;
   error = null;
   chunks = [];
-
-  if (audioContext) {
-    audioContext.close();
-    audioContext = null;
-  }
-
-  analyser = null;
   mediaRecorder = null;
+
+  // Restart live preview if mic is still active
+  if (permissionState === "granted" && stream) {
+    tickLiveWaveform();
+  }
 }
 
 // SVG export helpers
@@ -222,7 +215,6 @@ const formattedTime = $derived(
 
 // Export
 export const recorder = {
-  // State (getters so reactivity works across components)
   get permissionState() {
     return permissionState;
   },
@@ -257,7 +249,6 @@ export const recorder = {
     return status === "stopped";
   },
 
-  // Methods
   handleMicClick,
   start,
   stop,

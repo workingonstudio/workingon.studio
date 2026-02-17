@@ -10,6 +10,7 @@ declare module "waveform-path" {
       top?: number;
       left?: number;
       channel?: number;
+      normalize?: boolean;
     }
   ): string;
   export function polarPath(audioData: AudioBuffer, options?: Record<string, unknown>): string;

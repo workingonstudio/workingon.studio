@@ -6,8 +6,8 @@
   <iconify-icon icon="ph:waveform" class="text-primary size-6 text-2xl"></iconify-icon>
   tinywave
 </div>
-<button type="button" class="btn text-primary px-4 py-3 text-xs font-bold">Start Recording</button>
 <ToggleMute />
+<button type="button" class="btn text-primary px-4 py-3 text-xs font-bold">Start Recording</button>
 
 <style>
 </style>
