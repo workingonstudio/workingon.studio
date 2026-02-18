@@ -23,11 +23,12 @@ let animationFrame: number | null = null;
 let timerInterval: ReturnType<typeof setInterval> | null = null;
 
 const WAVEFORM_OPTIONS = {
-  samples: 100,
+  samples: 75,
   type: "steps",
   width: 800,
-  height: 100,
-  normalize: false,
+  height: 50,
+  top: 25,
+  normalize: true,
 } as const;
 
 // Called when the unmute button is clicked
@@ -108,12 +109,10 @@ function tickLiveWaveform(): void {
   const bufferLength = analyser.frequencyBinCount;
   const dataArray = new Uint8Array(bufferLength);
   analyser.getByteTimeDomainData(dataArray);
-  console.log(Math.max(...Array.from(dataArray)));
-  console.log(Math.min(...Array.from(dataArray)));
 
   const threshold = 0.02;
   const floatData = Float32Array.from(dataArray, (v) => {
-    const normalised = (v - 128) / 128;
+    const normalised = ((v - 128) / 128) * 1.8;
     return Math.abs(normalised) > threshold ? normalised : 0;
   });
 
@@ -143,20 +142,75 @@ function stop(): void {
   mediaRecorder.stop();
 }
 
+function trimSilence(buffer: AudioBuffer, threshold = 0.005): AudioBuffer {
+  const data = buffer.getChannelData(0);
+
+  // Find start
+  let start = 0;
+  for (let i = 0; i < data.length; i++) {
+    if (Math.abs(data[i]) > threshold) {
+      start = i;
+      break;
+    }
+  }
+
+  // Find end
+  let end = data.length - 1;
+  for (let i = data.length - 1; i >= 0; i--) {
+    if (Math.abs(data[i]) > threshold) {
+      end = i;
+      break;
+    }
+  }
+
+  // Create trimmed buffer
+  const duration = (end - start) / buffer.sampleRate;
+  const trimmed = audioContext!.createBuffer(1, end - start, buffer.sampleRate);
+  trimmed.copyToChannel(data.slice(start, end), 0);
+
+  return trimmed;
+}
+
 // Fired when MediaRecorder finishes — process blob into final SVG path
+let finalStrokeWidth = $state(2); // Add this state variable
+
 async function handleRecordingStop(): Promise<void> {
   status = "stopped";
 
   const blob = new Blob(chunks, { type: "audio/webm" });
 
   try {
-    const audioData = await getAudioData(blob);
-    finalPath = linearPath(audioData, WAVEFORM_OPTIONS);
+    const arrayBuffer = await blob.arrayBuffer();
+
+    if (!audioContext) {
+      audioContext = new AudioContext();
+    }
+    const audioBuffer = await audioContext.decodeAudioData(arrayBuffer);
+    const trimmedBuffer = trimSilence(audioBuffer, 0.01);
+
+    // Dynamic samples based on duration
+    const duration = trimmedBuffer.duration;
+    const samplesPerSecond = 50;
+    const samples = Math.floor(duration * samplesPerSecond);
+
+    // Calculate stroke width based on duration
+    if (duration < 3) {
+      finalStrokeWidth = 3;
+    } else if (duration < 6) {
+      finalStrokeWidth = 2;
+    } else {
+      finalStrokeWidth = 1;
+    }
+
+    finalPath = linearPath(trimmedBuffer, {
+      ...WAVEFORM_OPTIONS,
+      samples,
+    });
   } catch (err) {
+    console.error(err);
     error = "Failed to process audio. Please try again.";
   }
 
-  // Restart live preview — mic is still active
   tickLiveWaveform();
 }
 
@@ -189,7 +243,7 @@ function reset(): void {
 // SVG export helpers
 function getSvgString(path: string): string {
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 100">
-  <path d="${path}" stroke="currentColor" fill="none" stroke-width="2"/>
+  <path d="${path}" stroke="currentColor" fill="none" stroke-width="${finalStrokeWidth}"/>
 </svg>`;
 }
 
@@ -249,7 +303,9 @@ export const recorder = {
   get isStopped() {
     return status === "stopped";
   },
-
+  get finalStrokeWidth() {
+    return finalStrokeWidth;
+  },
   handleMicClick,
   start,
   stop,

@@ -17,12 +17,12 @@
       ? 'text-primary'
       : 'text-body'}  flex items-center justify-center gap-2 px-3.5 py-2 text-xs font-bold uppercase transition-opacity disabled:pointer-events-none"
   >
+    {recorder.isRecording ? "Stop" : "Rec"}
     <span
       class="size-2.5 rounded-full border {recorder.isRecording
         ? 'bg-primary border-rose-600 shadow-sm shadow-current'
         : 'border-slate-300 bg-slate-200 shadow-none'}"
     ></span>
-    {recorder.isRecording ? "Stop" : "Rec"}
   </button>
   <ToggleMute />
 </div>
