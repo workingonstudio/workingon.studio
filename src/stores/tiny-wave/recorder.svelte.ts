@@ -171,8 +171,19 @@ function trimSilence(buffer: AudioBuffer, threshold = 0.005): AudioBuffer {
   return trimmed;
 }
 
+function joinPathSegments(pathString: string): string {
+  // Split on 'M' to get all segments
+  const segments = pathString.split(" M");
+
+  // Keep the first segment as-is (it already starts with M)
+  // Replace all other M commands with L commands to connect them
+  if (segments.length <= 1) return pathString;
+
+  return segments[0] + " L" + segments.slice(1).join(" L");
+}
+
 // Fired when MediaRecorder finishes — process blob into final SVG path
-let finalStrokeWidth = $state(2); // Add this state variable
+let finalStrokeWidth = $state(2);
 
 async function handleRecordingStop(): Promise<void> {
   status = "stopped";
@@ -202,10 +213,17 @@ async function handleRecordingStop(): Promise<void> {
       finalStrokeWidth = 1;
     }
 
-    finalPath = linearPath(trimmedBuffer, {
+    const rawPath = linearPath(trimmedBuffer, {
       ...WAVEFORM_OPTIONS,
       samples,
     });
+
+    // Test: convert and log both versions
+    const joinedPath = joinPathSegments(rawPath);
+    console.log("Original segments:", rawPath.split("M").length);
+    console.log("Joined path preview:", joinedPath.substring(0, 200));
+
+    finalPath = joinedPath;
   } catch (err) {
     console.error(err);
     error = "Failed to process audio. Please try again.";
