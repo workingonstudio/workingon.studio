@@ -8,7 +8,9 @@
   >
     <div class="absolute top-3 right-3">
       <ul class="text-xxs flex flex-row gap-2 font-bold">
-        <li class="flex flex-row items-center gap-1 rounded-full border border-gray-300 bg-white px-2 py-0.5 uppercase">
+        <li
+          class="flex flex-row items-center gap-1 rounded-full border border-gray-300 bg-white px-2 py-0.5 uppercase tabular-nums"
+        >
           {recorder.formattedTime}
         </li>
       </ul>
@@ -16,7 +18,7 @@
 
     <svg viewBox="0 0 800 100" xmlns="http://www.w3.org/2000/svg" class="w-full" aria-hidden="true">
       {#if recorder.livePath && !recorder.isMuted}
-        <path d={recorder.livePath} stroke="currentColor" fill="none" stroke-width="3" stroke-linecap="round" />
+        <path d={recorder.livePath} stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" />
       {:else}
         <line
           x1="0"
@@ -24,7 +26,7 @@
           x2="800"
           y2="50"
           stroke="currentColor"
-          stroke-width="1"
+          stroke-width="2"
           opacity="20%"
           stroke-linecap="round"
         />

@@ -8,17 +8,23 @@
   tinywave
 </div>
 <div class="flex flex-row gap-3">
-  <ToggleMute />
   <button
     type="button"
-    disabled={!recorder.canRecord || recorder.isMuted}
-    class="btn group text-primary disabled:text-body tranision-colors flex items-center justify-center gap-2 px-3.5 py-2 text-xs font-bold uppercase disabled:pointer-events-none disabled:opacity-70"
+    disabled={recorder.isMuted}
+    onclick={() => (recorder.isRecording ? recorder.stop() : recorder.start())}
+    class:invisible={recorder.isMuted}
+    class="btn group {recorder.isRecording
+      ? 'text-primary'
+      : 'text-body'}  flex items-center justify-center gap-2 px-3.5 py-2 text-xs font-bold uppercase transition-opacity disabled:pointer-events-none"
   >
     <span
-      class="bg-primary group-disabled:bg-body size-2.5 rounded-full border border-rose-600 ring ring-rose-200 group-disabled:border-gray-300 group-disabled:ring-0"
+      class="size-2.5 rounded-full border {recorder.isRecording
+        ? 'bg-primary border-rose-600 shadow-sm shadow-current'
+        : 'border-slate-300 bg-slate-200 shadow-none'}"
     ></span>
-    Rec
+    {recorder.isRecording ? "Stop" : "Rec"}
   </button>
+  <ToggleMute />
 </div>
 
 <style>
