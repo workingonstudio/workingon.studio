@@ -1,10 +1,5 @@
 <script lang="ts">
   import { recorder } from "@stores/tiny-wave/recorder.svelte";
-
-  $effect(() => {
-    console.log("finalPath:", recorder.finalPath);
-    console.log("status:", recorder.status);
-  });
 </script>
 
 <div class="flex flex-col items-center gap-6">
@@ -45,12 +40,18 @@
   </div>
   {#if recorder.finalPath}
     <div class="flex flex-row justify-center gap-3">
-      <button type="button" onclick={() => recorder.downloadSvg()} class="btn flex size-8 items-center justify-center">
+      <button
+        type="button"
+        onclick={() => recorder.downloadSvg()}
+        aria-label="Download SVG"
+        class="btn flex size-8 items-center justify-center"
+      >
         <iconify-icon icon="ph:download-simple-bold" class="text-base"></iconify-icon>
       </button>
       <button
         type="button"
         onclick={() => recorder.copyToClipboard()}
+        aria-label="Copy SVG"
         class="btn flex size-8 items-center justify-center"
       >
         <iconify-icon icon="ph:copy-bold" class="text-base"></iconify-icon>
