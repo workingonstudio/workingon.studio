@@ -186,7 +186,7 @@ async function handleRecordingStop(): Promise<void> {
       audioContext = new AudioContext();
     }
     const audioBuffer = await audioContext.decodeAudioData(arrayBuffer);
-    const trimmedBuffer = trimSilence(audioBuffer, 0.01);
+    const trimmedBuffer = trimSilence(audioBuffer, 0.005);
 
     // Dynamic samples based on duration
     const duration = trimmedBuffer.duration;

@@ -39,21 +39,15 @@
   </div>
   {#if recorder.finalPath}
     <div class="flex flex-row justify-center gap-3">
-      <button
-        type="button"
-        onclick={() => recorder.downloadSvg()}
-        class="btn flex flex-row gap-2 px-4 py-3 text-xs font-bold disabled:opacity-40"
-      >
+      <button type="button" onclick={() => recorder.downloadSvg()} class="btn flex size-8 items-center justify-center">
         <iconify-icon icon="ph:download-simple-bold" class="text-base"></iconify-icon>
-        Download SVG
       </button>
       <button
         type="button"
         onclick={() => recorder.copyToClipboard()}
-        class="btn flex flex-row gap-2 px-4 py-3 text-xs font-bold disabled:opacity-40"
+        class="btn flex size-8 items-center justify-center"
       >
         <iconify-icon icon="ph:copy-bold" class="text-base"></iconify-icon>
-        Copy to Clipboard
       </button>
     </div>
   {/if}
