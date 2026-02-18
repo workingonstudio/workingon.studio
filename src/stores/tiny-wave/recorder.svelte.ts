@@ -220,8 +220,6 @@ async function handleRecordingStop(): Promise<void> {
 
     // Test: convert and log both versions
     const joinedPath = joinPathSegments(rawPath);
-    console.log("Original segments:", rawPath.split("M").length);
-    console.log("Joined path preview:", joinedPath.substring(0, 200));
 
     finalPath = joinedPath;
   } catch (err) {
