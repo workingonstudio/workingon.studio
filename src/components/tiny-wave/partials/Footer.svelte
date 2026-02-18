@@ -2,7 +2,7 @@
   import Logo from "@components/partials/Logo.svelte";
 </script>
 
-<footer class="text-xxs text-muted flex flex-row justify-between">
+<footer class="text-xxs text-muted flex flex-row justify-between px-6">
   <a href="/" class="flex flex-row items-center gap-2 font-bold">
     <Logo width={19} />
     workingonstudio ltd, no: 16700615

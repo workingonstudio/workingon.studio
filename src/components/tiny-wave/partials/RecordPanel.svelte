@@ -20,7 +20,13 @@
 
     <svg viewBox="0 0 800 100" xmlns="http://www.w3.org/2000/svg" class="w-full" aria-hidden="true">
       {#if recorder.finalPath}
-        <path d={recorder.finalPath} stroke="currentColor" fill="none" stroke-width="3" stroke-linecap="round" />
+        <path
+          d={recorder.finalPath}
+          stroke="currentColor"
+          fill="none"
+          stroke-width={recorder.finalStrokeWidth}
+          stroke-linecap="round"
+        />
       {:else if recorder.livePath && !recorder.isMuted}
         <path d={recorder.livePath} stroke="currentColor" fill="none" stroke-width="3" stroke-linecap="round" />
       {:else}
