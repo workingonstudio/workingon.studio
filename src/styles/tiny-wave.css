@@ -40,4 +40,10 @@
       @apply shadow-none;
     }
   }
+  .tooltip {
+    @apply rounded-full border border-gray-300;
+    @apply text-xxs font-bold;
+    @apply px-2 py-1;
+    @apply shadow-md;
+  }
 }
