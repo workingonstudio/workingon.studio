@@ -14,9 +14,9 @@
   });
 </script>
 
-<button {...tooltip.trigger}>
+<span {...tooltip.trigger}>
   {@render children()}
-</button>
+</span>
 <div class="tooltip" {...tooltip.content}>
   <p>{content}</p>
 </div>

@@ -20,7 +20,7 @@
       label: "Bar",
       icon: "ph:waveform-bold",
       style: "mirror",
-      samples: 100,
+      samples: undefined,
       paths: [{ d: "V", sy: 0, x: 50, ey: 100 }],
     },
     {

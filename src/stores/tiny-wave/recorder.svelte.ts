@@ -1,4 +1,4 @@
-import { getAudioData, linearPath } from "waveform-path";
+import { linearPath } from "waveform-path";
 
 // Types
 type PermissionState = "idle" | "granted" | "denied";
@@ -13,6 +13,7 @@ let isMuted = $state(true);
 let elapsedTime = $state(0);
 let livePath = $state("");
 let finalPath = $state("");
+let finalStrokeWidth = $state(2);
 let error = $state<string | null>(null);
 let waveStyle = $state<WaveStyle>("steps");
 let wavePaths = $state<WavePathCommand[] | undefined>(undefined);
@@ -28,31 +29,78 @@ let chunks: Blob[] = [];
 let animationFrame: number | null = null;
 let timerInterval: ReturnType<typeof setInterval> | null = null;
 
-const BASE_WAVEFORM_OPTIONS: {
-  samples: number;
+const BASE_OPTIONS: {
   width: number;
   height: number;
   top: number;
   normalize: boolean;
 } = {
-  samples: 75,
   width: 800,
   height: 50,
   top: 25,
   normalize: true,
 };
 
+const DEFAULT_SAMPLES = 100;
+
 function getWaveformOptions(samples?: number) {
-  const resolvedSamples = samples ?? waveSamples ?? BASE_WAVEFORM_OPTIONS.samples;
   return {
-    ...BASE_WAVEFORM_OPTIONS,
-    samples: resolvedSamples,
+    ...BASE_OPTIONS,
+    samples: samples ?? waveSamples ?? DEFAULT_SAMPLES,
     type: waveStyle,
     ...(wavePaths ? { paths: wavePaths } : {}),
   };
 }
 
-// Called when the unmute button is clicked
+// Audio helpers
+function createAudioBuffer(data: Float32Array<ArrayBufferLike>, sampleRate: number): AudioBuffer {
+  const buffer = audioContext!.createBuffer(1, data.length, sampleRate);
+  buffer.copyToChannel(data as Float32Array<ArrayBuffer>, 0);
+  return buffer;
+}
+
+function trimSilence(buffer: AudioBuffer, threshold = 0.005): AudioBuffer {
+  const data = buffer.getChannelData(0);
+  let start = 0;
+  let end = data.length - 1;
+
+  while (start < data.length && Math.abs(data[start]) <= threshold) start++;
+  while (end > start && Math.abs(data[end]) <= threshold) end--;
+
+  const trimmed = audioContext!.createBuffer(1, end - start, buffer.sampleRate);
+  trimmed.copyToChannel(data.slice(start, end), 0);
+  return trimmed;
+}
+
+// Normalise then clamp to a minimum amplitude — used for Bar preset
+// to ensure quiet sections still render as visible bars
+function normaliseAndClamp(buffer: AudioBuffer, min: number): AudioBuffer {
+  const data = buffer.getChannelData(0);
+  const sorted = Array.from(data)
+    .map(Math.abs)
+    .sort((a, b) => a - b);
+  const ceiling = sorted[Math.floor(sorted.length * 0.95)];
+  const processed = new Float32Array(data.length);
+  for (let i = 0; i < data.length; i++) {
+    const normalised = ceiling > 0 ? Math.min(Math.abs(data[i]) / ceiling, 1) : 0;
+    processed[i] = Math.max(normalised, min);
+  }
+  return createAudioBuffer(processed, buffer.sampleRate);
+}
+
+function joinPathSegments(pathString: string): string {
+  const segments = pathString.split(" M");
+  if (segments.length <= 1) return pathString;
+  return segments[0] + " L" + segments.slice(1).join(" L");
+}
+
+function strokeWidthFromDuration(duration: number): number {
+  if (duration < 3) return 3;
+  if (duration < 6) return 2;
+  return 1;
+}
+
+// Permission + mic
 async function requestPermission(): Promise<void> {
   error = null;
   try {
@@ -60,14 +108,13 @@ async function requestPermission(): Promise<void> {
     permissionState = "granted";
     isMuted = false;
     startLivePreview();
-  } catch (err) {
+  } catch {
     permissionState = "denied";
     error = "Microphone access denied. Please allow access in your browser settings.";
     stream = null;
   }
 }
 
-// Set up AudioContext and AnalyserNode as soon as permission is granted
 function startLivePreview(): void {
   if (!stream) return;
 
@@ -76,32 +123,22 @@ function startLivePreview(): void {
   analyser.fftSize = 2048;
   analyser.smoothingTimeConstant = 0.8;
 
-  const source = audioContext.createMediaStreamSource(stream);
-  source.connect(analyser);
-
+  audioContext.createMediaStreamSource(stream).connect(analyser);
   tickLiveWaveform();
 }
 
-// Toggle mute on/off (only once permission is granted)
 function toggleMute(): void {
   if (permissionState !== "granted" || !stream) return;
-
   isMuted = !isMuted;
-  stream.getAudioTracks().forEach((track) => {
-    track.enabled = !isMuted;
-  });
+  stream.getAudioTracks().forEach((t) => (t.enabled = !isMuted));
 }
 
-// Called when the unmute button is clicked
 async function handleMicClick(): Promise<void> {
-  if (permissionState === "idle") {
-    await requestPermission();
-  } else if (permissionState === "granted") {
-    toggleMute();
-  }
+  if (permissionState === "idle") await requestPermission();
+  else if (permissionState === "granted") toggleMute();
 }
 
-// Start recording
+// Recording
 async function start(): Promise<void> {
   if (permissionState !== "granted" || !stream) return;
 
@@ -123,107 +160,62 @@ async function start(): Promise<void> {
   }, 1000);
 }
 
-// Animation loop — uses waveform-path linearPath for consistency with final export
+function stop(): void {
+  if (!mediaRecorder || status !== "recording") return;
+  clearInterval(timerInterval!);
+  timerInterval = null;
+  cancelAnimationFrame(animationFrame!);
+  animationFrame = null;
+  mediaRecorder.stop();
+}
+
+// Live waveform
 function tickLiveWaveform(): void {
   if (!analyser || !audioContext) return;
 
-  const bufferLength = analyser.frequencyBinCount;
-  const dataArray = new Uint8Array(bufferLength);
+  const dataArray = new Uint8Array(analyser.frequencyBinCount);
   analyser.getByteTimeDomainData(dataArray);
 
   const threshold = 0.02;
   const floatData = Float32Array.from(dataArray, (v) => {
-    const normalised = ((v - 128) / 128) * 1.8;
-    return Math.abs(normalised) > threshold ? normalised : 0;
+    const n = ((v - 128) / 128) * 1.8;
+    return Math.abs(n) > threshold ? n : 0;
   });
 
-  const audioBuffer = audioContext.createBuffer(1, floatData.length, audioContext.sampleRate);
-  audioBuffer.copyToChannel(floatData, 0);
-
-  livePath = linearPath(audioBuffer, getWaveformOptions());
+  livePath = linearPath(
+    createAudioBuffer(floatData, audioContext.sampleRate),
+    getWaveformOptions()
+  );
 
   animationFrame = requestAnimationFrame(tickLiveWaveform);
 }
 
-// Stop recording
-function stop(): void {
-  if (!mediaRecorder || status !== "recording") return;
-
-  if (timerInterval) {
-    clearInterval(timerInterval);
-    timerInterval = null;
-  }
-
-  if (animationFrame) {
-    cancelAnimationFrame(animationFrame);
-    animationFrame = null;
-  }
-
-  mediaRecorder.stop();
-}
-
-function trimSilence(buffer: AudioBuffer, threshold = 0.005): AudioBuffer {
-  const data = buffer.getChannelData(0);
-
-  let start = 0;
-  for (let i = 0; i < data.length; i++) {
-    if (Math.abs(data[i]) > threshold) {
-      start = i;
-      break;
-    }
-  }
-
-  let end = data.length - 1;
-  for (let i = data.length - 1; i >= 0; i--) {
-    if (Math.abs(data[i]) > threshold) {
-      end = i;
-      break;
-    }
-  }
-
-  const trimmed = audioContext!.createBuffer(1, end - start, buffer.sampleRate);
-  trimmed.copyToChannel(data.slice(start, end), 0);
-
-  return trimmed;
-}
-
-function joinPathSegments(pathString: string): string {
-  const segments = pathString.split(" M");
-  if (segments.length <= 1) return pathString;
-  return segments[0] + " L" + segments.slice(1).join(" L");
-}
-
-let finalStrokeWidth = $state(2);
-
+// Final render
 async function handleRecordingStop(): Promise<void> {
   status = "stopped";
 
-  const blob = new Blob(chunks, { type: "audio/webm" });
-
   try {
+    const blob = new Blob(chunks, { type: "audio/webm" });
     const arrayBuffer = await blob.arrayBuffer();
 
-    if (!audioContext) {
-      audioContext = new AudioContext();
-    }
-    const audioBuffer = await audioContext.decodeAudioData(arrayBuffer);
-    const trimmedBuffer = trimSilence(audioBuffer, 0.005);
+    if (!audioContext) audioContext = new AudioContext();
 
-    const duration = trimmedBuffer.duration;
-
-    // If a preset sample count is set, use it directly.
-    // Otherwise calculate dynamically from duration.
+    const decoded = await audioContext.decodeAudioData(arrayBuffer);
+    const trimmed = trimSilence(decoded);
+    const duration = trimmed.duration;
     const samples = waveSamples ?? Math.floor(duration * 50);
 
-    if (duration < 3) {
-      finalStrokeWidth = 3;
-    } else if (duration < 6) {
-      finalStrokeWidth = 2;
-    } else {
-      finalStrokeWidth = 1;
-    }
+    finalStrokeWidth = strokeWidthFromDuration(duration);
 
-    const rawPath = linearPath(trimmedBuffer, getWaveformOptions(samples));
+    // Bar preset: normalise then clamp so quiet sections stay visible
+    const renderBuffer = wavePathName === "Bar" ? normaliseAndClamp(trimmed, 0.001) : trimmed;
+
+    const opts =
+      wavePathName === "Bar"
+        ? { ...getWaveformOptions(samples), normalize: false }
+        : getWaveformOptions(samples);
+
+    const rawPath = linearPath(renderBuffer, opts);
 
     finalPath = waveStyle === "steps" ? joinPathSegments(rawPath) : rawPath;
   } catch (err) {
@@ -234,13 +226,12 @@ async function handleRecordingStop(): Promise<void> {
   tickLiveWaveform();
 }
 
-// Reset everything back to idle
+// Reset
 function reset(): void {
   if (timerInterval) {
     clearInterval(timerInterval);
     timerInterval = null;
   }
-
   if (animationFrame) {
     cancelAnimationFrame(animationFrame);
     animationFrame = null;
@@ -254,11 +245,10 @@ function reset(): void {
   chunks = [];
   mediaRecorder = null;
 
-  if (permissionState === "granted" && stream) {
-    tickLiveWaveform();
-  }
+  if (permissionState === "granted" && stream) tickLiveWaveform();
 }
 
+// Style + path presets
 function setWaveStyle(style: WaveStyle): void {
   waveStyle = style;
 }
@@ -269,10 +259,10 @@ function setWavePaths(paths: WavePathCommand[] | undefined, name?: string, sampl
   waveSamples = samples;
 }
 
-// SVG export helpers
+// SVG export
 function getSvgString(path: string): string {
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 100">
-  <path d="${path}" stroke="currentColor" fill="none" stroke-width="${finalStrokeWidth}"/>
+  <path d="${path}" stroke="currentColor" fill="none" stroke-width="${finalStrokeWidth}" stroke-linecap="round"/>
 </svg>`;
 }
 
@@ -333,6 +323,9 @@ export const recorder = {
   get waveSamples() {
     return waveSamples;
   },
+  get finalStrokeWidth() {
+    return finalStrokeWidth;
+  },
   get canRecord() {
     return permissionState === "granted" && status !== "recording";
   },
@@ -341,9 +334,6 @@ export const recorder = {
   },
   get isStopped() {
     return status === "stopped";
-  },
-  get finalStrokeWidth() {
-    return finalStrokeWidth;
   },
   handleMicClick,
   start,

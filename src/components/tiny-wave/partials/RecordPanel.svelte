@@ -56,7 +56,7 @@
 </script>
 
 <div class="flex flex-col items-center gap-6">
-  <div class="justify-center-center flex w-full flex-col gap-2 rounded-xl border border-gray-300 bg-white p-3">
+  <div class="justify-center-center flex w-full flex-col gap-2 p-3">
     <div class="relative">
       <svg viewBox="0 0 800 100" xmlns="http://www.w3.org/2000/svg" class="w-full" aria-hidden="true">
         {#if recorder.finalPath}
@@ -71,16 +71,7 @@
         {:else if recorder.livePath && !recorder.isMuted}
           <path d={recorder.livePath} stroke="currentColor" fill="none" stroke-width="3" stroke-linecap="round" />
         {:else}
-          <line
-            x1="0"
-            y1="50"
-            x2="800"
-            y2="50"
-            stroke="currentColor"
-            stroke-width="3"
-            opacity="20%"
-            stroke-linecap="round"
-          />
+          <line x1="0" y1="50" x2="800" y2="50" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
         {/if}
       </svg>
 

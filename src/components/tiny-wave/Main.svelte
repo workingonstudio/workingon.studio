@@ -2,6 +2,7 @@
   import Footer from "./partials/Footer.svelte";
   import Header from "./partials/Header.svelte";
   import RecordPanel from "./partials/RecordPanel.svelte";
+  import { recorder } from "@stores/tiny-wave/recorder.svelte";
 </script>
 
 <div class="flex w-full flex-col gap-6 lg:w-2xl">
@@ -9,7 +10,9 @@
     <div class="flex flex-row items-center justify-between">
       <Header />
     </div>
-    <RecordPanel />
+    {#if !recorder.isMuted}
+      <RecordPanel />
+    {/if}
   </div>
   <Footer />
 </div>

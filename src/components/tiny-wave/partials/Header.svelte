@@ -1,12 +1,13 @@
 <script lang="ts">
   import { recorder } from "@stores/tiny-wave/recorder.svelte";
   import ToggleMute from "./ToggleMute.svelte";
-  import WaveStyles from "./WaveStyles.svelte";
 </script>
 
 <div class="flex flex-row items-center gap-2 text-base">
   <iconify-icon icon="ph:waveform" class="text-primary size-6 text-2xl"></iconify-icon>
-  tinywave
+  <div class="flex flex-row items-center gap-2">
+    tinywave <span class="text-muted/75 text-xxs relative top-[1.5px]">Audio to SVG</span>
+  </div>
 </div>
 <div class="flex flex-row gap-3">
   <button
