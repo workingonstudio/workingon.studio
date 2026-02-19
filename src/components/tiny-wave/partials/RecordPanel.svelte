@@ -54,26 +54,8 @@
 </script>
 
 <div class="flex flex-col items-center gap-6">
-  <div class="flex h-32 w-full flex-col gap-2 rounded-xl border border-gray-300 bg-white p-3">
-    <div class="flex flex-row justify-between font-bold">
-      <div class="flex items-center rounded-full border border-gray-300 bg-white px-2 py-0.5 text-[9px] uppercase">
-        {#if isAnimating}
-          Generating
-        {:else if recorder.finalPath}
-          Done
-        {:else}
-          Preview
-        {/if}
-      </div>
-      <div
-        class="flex flex-row rounded-full border border-gray-300 bg-white px-2 py-0.5 text-[9px] tabular-nums"
-        class:invisible={recorder.finalPath}
-      >
-        {recorder.formattedTime}
-      </div>
-    </div>
-
-    <div class="relative h-32">
+  <div class="justify-center-center flex w-full flex-col gap-2 rounded-xl border border-gray-300 bg-white p-3">
+    <div class="relative">
       <svg viewBox="0 0 800 100" xmlns="http://www.w3.org/2000/svg" class="w-full" aria-hidden="true">
         {#if recorder.finalPath}
           <path
@@ -111,18 +93,26 @@
 
   {#if recorder.finalPath}
     <div class="flex flex-row justify-center gap-3">
-      <button type="button" onclick={() => recorder.downloadSvg()} class="btn flex size-8 items-center justify-center">
+      <button
+        type="button"
+        onclick={() => recorder.downloadSvg()}
+        class="btn text-muted hover:text-body flex size-8 items-center justify-center"
+      >
         <iconify-icon icon="ph:download-simple-bold" class="text-base"></iconify-icon>
       </button>
       <button
         type="button"
         onclick={() => recorder.copyToClipboard()}
-        class="btn flex size-8 items-center justify-center"
+        class="btn text-muted hover:text-body flex size-8 items-center justify-center"
       >
         <iconify-icon icon="ph:copy-bold" class="text-base"></iconify-icon>
       </button>
-      <button type="button" onclick={() => recorder.reset()} class="btn flex size-8 items-center justify-center">
-        <iconify-icon icon="ph:x-bold" class="text-base"></iconify-icon>
+      <button
+        type="button"
+        onclick={() => recorder.reset()}
+        class="btn text-muted hover:text-primary flex size-8 items-center justify-center"
+      >
+        <iconify-icon icon="ph:trash-bold" class="text-base"></iconify-icon>
       </button>
     </div>
   {/if}

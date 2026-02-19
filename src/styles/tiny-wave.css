@@ -9,7 +9,7 @@
   --color-primary: theme(colors.rose.500);
   --color-primary-hover: theme(colors.rose.600);
   --color-body: theme(colors.slate.900);
-  --color-muted: theme(colors.slate.400);
+  --color-muted: theme(colors.slate.600);
   --color-bg: theme(colors.gray.50);
 }
 
@@ -32,7 +32,7 @@
   .btn {
     @apply rounded-full border border-gray-300 bg-white ring ring-gray-100;
     @apply cursor-pointer;
-    @apply transition-all duration-300;
+    @apply transition-all delay-100 duration-300;
     &:hover {
       @apply shadow-sm;
     }
