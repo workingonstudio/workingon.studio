@@ -25,7 +25,6 @@
     ></span>
   </button>
   <ToggleMute />
-  <WaveStyles />
 </div>
 
 <style>

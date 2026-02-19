@@ -2,6 +2,7 @@
   import { recorder } from "@stores/tiny-wave/recorder.svelte";
   import { animate, svg } from "animejs";
   import WaveOptions from "./WaveOptions.svelte";
+  import WaveStyles from "./WaveStyles.svelte";
 
   let pathElement: SVGPathElement | undefined = $state();
   let dotElement: HTMLDivElement | undefined = $state();
@@ -94,6 +95,8 @@
 
   {#if recorder.finalPath}
     <WaveOptions />
+  {:else if !recorder.isMuted}
+    <WaveStyles />
   {/if}
 </div>
 
