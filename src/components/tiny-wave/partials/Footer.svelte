@@ -6,7 +6,7 @@
   const dialog = new Dialog();
 </script>
 
-<footer class="text-xxs text-muted/50 flex flex-row justify-between px-6">
+<footer class="text-xxs text-muted/50 flex flex-col items-center justify-between gap-1 px-6 md:flex-row">
   <a href="/" class="flex flex-row items-center gap-2 font-bold hover:underline">
     <Logo width={19} />
     workingonstudio ltd, no: 16700615
@@ -20,7 +20,7 @@
 <div {...dialog.overlay} class="bg-white/20"></div>
 <dialog
   {...dialog.content}
-  class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-xl border border-white p-12 shadow-lg ring ring-gray-300"
+  class="fixed top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 rounded-xl border border-white shadow-lg ring ring-gray-300 md:w-md"
 >
   <PrivacyModal />
 </dialog>

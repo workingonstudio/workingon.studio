@@ -2,7 +2,7 @@
   import Logo from "@components/partials/Logo.svelte";
 </script>
 
-<section class="flex w-sm flex-col gap-12">
+<section class="flex flex-col gap-12 p-6 md:p-12">
   <div class="flex flex-row items-center gap-2 text-base">
     <iconify-icon icon="ph:waveform" class="text-primary size-6 text-2xl"></iconify-icon>
     <div class="flex flex-row items-center gap-2">tinywave</div>
