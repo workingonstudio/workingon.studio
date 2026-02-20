@@ -6,41 +6,65 @@
 
   let pathElement: SVGPathElement | undefined = $state();
   let dotElement: HTMLDivElement | undefined = $state();
+  let clipRect: SVGRectElement | undefined = $state();
+  let printBar: SVGRectElement | undefined = $state();
   let lastProcessedPath = "";
   let isAnimating = $state(false);
 
   $effect(() => {
-    if (recorder.finalPath && recorder.finalPath !== lastProcessedPath && pathElement && dotElement) {
+    if (recorder.finalPath && recorder.finalPath !== lastProcessedPath) {
       lastProcessedPath = recorder.finalPath;
       isAnimating = true;
 
-      pathElement.id = "waveform-path";
+      if (recorder.wavePathName === "Bar") {
+        // Clip-based reveal with sliding print head
+        if (!clipRect || !printBar) return;
 
-      const [drawable] = svg.createDrawable("#waveform-path");
+        clipRect.setAttribute("width", "0");
+        printBar.setAttribute("x", "0");
+        printBar.style.opacity = "1";
 
-      animate(drawable, {
-        draw: ["0 0", "0 1"],
-        duration: 3000,
-        ease: "inOutQuad",
-        onComplete: () => {
-          isAnimating = false;
-          if (dotElement) {
-            dotElement.style.opacity = "0";
-          }
-        },
-      });
+        animate(clipRect, {
+          width: 800,
+          duration: 3000,
+          ease: "inOutQuad",
+        });
 
-      // Get the starting point of the path
-      const pathData = pathElement.getPointAtLength(0);
+        animate(printBar, {
+          x: 800,
+          duration: 3000,
+          ease: "inOutQuad",
+          onComplete: () => {
+            isAnimating = false;
+            if (printBar) printBar.style.opacity = "0";
+          },
+        });
+      } else {
+        // Dot tracing animation for all other styles
+        if (!pathElement || !dotElement) return;
 
-      // Set initial position
-      dotElement.style.transform = `translateX(${pathData.x}px) translateY(${pathData.y}px)`;
+        pathElement.id = "waveform-path";
+        const [drawable] = svg.createDrawable("#waveform-path");
 
-      animate(dotElement, {
-        ...svg.createMotionPath("#waveform-path"),
-        duration: 3000,
-        ease: "inOutQuad",
-      });
+        animate(drawable, {
+          draw: ["0 0", "0 1"],
+          duration: 3000,
+          ease: "inOutQuad",
+          onComplete: () => {
+            isAnimating = false;
+            if (dotElement) dotElement.style.opacity = "0";
+          },
+        });
+
+        const pathData = pathElement.getPointAtLength(0);
+        dotElement.style.transform = `translateX(${pathData.x}px) translateY(${pathData.y}px)`;
+
+        animate(dotElement, {
+          ...svg.createMotionPath("#waveform-path"),
+          duration: 3000,
+          ease: "inOutQuad",
+        });
+      }
     }
   });
 
@@ -48,9 +72,8 @@
     if (recorder.status === "recording") {
       lastProcessedPath = "";
       isAnimating = false;
-      if (dotElement) {
-        dotElement.style.opacity = "1";
-      }
+      if (dotElement) dotElement.style.opacity = "1";
+      if (printBar) printBar.style.opacity = "1";
     }
   });
 </script>
@@ -58,28 +81,57 @@
 <div class="flex flex-col items-center gap-6">
   <div class="justify-center-center flex w-full flex-col gap-2 p-3">
     <div class="relative">
-      <svg viewBox="0 0 800 100" xmlns="http://www.w3.org/2000/svg" class="w-full" aria-hidden="true">
-        {#if recorder.finalPath}
-          <path
-            bind:this={pathElement}
-            d={recorder.finalPath}
-            stroke="currentColor"
-            fill="none"
-            stroke-width={recorder.finalStrokeWidth}
-            stroke-linecap="round"
+      {#if recorder.finalPath && recorder.wavePathName === "Bar"}
+        <svg viewBox="0 0 800 100" xmlns="http://www.w3.org/2000/svg" class="w-full" aria-hidden="true">
+          <defs>
+            <clipPath id="reveal-clip">
+              <rect bind:this={clipRect} x="0" y="0" width="0" height="100" />
+            </clipPath>
+          </defs>
+          <g clip-path="url(#reveal-clip)">
+            <path
+              d={recorder.finalPath}
+              stroke="currentColor"
+              fill="none"
+              stroke-width={recorder.finalStrokeWidth}
+              stroke-linecap="round"
+            />
+          </g>
+          <rect
+            bind:this={printBar}
+            x="0"
+            y="0"
+            width="3"
+            height="100"
+            rx="2"
+            class="text-primary fill-current"
+            opacity="1"
           />
-        {:else if recorder.livePath && !recorder.isMuted}
-          <path d={recorder.livePath} stroke="currentColor" fill="none" stroke-width="3" stroke-linecap="round" />
-        {:else}
-          <line x1="0" y1="50" x2="800" y2="50" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
-        {/if}
-      </svg>
+        </svg>
+      {:else}
+        <svg viewBox="0 0 800 100" xmlns="http://www.w3.org/2000/svg" class="w-full" aria-hidden="true">
+          {#if recorder.finalPath}
+            <path
+              bind:this={pathElement}
+              d={recorder.finalPath}
+              stroke="currentColor"
+              fill="none"
+              stroke-width={recorder.finalStrokeWidth}
+              stroke-linecap="round"
+            />
+          {:else if recorder.livePath && !recorder.isMuted}
+            <path d={recorder.livePath} stroke="currentColor" fill="none" stroke-width="3" stroke-linecap="round" />
+          {:else}
+            <line x1="0" y1="50" x2="800" y2="50" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+          {/if}
+        </svg>
 
-      {#if recorder.finalPath}
-        <div
-          bind:this={dotElement}
-          class="absolute -top-1 -left-1 size-2 rounded-full border border-rose-600 bg-rose-500 shadow-sm shadow-rose-500"
-        ></div>
+        {#if recorder.finalPath}
+          <div
+            bind:this={dotElement}
+            class="absolute -top-1 -left-1 size-2 rounded-full border border-rose-600 bg-rose-500 shadow-sm shadow-rose-500"
+          ></div>
+        {/if}
       {/if}
     </div>
   </div>

@@ -25,18 +25,18 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
     <ClientRouter />
     <AstroSeo
       title={longTitle}
-      description="A Chrome Extension that makes you feel less s**t about looking for work."
+      description="Create waves with your voice."
       canonical={currentURL}
       openGraph={{
         url: currentURL,
         title: title,
-        description: "A Chrome Extension that makes you feel less s**t about looking for work.",
+        description: "Create waves with your voice.",
         images: [
           {
-            url: Astro.site + "solidarity/opengraph/site-default.webp",
+            url: Astro.site + "tiny-wave/opengraph/site-default.webp",
             height: 630,
             width: 1200,
-            alt: "Solidarity - A Chrome Extension that makes you feel less s**t about looking for work.",
+            alt: "Tinywave - Create waves with your voice.",
           },
         ],
         site_name: "workingon.studio",
@@ -51,11 +51,11 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
       additionalMetaTags={[
         {
           name: "twitter:image",
-          content: Astro.site + "solidarity/opengraph/site-default.webp",
+          content: Astro.site + "tiny-wave/opengraph/site-default.webp",
         },
         {
           name: "twitter:url",
-          content: "https://wo.studio/projects/solidarity",
+          content: "https://wo.studio/projects/tiny-wave",
         },
       ]}
     />
@@ -63,24 +63,12 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="/solidarity/favicon-light.svg"
-      media="(prefers-color-scheme: light)"
-    />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="/solidarity/favicon-dark.svg"
-      media="(prefers-color-scheme: dark)"
-    />
+    <link rel="icon" type="image/svg+xml" href="/tiny-wave/favicon.svg" />
     <script
       is:inline
       type="module"
       src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    >
-    </script>
+    ></script>
 
     <meta name="generator" content={Astro.generator} />
     <Analytics productName="TinyWave" />
