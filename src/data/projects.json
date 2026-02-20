@@ -21,6 +21,13 @@
     "externalLink": false
   },
   {
+    "name": "Tinywave",
+    "description": "Create waves with your voice.",
+    "shipped": true,
+    "link": "tiny-wave",
+    "externalLink": false
+  },
+  {
     "name": "Is Figma down?",
     "description": "Site that mimics the Figma status, highlighting the issue with always online.",
     "version": "1.0.0",
