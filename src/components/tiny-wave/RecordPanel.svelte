@@ -1,8 +1,8 @@
 <script lang="ts">
   import { recorder } from "@stores/tiny-wave/recorder.svelte";
   import { animate, svg } from "animejs";
-  import WaveOptions from "./WaveOptions.svelte";
-  import WaveStyles from "./WaveStyles.svelte";
+  import WaveOptions from "./partials/WaveOptions.svelte";
+  import WaveStyles from "./partials/WaveStyles.svelte";
 
   let pathElement: SVGPathElement | undefined = $state();
   let dotElement: HTMLDivElement | undefined = $state();

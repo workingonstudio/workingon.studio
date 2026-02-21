@@ -2,7 +2,7 @@
   import Footer from "./partials/Footer.svelte";
   import Header from "./partials/Header.svelte";
   import Permissions from "./partials/Permissions.svelte";
-  import RecordPanel from "./partials/RecordPanel.svelte";
+  import RecordPanel from "./RecordPanel.svelte";
   import { recorder } from "@stores/tiny-wave/recorder.svelte";
 </script>
 
