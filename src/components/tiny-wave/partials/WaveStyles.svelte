@@ -42,6 +42,7 @@
     <ToolTip content={label}>
       <button
         type="button"
+        aria-label={style}
         onclick={() => {
           recorder.setWaveStyle(style);
           recorder.setWavePaths(paths, label, samples);
