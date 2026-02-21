@@ -23,7 +23,7 @@
           class="text-header flex flex-row items-center gap-2 font-medium hover:underline"
         >
           {article.title}
-          <iconify-icon icon="ph:arrow-up-right-bold"></iconify-icon>
+          <iconify-icon icon="ph:arrow-up-right-bold" class="size-4"></iconify-icon>
         </a>
         {#if article.description}
           <p class="text-muted text-sm">{article.description}</p>
