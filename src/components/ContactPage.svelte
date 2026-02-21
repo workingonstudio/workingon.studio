@@ -77,7 +77,7 @@
         class="text-header flex flex-row items-center gap-2 font-medium"
       >
         hello@workingon.studio
-        <iconify-icon icon="ph:arrow-up-right-bold"></iconify-icon>
+        <iconify-icon icon="ph:arrow-up-right-bold" class="size-4"></iconify-icon>
       </a>
       <p class="text-muted text-sm">
         If I don't reply within 7 days, assume it's a no, I'm on holiday, or dead. Whatever makes you feel better.
