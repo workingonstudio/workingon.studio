@@ -4,7 +4,7 @@
   import Permissions from "./partials/Permissions.svelte";
   import RecordPanel from "./RecordPanel.svelte";
 
-  import { slide, fade } from "svelte/transition";
+  import { slide } from "svelte/transition";
 
   import { recorder } from "@stores/tiny-wave/recorder.svelte";
 
@@ -34,6 +34,7 @@
       </div>
     {/if}
   </div>
+
   <Footer />
 </div>
 

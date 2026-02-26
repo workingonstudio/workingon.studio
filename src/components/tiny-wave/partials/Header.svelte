@@ -10,9 +10,10 @@
   </div>
 </div>
 <div class="flex flex-row gap-3">
+  <ToggleMute />
   <button
     type="button"
-    class:invisible={recorder.isMuted}
+    class:hidden={recorder.isMuted}
     onclick={() => (recorder.isRecording ? recorder.stop() : recorder.start())}
     class="btn group {recorder.isRecording
       ? 'text-primary'
@@ -25,7 +26,6 @@
         : 'border-slate-300 bg-slate-200 shadow-none'}"
     ></span>
   </button>
-  <ToggleMute />
 </div>
 
 <style>

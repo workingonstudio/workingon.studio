@@ -13,7 +13,7 @@
   </a>
   <ul class="flex flex-row gap-3">
     <li><button {...dialog.trigger} class="cursor-pointer hover:underline">privacy policy</button></li>
-    <li>copywrite 2026</li>
+    <li>copyright 2026</li>
   </ul>
 </footer>
 
