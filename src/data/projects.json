@@ -25,7 +25,7 @@
   },
   {
     "name": "Tinywave",
-    "description": "Create waves with your voice.",
+    "description": "Create SVG audiowaves with your voice.",
     "shipped": true,
     "link": "tiny-wave",
     "externalLink": false,
