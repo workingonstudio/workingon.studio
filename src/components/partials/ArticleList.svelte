@@ -1,42 +1,37 @@
-<script>
-  let articles = [
-    {
-      title: "Design's not dead. We just gave in.",
-      subtitle: "What happens when creativity becomes compliance.",
-      href: "https://aquietfracture.substack.com/p/designs-not-dead-we-just-gave-in",
-    },
-    {
-      title: "It's an art form, prepare to put in the work.",
-      subtitle: "What it takes to become a better designer.",
-      href: "https://aquietfracture.substack.com/p/prepare-to-put-in-the-work",
-    },
-    {
-      title: "Look for those that are doing the opposite.",
-      subtitle: "They are doing far more important things.",
-      href: "https://aquietfracture.substack.com/p/look-out-for-those-that-are-doing",
-    },
-    {
-      title: "It's time to kill the Design Challenge.",
-      subtitle: "Comedians don’t perform on command.",
-      href: "https://aquietfracture.substack.com/p/its-time-to-kill-the-design-challenge",
-    },
-  ];
+<script lang="ts">
+  import ContentPanel from "./ContentPanel.svelte";
+
+  export let header: string;
+  export let articles: Array<{
+    slug: string;
+    title: string;
+    description?: string;
+  }>;
+
+  // Border props replace the containerClass pattern
+  export let borderBottom: boolean = false;
+  export let borderRight: boolean = false;
 </script>
 
-<section class="content gap-6">
-  <h2 class="text-xl font-medium">Writing</h2>
-  <ul class="flex flex-col gap-5">
-    {#each articles as { title, subtitle, href }}
+<ContentPanel {borderBottom} {borderRight}>
+  <h2 class="text-xl font-medium">{header}</h2>
+  <ul class="stack">
+    {#each articles as article}
       <li class="flex flex-col gap-1">
-        <a {href} class="text-header flex flex-row items-center gap-2 font-medium hover:underline">
-          {title}
-          <iconify-icon icon="ph:arrow-up-right-bold"></iconify-icon>
+        <a
+          href={`/writing/${article.slug}`}
+          class="text-header flex flex-row items-center gap-2 font-medium hover:underline"
+        >
+          {article.title}
+          <iconify-icon icon="ph:arrow-up-right-bold" class="size-4"></iconify-icon>
         </a>
-        <p class="text-muted text-sm">{subtitle}</p>
+        {#if article.description}
+          <p class="text-muted text-sm">{article.description}</p>
+        {/if}
       </li>
     {/each}
   </ul>
-</section>
+</ContentPanel>
 
 <style>
   @reference "@styles/main.css";

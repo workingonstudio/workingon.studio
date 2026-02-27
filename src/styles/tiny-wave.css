@@ -1,0 +1,49 @@
+/* TinyWave Theme */
+@import "./base.css";
+
+@theme {
+  /* Typography */
+  --font-satoshi: "Satoshi", sans-serif;
+
+  /* Colors */
+  --color-primary: theme(colors.rose.500);
+  --color-primary-hover: theme(colors.rose.600);
+  --color-body: theme(colors.slate.900);
+  --color-muted: theme(colors.slate.600);
+  --color-bg: theme(colors.gray.50);
+}
+
+@layer base {
+  html {
+    background: var(--color-bg);
+  }
+
+  body {
+    font-family: var(--font-satoshi);
+    color: var(--color-text);
+    &::selection {
+      background: var(--color-primary);
+      @apply text-white;
+    }
+  }
+}
+
+@layer components {
+  .btn {
+    @apply rounded-full border border-gray-300 bg-white ring ring-gray-100;
+    @apply cursor-pointer;
+    @apply transition-all delay-100 duration-300;
+    &:hover {
+      @apply shadow-sm;
+    }
+    &:active {
+      @apply shadow-none;
+    }
+  }
+  .tooltip {
+    @apply rounded-full border border-gray-300;
+    @apply text-xxs font-bold;
+    @apply px-2 py-1;
+    @apply shadow-md;
+  }
+}

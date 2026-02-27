@@ -1,4 +1,4 @@
-/* Main Site Theme */
+/* Main Site Theme - Enhanced with Layout Utilities */
 @import "./base.css";
 
 @theme {
@@ -56,14 +56,83 @@
   }
 
   p {
-    @apply text-base;
-    @apply text-pretty;
+    @apply text-base text-pretty;
+  }
+}
+
+/* Article-specific styling */
+.article {
+  @apply flex flex-col gap-6;
+  blockquote {
+    @apply border-surface-border bg-surface rounded-lg border p-4;
+  }
+  h3 {
+    @apply text-xl;
+  }
+  a {
+    @apply text-header underline;
+  }
+
+  sup {
+    a {
+      @apply text-xxs border-surface-border rounded-sm border px-1 py-0.5 font-semibold no-underline;
+    }
+  }
+  .footnotes {
+    ol {
+      @apply flex flex-col gap-2;
+      li {
+        p {
+          @apply text-sm;
+        }
+      }
+    }
   }
 }
 
 @layer components {
+  /* Legacy .content support - keep for now but prefer ContentPanel component */
   .content {
     @apply flex flex-col;
     @apply px-8 py-9 lg:px-16 lg:py-12;
+  }
+
+  /* Utility: Auto-space children in flex containers */
+  .stack {
+    @apply flex flex-col;
+  }
+
+  .stack > * + * {
+    @apply mt-5;
+  }
+
+  .stack-sm > * + * {
+    @apply mt-3;
+  }
+
+  .stack-lg > * + * {
+    @apply mt-6;
+  }
+
+  /* Utility: Dividers without manual border classes */
+  .divide-y-surface > * + * {
+    @apply border-surface-border border-t;
+  }
+
+  .divide-x-surface > * + * {
+    @apply border-surface-border border-l;
+  }
+
+  /* Utility: Consistent panel borders */
+  .panel-border {
+    @apply border-surface-border border;
+  }
+
+  .panel-border-b {
+    @apply border-surface-border border-b;
+  }
+
+  .panel-border-r {
+    @apply border-surface-border border-r-0 lg:border-r;
   }
 }

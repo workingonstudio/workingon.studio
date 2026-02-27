@@ -21,9 +21,11 @@ Allow: /projects/glyph-palette/
 Allow: /projects/good-boy/
 Allow: /projects/sketch-today/
 Allow: /projects/is-figma-down/
+Allow: /projects/tiny-wave/
 
 # Disallow duplicate routes (they redirect anyway)
 Disallow: /projects/dadreply
 Disallow: /projects/glyphpalette
 Disallow: /projects/goodboy
 Disallow: /projects/sketchtoday
+Disallow: /projects/tinywave

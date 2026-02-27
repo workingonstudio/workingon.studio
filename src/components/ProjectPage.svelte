@@ -1,22 +1,24 @@
 <script lang="ts">
-  import PageHeader from "@components/partials/PageHeader.svelte";
+  import PageLayout from "@components/partials/PageLayout.svelte";
+  import ContentPanel from "@components/partials/ContentPanel.svelte";
   import { DateTime } from "luxon";
   import ProjectList from "./partials/ProjectList.svelte";
+
   const launchDate = DateTime.fromISO("2025-08-27");
   const daysSince = Math.floor(DateTime.now().diff(launchDate, "days").days);
 </script>
 
-<PageHeader>
+<ContentPanel borderBottom>
   <h1>
     {daysSince} days passed.
     <br />
-    8 projects, designed, built and shipped.
+    9 projects, designed, built and shipped.
   </h1>
-</PageHeader>
+</ContentPanel>
 
-<section class="border-surface-border grid grid-cols-1 border border-b-0 lg:grid-cols-2">
-  <div class="border-surface-border border-0 lg:border-r">
-    <div class="border-surface-border content flex flex-col gap-5 border-b">
+<PageLayout>
+  <div class="border-surface-border border-b lg:border-0">
+    <ContentPanel>
       <p>I've spent the last {daysSince} days, designing and shipping these projects.</p>
       <p>
         Some are fun experiments that expose corporate performance culture. Others are practical tools for
@@ -32,10 +34,13 @@
         Currently building: <a href="https://whento.work">When to Work</a>, a simpler way to find overlap with remote colleagues across timezones.
       </p>
       <p>Built with Svelte, compiled to vanilla JavaScript. Fast, lightweight, functional.</p>
-    </div>
+    </ContentPanel>
   </div>
-  <ProjectList />
-</section>
+
+  <div class="divide-surface-border divide-y">
+    <ProjectList />
+  </div>
+</PageLayout>
 
 <style>
   @reference "@styles/main.css";

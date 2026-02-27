@@ -1,35 +1,44 @@
 <script lang="ts">
-  import PageHeader from "@components/partials/PageHeader.svelte";
-  import { DateTime } from "luxon";
+  import ContentPanel from "@components/partials/ContentPanel.svelte";
+  import PageLayout from "@components/partials/PageLayout.svelte";
   import ProjectList from "./partials/ProjectList.svelte";
-  import ArticleList from "./partials/ArticleList.svelte";
   import WorkHistory from "./partials/WorkHistory.svelte";
   import About from "./partials/About.svelte";
   import SocialProfiles from "./partials/SocialProfiles.svelte";
-  const launchDate = DateTime.fromISO("2025-08-27");
-  const daysSince = Math.floor(DateTime.now().diff(launchDate, "days").days);
+  import ArticleList from "./partials/ArticleList.svelte";
+
+  export let articles: Array<{
+    slug: string;
+    title: string;
+    description?: string;
+  }>;
 </script>
 
-<PageHeader>
+<ContentPanel borderBottom>
   <!-- prettier-ignore -->
   <h1>
-    I <span class="underline">design</span>, <span class="underline">build</span>, and <span class="underline">ship</span> software. Sixteen years designing products. Five exits. Looking for teams that ship.
+    I <span class="underline">design</span>,
+    <span class="underline">build</span>, and <span class="underline">ship</span>
+    software. Sixteen years designing products. Five exits. Looking for teams that ship.
   </h1>
-</PageHeader>
+</ContentPanel>
 
-<section
-  class="border-surface-border divide-surface-border grid grid-cols-1 border-0 md:border md:border-b-0 lg:grid-cols-2 lg:divide-x"
->
-  <div class="divide-surface-border border-surface-border divide-y-1 border-b lg:border-b-0">
+<PageLayout>
+  <!-- Left column -->
+  <div class="divide-surface-border divide-y">
     <About />
     <WorkHistory />
-    <ArticleList />
+    <div class="border-surface-border border-b lg:border-0">
+      <ArticleList header="Writing" {articles} />
+    </div>
   </div>
-  <div class="divide-surface-border divide-y-1">
+
+  <!-- Right column -->
+  <div class="divide-surface-border divide-y">
     <ProjectList />
     <SocialProfiles />
   </div>
-</section>
+</PageLayout>
 
 <style>
   @reference "@styles/main.css";

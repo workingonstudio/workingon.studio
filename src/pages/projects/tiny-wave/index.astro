@@ -1,0 +1,16 @@
+---
+import "@styles/tiny-wave.css";
+
+import TinyWave from "@layouts/TinyWave.astro";
+import Main from "@components/tiny-wave/Main.svelte";
+---
+
+<TinyWave title="TinyWave - Audio to SVG">
+  <div class="flex min-h-screen items-center justify-center">
+    <Main client:load />
+  </div>
+</TinyWave>
+
+<style>
+  @reference "@styles/tiny-wave.css";
+</style>
