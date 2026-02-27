@@ -15,12 +15,10 @@
 </script>
 
 <ContentPanel borderBottom>
+  <!-- prettier-ignore -->
   <h1>
-    I <span class="underline">design</span>
-    ,
-    <span class="underline">build</span>
-    , and
-    <span class="underline">ship</span>
+    I <span class="underline">design</span>,
+    <span class="underline">build</span>, and <span class="underline">ship</span>
     software. Sixteen years designing products. Five exits. Looking for teams that ship.
   </h1>
 </ContentPanel>
