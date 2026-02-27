@@ -183,7 +183,7 @@
     <ul class="flex-col flex gap-3 text-sm text-muted">
       <li>Hosted on <a href="https://github.com/workingonstudio/workingon.studio">Github</a> pages.</li>
       <li>Built with <a href="https://astro.build/">Astro</a> and <a href="https://svelte.dev/">Svelte</a>.</li>
-      <li>Licenced files hosted on <a href="">CloudFlare</a>.</li>
+      <li>Licenced files hosted on <a href="https://cloudflare.com">CloudFlare</a>.</li>
       <li>Set with <a href="https://www.fontshare.com/fonts/satoshi">Satoshi</a> and <a href="https://rsms.me/inter/">Inter</a> via <a href="https://www.fontshare.com/">FontShare</a> and <a href="https://fonts.bunny.net/">Bunny</a>.</li>
       <li>Icons are <a href="https://phosphoricons.com/">Phosphor</a> via <a href="https://iconify.design/">Iconfiy</a>.</li>
       <li>Analytics tracked anonymously via <a href="https://umami.is/">Umami</a> self-hosted via <a href="https://railway.com/">Railway</a>.</li>
