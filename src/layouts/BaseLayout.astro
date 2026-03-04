@@ -24,7 +24,7 @@ export interface SeoProps {
   title: string;
   description: string;
   canonical: string;
-  ogImage: string;
+  ogImage?: string;
   ogImageAlt?: string;
   siteName: string;
   twitterUrl?: string;
@@ -84,13 +84,15 @@ const {
         url: seo.canonical,
         title: seo.title,
         description: seo.description,
-        images: [{ url: seo.ogImage, height: 630, width: 1200, alt: seo.ogImageAlt }],
+        images: seo.ogImage
+          ? [{ url: seo.ogImage, height: 630, width: 1200, alt: seo.ogImageAlt }]
+          : [],
         site_name: seo.siteName,
         type: "website",
       }}
       twitter={{ cardType: "summary_large_image", handle: "@prmack" }}
       additionalMetaTags={[
-        { name: "twitter:image", content: seo.ogImage },
+        ...(seo.ogImage ? [{ name: "twitter:image", content: seo.ogImage }] : []),
         ...(seo.twitterUrl ? [{ name: "twitter:url", content: seo.twitterUrl }] : []),
       ]}
     />
