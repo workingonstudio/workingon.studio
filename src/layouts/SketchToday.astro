@@ -1,10 +1,6 @@
 ---
 import "../styles/sketch-today.css";
-
-import { ClientRouter } from "astro:transitions";
-
-import Analytics from "./partials/Analytics.astro";
-import { AstroSeo } from "@astrolib/seo";
+import BaseLayout from "./BaseLayout.astro";
 import { Font } from "astro:assets";
 
 import Header from "@components/sketch-today/Header.svelte";
@@ -17,88 +13,37 @@ interface Props {
 }
 
 const { title, category, slug } = Astro.props;
-
 const currentURL = new URL(Astro.url.pathname, Astro.site).href;
 ---
 
-<!doctype html>
-<html lang="en" class="dark">
-  <head>
-    <meta charset="UTF-8" />
-    <Font cssVariable="--font-montserrat" preload={[{ weight: 400 }, { weight: 700 }]} />
-    <ClientRouter />
-    <AstroSeo
-      title={title}
-      description="A collection of modern resources for Sketch."
-      canonical={currentURL}
-      openGraph={{
-        url: currentURL,
-        title: title,
-        description: "A collection of modern resources for Sketch.",
-        images: [
-          {
-            url: Astro.site + "sketch-today/opengraph/site-default.webp",
-            height: 630,
-            width: 1200,
-            alt: "Sketch Today - A collection of modern resources for Sketch",
-          },
-        ],
-        site_name: "sketchto.day",
-        type: "website",
-      }}
-      ,
-      twitter={{
-        cardType: "summary_large_image",
-        handle: "@prmack",
-      }}
-      ,
-      additionalMetaTags={[
-        {
-          name: "twitter:image",
-          content: Astro.site + "sketch-today/opengraph/site-default.webp",
-        },
-        {
-          name: "twitter:url",
-          content: "https://sketchto.day",
-        },
-      ]}
-    />
-    <meta name="theme-color" content="#030712" />
-    <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="/sketch-today/favicon-light.svg"
-      media="(prefers-color-scheme: light)"
-    />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="/sketch-today/favicon-dark.svg"
-      media="(prefers-color-scheme: dark)"
-    />
-    <script
-      is:inline
-      type="module"
-      src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    >
-    </script>
+<BaseLayout
+  productName="Sketch Today"
+  seo={{
+    title,
+    description: "A collection of modern resources for Sketch.",
+    canonical: currentURL,
+    ogImage: `${Astro.site}sketch-today/opengraph/site-default.webp`,
+    ogImageAlt: "Sketch Today - A collection of modern resources for Sketch",
+    siteName: "sketchto.day",
+    twitterUrl: "https://sketchto.day",
+  }}
+  meta={{
+    themeColor: "#030712",
+    statusBarStyle: "black-translucent",
+    htmlClass: "dark",
+    adaptiveFavicons: {
+      light: "/sketch-today/favicon-light.svg",
+      dark: "/sketch-today/favicon-dark.svg",
+    },
+  }}
+>
+  <Font slot="head" cssVariable="--font-montserrat" preload={[{ weight: 400 }, { weight: 700 }]} />
 
-    <meta name="generator" content={Astro.generator} />
-
-    <Analytics productName="Sketch Today" />
-
-    <title>{title}</title>
-  </head>
-  <body>
-    <main class="mx-[5%] flex min-h-screen flex-col gap-12 pt-9 md:mx-[10%]">
-      <div class="flex flex-1 flex-col">
-        <Header {category} {slug} client:idle />
-        <slot />
-      </div>
-      <Footer />
-    </main>
-  </body>
-</html>
+  <main class="mx-[5%] flex min-h-screen flex-col gap-12 pt-9 md:mx-[10%]">
+    <div class="flex flex-1 flex-col">
+      <Header {category} {slug} client:idle />
+      <slot />
+    </div>
+    <Footer />
+  </main>
+</BaseLayout>
