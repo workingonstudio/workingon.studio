@@ -86,11 +86,11 @@
                 aria-label={title}
                 target="_blank"
               >
-                <i class="fa-brands {'fa-' + iconRef} text-md {color}"></i>
+                <iconify-icon icon={"fa7-brands:" + iconRef} class="text-lg {color}"></iconify-icon>
               </a>
             {:else}
               <a href={href + linkText + "&url=" + linkURL} {title} aria-label={title} target="_blank">
-                <i class="fa-brands {'fa-' + iconRef} text-xl {color}"></i>
+                <iconify-icon icon={"fa7-brands:" + iconRef} class="text-2xl {color}"></iconify-icon>
               </a>
             {/if}
           </li>

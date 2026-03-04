@@ -1,11 +1,6 @@
 ---
-import "../styles/base.css";
 import "../styles/is-figma-down.css";
-
-import { ClientRouter } from "astro:transitions";
-
-import Analytics from "./partials/Analytics.astro";
-import { AstroSeo } from "@astrolib/seo";
+import BaseLayout from "./BaseLayout.astro";
 import { Font } from "astro:assets";
 
 export interface Props {
@@ -13,62 +8,25 @@ export interface Props {
 }
 
 const { title } = Astro.props;
-const longTitle = title + " - workingon.studio";
 const currentURL = new URL(Astro.url.pathname, Astro.site).href;
 ---
 
-<html lang="en" class="scroll-smooth bg-[#1E1E1E]">
-  <head>
-    <meta charset="UTF-8" />
-    <Font cssVariable="--font-inter" preload />
-    <ClientRouter />
-    <AstroSeo
-      title={longTitle}
-      description="The unofficial status of a well known SaaS product."
-      canonical={currentURL}
-      openGraph={{
-        url: currentURL,
-        title: title,
-        description: "The unofficial status of a well known SaaS product.",
-        images: [
-          {
-            url: Astro.site + "",
-            height: 600,
-            width: 1200,
-          },
-        ],
-        site_name: "isfigmadown.com",
-        type: "site",
-      }}
-      ,
-      additionalMetaTags={[
-        {
-          name: "twitter:url",
-          content: "https://isfigmadown.com",
-        },
-      ]}
-    />
-    <meta name="theme-color" content="#020618" />
-    <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="/is-figma-down/favicon.svg" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded"
-      rel="stylesheet"
-    />
-    <script
-      is:inline
-      type="module"
-      src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    >
-    </script>
-    <script is:inline src="https://kit.fontawesome.com/180e1f6a33.js" crossorigin="anonymous"
-    ></script>
-    <meta name="generator" content={Astro.generator} />
-    <Analytics productName="Figma Down" />
-  </head>
-  <body>
-    <slot />
-  </body>
-</html>
+<BaseLayout
+  productName="Figma Down"
+  seo={{
+    title: `${title} - workingon.studio`,
+    description: "The unofficial status of a well known SaaS product.",
+    canonical: currentURL,
+    siteName: "isfigmadown.com",
+    twitterUrl: "https://isfigmadown.com",
+  }}
+  meta={{
+    themeColor: "#020618",
+    htmlClass: "scroll-smooth bg-[#1E1E1E]",
+    faviconSvg: "/is-figma-down/favicon.svg",
+  }}
+>
+  <Font slot="head" cssVariable="--font-inter" preload />
+
+  <slot />
+</BaseLayout>
