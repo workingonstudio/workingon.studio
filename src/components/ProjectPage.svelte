@@ -12,28 +12,18 @@
   <h1>
     {daysSince} days passed.
     <br />
-    9 projects, designed, built and shipped.
+    9 projects, still going.
   </h1>
 </ContentPanel>
 
 <PageLayout>
   <div class="border-surface-border border-b lg:border-0">
     <ContentPanel>
-      <p>I've spent the last {daysSince} days, designing and shipping these projects.</p>
       <p>
-        Some are fun experiments that expose corporate performance culture. Others are practical tools for
-        <a href="https://figma.com">Figma</a>
-        and
-        <a href="https://sketch.com">Sketch</a>
-        -
-        <a href="https://glyphpalette.com">Glyph Palette</a>
-        is officially recognised by Sketch.
+        Some of these are practical tools. Plugins, extensions, utilities. Others are cultural mirrors, products that
+        expose the performance and absurdity hiding in plain sight on the internet.
       </p>
-      <!-- prettier-ignore -->
-      <p>
-        Currently building: <a href="https://whento.work">When to Work</a>, a simpler way to find overlap with remote colleagues across timezones.
-      </p>
-      <p>Built with Svelte, compiled to vanilla JavaScript. Fast, lightweight, functional.</p>
+      <p>All of them started with a frustration. All of them shipped.</p>
     </ContentPanel>
   </div>
 

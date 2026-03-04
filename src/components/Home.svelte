@@ -18,8 +18,7 @@
   <!-- prettier-ignore -->
   <h1>
     I <span class="underline">design</span>,
-    <span class="underline">build</span>, and <span class="underline">ship</span>
-    software. Sixteen years designing products. Five exits. Looking for teams that ship.
+    <span class="underline">build</span>, and <span class="underline">ship</span>. Sixteen years designing products. Five exits. Looking for teams that actually do it.
   </h1>
 </ContentPanel>
 
