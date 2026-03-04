@@ -11,7 +11,7 @@
     AI, marketing, finance, SaaS, just not gambling. Never gambling.
   </p>
   <p>
-    I design and build, not just push pixels. I understand constraints, move fast, and don't need my hand held. I work
-    best with teams that ship, not teams that meet about shipping.
+    I design and build. I understand constraints, move fast, and don't need managing. I work best with teams that ship,
+    not teams that meet about shipping.
   </p>
 </ContentPanel>

@@ -7,7 +7,7 @@
 <ContentPanel borderBottom>
   <!-- prettier-ignore -->
   <h1>
-    Writing about design and creativity as it actually is.
+    Writing for designers who are tired of design writing.
   </h1>
 </ContentPanel>
 
