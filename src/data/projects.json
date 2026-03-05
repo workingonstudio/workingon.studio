@@ -5,7 +5,8 @@
     "shipped": true,
     "link": "dad-reply",
     "externalLink": false,
-    "latest": false
+    "latest": false,
+    "image": "/projectImages/dadreply.webp"
   },
   {
     "name": "Glyph Palette",
@@ -13,7 +14,8 @@
     "shipped": true,
     "link": "glyph-palette",
     "externalLink": false,
-    "latest": false
+    "latest": false,
+    "image": "/projectImages/glyphpalette.webp"
   },
   {
     "name": "Solidarity",
@@ -21,7 +23,8 @@
     "shipped": true,
     "link": "solidarity",
     "externalLink": false,
-    "latest": false
+    "latest": false,
+    "image": "/projectImages/solidarity.webp"
   },
   {
     "name": "Tinywave",
@@ -29,7 +32,8 @@
     "shipped": true,
     "link": "tiny-wave",
     "externalLink": false,
-    "latest": true
+    "latest": true,
+    "image": "/projectImages/tinywave.webp"
   },
   {
     "name": "Is Figma down?",
@@ -62,7 +66,8 @@
     "shipped": true,
     "link": "https://github.com/workingonstudio/sketch-qr.sketchplugin",
     "externalLink": true,
-    "latest": false
+    "latest": false,
+    "image": "/projectImages/sketchqr.webp"
   },
   {
     "name": "When to work",
@@ -70,6 +75,7 @@
     "shipped": false,
     "link": "https://whento.work",
     "externalLink": true,
-    "latest": false
+    "latest": false,
+    "image": "/projectImages/whentowork.webp"
   }
 ]
