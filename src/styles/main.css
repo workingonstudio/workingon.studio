@@ -12,7 +12,7 @@
   --color-header: theme(colors.stone.900);
   --color-body: theme(colors.stone.700);
   --color-muted: theme(colors.stone.500);
-  --color-bg-main: theme(colors.stone.50);
+  --color-bg-main: theme(colors.stone.100);
   --color-surface: theme(colors.stone.100);
   --color-surface-border: theme(colors.stone.200);
 }
