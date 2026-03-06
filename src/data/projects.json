@@ -42,7 +42,8 @@
     "shipped": true,
     "link": "is-figma-down",
     "externalLink": false,
-    "latest": false
+    "latest": false,
+    "image": "/projectImages/isfigmadown.webp"
   },
   {
     "name": "Good Boy",
@@ -50,7 +51,8 @@
     "shipped": true,
     "link": "good-boy",
     "externalLink": false,
-    "latest": false
+    "latest": false,
+    "image": "/projectImages/goodboyplugin.webp"
   },
   {
     "name": "Sketch Today",
@@ -58,7 +60,8 @@
     "shipped": true,
     "link": "sketch-today",
     "externalLink": false,
-    "latest": false
+    "latest": false,
+    "image": "/projectImages/sketchtoday.webp"
   },
   {
     "name": "Sketch QR",

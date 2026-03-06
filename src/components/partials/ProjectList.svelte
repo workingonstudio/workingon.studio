@@ -19,17 +19,19 @@
   $: lastestProject = projectData.filter((project) => project.latest);
 </script>
 
-{#if lastestProject.length > 0}
+{#if inDevProjects.length > 0}
   <ContentPanel noPadding={false}>
-    <h2 class="text-xl font-medium">Latest project</h2>
+    <h2 class="text-xl font-medium">Currently building</h2>
     <ul class="stack">
-      {#each lastestProject as { name, description, link, externalLink, image }}
+      {#each inDevProjects as { name, description, link, externalLink, image }}
         <li class="project-item flex flex-col gap-4">
-          <img
-            src={image}
-            alt=""
-            class="border-surface-border w-full rounded-2xl border grayscale transition-all duration-300 hover:grayscale-0"
-          />
+          <a href={getProjectLink(link, externalLink)} {...getLinkProps(externalLink)}>
+            <img
+              src={image}
+              alt=""
+              class="border-surface-border w-full rounded-xl border grayscale transition-all duration-300 hover:grayscale-0"
+            />
+          </a>
           <div class="flex flex-col gap-1">
             <a
               href={getProjectLink(link, externalLink)}
@@ -47,17 +49,19 @@
   </ContentPanel>
 {/if}
 
-{#if inDevProjects.length > 0}
+{#if lastestProject.length > 0}
   <ContentPanel noPadding={false}>
-    <h2 class="text-xl font-medium">Currently building</h2>
+    <h2 class="text-xl font-medium">Latest project</h2>
     <ul class="stack">
-      {#each inDevProjects as { name, description, link, externalLink, image }}
+      {#each lastestProject as { name, description, link, externalLink, image }}
         <li class="project-item flex flex-col gap-4">
-          <img
-            src={image}
-            alt=""
-            class="border-surface-border w-full rounded-2xl border grayscale transition-all duration-300 hover:grayscale-0"
-          />
+          <a href={getProjectLink(link, externalLink)} {...getLinkProps(externalLink)}>
+            <img
+              src={image}
+              alt=""
+              class="border-surface-border w-full rounded-xl border grayscale transition-all duration-300 hover:grayscale-0"
+            />
+          </a>
           <div class="flex flex-col gap-1">
             <a
               href={getProjectLink(link, externalLink)}
@@ -78,14 +82,16 @@
 {#if liveProjects.length > 0}
   <ContentPanel noPadding={false}>
     <h2 class="text-xl font-medium">All live projects</h2>
-    <ul class="stack">
+    <ul class="stack gap-6">
       {#each liveProjects as { name, description, link, externalLink, image }}
         <li class="project-item flex flex-col gap-4">
-          <img
-            src={image}
-            alt=""
-            class="border-surface-border w-full rounded-2xl border grayscale transition-all duration-300 hover:grayscale-0"
-          />
+          <a href={getProjectLink(link, externalLink)} {...getLinkProps(externalLink)}>
+            <img
+              src={image}
+              alt=""
+              class="border-surface-border w-full rounded-xl border grayscale transition-all duration-300 hover:grayscale-0"
+            />
+          </a>
           <div class="flex flex-col gap-1">
             <a
               href={getProjectLink(link, externalLink)}

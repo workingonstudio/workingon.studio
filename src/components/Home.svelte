@@ -27,15 +27,23 @@
   <div class="divide-surface-border divide-y">
     <About />
     <WorkHistory />
-    <div class="border-surface-border border-b lg:border-0">
+    <div class="hidden md:flex">
       <ArticleList header="Writing" {articles} />
+    </div>
+    <div class="hidden md:flex">
+      <SocialProfiles />
     </div>
   </div>
 
   <!-- Right column -->
   <div class="divide-surface-border divide-y">
     <ProjectList />
-    <SocialProfiles />
+    <div class="flex md:hidden">
+      <ArticleList header="Writing" {articles} />
+    </div>
+    <div class="flex md:hidden">
+      <SocialProfiles />
+    </div>
   </div>
 </PageLayout>
 
