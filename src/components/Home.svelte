@@ -27,11 +27,11 @@
   <div class="divide-surface-border divide-y">
     <About />
     <WorkHistory />
-    <div class="hidden md:flex">
+    <div class="hidden md:block">
       <ArticleList header="Writing" {articles} />
     </div>
-    <div class="hidden md:flex">
-      <SocialProfiles />
+    <div class="hidden md:block">
+      <SocialProfiles borderBottom />
     </div>
   </div>
 
