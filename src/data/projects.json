@@ -27,12 +27,21 @@
     "image": "/projectImages/solidarity.webp"
   },
   {
+    "name": "made.by.humans",
+    "description": "An open art piece, based on turning up.",
+    "shipped": true,
+    "link": "https://madebyhumans.day",
+    "externalLink": true,
+    "latest": true,
+    "image": "/projectImages/madebyhumans.webp"
+  },
+  {
     "name": "Tinywave",
     "description": "Draw SVG audiowaves with your voice.",
     "shipped": true,
     "link": "tiny-wave",
     "externalLink": false,
-    "latest": true,
+    "latest": false,
     "image": "/projectImages/tinywave.webp"
   },
   {
