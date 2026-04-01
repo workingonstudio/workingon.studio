@@ -1,0 +1,37 @@
+---
+import "../styles/hidden-current.css";
+import BaseLayout from "./BaseLayout.astro";
+import { Font } from "astro:assets";
+
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+const currentURL = new URL(Astro.url.pathname, Astro.site).href;
+---
+
+<BaseLayout
+  productName="Hidden Current"
+  seo={{
+    title: `${title} - workingon.studio`,
+    description: "",
+    canonical: currentURL,
+    ogImage: `${Astro.site}hidden-current/opengraph/site-default.webp`,
+    ogImageAlt: "",
+    siteName: "hiddencurrent.co",
+    twitterUrl: "https://hiddencurrent.co",
+  }}
+  meta={{
+    themeColor: "#FFFFFF",
+    htmlClass: "scroll-smooth bg-white",
+    faviconPng: "/hidden-current/favicon.png",
+    bodyId: "top",
+  }}
+>
+  <Fragment slot="head">
+    <Font cssVariable="--font-satoshi" preload />
+  </Fragment>
+
+  <slot />
+</BaseLayout>

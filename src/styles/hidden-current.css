@@ -1,0 +1,34 @@
+@import "./base.css";
+
+@theme {
+  /* Typography */
+  --font-satoshi: "Satoshi", sans-serif;
+
+  /* Colors */
+  --color-primary: theme(colors.neutral.800);
+  --color-primary-hover: theme(colors.rose.600);
+  --color-body: theme(colors.neutral.600);
+  --color-muted: theme(colors.neutral.400);
+  --color-bg: theme(colors.neutral.100);
+}
+
+@layer base {
+  html,
+  body {
+    background: var(--color-bg);
+  }
+
+  body {
+    font-family: var(--font-satoshi);
+    color: var(--color-body);
+    &::selection {
+      background: var(--color-primary);
+      @apply text-white;
+    }
+  }
+
+  h1 {
+    color: var(--color-primary);
+    @apply text-7xl leading-normal font-black tracking-tight;
+  }
+}
