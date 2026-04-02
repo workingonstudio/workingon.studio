@@ -1,8 +1,11 @@
 <script lang="ts">
   import Overlay from "./Overlay.svelte";
+  import Popover from "./Popover.svelte";
 </script>
 
-<section class="flex w-6xl flex-col rounded-xl border border-gray-300 shadow-lg">
+<section
+  class="flex w-6xl flex-col rounded-xl rounded-br-none rounded-bl-none border border-b-0 border-gray-300 shadow-lg"
+>
   <header class="rounded-tl-xl rounded-tr-xl border-b border-gray-300 bg-gray-50 p-4">
     <div class="flex flex-row gap-2">
       <span class="size-2 rounded-full bg-rose-500"></span>
@@ -10,10 +13,10 @@
       <span class="size-2 rounded-full bg-emerald-400"></span>
     </div>
   </header>
-  <div class="flex flex-row gap-6 rounded-br-xl rounded-bl-xl bg-white p-12">
+  <div class="relative flex flex-row gap-6 rounded-br-xl rounded-bl-xl bg-white p-12">
     <div class="flex w-full flex-col items-start justify-start">
       <span class="flex flex-col rounded-xl border border-gray-200 p-2">
-        <iconify-icon icon="lucide:asterisk" class="size-6 text-2xl text-[#C15F3C]"></iconify-icon>
+        <iconify-icon icon="fa7-brands:claude" class="size-6 text-2xl text-[#C15F3C]"></iconify-icon>
       </span>
     </div>
     <div class="flex flex-col items-end">
@@ -29,24 +32,28 @@
         </p>
         <div class="flex flex-row items-center justify-between">
           <div class="flex flex-row gap-2 text-neutral-400">
-            <iconify-icon icon="material-symbols:content-copy-outline" class="size-6 text-lg"></iconify-icon>
-            <iconify-icon icon="material-symbols:thumb-up-outline" class="size-6 text-lg"></iconify-icon>
-            <iconify-icon icon="material-symbols:thumb-down-outline" class="size-6 text-lg"></iconify-icon>
-            <iconify-icon icon="material-symbols:refresh" class="size-6 text-lg"></iconify-icon>
+            <iconify-icon icon="material-symbols:content-copy-outline" class="size-4.5 text-lg"></iconify-icon>
+            <iconify-icon icon="material-symbols:thumb-up-outline" class="size-4.5 text-lg"></iconify-icon>
+            <iconify-icon icon="material-symbols:thumb-down-outline" class="size-4.5 text-lg"></iconify-icon>
+            <iconify-icon icon="material-symbols:refresh" class="size-4.5 text-lg"></iconify-icon>
           </div>
-          <ul class="flex flex-row gap-3 font-bold text-neutral-400">
-            <li class="flex flex-row items-center gap-1">
-              <iconify-icon icon="material-symbols:bolt-outline" class="size-4 text-base"></iconify-icon>
-              <span class="text-xxs text-body">0.5 kWh</span>
-            </li>
-            <li class="flex flex-row items-center gap-1">
-              <iconify-icon icon="material-symbols:water-drop-outline" class="size-4 text-base"></iconify-icon>
-              <span class="text-xxs text-body">0.8 ltr</span>
-            </li>
-          </ul>
+          <Popover header="Per prompt usage." body="See how much each prompt has used.">
+            <ul class="flex flex-row gap-3 font-bold text-neutral-400">
+              <li class="flex flex-row items-center gap-1">
+                <iconify-icon icon="material-symbols:bolt-outline" class="size-4 text-base"></iconify-icon>
+                <span class="text-xxs text-body">0.5 kWh</span>
+              </li>
+              <li class="flex flex-row items-center gap-1">
+                <iconify-icon icon="material-symbols:water-drop-outline" class="size-4 text-base"></iconify-icon>
+                <span class="text-xxs text-body">0.8 ltr</span>
+              </li>
+            </ul>
+          </Popover>
         </div>
       </div>
     </div>
-    <Overlay />
+    <Popover header="Running Totals." body="Keep track of estimated consumption.">
+      <Overlay />
+    </Popover>
   </div>
 </section>

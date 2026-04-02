@@ -24,7 +24,7 @@
   }
 </script>
 
-<button type="button" onclick={openStats} class="flex w-full cursor-pointer flex-col items-end justify-start gap-2">
+<button type="button" class="relative flex w-full flex-col items-end justify-start gap-2">
   <ul class="bg-primary flex flex-row gap-3 rounded-xl px-4 py-3 pr-4.5 font-bold text-neutral-400">
     <li class="text-xxs flex flex-row items-center gap-2 whitespace-nowrap text-neutral-100">
       <iconify-icon icon="material-symbols:bolt-outline" class="text-muted size-4 text-base"></iconify-icon>
@@ -36,7 +36,7 @@
     </li>
   </ul>
   {#if statsOpen}
-    <div class="bg-primary flex w-full flex-col gap-3 rounded-xl p-4">
+    <div class="bg-primary flex w-50 flex-col gap-3 rounded-xl p-4">
       {#each stats as { title, energy, water }}
         <div class="text-xxs flex flex-col items-start gap-1">
           <strong class="text-neutral-500 uppercase">{title}</strong>
