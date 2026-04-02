@@ -41,11 +41,11 @@
             <ul class="flex flex-row gap-3 font-bold text-neutral-400">
               <li class="flex flex-row items-center gap-1">
                 <iconify-icon icon="material-symbols:bolt-outline" class="size-4 text-base"></iconify-icon>
-                <span class="text-xxs text-body">0.5 kWh</span>
+                <span class="text-xxs text-body">0.027 Wh</span>
               </li>
               <li class="flex flex-row items-center gap-1">
                 <iconify-icon icon="material-symbols:water-drop-outline" class="size-4 text-base"></iconify-icon>
-                <span class="text-xxs text-body">0.8 ltr</span>
+                <span class="text-xxs text-body">51.1 mL</span>
               </li>
             </ul>
           </Popover>

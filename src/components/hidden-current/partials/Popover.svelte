@@ -10,7 +10,7 @@
       <p class="text-muted text-xs">{body}</p>
     </div>
     <span class="relative mx-auto mt-2 flex size-2">
-      <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-neutral-400 opacity-75"></span>
+      <span class="bg-primary absolute inline-flex h-full w-full animate-ping rounded-full opacity-75"></span>
       <span class="bg-primary relative inline-flex size-2 rounded-full"></span>
     </span>
   </div>
