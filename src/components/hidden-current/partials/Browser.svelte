@@ -3,9 +3,7 @@
   import Popover from "./Popover.svelte";
 </script>
 
-<section
-  class="flex w-6xl flex-col rounded-xl rounded-br-none rounded-bl-none border border-b-0 border-gray-300 shadow-lg"
->
+<section class="flex w-6xl flex-col rounded-xl border border-gray-300 shadow-lg">
   <header class="rounded-tl-xl rounded-tr-xl border-b border-gray-300 bg-gray-50 p-4">
     <div class="flex flex-row gap-2">
       <span class="size-2 rounded-full bg-rose-500"></span>
