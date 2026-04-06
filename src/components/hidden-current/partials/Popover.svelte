@@ -1,8 +1,8 @@
 <script lang="ts">
-  let { header, body }: { header: string; body: string } = $props();
+  let { header, body, allowAbsolute = false }: { header: string; body: string; allowAbsolute?: boolean } = $props();
 </script>
 
-<div class="relative">
+<div class={allowAbsolute ? "absolute right-6 lg:relative lg:right-0" : "relative"}>
   <slot />
   <div class="absolute bottom-full left-1/2 z-10 mb-2 w-max -translate-x-1/2">
     <div class="rounded-lg border border-neutral-200 bg-white p-4 shadow-lg">

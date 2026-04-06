@@ -3,7 +3,7 @@
   import Popover from "./Popover.svelte";
 </script>
 
-<section class="flex w-6xl flex-col rounded-xl border border-gray-300 shadow-lg">
+<section class="flex max-w-6xl flex-col rounded-xl border border-gray-300 shadow-lg">
   <header class="rounded-tl-xl rounded-tr-xl border-b border-gray-300 bg-gray-50 p-4">
     <div class="flex flex-row gap-2">
       <span class="size-2 rounded-full bg-rose-500"></span>
@@ -12,13 +12,13 @@
     </div>
   </header>
   <div class="relative flex flex-row gap-6 rounded-br-xl rounded-bl-xl bg-white p-12">
-    <div class="flex w-full flex-col items-start justify-start">
+    <div class="hidden w-full flex-col items-start justify-start lg:flex">
       <span class="flex flex-col rounded-xl border border-gray-200 p-2">
         <iconify-icon icon="fa7-brands:claude" class="size-6 text-2xl text-[#C15F3C]"></iconify-icon>
       </span>
     </div>
     <div class="flex flex-col items-end">
-      <div class="flex w-2/3 flex-row rounded-xl bg-gray-50 p-6 text-sm">
+      <div class="flex flex-row rounded-xl bg-gray-50 p-6 text-sm lg:w-2/3">
         <p>What's a good social media strategy for launching our new sustainable water bottle?</p>
       </div>
       <div class="flex flex-col gap-6 p-6 text-sm">
@@ -50,7 +50,7 @@
         </div>
       </div>
     </div>
-    <Popover header="Running Totals." body="Keep track of estimated consumption.">
+    <Popover header="Running Totals." body="Keep track of estimated consumption." allowAbsolute>
       <Overlay />
     </Popover>
   </div>
