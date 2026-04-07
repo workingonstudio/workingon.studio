@@ -17,17 +17,6 @@
         </div>
       </small>
     </div>
-    <!-- <form action="" class="flex flex-row gap-3 rounded-full border border-neutral-300 p-4 shadow-lg">
-      <label>
-        <input type="text" class="w-xs rounded-full border border-neutral-300 px-4 py-2" />
-      </label>
-      <button
-        type="button"
-        class="bg-primary hover:border-primary hover:text-primary cursor-pointer rounded-full px-4 py-2.5 text-sm font-semibold text-white hover:bg-white"
-      >
-        Submit
-      </button>
-    </form> -->
     <div class="flex flex-col gap-6 md:flex md:flex-row">
       <a href="/" class="downloadBtn">
         <iconify-icon icon="fa7-brands:chrome" class="size-6 text-2xl"></iconify-icon>
