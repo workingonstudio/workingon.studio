@@ -1,0 +1,44 @@
+---
+import HiddenCurrent from "@layouts/HiddenCurrent.astro";
+import Logo from "@components/hidden-current/partials/Logo.svelte";
+---
+
+<HiddenCurrent title="Hidden Current">
+  <div class="flex min-h-screen flex-col items-center px-4 py-24">
+    <section class="flex max-w-xl flex-col gap-12">
+      <div class="flex flex-row justify-center">
+        <Logo />
+      </div>
+      <header class="flex w-full flex-row items-center justify-between">
+        <h2 class="text-primary text-2xl font-black">Methodology</h2>
+      </header>
+      <div class="flex flex-col gap-6 text-sm text-pretty">
+        <h3 class="text-primary text-base font-bold">How it's calculated.</h3>
+        <p>
+          <strong>Hidden Current</strong> estimates the energy and water used by each Claude response
+          based on the length of the text it generates.
+        </p>
+        <p>
+          Character count is converted to an estimated token count - the unit AI models use
+          internally to process text. From there, published energy figures for modern GPU hardware
+          are applied to arrive at a watt-hour estimate, then converted to water using the
+          industry-standard Water Usage Effectiveness (WUE) figure of 1.9 litres per kWh.
+        </p>
+        <h3 class="text-primary text-base font-bold">In short</h3>
+        <p class="italic">
+          Energy (Wh) = (input tokens &#x0078; 0.0001) + (output tokens &#x0078; 0.0003) + 0.002
+          <br />
+          Water (mL) = Energy &#x0078; 1,900
+        </p>
+        <p>
+          <strong>These are estimates</strong>. AI companies don't publish per-query consumption
+          data, and the true figure varies depending on which data centre handles a request, the
+          hardware it runs on, and local conditions like climate and cooling systems. The numbers
+          are based on the best publicly available research, but should be read as informed
+          approximations rather than precise measurements.
+        </p>
+        <p>The goal isn't precision - it's visibility.</p>
+      </div>
+    </section>
+  </div>
+</HiddenCurrent>

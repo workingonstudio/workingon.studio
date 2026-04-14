@@ -12,7 +12,7 @@
   <h1>
     {daysSince} days passed.
     <br />
-    9 projects, still going.
+    11 projects, still going.
   </h1>
 </ContentPanel>
 

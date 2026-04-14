@@ -1,0 +1,70 @@
+---
+import HiddenCurrent from "@layouts/HiddenCurrent.astro";
+import Logo from "@components/hidden-current/partials/Logo.svelte";
+import Footer from "@components/hidden-current/partials/Footer.svelte";
+---
+
+<HiddenCurrent title="Hidden Current">
+  <div class="flex min-h-screen flex-col items-center px-4 py-24">
+    <section class="flex max-w-xl flex-col gap-12">
+      <div class="flex flex-row justify-center">
+        <Logo />
+      </div>
+      <header class="flex w-full flex-row items-center justify-between">
+        <h2 class="text-primary text-2xl font-black">Privacy Policy</h2>
+        <span class="text-body text-xs">Last updated: April 2026</span>
+      </header>
+      <div class="flex flex-col gap-6 text-sm text-pretty">
+        <p>
+          <strong>Hidden Current</strong> is a browser extension made by wo.studio that estimates the
+          energy and water used by your Claude conversations. This policy explains what data we handle
+          and how.
+        </p>
+        <h3 class="text-primary text-base font-bold">We do not read your conversations.</h3>
+        <p>
+          Hidden Current measures the character length of Claude's responses to estimate resource
+          usage. It never reads, stores, or transmits the content of your prompts or Claude's
+          replies. No conversation text ever leaves your browser.
+        </p>
+        <h3 class="text-primary text-base font-bold">What we store locally.</h3>
+        <p>
+          Hidden Current stores estimated energy (Wh) and water (mL) figures in your browser's local
+          storage. This data is organised into daily, weekly, and all-time totals, and a
+          per-conversation record that is automatically deleted after 30 days. All data stays on
+          your device.
+        </p>
+        <h3 class="text-primary text-base font-bold">What we do NOT collect.</h3>
+        <ul>
+          <li>No personal information</li>
+          <li>No conversation content</li>
+          <li>No usage analytics</li>
+          <li>No identifiers of any kind</li>
+        </ul>
+        <p>
+          We do not use third-party analytics, advertising, or tracking of any kind. No data is ever
+          sent to any server.
+        </p>
+        <h3 class="text-primary text-base font-bold">Permissions.</h3>
+        <p>
+          Hidden Current requests access to storage to save your running totals locally. No other
+          permissions are requested or required.
+        </p>
+        <h3 class="text-primary text-base font-bold">Changes.</h3>
+        <p>
+          If this policy changes materially, we'll update the date above and note it on
+          hiddencurrent.co.
+        </p>
+        <h3 class="text-primary text-base font-bold">Contact.</h3>
+        <p>
+          Questions? Get in touch at <a
+            href="mailto:support@workingon.studio"
+            class="underline hover:no-underline"
+          >
+            support@workingon.studio
+          </a>
+        </p>
+      </div>
+      <Footer />
+    </section>
+  </div>
+</HiddenCurrent>

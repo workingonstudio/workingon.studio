@@ -27,6 +27,15 @@
     "image": "/projectImages/solidarity.webp"
   },
   {
+    "name": "Hidden Current",
+    "description": "Your prompts really are costing the earth.",
+    "shipped": false,
+    "link": "hidden-current",
+    "externalLink": false,
+    "latest": false,
+    "image": "/projectImages/hiddencurrent.webp"
+  },
+  {
     "name": "made.by.humans",
     "description": "An open art piece, based on turning up.",
     "shipped": true,
@@ -84,7 +93,7 @@
   {
     "name": "When to work",
     "description": "Find the overlap. Work together better.",
-    "shipped": false,
+    "shipped": true,
     "link": "https://whento.work",
     "externalLink": true,
     "latest": false,

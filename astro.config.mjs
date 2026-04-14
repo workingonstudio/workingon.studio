@@ -34,7 +34,7 @@ export default defineConfig({
         name: "Satoshi",
         cssVariable : "--font-satoshi",
         display: "swap",
-        weights: [500, 700],
+        weights: [500, 700, 900],
         styles: ['normal'],
         subsets: ["latin"]
       },
