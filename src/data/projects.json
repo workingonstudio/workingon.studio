@@ -29,10 +29,10 @@
   {
     "name": "Hidden Current",
     "description": "Your prompts really are costing the earth.",
-    "shipped": true,
+    "shipped": false,
     "link": "hidden-current",
     "externalLink": false,
-    "latest": true,
+    "latest": false,
     "image": "/projectImages/hiddencurrent.webp"
   },
   {
@@ -41,7 +41,7 @@
     "shipped": true,
     "link": "https://madebyhumans.day",
     "externalLink": true,
-    "latest": false,
+    "latest": true,
     "image": "/projectImages/madebyhumans.webp"
   },
   {
@@ -93,7 +93,7 @@
   {
     "name": "When to work",
     "description": "Find the overlap. Work together better.",
-    "shipped": false,
+    "shipped": true,
     "link": "https://whento.work",
     "externalLink": true,
     "latest": false,

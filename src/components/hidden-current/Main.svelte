@@ -17,15 +17,17 @@
         </div>
       </small>
     </div>
-    <div class="flex flex-col gap-6 md:flex md:flex-row">
+    <div class="flex flex-col items-center gap-6 md:flex md:flex-row">
       <a href="/" class="downloadBtn">
-        <iconify-icon icon="fa7-brands:chrome" class="size-6 text-2xl"></iconify-icon>
+        <iconify-icon icon="logos:chrome" class="size-6 text-2xl"></iconify-icon>
         Add to Chrome
       </a>
-      <a href="/" class="downloadBtn">
-        <iconify-icon icon="fa7-brands:firefox" class="size-6 text-2xl"></iconify-icon>
-        Add to Firefox
-      </a>
+      <div class="flex flex-row items-center gap-3">
+        <span class="text-xxs text-primaryfont-semibold italic">&#8230;coming soon</span>
+        <iconify-icon icon="logos:firefox" class="size-6 text-2xl"></iconify-icon>
+        <iconify-icon icon="logos:safari" class="size-6 text-2xl"></iconify-icon>
+        <iconify-icon icon="logos:microsoft-edge" class="size-6 text-2xl"></iconify-icon>
+      </div>
     </div>
   </div>
   <Browser />
