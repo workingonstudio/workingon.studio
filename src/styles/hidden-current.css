@@ -37,5 +37,6 @@
     @apply gap-4.5 px-5 py-4;
     @apply hover:border-primary hover:text-primary bg-neutral-900 text-white hover:bg-white;
     @apply rounded-full border-3 border-transparent hover:border-3;
+    @apply disabled:hover:bg-primary disabled:hover:text-white;
   }
 }
