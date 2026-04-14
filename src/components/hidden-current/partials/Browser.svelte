@@ -33,7 +33,6 @@
             <iconify-icon icon="material-symbols:content-copy-outline" class="size-4.5 text-lg"></iconify-icon>
             <iconify-icon icon="material-symbols:thumb-up-outline" class="size-4.5 text-lg"></iconify-icon>
             <iconify-icon icon="material-symbols:thumb-down-outline" class="size-4.5 text-lg"></iconify-icon>
-            <iconify-icon icon="material-symbols:refresh" class="size-4.5 text-lg"></iconify-icon>
           </div>
           <Popover header="Per prompt usage." body="See how much each prompt has used.">
             <ul class="flex flex-row gap-3 font-bold text-neutral-400">
