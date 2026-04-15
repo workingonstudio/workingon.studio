@@ -18,10 +18,10 @@
       </small>
     </div>
     <div class="flex flex-col items-center gap-6 md:flex md:flex-row">
-      <button type="button" disabled class="downloadBtn">
+      <a href="https://chromewebstore.google.com/detail/fdkekehihnaabecdlefgaaoddlenikgl" class="downloadBtn">
         <iconify-icon icon="logos:chrome" class="size-6 text-2xl"></iconify-icon>
-        Awaiting Approval
-      </button>
+        Add to Chrome
+      </a>
       <div class="flex flex-row items-center gap-3">
         <span class="text-xxs text-primaryfont-semibold italic">&#8230;coming soon</span>
         <iconify-icon icon="logos:firefox" class="size-6 text-2xl"></iconify-icon>
