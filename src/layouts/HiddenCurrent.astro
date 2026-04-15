@@ -14,13 +14,14 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
 <BaseLayout
   productName="Hidden Current"
   seo={{
-    title: `${title} - workingon.studio`,
-    description: "",
+    title: `${title} - Your Prompts Are Costing The Earth - workingon.studio`,
+    description:
+      "A Chrome extension that keeps track of you estimated power and water consumption when using Claude.",
     canonical: currentURL,
     ogImage: `${Astro.site}hidden-current/opengraph/site-default.webp`,
     ogImageAlt: "",
-    siteName: "hiddencurrent.co",
-    twitterUrl: "https://hiddencurrent.co",
+    siteName: "workingon.studio",
+    twitterUrl: "https://workingon.studio",
   }}
   meta={{
     themeColor: "#FFFFFF",
