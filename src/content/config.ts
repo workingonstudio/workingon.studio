@@ -1,5 +1,18 @@
 import { defineCollection, z } from "astro:content";
 
+const projectsCollection = defineCollection({
+  type: "content",
+  schema: z.object({
+    title: z.string(),
+    publishedAt: z.coerce.date(),
+    description: z.string(),
+    link: z.string(),
+    externalLink: z.boolean().default(false),
+    download: z.string().optional(),
+    image: z.string(),
+  }),
+});
+
 const changelogCollection = defineCollection({
   type: "data",
   schema: z.object({
@@ -54,4 +67,5 @@ export const collections = {
   "sketch-today": sketchTodayCollection,
   changelogs: changelogCollection,
   writing: writingCollection,
+  projects: projectsCollection,
 };

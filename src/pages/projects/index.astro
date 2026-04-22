@@ -1,8 +1,89 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import ProjectPage from "@components/ProjectPage.svelte";
+import { getCollection, render } from "astro:content";
+import { DateTime } from "luxon";
+
+const projects = (await getCollection("projects")).sort(
+  (a, b) => b.data.publishedAt.getTime() - a.data.publishedAt.getTime()
+);
+
+const launchDate = DateTime.fromISO("2025-08-27");
+const daysSince = Math.floor(DateTime.now().diff(launchDate, "days").days);
+
+const projectData = await Promise.all(
+  projects.map(async (p) => {
+    const { Content } = await render(p);
+    return {
+      slug: p.slug,
+      title: p.data.title,
+      description: p.data.description,
+      link: p.data.link,
+      externalLink: p.data.externalLink,
+      download: p.data.download ?? null,
+      image: p.data.image,
+      isNew: DateTime.now().diff(DateTime.fromJSDate(p.data.publishedAt), "days").days < 30,
+      Content,
+    };
+  })
+);
 ---
 
 <Layout title="workingon.studio - Projects">
-  <ProjectPage client:idle />
+  <div class="border-surface-border border-b px-8 py-9 lg:px-16 lg:py-12">
+    <h1>
+      {daysSince} days passed.<br />
+      {projectData.length} projects, still going.
+    </h1>
+  </div>
+
+  <div class="divide-surface-border divide-y">
+    {
+      projectData.map(({ Content, ...project }) => (
+        <div class="flex flex-row gap-16 p-16">
+          <div class="flex w-1/2 flex-col gap-8">
+            <div class="flex flex-col gap-3">
+              <div class="flex flex-row items-center gap-6">
+                <h2>{project.title}.</h2>
+                {project.isNew ? (
+                  <span class="bg-primary text-bg-main rounded-full px-2 py-1.5 text-[10px] leading-none font-semibold uppercase">
+                    Just shipped
+                  </span>
+                ) : null}
+              </div>
+              <p class="text-muted text-sm">{project.description}</p>
+            </div>
+
+            <div class="flex flex-col gap-4">
+              <Content />
+            </div>
+
+            <ul class="text-header flex flex-row gap-6 text-xs uppercase [&_a]:hover:underline!">
+              <li class="flex flex-row gap-3">
+                <a
+                  href={project.externalLink ? project.link : `/projects/${project.link}`}
+                  target={project.externalLink ? "_blank" : undefined}
+                  rel={project.externalLink ? "noopener noreferrer" : undefined}
+                >
+                  Visit site
+                </a>
+                <iconify-icon icon="ph:arrow-up-right-bold" class="size-4 text-sm" />
+              </li>
+              {project.download ? (
+                <li class="flex flex-row gap-3">
+                  <a href={project.download} target="_blank" rel="noopener noreferrer">
+                    Add to Chrome
+                  </a>
+                  <iconify-icon icon="ph:arrow-up-right-bold" class="size-4 text-sm" />
+                </li>
+              ) : null}
+            </ul>
+          </div>
+
+          <div class="border-surface-border flex w-1/2 border-l">
+            <img src={project.image} alt={project.title} class="w-full object-cover" />
+          </div>
+        </div>
+      ))
+    }
+  </div>
 </Layout>
