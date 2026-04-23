@@ -5,7 +5,7 @@ publishedAt: 2026-01-19
 link: "good-boy"
 externalLink: false
 download: ""
-image: ""
+image: "/projectImages/goodboyplugin.webp"
 ---
 
 Tired of seeing generic design feedback on social media. I built a Figma plugin to add it to designs automatically.

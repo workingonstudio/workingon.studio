@@ -5,7 +5,7 @@ publishedAt: 2025-08-19
 link: "solidarity"
 externalLink: false
 download: "https://chromewebstore.google.com/detail/ahahliplongfboaikbajdedefpoifjeb?utm_source=item-share-cb"
-image: ""
+image: "/projectImages/solidarity.webp"
 ---
 
 Designed to soften the blow of looking for work on LinkedIn. This browser extension shows everyone on LinkedIn with the #opentowork noose around their avatar.

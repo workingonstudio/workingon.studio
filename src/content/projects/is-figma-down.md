@@ -5,11 +5,11 @@ publishedAt: 2025-10-22
 link: "https://isfigmadown.com/"
 externalLink: true
 download: ""
-image: ""
+image: "/projectImages/isfigmadown.webp"
 ---
 
 During the great AWS blackout. Most of the internets tools went offline. It become evident that we are over reliant of always being online, always connected.
 
-As a satirical act I purchased the domain, isfigmadown.com and thew up a splash page that mimiced that of Figmas.
+As a satirical act I purchased the domain, isfigmadown.com and threw up a splash page that mimiced that of Figmas.
 
 Instead pointing to use tools that didn't require an always on connection.

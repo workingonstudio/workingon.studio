@@ -5,7 +5,7 @@ publishedAt: 2026-05-19
 link: "hidden-current"
 externalLink: false
 download: "https://chromewebstore.google.com/detail/fdkekehihnaabecdlefgaaoddlenikgl?utm_source=item-share-cb"
-image: ""
+image: "/projectImages/hiddencurrent.webp"
 ---
 
 Every Claude response costs something. Electricity. Water. Real resources, consumed at scale, every time you hit send.

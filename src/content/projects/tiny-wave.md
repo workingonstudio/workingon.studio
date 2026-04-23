@@ -5,7 +5,7 @@ publishedAt: 2026-02-22
 link: "/projects/tiny-wave"
 externalLink: true
 download: ""
-image: ""
+image: "/projectImages/tinywave.webp"
 ---
 
 What started as a potential library of waveforms, specifically for audio base designs. Turn into a self creating resource.

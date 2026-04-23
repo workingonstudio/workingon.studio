@@ -5,7 +5,7 @@ publishedAt: 2026-02-19
 link: "https://madebyhumans.day"
 externalLink: true
 download: ""
-image: ""
+image: "/projectImages/madebyhumans.webp"
 ---
 
 Born from an interest in collective presence, and representation based on impact rather than numbers.
