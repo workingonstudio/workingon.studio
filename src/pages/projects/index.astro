@@ -30,9 +30,9 @@ const projectData = await Promise.all(
 
 <Layout title="workingon.studio - Projects">
   <div class="border-surface-border border-b px-8 py-9 lg:px-16 lg:py-12">
-    <h1>
-      {daysSince} days passed.<br />
-      {projectData.length} projects, still going.
+    <h1 class="text-pretty">
+      {daysSince} days passed.
+      {projectData.length} projects. <br />Concept, design, development, live.
     </h1>
   </div>
 
@@ -80,11 +80,17 @@ const projectData = await Promise.all(
           </div>
 
           <div class="flex items-center justify-center lg:w-1/2">
-            <img
-              src={project.image}
-              alt={project.title}
-              class="border-surface-border rounded-xl border object-cover"
-            />
+            <a
+              href={project.externalLink ? project.link : `/projects/${project.link}`}
+              target={project.externalLink ? "_blank" : undefined}
+              rel={project.externalLink ? "noopener noreferrer" : undefined}
+            >
+              <img
+                src={project.image}
+                alt={project.title}
+                class="border-surface-border w-full rounded-xl border grayscale transition-all duration-300 hover:grayscale-0"
+              />
+            </a>
           </div>
         </div>
       ))
