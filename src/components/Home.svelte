@@ -17,8 +17,7 @@
 <ContentPanel borderBottom>
   <!-- prettier-ignore -->
   <h1>
-    I <span class="underline">design</span>,
-    <span class="underline">build</span>, and <span class="underline">ship</span>. Sixteen years designing products. Five exits. Looking for teams that actually do it.
+    Sixteen years designing products. Five exits. Give me a problem worth solving.
   </h1>
 </ContentPanel>
 
