@@ -43,7 +43,7 @@
       <ul class="space-y-3 md:space-y-2">
         <li>
           <iconify-icon icon="material-symbols:change-history-outline-rounded" class="mr-2 h-4 w-4"></iconify-icon>
-          <a href="/projects/dad-reply/changelog/">Changlog</a>
+          <a href="/projects/dad-reply/changelog/">Changelog</a>
         </li>
         <li>
           <iconify-icon icon="material-symbols:support" class="mr-2 h-4 w-4"></iconify-icon>

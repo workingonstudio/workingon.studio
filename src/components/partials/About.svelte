@@ -6,12 +6,13 @@
 </script>
 
 <ContentPanel {borderBottom} {borderRight}>
+  <p>I've worked across AI, marketing, finance, and SaaS. Just not gambling. Never gambling.</p>
   <p>
-    16 years shipping products. I've designed systems for millions of users and been part of 5 exits. I've worked across
-    AI, marketing, finance, SaaS, just not gambling. Never gambling.
+    My best ideas don't come from a screen. They come from being out in the world I'm designing for. I like optional
+    meeting invites.
   </p>
   <p>
-    I design and build. I understand constraints, move fast, and don't need managing. I work best with teams that ship,
-    not teams that meet about shipping.
+    <a href="/contact" class="underline hover:no-underline">Get in touch</a>
+    if you spend more time shipping than you do talking about shipping.
   </p>
 </ContentPanel>

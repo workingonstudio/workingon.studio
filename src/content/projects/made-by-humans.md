@@ -1,6 +1,6 @@
 ---
 title: "Madebyhumans"
-description: "Makes everyone on LinkedIn #opentowork. Everyone."
+description: "An open art piece, based on turning up."
 publishedAt: 2026-02-19
 link: "https://madebyhumans.day"
 externalLink: true
