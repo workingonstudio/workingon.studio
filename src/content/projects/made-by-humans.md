@@ -6,6 +6,7 @@ link: "https://madebyhumans.day"
 externalLink: true
 download: ""
 image: "/projectImages/madebyhumans.webp"
+featured: true
 ---
 
 Born from an interest in collective presence, and representation based on impact rather than numbers.

@@ -1,110 +1,93 @@
 <script lang="ts">
   import ContentPanel from "./ContentPanel.svelte";
-  import projectData from "@data/projects.json";
 
-  export const borderBottom: boolean = false;
-  export const borderRight: boolean = false;
+  type Project = {
+    slug: string;
+    title: string;
+    description: string;
+    link: string;
+    externalLink: boolean;
+    image: string;
+    featured: boolean;
+    publishedAt: string;
+    download: string | null;
+    body: string;
+  };
 
-  function getProjectLink(link: string, externalLink?: boolean) {
+  let { projects }: { projects: Project[] } = $props();
+
+  function getProjectLink(link: string, externalLink: boolean) {
     if (externalLink) return link;
     return link === "/" ? link : `/projects/${link}`;
   }
 
-  function getLinkProps(externalLink?: boolean) {
-    return externalLink ? { target: "_blank", rel: "noopener noreferrer" } : {};
-  }
-
-  $: liveProjects = projectData.filter((project) => project.shipped && !project.latest);
-  $: inDevProjects = projectData.filter((project) => !project.shipped);
-  $: lastestProject = projectData.filter((project) => project.latest);
+  const latest = $derived(projects[0] ?? null);
+  const featuredPool = $derived(projects.filter((p) => p.featured && p.slug !== latest?.slug));
+  const featured = $derived(
+    featuredPool.length > 0 ? featuredPool[Math.floor(Math.random() * featuredPool.length)] : null
+  );
 </script>
 
-{#if inDevProjects.length > 0}
-  <ContentPanel noPadding={false}>
-    <h2 class="text-xl font-medium">Currently building</h2>
-    <ul class="stack">
-      {#each inDevProjects as { name, description, link, externalLink, image }}
-        <li class="project-item flex flex-col gap-4">
-          <a href={getProjectLink(link, externalLink)} {...getLinkProps(externalLink)}>
-            <img
-              src={image}
-              alt=""
-              class="border-surface-border w-full rounded-xl border grayscale transition-all duration-300 hover:grayscale-0"
-            />
-          </a>
-          <div class="flex flex-col gap-1">
-            <a
-              href={getProjectLink(link, externalLink)}
-              {...getLinkProps(externalLink)}
-              class="text-header flex flex-row items-center gap-2 font-medium hover:underline"
-            >
-              {name}
-              <iconify-icon icon="ph:arrow-up-right-bold" class="size-4"></iconify-icon>
-            </a>
-            <p class="text-muted text-sm">{description}</p>
-          </div>
-        </li>
-      {/each}
-    </ul>
-  </ContentPanel>
-{/if}
+{#snippet projectCard(project: Project)}
+  <li class="project-item flex flex-col gap-8">
+    <a
+      href={getProjectLink(project.link, project.externalLink)}
+      target={project.externalLink ? "_blank" : undefined}
+      rel={project.externalLink ? "noopener noreferrer" : undefined}
+    >
+      <img
+        src={project.image}
+        alt=""
+        class="border-surface-border w-full rounded-xl border transition-all duration-300"
+      />
+    </a>
 
-{#if lastestProject.length > 0}
-  <ContentPanel noPadding={false}>
-    <h2 class="text-xl font-medium">Latest project</h2>
-    <ul class="stack">
-      {#each lastestProject as { name, description, link, externalLink, image }}
-        <li class="project-item flex flex-col gap-4">
-          <a href={getProjectLink(link, externalLink)} {...getLinkProps(externalLink)}>
-            <img
-              src={image}
-              alt=""
-              class="border-surface-border w-full rounded-xl border grayscale transition-all duration-300 hover:grayscale-0"
-            />
-          </a>
-          <div class="flex flex-col gap-1">
-            <a
-              href={getProjectLink(link, externalLink)}
-              {...getLinkProps(externalLink)}
-              class="text-header flex flex-row items-center gap-2 font-medium hover:underline"
-            >
-              {name}
-              <iconify-icon icon="ph:arrow-up-right-bold" class="size-4"></iconify-icon>
-            </a>
-            <p class="text-muted text-sm">{description}</p>
-          </div>
-        </li>
-      {/each}
-    </ul>
-  </ContentPanel>
-{/if}
+    <div class="flex flex-col gap-3">
+      <h3 class="text-2xl">{project.title}.</h3>
+      <p class="text-muted text-sm">{project.description}</p>
+    </div>
 
-{#if liveProjects.length > 0}
-  <ContentPanel noPadding={false}>
-    <h2 class="text-xl font-medium">All live projects</h2>
-    <ul class="stack gap-6">
-      {#each liveProjects as { name, description, link, externalLink, image }}
-        <li class="project-item flex flex-col gap-4">
-          <a href={getProjectLink(link, externalLink)} {...getLinkProps(externalLink)}>
-            <img
-              src={image}
-              alt=""
-              class="border-surface-border w-full rounded-xl border grayscale transition-all duration-300 hover:grayscale-0"
-            />
-          </a>
-          <div class="flex flex-col gap-1">
-            <a
-              href={getProjectLink(link, externalLink)}
-              {...getLinkProps(externalLink)}
-              class="text-header flex flex-row items-center gap-2 font-medium hover:underline"
-            >
-              {name}
-              <iconify-icon icon="ph:arrow-up-right-bold" class="size-4"></iconify-icon>
-            </a>
-            <p class="text-muted text-sm">{description}</p>
-          </div>
+    <div class="flex flex-col gap-4 text-sm">
+      {@html project.body}
+    </div>
+
+    <ul class="text-header flex flex-row gap-6 text-xs uppercase [&_a]:hover:underline!">
+      <li class="flex flex-row gap-3">
+        <a
+          href={getProjectLink(project.link, project.externalLink)}
+          target={project.externalLink ? "_blank" : undefined}
+          rel={project.externalLink ? "noopener noreferrer" : undefined}
+        >
+          Visit site
+        </a>
+        <iconify-icon icon="ph:arrow-up-right-bold" class="size-4 text-sm"></iconify-icon>
+      </li>
+      {#if project.download}
+        <li class="flex flex-row gap-3">
+          <a href={project.download} target="_blank" rel="noopener noreferrer">Add to Chrome</a>
+          <iconify-icon icon="ph:arrow-up-right-bold" class="size-4 text-sm"></iconify-icon>
         </li>
-      {/each}
+      {/if}
     </ul>
-  </ContentPanel>
-{/if}
+  </li>
+{/snippet}
+
+<div class="divide-surface-border divide-y">
+  {#if latest}
+    <ContentPanel>
+      <h2 class="text-xl font-medium">Latest project</h2>
+      <ul class="stack">
+        {@render projectCard(latest)}
+      </ul>
+    </ContentPanel>
+  {/if}
+
+  {#if featured}
+    <ContentPanel>
+      <h2 class="text-xl font-medium">Featured</h2>
+      <ul class="stack">
+        {@render projectCard(featured)}
+      </ul>
+    </ContentPanel>
+  {/if}
+</div>
