@@ -6,6 +6,7 @@ link: "https://glyphpalette.com/"
 externalLink: true
 download: ""
 image: "/projectImages/glyphpalette.webp"
+featured: true
 ---
 
 Sketch lacked a modern icon plugin. So here it is. Over 10,000 icons. With multiple styles and sizes available.

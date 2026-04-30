@@ -52,10 +52,10 @@
   <!-- Right column -->
   <div>
     <ProjectList {projects} />
-    <div class="flex md:hidden">
+    <div class="border-surface-border flex border-t md:hidden">
       <ArticleList header="Writing" {articles} />
     </div>
-    <div class="flex md:hidden">
+    <div class="border-surface-border flex border-t md:hidden">
       <SocialProfiles />
     </div>
   </div>

@@ -23,9 +23,11 @@
 
   const latest = $derived(projects[0] ?? null);
   const featuredPool = $derived(projects.filter((p) => p.featured && p.slug !== latest?.slug));
-  const featured = $derived(
-    featuredPool.length > 0 ? featuredPool[Math.floor(Math.random() * featuredPool.length)] : null
-  );
+  let featured: Project | null = $state(null);
+
+  $effect(() => {
+    featured = featuredPool.length > 0 ? featuredPool[Math.floor(Math.random() * featuredPool.length)] : null;
+  });
 </script>
 
 {#snippet projectCard(project: Project)}
