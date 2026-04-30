@@ -7,11 +7,26 @@
   import SocialProfiles from "./partials/SocialProfiles.svelte";
   import ArticleList from "./partials/ArticleList.svelte";
 
-  export let articles: Array<{
+  type Project = {
     slug: string;
     title: string;
-    description?: string;
-  }>;
+    description: string;
+    link: string;
+    externalLink: boolean;
+    image: string;
+    featured: boolean;
+    publishedAt: string;
+    download: string | null;
+    body: string;
+  };
+
+  let {
+    articles,
+    projects,
+  }: {
+    articles: Array<{ slug: string; title: string; description?: string }>;
+    projects: Project[];
+  } = $props();
 </script>
 
 <ContentPanel borderBottom>
@@ -35,12 +50,12 @@
   </div>
 
   <!-- Right column -->
-  <div class="divide-surface-border divide-y">
-    <ProjectList />
-    <div class="flex md:hidden">
+  <div>
+    <ProjectList {projects} />
+    <div class="border-surface-border flex border-t md:hidden">
       <ArticleList header="Writing" {articles} />
     </div>
-    <div class="flex md:hidden">
+    <div class="border-surface-border flex border-t md:hidden">
       <SocialProfiles />
     </div>
   </div>

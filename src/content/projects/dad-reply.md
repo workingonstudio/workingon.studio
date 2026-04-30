@@ -6,6 +6,7 @@ link: "dad-reply"
 externalLink: false
 download: "https://chromewebstore.google.com/detail/ddkeoflblemlolckmnhihhabplfmogop?utm_source=item-share-cb"
 image: "/projectImages/dadreply.webp"
+featured: true
 ---
 
 An extension that simply adds a "dad reply" button to gmail. When clicked automatically composes and sends a thumbs up emoji.
