@@ -32,7 +32,7 @@
 <ContentPanel borderBottom>
   <!-- prettier-ignore -->
   <h1>
-    Sixteen years designing products. Five exits. Give me a problem worth solving.
+    You need a product designer. Not one that talks. One that ships.
   </h1>
 </ContentPanel>
 

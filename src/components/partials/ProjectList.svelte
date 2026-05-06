@@ -45,7 +45,14 @@
     </a>
 
     <div class="flex flex-col gap-3">
-      <h3 class="text-2xl">{project.title}.</h3>
+      <a
+        href={getProjectLink(project.link, project.externalLink)}
+        target={project.externalLink ? "_blank" : undefined}
+        rel={project.externalLink ? "noopener noreferrer" : undefined}
+        class="hover:underline"
+      >
+        <h3 class="text-2xl">{project.title}.</h3>
+      </a>
       <p class="text-muted text-sm">{project.description}</p>
     </div>
 
