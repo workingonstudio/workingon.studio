@@ -31,9 +31,13 @@
       I've watched the industry turn design into a performance. Metrics, frameworks, engagement theatre. I'm not
       interested in any of that. I'm interested in making things that work and that people actually want to use.
     </p>
+    <!-- prettier-ignore -->
     <p>
-      Available for the right team. Contract at £500+/day. Open to full-time if it's worth it. I work best when I'm
-      trusted to get on with it.
+      Available now. Contract or full-time, depending on the fit. If you ship more than you meet, 
+      <a
+        href="/contact"
+        class="underline hover:no-underline"
+      >we'll get on</a>.
     </p>
   </ContentPanel>
 
