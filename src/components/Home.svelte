@@ -32,7 +32,7 @@
 <ContentPanel borderBottom>
   <!-- prettier-ignore -->
   <h1>
-    You need a product designer. Not one that talks. One that ships.
+    The kind of designer that makes everyone else better.
   </h1>
 </ContentPanel>
 
