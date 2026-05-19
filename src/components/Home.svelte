@@ -32,7 +32,7 @@
 <ContentPanel borderBottom>
   <!-- prettier-ignore -->
   <h1>
-    The kind of designer that makes everyone else better.
+    Design that ships. Products that delight. That's the whole job.
   </h1>
 </ContentPanel>
 
