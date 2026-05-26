@@ -16,24 +16,27 @@
 <PageLayout>
   <ContentPanel>
     <p>
-      Started at agencies. Moved to startups fast. Been founding designer at multiple companies, survived acquisitions,
-      and did 3 incubator batches. 500 Startups twice, TechStars once.
+      Founding designer at multiple companies, survived acquisitions, three incubator batches. 500 Startups twice,
+      TechStars once.
     </p>
+
     <p>
-      Last role was at PartnerHero, building tools for support agents and managing a small design team. Built design
+      Last role was PartnerHero. Building tools for support agents, managing a small design team, building design
       systems that actually got used instead of gathering dust in Figma.
     </p>
+
     <p>
-      Sixteen years in and I still build things on my own time. Not because I have to, because I can't not. The products
-      on this site exist because I got frustrated with something and decided to fix it.
+      Sixteen years in and I still build things on my own time. The products on this site exist because I got frustrated
+      with something and decided to fix it.
     </p>
+
     <p>
       I've watched the industry turn design into a performance. Metrics, frameworks, engagement theatre. I'm not
       interested in any of that. I'm interested in making things that work and that people actually want to use.
     </p>
     <!-- prettier-ignore -->
     <p>
-      Available now. Contract or full-time, depending on the fit. If you ship more than you meet, 
+      Available now. Contract or full-time. If you ship more than you meet, we'll get on, 
       <a
         href="/contact"
         class="underline hover:no-underline"
