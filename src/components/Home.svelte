@@ -32,7 +32,7 @@
 <ContentPanel borderBottom>
   <!-- prettier-ignore -->
   <h1>
-    Design that ships. Products that delight. That's the whole job.
+    I've helped build five companies you've probably used. All acquired. What are you working on?
   </h1>
 </ContentPanel>
 
