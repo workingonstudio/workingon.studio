@@ -21,7 +21,7 @@
     </p>
 
     <p>
-      Last role was PartnerHero — building tools for support agents, managing a small design team, building design
+      Last role was PartnerHero. Building tools for support agents, managing a small design team, building design
       systems that actually got used instead of gathering dust in Figma.
     </p>
 
