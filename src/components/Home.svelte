@@ -32,7 +32,7 @@
 <ContentPanel borderBottom>
   <!-- prettier-ignore -->
   <h1>
-    I've helped build five companies you've probably used. All acquired. What are you working on?
+    I'm a product designer. I've shipped at multiple companies. Five acquired. What are you building?
   </h1>
 </ContentPanel>
 
