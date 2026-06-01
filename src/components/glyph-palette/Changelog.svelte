@@ -38,7 +38,7 @@
     @apply text-muted text-xxs uppercase;
   }
   .entry {
-    @apply rounded-2xl bg-gray-100 p-6;
+    @apply rounded-2xl bg-stone-100 p-6;
   }
 
   .features {

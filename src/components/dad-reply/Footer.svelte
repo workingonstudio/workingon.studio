@@ -28,7 +28,7 @@
             title="Dad Reply on Producthunt"
             class="hover:text-[#FF6154]"
           >
-            <i class="fa-brands fa-product-hunt text-lg"></i>
+            <iconify-icon icon="fa7-brands:product-hunt" class="text-2xl"></iconify-icon>
           </a>
           <a
             href="https://www.linkedin.com/company/dadreply/"
@@ -36,14 +36,14 @@
             title="Dad Reply on Linkedin"
             class="hover:text-[#0073B1]"
           >
-            <i class="fa-brands fa-square-linkedin text-lg"></i>
+            <iconify-icon icon="fa7-brands:linkedin" class="text-2xl"></iconify-icon>
           </a>
         </div>
       </div>
       <ul class="space-y-3 md:space-y-2">
         <li>
           <iconify-icon icon="material-symbols:change-history-outline-rounded" class="mr-2 h-4 w-4"></iconify-icon>
-          <a href="/projects/dad-reply/changelog/">Changlog</a>
+          <a href="/projects/dad-reply/changelog/">Changelog</a>
         </li>
         <li>
           <iconify-icon icon="material-symbols:support" class="mr-2 h-4 w-4"></iconify-icon>

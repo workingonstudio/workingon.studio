@@ -1,0 +1,146 @@
+---
+/**
+ * BaseLayout.astro
+ * Shared document shell for all product and main site layouts.
+ *
+ * Every layout in this project shares: html shell, charset, viewport,
+ * ClientRouter, AstroSeo, Iconify web component, Analytics, and generator meta.
+ * Only fonts, CSS, SEO defaults, favicon, theme colour, and body attributes differ.
+ *
+ * Usage:
+ *   <BaseLayout {seo} {meta} {productName}>
+ *     <Fragment slot="head">
+ *       <!-- product-specific head content: Font preloads, extra stylesheets -->
+ *     </Fragment>
+ *     <slot /> <!-- body content -->
+ *   </BaseLayout>
+ */
+
+import { ClientRouter } from "astro:transitions";
+import { AstroSeo } from "@astrolib/seo";
+import Analytics from "./partials/Analytics.astro";
+
+export interface SeoProps {
+  title: string;
+  description: string;
+  canonical: string;
+  ogImage?: string;
+  ogImageAlt?: string;
+  siteName: string;
+  twitterUrl?: string;
+}
+
+export interface MetaProps {
+  themeColor?: string;
+  /** Defaults to "default". Use "black-translucent" for dark-chrome products. */
+  statusBarStyle?: "default" | "black-translucent";
+  /** Classes applied to <html>. Defaults to "scroll-smooth". */
+  htmlClass?: string;
+  /** Classes applied to <body>. */
+  bodyClass?: string;
+  /** id applied to <body>. */
+  bodyId?: string;
+  faviconSvg?: string;
+  faviconPng?: string;
+  /** Pass two entries for light/dark adaptive favicons (Solidarity, Sketch Today). */
+  adaptiveFavicons?: { light: string; dark: string };
+}
+
+export interface Props {
+  seo: SeoProps;
+  meta?: MetaProps;
+  productName: string;
+}
+
+const { seo, meta = {}, productName } = Astro.props;
+
+const {
+  themeColor = "#FAFAF9",
+  statusBarStyle = "default",
+  htmlClass = "scroll-smooth",
+  bodyClass,
+  bodyId,
+  faviconSvg,
+  faviconPng,
+  adaptiveFavicons,
+} = meta;
+---
+
+<!doctype html>
+<html lang="en" class={htmlClass}>
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- Product-specific: fonts, extra stylesheets, theme scripts -->
+    <slot name="head" />
+
+    <ClientRouter />
+
+    <AstroSeo
+      title={seo.title}
+      description={seo.description}
+      canonical={seo.canonical}
+      openGraph={{
+        url: seo.canonical,
+        title: seo.title,
+        description: seo.description,
+        images: seo.ogImage
+          ? [{ url: seo.ogImage, height: 630, width: 1200, alt: seo.ogImageAlt }]
+          : [],
+        site_name: seo.siteName,
+        type: "website",
+      }}
+      twitter={{ cardType: "summary_large_image", handle: "@prmack" }}
+      additionalMetaTags={[
+        ...(seo.ogImage ? [{ name: "twitter:image", content: seo.ogImage }] : []),
+        ...(seo.twitterUrl ? [{ name: "twitter:url", content: seo.twitterUrl }] : []),
+      ]}
+    />
+
+    <meta name="theme-color" content={themeColor} />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content={statusBarStyle} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicons -->
+    {
+      adaptiveFavicons ? (
+        <>
+          <link
+            rel="icon"
+            type="image/svg+xml"
+            href={adaptiveFavicons.light}
+            media="(prefers-color-scheme: light)"
+          />
+          <link
+            rel="icon"
+            type="image/svg+xml"
+            href={adaptiveFavicons.dark}
+            media="(prefers-color-scheme: dark)"
+          />
+        </>
+      ) : (
+        <>
+          {faviconSvg && <link rel="icon" type="image/svg+xml" href={faviconSvg} />}
+          {faviconPng && <link rel="icon" type="image/png" href={faviconPng} />}
+        </>
+      )
+    }
+
+    <!-- Iconify web component (used across all products) -->
+    <script
+      is:inline
+      type="module"
+      src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
+    >
+    </script>
+
+    <meta name="generator" content={Astro.generator} />
+    <Analytics productName={productName} />
+    <title>{seo.title}</title>
+  </head>
+
+  <body id={bodyId} class={bodyClass}>
+    <slot />
+  </body>
+</html>

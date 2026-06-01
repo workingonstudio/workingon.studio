@@ -1,0 +1,10 @@
+---
+import HiddenCurrent from "@layouts/HiddenCurrent.astro";
+import Main from "@components/hidden-current/Main.svelte";
+---
+
+<HiddenCurrent title="Hidden Current">
+  <div class="flex h-screen flex-col items-center border-b-neutral-300 px-4 py-24">
+    <Main client:load />
+  </div>
+</HiddenCurrent>

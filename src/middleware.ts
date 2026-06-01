@@ -14,6 +14,8 @@ const REDIRECTS: Record<string, string> = {
   "/projects/sketchtoday/": "/projects/sketch-today/",
   "/projects/tinywave": "/projects/tiny-wave/",
   "/projects/tinywave/": "/projects/tiny-wave/",
+  "/projects/hiddencurrent": "/projects/hidden-current/",
+  "/projects/hiddencurrent/": "/projects/hidden-current/",
 };
 
 export const onRequest = defineMiddleware((context, next) => {

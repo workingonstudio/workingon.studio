@@ -19,7 +19,7 @@
     {
       href: "/about",
       title: "about",
-      description: "more questions answered.",
+      description: "the long answer.",
     },
     {
       href: "/projects/",
@@ -29,7 +29,7 @@
     {
       href: "/writing",
       title: "writing",
-      description: "thoughts on design and creativity.",
+      description: "opinions, not takes.",
     },
     {
       href: "/progress",

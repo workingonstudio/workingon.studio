@@ -9,6 +9,7 @@ dotenv.config({ path: ".env.local" });
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const GITHUB_OWNER = process.env.GITHUB_OWNER || "workingonstudio";
 const GITHUB_REPO = process.env.GITHUB_REPO || "workingon.studio";
+const IS_PR = process.env.IS_PR === "true";
 
 if (!GITHUB_TOKEN) {
   console.error("❌ Please set GITHUB_TOKEN environment variable");
@@ -36,7 +37,6 @@ function getLastCommitDate() {
       return null;
     }
 
-    // Get the most recent commit date
     const lastEntry = existingTimeline.entries[existingTimeline.entries.length - 1];
     console.log(`📅 Last commit in timeline: ${lastEntry.hash} (${lastEntry.date})`);
     return lastEntry.date;
@@ -120,7 +120,7 @@ async function getTagsWithDates(octokit, owner, repo) {
 
 function generateVersionForCommit(commit, allCommitsInOrder, tagsWithDates) {
   const message = commit.commit.message;
-  const versionMatch = message.match(/^v?(\d+\.\d+\.\d+)/);
+  const versionMatch = message.match(/v?(\d+\.\d+\.\d+)/);
   if (versionMatch) return `v${versionMatch[1]}`;
 
   const commitDate = new Date(commit.commit.committer.date);
@@ -191,6 +191,10 @@ async function fetchGitHubTimeline() {
   console.log("🚀 Fetching timeline from GitHub API (INCREMENTAL MODE)...");
   console.log(`📁 Repository: ${GITHUB_OWNER}/${GITHUB_REPO}`);
 
+  if (IS_PR) {
+    console.log("⚡ PR build — fetching last 10 commits per branch only (build check)");
+  }
+
   const lastCommitDate = getLastCommitDate();
   const sinceParam = lastCommitDate ? { since: lastCommitDate } : {};
 
@@ -204,7 +208,6 @@ async function fetchGitHubTimeline() {
     });
     console.log(`✅ Found ${branches.length} branches`);
 
-    // Fetch commits from all branches
     console.log(
       lastCommitDate
         ? `📦 Fetching commits since ${lastCommitDate}...`
@@ -218,13 +221,28 @@ async function fetchGitHubTimeline() {
     for (const branch of branches) {
       console.log(`📦 Fetching commits from branch: ${branch.name}`);
       try {
-        const branchCommits = await octokit.paginate(octokit.rest.repos.listCommits, {
-          owner: GITHUB_OWNER,
-          repo: GITHUB_REPO,
-          sha: branch.name,
-          per_page: 100,
-          ...sinceParam,
-        });
+        let branchCommits;
+
+        if (IS_PR) {
+          // PR build: single page, last 10 commits only — no pagination
+          const response = await octokit.rest.repos.listCommits({
+            owner: GITHUB_OWNER,
+            repo: GITHUB_REPO,
+            sha: branch.name,
+            per_page: 10,
+            ...sinceParam,
+          });
+          branchCommits = response.data;
+        } else {
+          // Full build: paginate everything
+          branchCommits = await octokit.paginate(octokit.rest.repos.listCommits, {
+            owner: GITHUB_OWNER,
+            repo: GITHUB_REPO,
+            sha: branch.name,
+            per_page: 100,
+            ...sinceParam,
+          });
+        }
 
         branchCommits.forEach((commit) => {
           if (!commitToBranches.has(commit.sha)) {
@@ -298,7 +316,6 @@ async function fetchGitHubTimeline() {
           per_page: 100,
         });
 
-        // Only process if this PR contains any of our new commits
         const hasNewCommits = prCommits.some((c) => newCommitShas.has(c.sha));
         if (hasNewCommits) {
           prCommits.forEach((commit) => {

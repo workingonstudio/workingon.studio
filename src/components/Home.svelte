@@ -7,19 +7,32 @@
   import SocialProfiles from "./partials/SocialProfiles.svelte";
   import ArticleList from "./partials/ArticleList.svelte";
 
-  export let articles: Array<{
+  type Project = {
     slug: string;
     title: string;
-    description?: string;
-  }>;
+    description: string;
+    link: string;
+    externalLink: boolean;
+    image: string;
+    featured: boolean;
+    publishedAt: string;
+    download: string | null;
+    body: string;
+  };
+
+  let {
+    articles,
+    projects,
+  }: {
+    articles: Array<{ slug: string; title: string; description?: string }>;
+    projects: Project[];
+  } = $props();
 </script>
 
 <ContentPanel borderBottom>
   <!-- prettier-ignore -->
   <h1>
-    I <span class="underline">design</span>,
-    <span class="underline">build</span>, and <span class="underline">ship</span>
-    software. Sixteen years designing products. Five exits. Looking for teams that ship.
+    I'm a product designer. I've shipped at multiple companies. Five acquired. What are you building?
   </h1>
 </ContentPanel>
 
@@ -28,15 +41,23 @@
   <div class="divide-surface-border divide-y">
     <About />
     <WorkHistory />
-    <div class="border-surface-border border-b lg:border-0">
+    <div class="hidden md:block">
       <ArticleList header="Writing" {articles} />
+    </div>
+    <div class="hidden md:block">
+      <SocialProfiles borderBottom />
     </div>
   </div>
 
   <!-- Right column -->
-  <div class="divide-surface-border divide-y">
-    <ProjectList />
-    <SocialProfiles />
+  <div>
+    <ProjectList {projects} />
+    <div class="border-surface-border flex border-t md:hidden">
+      <ArticleList header="Writing" {articles} />
+    </div>
+    <div class="border-surface-border flex border-t md:hidden">
+      <SocialProfiles />
+    </div>
   </div>
 </PageLayout>
 

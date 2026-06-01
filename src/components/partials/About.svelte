@@ -7,11 +7,11 @@
 
 <ContentPanel {borderBottom} {borderRight}>
   <p>
-    16 years shipping products. I've designed systems for millions of users and been part of 5 exits. I've worked across
-    AI, marketing, finance, SaaS, just not gambling. Never gambling.
+    Sixteen years. Founding designer. I figure out what the product should be, then I build it. I don't need managing. I
+    need a problem.
   </p>
   <p>
-    I design and build, not just push pixels. I understand constraints, move fast, and don't need my hand held. I work
-    best with teams that ship, not teams that meet about shipping.
+    <a href="/contact" class="underline hover:no-underline">Get in touch</a>
+    if you're actually building something.
   </p>
 </ContentPanel>

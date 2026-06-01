@@ -1,7 +1,7 @@
 [
   {
     "title": "Share on Reddit",
-    "iconRef": "reddit",
+    "iconRef": "reddit-alien",
     "href": "https://www.reddit.com/submit?title=",
     "color": "text-[#FF4500]"
   },

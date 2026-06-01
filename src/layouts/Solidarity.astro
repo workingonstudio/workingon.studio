@@ -1,98 +1,42 @@
 ---
 import "../styles/solidarity.css";
-
-import { ClientRouter } from "astro:transitions";
-
-import { AstroSeo } from "@astrolib/seo";
-
-import Analytics from "./partials/Analytics.astro";
+import BaseLayout from "./BaseLayout.astro";
 import { Font } from "astro:assets";
 
 export interface Props {
   title: string;
 }
 
-const brockmannFontUrl = import.meta.env.BROCKMANN_FONT_CSS_URL;
-
 const { title } = Astro.props;
-const longTitle = title + " - workingon.studio";
 const currentURL = new URL(Astro.url.pathname, Astro.site).href;
-const publishDate = new Date().toISOString();
+const brockmannFontUrl = import.meta.env.BROCKMANN_FONT_CSS_URL;
 ---
 
-<!doctype html>
-<html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
+<BaseLayout
+  productName="Solidarity"
+  seo={{
+    title,
+    description: "A Chrome Extension that makes you feel less s**t about looking for work.",
+    canonical: currentURL,
+    ogImage: Astro.site + "solidarity/opengraph/site-default.webp",
+    ogImageAlt:
+      "Solidarity - A Chrome Extension that makes you feel less s**t about looking for work.",
+    siteName: "workingon.studio",
+    twitterUrl: "https://wo.studio/projects/solidarity",
+  }}
+  meta={{
+    themeColor: "#FAFAF9",
+    adaptiveFavicons: {
+      light: "/solidarity/favicon-light.svg",
+      dark: "/solidarity/favicon-dark.svg",
+    },
+  }}
+>
+  <Fragment slot="head">
     <Font cssVariable="--font-satoshi" preload />
     <Font cssVariable="--font-zodiak" preload />
-    <ClientRouter />
-    <AstroSeo
-      title={longTitle}
-      description="A Chrome Extension that makes you feel less s**t about looking for work."
-      canonical={currentURL}
-      openGraph={{
-        url: currentURL,
-        title: title,
-        description: "A Chrome Extension that makes you feel less s**t about looking for work.",
-        images: [
-          {
-            url: Astro.site + "solidarity/opengraph/site-default.webp",
-            height: 630,
-            width: 1200,
-            alt: "Solidarity - A Chrome Extension that makes you feel less s**t about looking for work.",
-          },
-        ],
-        site_name: "workingon.studio",
-        type: "site",
-      }}
-      ,
-      twitter={{
-        cardType: "summary_large_image",
-        handle: "@prmack",
-      }}
-      ,
-      additionalMetaTags={[
-        {
-          name: "twitter:image",
-          content: Astro.site + "solidarity/opengraph/site-default.webp",
-        },
-        {
-          name: "twitter:url",
-          content: "https://wo.studio/projects/solidarity",
-        },
-      ]}
-    />
-    <meta name="theme-color" content="#FAFAF9" />
-    <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="/solidarity/favicon-light.svg"
-      media="(prefers-color-scheme: light)"
-    />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="/solidarity/favicon-dark.svg"
-      media="(prefers-color-scheme: dark)"
-    />
-    <script
-      is:inline
-      type="module"
-      src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    ></script>
-
-    <!-- CDN Font Stylesheets -->
     {brockmannFontUrl && <link rel="stylesheet" href={brockmannFontUrl} />}
+  </Fragment>
 
-    <meta name="generator" content={Astro.generator} />
-    <Analytics productName="Solidarity" />
-    <title>{title}</title>
-  </head>
-  <body id="top">
-    <slot />
-  </body>
-</html>
+  <slot />
+</BaseLayout>

@@ -22,14 +22,29 @@
           icon="material-symbols:diamond-outline-rounded"
           class="group-spin-drop relative top-[1px] text-base text-amber-400"
         ></iconify-icon>
-        Try Sketch
+        <div class="flex gap-0 sm:gap-1">
+          <span class="hidden sm:inline">Try</span>
+          Sketch
+        </div>
       </a>
       <a href="https://penpot.app?ref=workingon.studio" class="btn flex flex-row items-center gap-3">
         <iconify-icon
           icon="material-symbols:design-services-outline-rounded"
           class="group-spin-drop relative top-[1px] text-base text-emerald-400"
         ></iconify-icon>
-        Try Penpot
+        <div class="flex gap-0 sm:gap-1">
+          <span class="hidden sm:inline">Try</span>
+          Penpot
+        </div>
+      </a>
+      <a href="https://paper.design?ref=workingon.studio" class="btn flex flex-row items-center gap-3">
+        <svg width="14" height="14" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M39 24H24V6H6V24H24V39H0V6H6V0H39V24Z" fill="#81ACEC" />
+        </svg>
+        <div class="flex gap-0 sm:gap-1">
+          <span class="hidden sm:inline">Try</span>
+          Paper
+        </div>
       </a>
     </div>
     <small>
