@@ -21,7 +21,7 @@
     <div class="flex flex-col items-center gap-6 md:flex md:flex-row">
       <a
         href={isFirefox
-          ? "YOUR_FIREFOX_ADDON_URL"
+          ? "https://addons.mozilla.org/en-US/firefox/addon/hidden-current/"
           : "https://chromewebstore.google.com/detail/fdkekehihnaabecdlefgaaoddlenikgl"}
         class="downloadBtn"
       >
