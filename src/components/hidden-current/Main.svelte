@@ -2,6 +2,7 @@
   import Logo from "./partials/Logo.svelte";
   import Browser from "./partials/Browser.svelte";
   import Footer from "./partials/Footer.svelte";
+  const isFirefox = /Firefox/.test(navigator.userAgent);
 </script>
 
 <div class="flex flex-col items-center gap-12">
@@ -18,13 +19,18 @@
       </small>
     </div>
     <div class="flex flex-col items-center gap-6 md:flex md:flex-row">
-      <a href="https://chromewebstore.google.com/detail/fdkekehihnaabecdlefgaaoddlenikgl" class="downloadBtn">
-        <iconify-icon icon="logos:chrome" class="size-6 text-2xl"></iconify-icon>
-        Add to Chrome
+      <a
+        href={isFirefox
+          ? "YOUR_FIREFOX_ADDON_URL"
+          : "https://chromewebstore.google.com/detail/fdkekehihnaabecdlefgaaoddlenikgl"}
+        class="downloadBtn"
+      >
+        <iconify-icon icon={isFirefox ? "logos:firefox" : "logos:chrome"} class="size-6 text-2xl"></iconify-icon>
+        {isFirefox ? "Add to Firefox" : "Add to Chrome"}
       </a>
       <div class="flex flex-row items-center gap-3">
         <span class="text-xxs text-primaryfont-semibold italic">&#8230;coming soon</span>
-        <iconify-icon icon="logos:firefox" class="size-6 text-2xl"></iconify-icon>
+
         <iconify-icon icon="logos:safari" class="size-6 text-2xl"></iconify-icon>
         <iconify-icon icon="logos:microsoft-edge" class="size-6 text-2xl"></iconify-icon>
       </div>
