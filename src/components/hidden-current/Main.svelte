@@ -2,7 +2,7 @@
   import Logo from "./partials/Logo.svelte";
   import Browser from "./partials/Browser.svelte";
   import Footer from "./partials/Footer.svelte";
-  const isFirefox = /Firefox/.test(navigator.userAgent);
+  const isFirefox = typeof navigator !== "undefined" && /Firefox/.test(navigator.userAgent);
 </script>
 
 <div class="flex flex-col items-center gap-12">
