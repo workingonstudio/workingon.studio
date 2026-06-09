@@ -18,7 +18,7 @@
     "@astrojs/svelte": "^7.2.5",
     "@astrolib/seo": "^1.0.0-beta.8",
     "@felte/validator-zod": "^1.0.18",
-    "@iconify/svelte": "^5.0.1",
+    "@iconify/svelte": "^5.2.1",
     "@octokit/rest": "^22.0.0",
     "@tailwindcss/vite": "^4.1.13",
     "animejs": "^4.3.6",
