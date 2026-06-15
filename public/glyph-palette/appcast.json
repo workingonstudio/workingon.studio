@@ -1,10 +1,10 @@
 {
   "itemName": "Glyph Palette",
-  "versionID": "1.4.1",
-  "downloadURL": "https://workingon.studio/glyph-palette/downloads/glyph-palette-v1.4.1.sketchplugin.zip",
+  "versionID": "1.4.2",
+  "downloadURL": "https://workingon.studio/glyph-palette/downloads/glyph-palette-v1.4.2.sketchplugin.zip",
   "size": 347045,
   "creationDate": "Wed, 04 Feb 2026 19:24:00 +0000",
-  "description": "adding Bootstrap icons.",
+  "description": "Better replacement behaviour. Supports matching colors/variables.",
   "minimumSketchVersion": "3.0",
   "homepage": "https://glyphpalette.com",
   "changelog": "https://workingon.studio/projects/glyph-palette/change-log/",
