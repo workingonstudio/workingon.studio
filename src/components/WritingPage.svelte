@@ -17,7 +17,7 @@
       {#each posts as post}
         <li class="flex flex-col gap-1">
           <a
-            href={`/writing/${post.slug}`}
+            href={`/writing/${post.id}`}
             class="text-header flex flex-row items-center gap-2 font-medium hover:underline"
           >
             {post.data.title}

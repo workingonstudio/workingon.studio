@@ -1,7 +1,8 @@
 import { defineCollection, z } from "astro:content";
+import { glob } from "astro/loaders";
 
 const projectsCollection = defineCollection({
-  type: "content",
+  loader: glob({ pattern: "**/*.md", base: "./src/content/projects" }),
   schema: z.object({
     title: z.string(),
     publishedAt: z.coerce.date(),
@@ -15,7 +16,7 @@ const projectsCollection = defineCollection({
 });
 
 const changelogCollection = defineCollection({
-  type: "data",
+  loader: glob({ pattern: "**/*.json", base: "./src/content/changelogs" }),
   schema: z.object({
     product: z.enum(["dad-reply", "solidarity", "sketch-today", "glyph-palette"]),
     version: z.object({
@@ -31,7 +32,7 @@ const changelogCollection = defineCollection({
 });
 
 const sketchTodayCollection = defineCollection({
-  type: "data",
+  loader: glob({ pattern: "**/*.json", base: "./src/content/sketch-today" }),
   schema: z.object({
     category: z.enum(["icons", "palettes", "plugins", "systems"]),
     type: z.enum(["icon", "palette", "plugin", "system"]),
@@ -55,7 +56,7 @@ const sketchTodayCollection = defineCollection({
 });
 
 const writingCollection = defineCollection({
-  type: "content",
+  loader: glob({ pattern: "**/*.md", base: "./src/content/writing" }),
   schema: z.object({
     title: z.string(),
     description: z.string().optional(),

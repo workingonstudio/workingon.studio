@@ -5,26 +5,27 @@ import ContentPanel from "@components/partials/ContentPanel.svelte";
 import ArticleList from "@components/partials/ArticleList.svelte";
 import SocialProfiles from "@components/partials/SocialProfiles.svelte";
 import { getCollection } from "astro:content";
+import { render } from "astro:content";
 
 export async function getStaticPaths() {
   const posts = await getCollection("writing");
   return posts.map((post) => ({
-    params: { slug: post.slug },
+    params: { slug: post.id },
     props: { post },
   }));
 }
 
 const { post } = Astro.props;
-const { Content } = await post.render();
+const { Content } = await render(post);
 
 // Get all posts except current one
 const allPosts = await getCollection("writing");
 const otherPosts = allPosts
-  .filter((p) => p.slug !== post.slug)
+  .filter((p) => p.id !== post.id)
   .sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf())
   .slice(0, 4) // Latest 4 other articles
   .map((p) => ({
-    slug: p.slug,
+    slug: p.id,
     title: p.data.title,
     description: p.data.description,
   }));
