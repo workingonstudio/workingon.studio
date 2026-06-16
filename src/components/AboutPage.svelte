@@ -36,7 +36,7 @@
     </p>
     <!-- prettier-ignore -->
     <p>
-      Available now. Contract or full-time. If you ship more than you meet, we'll get on, 
+      Available now. Contract or full-time. If you ship more than you meet, 
       <a
         href="/contact"
         class="underline hover:no-underline"
