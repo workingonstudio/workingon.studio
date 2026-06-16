@@ -108,6 +108,15 @@ export default defineConfig({
         styles: ['normal'],
         subsets: ["latin"]
       },
+      {
+        provider : fontProviders.fontshare(),
+        name: "General Sans",
+        cssVariable : "--font-general-sans",
+        display: "swap",
+        weights: [600, 700, 800],
+        styles: ['normal'],
+        subsets: ["latin"]
+      },
 
       // Good Boy
       { 

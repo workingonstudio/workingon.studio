@@ -5,7 +5,7 @@
   import { dayRate } from "../stores/dayRate";
   import SocialProfiles from "./partials/SocialProfiles.svelte";
 
-  let displayRate = 500;
+  let displayRate = $state(500);
   let timeInterval: ReturnType<typeof setInterval> | null = null;
   let pageLoadTime = 0;
 
@@ -38,6 +38,23 @@
     }, 100);
   }
 
+  let copied = $state(false);
+  let copyTimeout: ReturnType<typeof setTimeout> | null = null;
+
+  async function copyEmail() {
+    if (copied) return;
+    try {
+      await navigator.clipboard.writeText("hello@workingon.studio");
+      copied = true;
+      if (copyTimeout) clearTimeout(copyTimeout);
+      copyTimeout = setTimeout(() => {
+        copied = false;
+      }, 2000);
+    } catch (err) {
+      console.error("Failed to copy:", err);
+    }
+  }
+
   onMount(() => {
     setTimeout(() => {
       startTimeBasedIncrement(displayRate);
@@ -57,28 +74,20 @@
 <PageLayout>
   <ContentPanel>
     <h2 class="text-xl font-medium">Send email</h2>
-    <div class="flex flex-col gap-1">
-      <a
-        href="mailto:hello@workingon.studio?subject=Can%20I/We%20work%20with%20you%3F&"
-        onclick={() => {
-          const currentRate = displayRate;
-          dayRate.reset();
-          // Clear the time interval
-          if (timeInterval !== null) {
-            clearInterval(timeInterval);
-          }
-          // Animate back to base rate
-          animateRate(currentRate, 500);
-          // Restart time-based increment after animation
-          setTimeout(() => {
-            startTimeBasedIncrement(500);
-          }, 800);
-        }}
-        class="text-header flex flex-row items-center gap-2 font-medium"
-      >
-        hello@workingon.studio
-        <iconify-icon icon="ph:arrow-up-right-bold" class="size-4"></iconify-icon>
-      </a>
+    <div class="row flex flex-col gap-1">
+      <div class="flex flex-row items-center gap-2">
+        <button
+          type="button"
+          onclick={copyEmail}
+          class="text-header flex cursor-pointer flex-row items-center gap-2 font-medium hover:underline"
+        >
+          hello@workingon.studio
+          <iconify-icon icon={copied ? "ph:check-bold" : "ph:copy-bold"} class="size-4"></iconify-icon>
+        </button>
+        {#if copied}
+          <span class="text-xxs text-muted uppercase no-underline!">copied</span>
+        {/if}
+      </div>
       <p class="text-muted text-sm">
         If I don't reply within 7 days, assume it's a no, I'm on holiday, or dead. Whatever makes you feel better.
       </p>
