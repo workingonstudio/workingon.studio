@@ -34,9 +34,9 @@
       </div>
       <p>No official support as of yet. But if you find something that’s broken just let me know.</p>
       <div class="buttons flex flex-row gap-3">
-        <a href="https://x.com/prmack" class="highlight flex flex-row">
-          <iconify-icon icon="material-symbols:alternate-email-rounded" class="size-3.5"></iconify-icon>
-          prmack
+        <a href="https://wo.studio" class="highlight flex flex-row">
+          <iconify-icon icon="material-symbols:design-services-outline-rounded" class="size-3.5"></iconify-icon>
+          workingon.studio
         </a>
         <button type="button" class="highlight flex cursor-pointer flex-row" title="Copy address" on:click={copyEmail}>
           <iconify-icon
@@ -53,12 +53,8 @@
         <h4>Changelog</h4>
       </div>
       <ul>
-        <li>adding Phosphor icons.</li>
-        <li>adding Flexsearch and improving search with tag mapping.</li>
-        <li>adding replace on insert if an icon is selected on the canvas.</li>
-        <li>removing labels in settings.</li>
-        <li>better caching.</li>
-        <li>fixing memory leaks.</li>
+        <li>Icon stays selected on insert.</li>
+        <li>Replacing an icon now inherits previous color/variable.</li>
       </ul>
     </div>
   </section>

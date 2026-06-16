@@ -2,7 +2,7 @@
 
 @theme {
   /* Typography */
-  --font-montserrat: "Montserrat", sans-serif;
+  --font-general-sans: "General Sans", sans-serif;
   --font-cabinet-grotesk: "Cabinet Grotesk", sans-serif;
   --font-satoshi: "Satoshi", sans-serif;
 
@@ -31,13 +31,13 @@
   h3,
   h4,
   h5 {
-    font-family: var(--font-montserrat);
+    font-family: var(--font-general-sans);
     color: var(--color-header);
-    @apply font-semibold;
   }
 
   h1 {
     @apply text-5xl/16 font-black md:text-6xl/21;
+    @apply font-bold;
   }
 
   h2 {
@@ -50,6 +50,11 @@
 
   h4 {
     @apply text-xl;
+    @apply font-semibold;
+  }
+
+  h5 {
+    @apply font-normal;
   }
 
   p {

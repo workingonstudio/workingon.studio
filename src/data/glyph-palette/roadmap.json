@@ -74,10 +74,7 @@
       "adding Phosphor icons.",
       "adding Flexsearch.",
       "improved search with tag mapping.",
-      "adding replace on insert.",
-      "removing labels in settings.",
-      "better caching.",
-      "fixing memory leaks."
+      "adding replace on insert."
     ],
     "current": true
   },
