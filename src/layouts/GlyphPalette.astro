@@ -35,11 +35,11 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
 >
   <Fragment slot="head">
     <Font cssVariable="--font-cabinet-grotesk" preload />
-    <Font cssVariable="--font-montserrat" preload />
+    <Font cssVariable="--font-general-sans" preload />
     <Font cssVariable="--font-satoshi" preload />
     <!-- Font Awesome Kit — retained pending icon audit -->
-    <script is:inline src="https://kit.fontawesome.com/180e1f6a33.js" crossorigin="anonymous">
-    </script>
+    <script is:inline src="https://kit.fontawesome.com/180e1f6a33.js" crossorigin="anonymous"
+    ></script>
   </Fragment>
 
   <Header />
