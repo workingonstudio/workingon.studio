@@ -56,9 +56,6 @@
         <li>adding Phosphor icons.</li>
         <li>adding Flexsearch and improving search with tag mapping.</li>
         <li>adding replace on insert if an icon is selected on the canvas.</li>
-        <li>removing labels in settings.</li>
-        <li>better caching.</li>
-        <li>fixing memory leaks.</li>
       </ul>
     </div>
   </section>
