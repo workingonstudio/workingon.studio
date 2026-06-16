@@ -26,7 +26,7 @@ export default defineConfig({
     prefetchAll: true,
     defaultStrategy: 'hover'
   },
-  experimental: {
+  
     fonts: [
       // Main
       {
@@ -128,8 +128,7 @@ export default defineConfig({
         styles: ['normal'],
         subsets: ["latin"]
       }
-    ]
-  },
+    ],
   vite: {
     plugins: [tailwindcss()],
     server: {
