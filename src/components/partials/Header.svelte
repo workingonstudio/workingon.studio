@@ -1,6 +1,13 @@
 <script lang="ts">
   import Logo from "./Logo.svelte";
   import ThemeToggle from "./ThemeToggle.svelte";
+  import { onMount } from "svelte";
+
+  onMount(() => {
+    document.addEventListener("astro:before-swap", () => {
+      showMenu = false;
+    });
+  });
 
   export let currentPath = "/";
 
@@ -14,6 +21,16 @@
   }
 
   $: showMenu = false;
+
+  // Close the mobile menu whenever the route changes (handles both full
+  // page loads and persisted islands under client-side routing).
+  $: if (currentPath) {
+    showMenu = false;
+  }
+
+  $: if (typeof document !== "undefined") {
+    document.body.style.overflow = showMenu ? "hidden" : "";
+  }
 
   let navItems = [
     {
@@ -44,20 +61,21 @@
   ];
 </script>
 
-<!-- prettier-ignore -->
-<header class="group flex flex-row items-stretch justify-between transition-opacity ease-out duration-200">
-  <a href="/" title="Home" class="flex flex-col items-center py-6 lg:justify-center w-16 transition-none">
-      <Logo width={27} />
-    </a>
-    <nav
-    class="nav-scroll box-border flex-col divide-x-muted/20 flex-1 p-8 lg:px-16 lg:py-0 text-xs lg:flex border-x border-surface-border"
-    >
-    <ul class="lg:flex flex-col lg:flex-row {showMenu
-      ? 'flex'
-      : 'hidden'}">
+<header
+  class="group relative z-110 flex flex-row items-stretch justify-between transition-opacity duration-200 ease-out"
+>
+  <a href="/" title="Home" class="flex w-16 flex-col items-center py-6 transition-none lg:justify-center">
+    <Logo width={27} />
+  </a>
+
+  <nav
+    class="nav-scroll divide-x-muted/20 border-surface-border box-border flex-1 flex-col border-x p-8 text-xs lg:flex lg:px-16 lg:py-0"
+    class:!border-transparent={showMenu}
+  >
+    <ul class="hidden lg:flex lg:flex-row">
       {#each navItems as { href, title, description }}
         <li class="group" class:active={isActive(href)}>
-          <a {href} onclick={toggleMenu}>
+          <a {href}>
             <!-- prettier-ignore -->
             <h2>{title}</h2>
             <p class="transition-all duration-200 ease-out lg:hidden xl:block">{description}</p>
@@ -65,15 +83,38 @@
         </li>
       {/each}
     </ul>
-    </nav>
-  
-  <div class="flex flex-row gap-4 items-start lg:items-center p-6">
+  </nav>
+
+  <div class="flex flex-row items-start gap-4 p-6 lg:items-center">
     <ThemeToggle />
-    <button type="button" onclick={toggleMenu} aria-label="Toggle menu" class="hover:*:text-primary size-4 cursor-pointer flex lg:hidden">
-      <iconify-icon icon="ph:{showMenu ? 'x-bold' : 'list'}" class="size-4 text-muted"></iconify-icon>
+    <button
+      type="button"
+      onclick={toggleMenu}
+      aria-label="Toggle menu"
+      class="hover:*:text-primary flex size-4 cursor-pointer lg:hidden"
+    >
+      <iconify-icon icon="ph:{showMenu ? 'x-bold' : 'list'}" class="text-muted size-4"></iconify-icon>
     </button>
   </div>
 </header>
+
+<nav
+  class="{showMenu
+    ? 'flex'
+    : 'hidden'} mobile-nav bg-bg-main fixed inset-0 z-100 h-dvh flex-col items-center justify-center lg:hidden"
+>
+  <ul class="flex flex-col gap-12">
+    {#each navItems as { href, title, description }}
+      <li class="group text-center" class:active={isActive(href)}>
+        <a {href} onclick={toggleMenu}>
+          <!-- prettier-ignore -->
+          <h2>{title}</h2>
+          <p class="transition-all duration-200 ease-out">{description}</p>
+        </a>
+      </li>
+    {/each}
+  </ul>
+</nav>
 
 <style>
   @reference "@styles/main.css";
@@ -81,9 +122,9 @@
     @apply text-base font-medium;
   }
 
-  nav {
+  header nav {
     ul {
-      @apply justify-between gap-3 lg:gap-12;
+      @apply justify-between gap-12;
       li {
         @apply flex flex-row items-center transition-opacity duration-300 lg:py-6;
         a {
@@ -102,6 +143,23 @@
     /* When NOT hovering, fade non-active items */
     &:not(:has(li:hover)):has(li.active) li:not(.active) {
       @apply opacity-30;
+    }
+  }
+
+  .mobile-nav {
+    ul {
+      &:has(li.active) li:not(.active) {
+        @apply opacity-30;
+      }
+    }
+    li {
+      @apply transition-opacity duration-300;
+      a {
+        @apply flex flex-col items-center gap-1;
+      }
+      p {
+        @apply text-body text-muted text-xs;
+      }
     }
   }
 </style>

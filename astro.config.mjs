@@ -22,6 +22,7 @@ export default defineConfig({
       return !excludePatterns.some(pattern => page.includes(pattern));
     },
   })],
+  devToolbar: { enabled: false },
   prefetch: {
     prefetchAll: true,
     defaultStrategy: 'hover'
