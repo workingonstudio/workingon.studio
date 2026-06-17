@@ -15,14 +15,17 @@
     </button>
   </ToolTip>
 
-  <ToolTip content="Copy to Clipboard">
+  <ToolTip content={recorder.isCopied ? "Copied" : "Copy to Clipboard"} closeOnPointerDown={false}>
     <button
       type="button"
       onclick={() => recorder.copyToClipboard()}
       aria-label="Copy to Clipboard"
       class="btn text-muted hover:text-body flex size-8 items-center justify-center"
     >
-      <iconify-icon icon="ph:copy-bold" class="text-base"></iconify-icon>
+      <iconify-icon
+        icon={recorder.isCopied ? "ph:check-bold" : "ph:copy-bold"}
+        class="text-base {recorder.isCopied ? 'text-emerald-500' : ''}"
+      ></iconify-icon>
     </button>
   </ToolTip>
 
