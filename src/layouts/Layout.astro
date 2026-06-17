@@ -31,10 +31,14 @@ const currentPath = Astro.url.pathname;
     <script is:inline>
       function applyTheme() {
         const theme = localStorage.getItem("theme") || "light";
+        const meta = document.querySelector('meta[name="theme-color"]');
+
         if (theme === "dark") {
           document.documentElement.classList.add("dark");
+          if (meta) meta.setAttribute("content", "#030712");
         } else {
           document.documentElement.classList.remove("dark");
+          if (meta) meta.setAttribute("content", "#f5f5f4");
         }
       }
 

@@ -30,5 +30,8 @@ theme.subscribe((value) => {
     } else {
       document.documentElement.classList.remove("dark");
     }
+
+    const meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute("content", value === "dark" ? "#030712" : "#f5f5f4");
   }
 });
