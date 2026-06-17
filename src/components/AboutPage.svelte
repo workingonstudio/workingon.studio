@@ -36,11 +36,7 @@
     </p>
     <!-- prettier-ignore -->
     <p>
-      Available now. Contract or full-time. If you ship more than you meet, 
-§      <a
-        href="/contact"
-        class="underline hover:no-underline"
-      >we'll get on</a>.
+      Available now. Contract or full-time. If you ship more than you meet, <a href="/contact" class="underline hover:no-underline">we'll get on</a>.
     </p>
   </ContentPanel>
 
