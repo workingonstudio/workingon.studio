@@ -22,11 +22,12 @@ export default defineConfig({
       return !excludePatterns.some(pattern => page.includes(pattern));
     },
   })],
+  devToolbar: { enabled: false },
   prefetch: {
     prefetchAll: true,
     defaultStrategy: 'hover'
   },
-  experimental: {
+  
     fonts: [
       // Main
       {
@@ -128,8 +129,7 @@ export default defineConfig({
         styles: ['normal'],
         subsets: ["latin"]
       }
-    ]
-  },
+    ],
   vite: {
     plugins: [tailwindcss()],
     server: {

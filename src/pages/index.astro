@@ -7,7 +7,7 @@ const posts = await getCollection("writing");
 const sortedPosts = posts
   .sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf())
   .map((post) => ({
-    slug: post.slug,
+    slug: post.id,
     title: post.data.title,
     description: post.data.description,
   }));
@@ -16,7 +16,7 @@ const allProjects = await getCollection("projects");
 const sortedProjects = allProjects
   .sort((a, b) => b.data.publishedAt.getTime() - a.data.publishedAt.getTime())
   .map((p) => ({
-    slug: p.slug,
+    slug: p.id,
     title: p.data.title,
     description: p.data.description,
     link: p.data.link,
