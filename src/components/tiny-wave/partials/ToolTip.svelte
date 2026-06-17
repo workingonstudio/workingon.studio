@@ -1,22 +1,38 @@
 <script lang="ts">
   import { Tooltip } from "melt/builders";
 
-  let { children, content } = $props();
+  let {
+    children,
+    content,
+    open,
+    closeOnPointerDown,
+  }: {
+    children: any;
+    content: string;
+    open?: () => boolean;
+    closeOnPointerDown?: boolean;
+  } = $props();
 
-  const tooltip = new Tooltip({
-    openDelay: 100,
-    closeDelay: 100,
-    floatingConfig: {
-      computePosition: {
-        placement: "top",
+  let tooltip: Tooltip | undefined = $state();
+
+  $effect(() => {
+    tooltip = new Tooltip({
+      openDelay: 100,
+      closeDelay: 100,
+      floatingConfig: {
+        computePosition: { placement: "top" },
       },
-    },
+      ...(open ? { open } : {}),
+      ...(closeOnPointerDown !== undefined ? { closeOnPointerDown } : {}),
+    });
   });
 </script>
 
-<span {...tooltip.trigger}>
-  {@render children()}
-</span>
-<div class="tooltip" {...tooltip.content}>
-  <p>{content}</p>
-</div>
+{#if tooltip}
+  <span {...tooltip.trigger}>
+    {@render children()}
+  </span>
+  <div class="tooltip" {...tooltip.content}>
+    <p>{content}</p>
+  </div>
+{/if}

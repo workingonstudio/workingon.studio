@@ -10,6 +10,7 @@ export type WavePathCommand = Record<string, unknown>;
 let permissionState = $state<PermissionState>("idle");
 let status = $state<RecorderStatus>("idle");
 let isMuted = $state(true);
+let isCopied = $state(false);
 let elapsedTime = $state(0);
 let livePath = $state("");
 let finalPath = $state("");
@@ -266,9 +267,16 @@ function getSvgString(path: string): string {
 </svg>`;
 }
 
+let copyTimeout: ReturnType<typeof setTimeout> | null = null;
+
 async function copyToClipboard(): Promise<void> {
   if (!finalPath) return;
   await navigator.clipboard.writeText(getSvgString(finalPath));
+  isCopied = true;
+  if (copyTimeout) clearTimeout(copyTimeout);
+  copyTimeout = setTimeout(() => {
+    isCopied = false;
+  }, 2000);
 }
 
 function downloadSvg(): void {
@@ -295,6 +303,9 @@ export const recorder = {
   },
   get isMuted() {
     return isMuted;
+  },
+  get isCopied() {
+    return isCopied;
   },
   get elapsedTime() {
     return elapsedTime;
