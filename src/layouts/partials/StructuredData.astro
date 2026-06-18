@@ -9,18 +9,50 @@ const personSchema = {
   url: "https://workingon.studio",
   description:
     "Product Designer and Developer creating cultural mirror products. 16 years building for the internet.",
-  jobTitle: "Product Designer & Developer",
+  jobTitle: "Product Designer",
   knowsAbout: ["Product Design", "Web Development", "UX Design", "Cultural Commentary"],
-  sameAs: ["https://twitter.com/prmack", "https://github.com/workingonstudio"],
+  sameAs: [
+    "https://twitter.com/prmack",
+    "https://github.com/prmack",
+    "https://github.com/workingonstudio",
+    "https://linkedin.com/in/prmack",
+  ],
   email: "hello@workingon.studio",
   hasOccupation: {
     "@type": "Occupation",
-    name: "Design Consultant",
+    name: "Product Designer",
     occupationLocation: {
       "@type": "Country",
       name: "United Kingdom",
     },
   },
+  alumniOf: [
+    {
+      "@type": "Organization",
+      name: "PartnerHero",
+      description: "Head of UI & UX. Acquired by Crescendo.",
+    },
+    {
+      "@type": "Organization",
+      name: "Clixifix",
+      description: "Founding designer. Acquired by Homesmart.",
+    },
+    {
+      "@type": "Organization",
+      name: "Send Sonar",
+      description: "Founding designer. Acquired by Marchex.",
+    },
+    {
+      "@type": "Organization",
+      name: "Primeloop",
+      description: "Designer. Acquired by Retargeter.",
+    },
+    {
+      "@type": "Organization",
+      name: "Prediction.io",
+      description: "Designer. Acquired by Salesforce.",
+    },
+  ],
 };
 
 const organizationSchema = {
@@ -35,6 +67,11 @@ const organizationSchema = {
   founder: {
     "@type": "Person",
     name: "Paul Mackenzie",
+  },
+  identifier: {
+    "@type": "PropertyValue",
+    name: "UK Company Number",
+    value: "16700615",
   },
   contactPoint: {
     "@type": "ContactPoint",
@@ -56,8 +93,114 @@ const websiteSchema = {
     name: "Paul Mackenzie",
   },
 };
+
+const projectsSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "workingon.studio projects",
+  description: "Solo-built products: concept, design, development, live.",
+  itemListElement: [
+    {
+      "@type": "SoftwareApplication",
+      position: 1,
+      name: "Hidden Current",
+      url: "https://workingon.studio/projects/hidden-current",
+      applicationCategory: "BrowserExtension",
+      description:
+        "Shows the environmental cost of AI chat responses inline, with running totals. Runs entirely in the browser with no account required.",
+    },
+    {
+      "@type": "SoftwareApplication",
+      position: 2,
+      name: "Tiny Wave",
+      url: "https://workingon.studio/projects/tiny-wave",
+      applicationCategory: "DesignApplication",
+      description:
+        "Draws SVG audio waveforms using your microphone via the browser, for download or copy-paste. Works fully offline.",
+    },
+    {
+      "@type": "CreativeWork",
+      position: 3,
+      name: "Madebyhumans",
+      url: "https://madebyhumans.day",
+      description:
+        "A generative art piece marking presence rather than metrics, using flow fields driven by basic browser data, fossilised daily as an image or SVG.",
+    },
+    {
+      "@type": "WebApplication",
+      position: 4,
+      name: "When to Work",
+      url: "https://whento.work",
+      applicationCategory: "BusinessApplication",
+      description:
+        "Finds overlapping working hours across timezones by plotting time horizontally, without sharing private schedule data.",
+    },
+    {
+      "@type": "SoftwareApplication",
+      position: 5,
+      name: "Good Boy",
+      url: "https://workingon.studio/projects/good-boy",
+      applicationCategory: "DesignApplication",
+      description:
+        "A Figma plugin that automatically adds low-effort praise comments to designs, satirising generic design feedback culture.",
+    },
+    {
+      "@type": "SoftwareApplication",
+      position: 6,
+      name: "Sketch QR",
+      url: "https://github.com/workingonstudio/sketch-qr.sketchplugin",
+      applicationCategory: "DesignApplication",
+      description:
+        "A free Sketch plugin for inserting SVG QR codes with configurable size, padding, and colour.",
+    },
+    {
+      "@type": "WebApplication",
+      position: 7,
+      name: "Glyph Palette",
+      url: "https://glyphpalette.com/",
+      applicationCategory: "DesignApplication",
+      description:
+        "A searchable icon plugin for Sketch with over 10,000 icons across multiple sets, officially recognised by Sketch.",
+    },
+    {
+      "@type": "WebApplication",
+      position: 8,
+      name: "Is Figma Down",
+      url: "https://isfigmadown.com/",
+      description:
+        "A satirical status page mimicking Figma's outage page, made during a major cloud outage to question over-reliance on always-online tools.",
+    },
+    {
+      "@type": "WebApplication",
+      position: 9,
+      name: "Sketch Today",
+      url: "https://sketchto.day",
+      description:
+        "A continually updated resource hub for Sketch users, including a Tailwind colour palette, icons, and plugins.",
+    },
+    {
+      "@type": "SoftwareApplication",
+      position: 10,
+      name: "Solidarity",
+      url: "https://workingon.studio/projects/solidarity",
+      applicationCategory: "BrowserExtension",
+      description:
+        "A browser extension that shows everyone on LinkedIn as #opentowork, satirising the visibility of job searching.",
+    },
+    {
+      "@type": "SoftwareApplication",
+      position: 11,
+      name: "Dad Reply",
+      url: "https://workingon.studio/projects/dad-reply",
+      applicationCategory: "BrowserExtension",
+      description:
+        "A Gmail extension that adds a one-click reply button sending a thumbs-up emoji, for emails that only need acknowledgement.",
+    },
+  ],
+};
 ---
 
 <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
 <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
 <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(projectsSchema)} />
