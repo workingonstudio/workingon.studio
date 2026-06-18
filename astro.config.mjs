@@ -17,7 +17,8 @@ export default defineConfig({
         '/projects/sketchtoday',
         '/projects/glyphpalette',
         '/projects/goodboy',
-        '/projects/solidarity/Main/'
+        '/projects/solidarity/Main/',
+        '/projects/hiddencurrent'
       ];
       return !excludePatterns.some(pattern => page.includes(pattern));
     },
