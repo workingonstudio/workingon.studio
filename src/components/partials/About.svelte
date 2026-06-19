@@ -12,6 +12,6 @@
   </p>
   <p>
     <a href="/contact" class="underline hover:no-underline">Get in touch</a>
-    if you're building something good.
+    I'm ready when you are.
   </p>
 </ContentPanel>
