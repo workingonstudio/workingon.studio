@@ -71,7 +71,7 @@
   </h1>
 </ContentPanel>
 
-<PageLayout>
+<PageLayout variant="full">
   <ContentPanel>
     <h2 class="text-xl font-medium">Send email</h2>
     <div class="row flex flex-col gap-1">
