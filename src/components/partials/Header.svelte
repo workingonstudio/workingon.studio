@@ -56,7 +56,7 @@
     {
       href: "/contact",
       title: "contact",
-      description: "bother me with admin.",
+      description: "Let's talk.",
     },
   ];
 </script>
