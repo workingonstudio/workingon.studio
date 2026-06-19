@@ -7,11 +7,11 @@
 
 <ContentPanel {borderBottom} {borderRight}>
   <p>
-    Fifteen years. Creative director. I figure out what the whole thing should be, then I build it. I don't need
-    managing. I need a problem.
+    Fifteen years. Creative director. I work out what something should be, then build it. Give me a problem worth
+    solving, and I'll run with it.
   </p>
   <p>
     <a href="/contact" class="underline hover:no-underline">Get in touch</a>
-    if you're actually building something.
+    I'm ready when you are.
   </p>
 </ContentPanel>
