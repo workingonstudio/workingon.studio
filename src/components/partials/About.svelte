@@ -7,8 +7,8 @@
 
 <ContentPanel {borderBottom} {borderRight}>
   <p>
-    Sixteen years. Founding designer. I figure out what the product should be, then I build it. I don't need managing. I
-    need a problem.
+    Fifteen years. Creative director. I figure out what the whole thing should be, then I build it. I don't need
+    managing. I need a problem.
   </p>
   <p>
     <a href="/contact" class="underline hover:no-underline">Get in touch</a>

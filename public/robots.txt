@@ -14,18 +14,33 @@ Sitemap: https://workingon.studio/sitemap-index.xml
 # Disallow: /drafts/
 # Disallow: /staging/
 
-# Allow all product pages explicitly
-Allow: /projects/dad-reply/
-Allow: /projects/solidarity/
-Allow: /projects/glyph-palette/
-Allow: /projects/good-boy/
-Allow: /projects/sketch-today/
-Allow: /projects/is-figma-down/
-Allow: /projects/tiny-wave/
+# AI crawlers - explicitly named, same as everyone else
+User-agent: GPTBot
+Allow: /
 
-# Disallow duplicate routes (they redirect anyway)
-Disallow: /projects/dadreply
-Disallow: /projects/glyphpalette
-Disallow: /projects/goodboy
-Disallow: /projects/sketchtoday
-Disallow: /projects/tinywave
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Note: legacy /projects/* routes (dadreply, glyphpalette, goodboy,
+# sketchtoday, tinywave, hiddencurrent) are handled by 301s in
+# src/middleware.ts, not Disallow. A followed 301 consolidates
+# crawler/index signal to the canonical URL; Disallow would block
+# the redirect from ever being seen.
