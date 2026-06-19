@@ -1,8 +1,7 @@
 <script lang="ts">
   import { DateTime } from "luxon";
   import timelineData from "../../data/timeline-github.json";
-  import Logo from "./Logo.svelte";
-  let date = DateTime.fromISO(timelineData.generated).toFormat("ccc',' dd LLL y TT ZZZ");
+  let date = DateTime.fromISO(timelineData.generated).toRelative();
 
   export let typefaces = [
     {
@@ -31,7 +30,7 @@
     <ul class="text-muted text-xxs hidden flex-row gap-3 lg:flex">
       <li class="flex flex-row items-center gap-1">
         <a href="https://astro.build/">Astro</a>
-        <div class="relative -top-[1px]">+</div>
+        <div class="relative -top-px">+</div>
         <a href="https://svelte.dev/">Svelte</a>
       </li>
       <li class="flex flex-row items-center gap-1">
@@ -41,12 +40,13 @@
         {#each typefaces as { family, href }, index}
           <a {href} class="">{family}</a>
           {#if index < typefaces.length - 1}
-            <div class="relative -top-[1px]">+</div>
+            <div class="relative -top-px">+</div>
           {/if}
         {/each}
       </li>
-      <li class="flex flex-row items-center gap-2">
-        <a href="https://github.com/workingonstudio/workingon.studio/commits/main/">{date}</a>
+      <!-- prettier-ignore -->
+      <li class="flex flex-row items-center">
+        <a href="https://github.com/workingonstudio/workingon.studio/commits/main/">Last updated: {date}</a>
       </li>
     </ul>
   </div>

@@ -15,9 +15,10 @@ import Footer from "@components/partials/Footer.svelte";
 export interface Props {
   title: string;
   description?: string;
+  fullHeight?: boolean;
 }
 
-const { title, description } = Astro.props;
+const { title, description, fullHeight = true } = Astro.props;
 const defaultDescription =
   "Creative director. 15 years leading design and creative for startups, five of them acquired. Making hum-drum finally sing.";
 const currentURL = new URL(Astro.url.pathname, Astro.site).href;
@@ -93,8 +94,7 @@ const currentPath = Astro.url.pathname;
       is:inline
       type="module"
       src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    >
-    </script>
+    ></script>
     <meta name="generator" content={Astro.generator} />
     <Analytics />
     <StructuredData />
@@ -110,7 +110,8 @@ const currentPath = Astro.url.pathname;
     </div>
     <div class="mx-auto w-full max-w-screen-2xl">
       <main
-        class="border-surface-border mx-0 flex min-h-screen flex-1 flex-col border-x-0 md:mx-16 md:border-x"
+        class="border-surface-border mx-0 flex flex-1 flex-col border-x-0 md:mx-16 md:border-x"
+        class:list={[{ "min-h-screen": fullHeight }]}
       >
         <div class="flex flex-1 flex-col justify-start">
           <slot />

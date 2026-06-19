@@ -1,7 +1,5 @@
 <script lang="ts">
-  // PageLayout.svelte - Reusable two-column layout
   export let variant: "default" | "full" = "default";
-  // variant="full" removes min-h-screen for pages that don't need it
 </script>
 
 <section class="page-layout" class:min-h-screen={variant === "default"}>
