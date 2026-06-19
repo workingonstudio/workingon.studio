@@ -32,7 +32,7 @@
 <ContentPanel borderBottom>
   <!-- prettier-ignore -->
   <h1>
-    I'm a product designer. I've shipped at multiple companies. Five acquired. What are you building?
+    Creative director. 15 years leading design and creative for startups, five of them acquired. Making hum-drum finally sing.
   </h1>
 </ContentPanel>
 
