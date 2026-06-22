@@ -34,7 +34,7 @@ jobs:
         uses: actions/configure-pages@v4
 
       - name: Cache timeline data
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: src/data/timeline-github.json
           key: timeline-${{ github.sha }}
