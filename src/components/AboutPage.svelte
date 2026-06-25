@@ -44,6 +44,9 @@
   </ContentPanel>
 
   <div class="divide-surface-border divide-y">
+    <ContentPanel>
+      <img src="profile.webp" class="rounded-xl" />
+    </ContentPanel>
     <WorkHistory />
     <SocialProfiles />
   </div>
