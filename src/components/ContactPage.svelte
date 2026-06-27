@@ -66,7 +66,7 @@
   <!-- prettier-ignore -->
   <h1>
   £<span class="tabular-nums">{displayRate.toFixed(2)}</span>/day. 
-  I work with teams that decide fast and ship faster. 
+  I work with founders that decide fast and ship faster. 
   The rate increases while you think about it.
   </h1>
 </ContentPanel>

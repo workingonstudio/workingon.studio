@@ -6,32 +6,41 @@
 </script>
 
 <ContentPanel borderBottom>
-  <h1>
-    The longer answer.
-    <br />
-    Fifteen years of it.
-  </h1>
+  <h1>Let me make the creative decisions so you can get on with what you do best.</h1>
 </ContentPanel>
 
 <PageLayout>
   <ContentPanel>
+    <p>This studio is what happens after 15 years as the sole designer at a string of early-stage startups.</p>
+
     <p>
-      Founding designer at multiple companies, survived acquisitions, three incubator batches. 500 Startups twice,
-      TechStars once.
+      Every one of those companies needed one person to handle everything. Brand, marketing, experience, photography,
+      copy, SEO, pitch decks, dev handoff. That person was me.
     </p>
+
     <p>
-      Last role was PartnerHero. Building tools for support agents, directing a small design team, building design
-      systems that actually got used instead of gathering dust in Figma.
+      Somewhere in that process, the role stopped being designer and started being something harder to name. Creative
+      director is the closest thing. The person who makes every creative decision and lives with the consequences.
     </p>
+
     <p>
-      Fifteen years in and I still build things on my own time. The products on this site exist because I got frustrated
-      with something and decided to fix it.
+      workingon.studio is where that plays out. For clients who need that kind of thinking, and in products built here.
     </p>
+
     <p>
-      I've watched the industry turn design into a performance. Metrics, frameworks, engagement theatre. I'm not
-      interested in any of that. I'm interested in directing the whole thing, brand, product, the lot, and making things
-      people actually want to use.
+      I've watched the industry turn design into a performance. Metrics, frameworks, theatre. We've been convinced
+      there's only one way to do something. That data is the answer. That the process matters more than the outcome.
     </p>
+
+    <p>It doesn't.</p>
+
+    <p>
+      I work directly with founders and their teams. Not as a pair of hands. As a guide. Someone who's been at the early
+      stages enough times to know what matters, what doesn't, and when to move.
+    </p>
+
+    <p>You won't find that in a framework.</p>
+
     <p>
       Available now. Contract or full-time. If you ship more than you meet, <a
         href="/contact"
@@ -45,7 +54,7 @@
 
   <div class="divide-surface-border divide-y">
     <ContentPanel>
-      <img src="profile.webp" class="rounded-xl" />
+      <img src="/profile.webp" class="rounded-xl" />
     </ContentPanel>
     <WorkHistory />
     <SocialProfiles />
