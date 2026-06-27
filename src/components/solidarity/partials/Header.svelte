@@ -12,7 +12,7 @@
           Solidarity
         </span>
       </a>
-      <Badge text="v1.0.1" bgColor="bg-gray-100" />
+      <Badge text="v1.0.3" bgColor="bg-gray-100" />
     </div>
     <nav>
       <ul class="flex flex-row items-center gap-6 text-sm">

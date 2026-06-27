@@ -7,8 +7,7 @@
 
 <ContentPanel {borderBottom} {borderRight}>
   <p>
-    Fifteen years. Creative director. I work out what something should be, then build it. Give me a problem worth
-    solving, and I'll run with it.
+    Fifteen years. Creative director. Brand, product, the lot. Give me a problem worth solving, and I'll run with it.
   </p>
   <p>
     <a href="/contact" class="underline hover:no-underline">Get in touch</a>
