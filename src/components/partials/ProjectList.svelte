@@ -44,14 +44,14 @@
       />
     </a>
 
-    <div class="flex flex-col gap-3">
+    <div class="flex flex-col gap-2">
       <a
         href={getProjectLink(project.link, project.externalLink)}
         target={project.externalLink ? "_blank" : undefined}
         rel={project.externalLink ? "noopener noreferrer" : undefined}
         class="hover:underline"
       >
-        <h3 class="text-2xl">{project.title}.</h3>
+        <h2>{project.title}.</h2>
       </a>
       <p class="text-muted text-sm">{project.description}</p>
     </div>
@@ -84,7 +84,7 @@
 <div class="divide-surface-border divide-y">
   {#if latest}
     <ContentPanel>
-      <h2 class="text-xl font-medium">Latest project</h2>
+      <h2 class="font-medium">Latest project</h2>
       <ul class="stack">
         {@render projectCard(latest)}
       </ul>
@@ -93,7 +93,7 @@
 
   {#if featured}
     <ContentPanel>
-      <h2 class="text-xl font-medium">Featured</h2>
+      <h2 class="font-medium">Featured</h2>
       <ul class="stack">
         {@render projectCard(featured)}
       </ul>

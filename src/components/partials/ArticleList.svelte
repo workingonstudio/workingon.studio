@@ -10,11 +10,10 @@
 
   // Border props replace the containerClass pattern
   export let borderBottom: boolean = false;
-  export let borderRight: boolean = false;
 </script>
 
-<ContentPanel {borderBottom} {borderRight}>
-  <h2 class="text-xl font-medium">{header}</h2>
+<ContentPanel {borderBottom}>
+  <h2 class="font-medium">{header}</h2>
   <ul class="stack">
     {#each articles as article}
       <li class="flex flex-col gap-1">
