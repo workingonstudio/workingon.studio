@@ -34,21 +34,18 @@ const otherPosts = allPosts
 <Layout title={post.data.title}>
   <ContentPanel borderBottom>
     <h1>{post.data.title}</h1>
-    <p class="text-medium text-muted text-base md:text-xl">{post.data.description}</p>
+    <p class="text-medium text-muted">{post.data.description}</p>
   </ContentPanel>
 
   <PageLayout>
     <div>
-      <ContentPanel client:load>
-        <div class="article">
-          <Content />
-        </div>
+      <ContentPanel>
+        <div class="article"><Content /></div>
       </ContentPanel>
     </div>
-
-    <div class="divide-y-surface">
-      <ArticleList header="More Writing" articles={otherPosts} borderBottom client:load />
-      <SocialProfiles borderBottom client:load />
+    <div>
+      <ArticleList header="More Writing" articles={otherPosts} />
+      <SocialProfiles />
     </div>
   </PageLayout>
 </Layout>

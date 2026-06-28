@@ -1,16 +1,14 @@
 <script lang="ts">
-  export let borderRight: boolean = false;
-  export let borderBottom: boolean = false;
-  export let borderLeft: boolean = false;
   export let noPadding: boolean = false;
+  export let borderBottom: boolean = false;
+  export let borderBottomDesktop: boolean = false;
 </script>
 
 <div
   class="content-panel"
-  class:border-r={borderRight}
-  class:border-b={borderBottom}
-  class:border-l={borderLeft}
   class:no-padding={noPadding}
+  class:border-b={borderBottom}
+  class:border-b-desktop={borderBottomDesktop}
 >
   <slot />
 </div>
@@ -31,7 +29,7 @@
   }
 
   .content-panel.border-b {
-    @apply border-surface-border border-b;
+    @apply border-surface-border lg:border-b;
   }
 
   .content-panel.border-l {
@@ -40,5 +38,9 @@
 
   .content-panel > :global(*:not(:last-child)) {
     @apply mb-5;
+  }
+
+  .content-panel.border-b-desktop {
+    @apply border-surface-border lg:border-b;
   }
 </style>
