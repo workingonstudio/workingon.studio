@@ -39,16 +39,13 @@ const otherPosts = allPosts
 
   <PageLayout>
     <div>
-      <ContentPanel client:load>
-        <div class="article">
-          <Content />
-        </div>
+      <ContentPanel>
+        <div class="article"><Content /></div>
       </ContentPanel>
     </div>
-
-    <div class="divide-y-surface">
-      <ArticleList header="More Writing" articles={otherPosts} borderBottom client:load />
-      <SocialProfiles borderBottom client:load />
+    <div>
+      <ArticleList header="More Writing" articles={otherPosts} />
+      <SocialProfiles />
     </div>
   </PageLayout>
 </Layout>

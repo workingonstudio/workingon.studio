@@ -3,10 +3,10 @@
   import socialProfiles from "@data/socialProfiles.json";
 
   export let borderBottom: boolean = false;
-  export let borderRight: boolean = false;
+  export let borderBottomDesktop: boolean = false;
 </script>
 
-<ContentPanel {borderBottom} {borderRight}>
+<ContentPanel {borderBottom} {borderBottomDesktop}>
   <h2 class="text-xl font-medium">Elsewhere</h2>
   <ul class="stack">
     {#each socialProfiles as { name, href, description }}

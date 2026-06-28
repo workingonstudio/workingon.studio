@@ -63,37 +63,40 @@
 </script>
 
 <ContentPanel borderBottom>
-  <!-- prettier-ignore -->
   <h1>
-  £<span class="tabular-nums">{displayRate.toFixed(2)}</span>/day. 
-  I work with founders that decide fast and ship faster. 
-  The rate increases while you think about it.
+    £
+    <span class="tabular-nums">{displayRate.toFixed(2)}</span>
+    /day. I work with founders that decide fast and ship faster. The rate increases while you think about it.
   </h1>
 </ContentPanel>
 
-<PageLayout variant="default">
-  <ContentPanel>
-    <h2 class="text-xl font-medium">Send email</h2>
-    <div class="row flex flex-col gap-1">
-      <div class="flex flex-row items-center gap-2">
-        <button
-          type="button"
-          onclick={copyEmail}
-          class="text-header flex cursor-pointer flex-row items-center gap-2 font-medium hover:underline"
-        >
-          hello@workingon.studio
-          <iconify-icon icon={copied ? "ph:check-bold" : "ph:copy-bold"} class="size-4"></iconify-icon>
-        </button>
-        {#if copied}
-          <span class="text-xxs text-muted uppercase no-underline!">copied</span>
-        {/if}
+<PageLayout variant="full">
+  <div>
+    <ContentPanel borderBottom>
+      <h2 class="text-xl font-medium">Send email</h2>
+      <div class="row flex flex-col gap-1">
+        <div class="flex flex-row items-center gap-2">
+          <button
+            type="button"
+            onclick={copyEmail}
+            class="text-header flex cursor-pointer flex-row items-center gap-2 font-medium hover:underline"
+          >
+            hello@workingon.studio
+            <iconify-icon icon={copied ? "ph:check-bold" : "ph:copy-bold"} class="size-4"></iconify-icon>
+          </button>
+          {#if copied}
+            <span class="text-xxs text-muted uppercase no-underline!">copied</span>
+          {/if}
+        </div>
+        <p class="text-muted text-sm">
+          If I don't reply within 7 days, assume it's a no, I'm on holiday, or dead. Whatever makes you feel better.
+        </p>
       </div>
-      <p class="text-muted text-sm">
-        If I don't reply within 7 days, assume it's a no, I'm on holiday, or dead. Whatever makes you feel better.
-      </p>
-    </div>
-  </ContentPanel>
-  <SocialProfiles />
+    </ContentPanel>
+  </div>
+  <div>
+    <SocialProfiles />
+  </div>
 </PageLayout>
 
 <style>

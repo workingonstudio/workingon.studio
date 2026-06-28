@@ -30,34 +30,25 @@
 </script>
 
 <ContentPanel borderBottom>
-  <!-- prettier-ignore -->
   <h1>
-    Creative director. 15 years leading design and creative for startups, five of them acquired.
+    Creative director.
+    <br />
+    15 years leading design and creative for startups, five of them acquired.
   </h1>
 </ContentPanel>
 
 <PageLayout>
-  <!-- Left column -->
-  <div class="divide-surface-border divide-y">
-    <About />
-    <WorkHistory />
-    <div class="hidden md:block">
-      <ArticleList header="Writing" {articles} />
-    </div>
-    <div class="hidden md:block">
-      <SocialProfiles borderBottom />
-    </div>
-  </div>
-
-  <!-- Right column -->
   <div>
+    <About />
+    <div class="lg:hidden">
+      <ProjectList {projects} />
+    </div>
+    <WorkHistory />
+    <ArticleList header="Writing" {articles} />
+    <SocialProfiles />
+  </div>
+  <div class="hidden lg:block">
     <ProjectList {projects} />
-    <div class="border-surface-border flex border-t md:hidden">
-      <ArticleList header="Writing" {articles} />
-    </div>
-    <div class="border-surface-border flex border-t md:hidden">
-      <SocialProfiles />
-    </div>
   </div>
 </PageLayout>
 

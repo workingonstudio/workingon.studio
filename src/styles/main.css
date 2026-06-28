@@ -48,7 +48,7 @@
   }
 
   h1 {
-    @apply text-3xl/normal sm:text-4xl/normal lg:text-6xl/normal;
+    @apply text-2xl/normal sm:text-4xl/normal lg:text-6xl/normal;
   }
 
   h2 {
@@ -56,7 +56,7 @@
   }
 
   p {
-    @apply text-base text-pretty;
+    @apply text-pretty lg:text-base;
   }
 }
 
@@ -134,5 +134,23 @@
 
   .panel-border-r {
     @apply border-surface-border border-r-0 lg:border-r;
+  }
+}
+
+@layer components {
+  .page-layout {
+    @apply grid grid-cols-1 items-start lg:grid-cols-2 lg:items-stretch;
+  }
+
+  .page-layout > *:first-child {
+    @apply border-surface-border lg:border-r;
+  }
+
+  .page-layout > * > * + * {
+    @apply border-surface-border border-t;
+  }
+
+  .content-panel.border-b-desktop {
+    @apply border-surface-border lg:border-b;
   }
 }
