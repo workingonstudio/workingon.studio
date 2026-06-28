@@ -129,9 +129,7 @@
 </ContentPanel>
 
 <PageLayout>
-  <div
-    class="timeline-reveal group divide-surface-border border-surface-border flex flex-col divide-y border-r-0 md:border-r-1"
-  >
+  <div>
     {#each groupedEntries as group}
       <div class="content gap-6">
         <h3 class="text-header flex flex-row items-center gap-2 text-xl font-medium">
@@ -177,18 +175,20 @@
     {/if}
   </div>
 
-  <ContentPanel>
-    <h3 class="text-xl font-medium">Details</h3>
+  <div>
     <!-- prettier-ignore -->
-    <ul class="flex-col flex gap-3 text-sm text-muted">
-      <li>Hosted on <a href="https://github.com/workingonstudio/workingon.studio">Github</a> pages.</li>
-      <li>Built with <a href="https://astro.build/">Astro</a> and <a href="https://svelte.dev/">Svelte</a>.</li>
-      <li>Licenced files hosted on <a href="https://cloudflare.com">CloudFlare</a>.</li>
-      <li>Set with <a href="https://www.fontshare.com/fonts/satoshi">Satoshi</a> and <a href="https://rsms.me/inter/">Inter</a> via <a href="https://www.fontshare.com/">FontShare</a> and <a href="https://fonts.bunny.net/">Bunny</a>.</li>
-      <li>Icons are <a href="https://phosphoricons.com/">Phosphor</a> via <a href="https://iconify.design/">Iconfiy</a>.</li>
-      <li>Analytics tracked anonymously via <a href="https://umami.is/">Umami</a> self-hosted via <a href="https://railway.com/">Railway</a>.</li>
-    </ul>
-  </ContentPanel>
+    <ContentPanel borderBottomDesktop>
+      <h2 class="font-medium">Details</h2>
+      <ul class="flex-col flex gap-3 text-sm text-muted">
+        <li>Hosted on <a href="https://github.com/workingonstudio/workingon.studio">Github</a> pages.</li>
+        <li>Built with <a href="https://astro.build/">Astro</a> and <a href="https://svelte.dev/">Svelte</a>.</li>
+        <li>Licenced files hosted on <a href="https://cloudflare.com">CloudFlare</a>.</li>
+        <li>Set with <a href="https://www.fontshare.com/fonts/satoshi">Satoshi</a> and <a href="https://rsms.me/inter/">Inter</a> via <a href="https://www.fontshare.com/">FontShare</a> and <a href="https://fonts.bunny.net/">Bunny</a>.</li>
+        <li>Icons are <a href="https://phosphoricons.com/">Phosphor</a> via <a href="https://iconify.design/">Iconfiy</a>.</li>
+        <li>Analytics tracked anonymously via <a href="https://umami.is/">Umami</a> self-hosted via <a href="https://railway.com/">Railway</a>.</li>
+      </ul>
+    </ContentPanel>
+  </div>
 </PageLayout>
 
 <style>
