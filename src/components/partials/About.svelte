@@ -5,7 +5,7 @@
   export let borderRight: boolean = false;
 </script>
 
-<ContentPanel {borderBottom} {borderRight}>
+<ContentPanel {borderBottom}>
   <p>
     Fifteen years. Creative director. Brand, product, the lot. Give me a problem worth solving, and I'll run with it.
   </p>
