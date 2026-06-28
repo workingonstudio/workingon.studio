@@ -2,7 +2,6 @@
   import ContentPanel from "./ContentPanel.svelte";
 
   export let borderBottom: boolean = false;
-  export let borderRight: boolean = false;
 </script>
 
 <ContentPanel {borderBottom}>
