@@ -5,30 +5,33 @@
 </script>
 
 <ContentPanel borderBottom>
-  <!-- prettier-ignore -->
-  <h1>
-    Writing for designers who are tired of design writing.
-  </h1>
+  <h1>Writing for designers who are tired of design writing.</h1>
 </ContentPanel>
 
 <PageLayout>
-  <ContentPanel>
-    <ul class="flex flex-col gap-5">
-      {#each posts as post}
-        <li class="flex flex-col gap-1">
-          <a
-            href={`/writing/${post.id}`}
-            class="text-header flex flex-row items-center gap-2 font-medium hover:underline"
-          >
-            {post.data.title}
-            <iconify-icon icon="ph:arrow-up-right-bold"></iconify-icon>
-          </a>
-          {#if post.data.description}
-            <p class="text-muted text-sm">{post.data.description}</p>
-          {/if}
-        </li>
-      {/each}
-    </ul>
-  </ContentPanel>
+  <div>
+    <ContentPanel>
+      <ul class="flex flex-col gap-5">
+        {#each posts as post}
+          <li class="flex flex-col gap-1">
+            <a
+              href={`/writing/${post.id}`}
+              class="text-header flex flex-row items-center gap-2 font-medium hover:underline"
+            >
+              {post.data.title}
+              <iconify-icon icon="ph:arrow-up-right-bold"></iconify-icon>
+            </a>
+            {#if post.data.description}
+              <p class="text-muted text-sm">{post.data.description}</p>
+            {/if}
+          </li>
+        {/each}
+      </ul>
+    </ContentPanel>
+  </div>
   <div></div>
 </PageLayout>
+
+<style>
+  @reference "@styles/main.css";
+</style>
