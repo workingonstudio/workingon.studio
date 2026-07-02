@@ -13,7 +13,10 @@
 </script>
 
 <ContentPanel {borderBottom}>
-  <h2 class="font-medium">{header}</h2>
+  <div class="flex flex-row items-center gap-3">
+    <iconify-icon icon="ph:pen-nib" class="size-5 text-xl text-zinc-500"></iconify-icon>
+    <h2 class="font-medium">{header}</h2>
+  </div>
   <ul class="stack">
     {#each articles as article}
       <li class="flex flex-col gap-1">
