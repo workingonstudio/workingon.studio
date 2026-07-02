@@ -7,8 +7,8 @@
       "name": "Paul Mackenzie",
       "url": "https://workingon.studio/",
       "image": "https://workingon.studio/site-default.webp",
-      "jobTitle": "Product Designer",
-      "description": "Product designer with sixteen years of experience. Founding designer across five acquired companies. Designs and builds his own products.",
+      "jobTitle": "Creative Director",
+      "description": "Creative director and founder of workingon.studio. 16 years leading design and creative for startups, five acquired.",
       "sameAs": [
         "https://twitter.com/prmack",
         "https://linkedin.com/in/prmack",
@@ -19,8 +19,8 @@
       },
       "hasOccupation": {
         "@type": "Occupation",
-        "name": "Product Designer",
-        "skills": "Product design, UX/UI design, branding, creative direction, front-end development, design advisory"
+        "name": "Creative Director",
+        "skills": "Creative direction, UX/UI design, branding, front-end development, design advisory"
       },
       "alumniOf": [
         {
@@ -70,8 +70,8 @@
       "@type": "WebSite",
       "@id": "https://workingon.studio/#website",
       "url": "https://workingon.studio/",
-      "name": "Paul Mackenzie",
-      "description": "Product designer. Five exits. Available to hire.",
+      "name": "workingon.studio",
+      "description": "Creative direction for founders and early-stage teams. In-house product development.",
       "publisher": {
         "@id": "https://workingon.studio/#organization"
       },
@@ -164,7 +164,7 @@
           "@type": "SoftwareApplication",
           "position": 11,
           "name": "Dad Reply",
-          "url": "https://workingon.studio/projects/dad-reply",
+          "url": "https://dadreply.com/",
           "applicationCategory": "BrowserExtension",
           "description": "A Gmail extension that adds a one-click reply button sending a thumbs-up emoji, for emails that only need acknowledgement."
         }
