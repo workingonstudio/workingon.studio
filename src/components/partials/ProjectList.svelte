@@ -84,7 +84,10 @@
 <div class="divide-surface-border divide-y">
   {#if latest}
     <ContentPanel>
-      <h2 class="font-medium">Latest project</h2>
+      <div class="flex flex-row items-center gap-3">
+        <iconify-icon icon="ph:shooting-star" class="size-5 text-xl text-zinc-500"></iconify-icon>
+        <h2 class="font-medium">Latest project</h2>
+      </div>
       <ul class="stack">
         {@render projectCard(latest)}
       </ul>
@@ -93,7 +96,10 @@
 
   {#if featured}
     <ContentPanel>
-      <h2 class="font-medium">Featured</h2>
+      <div class="flex flex-row items-center gap-3">
+        <iconify-icon icon="ph:medal" class="size-5 text-xl text-zinc-500"></iconify-icon>
+        <h2 class="font-medium">Featured project</h2>
+      </div>
       <ul class="stack">
         {@render projectCard(featured)}
       </ul>

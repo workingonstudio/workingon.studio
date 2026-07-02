@@ -178,7 +178,10 @@
   <div>
     <!-- prettier-ignore -->
     <ContentPanel borderBottomDesktop>
-      <h2 class="font-medium">Details</h2>
+      <div class="flex flex-row items-center gap-3">
+        <iconify-icon icon="ph:stack" class="size-5 text-xl text-zinc-500"></iconify-icon>
+        <h2 class="font-medium">Details</h2>
+      </div>
       <ul class="flex-col flex gap-3 text-sm text-muted">
         <li>Hosted on <a href="https://github.com/workingonstudio/workingon.studio">Github</a> pages.</li>
         <li>Built with <a href="https://astro.build/">Astro</a> and <a href="https://svelte.dev/">Svelte</a>.</li>

@@ -7,7 +7,10 @@
 </script>
 
 <ContentPanel {borderBottom} {borderBottomDesktop}>
-  <h2 class="text-xl font-medium">Elsewhere</h2>
+  <div class="flex flex-row items-center gap-3">
+    <iconify-icon icon="ph:compass" class="size-5 text-xl text-zinc-500"></iconify-icon>
+    <h2 class="font-medium">Elsewhere</h2>
+  </div>
   <ul class="stack">
     {#each socialProfiles as { name, href, description }}
       <li class="flex flex-col gap-1">

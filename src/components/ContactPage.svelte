@@ -63,9 +63,9 @@
 </script>
 
 <ContentPanel borderBottom>
+  <!-- prettier-ignore -->
   <h1>
-    £
-    <span class="tabular-nums">{displayRate.toFixed(2)}</span>
+    £<span class="tabular-nums">{displayRate.toFixed(2)}</span>
     /day. I work with founders that decide fast and ship faster. The rate increases while you think about it.
   </h1>
 </ContentPanel>
@@ -73,7 +73,10 @@
 <PageLayout variant="full">
   <div>
     <ContentPanel borderBottom>
-      <h2 class="text-xl font-medium">Send email</h2>
+      <div class="flex flex-row items-center gap-3">
+        <iconify-icon icon="ph:envelope-open" class="size-5 text-xl text-zinc-500"></iconify-icon>
+        <h2 class="font-medium">Send email</h2>
+      </div>
       <div class="row flex flex-col gap-1">
         <div class="flex flex-row items-center gap-2">
           <button
