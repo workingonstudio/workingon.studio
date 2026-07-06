@@ -85,7 +85,7 @@
   {#if latest}
     <ContentPanel>
       <div class="flex flex-row items-center gap-3">
-        <iconify-icon icon="ph:shooting-star" class="size-5 text-xl text-zinc-500"></iconify-icon>
+        <iconify-icon icon="ph:rocket-launch" class="size-5 text-xl text-zinc-500"></iconify-icon>
         <h2 class="font-medium">Latest project</h2>
       </div>
       <ul class="stack">

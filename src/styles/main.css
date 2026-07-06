@@ -10,7 +10,7 @@
   /* Colors */
   --color-primary: theme(colors.neutral.900);
   --color-header: theme(colors.neutral.900);
-  --color-body: theme(colors.neutral.700);
+  --color-body: theme(colors.neutral.800);
   --color-muted: theme(colors.neutral.500);
   --color-bg-main: theme(colors.neutral.50);
   --color-surface: theme(colors.neutral.100);
@@ -20,7 +20,7 @@
 .dark {
   --color-primary: theme(colors.stone.100);
   --color-header: theme(colors.stone.100);
-  --color-body: theme(colors.stone.300);
+  --color-body: theme(colors.stone.200);
   --color-muted: theme(colors.stone.400);
   --color-bg-main: theme(colors.stone.950);
   --color-surface: theme(colors.stone.900);
