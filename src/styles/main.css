@@ -44,7 +44,7 @@
   h4 {
     font-family: var(--font-satoshi);
     font-feature-settings: "ss01" 1;
-    @apply text-header font-medium text-balance;
+    @apply text-header font-bold text-balance;
   }
 
   h1 {
