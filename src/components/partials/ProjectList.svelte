@@ -37,11 +37,7 @@
       target={project.externalLink ? "_blank" : undefined}
       rel={project.externalLink ? "noopener noreferrer" : undefined}
     >
-      <img
-        src={project.image}
-        alt=""
-        class="border-surface-border w-full rounded-xl border transition-all duration-300"
-      />
+      <img src={project.image} alt="" class="border-surface-border w-full border transition-all duration-300" />
     </a>
 
     <div class="flex flex-col gap-2">

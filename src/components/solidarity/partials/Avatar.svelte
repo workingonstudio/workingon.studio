@@ -1,5 +1,5 @@
 <script lang="ts">
-  export let img: string = "/solidarity/avatars/paul.png";
+  export let img: string = "/solidarity/avatars/paul.webp";
   export let ring: boolean = false;
   export let dimensions: string = "size-14";
 </script>
