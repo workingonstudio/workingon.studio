@@ -27,7 +27,7 @@
     "luxon": "^3.7.2",
     "melt": "^0.44.0",
     "svelte": "^5.38.7",
-    "tailwindcss": "^4.1.12",
+    "tailwindcss": "^4.3.2",
     "typescript": "^5.9.2",
     "waveform-path": "^0.0.2",
     "zod": "^3.25.76"
