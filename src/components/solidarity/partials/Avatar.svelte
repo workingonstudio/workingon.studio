@@ -9,6 +9,7 @@
     src="/solidarity/otw-overlay.webp"
     alt=""
     class="overlay pointer-events-none absolute {ring ? 'visible' : 'hidden'}"
+    loading="lazy"
   />
   <img src={img} alt="" />
 </div>

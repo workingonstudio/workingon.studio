@@ -52,6 +52,7 @@
         src="/profile.webp"
         alt="Paul Mackenzie, creative director, seated on a sofa in front of a print that reads 'This is the naughty corner.'"
         class="rounded-xl"
+        loading="lazy"
       />
     </ContentPanel>
     <WorkHistory />
