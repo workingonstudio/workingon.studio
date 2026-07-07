@@ -37,7 +37,12 @@
       target={project.externalLink ? "_blank" : undefined}
       rel={project.externalLink ? "noopener noreferrer" : undefined}
     >
-      <img src={project.image} alt="" class="border-surface-border w-full border transition-all duration-300" />
+      <img
+        src={project.image}
+        alt=""
+        class="border-surface-border w-full border transition-all duration-300"
+        loading="lazy"
+      />
     </a>
 
     <div class="flex flex-col gap-2">
@@ -47,7 +52,7 @@
         rel={project.externalLink ? "noopener noreferrer" : undefined}
         class="hover:underline"
       >
-        <h2>{project.title}.</h2>
+        <h3>{project.title}.</h3>
       </a>
       <p class="text-muted text-sm">{project.description}</p>
     </div>
