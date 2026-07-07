@@ -14,8 +14,8 @@
 
 <ContentPanel {borderBottom}>
   <div class="flex flex-row items-center gap-3">
-    <iconify-icon icon="ph:pen-nib" class="size-5 text-xl text-zinc-500"></iconify-icon>
-    <h2 class="font-medium">{header}</h2>
+    <iconify-icon icon="ph:pen-nib-duotone" class="size-5 text-xl text-zinc-500"></iconify-icon>
+    <h2>{header}</h2>
   </div>
   <ul class="stack">
     {#each articles as article}
