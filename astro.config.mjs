@@ -61,35 +61,6 @@ export default defineConfig({
         subsets: ["latin"]
       },
       
-      // Dad Reply
-      {
-        provider: fontProviders.fontsource(),
-        name: "Geist",
-        cssVariable: "--font-geist",
-        display: "swap",
-        weights: [400, 700],
-        styles: ['normal'],
-        subsets: ["latin"]
-      },
-      {
-        provider: fontProviders.fontshare(),
-        name: "Poppins",
-        cssVariable: "--font-poppins",
-        display: "swap",
-        weights: [400, 500, 600],
-        styles: ['normal', 'italic'],
-        subsets: ["latin"]
-      },
-      {
-        provider: fontProviders.bunny(),
-        name: "Roboto",
-        cssVariable: "--font-roboto",
-        display: "swap",
-        weights: [400],
-        styles: ['normal'],
-        subsets: ["latin"]
-      },
-      
       // Solidarity
       {
         provider: fontProviders.fontshare(),

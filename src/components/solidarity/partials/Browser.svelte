@@ -7,19 +7,19 @@
 
   let feed = [
     {
-      img: "thomas.jpeg",
+      img: "thomas.webp",
       name: "Thomas Knoll",
       title: "Leading Organizational Growth...",
       post: "What do you do when you want to share an offer that sounds too good to be true? Lean into the absurdity, or shroud it in mystery? Seriously. I need advice.",
     },
     {
-      img: "heather.jpeg",
+      img: "heather.webp",
       name: "Heather Binksy",
       title: "eCommerce Assistant at...",
       post: "Today marks the day I have worked at ….. for 10 years! Starting at reception and working my way up to e-Commerce Assistant.",
     },
     {
-      img: "andrew.jpeg",
+      img: "andrew.webp",
       name: "Andrew Love",
       title: "Professional Catalyst.",
       post: "It's never the platform, it's the people on it.",
@@ -27,17 +27,17 @@
   ];
   let sidebar = [
     {
-      img: "hassan.jpeg",
+      img: "hassan.webp",
       name: "Hassan Archer",
       title: "Product Consultant",
     },
     {
-      img: "ashley.jpeg",
+      img: "ashley.webp",
       name: "Ashley Bradshaw",
       title: "Product & UX Design Lead",
     },
     {
-      img: "jensen.jpeg",
+      img: "jensen.webp",
       name: "Jensen Huang",
       title: "Dishwasher, Busboy, Waiter",
     },
