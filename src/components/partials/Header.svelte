@@ -37,26 +37,31 @@
       href: "/about",
       title: "about",
       description: "the long answer.",
+      icon: "chats-circle",
     },
     {
       href: "/projects/",
       title: "projects",
       description: "live studio projects.",
+      icon: "cube",
     },
     {
       href: "/writing",
       title: "writing",
       description: "opinions, not takes.",
+      icon: "pen-nib",
     },
     {
       href: "/progress",
       title: "progress",
       description: "every update, every change.",
+      icon: "git-merge",
     },
     {
       href: "/contact",
       title: "contact",
-      description: "Let's talk.",
+      description: "let's talk.",
+      icon: "paper-plane-tilt",
     },
   ];
 </script>
@@ -73,12 +78,17 @@
     class:!border-transparent={showMenu}
   >
     <ul class="hidden lg:flex lg:flex-row">
-      {#each navItems as { href, title, description }}
+      {#each navItems as { href, title, description, icon }}
         <li class="group" class:active={isActive(href)}>
           <a {href}>
-            <!-- prettier-ignore -->
-            <h2>{title}</h2>
-            <p class="transition-all duration-200 ease-out lg:hidden xl:block">{description}</p>
+            <iconify-icon
+              icon="ph:{isActive(href) ? icon + '-duotone' : icon}"
+              class="text-muted text-xl"
+            ></iconify-icon>
+            <div class="flex flex-col">
+              <h2>{title}</h2>
+              <p class="transition-all duration-200 ease-out lg:hidden xl:block">{description}</p>
+            </div>
           </a>
         </li>
       {/each}
@@ -104,12 +114,14 @@
     : 'hidden'} mobile-nav bg-bg-main fixed inset-0 z-100 h-dvh flex-col items-center justify-center lg:hidden"
 >
   <ul class="flex w-full flex-col gap-12">
-    {#each navItems as { href, title, description }}
+    {#each navItems as { href, title, description, icon }}
       <li class="group text-center" class:active={isActive(href)}>
         <a {href} onclick={toggleMenu}>
-          <!-- prettier-ignore -->
-          <h2>{title}</h2>
-          <p class="transition-all duration-200 ease-out">{description}</p>
+          <iconify-icon icon="ph:{isActive(href) ? icon + '-duotone' : icon}" class="text-muted text-xl"></iconify-icon>
+          <div class="flex flex-col">
+            <h2>{title}</h2>
+            <p class="transition-all duration-200 ease-out lg:hidden xl:block">{description}</p>
+          </div>
         </a>
       </li>
     {/each}
@@ -128,28 +140,28 @@
       li {
         @apply flex flex-row items-center transition-opacity duration-300 lg:py-6;
         a {
-          @apply flex w-full flex-col justify-between;
+          @apply flex w-full flex-row items-center justify-between gap-4;
           p {
-            @apply text-body text-muted text-xs;
+            @apply text-muted text-xs;
           }
         }
       }
     }
     /* When hovering, fade everything except the hovered item */
     &:has(li:hover) li:not(:hover) {
-      @apply opacity-30 delay-100;
+      @apply opacity-50 delay-100;
     }
 
     /* When NOT hovering, fade non-active items */
     &:not(:has(li:hover)):has(li.active) li:not(.active) {
-      @apply opacity-30;
+      @apply opacity-50;
     }
   }
 
   .mobile-nav {
     ul {
       &:has(li.active) li:not(.active) {
-        @apply opacity-30;
+        @apply opacity-100;
       }
     }
     li {
@@ -158,7 +170,7 @@
         @apply flex flex-col items-center gap-1;
       }
       p {
-        @apply text-body text-muted text-xs;
+        @apply text-muted text-xs;
       }
     }
   }

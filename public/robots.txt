@@ -40,7 +40,7 @@ User-agent: Google-Extended
 Allow: /
 
 # Note: legacy /projects/* routes (dadreply, glyphpalette, goodboy,
-# sketchtoday, tinywave, hiddencurrent) are handled by 301s in
-# src/middleware.ts, not Disallow. A followed 301 consolidates
-# crawler/index signal to the canonical URL; Disallow would block
-# the redirect from ever being seen.
+# sketchtoday, tinywave, hiddencurrent) are handled by Astro's static
+# redirects config in astro.config.mjs, which generates a real HTML
+# page with a meta-refresh at build time. A followed redirect
+# consolidates crawler/index signal to the canonical URL.

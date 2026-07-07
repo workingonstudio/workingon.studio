@@ -9,9 +9,17 @@ export default defineConfig({
   site: process.env.SITE_URL || (import.meta.env.DEV 
     ? "http://localhost:4321"
     : "https://workingon.studio"),
+  redirects: {
+    "/projects/dadreply": "https://dadreply.com/",
+    "/projects/glyphpalette": "/projects/glyph-palette/",
+    "/projects/goodboy": "/projects/good-boy/",
+    "/projects/sketchtoday": "/projects/sketch-today/",
+    "/projects/tinywave": "/projects/tiny-wave/",
+    "/projects/hiddencurrent": "/projects/hidden-current/",
+  },
   integrations: [svelte(), sitemap({
     filter: (page) => {
-      // Exclude non-canonical routes (handled by middleware redirects)
+      // Exclude non-canonical routes (handled by redirects config above)
       const excludePatterns = [
         '/projects/dadreply',
         '/projects/sketchtoday',
@@ -58,35 +66,6 @@ export default defineConfig({
         display: "swap",
         weights: [500, 600, 700, 900],
         styles: ['normal', 'italic'],
-        subsets: ["latin"]
-      },
-      
-      // Dad Reply
-      {
-        provider: fontProviders.fontsource(),
-        name: "Geist",
-        cssVariable: "--font-geist",
-        display: "swap",
-        weights: [400, 700],
-        styles: ['normal'],
-        subsets: ["latin"]
-      },
-      {
-        provider: fontProviders.fontshare(),
-        name: "Poppins",
-        cssVariable: "--font-poppins",
-        display: "swap",
-        weights: [400, 500, 600],
-        styles: ['normal', 'italic'],
-        subsets: ["latin"]
-      },
-      {
-        provider: fontProviders.bunny(),
-        name: "Roboto",
-        cssVariable: "--font-roboto",
-        display: "swap",
-        weights: [400],
-        styles: ['normal'],
         subsets: ["latin"]
       },
       

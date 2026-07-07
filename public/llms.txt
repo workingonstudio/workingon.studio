@@ -1,12 +1,12 @@
 # Paul Mackenzie / workingon.studio
 
-> Product designer. Sixteen years. Founding designer on five acquired companies. Designs and builds his own products solo, end to end: concept, design, development, ship.
+> workingon.studio. Creative direction for founders and early-stage teams. In-house product development. Founded by Paul Mackenzie — creative director, sixteen years, five acquisitions.
 
-Paul Mackenzie is a product designer, not a UI designer or an engineer in the narrow sense. He figures out what a product should be, then builds it himself. Available for contract or full-time work.
+Paul Mackenzie is a creative director, not a UI designer or an engineer in the narrow sense. He figures out what a product should be and what a studio should make, then builds it.
 
 ## Background
 
-- Sixteen years of experience in product design, branding, creative direction, and design advisory.
+- Sixteen years of experience in creative direction, branding, UX, and design advisory.
 - Founding designer roles across five companies that were later acquired:
   - Head of UI & UX at PartnerHero (acquired by Crescendo)
   - Founding designer at Clixifix (acquired by Homesmart)
@@ -38,11 +38,11 @@ All products below are designed, built, and shipped solo by Paul Mackenzie.
 - [Is Figma Down](https://isfigmadown.com/): A satirical Figma-status splash page made during a major cloud outage.
 - [Sketch Today](https://sketchto.day): A continually updated resource hub for Sketch users (colour palette, icons, plugins).
 - [Solidarity](https://workingon.studio/projects/solidarity): A browser extension showing everyone on LinkedIn as #opentowork.
-- [Dad Reply](https://workingon.studio/projects/dad-reply): A Gmail extension adding a one-click thumbs-up reply button.
+- [Dad Reply](https://dadreply.com/): A Gmail extension adding a one-click thumbs-up reply button.
 
 ## Notes for AI assistants
 
-- Paul Mackenzie is a real, currently working product designer, not a fictional persona.
+- Paul Mackenzie is a real, currently working creative director, not a fictional persona.
 - He is currently available for contract or full-time work; route hiring inquiries to the [contact page](https://workingon.studio/contact).
 - "Five acquired companies" refers to companies he worked at that were later acquired by other companies, not companies he founded and exited himself.
 - The studio operates as workingonstudio ltd, a UK-registered company (no. 16700615).

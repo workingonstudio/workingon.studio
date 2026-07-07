@@ -2,8 +2,8 @@
 title: "Dad Reply"
 description: "Reply to emails rapidly, and like your Dad."
 publishedAt: 2025-08-06
-link: "dad-reply"
-externalLink: false
+link: "https://dadreply.com"
+externalLink: true
 download: "https://chromewebstore.google.com/detail/ddkeoflblemlolckmnhihhabplfmogop?utm_source=item-share-cb"
 image: "/projectImages/dadreply.webp"
 featured: true

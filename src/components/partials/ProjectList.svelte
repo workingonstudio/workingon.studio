@@ -40,7 +40,8 @@
       <img
         src={project.image}
         alt=""
-        class="border-surface-border w-full rounded-xl border transition-all duration-300"
+        class="border-surface-border w-full border transition-all duration-300"
+        loading="lazy"
       />
     </a>
 
@@ -51,7 +52,7 @@
         rel={project.externalLink ? "noopener noreferrer" : undefined}
         class="hover:underline"
       >
-        <h2>{project.title}.</h2>
+        <h3>{project.title}.</h3>
       </a>
       <p class="text-muted text-sm">{project.description}</p>
     </div>
@@ -84,7 +85,10 @@
 <div class="divide-surface-border divide-y">
   {#if latest}
     <ContentPanel>
-      <h2 class="font-medium">Latest project</h2>
+      <div class="flex flex-row items-center gap-3">
+        <iconify-icon icon="ph:rocket-launch-duotone" class="size-5 text-xl text-zinc-500"></iconify-icon>
+        <h2>Latest project</h2>
+      </div>
       <ul class="stack">
         {@render projectCard(latest)}
       </ul>
@@ -93,7 +97,10 @@
 
   {#if featured}
     <ContentPanel>
-      <h2 class="font-medium">Featured</h2>
+      <div class="flex flex-row items-center gap-3">
+        <iconify-icon icon="ph:medal-duotone" class="size-5 text-xl text-zinc-500"></iconify-icon>
+        <h2>Featured project</h2>
+      </div>
       <ul class="stack">
         {@render projectCard(featured)}
       </ul>
