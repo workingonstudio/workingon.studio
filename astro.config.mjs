@@ -9,9 +9,17 @@ export default defineConfig({
   site: process.env.SITE_URL || (import.meta.env.DEV 
     ? "http://localhost:4321"
     : "https://workingon.studio"),
+  redirects: {
+    "/projects/dadreply": "https://dadreply.com/",
+    "/projects/glyphpalette": "/projects/glyph-palette/",
+    "/projects/goodboy": "/projects/good-boy/",
+    "/projects/sketchtoday": "/projects/sketch-today/",
+    "/projects/tinywave": "/projects/tiny-wave/",
+    "/projects/hiddencurrent": "/projects/hidden-current/",
+  },
   integrations: [svelte(), sitemap({
     filter: (page) => {
-      // Exclude non-canonical routes (handled by middleware redirects)
+      // Exclude non-canonical routes (handled by redirects config above)
       const excludePatterns = [
         '/projects/dadreply',
         '/projects/sketchtoday',
