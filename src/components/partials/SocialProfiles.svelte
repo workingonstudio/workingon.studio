@@ -8,8 +8,8 @@
 
 <ContentPanel {borderBottom} {borderBottomDesktop}>
   <div class="flex flex-row items-center gap-3">
-    <iconify-icon icon="ph:compass" class="size-5 text-xl text-zinc-500"></iconify-icon>
-    <h2 class="font-medium">Elsewhere</h2>
+    <iconify-icon icon="ph:compass-duotone" class="size-5 text-xl text-zinc-500"></iconify-icon>
+    <h2>Elsewhere</h2>
   </div>
   <ul class="stack">
     {#each socialProfiles as { name, href, description }}

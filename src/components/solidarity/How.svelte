@@ -11,7 +11,7 @@
     <ul>
       <li>
         <div
-          class="order-last flex w-4/5 flex-col items-start rounded-tr-2xl rounded-bl-xl border-t-1 border-r-1 border-gray-300 bg-stone-50 md:order-none md:w-full"
+          class="order-last flex w-4/5 flex-col items-start rounded-tr-2xl rounded-bl-xl border-t border-r border-gray-300 bg-stone-50 md:order-0 md:w-full"
         >
           <div
             class="flex w-full flex-row items-center gap-4 rounded-tr-2xl border-b border-gray-300 bg-white py-3 pr-6"
@@ -49,7 +49,7 @@
           <p>To be fair if you're looking for work you probably already have the tab open. Right?</p>
         </div>
         <div
-          class="flex w-4/5 flex-col items-start rounded-tl-2xl rounded-br-xl border-t-1 border-l-1 border-gray-300 bg-stone-50 md:w-full"
+          class="flex w-4/5 flex-col items-start rounded-tl-2xl rounded-br-xl border-t border-l border-gray-300 bg-stone-50 md:w-full"
         >
           <div
             class="flex w-full flex-row items-center gap-4 rounded-tl-2xl border-b border-gray-300 bg-white py-3 pl-6"
@@ -66,7 +66,7 @@
             </div>
           </div>
           <div class="flex w-full flex-row pb-12">
-            <div class="flex w-full flex-row items-center gap-4 border-b-1 border-gray-300 bg-white p-4">
+            <div class="flex w-full flex-row items-center gap-4 border-b border-gray-300 bg-white p-4">
               <iconify-icon icon="fa7-brands:linkedin" class="size-7.5 text-3xl text-blue-500"></iconify-icon>
               <div class="flex w-80 flex-row rounded-full border border-gray-300 px-2 py-2">
                 <iconify-icon icon="material-symbols:search-rounded" class="text-muted text-sm"></iconify-icon>
@@ -77,7 +77,7 @@
       </li>
       <li>
         <div
-          class="order-last flex w-4/5 flex-col items-start rounded-tr-2xl rounded-bl-xl border-t-1 border-r-1 border-gray-300 bg-stone-50 md:order-none md:w-full"
+          class="order-last flex w-4/5 flex-col items-start rounded-tr-2xl rounded-bl-xl border-t border-r border-gray-300 bg-stone-50 md:order-0 md:w-full"
         >
           <div
             class="flex w-full flex-row items-center gap-4 rounded-tr-2xl border-b border-gray-300 bg-white py-3 pr-6"
@@ -97,7 +97,7 @@
               class="flex w-full flex-row items-center justify-between rounded-2xl border border-gray-200 bg-white p-4"
             >
               <div class="flex flex-row gap-3">
-                <Avatar img={"/solidarity/avatars/jensen.jpeg"} ring dimensions="size-10" />
+                <Avatar img={"/solidarity/avatars/jensen.webp"} ring dimensions="size-10" />
                 <div class="flex flex-col text-sm">
                   <strong>Jensen Huang</strong>
                   <span class="text-muted text-xs">Dishwasher, Busboy, Waiter</span>
