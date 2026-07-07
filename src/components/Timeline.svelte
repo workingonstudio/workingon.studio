@@ -179,8 +179,8 @@
     <!-- prettier-ignore -->
     <ContentPanel borderBottomDesktop>
       <div class="flex flex-row items-center gap-3">
-        <iconify-icon icon="ph:stack" class="size-5 text-xl text-zinc-500"></iconify-icon>
-        <h2 class="font-medium">Details</h2>
+        <iconify-icon icon="ph:stack-duotone" class="size-5 text-xl text-zinc-500"></iconify-icon>
+        <h2>Details</h2>
       </div>
       <ul class="flex-col flex gap-3 text-sm text-muted">
         <li>Hosted on <a href="https://github.com/workingonstudio/workingon.studio">Github</a> pages.</li>
