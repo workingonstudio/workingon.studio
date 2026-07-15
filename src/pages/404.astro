@@ -1,41 +1,18 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import ContentPanel from "@components/partials/ContentPanel.svelte";
-import PageLayout from "@components/partials/PageLayout.svelte";
 ---
 
 <Layout title="404">
-  <ContentPanel borderBottom>
-    <h1>Are you really lost if you find something?</h1>
-  </ContentPanel>
-
-  <PageLayout>
-    <div>
-      <!-- prettier-ignore -->
-      <ContentPanel>
-        <blockquote>Guys like us, that work on ranches, are the loneliest guys in the world. They got no
-              family. They don't belong no place. They come to a ranch an' work up a stake, and the
-              first thing you know they're poundin' their tail on some other ranch. They ain't got
-              nothing to look ahead to.
-            </blockquote>
-            <div class="flex flex-row gap-2 items-center">
-              <span>Of Mice and Men</span>/<span>John Steinbeck</span>/
-                <a href="https://onlineshop.oxfam.org.uk/searchresults?N=&No=0&Rdm=118&Nr=product.active:1&type=search&Nf=sku.listPrice|GT+0&Ns=null&Ntk=&Nrpp=30&Ntt=of%20mice%20and%20men"
-                class="flex items-center underline"
-                target="_blank"
-              >
-                Buy from Oxfam
-              </a>
-            </div>
-      </ContentPanel>
-    </div>
-  </PageLayout>
+  <div class="flex h-dvh flex-col items-center gap-4 p-24">
+    <h1 class="text-8xl!">404</h1>
+    <p class="text-muted">Well this sucks.</p>
+    <p class="text-muted text-center text-xs">
+      Either you have hit a link that doesn't exist anymore. Or you're snooping around.
+    </p>
+    <a href="/" class="text-sm underline hover:no-underline">Go home</a>
+  </div>
 </Layout>
 
 <style>
   @reference "../styles/main.css";
-  blockquote {
-    @apply text-body -indent-2 text-xl/relaxed font-medium italic;
-    @apply before:content-[open-quote] after:content-[close-quote];
-  }
 </style>
