@@ -9,13 +9,24 @@ export default defineConfig({
   site: process.env.SITE_URL || (import.meta.env.DEV 
     ? "http://localhost:4321"
     : "https://workingon.studio"),
+  redirects: {
+  "/projects/dadreply": "https://dadreply.com/",
+  "/projects/glyphpalette": "https://glyphpalette.com/",
+  "/projects/glyph-palette": "https://glyphpalette.com/",
+  "/projects/glyph-palette/change-log": "https://glyphpalette.com/changelog",
+  "/projects/goodboy": "/projects/good-boy/",
+  "/projects/sketchtoday": "/projects/sketch-today/",
+  "/projects/tinywave": "/projects/tiny-wave/",
+  "/projects/hiddencurrent": "/projects/hidden-current/",
+},
   integrations: [svelte(), sitemap({
     filter: (page) => {
-      // Exclude non-canonical routes (handled by middleware redirects)
+      // Exclude non-canonical routes (handled by redirects config above)
       const excludePatterns = [
         '/projects/dadreply',
         '/projects/sketchtoday',
         '/projects/glyphpalette',
+        '/projects/glyph-palette',
         '/projects/goodboy',
         '/projects/solidarity/Main/',
         '/projects/hiddencurrent'
@@ -70,26 +81,6 @@ export default defineConfig({
         weights: [700],
         styles: ['normal'],
       },      
-
-      // Glyph Palette
-      {
-        provider : fontProviders.fontshare(),
-        name: "Cabinet Grotesk",
-        cssVariable : "--font-cabinet-grotesk",
-        display: "swap",
-        weights: [600, 700],
-        styles: ['normal'],
-        subsets: ["latin"]
-      },
-      {
-        provider : fontProviders.fontshare(),
-        name: "General Sans",
-        cssVariable : "--font-general-sans",
-        display: "swap",
-        weights: [600, 700, 800],
-        styles: ['normal'],
-        subsets: ["latin"]
-      },
 
       // Good Boy
       { 
