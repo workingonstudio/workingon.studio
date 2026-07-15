@@ -26,6 +26,7 @@ export default defineConfig({
         '/projects/dadreply',
         '/projects/sketchtoday',
         '/projects/glyphpalette',
+        '/projects/glyph-palette',
         '/projects/goodboy',
         '/projects/solidarity/Main/',
         '/projects/hiddencurrent'
