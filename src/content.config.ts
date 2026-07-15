@@ -15,22 +15,6 @@ const projectsCollection = defineCollection({
   }),
 });
 
-const changelogCollection = defineCollection({
-  loader: glob({ pattern: "**/*.json", base: "./src/content/changelogs" }),
-  schema: z.object({
-    product: z.enum(["dad-reply", "solidarity", "sketch-today", "glyph-palette"]),
-    version: z.object({
-      major: z.number(),
-      minor: z.number(),
-      patch: z.number(),
-    }),
-    title: z.string(),
-    description: z.string(),
-    date: z.coerce.date(),
-    items: z.array(z.string()),
-  }),
-});
-
 const sketchTodayCollection = defineCollection({
   loader: glob({ pattern: "**/*.json", base: "./src/content/sketch-today" }),
   schema: z.object({
@@ -67,7 +51,6 @@ const writingCollection = defineCollection({
 
 export const collections = {
   "sketch-today": sketchTodayCollection,
-  changelogs: changelogCollection,
   writing: writingCollection,
   projects: projectsCollection,
 };
