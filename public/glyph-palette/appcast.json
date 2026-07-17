@@ -1,12 +1,12 @@
 {
   "itemName": "Glyph Palette",
-  "versionID": "1.4.2",
-  "downloadURL": "https://workingon.studio/glyph-palette/downloads/glyph-palette-v1.4.2.sketchplugin.zip",
-  "size": 351786,
-  "creationDate": "Tue, 16 Jun 2026 09:06:00 +0000",
-  "description": "Better replacement behaviour. Supports matching colors/variables.",
+  "versionID": "1.5.2",
+  "downloadURL": "https://glyphpalette.com/downloads/glyph-palette-v1.5.2.sketchplugin.zip",
+  "downloadFileSize": 337021,
+  "creationDate": "Fri, 17 Jul 2026 00:00:00 GMT",
+  "description": "adding about modal",
   "minimumSketchVersion": "3.0",
   "homepage": "https://glyphpalette.com",
-  "changelog": "https://workingon.studio/projects/glyph-palette/change-log/",
-  "infoURL": "https://workingon.studio/projects/glyph-palette/"
+  "changelog": "https://glyphpalette.com/changelog/",
+  "infoURL": "https://glyphpalette.com"
 }
