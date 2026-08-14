@@ -1,5 +1,6 @@
 ---
 import Layout from "@layouts/Layout.astro";
+import DaysCounter from "@components/partials/DaysCounter.svelte";
 import { getCollection, render } from "astro:content";
 import { DateTime } from "luxon";
 
@@ -7,8 +8,8 @@ const projects = (await getCollection("projects")).sort(
   (a, b) => b.data.publishedAt.getTime() - a.data.publishedAt.getTime()
 );
 
-const launchDate = DateTime.fromISO("2025-08-27");
-const daysSince = Math.floor(DateTime.now().diff(launchDate, "days").days);
+const launchDate = "2025-08-27"; // still an open item — March vs August
+const initialDays = Math.floor(DateTime.now().diff(DateTime.fromISO(launchDate), "days").days);
 
 const projectData = await Promise.all(
   projects.map(async (p) => {
@@ -31,7 +32,7 @@ const projectData = await Promise.all(
 <Layout title="workingon.studio - Projects">
   <div class="border-surface-border border-b px-8 py-9 lg:px-16 lg:py-12">
     <h1 class="text-pretty">
-      {daysSince} days passed.
+      <DaysCounter client:load launchDate={launchDate} initialDays={initialDays} /> days passed.
       {projectData.length} projects. Solo. Concept, design, development, live.
     </h1>
   </div>
