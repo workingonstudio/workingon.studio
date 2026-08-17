@@ -59,7 +59,7 @@
       {@html project.body}
     </div>
 
-    <ul class="text-header flex flex-row gap-6 text-xs uppercase [&_a]:hover:underline!">
+    <ul class=" flex flex-row gap-6 text-xs uppercase [&_a]:hover:underline!">
       <li class="flex flex-row gap-3">
         <a
           href={getProjectLink(project.link, project.externalLink)}

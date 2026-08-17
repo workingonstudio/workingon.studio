@@ -61,7 +61,7 @@
   });
 </script>
 
-<PageLayout extraStyles="w-full lg:w-xl py-12">
+<PageLayout extraStyles="w-full lg:w-xl py-12 justify-center">
   <h1>
     <span class="text-primary">Contact</span>
     <br />
@@ -84,7 +84,7 @@
         ></iconify-icon>
       </button>
       {#if copied}
-        <span class="text-xxs text-header font-bold uppercase no-underline!">copied</span>
+        <span class="text-xxs font-bold uppercase no-underline!">copied</span>
       {/if}
     </div>
     <p>If I don't reply within 7 days, assume it's a no, I'm on holiday, or dead. Whatever makes you feel better.</p>

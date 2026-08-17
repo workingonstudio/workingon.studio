@@ -10,7 +10,7 @@
   </h1>
   <div class="flex flex-col gap-4">
     <p>
-      I work with companies to raise capital, increase user numbers, and customer satisfaction through carefully
+      I work with companies to raise capital, increase user numbers and customer satisfaction through carefully
       considered design decisions.
     </p>
     <p>From Seed to Series A to Acquisition.</p>

@@ -35,7 +35,7 @@ const projectData = await Promise.all(
     <h1 class="text-pretty">
       <span class="text-primary">Projects</span><br />
       <DaysCounter client:load launchDate={launchDate} initialDays={initialDays} /> days passed.
-      {projectData.length} projects.<br />Solo. Concept, design, development, live.
+      {projectData.length} projects.<br />These sites are all live.
     </h1>
     {
       projectData.map(({ Content, ...project }) => (
@@ -55,7 +55,7 @@ const projectData = await Promise.all(
               </div>
               <p>{project.description}</p>
             </div>
-            <ul class="text-header flex flex-row gap-6 text-xs uppercase [&_a]:hover:underline!">
+            <ul class="flex flex-row gap-6 text-xs uppercase [&_a]:hover:underline!">
               <li class="flex flex-row gap-2">
                 <a
                   href={project.externalLink ? project.link : `/projects/${project.link}`}

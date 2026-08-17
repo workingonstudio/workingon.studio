@@ -122,76 +122,74 @@
   const result = getGitHubStats(timelineData);
 </script>
 
-<ContentPanel borderBottom>
+<PageLayout extraStyles="w-full lg:w-xl py-12">
   <h1>
+    <span class="text-primary">Progress</span>
+    <br />
     {result.totalCommits} commits. {result.totalMerges} merges. {result.totalPRs} pull requests. One rebase.
   </h1>
-</ContentPanel>
-
-<PageLayout>
-  <div>
-    {#each groupedEntries as group}
-      <div class="content gap-6">
-        <h3 class="text-header flex flex-row items-center gap-2 text-xl font-medium">
-          {group.date}
-        </h3>
-        <ul class="flex flex-col gap-5">
-          {#each group.entries as entry}
-            <li class="flex flex-col gap-1" data-type={entry.type}>
+  <!-- prettier-ignore -->
+  <p>
+    Every change and commit for this site, out in the open. Browse the <a href="https://github.com/workingonstudio/workingon.studio" class="text-primary">repo on Github</a>.
+  </p>
+  {#each groupedEntries as group}
+    <div class="flex flex-col gap-6">
+      <h3 class="flex flex-row items-center gap-2 text-xl">
+        {group.date}
+      </h3>
+      <ul class="flex flex-col gap-5">
+        {#each group.entries as entry}
+          <li class="flex flex-col gap-1" data-type={entry.type}>
+            {#if entry.branchMerged && entry.intoBranch}
+              <p class="flex flex-row items-center gap-2">
+                {entry.branchDisplay === entry.branchMerged ? entry.intoBranch : entry.branchDisplay}
+                <iconify-icon icon="ph:arrow-left-bold"></iconify-icon>
+                {entry.branchMerged}
+              </p>
+            {:else}
+              <p class="flex flex-row items-center">
+                {entry.message}
+              </p>
+            {/if}
+            <ul class="text-xxs text-muted flex gap-3">
+              <li>{DateTime.fromISO(entry.date).toFormat("T")}</li>
               {#if entry.branchMerged && entry.intoBranch}
-                <p class="text-header flex flex-row items-center gap-2 font-medium">
-                  {entry.branchDisplay === entry.branchMerged ? entry.intoBranch : entry.branchDisplay}
-                  <iconify-icon icon="ph:arrow-left-bold"></iconify-icon>
-                  {entry.branchMerged}
-                </p>
+                <li>merge</li>
               {:else}
-                <p class="text-header flex flex-row items-center font-medium">
-                  {entry.message}
-                </p>
+                <li class="branch-display text-muted">
+                  {shortenText(entry.branchDisplay)}
+                </li>
               {/if}
-              <ul class="text-xxs text-muted flex gap-3 font-medium">
-                <li>{DateTime.fromISO(entry.date).toFormat("T")}</li>
-                {#if entry.branchMerged && entry.intoBranch}
-                  <li>merge</li>
-                {:else}
-                  <li class="branch-display text-muted font-medium">
-                    {shortenText(entry.branchDisplay)}
-                  </li>
-                {/if}
-                <li>{entry.version}</li>
-              </ul>
-            </li>
-          {/each}
-        </ul>
-      </div>
-    {/each}
+              <li>{entry.version}</li>
+            </ul>
+          </li>
+        {/each}
+      </ul>
+    </div>
+  {/each}
 
-    {#if hasMore}
-      <div bind:this={loadMoreTrigger}>
-        {#if isLoadingMore}
-          <p class="text-sm text-gray-400">Loading more commits...</p>
-        {/if}
-      </div>
-    {/if}
-  </div>
+  {#if hasMore}
+    <div bind:this={loadMoreTrigger}>
+      {#if isLoadingMore}
+        <p class="text-sm text-gray-400">Loading more commits...</p>
+      {/if}
+    </div>
+  {/if}
 
-  <div>
-    <!-- prettier-ignore -->
-    <ContentPanel borderBottomDesktop>
-      <div class="flex flex-row items-center gap-3">
+  <!-- <div>
+    <div class="flex flex-row items-center gap-3">
         <iconify-icon icon="ph:stack-duotone" class="size-5 text-xl text-zinc-500"></iconify-icon>
         <h2>Details</h2>
       </div>
-      <ul class="flex-col flex gap-3 text-sm text-muted">
-        <li>Hosted on <a href="https://github.com/workingonstudio/workingon.studio">Github</a> pages.</li>
-        <li>Built with <a href="https://astro.build/">Astro</a> and <a href="https://svelte.dev/">Svelte</a>.</li>
-        <li>Licenced files hosted on <a href="https://cloudflare.com">CloudFlare</a>.</li>
-        <li>Set with <a href="https://www.fontshare.com/fonts/satoshi">Satoshi</a> and <a href="https://rsms.me/inter/">Inter</a> via <a href="https://www.fontshare.com/">FontShare</a> and <a href="https://fonts.bunny.net/">Bunny</a>.</li>
-        <li>Icons are <a href="https://phosphoricons.com/">Phosphor</a> via <a href="https://iconify.design/">Iconfiy</a>.</li>
-        <li>Analytics tracked anonymously via <a href="https://umami.is/">Umami</a> self-hosted via <a href="https://railway.com/">Railway</a>.</li>
-      </ul>
-    </ContentPanel>
-  </div>
+    <ul class="flex-col flex gap-3 text-sm text-muted">
+      <li>Hosted on <a href="https://github.com/workingonstudio/workingon.studio">Github</a> pages.</li>
+      <li>Built with <a href="https://astro.build/">Astro</a> and <a href="https://svelte.dev/">Svelte</a>.</li>
+      <li>Licenced files hosted on <a href="https://cloudflare.com">CloudFlare</a>.</li>
+      <li>Set with <a href="https://www.fontshare.com/fonts/satoshi">Satoshi</a> and <a href="https://rsms.me/inter/">Inter</a> via <a href="https://www.fontshare.com/">FontShare</a> and <a href="https://fonts.bunny.net/">Bunny</a>.</li>
+      <li>Icons are <a href="https://phosphoricons.com/">Phosphor</a> via <a href="https://iconify.design/">Iconfiy</a>.</li>
+      <li>Analytics tracked anonymously via <a href="https://umami.is/">Umami</a> self-hosted via <a href="https://railway.com/">Railway</a>.</li>
+    </ul>
+  </div> -->
 </PageLayout>
 
 <style>

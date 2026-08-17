@@ -5,19 +5,19 @@
 
   export let typefaces = [
     {
-      family: "Satoshi",
-      href: "https://www.fontshare.com/fonts/satoshi",
+      family: "General Sans",
+      href: "https://fontshare.com/fonts/general-sans",
     },
     {
-      family: "Inter",
-      href: "https://rsms.me/inter/",
+      family: "Azeret Mono",
+      href: "https://fontshare.com/fonts/azeret-mono",
     },
   ];
 </script>
 
 <footer class="flex flex-row">
   <!-- prettier-ignore -->
-  <div class="flex flex-1 flex-row justify-between p-6 font-medium">
+  <div class="flex flex-1 flex-row justify-between p-6 text-muted">
     <a
       href="https://find-and-update.company-information.service.gov.uk/company/16700615"
       class="text-muted text-xxs uppercase"
@@ -25,7 +25,7 @@
       workingonstudio ltd, no: 16700615
     </a>
 
-    <ul class="text-muted text-xxs flex-row gap-3 flex">
+    <ul class=" text-xxs flex-row gap-3 flex">
       <li class="flex flex-row items-center gap-1">
         <a href="https://astro.build/">Astro</a>
         <div class="relative -top-px">+</div>

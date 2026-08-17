@@ -14,7 +14,7 @@
   <ul class="stack">
     {#each workHistory as { title, company, status }}
       <li class="flex flex-col gap-1">
-        <strong class="text-header font-medium">{title} @ {company}</strong>
+        <strong class=" font-medium">{title} @ {company}</strong>
         <p class="text-muted text-sm">{status}</p>
       </li>
     {/each}

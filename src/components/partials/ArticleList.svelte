@@ -21,10 +21,7 @@
     {#each articles as article}
       <li class="flex flex-col gap-1">
         <h4>
-          <a
-            href={`/writing/${article.slug}`}
-            class="text-header flex flex-row items-center gap-2 font-medium hover:underline"
-          >
+          <a href={`/writing/${article.slug}`} class=" flex flex-row items-center gap-2 font-medium hover:underline">
             {article.title}
             <iconify-icon icon="ph:arrow-up-right-bold" class="size-4"></iconify-icon>
           </a>
