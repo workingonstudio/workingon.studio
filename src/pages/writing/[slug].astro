@@ -1,9 +1,6 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import PageLayout from "@components/partials/PageLayout.svelte";
-import ContentPanel from "@components/partials/ContentPanel.svelte";
-import ArticleList from "@components/partials/ArticleList.svelte";
-import SocialProfiles from "@components/partials/SocialProfiles.svelte";
 import { getCollection } from "astro:content";
 import { render } from "astro:content";
 
@@ -32,20 +29,10 @@ const otherPosts = allPosts
 ---
 
 <Layout title={post.data.title}>
-  <ContentPanel borderBottom>
+  <PageLayout extraStyles="w-full lg:w-xl py-12">
     <h1>{post.data.title}</h1>
-    <p class="text-medium text-muted">{post.data.description}</p>
-  </ContentPanel>
-
-  <PageLayout>
-    <div>
-      <ContentPanel>
-        <div class="article"><Content /></div>
-      </ContentPanel>
-    </div>
-    <div>
-      <ArticleList header="More Writing" articles={otherPosts} />
-      <SocialProfiles />
-    </div>
+    <p>{post.data.description}</p>
+    <div class="article"><Content /></div>
   </PageLayout>
+  <div></div>
 </Layout>

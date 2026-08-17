@@ -103,12 +103,12 @@ const currentPath = Astro.url.pathname;
   </head>
 
   <body id="#top" class="flex min-h-dvh flex-col">
-    <div class="sticky top-0 z-50 backdrop-blur-sm">
+    <div class="bg-bg-main sticky top-0 z-50">
       <div class="mx-auto w-full max-w-screen-2xl">
         <Header client:load {currentPath} />
       </div>
     </div>
-    <div class="mx-48 flex flex-1">
+    <div class="mx-4 flex flex-1 lg:mx-48">
       <slot />
     </div>
     <Footer client:visible />

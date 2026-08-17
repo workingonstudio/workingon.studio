@@ -1,5 +1,6 @@
 ---
 import Layout from "@layouts/Layout.astro";
+import PageLayout from "@components/partials/PageLayout.svelte";
 import DaysCounter from "@components/partials/DaysCounter.svelte";
 import { getCollection, render } from "astro:content";
 import { DateTime } from "luxon";
@@ -22,7 +23,7 @@ const projectData = await Promise.all(
       externalLink: p.data.externalLink,
       download: p.data.download ?? null,
       image: p.data.image,
-      isNew: DateTime.now().diff(DateTime.fromJSDate(p.data.publishedAt), "days").days < 30,
+      isNew: DateTime.now().diff(DateTime.fromJSDate(p.data.publishedAt), "days").days < 60,
       Content,
     };
   })
@@ -30,20 +31,18 @@ const projectData = await Promise.all(
 ---
 
 <Layout title="workingon.studio - Projects">
-  <div class="border-surface-border border-b px-8 py-9 lg:px-16 lg:py-12">
+  <PageLayout extraStyles="w-full lg:w-xl py-12">
     <h1 class="text-pretty">
+      <span class="text-primary">Projects</span><br />
       <DaysCounter client:load launchDate={launchDate} initialDays={initialDays} /> days passed.
-      {projectData.length} projects. Solo. Concept, design, development, live.
+      {projectData.length} projects.<br />Solo. Concept, design, development, live.
     </h1>
-  </div>
-
-  <div class="divide-surface-border divide-y">
     {
       projectData.map(({ Content, ...project }) => (
-        <div class="flex flex-col-reverse gap-8 p-8 lg:flex-row lg:gap-16 lg:p-16">
-          <div class="flex flex-col gap-8 lg:w-1/2">
+        <div class="flex gap-8">
+          <div class="flex flex-col gap-4">
             <div class="flex flex-col gap-2">
-              <div class="flex flex-row items-center justify-between gap-6">
+              <div class="flex flex-row items-center gap-3">
                 <a
                   href={project.externalLink ? project.link : `/projects/${project.link}`}
                   target={project.externalLink ? "_blank" : undefined}
@@ -52,52 +51,46 @@ const projectData = await Promise.all(
                 >
                   <h3>{project.title}.</h3>
                 </a>
+                {project.isNew && <span class="badge">New</span>}
               </div>
-              <p class="text-muted hidden text-sm md:block">{project.description}</p>
+              <p>{project.description}</p>
             </div>
-
-            <div class="flex flex-col gap-4">
-              <Content />
-            </div>
-
             <ul class="text-header flex flex-row gap-6 text-xs uppercase [&_a]:hover:underline!">
-              <li class="flex flex-row gap-3">
+              <li class="flex flex-row gap-2">
                 <a
                   href={project.externalLink ? project.link : `/projects/${project.link}`}
                   target={project.externalLink ? "_blank" : undefined}
                   rel={project.externalLink ? "noopener noreferrer" : undefined}
+                  class="text-primary"
                 >
                   Visit site
                 </a>
-                <iconify-icon icon="ph:arrow-up-right-bold" class="size-4 text-sm" />
+                <iconify-icon icon="ph:arrow-up-right-bold" class="text-primary size-4 text-sm" />
               </li>
               {project.download ? (
-                <li class="flex flex-row gap-3">
-                  <a href={project.download} target="_blank" rel="noopener noreferrer">
+                <li class="flex flex-row gap-2">
+                  <a
+                    href={project.download}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-primary"
+                  >
                     Add to Chrome
                   </a>
-                  <iconify-icon icon="ph:arrow-up-right-bold" class="size-4 text-sm" />
+                  <iconify-icon icon="ph:arrow-up-right-bold" class="text-primary size-4 text-sm" />
                 </li>
               ) : null}
             </ul>
           </div>
-
-          <div class="flex items-center justify-center lg:w-1/2">
-            <a
-              href={project.externalLink ? project.link : `/projects/${project.link}`}
-              target={project.externalLink ? "_blank" : undefined}
-              rel={project.externalLink ? "noopener noreferrer" : undefined}
-            >
-              <img
-                src={project.image}
-                alt={project.title}
-                class="border-surface-border w-full border transition-all duration-300"
-                loading="lazy"
-              />
-            </a>
-          </div>
         </div>
       ))
     }
-  </div>
+  </PageLayout>
 </Layout>
+
+<style>
+  @reference "@styles/main.css";
+  .badge {
+    @apply bg-primary/10 font-general-sans rounded-full px-2 py-1 text-[8px] font-semibold uppercase;
+  }
+</style>

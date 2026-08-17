@@ -8,11 +8,11 @@
 
   /* Colors */
   --color-primary: theme(colors.blue.600);
-  --color-header: theme(colors.neutral.900);
-  --color-body: theme(colors.neutral.800);
-  --color-muted: theme(colors.neutral.500);
-  --color-bg-main: theme(colors.neutral.50);
-  --color-surface: theme(colors.neutral.100);
+  --color-header: theme(colors.blue.950);
+  --color-body: theme(colors.blue.950);
+  --color-muted: theme(colors.neutral.600);
+  --color-bg-main: theme(colors.white);
+  --color-surface: theme(colors.neutral.50);
   --color-surface-border: theme(colors.neutral.200);
 }
 
@@ -59,7 +59,7 @@
   }
 
   p {
-    @apply text-sm text-pretty;
+    @apply text-sm/[24px] text-pretty;
   }
 }
 
@@ -67,15 +67,28 @@
 .article {
   @apply flex flex-col gap-6;
   blockquote {
-    @apply border-surface-border bg-surface rounded-lg border p-4;
+    @apply flex flex-col gap-3 py-12 text-2xl;
+    p {
+      @apply font-general-sans text-lg font-semibold italic;
+      ::before {
+        @apply content-['\201C'];
+      }
+      ::after {
+        @apply content-['\201D'];
+      }
+    }
+    ul {
+      li {
+        @apply text-muted text-sm;
+      }
+    }
   }
-  h3 {
-    @apply text-xl;
+  h2 {
+    @apply text-2xl;
   }
   a {
     @apply text-header underline;
   }
-
   sup {
     a {
       @apply text-xxs border-surface-border rounded-sm border px-1 py-0.5 font-semibold no-underline;

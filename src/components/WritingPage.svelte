@@ -1,33 +1,31 @@
 <script lang="ts">
-  import ContentPanel from "./partials/ContentPanel.svelte";
-  import PageLayout from "./partials/PageLayout.svelte";
+  import PageLayout from "@components/partials/PageLayout.svelte";
   export let posts;
 </script>
 
-<ContentPanel borderBottom>
-  <h1>Writing for designers who are tired of design writing.</h1>
-</ContentPanel>
-
-<PageLayout>
+<PageLayout extraStyles="w-full lg:w-xl py-12">
+  <h1>
+    <span class="text-primary">Writing</span>
+    <br />
+    For designers who are tired of design writing.
+  </h1>
   <div>
-    <ContentPanel>
-      <ul class="flex flex-col gap-5">
-        {#each posts as post}
-          <li class="flex flex-col gap-1">
-            <a
-              href={`/writing/${post.id}`}
-              class="text-header flex flex-row items-center gap-2 font-medium hover:underline"
-            >
-              {post.data.title}
-              <iconify-icon icon="ph:arrow-up-right-bold"></iconify-icon>
-            </a>
+    <ul class="flex flex-col gap-8">
+      {#each posts as post}
+        <li class="flex flex-col gap-4">
+          <div class="flex flex-col gap-2">
+            <h3>{post.data.title}</h3>
             {#if post.data.description}
-              <p class="text-muted text-sm">{post.data.description}</p>
+              <p>{post.data.description}</p>
             {/if}
-          </li>
-        {/each}
-      </ul>
-    </ContentPanel>
+          </div>
+          <a href={`/writing/${post.id}`} class="text-primary flex flex-row items-center gap-2 text-xs uppercase">
+            Read more
+            <iconify-icon icon="ph:arrow-up-right-bold"></iconify-icon>
+          </a>
+        </li>
+      {/each}
+    </ul>
   </div>
   <div></div>
 </PageLayout>

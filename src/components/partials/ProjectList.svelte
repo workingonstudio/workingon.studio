@@ -1,6 +1,4 @@
 <script lang="ts">
-  import ContentPanel from "./ContentPanel.svelte";
-
   type Project = {
     slug: string;
     title: string;
@@ -84,26 +82,22 @@
 
 <div class="divide-surface-border divide-y">
   {#if latest}
-    <ContentPanel>
-      <div class="flex flex-row items-center gap-3">
-        <iconify-icon icon="ph:rocket-launch-duotone" class="size-5 text-xl text-zinc-500"></iconify-icon>
-        <h2>Latest project</h2>
-      </div>
-      <ul class="stack">
-        {@render projectCard(latest)}
-      </ul>
-    </ContentPanel>
+    <div class="flex flex-row items-center gap-3">
+      <iconify-icon icon="ph:rocket-launch-duotone" class="size-5 text-xl text-zinc-500"></iconify-icon>
+      <h2>Latest project</h2>
+    </div>
+    <ul class="stack">
+      {@render projectCard(latest)}
+    </ul>
   {/if}
 
   {#if featured}
-    <ContentPanel>
-      <div class="flex flex-row items-center gap-3">
-        <iconify-icon icon="ph:medal-duotone" class="size-5 text-xl text-zinc-500"></iconify-icon>
-        <h2>Featured project</h2>
-      </div>
-      <ul class="stack">
-        {@render projectCard(featured)}
-      </ul>
-    </ContentPanel>
+    <div class="flex flex-row items-center gap-3">
+      <iconify-icon icon="ph:medal-duotone" class="size-5 text-xl text-zinc-500"></iconify-icon>
+      <h2>Featured project</h2>
+    </div>
+    <ul class="stack">
+      {@render projectCard(featured)}
+    </ul>
   {/if}
 </div>
