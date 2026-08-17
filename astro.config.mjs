@@ -93,14 +93,26 @@ export default defineConfig({
         subsets: ["latin"]
       },
       {
-       provider: fontProviders.fontshare(),
+        provider : fontProviders.fontshare(),
         name: "Satoshi",
-        cssVariable: "--font-satoshi",
+        cssVariable : "--font-satoshi",
         display: "swap",
-        weights: [600],
+        weights: [500, 700, 900],
         styles: ['normal'],
-        subsets: ["latin"] 
-      }
+        subsets: ["latin"]
+      },
+
+      // IsFigmaDown
+      {
+        provider: fontProviders.bunny(),
+        name: "Inter",
+        cssVariable: "--font-inter",
+        display: "swap",
+        weights: [400, 600],
+        styles: ['normal'],
+        subsets: ["latin"]
+      },
+
     ],
   vite: {
     plugins: [tailwindcss()],
