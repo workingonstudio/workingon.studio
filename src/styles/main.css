@@ -8,7 +8,7 @@
 
   /* Colors */
   --color-primary: theme(colors.blue.600);
-  --color-body: theme(colors.blue.950);
+  --color-body: theme(colors.neutral.900);
   --color-muted: theme(colors.neutral.400);
   --color-bg-main: theme(colors.white);
   --color-surface: theme(colors.neutral.50);
@@ -41,7 +41,7 @@
   h4 {
     font-family: var(--font-general-sans);
     font-feature-settings: "ss01" 1;
-    @apply font-semibold text-balance;
+    @apply font-semibold tracking-[-0.67px] text-balance;
   }
 
   h1 {
