@@ -47,7 +47,7 @@ export default defineConfig({
         name: "General Sans",
         cssVariable : "--font-general-sans",
         display: "swap",
-        weights: [500, 600, 700, 900],
+        weights: ["500 900"],
         styles: ['normal'],
         subsets: ["latin"]
       },
