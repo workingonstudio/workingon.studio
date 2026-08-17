@@ -11,7 +11,7 @@
   <div class="flex flex-col gap-4">
     <p>
       I work with companies to raise capital, increase user numbers and customer satisfaction through carefully
-      considered design decisions.
+      considered creative decisions.
     </p>
     <p>From Seed to Series A to Acquisition.</p>
   </div>
