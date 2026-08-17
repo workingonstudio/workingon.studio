@@ -51,8 +51,8 @@ const currentPath = Astro.url.pathname;
     </script>
 
     <ClientRouter />
-    <Font cssVariable="--font-satoshi" preload />
-    <Font cssVariable="--font-inter" preload />
+    <Font cssVariable="--font-general-sans" preload />
+    <Font cssVariable="--font-azeret-mono" preload />
     <AstroSeo
       {title}
       description={description || defaultDescription}
@@ -99,25 +99,17 @@ const currentPath = Astro.url.pathname;
     <meta name="generator" content={Astro.generator} />
     <Analytics />
     <StructuredData />
-    <!-- CDN Font Stylesheets -->
     <title>{title}</title>
   </head>
 
-  <body id="#top">
-    <div class="bg-bg-main/98 border-surface-border sticky top-0 z-50 border-y backdrop-blur-sm">
+  <body id="#top" class="flex min-h-dvh flex-col">
+    <div class="sticky top-0 z-50 backdrop-blur-sm">
       <div class="mx-auto w-full max-w-screen-2xl">
         <Header client:load {currentPath} />
       </div>
     </div>
-    <div class="mx-auto w-full max-w-screen-2xl">
-      <main
-        class="border-surface-border mx-0 flex flex-1 flex-col border-x-0 md:mx-16 md:border-x"
-        class:list={[{ "min-h-screen": fullHeight }]}
-      >
-        <div class="flex flex-1 flex-col justify-start">
-          <slot />
-        </div>
-      </main>
+    <div class="mx-48 flex flex-1">
+      <slot />
     </div>
     <Footer client:visible />
   </body>

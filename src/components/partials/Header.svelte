@@ -66,29 +66,16 @@
   ];
 </script>
 
-<header
-  class="group relative z-110 flex flex-row items-stretch justify-between transition-opacity duration-200 ease-out"
->
-  <a href="/" title="Home" class="flex w-16 flex-col items-center py-6 transition-none lg:justify-center">
-    <Logo width={27} />
+<header class="group relative z-110 flex flex-row items-center gap-25 transition-opacity duration-200 ease-out">
+  <a href="/" title="Home" class="flex size-25 flex-col items-center py-6 transition-none lg:justify-center">
+    <Logo width={24} />
   </a>
-
-  <nav
-    class="nav-scroll divide-x-muted/20 border-surface-border box-border flex-1 flex-col border-x p-8 text-xs lg:flex lg:px-16 lg:py-0"
-    class:!border-transparent={showMenu}
-  >
-    <ul class="hidden lg:flex lg:flex-row">
-      {#each navItems as { href, title, description, icon }}
+  <nav>
+    <ul class="flex flex-row gap-6">
+      {#each navItems as { href, title }}
         <li class="group" class:active={isActive(href)}>
           <a {href}>
-            <iconify-icon
-              icon="ph:{isActive(href) ? icon + '-duotone' : icon}"
-              class="text-muted text-xl"
-            ></iconify-icon>
-            <div class="flex flex-col">
-              <h2>{title}</h2>
-              <p class="transition-all duration-200 ease-out lg:hidden xl:block">{description}</p>
-            </div>
+            {title}
           </a>
         </li>
       {/each}
@@ -136,14 +123,10 @@
 
   header nav {
     ul {
-      @apply justify-between gap-12;
       li {
-        @apply flex flex-row items-center transition-opacity duration-300 lg:py-6;
+        @apply flex flex-row items-center transition-opacity duration-300;
         a {
-          @apply flex w-full flex-row items-center justify-between gap-4;
-          p {
-            @apply text-muted text-xs;
-          }
+          @apply text-sm capitalize;
         }
       }
     }

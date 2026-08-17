@@ -1,57 +1,26 @@
 <script lang="ts">
-  import ContentPanel from "@components/partials/ContentPanel.svelte";
-  import PageLayout from "@components/partials/PageLayout.svelte";
-  import ProjectList from "./partials/ProjectList.svelte";
-  import WorkHistory from "./partials/WorkHistory.svelte";
-  import About from "./partials/About.svelte";
-  import SocialProfiles from "./partials/SocialProfiles.svelte";
-  import ArticleList from "./partials/ArticleList.svelte";
-
-  type Project = {
-    slug: string;
-    title: string;
-    description: string;
-    link: string;
-    externalLink: boolean;
-    image: string;
-    featured: boolean;
-    publishedAt: string;
-    download: string | null;
-    body: string;
-  };
-
-  let {
-    articles,
-    projects,
-  }: {
-    articles: Array<{ slug: string; title: string; description?: string }>;
-    projects: Project[];
-  } = $props();
 </script>
 
-<ContentPanel borderBottom>
+<section class="flex w-xl flex-col justify-center gap-8">
   <h1>
-    Creative director.
+    <span class="text-primary">Creative direction</span>
+    for
     <br />
-    15 years leading design and creative for startups, five of them acquired.
+    companies ready to grow.
   </h1>
-</ContentPanel>
-
-<PageLayout>
-  <div>
-    <About />
-    <div class="lg:hidden">
-      <ProjectList {projects} />
-    </div>
-    <WorkHistory />
-    <ArticleList header="Writing" {articles} />
-    <SocialProfiles />
+  <div class="flex flex-col gap-4">
+    <p>
+      I work with companies to raise capital, increase user numbers, and customer satisfaction through carefully
+      considered design decisions.
+    </p>
+    <p>From Seed to Series A to Acquisition.</p>
   </div>
-  <div class="hidden lg:block">
-    <ProjectList {projects} />
-  </div>
-</PageLayout>
+  <a href="/contact" class="self-start">Get in touch</a>
+</section>
 
 <style>
   @reference "@styles/main.css";
+  a {
+    @apply bg-primary hover:text-primary rounded-full border border-transparent px-5 py-3 text-sm font-semibold text-white no-underline hover:bg-white;
+  }
 </style>

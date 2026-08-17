@@ -44,19 +44,19 @@ export default defineConfig({
       // Main
       {
         provider : fontProviders.fontshare(),
-        name: "Satoshi",
-        cssVariable : "--font-satoshi",
+        name: "General Sans",
+        cssVariable : "--font-general-sans",
         display: "swap",
-        weights: [500, 700, 900],
+        weights: [500, 600, 700, 900],
         styles: ['normal'],
         subsets: ["latin"]
       },
       {
-        provider: fontProviders.bunny(),
-        name: "Inter",
-        cssVariable: "--font-inter",
+        provider: fontProviders.fontshare(),
+        name: "Azeret Mono",
+        cssVariable: "--font-azeret-mono",
         display: "swap",
-        weights: [400, 600],
+        weights: [400, 500, 600],
         styles: ['normal'],
         subsets: ["latin"]
       },
@@ -91,6 +91,15 @@ export default defineConfig({
         weights: [600],
         styles: ['normal'],
         subsets: ["latin"]
+      },
+      {
+       provider: fontProviders.fontshare(),
+        name: "Satoshi",
+        cssVariable: "--font-satoshi",
+        display: "swap",
+        weights: [600],
+        styles: ['normal'],
+        subsets: ["latin"] 
       }
     ],
   vite: {

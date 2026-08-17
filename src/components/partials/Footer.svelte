@@ -15,11 +15,9 @@
   ];
 </script>
 
-<footer class="border-t-surface-border flex flex-row border-t">
+<footer class="flex flex-row">
   <!-- prettier-ignore -->
-  <div class="flex flex-col justify-center items-center w-16 transition-none">
-  </div>
-  <div class="border-surface-border flex flex-1 flex-row justify-between border-x p-6 font-medium lg:px-16">
+  <div class="flex flex-1 flex-row justify-between p-6 font-medium">
     <a
       href="https://find-and-update.company-information.service.gov.uk/company/16700615"
       class="text-muted text-xxs uppercase"
@@ -27,7 +25,7 @@
       workingonstudio ltd, no: 16700615
     </a>
 
-    <ul class="text-muted text-xxs hidden flex-row gap-3 lg:flex">
+    <ul class="text-muted text-xxs flex-row gap-3 flex">
       <li class="flex flex-row items-center gap-1">
         <a href="https://astro.build/">Astro</a>
         <div class="relative -top-px">+</div>
@@ -50,8 +48,8 @@
       </li>
     </ul>
   </div>
-  <a href="#top" aria-label="Back to top" class="flex w-16 flex-col items-center justify-center transition-none">
-    <iconify-icon icon="ph:arrow-up-bold"></iconify-icon>
+  <a href="#top" aria-label="Back to top" class="group flex w-16 flex-col items-center justify-center transition-none">
+    <iconify-icon icon="ph:arrow-up-bold" class="text-muted group-hover:text-primary"></iconify-icon>
   </a>
 </footer>
 
