@@ -45,7 +45,7 @@
   }
 
   h1 {
-    @apply text-[40px]/[48px];
+    @apply text-3xl/tight lg:text-[40px]/[48px];
   }
 
   h2 {
@@ -57,7 +57,7 @@
   }
 
   p {
-    @apply text-sm/[24px] text-pretty;
+    @apply text-xs text-pretty lg:text-sm/[24px];
   }
 }
 

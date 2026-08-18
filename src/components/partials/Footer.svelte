@@ -17,7 +17,7 @@
 
 <footer class="flex flex-row">
   <!-- prettier-ignore -->
-  <div class="flex flex-1 flex-row justify-between py-6 px-9.5 text-muted">
+  <div class="flex flex-1 flex-row justify-between py-6 px-9 text-muted">
     <a
       href="https://find-and-update.company-information.service.gov.uk/company/16700615"
       class="text-muted text-xxs uppercase"

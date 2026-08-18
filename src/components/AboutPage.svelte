@@ -38,11 +38,11 @@
     Available now. Contract or full-time. If you ship more than you meet,
     <a href="/contact">we'll get on.</a>
   </p>
-  <img
+  <!-- <img
     src="/profile.webp"
     alt="Paul Mackenzie, creative director, seated on a sofa in front of a print that reads 'This is the naughty corner.'"
     loading="lazy"
-  />
+  /> -->
 </PageLayout>
 
 <style>

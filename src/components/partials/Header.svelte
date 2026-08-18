@@ -66,13 +66,13 @@
   ];
 </script>
 
-<header class="group relative z-110 flex flex-row items-center gap-24">
-  <a href="/" title="Home" class="flex flex-col items-center justify-center p-9.5">
+<header class="group relative z-110 flex flex-row items-center gap-24 p-9">
+  <a href="/" title="Home" class="flex flex-col items-center justify-center">
     <Logo width={24} />
   </a>
   <div class="flex flex-1 flex-row items-center justify-between">
     <nav>
-      <ul class="flex flex-row gap-6">
+      <ul class="hidden flex-row gap-6 lg:flex">
         {#each navItems as { href, title }}
           <li class="group" class:active={isActive(href)}>
             <a {href}>
@@ -82,7 +82,7 @@
         {/each}
       </ul>
     </nav>
-    <div class="flex flex-row items-start gap-4 p-6 lg:items-center">
+    <div class="flex flex-row items-start gap-4 lg:items-center">
       <ThemeToggle />
       <button
         type="button"
@@ -102,13 +102,11 @@
     : 'hidden'} mobile-nav bg-bg-main fixed inset-0 z-100 h-dvh flex-col items-center justify-center lg:hidden"
 >
   <ul class="flex w-full flex-col gap-12">
-    {#each navItems as { href, title, description, icon }}
+    {#each navItems as { href, title }}
       <li class="group text-center" class:active={isActive(href)}>
         <a {href} onclick={toggleMenu}>
-          <iconify-icon icon="ph:{isActive(href) ? icon + '-duotone' : icon}" class="text-muted text-xl"></iconify-icon>
           <div class="flex flex-col">
             <h2>{title}</h2>
-            <p class="transition-all duration-200 ease-out lg:hidden xl:block">{description}</p>
           </div>
         </a>
       </li>

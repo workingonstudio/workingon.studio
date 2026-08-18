@@ -3,7 +3,7 @@ import "../styles/base.css";
 import "../styles/main.css";
 
 import { Font } from "astro:assets";
-import { ClientRouter } from "astro:transitions";
+import { ClientRouter, fade } from "astro:transitions";
 
 import Analytics from "./partials/Analytics.astro";
 import StructuredData from "./partials/StructuredData.astro";
@@ -102,13 +102,13 @@ const currentPath = Astro.url.pathname;
     <title>{title}</title>
   </head>
 
-  <body id="#top" class="flex min-h-dvh flex-col">
+  <body id="#top" class="mx-auto flex min-h-dvh max-w-screen-2xl flex-col">
     <div class="bg-bg-main sticky top-0 z-50">
-      <div class="mx-auto w-full max-w-screen-2xl">
+      <div class="mx-auto w-full">
         <Header client:load {currentPath} transition:persist />
       </div>
     </div>
-    <div class="mx-4 flex flex-1 lg:mx-48">
+    <div class="mx-9 flex flex-1 lg:mx-38">
       <slot />
     </div>
     <Footer client:load transition:persist />
