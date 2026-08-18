@@ -15,12 +15,20 @@
     </p>
     <p>From Seed to Series A to Acquisition.</p>
   </div>
-  <a href="/contact" class="self-start">Get in touch</a>
+  <a
+    href="https://calendar.proton.me/bookings#NVvvSVCpaKbNT4DbZlq5V6A54KEogsB3x3MKEFEWYyY="
+    target="_blank"
+    class="self-start"
+  >
+    Book a call
+  </a>
 </section>
 
 <style>
   @reference "@styles/main.css";
   a {
-    @apply bg-primary hover:text-primary rounded-full border border-transparent px-5 py-3 text-sm font-semibold text-white no-underline hover:bg-white;
+    @apply bg-primary rounded-full border border-transparent px-5 py-3 text-sm font-semibold text-white no-underline;
+    @apply hover:text-primary hover:bg-bg-main;
+    @apply transition-colors duration-300;
   }
 </style>

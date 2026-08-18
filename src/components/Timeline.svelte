@@ -1,6 +1,5 @@
 <script>
   import { onMount, tick } from "svelte";
-  import ContentPanel from "./partials/ContentPanel.svelte";
   import PageLayout from "./partials/PageLayout.svelte";
   import { DateTime } from "luxon";
   export let timelineData;
@@ -124,7 +123,7 @@
 
 <PageLayout extraStyles="w-full lg:w-xl py-12">
   <h1>
-    <span class="text-primary">Progress</span>
+    <span class="text-primary">Progress.</span>
     <br />
     {result.totalCommits} commits. {result.totalMerges} merges. {result.totalPRs} pull requests. One rebase.
   </h1>

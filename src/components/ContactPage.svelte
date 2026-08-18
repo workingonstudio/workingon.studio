@@ -63,7 +63,7 @@
 
 <PageLayout extraStyles="w-full lg:w-xl py-12 justify-center">
   <h1>
-    <span class="text-primary">Contact</span>
+    <span class="text-primary">Contact.</span>
     <br />
     I work with founders that decide fast and ship faster.
   </h1>
@@ -75,7 +75,7 @@
       <button
         type="button"
         onclick={copyEmail}
-        class="text-primary flex cursor-pointer flex-row items-center gap-4 text-2xl font-bold"
+        class="text-primary flex cursor-pointer flex-row items-center gap-4 text-2xl font-bold hover:underline"
       >
         hello@workingon.studio
         <iconify-icon

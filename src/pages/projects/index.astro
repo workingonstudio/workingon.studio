@@ -33,10 +33,11 @@ const projectData = await Promise.all(
 <Layout title="workingon.studio - Projects">
   <PageLayout extraStyles="w-full lg:w-xl py-12">
     <h1 class="text-pretty">
-      <span class="text-primary">Projects</span><br />
+      <span class="text-primary">Projects.</span><br />
       <DaysCounter client:load launchDate={launchDate} initialDays={initialDays} /> days passed.
       {projectData.length} projects.<br />These sites are all live.
     </h1>
+    <p>Working directly with founders and their teams. Not as a pair of hands. As a guide.</p>
     {
       projectData.map(({ Content, ...project }) => (
         <div class="flex gap-8">
@@ -91,6 +92,6 @@ const projectData = await Promise.all(
 <style>
   @reference "@styles/main.css";
   .badge {
-    @apply bg-primary/10 font-general-sans rounded-full px-2 py-1 text-[8px] font-semibold uppercase;
+    @apply bg-primary/10 text-contrast font-general-sans rounded-full px-2 py-1 text-[8px] font-semibold uppercase;
   }
 </style>

@@ -10,6 +10,7 @@
   --color-primary: theme(colors.blue.600);
   --color-body: theme(colors.neutral.900);
   --color-muted: theme(colors.neutral.400);
+  --color-contrast: theme(colors.blue.900);
   --color-bg-main: theme(colors.white);
   --color-surface: theme(colors.neutral.50);
   --color-surface-border: theme(colors.neutral.200);
@@ -19,6 +20,7 @@
   --color-primary: theme(colors.rose.500);
   --color-body: theme(colors.stone.200);
   --color-muted: theme(colors.stone.400);
+  --color-contrast: theme(colors.white);
   --color-bg-main: theme(colors.stone.950);
   --color-surface: theme(colors.stone.900);
   --color-surface-border: theme(colors.stone.800);
@@ -41,7 +43,7 @@
   h4 {
     font-family: var(--font-general-sans);
     font-feature-settings: "ss01" 1;
-    @apply font-semibold tracking-[-0.67px] text-balance;
+    @apply font-medium tracking-[-0.67px] text-balance;
   }
 
   h1 {

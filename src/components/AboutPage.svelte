@@ -4,7 +4,7 @@
 
 <PageLayout extraStyles="w-xl py-12">
   <h1>
-    <span class="text-primary">About</span>
+    <span class="text-primary">About.</span>
     <br />
     Let me make the creative decisions so you can get on with what you do best.
   </h1>

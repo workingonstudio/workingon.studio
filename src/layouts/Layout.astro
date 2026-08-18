@@ -95,7 +95,8 @@ const currentPath = Astro.url.pathname;
       is:inline
       type="module"
       src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    ></script>
+    >
+    </script>
     <meta name="generator" content={Astro.generator} />
     <Analytics />
     <StructuredData />
@@ -111,6 +112,6 @@ const currentPath = Astro.url.pathname;
     <div class="mx-9 flex flex-1 lg:mx-38">
       <slot />
     </div>
-    <Footer client:load transition:persist />
+    <Footer transition:persist />
   </body>
 </html>
