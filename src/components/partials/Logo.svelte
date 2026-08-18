@@ -22,6 +22,6 @@
   }
 
   .logo :global(svg path) {
-    @apply fill-primary;
+    @apply fill-body;
   }
 </style>

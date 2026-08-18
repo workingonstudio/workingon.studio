@@ -18,12 +18,12 @@
 
 .dark {
   --color-primary: theme(colors.rose.500);
-  --color-body: theme(colors.stone.200);
-  --color-muted: theme(colors.stone.400);
+  --color-body: theme(colors.neutral.100);
+  --color-muted: theme(colors.neutral.400);
   --color-contrast: theme(colors.white);
-  --color-bg-main: theme(colors.stone.950);
-  --color-surface: theme(colors.stone.900);
-  --color-surface-border: theme(colors.stone.800);
+  --color-bg-main: theme(colors.neutral.950);
+  --color-surface: theme(colors.neutral.900);
+  --color-surface-border: theme(colors.neutral.800);
 }
 
 @layer base {
