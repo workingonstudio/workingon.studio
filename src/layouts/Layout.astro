@@ -63,7 +63,7 @@ const currentPath = Astro.url.pathname;
         description: description || defaultDescription,
         images: [
           {
-            url: Astro.site + "site-default.webp",
+            url: Astro.site + "/images/site-default.webp",
             height: 630,
             width: 1200,
             alt: "Paul Mackenzie — Creative Director, workingon.studio",
@@ -104,8 +104,8 @@ const currentPath = Astro.url.pathname;
     <title>{title}</title>
   </head>
 
-  <body id="#top" class="mx-auto flex min-h-dvh max-w-screen-2xl flex-col">
-    <div class="bg-bg-main sticky top-0 z-50">
+  <body id="#top" class="background mx-auto flex min-h-dvh max-w-screen-2xl flex-col">
+    <div class="sticky top-0 z-50">
       <div class="mx-auto w-full">
         <Header client:load {currentPath} transition:persist />
       </div>

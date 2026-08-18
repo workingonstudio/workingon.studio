@@ -11,9 +11,10 @@
   --color-body: theme(colors.neutral.900);
   --color-muted: theme(colors.neutral.400);
   --color-contrast: theme(colors.blue.900);
-  --color-bg-main: theme(colors.white);
+  --color-main: theme(colors.white);
   --color-surface: theme(colors.neutral.50);
   --color-surface-border: theme(colors.neutral.200);
+  --bg-pattern: url("/images/background-light.svg");
 }
 
 .dark {
@@ -21,19 +22,20 @@
   --color-body: theme(colors.neutral.100);
   --color-muted: theme(colors.neutral.400);
   --color-contrast: theme(colors.white);
-  --color-bg-main: theme(colors.neutral.950);
+  --color-main: theme(colors.neutral.950);
   --color-surface: theme(colors.neutral.900);
   --color-surface-border: theme(colors.neutral.800);
+  --bg-pattern: url("/images/background-dark.svg");
 }
 
 @layer base {
   body {
-    background-color: var(--color-bg-main);
+    background-color: var(--color-main);
     font-family: var(--font-azeret-mono);
     color: var(--color-body);
     ::selection {
       background-color: var(--color-primary);
-      color: var(--color-bg-main);
+      color: var(--color-main);
     }
   }
 
@@ -61,6 +63,10 @@
   p {
     @apply text-xs text-pretty lg:text-sm/[24px];
   }
+}
+
+.background {
+  @apply bg-(image:--bg-pattern) bg-size-[25px_25px] bg-repeat;
 }
 
 /* Article-specific styling */

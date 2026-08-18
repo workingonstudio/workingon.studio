@@ -39,7 +39,7 @@
     <a href="/contact">we'll get on.</a>
   </p>
   <!-- <img
-    src="/profile.webp"
+    src="/images/profile.webp"
     alt="Paul Mackenzie, creative director, seated on a sofa in front of a print that reads 'This is the naughty corner.'"
     loading="lazy"
   /> -->

@@ -28,7 +28,7 @@
   @reference "@styles/main.css";
   a {
     @apply bg-primary rounded-full border border-transparent px-5 py-3 text-sm font-semibold text-white no-underline;
-    @apply hover:text-primary hover:bg-bg-main;
+    @apply hover:text-primary hover:bg-transparent;
     @apply transition-colors duration-300;
   }
 </style>

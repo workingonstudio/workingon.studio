@@ -66,8 +66,8 @@
   ];
 </script>
 
-<header class="group relative z-110 flex flex-row items-center gap-24 p-9">
-  <a href="/" title="Home" class="flex flex-col items-center justify-center">
+<header class="group background bg-main relative z-110 flex flex-row items-center gap-24 p-9">
+  <a href="/" title="Home" class="group/logo text-body flex items-center justify-center">
     <Logo width={24} />
   </a>
   <div class="flex flex-1 flex-row items-center justify-between">
