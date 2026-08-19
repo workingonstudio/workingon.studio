@@ -11,7 +11,7 @@
   --color-body: theme(colors.neutral.900);
   --color-muted: theme(colors.neutral.400);
   --color-contrast: theme(colors.blue.900);
-  --color-main: theme(colors.white);
+  --color-main: theme(colors.neutral-50);
   --color-surface: theme(colors.neutral.50);
   --color-surface-border: theme(colors.neutral.200);
   --bg-pattern: url("/images/background-light.svg");
