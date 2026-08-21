@@ -1,5 +1,6 @@
 /* Main Site Theme - Enhanced with Layout Utilities */
 @import "./base.css";
+@import "@klinking/squircle/tailwind/utils.css";
 
 @theme {
   /* Typography */
