@@ -1,10 +1,8 @@
 <script lang="ts">
   import PageLayout from "@components/partials/PageLayout.svelte";
   import { onMount } from "svelte";
-  import { dayRate } from "../stores/dayRate";
-  import SocialProfiles from "./partials/SocialProfiles.svelte";
 
-  let displayRate = $state(500);
+  let displayRate = $state(400);
   let timeInterval: ReturnType<typeof setInterval> | null = null;
   let pageLoadTime = 0;
 
