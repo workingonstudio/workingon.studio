@@ -78,7 +78,7 @@
 <style>
   @reference "@styles/main.css";
   .work-wrapper {
-    @apply squircle-3xl flex h-88 flex-col overflow-hidden border-transparent bg-white p-12;
+    @apply squircle-3xl bg-surface flex h-88 flex-col overflow-hidden border-transparent p-12;
   }
   .work-wrapper img {
     @apply max-w-none flex-1 object-cover;
