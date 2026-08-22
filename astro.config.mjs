@@ -26,6 +26,7 @@ export default defineConfig({
       const excludePatterns = [
         '/projects/dadreply',
         '/projects/sketchtoday',
+        '/projects/sketch-today',
         '/projects/glyphpalette',
         '/projects/glyph-palette',
         '/projects/goodboy',

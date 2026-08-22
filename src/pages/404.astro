@@ -4,6 +4,16 @@ import PageLayout from "@components/partials/PageLayout.svelte";
 ---
 
 <Layout title="404">
+  <script is:inline>
+    const path = window.location.pathname;
+    const prefixes = ["/projects/sketchtoday", "/projects/sketch-today"];
+    const matched = prefixes.find((p) => path.startsWith(p));
+
+    if (matched) {
+      const rest = path.slice(matched.length);
+      window.location.replace("https://sketchto.day" + rest);
+    }
+  </script>
   <PageLayout extraStyles="w-full lg:w-xl py-12 justify-center">
     <h1 class="text-primary">404</h1>
     <p>Well this sucks.</p>
