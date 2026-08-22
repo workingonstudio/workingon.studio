@@ -15,30 +15,6 @@ const projectsCollection = defineCollection({
   }),
 });
 
-const sketchTodayCollection = defineCollection({
-  loader: glob({ pattern: "**/*.json", base: "./src/content/sketch-today" }),
-  schema: z.object({
-    category: z.enum(["icons", "palettes", "plugins", "systems"]),
-    type: z.enum(["icon", "palette", "plugin", "system"]),
-    slug: z.string(),
-    title: z.string(),
-    tagline: z.string(),
-    description: z.string(),
-    released: z.boolean(),
-    links: z.object({
-      download: z.string(),
-      github: z.string().optional(),
-      workspace: z.string().optional(),
-      source: z
-        .object({
-          label: z.string(),
-          url: z.string(),
-        })
-        .optional(),
-    }),
-  }),
-});
-
 const writingCollection = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/writing" }),
   schema: z.object({
@@ -50,7 +26,6 @@ const writingCollection = defineCollection({
 });
 
 export const collections = {
-  "sketch-today": sketchTodayCollection,
   writing: writingCollection,
   projects: projectsCollection,
 };
