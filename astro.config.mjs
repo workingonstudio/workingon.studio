@@ -15,7 +15,8 @@ export default defineConfig({
   "/projects/glyph-palette": "https://glyphpalette.com/",
   "/projects/glyph-palette/change-log": "https://glyphpalette.com/changelog",
   "/projects/goodboy": "/projects/good-boy/",
-  "/projects/sketchtoday": "/projects/sketch-today/",
+  "/projects/sketchtoday": "https://sketchto.day/",
+  "/projects/sketch-today": "https://sketchto.day/",
   "/projects/tinywave": "/projects/tiny-wave/",
   "/projects/hiddencurrent": "/projects/hidden-current/",
 },
@@ -25,6 +26,7 @@ export default defineConfig({
       const excludePatterns = [
         '/projects/dadreply',
         '/projects/sketchtoday',
+        '/projects/sketch-today',
         '/projects/glyphpalette',
         '/projects/glyph-palette',
         '/projects/goodboy',
@@ -58,17 +60,6 @@ export default defineConfig({
         display: "swap",
         weights: [400, 600],
         styles: ['normal'],
-        subsets: ["latin"]
-      },
-
-      // Sketch Today
-      {
-        provider: fontProviders.fontshare(),
-        name: "Montserrat",
-        cssVariable: "--font-montserrat",
-        display: "swap",
-        weights: [500, 600, 700, 900],
-        styles: ['normal', 'italic'],
         subsets: ["latin"]
       },
       
