@@ -34,16 +34,17 @@
     </div>
     <div class="grid grid-cols-1 gap-12 lg:grid-cols-2">
       <div class="work-wrapper items-center">
-        <img src="/images/work/eleven-play.png" width="260" loading="lazy" />
+        <img src="/images/work/eleven-play.png" width="260" alt="" loading="lazy" />
       </div>
       <div class="work-wrapper items-center justify-end">
-        <img src="/images/work/eleven-record.png" width="260" loading="lazy" />
+        <img src="/images/work/eleven-record.png" width="260" alt="" loading="lazy" />
       </div>
       <div class="work-wrapper relative items-center justify-end">
         <img
           src="/images/work/eleven-why.png"
           width="770"
           class="squircle-3xl absolute top-12 left-12"
+          alt=""
           loading="lazy"
         />
       </div>
@@ -52,6 +53,7 @@
           src="/images/work/heatoshi-account.png"
           width="708"
           class="squircle-3xl absolute top-12 left-12"
+          alt=""
           loading="lazy"
         />
       </div>
@@ -60,6 +62,7 @@
           src="/images/work/argo-transactions.png"
           width="780"
           class="squircle-3xl absolute top-12 left-12"
+          alt=""
           loading="lazy"
         />
       </div>
@@ -68,6 +71,7 @@
           src="/images/work/heatoshi-web.png"
           width="780"
           class="squircle-3xl absolute top-12 left-12"
+          alt=""
           loading="lazy"
         />
       </div>
