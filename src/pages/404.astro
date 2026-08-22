@@ -3,6 +3,16 @@ import Layout from "@layouts/Layout.astro";
 ---
 
 <Layout title="404">
+  <script is:inline>
+    const path = window.location.pathname;
+    const prefixes = ["/projects/sketchtoday", "/projects/sketch-today"];
+    const matched = prefixes.find((p) => path.startsWith(p));
+
+    if (matched) {
+      const rest = path.slice(matched.length);
+      window.location.replace("https://sketchto.day" + rest);
+    }
+  </script>
   <div class="flex h-dvh flex-col items-center gap-4 p-24">
     <h1 class="text-8xl!">404</h1>
     <p class="text-muted">Well this sucks.</p>
