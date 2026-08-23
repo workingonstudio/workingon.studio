@@ -1,13 +1,12 @@
 <script lang="ts">
 </script>
 
-<section class="flex w-full flex-col gap-30 py-12">
+<section class="flex w-full flex-col gap-30 py-24">
   <div class="flex flex-col gap-8 lg:w-xl">
     <h1>
-      <span class="text-primary">Creative direction</span>
-      for
+      <span class="text-primary">Creative direction.</span>
       <br />
-      companies ready to grow.
+      For companies ready to grow.
     </h1>
     <div class="flex flex-col gap-4">
       <p>

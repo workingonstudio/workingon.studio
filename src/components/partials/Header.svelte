@@ -151,9 +151,6 @@
       a {
         @apply flex flex-col items-center gap-1;
       }
-      p {
-        @apply text-muted text-xs;
-      }
     }
   }
 </style>

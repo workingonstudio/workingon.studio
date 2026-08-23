@@ -59,7 +59,7 @@
   });
 </script>
 
-<PageLayout extraStyles="w-full lg:w-xl py-12 justify-center">
+<PageLayout extraStyles="w-full lg:w-xl py-24">
   <h1>
     <span class="text-primary">Contact.</span>
     <br />

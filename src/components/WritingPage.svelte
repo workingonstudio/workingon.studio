@@ -3,7 +3,7 @@
   export let posts;
 </script>
 
-<PageLayout extraStyles="w-full lg:w-xl py-12">
+<PageLayout extraStyles="w-full lg:w-xl py-24">
   <h1>
     <span class="text-primary">Writing.</span>
     <br />

@@ -2,7 +2,7 @@
   import PageLayout from "@components/partials/PageLayout.svelte";
 </script>
 
-<PageLayout extraStyles="w-xl py-12">
+<PageLayout extraStyles="w-xl py-24">
   <h1>
     <span class="text-primary">About.</span>
     <br />
@@ -38,11 +38,16 @@
     Available now. Contract or full-time. If you ship more than you meet,
     <a href="/contact">we'll get on.</a>
   </p>
-  <!-- <img
+  <img
     src="/images/profile.webp"
     alt="Paul Mackenzie, creative director, seated on a sofa in front of a print that reads 'This is the naughty corner.'"
     loading="lazy"
-  /> -->
+    class="squircle-4xl w-80"
+  />
+  <div class="flex flex-col">
+    <h4>Paul Mackenzie</h4>
+    <p class="text-body text-xs">Creative Director & Founder.</p>
+  </div>
 </PageLayout>
 
 <style>
