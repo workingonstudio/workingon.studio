@@ -28,11 +28,8 @@ const otherPosts = allPosts
   }));
 ---
 
-<Layout title={post.data.title}>
-  <PageLayout extraStyles="w-full lg:w-xl py-12">
-    <h1>{post.data.title}</h1>
-    <p>{post.data.description}</p>
-    <div class="article"><Content /></div>
-  </PageLayout>
-  <div></div>
+<Layout title={post.data.title} extraStyles="w-full lg:w-xl py-24">
+  <h1>{post.data.title}</h1>
+  <p>{post.data.description}</p>
+  <div class="article"><Content /></div>
 </Layout>

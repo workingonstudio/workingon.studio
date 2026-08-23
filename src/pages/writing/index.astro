@@ -3,7 +3,7 @@
 import { getCollection } from "astro:content";
 
 import Layout from "@layouts/Layout.astro";
-import WritingPage from "@components/WritingPage.svelte";
+import Writing from "@components/Writing.svelte";
 
 const posts = await getCollection("writing");
 const sortedPosts = posts.sort(
@@ -11,6 +11,6 @@ const sortedPosts = posts.sort(
 );
 ---
 
-<Layout title="workingon.studio - Writing">
-  <WritingPage posts={sortedPosts} client:load />
+<Layout title="workingon.studio - Writing" extraStyles="w-full lg:w-xl py-24">
+  <Writing posts={sortedPosts} client:load />
 </Layout>

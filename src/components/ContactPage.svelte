@@ -1,29 +1,9 @@
 <script lang="ts">
-  import PageLayout from "@components/partials/PageLayout.svelte";
   import { onMount } from "svelte";
 
   let displayRate = $state(400);
   let timeInterval: ReturnType<typeof setInterval> | null = null;
   let pageLoadTime = 0;
-
-  function animateRate(startRate: number, targetRate: number) {
-    const duration = 800;
-    const startTime = Date.now();
-
-    function animate() {
-      const elapsed = Date.now() - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-      const easeProgress = 1 - Math.pow(1 - progress, 3);
-
-      displayRate = Math.round((startRate + (targetRate - startRate) * easeProgress) * 10) / 10;
-
-      if (progress < 1) {
-        requestAnimationFrame(animate);
-      }
-    }
-
-    animate();
-  }
 
   function startTimeBasedIncrement(baseRate: number) {
     pageLoadTime = Date.now();
@@ -59,35 +39,33 @@
   });
 </script>
 
-<PageLayout extraStyles="w-full lg:w-xl py-24">
-  <h1>
-    <span class="text-primary">Contact.</span>
-    <br />
-    I work with founders that decide fast and ship faster.
-  </h1>
+<h1>
+  <span class="text-primary">Contact.</span>
+  <br />
+  I work with founders that decide fast and ship faster.
+</h1>
 
-  <div class="row flex flex-col gap-4">
-    <!-- prettier-ignore -->
-    <p>£<span class="tabular-nums">{displayRate.toFixed(2)}</span>/day. The rate increases while you think about it.</p>
-    <div class="flex flex-row items-center gap-2">
-      <button
-        type="button"
-        onclick={copyEmail}
-        class="text-primary flex cursor-pointer flex-row items-center gap-4 text-2xl font-bold hover:underline"
-      >
-        hello@workingon.studio
-        <iconify-icon
-          icon={copied ? "ph:check-circle-duotone" : "ph:copy-duotone"}
-          class="text-muted size-4.5 text-lg {copied ? 'text-primary' : ''}"
-        ></iconify-icon>
-      </button>
-      {#if copied}
-        <span class="text-xxs font-bold uppercase no-underline!">copied</span>
-      {/if}
-    </div>
-    <p>If I don't reply within 7 days, assume it's a no, I'm on holiday, or dead. Whatever makes you feel better.</p>
+<div class="row flex flex-col gap-4">
+  <!-- prettier-ignore -->
+  <p>£<span class="tabular-nums">{displayRate.toFixed(2)}</span>/day. The rate increases while you think about it.</p>
+  <div class="flex flex-row items-center gap-2">
+    <button
+      type="button"
+      onclick={copyEmail}
+      class="text-primary flex cursor-pointer flex-row items-center gap-4 text-2xl font-bold hover:underline"
+    >
+      hello@workingon.studio
+      <iconify-icon
+        icon={copied ? "ph:check-circle-duotone" : "ph:copy-duotone"}
+        class="text-muted size-4.5 text-lg {copied ? 'text-primary' : ''}"
+      ></iconify-icon>
+    </button>
+    {#if copied}
+      <span class="text-xxs font-bold uppercase no-underline!">copied</span>
+    {/if}
   </div>
-</PageLayout>
+  <p>If I don't reply within 7 days, assume it's a no, I'm on holiday, or dead. Whatever makes you feel better.</p>
+</div>
 
 <style>
   @reference "@styles/main.css";

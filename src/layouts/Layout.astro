@@ -15,10 +15,10 @@ import Footer from "@components/partials/Footer.svelte";
 export interface Props {
   title: string;
   description?: string;
-  fullHeight?: boolean;
+  extraStyles?: string;
 }
 
-const { title, description, fullHeight = true } = Astro.props;
+const { title, description, extraStyles } = Astro.props;
 const defaultDescription =
   "workingon.studio. Creative direction for founders and early-stage teams. In-house product development. Founded by Paul Mackenzie — 16 years, five acquisitions.";
 const currentURL = new URL(Astro.url.pathname, Astro.site).href;
@@ -96,8 +96,7 @@ const currentPath = Astro.url.pathname;
       is:inline
       type="module"
       src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    >
-    </script>
+    ></script>
     <meta name="generator" content={Astro.generator} />
     <Analytics />
     <StructuredData />
@@ -111,7 +110,9 @@ const currentPath = Astro.url.pathname;
       </div>
     </div>
     <div class="mx-9 flex flex-1 lg:mx-38">
-      <slot />
+      <section class:list={["flex flex-col gap-8", extraStyles]}>
+        <slot />
+      </section>
     </div>
     <Footer transition:persist />
   </body>

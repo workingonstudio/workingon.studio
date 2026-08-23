@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Badge from "@components/solidarity/partials/Badge.svelte";
+  import Badge from "@components/project/solidarity/partials/Badge.svelte";
 </script>
 
 <div class="header sticky top-0 z-30 my-20 flex flex-1 bg-stone-50/95 py-6">

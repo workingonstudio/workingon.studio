@@ -3,7 +3,7 @@ import Layout from "@layouts/Layout.astro";
 import PageLayout from "@components/partials/PageLayout.svelte";
 ---
 
-<Layout title="404">
+<Layout title="404" extraStyles="w-full lg:w-xl py-24">
   <script is:inline>
     const path = window.location.pathname;
     const prefixes = ["/projects/sketchtoday", "/projects/sketch-today"];
@@ -14,12 +14,11 @@ import PageLayout from "@components/partials/PageLayout.svelte";
       window.location.replace("https://sketchto.day" + rest);
     }
   </script>
-  <PageLayout extraStyles="w-full lg:w-xl py-12 justify-center">
-    <h1 class="text-primary">404</h1>
-    <p>Well this sucks.</p>
-    <p>Either you have hit a link that doesn't exist anymore.<br />Or you're snooping around.</p>
-    <a href="/" class="text-primary text-xs">back home</a>
-  </PageLayout>
+
+  <h1 class="text-primary">404</h1>
+  <p>Well this sucks.</p>
+  <p>Either you have hit a link that doesn't exist anymore.<br />Or you're snooping around.</p>
+  <a href="/" class="text-primary text-xs">back home</a>
 </Layout>
 
 <style>
