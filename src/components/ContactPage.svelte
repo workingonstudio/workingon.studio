@@ -39,32 +39,35 @@
   });
 </script>
 
-<h1>
-  <span class="text-primary">Contact.</span>
-  <br />
-  I work with founders that decide fast and ship faster.
-</h1>
-
-<div class="row flex flex-col gap-4">
-  <!-- prettier-ignore -->
-  <p>£<span class="tabular-nums">{displayRate.toFixed(2)}</span>/day. The rate increases while you think about it.</p>
-  <div class="flex flex-row items-center gap-2">
-    <button
-      type="button"
-      onclick={copyEmail}
-      class="text-primary flex cursor-pointer flex-row items-center gap-4 text-2xl font-bold hover:underline"
-    >
-      hello@workingon.studio
-      <iconify-icon
-        icon={copied ? "ph:check-circle-duotone" : "ph:copy-duotone"}
-        class="text-muted size-4.5 text-lg {copied ? 'text-primary' : ''}"
-      ></iconify-icon>
-    </button>
-    {#if copied}
-      <span class="text-xxs font-bold uppercase no-underline!">copied</span>
-    {/if}
+<div class="flex flex-col gap-30 lg:w-xl">
+  <div class="flex flex-col gap-8">
+    <h1>
+      <span class="text-primary">Contact.</span>
+      <br />
+      I work with founders that decide fast and ship faster.
+    </h1>
+    <!-- prettier-ignore -->
+    <p>£<span class="tabular-nums">{displayRate.toFixed(2)}</span>/day. The rate increases while you think about it.</p>
   </div>
-  <p>If I don't reply within 7 days, assume it's a no, I'm on holiday, or dead. Whatever makes you feel better.</p>
+  <div class="flex flex-col gap-6">
+    <div class="flex flex-row items-center gap-2">
+      <button
+        type="button"
+        onclick={copyEmail}
+        class="text-primary flex cursor-pointer flex-row items-center gap-4 text-2xl font-bold hover:underline"
+      >
+        hello@workingon.studio
+        <iconify-icon
+          icon={copied ? "ph:check-circle-duotone" : "ph:copy-duotone"}
+          class="text-muted size-4.5 text-lg {copied ? 'text-primary' : ''}"
+        ></iconify-icon>
+      </button>
+      {#if copied}
+        <span class="text-xxs font-bold uppercase no-underline!">copied</span>
+      {/if}
+    </div>
+    <p>If I don't reply within 7 days, assume it's a no, I'm on holiday, or dead. Whatever makes you feel better.</p>
+  </div>
 </div>
 
 <style>

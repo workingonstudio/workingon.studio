@@ -3,7 +3,7 @@
 import { getCollection } from "astro:content";
 
 import Layout from "@layouts/Layout.astro";
-import Writing from "@components/Writing.svelte";
+import PageHeader from "@layouts/partials/PageHeader.astro";
 
 const posts = await getCollection("writing");
 const sortedPosts = posts.sort(
@@ -11,6 +11,33 @@ const sortedPosts = posts.sort(
 );
 ---
 
-<Layout title="workingon.studio - Writing" extraStyles="w-full lg:w-xl py-24">
-  <Writing posts={sortedPosts} client:load />
+<Layout title="workingon.studio - Writing">
+  <PageHeader>
+    <h1>
+      <span class="text-primary">Writing.</span>
+      <br />
+      For designers who are tired of design writing.
+    </h1>
+    <p>Working directly with founders and their teams. Not as a pair of hands. As a guide.</p>
+  </PageHeader>
+  <ul class="flex flex-col gap-8">
+    {
+      sortedPosts.map((post) => (
+        <li class="flex flex-col gap-4">
+          <div class="flex flex-col gap-2">
+            <a href={`/writing/${post.id}`} class="hover:underline">
+              <h3>{post.data.title}</h3>
+            </a>
+            {post.data.description && <p>{post.data.description}</p>}
+          </div>
+          <div class="text-primary flex flex-row items-center gap-2">
+            <a href={`/writing/${post.id}`} class="text-xs uppercase hover:underline">
+              Read more
+            </a>
+            <iconify-icon icon="ph:arrow-up-right-bold" />
+          </div>
+        </li>
+      ))
+    }
+  </ul>
 </Layout>

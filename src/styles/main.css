@@ -1,6 +1,5 @@
 /* Main Site Theme - Enhanced with Layout Utilities */
 @import "./base.css";
-@import "@klinking/squircle/tailwind/utils.css";
 
 @theme {
   /* Typography */
@@ -9,7 +8,7 @@
 
   /* Colors */
   --color-primary: theme(colors.blue.600);
-  --color-body: theme(colors.neutral.900);
+  --color-body: theme(colors.neutral.800);
   --color-muted: theme(colors.neutral.400);
   --color-contrast: theme(colors.blue.900);
   --color-main: theme(colors.neutral-50);

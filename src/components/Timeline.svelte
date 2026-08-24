@@ -120,15 +120,17 @@
   const result = getGitHubStats(timelineData);
 </script>
 
-<h1>
-  <span class="text-primary">Progress.</span>
-  <br />
-  {result.totalCommits} commits. {result.totalMerges} merges. {result.totalPRs} pull requests. One rebase.
-</h1>
-<!-- prettier-ignore -->
-<p>
-    Every change and commit for this site, out in the open. Browse the <a href="https://github.com/workingonstudio/workingon.studio" class="text-primary">repo on Github</a>.
-  </p>
+<div class="flex flex-col gap-8 lg:w-xl">
+  <h1>
+    <span class="text-primary">Progress.</span>
+    <br />
+    {result.totalCommits} commits. {result.totalMerges} merges. {result.totalPRs} pull requests. One rebase.
+  </h1>
+  <!-- prettier-ignore -->
+  <p>
+      Every change and commit for this site, out in the open. Browse the <a href="https://github.com/workingonstudio/workingon.studio" class="text-primary">repo on Github</a>.
+    </p>
+</div>
 {#each groupedEntries as group}
   <div class="flex flex-col gap-6">
     <h3 class="flex flex-row items-center gap-2 text-xl">
