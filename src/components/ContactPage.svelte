@@ -1,17 +1,17 @@
 <script lang="ts">
   import { onMount } from "svelte";
 
-  let displayRate = $state(400);
+  let { baseRate = 400 }: { baseRate?: number } = $props();
+
+  let displayRate = $state(baseRate);
   let timeInterval: ReturnType<typeof setInterval> | null = null;
   let pageLoadTime = 0;
 
-  function startTimeBasedIncrement(baseRate: number) {
+  function startTimeBasedIncrement(rate: number) {
     pageLoadTime = Date.now();
-
-    // Update every 100ms (10 times per second for smooth pence updates)
     timeInterval = setInterval(() => {
       const elapsedSeconds = (Date.now() - pageLoadTime) / 1000;
-      displayRate = Math.round((baseRate + elapsedSeconds) * 10) / 10;
+      displayRate = Math.round((rate + elapsedSeconds) * 10) / 10;
     }, 100);
   }
 
@@ -34,7 +34,7 @@
 
   onMount(() => {
     setTimeout(() => {
-      startTimeBasedIncrement(displayRate);
+      startTimeBasedIncrement(baseRate);
     }, 500);
   });
 </script>

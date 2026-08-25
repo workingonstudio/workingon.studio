@@ -1,6 +1,6 @@
 ---
 title: "Is Figma Down"
-description: "It's always down. You just don't know it yet."
+description: "A satirical site showing the pitfalls of always online software."
 publishedAt: 2025-10-22
 link: "https://isfigmadown.com/"
 externalLink: true

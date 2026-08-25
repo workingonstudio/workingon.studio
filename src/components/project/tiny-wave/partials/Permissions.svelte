@@ -36,7 +36,7 @@
 <div {...dialog.overlay} class="bg-white/20"></div>
 <dialog
   {...dialog.content}
-  class="fixed top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 border border-white shadow-lg ring ring-gray-300 md:w-md"
+  class="squircle-3xl fixed top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 border border-white shadow-lg ring ring-gray-300 md:w-md"
 >
   <PrivacyModal />
 </dialog>

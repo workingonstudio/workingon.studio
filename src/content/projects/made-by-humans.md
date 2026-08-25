@@ -1,6 +1,6 @@
 ---
 title: "Madebyhumans"
-description: "An open art piece, based on turning up."
+description: "An open art piece, based on turning up. The canvas fossilises at the end of the day."
 publishedAt: 2026-02-19
 link: "https://madebyhumans.day"
 externalLink: true

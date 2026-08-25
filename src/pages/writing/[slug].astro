@@ -1,8 +1,8 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import PageLayout from "@components/partials/PageLayout.svelte";
 import { getCollection } from "astro:content";
 import { render } from "astro:content";
+import PageHeader from "@layouts/partials/PageHeader.astro";
 
 export async function getStaticPaths() {
   const posts = await getCollection("writing");
@@ -29,7 +29,11 @@ const otherPosts = allPosts
 ---
 
 <Layout title={post.data.title} extraStyles="w-full lg:w-xl py-24">
-  <h1>{post.data.title}</h1>
-  <p>{post.data.description}</p>
-  <div class="article"><Content /></div>
+  <PageHeader>
+    <h1>{post.data.title}</h1>
+    <p>{post.data.description}</p>
+  </PageHeader>
+  <div class="article">
+    <Content />
+  </div>
 </Layout>
