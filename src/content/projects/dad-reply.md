@@ -1,6 +1,6 @@
 ---
 title: "Dad Reply"
-description: "Reply to emails rapidly, and like your Dad."
+description: "Chrome plugin to rapidly reply to emails with a thumb up emoji."
 publishedAt: 2025-08-06
 link: "https://dadreply.com"
 externalLink: true

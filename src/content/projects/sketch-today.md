@@ -1,6 +1,6 @@
 ---
 title: "Sketch Today"
-description: "Everything you need when you come back to Sketch."
+description: "A collection of modern Sketch resources to help you make the switch."
 publishedAt: 2025-10-16
 link: "https://sketchto.day"
 externalLink: true

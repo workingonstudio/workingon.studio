@@ -1,6 +1,6 @@
 ---
 title: "No Clean Sheet"
-description: "Every fixture, scored by the human rights records of the countries involved."
+description: "Every World Cup fixture, scored by the human rights records of the countries involved."
 publishedAt: 2026-06-25
 link: "https://nocleansheet.com"
 externalLink: true

@@ -1,6 +1,6 @@
 ---
 title: "Tiny Wave"
-description: "Draw SVG audiowaves with your voice."
+description: "Create editable SVG audiowaves with your voice. Copy them into you designs."
 publishedAt: 2026-02-22
 link: "/projects/tiny-wave"
 externalLink: true

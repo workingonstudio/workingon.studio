@@ -1,6 +1,6 @@
 ---
 title: "Solidarity"
-description: "Makes everyone on LinkedIn #opentowork. Everyone."
+description: "Browser plugin that makes everyone on LinkedIn #opentowork. Everyone."
 publishedAt: 2025-08-19
 link: "solidarity"
 externalLink: false

@@ -1,6 +1,6 @@
 ---
 title: "Glyph Palette"
-description: "Search and insert 10,000+ icons. Officially recognised by Sketch."
+description: "Sketch plugin allowing you to insert 10,000 + icons from popular sets."
 publishedAt: 2025-11-01
 link: "https://glyphpalette.com/"
 externalLink: true

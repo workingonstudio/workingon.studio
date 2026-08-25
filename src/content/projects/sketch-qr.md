@@ -1,6 +1,6 @@
 ---
 title: "Sketch QR"
-description: "Create and insert SVG QR codes in Sketch. Free."
+description: "Sketch plugin for creating and inserting QR codes for free."
 publishedAt: 2026-01-19
 link: "https://github.com/workingonstudio/sketch-qr.sketchplugin"
 externalLink: true
