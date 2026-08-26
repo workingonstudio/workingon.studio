@@ -1,6 +1,6 @@
 ---
 /**
- * BaseLayout.astro
+ * Layout.astro
  * Shared document shell for all product and main site layouts.
  *
  * Every layout in this project shares: html shell, charset, viewport,
@@ -17,8 +17,8 @@
  */
 
 import { ClientRouter } from "astro:transitions";
-import { AstroSeo } from "@astrolib/seo";
-import Analytics from "./partials/Analytics.astro";
+import Seo from "@layouts/partials/Seo.astro";
+import Analytics from "../partials/Analytics.astro";
 
 export interface SeoProps {
   title: string;
@@ -76,7 +76,7 @@ const {
 
     <ClientRouter />
 
-    <AstroSeo
+    <Seo
       title={seo.title}
       description={seo.description}
       canonical={seo.canonical}
@@ -134,7 +134,6 @@ const {
       src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
     >
     </script>
-
     <meta name="generator" content={Astro.generator} />
     <Analytics productName={productName} />
     <title>{seo.title}</title>

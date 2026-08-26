@@ -66,61 +66,47 @@
   ];
 </script>
 
-<header
-  class="group relative z-110 flex flex-row items-stretch justify-between transition-opacity duration-200 ease-out"
->
-  <a href="/" title="Home" class="flex w-16 flex-col items-center py-6 transition-none lg:justify-center">
-    <Logo width={27} />
+<header class="group background bg-main relative z-110 flex flex-row items-center gap-24 p-9">
+  <a href="/" title="Home" class="group/logo text-body flex items-center justify-center">
+    <Logo width={24} />
   </a>
-
-  <nav
-    class="nav-scroll divide-x-muted/20 border-surface-border box-border flex-1 flex-col border-x p-8 text-xs lg:flex lg:px-16 lg:py-0"
-    class:!border-transparent={showMenu}
-  >
-    <ul class="hidden lg:flex lg:flex-row">
-      {#each navItems as { href, title, description, icon }}
-        <li class="group" class:active={isActive(href)}>
-          <a {href}>
-            <iconify-icon
-              icon="ph:{isActive(href) ? icon + '-duotone' : icon}"
-              class="text-muted text-xl"
-            ></iconify-icon>
-            <div class="flex flex-col">
-              <h2>{title}</h2>
-              <p class="transition-all duration-200 ease-out lg:hidden xl:block">{description}</p>
-            </div>
-          </a>
-        </li>
-      {/each}
-    </ul>
-  </nav>
-
-  <div class="flex flex-row items-start gap-4 p-6 lg:items-center">
-    <ThemeToggle />
-    <button
-      type="button"
-      onclick={toggleMenu}
-      aria-label="Toggle menu"
-      class="hover:*:text-primary flex size-4 cursor-pointer lg:hidden"
-    >
-      <iconify-icon icon="ph:{showMenu ? 'x-bold' : 'list'}" class="text-muted size-4"></iconify-icon>
-    </button>
+  <div class="flex flex-1 flex-row items-center justify-between">
+    <nav>
+      <ul class="hidden flex-row gap-6 lg:flex">
+        {#each navItems as { href, title }}
+          <li class="group" class:active={isActive(href)}>
+            <a {href}>
+              {title}
+            </a>
+          </li>
+        {/each}
+      </ul>
+    </nav>
+    <div class="flex flex-row items-start gap-4 lg:items-center">
+      <ThemeToggle />
+      <button
+        type="button"
+        onclick={toggleMenu}
+        aria-label="Toggle menu"
+        class="hover:*:text-primary flex size-4 cursor-pointer lg:hidden"
+      >
+        <iconify-icon icon="ph:{showMenu ? 'x-bold' : 'list'}" class="text-muted size-4"></iconify-icon>
+      </button>
+    </div>
   </div>
 </header>
 
 <nav
   class="{showMenu
     ? 'flex'
-    : 'hidden'} mobile-nav bg-bg-main fixed inset-0 z-100 h-dvh flex-col items-center justify-center lg:hidden"
+    : 'hidden'} mobile-nav bg-main fixed inset-0 z-100 h-dvh flex-col items-center justify-center lg:hidden"
 >
   <ul class="flex w-full flex-col gap-12">
-    {#each navItems as { href, title, description, icon }}
+    {#each navItems as { href, title }}
       <li class="group text-center" class:active={isActive(href)}>
         <a {href} onclick={toggleMenu}>
-          <iconify-icon icon="ph:{isActive(href) ? icon + '-duotone' : icon}" class="text-muted text-xl"></iconify-icon>
           <div class="flex flex-col">
             <h2>{title}</h2>
-            <p class="transition-all duration-200 ease-out lg:hidden xl:block">{description}</p>
           </div>
         </a>
       </li>
@@ -136,14 +122,10 @@
 
   header nav {
     ul {
-      @apply justify-between gap-12;
       li {
-        @apply flex flex-row items-center transition-opacity duration-300 lg:py-6;
+        @apply flex flex-row items-center transition-opacity duration-300;
         a {
-          @apply flex w-full flex-row items-center justify-between gap-4;
-          p {
-            @apply text-muted text-xs;
-          }
+          @apply text-sm capitalize;
         }
       }
     }
@@ -168,9 +150,6 @@
       @apply transition-opacity duration-300;
       a {
         @apply flex flex-col items-center gap-1;
-      }
-      p {
-        @apply text-muted text-xs;
       }
     }
   }

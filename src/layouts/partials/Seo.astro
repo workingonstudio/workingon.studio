@@ -1,0 +1,112 @@
+---
+/**
+ * Seo.astro
+ * Local replacement for @astrolib/seo (unmaintained, peer-capped at Astro 5).
+ * Prop shape is intentionally identical to <AstroSeo /> so call sites are unchanged.
+ * Renders <title>, so layouts must not render their own.
+ */
+
+export interface OpenGraphImage {
+  url: string;
+  width?: number;
+  height?: number;
+  alt?: string;
+  type?: string;
+}
+
+export interface OpenGraph {
+  url?: string;
+  title?: string;
+  description?: string;
+  images?: OpenGraphImage[];
+  site_name?: string;
+  type?: string;
+  locale?: string;
+}
+
+export interface Twitter {
+  cardType?: string;
+  /** Maps to twitter:site */
+  site?: string;
+  /** Maps to twitter:creator */
+  handle?: string;
+}
+
+export interface MetaTag {
+  name?: string;
+  property?: string;
+  content: string;
+}
+
+export interface Props {
+  title: string;
+  description?: string;
+  canonical?: string;
+  noindex?: boolean;
+  nofollow?: boolean;
+  openGraph?: OpenGraph;
+  twitter?: Twitter;
+  additionalMetaTags?: MetaTag[];
+}
+
+const {
+  title,
+  description,
+  canonical,
+  noindex = false,
+  nofollow = false,
+  openGraph,
+  twitter,
+  additionalMetaTags = [],
+} = Astro.props;
+
+const robots = `${noindex ? "noindex" : "index"},${nofollow ? "nofollow" : "follow"}`;
+const ogImages = openGraph?.images ?? [];
+---
+
+<title>{title}</title>
+<meta name="robots" content={robots} />
+{description && <meta name="description" content={description} />}
+{canonical && <link rel="canonical" href={canonical} />}
+
+{
+  openGraph && (
+    <>
+      {openGraph.title && <meta property="og:title" content={openGraph.title} />}
+      {openGraph.description && <meta property="og:description" content={openGraph.description} />}
+      {openGraph.url && <meta property="og:url" content={openGraph.url} />}
+      {openGraph.type && <meta property="og:type" content={openGraph.type} />}
+      {openGraph.site_name && <meta property="og:site_name" content={openGraph.site_name} />}
+      {openGraph.locale && <meta property="og:locale" content={openGraph.locale} />}
+      {ogImages.map((image) => (
+        <>
+          <meta property="og:image" content={image.url} />
+          {image.width && <meta property="og:image:width" content={String(image.width)} />}
+          {image.height && <meta property="og:image:height" content={String(image.height)} />}
+          {image.alt && <meta property="og:image:alt" content={image.alt} />}
+          {image.type && <meta property="og:image:type" content={image.type} />}
+        </>
+      ))}
+    </>
+  )
+}
+
+{
+  twitter && (
+    <>
+      {twitter.cardType && <meta name="twitter:card" content={twitter.cardType} />}
+      {twitter.site && <meta name="twitter:site" content={twitter.site} />}
+      {twitter.handle && <meta name="twitter:creator" content={twitter.handle} />}
+    </>
+  )
+}
+
+{
+  additionalMetaTags.map((tag) =>
+    tag.property ? (
+      <meta property={tag.property} content={tag.content} />
+    ) : (
+      <meta name={tag.name} content={tag.content} />
+    )
+  )
+}

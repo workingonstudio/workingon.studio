@@ -1,11 +1,12 @@
 ---
 title: "Is Figma Down"
-description: "It's always down. You just don't know it yet."
+description: "A satirical site showing the pitfalls of always online software."
 publishedAt: 2025-10-22
 link: "https://isfigmadown.com/"
 externalLink: true
 download: ""
-image: "/projectImages/isfigmadown.webp"
+image: "isfigmadown.webp"
+icon: "ph:cloud-arrow-down-duotone"
 ---
 
 During the great AWS blackout. Most of the internets tools went offline. It become evident that we are over reliant of always being online, always connected.

@@ -1,11 +1,50 @@
 ---
+import { getEntry, render } from "astro:content";
+
+import PageHeader from "@layouts/partials/PageHeader.astro";
 import Layout from "../layouts/Layout.astro";
-import AboutPage from "../components/AboutPage.svelte";
+
+const entry = await getEntry("site", "about");
+if (!entry) throw new Error("About page content not found");
+
+const { Content } = await render(entry);
 ---
 
-<Layout
-  title="About — workingon.studio"
-  description="Creative director and founder of workingon.studio. 16 years leading design and creative for startups, five acquired."
->
-  <AboutPage client:load />
+<Layout title={entry.data.title} description={entry.data.description}>
+  <PageHeader>
+    <h1>
+      <span class="text-primary">About.</span>
+      <br />
+      Helping you make the creative decisions so you can get on with what you do best.
+    </h1>
+    <p>
+      This studio is what happens after <strong>15 years</strong>
+      as the sole designer at a string of early-stage startups.
+    </p>
+  </PageHeader>
+  <div class="flex flex-col gap-8 lg:w-xl">
+    <div class="prose">
+      <Content />
+    </div>
+    <img
+      src="/images/profile.webp"
+      alt="Paul Mackenzie, creative director, seated on a sofa in front of a print that reads 'This is the naughty corner.'"
+      loading="lazy"
+      class="squircle-4xl w-80"
+    />
+    <div class="flex flex-col">
+      <h4>Paul Mackenzie</h4>
+      <p class="text-body text-xs">Creative Director &amp; Founder.</p>
+    </div>
+  </div>
+
+  <style>
+    @reference "@styles/main.css";
+    .prose {
+      @apply flex flex-col gap-6;
+      a {
+        @apply text-primary underline hover:no-underline;
+      }
+    }
+  </style>
 </Layout>

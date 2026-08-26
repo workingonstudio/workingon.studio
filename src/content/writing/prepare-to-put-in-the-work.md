@@ -1,7 +1,8 @@
 ---
 title: "It's an art form, so put in the work."
 publishedAt: 2025-11-02
-description: "What it takes to become a better designer."
+description: "How creativity isn't built through staring at a screen, and pushing pixels."
+icon: "ph:path-duotone"
 ---
 
 Scroll social media, and you’ll see the opposite. People claiming that it’s not about something looking good. That real design isn’t something you would see on dribbble. That it’s not just making something pretty.
@@ -14,9 +15,8 @@ The talk of the town is engagement. The obsession with showing bullshit numbers 
 
 Like becoming a good artist. Becoming a good designer requires (amongst other things) time, practice, bone crushing rejection, frustration, and many, many late nights.
 
-To quote Roland Young.
-
 > Is it cool to be a designer? Isn’t it cool? Are you sure? It’s hell to be a designer, so you better get used to it.
+> - Roland Young
 
 So if you are just starting out. Or want to improve. Then this is what I believe you should be focusing on.
 
@@ -56,11 +56,10 @@ There is comfort in that. It will strengthen the part of your brain that tells y
 
 ## Get better at playing.
 
-> Creativity is not a talent, it. is. not. a talent. It is a way of operating…
-> 
-> …creativity is not an ability you either have or do not have.
+> Creativity is not a talent, it. is. not. a talent. It is a way of operating…creativity is not an ability you either have or do not have.
+> - John Cleese
 
-This is a quote from John Cleese, from a talk in 2007 about creativity in management. You can [watch the whole thing](https://youtu.be/Pb5oIIPO62g?t=267), or just listen to it whilst you push pixels around the screen.
+This is a quote from a talk in 2007 about creativity in management. You can [watch the whole thing](https://youtu.be/Pb5oIIPO62g?t=267), or just listen to it whilst you push pixels around the screen.
 
 Cleese cites a MacKinnon study **Creativity: a multi-faceted phenomenon** [^1] in which he determines that the most creative people are able to sustain a “state of play”. This ‘state’ allows you to mess with ideas without any bias as to whether they are good or not. They’re just ideas.
 

@@ -22,6 +22,6 @@
   }
 
   .logo :global(svg path) {
-    @apply fill-header;
+    @apply fill-primary group-hover/logo:fill-body transition-colors;
   }
 </style>

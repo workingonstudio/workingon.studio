@@ -5,29 +5,34 @@
 
   export let typefaces = [
     {
-      family: "Satoshi",
-      href: "https://www.fontshare.com/fonts/satoshi",
+      family: "General Sans",
+      href: "https://fontshare.com/fonts/general-sans",
     },
     {
-      family: "Inter",
-      href: "https://rsms.me/inter/",
+      family: "Azeret Mono",
+      href: "https://fontshare.com/fonts/azeret-mono",
     },
   ];
 </script>
 
-<footer class="border-t-surface-border flex flex-row border-t">
+<footer class="flex flex-col gap-1 md:flex-row">
+  <a
+    href="#top"
+    aria-label="Back to top"
+    class="group hidden w-16 flex-col items-center justify-center transition-none md:flex"
+  >
+    <iconify-icon icon="ph:arrow-up-bold" class="text-muted group-hover:text-primary"></iconify-icon>
+  </a>
   <!-- prettier-ignore -->
-  <div class="flex flex-col justify-center items-center w-16 transition-none">
-  </div>
-  <div class="border-surface-border flex flex-1 flex-row justify-between border-x p-6 font-medium lg:px-16">
+  <div class="md:flex flex-1 flex-col gap-1 md:justify-end py-6 px-9 text-muted text-end text-xxs uppercase">
     <a
       href="https://find-and-update.company-information.service.gov.uk/company/16700615"
-      class="text-muted text-xxs uppercase"
+      class=""
     >
       workingonstudio ltd, no: 16700615
     </a>
 
-    <ul class="text-muted text-xxs hidden flex-row gap-3 lg:flex">
+    <ul class="hidden md:flex flex-col md:flex-row gap-3 justify-end">
       <li class="flex flex-row items-center gap-1">
         <a href="https://astro.build/">Astro</a>
         <div class="relative -top-px">+</div>
@@ -50,9 +55,6 @@
       </li>
     </ul>
   </div>
-  <a href="#top" aria-label="Back to top" class="flex w-16 flex-col items-center justify-center transition-none">
-    <iconify-icon icon="ph:arrow-up-bold"></iconify-icon>
-  </a>
 </footer>
 
 <style>
@@ -61,7 +63,6 @@
     li {
       a {
         @apply hover:text-primary hover:underline;
-        @apply text-xxs flex font-medium;
       }
     }
   }

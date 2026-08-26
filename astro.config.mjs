@@ -31,7 +31,8 @@ export default defineConfig({
         '/projects/glyph-palette',
         '/projects/goodboy',
         '/projects/solidarity/Main/',
-        '/projects/hiddencurrent'
+        '/projects/hiddencurrent',
+        '/projects/tinywave'
       ];
       return !excludePatterns.some(pattern => page.includes(pattern));
     },
@@ -46,19 +47,19 @@ export default defineConfig({
       // Main
       {
         provider : fontProviders.fontshare(),
-        name: "Satoshi",
-        cssVariable : "--font-satoshi",
+        name: "General Sans",
+        cssVariable : "--font-general-sans",
         display: "swap",
-        weights: [500, 700, 900],
+        weights: ["500 900"],
         styles: ['normal'],
         subsets: ["latin"]
       },
       {
-        provider: fontProviders.bunny(),
-        name: "Inter",
-        cssVariable: "--font-inter",
+        provider: fontProviders.fontshare(),
+        name: "Azeret Mono",
+        cssVariable: "--font-azeret-mono",
         display: "swap",
-        weights: [400, 600],
+        weights: [400, 500, 600],
         styles: ['normal'],
         subsets: ["latin"]
       },
@@ -82,7 +83,28 @@ export default defineConfig({
         weights: [600],
         styles: ['normal'],
         subsets: ["latin"]
-      }
+      },
+      {
+        provider : fontProviders.fontshare(),
+        name: "Satoshi",
+        cssVariable : "--font-satoshi",
+        display: "swap",
+        weights: [500, 700, 900],
+        styles: ['normal'],
+        subsets: ["latin"]
+      },
+
+      // IsFigmaDown
+      {
+        provider: fontProviders.bunny(),
+        name: "Inter",
+        cssVariable: "--font-inter",
+        display: "swap",
+        weights: [400, 600],
+        styles: ['normal'],
+        subsets: ["latin"]
+      },
+
     ],
   vite: {
     plugins: [tailwindcss()],

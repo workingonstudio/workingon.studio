@@ -1,11 +1,8 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import PageLayout from "@components/partials/PageLayout.svelte";
-import ContentPanel from "@components/partials/ContentPanel.svelte";
-import ArticleList from "@components/partials/ArticleList.svelte";
-import SocialProfiles from "@components/partials/SocialProfiles.svelte";
 import { getCollection } from "astro:content";
 import { render } from "astro:content";
+import PageHeader from "@layouts/partials/PageHeader.astro";
 
 export async function getStaticPaths() {
   const posts = await getCollection("writing");
@@ -31,21 +28,12 @@ const otherPosts = allPosts
   }));
 ---
 
-<Layout title={post.data.title}>
-  <ContentPanel borderBottom>
+<Layout title={`${post.data.title} | workingon.studio`} extraStyles="w-full lg:w-xl py-24">
+  <PageHeader>
     <h1>{post.data.title}</h1>
-    <p class="text-medium text-muted">{post.data.description}</p>
-  </ContentPanel>
-
-  <PageLayout>
-    <div>
-      <ContentPanel>
-        <div class="article"><Content /></div>
-      </ContentPanel>
-    </div>
-    <div>
-      <ArticleList header="More Writing" articles={otherPosts} />
-      <SocialProfiles />
-    </div>
-  </PageLayout>
+    <p>{post.data.description}</p>
+  </PageHeader>
+  <div class="article">
+    <Content />
+  </div>
 </Layout>

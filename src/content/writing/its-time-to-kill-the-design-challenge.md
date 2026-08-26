@@ -1,7 +1,8 @@
 ---
 title: "It's time to kill the Design Challenge."
 publishedAt: 2025-08-04
-description: "Comedians don’t perform on command."
+description: "Why a design challenge isn't a reflection of a designers skill, and what to do instead."
+icon: "ph:knife-duotone"
 ---
 
 In the last few years we have seen a huge shift in how companies are hiring designers. Gone are the days where, armed with a well presented portfolio, a decent presence on social media, and dare I even whisper it, a dribbble account, you would _at least_ get in the door. But now? Now we are expected to compete in a gladiatorial arena in order to prove our worthiness.

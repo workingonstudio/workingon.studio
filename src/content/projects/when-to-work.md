@@ -1,11 +1,12 @@
 ---
 title: "When to work"
-description: "Find the overlap. Work together better."
+description: "Show you schedule to people without having to share everything. Find the overlap."
 publishedAt: 2026-02-19
 link: "https://whento.work"
 externalLink: true
 download: ""
-image: "/projectImages/whentowork.webp"
+image: "whentowork.webp"
+icon: "ph:calendar-dots-duotone"
 ---
 
 Working remotely with people around the world timezones and schedules become an issue.

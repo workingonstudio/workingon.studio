@@ -15,9 +15,9 @@
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",
     "@astrojs/svelte": "^8.1.2",
-    "@astrolib/seo": "^1.0.0-beta.8",
     "@felte/validator-zod": "^1.0.18",
     "@iconify/svelte": "^5.0.1",
+    "@klinking/squircle": "^0.9.0",
     "@octokit/rest": "^22.0.0",
     "@tailwindcss/vite": "^4.3.2",
     "animejs": "^4.5.0",
@@ -35,8 +35,9 @@
   "devDependencies": {
     "@types/luxon": "^3.7.2",
     "@types/node": "^24.7.0",
+    "prettier": "^3.9.6",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-svelte": "^3.4.0",
-    "prettier-plugin-tailwindcss": "^0.8.0"
+    "prettier-plugin-tailwindcss": "^0.8.1"
   }
 }

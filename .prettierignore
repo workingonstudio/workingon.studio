@@ -1,5 +1,5 @@
 dist/
-.astro/
+.astro
 node_modules/
 *.md
 astro.config.mjs

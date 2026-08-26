@@ -24,7 +24,7 @@
   {#if checkedPermission && recorder.permissionState === "idle"}
     <Permissions />
   {/if}
-  <div class="flex flex-col rounded-xl border border-gray-300 bg-white p-6 shadow-lg/5 ring ring-gray-100">
+  <div class="squircle-3xl flex flex-col border border-gray-300 bg-white p-6 shadow-lg/5 ring ring-gray-100">
     <div class="flex flex-row items-center justify-between">
       <Header />
     </div>

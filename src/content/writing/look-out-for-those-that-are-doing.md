@@ -1,7 +1,8 @@
 ---
 title: "Look for those that are doing the opposite."
 publishedAt: 2025-09-22
-description: "They are doing far more important things."
+description: "Beware those that are sat on the sidelines shouting improvements, and doing nothing else."
+icon: "ph-eye-closed-duotone"
 ---
 
 If it’s one thing I can’t stand it’s designers that spend their time talking about what others have done wrong. These people have as much skill as an irate parent shouting abuse at the referee of a child's sports game.

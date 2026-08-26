@@ -6,7 +6,7 @@
   const dialog = new Dialog();
 </script>
 
-<section class="flex flex-col gap-6 rounded-xl border border-gray-300 bg-white p-6 shadow-lg/5 ring ring-gray-100">
+<section class="squircle-3xl flex flex-col gap-6 border border-gray-300 bg-white p-8 shadow-lg/5 ring ring-gray-100">
   <div class="flex flex-col gap-2">
     <h2 class="color-body text-base font-bold">Allow permissions to get started.</h2>
     <p class="text-muted text-sm">
@@ -36,7 +36,7 @@
 <div {...dialog.overlay} class="bg-white/20"></div>
 <dialog
   {...dialog.content}
-  class="fixed top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 rounded-xl border border-white shadow-lg ring ring-gray-300 md:w-md"
+  class="squircle-3xl fixed top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 border border-white shadow-lg ring ring-gray-300 md:w-md"
 >
   <PrivacyModal />
 </dialog>

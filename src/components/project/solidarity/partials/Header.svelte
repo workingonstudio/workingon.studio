@@ -1,11 +1,11 @@
 <script lang="ts">
-  import Badge from "@components/solidarity/partials/Badge.svelte";
+  import Badge from "@components/project/solidarity/partials/Badge.svelte";
 </script>
 
 <div class="header sticky top-0 z-30 my-20 flex flex-1 bg-stone-50/95 py-6">
   <header class="mx-4 flex w-full flex-row items-center justify-between xl:mx-20">
     <div class="flex flex-row items-center gap-2 md:gap-6">
-      <a href="#top" class="group text-header flex flex-row items-center gap-2">
+      <a href="#top" class="group flex flex-row items-center gap-2">
         <iconify-icon icon="material-symbols:radio-button-partial" class="group-spin-drop text-2xl"></iconify-icon>
         <!-- prettier-ignore -->
         <span class="flex-inline font-mulish text-sm font-extrabold uppercase tracking-[1%]">

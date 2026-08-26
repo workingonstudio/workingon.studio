@@ -3,37 +3,39 @@
 
 @theme {
   /* Typography */
-  --font-satoshi: "Satoshi", sans-serif;
-  --font-inter: "Inter", sans-serif;
+  --font-general-sans: "General Sans", sans-serif;
+  --font-azeret-mono: "Azeret Mono", monospace;
 
   /* Colors */
-  --color-primary: theme(colors.neutral.900);
-  --color-header: theme(colors.neutral.900);
+  --color-primary: theme(colors.blue.600);
   --color-body: theme(colors.neutral.800);
-  --color-muted: theme(colors.neutral.500);
-  --color-bg-main: theme(colors.neutral.50);
-  --color-surface: theme(colors.neutral.100);
+  --color-muted: theme(colors.neutral.400);
+  --color-contrast: theme(colors.blue.900);
+  --color-main: theme(colors.neutral-50);
+  --color-surface: theme(colors.white);
   --color-surface-border: theme(colors.neutral.200);
+  --bg-pattern: url("/images/background-light.svg");
 }
 
 .dark {
-  --color-primary: theme(colors.stone.100);
-  --color-header: theme(colors.stone.100);
-  --color-body: theme(colors.stone.200);
-  --color-muted: theme(colors.stone.400);
-  --color-bg-main: theme(colors.stone.950);
-  --color-surface: theme(colors.stone.900);
-  --color-surface-border: theme(colors.stone.800);
+  --color-primary: theme(colors.rose.500);
+  --color-body: theme(colors.neutral.100);
+  --color-muted: theme(colors.neutral.400);
+  --color-contrast: theme(colors.white);
+  --color-main: theme(colors.neutral.950);
+  --color-surface: theme(colors.neutral.900);
+  --color-surface-border: theme(colors.neutral.800);
+  --bg-pattern: url("/images/background-dark.svg");
 }
 
 @layer base {
   body {
-    background-color: var(--color-bg-main);
-    font-family: var(--font-inter);
+    background-color: var(--color-main);
+    font-family: var(--font-azeret-mono);
     color: var(--color-body);
     ::selection {
       background-color: var(--color-primary);
-      color: var(--color-bg-main);
+      color: var(--color-main);
     }
   }
 
@@ -41,17 +43,17 @@
   h2,
   h3,
   h4 {
-    font-family: var(--font-satoshi);
+    font-family: var(--font-general-sans);
     font-feature-settings: "ss01" 1;
-    @apply text-header font-bold text-balance;
+    @apply font-medium tracking-[-0.67px] text-balance;
   }
 
   h1 {
-    @apply text-2xl/tight sm:text-4xl/tight lg:text-6xl/tight;
+    @apply text-3xl/tight lg:text-[40px]/[48px];
   }
 
   h2 {
-    @apply text-xl;
+    @apply text-2xl;
   }
 
   h3 {
@@ -59,23 +61,40 @@
   }
 
   p {
-    @apply text-sm text-pretty lg:text-base;
+    @apply text-xs text-pretty lg:text-sm/[24px];
   }
+}
+
+.background {
+  @apply bg-(image:--bg-pattern) bg-size-[25px_25px] bg-repeat;
 }
 
 /* Article-specific styling */
 .article {
   @apply flex flex-col gap-6;
   blockquote {
-    @apply border-surface-border bg-surface rounded-lg border p-4;
+    @apply flex flex-col gap-3 py-12 text-2xl;
+    p {
+      @apply font-general-sans text-lg font-semibold italic;
+      ::before {
+        @apply content-['\201C'];
+      }
+      ::after {
+        @apply content-['\201D'];
+      }
+    }
+    ul {
+      li {
+        @apply text-muted text-sm;
+      }
+    }
   }
-  h3 {
-    @apply text-xl;
+  h2 {
+    @apply text-2xl;
   }
   a {
-    @apply text-header underline;
+    @apply underline;
   }
-
   sup {
     a {
       @apply text-xxs border-surface-border rounded-sm border px-1 py-0.5 font-semibold no-underline;
@@ -90,70 +109,5 @@
         }
       }
     }
-  }
-}
-
-@layer components {
-  /* Legacy .content support - keep for now but prefer ContentPanel component */
-  .content {
-    @apply flex flex-col;
-    @apply px-8 py-9 lg:px-16 lg:py-12;
-  }
-
-  /* Utility: Auto-space children in flex containers */
-  .stack {
-    @apply flex flex-col;
-  }
-
-  .stack > * + * {
-    @apply mt-5;
-  }
-
-  .stack-sm > * + * {
-    @apply mt-3;
-  }
-
-  .stack-lg > * + * {
-    @apply mt-6;
-  }
-
-  /* Utility: Dividers without manual border classes */
-  .divide-y-surface > * + * {
-    @apply border-surface-border border-t;
-  }
-
-  .divide-x-surface > * + * {
-    @apply border-surface-border border-l;
-  }
-
-  /* Utility: Consistent panel borders */
-  .panel-border {
-    @apply border-surface-border border;
-  }
-
-  .panel-border-b {
-    @apply border-surface-border border-b;
-  }
-
-  .panel-border-r {
-    @apply border-surface-border border-r-0 lg:border-r;
-  }
-}
-
-@layer components {
-  .page-layout {
-    @apply grid grid-cols-1 items-start lg:grid-cols-2 lg:items-stretch;
-  }
-
-  .page-layout > *:first-child {
-    @apply border-surface-border lg:border-r;
-  }
-
-  .page-layout > * > * + * {
-    @apply border-surface-border border-t;
-  }
-
-  .content-panel.border-b-desktop {
-    @apply border-surface-border lg:border-b;
   }
 }

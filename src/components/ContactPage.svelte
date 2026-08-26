@@ -1,40 +1,17 @@
 <script lang="ts">
-  import PageLayout from "@components/partials/PageLayout.svelte";
-  import ContentPanel from "@components/partials/ContentPanel.svelte";
   import { onMount } from "svelte";
-  import { dayRate } from "../stores/dayRate";
-  import SocialProfiles from "./partials/SocialProfiles.svelte";
 
-  let displayRate = $state(500);
+  let { baseRate = 400 }: { baseRate?: number } = $props();
+
+  let displayRate = $state(baseRate);
   let timeInterval: ReturnType<typeof setInterval> | null = null;
   let pageLoadTime = 0;
 
-  function animateRate(startRate: number, targetRate: number) {
-    const duration = 800;
-    const startTime = Date.now();
-
-    function animate() {
-      const elapsed = Date.now() - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-      const easeProgress = 1 - Math.pow(1 - progress, 3);
-
-      displayRate = Math.round((startRate + (targetRate - startRate) * easeProgress) * 10) / 10;
-
-      if (progress < 1) {
-        requestAnimationFrame(animate);
-      }
-    }
-
-    animate();
-  }
-
-  function startTimeBasedIncrement(baseRate: number) {
+  function startTimeBasedIncrement(rate: number) {
     pageLoadTime = Date.now();
-
-    // Update every 100ms (10 times per second for smooth pence updates)
     timeInterval = setInterval(() => {
       const elapsedSeconds = (Date.now() - pageLoadTime) / 1000;
-      displayRate = Math.round((baseRate + elapsedSeconds) * 10) / 10;
+      displayRate = Math.round((rate + elapsedSeconds) * 10) / 10;
     }, 100);
   }
 
@@ -57,53 +34,41 @@
 
   onMount(() => {
     setTimeout(() => {
-      startTimeBasedIncrement(displayRate);
+      startTimeBasedIncrement(baseRate);
     }, 500);
   });
 </script>
 
-<ContentPanel borderBottom>
-  <!-- prettier-ignore -->
-  <h1>
-    £<span class="tabular-nums">{displayRate.toFixed(2)}</span>
-    /day. I work with founders that decide fast and ship faster. The rate increases while you think about it.
-  </h1>
-</ContentPanel>
-
-<PageLayout variant="full">
-  <div>
-    <ContentPanel borderBottom>
-      <div class="flex flex-row items-center gap-3">
-        <iconify-icon icon="ph:envelope-open-duotone" class="size-5 text-xl text-zinc-500"></iconify-icon>
-        <h2>Send email</h2>
-      </div>
-      <div class="row flex flex-col gap-2">
-        <div class="flex flex-row items-center gap-2">
-          <button
-            type="button"
-            onclick={copyEmail}
-            class="text-header flex cursor-pointer flex-row items-center gap-2 text-2xl font-bold hover:underline"
-          >
-            hello@workingon.studio
-            <iconify-icon
-              icon={copied ? "ph:check-bold" : "ph:copy-bold"}
-              class="text-muted size-4 text-base"
-            ></iconify-icon>
-          </button>
-          {#if copied}
-            <span class="text-xxs text-header font-bold uppercase no-underline!">copied</span>
-          {/if}
-        </div>
-        <p class="">
-          If I don't reply within 7 days, assume it's a no, I'm on holiday, or dead. Whatever makes you feel better.
-        </p>
-      </div>
-    </ContentPanel>
+<div class="flex flex-col gap-30 lg:w-xl">
+  <div class="flex flex-col gap-8">
+    <h1>
+      <span class="text-primary">Contact.</span>
+      <br />
+      I work with founders that decide fast and ship faster.
+    </h1>
+    <!-- prettier-ignore -->
+    <p>£<span class="tabular-nums">{displayRate.toFixed(2)}</span>/day. The rate increases while you think about it.</p>
   </div>
-  <div>
-    <SocialProfiles />
+  <div class="flex flex-col gap-6">
+    <div class="flex flex-row items-center gap-2">
+      <button
+        type="button"
+        onclick={copyEmail}
+        class="text-primary flex cursor-pointer flex-row items-center gap-4 text-2xl font-bold hover:underline"
+      >
+        hello@workingon.studio
+        <iconify-icon
+          icon={copied ? "ph:check-circle-duotone" : "ph:copy-duotone"}
+          class="text-muted size-4.5 text-lg {copied ? 'text-primary' : ''}"
+        ></iconify-icon>
+      </button>
+      {#if copied}
+        <span class="text-xxs font-bold uppercase no-underline!">copied</span>
+      {/if}
+    </div>
+    <p>If I don't reply within 7 days, assume it's a no, I'm on holiday, or dead. Whatever makes you feel better.</p>
   </div>
-</PageLayout>
+</div>
 
 <style>
   @reference "@styles/main.css";

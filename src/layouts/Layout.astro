@@ -7,20 +7,19 @@ import { ClientRouter } from "astro:transitions";
 
 import Analytics from "./partials/Analytics.astro";
 import StructuredData from "./partials/StructuredData.astro";
-import { AstroSeo } from "@astrolib/seo";
-
+import Seo from "@layouts/partials/Seo.astro";
 import Header from "@components/partials/Header.svelte";
 import Footer from "@components/partials/Footer.svelte";
 
 export interface Props {
   title: string;
   description?: string;
-  fullHeight?: boolean;
+  extraStyles?: string;
 }
 
-const { title, description, fullHeight = true } = Astro.props;
+const { title, description, extraStyles } = Astro.props;
 const defaultDescription =
-  "workingon.studio. Creative direction for founders and early-stage teams. In-house product development. Founded by Paul Mackenzie — 16 years, five acquisitions.";
+  "Creative direction from Seed to Series A to Acquisition. In-house product development. Founded by Paul Mackenzie.";
 const currentURL = new URL(Astro.url.pathname, Astro.site).href;
 const currentPath = Astro.url.pathname;
 ---
@@ -51,9 +50,9 @@ const currentPath = Astro.url.pathname;
     </script>
 
     <ClientRouter />
-    <Font cssVariable="--font-satoshi" preload />
-    <Font cssVariable="--font-inter" preload />
-    <AstroSeo
+    <Font cssVariable="--font-general-sans" preload />
+    <Font cssVariable="--font-azeret-mono" preload />
+    <Seo
       {title}
       description={description || defaultDescription}
       canonical={currentURL}
@@ -63,7 +62,7 @@ const currentPath = Astro.url.pathname;
         description: description || defaultDescription,
         images: [
           {
-            url: Astro.site + "site-default.webp",
+            url: Astro.site + "/images/site-default.webp",
             height: 630,
             width: 1200,
             alt: "Paul Mackenzie — Creative Director, workingon.studio",
@@ -88,37 +87,32 @@ const currentPath = Astro.url.pathname;
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <script
       is:inline
       type="module"
       src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    >
-    </script>
+    ></script>
     <meta name="generator" content={Astro.generator} />
     <Analytics />
     <StructuredData />
-    <!-- CDN Font Stylesheets -->
     <title>{title}</title>
   </head>
 
-  <body id="#top">
-    <div class="bg-bg-main/98 border-surface-border sticky top-0 z-50 border-y backdrop-blur-sm">
-      <div class="mx-auto w-full max-w-screen-2xl">
-        <Header client:load {currentPath} />
+  <body id="#top" class="background mx-auto flex min-h-dvh max-w-screen-2xl flex-col">
+    <div class="sticky top-0 z-50">
+      <div class="mx-auto w-full">
+        <Header client:load {currentPath} transition:persist />
       </div>
     </div>
-    <div class="mx-auto w-full max-w-screen-2xl">
-      <main
-        class="border-surface-border mx-0 flex flex-1 flex-col border-x-0 md:mx-16 md:border-x"
-        class:list={[{ "min-h-screen": fullHeight }]}
-      >
-        <div class="flex flex-1 flex-col justify-start">
-          <slot />
-        </div>
-      </main>
+    <div class="mx-9 flex flex-1 lg:mx-38">
+      <section class:list={["flex w-full flex-col gap-30 py-24", extraStyles]}>
+        <slot />
+      </section>
     </div>
-    <Footer client:visible />
+    <Footer transition:persist />
   </body>
 </html>
