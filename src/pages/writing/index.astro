@@ -20,11 +20,12 @@ const sortedPosts = posts.sort(
     </h1>
     <p>Working directly with founders and their teams. Not as a pair of hands. As a guide.</p>
   </PageHeader>
-  <ul class="flex flex-col gap-8">
+  <div class="grid gap-8 lg:grid-cols-2">
     {
       sortedPosts.map((post) => (
-        <li class="flex flex-col gap-4">
-          <div class="flex flex-col gap-2">
+        <div class="bg-surface squircle-3xl flex flex-col gap-4 p-6 lg:p-12">
+          <iconify-icon icon={post.data.icon} class="text-primary text-2xl" />
+          <div class="flex min-h-20 flex-col gap-2">
             <a href={`/writing/${post.id}`} class="hover:underline">
               <h3>{post.data.title}</h3>
             </a>
@@ -36,8 +37,8 @@ const sortedPosts = posts.sort(
             </a>
             <iconify-icon icon="ph:arrow-up-right-bold" />
           </div>
-        </li>
+        </div>
       ))
     }
-  </ul>
+  </div>
 </Layout>

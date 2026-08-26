@@ -5,7 +5,8 @@ publishedAt: 2025-10-16
 link: "https://sketchto.day"
 externalLink: true
 download: ""
-image: "/projectImages/sketchtoday.webp"
+image: "sketchtoday.webp"
+icon: "ph:sketch-logo-duotone"
 ---
 
 Tired of performance issues of Figma. I decided to give Sketch another try. One of the main issues I faced was finding up to date resources.

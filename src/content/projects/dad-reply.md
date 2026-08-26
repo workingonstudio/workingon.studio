@@ -5,7 +5,8 @@ publishedAt: 2025-08-06
 link: "https://dadreply.com"
 externalLink: true
 download: "https://chromewebstore.google.com/detail/ddkeoflblemlolckmnhihhabplfmogop?utm_source=item-share-cb"
-image: "/projectImages/dadreply.webp"
+image: "dadreply.webp"
+icon: "ph:thumbs-up-duotone"
 featured: true
 ---
 

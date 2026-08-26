@@ -5,7 +5,8 @@ publishedAt: 2026-01-19
 link: "good-boy"
 externalLink: false
 download: ""
-image: "/projectImages/goodboyplugin.webp"
+image: "/goodboyplugin.webp"
+icon: "ph:dog-duotone"
 ---
 
 Tired of seeing generic design feedback on social media. I built a Figma plugin to add it to designs automatically.

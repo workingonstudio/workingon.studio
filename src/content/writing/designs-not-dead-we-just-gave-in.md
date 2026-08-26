@@ -2,6 +2,7 @@
 title: "Design's not dead. We just gave in."
 publishedAt: 2025-07-22
 description: "What happens when creativity becomes compliance."
+icon: "ph:flag-banner-fold-duotone"
 ---
 
 Designers. We've lost, we've given up, we've surrendered to the wrong people, we've laid down our weapons of love, creativity, empathy and compassion.

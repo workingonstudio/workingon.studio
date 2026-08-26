@@ -5,7 +5,8 @@ publishedAt: 2025-11-01
 link: "https://glyphpalette.com/"
 externalLink: true
 download: ""
-image: "/projectImages/glyphpalette.webp"
+image: "glyphpalette.webp"
+icon: "ph:puzzle-piece-duotone"
 featured: true
 ---
 

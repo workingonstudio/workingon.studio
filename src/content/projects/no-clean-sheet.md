@@ -5,7 +5,8 @@ publishedAt: 2026-06-25
 link: "https://nocleansheet.com"
 externalLink: true
 download: ""
-image: "/projectImages/nocleansheet.webp"
+image: "nocleansheet.webp"
+icon: "ph:soccer-ball-duotone"
 ---
 
 The World Cup puts countries on the world stage for billions to see. But behind every flag is a human rights record. No Clean Sheet pits nations against each other not just on the pitch, but on press freedom, inequality, LGBTQ+ rights, and more.

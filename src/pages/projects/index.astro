@@ -23,7 +23,8 @@ const projectData = await Promise.all(
       externalLink: p.data.externalLink,
       download: p.data.download ?? null,
       image: p.data.image,
-      isNew: DateTime.now().diff(DateTime.fromJSDate(p.data.publishedAt), "days").days < 30,
+      icon: p.data.icon,
+      isNew: DateTime.now().diff(DateTime.fromJSDate(p.data.publishedAt), "days").days < 80,
       Content,
     };
   })
@@ -37,13 +38,23 @@ const projectData = await Promise.all(
       <DaysCounter client:load launchDate={launchDate} initialDays={initialDays} /> days passed.
       {projectData.length} projects.<br />These sites are all live.
     </h1>
-    <p>Working directly with founders and their teams. Not as a pair of hands. As a guide.</p>
+    <div class="flex flex-col gap-4">
+      <p>
+        This studio not only does creative for others, but for itself. The following projects are
+        all created entirely by it.
+      </p>
+      <p>
+        Some are to solve studio problems. Others are to hold a mirror up at the current state of
+        the Zeitgeist.
+      </p>
+    </div>
   </PageHeader>
   <div class="grid gap-8 lg:grid-cols-2">
     {
       projectData.map(({ Content, ...project }) => (
-        <div class="bg-surface squircle-3xl flex h-60 flex-col justify-between gap-4 p-12">
-          <div class="flex flex-col gap-2">
+        <div class="bg-surface squircle-3xl flex flex-col gap-4 p-6 lg:p-12">
+          <iconify-icon icon={project.icon} class="text-primary text-2xl" />
+          <div class="flex min-h-20 flex-col gap-2">
             <div class="flex flex-row items-center gap-3">
               <a
                 href={project.externalLink ? project.link : `/projects/${project.link}`}

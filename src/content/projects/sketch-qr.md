@@ -5,7 +5,8 @@ publishedAt: 2026-01-19
 link: "https://github.com/workingonstudio/sketch-qr.sketchplugin"
 externalLink: true
 download: ""
-image: "/projectImages/sketchqr.webp"
+image: "sketchqr.webp"
+icon: "ph:qr-code-duotone"
 ---
 
 Born out of the annoyance of predatory pricing modals for QR codes. This simple plugin allows for instant insert of a QR code within Sketch.

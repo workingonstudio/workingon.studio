@@ -2,6 +2,7 @@
 title: "It's an art form, so put in the work."
 publishedAt: 2025-11-02
 description: "What it takes to become a better designer."
+icon: "ph:path-duotone"
 ---
 
 Scroll social media, and you’ll see the opposite. People claiming that it’s not about something looking good. That real design isn’t something you would see on dribbble. That it’s not just making something pretty.

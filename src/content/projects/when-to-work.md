@@ -5,7 +5,8 @@ publishedAt: 2026-02-19
 link: "https://whento.work"
 externalLink: true
 download: ""
-image: "/projectImages/whentowork.webp"
+image: "whentowork.webp"
+icon: "ph:calendar-dots-duotone"
 ---
 
 Working remotely with people around the world timezones and schedules become an issue.
