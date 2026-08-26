@@ -1,7 +1,7 @@
 ---
 title: "It's time to kill the Design Challenge."
 publishedAt: 2025-08-04
-description: "Comedians don’t perform on command."
+description: "Why a design challenge isn't a reflection of a designers skill, and what to do instead."
 icon: "ph:knife-duotone"
 ---
 

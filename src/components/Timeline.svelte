@@ -195,11 +195,11 @@
   h1 {
     font-feature-settings: "ss01" 1;
   }
-  ul {
+  /* ul {
     li {
       a {
         @apply underline;
       }
     }
-  }
+  } */
 </style>

@@ -1,7 +1,7 @@
 ---
 title: "It's an art form, so put in the work."
 publishedAt: 2025-11-02
-description: "What it takes to become a better designer."
+description: "How creativity isn't built through staring at a screen, and pushing pixels."
 icon: "ph:path-duotone"
 ---
 

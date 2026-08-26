@@ -1,7 +1,7 @@
 ---
 title: "Design's not dead. We just gave in."
 publishedAt: 2025-07-22
-description: "What happens when creativity becomes compliance."
+description: "The frustrations of design, and what happens when creativity becomes compliance."
 icon: "ph:flag-banner-fold-duotone"
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Look for those that are doing the opposite."
 publishedAt: 2025-09-22
-description: "They are doing far more important things."
+description: "Beware those that are sat on the sidelines shouting improvements, and doing nothing else."
 icon: "ph-eye-closed-duotone"
 ---
 

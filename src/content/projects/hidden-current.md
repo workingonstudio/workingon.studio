@@ -6,7 +6,7 @@ link: "hidden-current"
 externalLink: false
 download: "https://chromewebstore.google.com/detail/fdkekehihnaabecdlefgaaoddlenikgl?utm_source=item-share-cb"
 image: "hiddencurrent.webp"
-icon: "ph:head-circuit-duotone"
+icon: "ph:leaf-duotone"
 ---
 
 Every Claude response costs something. Electricity. Water. Real resources, consumed at scale, every time you hit send.
