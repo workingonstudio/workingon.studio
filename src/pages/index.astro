@@ -53,7 +53,7 @@ import PageHeader from "@layouts/partials/PageHeader.astro";
       <div class="work-wrapper relative items-center justify-end">
         <Image
           src={elevenWhy}
-          class="squircle-3xl absolute top-12 left-12 w-192.5"
+          class="squircle-3xl absolute top-12 left-12 w-160 md:w-192.5"
           alt=""
           loading="lazy"
           format="webp"
@@ -62,7 +62,7 @@ import PageHeader from "@layouts/partials/PageHeader.astro";
       <div class="work-wrapper relative items-center justify-end">
         <Image
           src={heatoshiAccount}
-          class="squircle-3xl absolute top-12 left-12 w-192.5"
+          class="squircle-3xl absolute top-12 left-12 w-120 md:w-192.5"
           alt=""
           loading="lazy"
           format="webp"
@@ -71,7 +71,7 @@ import PageHeader from "@layouts/partials/PageHeader.astro";
       <div class="work-wrapper relative items-center justify-end">
         <Image
           src={argoTransactions}
-          class="squircle-3xl absolute top-12 left-12 w-195"
+          class="squircle-3xl absolute top-12 left-12 w-140 md:w-195"
           alt=""
           loading="lazy"
           format="webp"
@@ -80,7 +80,7 @@ import PageHeader from "@layouts/partials/PageHeader.astro";
       <div class="work-wrapper relative items-center justify-end">
         <Image
           src={heatoshiWeb}
-          class="squircle-3xl absolute top-12 left-12 w-195"
+          class="squircle-3xl absolute top-12 left-12 w-120 md:w-180"
           alt=""
           loading="lazy"
           format="webp"
@@ -93,7 +93,7 @@ import PageHeader from "@layouts/partials/PageHeader.astro";
 <style>
   @reference "@styles/main.css";
   .work-wrapper {
-    @apply squircle-3xl bg-surface flex h-88 flex-col overflow-hidden border-transparent p-12;
+    @apply squircle-3xl bg-surface flex h-80 flex-col overflow-hidden border-transparent p-12;
   }
   .work-wrapper img {
     @apply max-w-none flex-1 object-cover;
