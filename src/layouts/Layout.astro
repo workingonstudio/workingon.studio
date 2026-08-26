@@ -19,7 +19,7 @@ export interface Props {
 
 const { title, description, extraStyles } = Astro.props;
 const defaultDescription =
-  "workingon.studio. Creative direction for founders and early-stage teams. In-house product development. Founded by Paul Mackenzie — 16 years, five acquisitions.";
+  "Creative direction from Seed to Series A to Acquisition. In-house product development. Founded by Paul Mackenzie.";
 const currentURL = new URL(Astro.url.pathname, Astro.site).href;
 const currentPath = Astro.url.pathname;
 ---
@@ -95,8 +95,7 @@ const currentPath = Astro.url.pathname;
       is:inline
       type="module"
       src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    >
-    </script>
+    ></script>
     <meta name="generator" content={Astro.generator} />
     <Analytics />
     <StructuredData />

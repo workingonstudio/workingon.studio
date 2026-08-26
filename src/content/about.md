@@ -1,6 +1,6 @@
 ---
-title: "About - workingon.studio"
-description: "Creative director and founder of workingon.studio. 16 years leading design and creative for startups, five acquired."
+title: "About Paul Mackenzie | workingon.studio"
+description: "Creative direction from Seed to Series A to Acquisition. In-house product development. Founded by Paul Mackenzie."
 ---
 
 Every one of those companies needed one person to handle everything. Brand, marketing, experience, photography, copy, SEO, pitch decks, dev handoff. That person was me.
