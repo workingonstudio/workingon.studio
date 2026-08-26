@@ -12,6 +12,7 @@ const projectsCollection = defineCollection({
     externalLink: z.boolean().default(false),
     download: z.string().optional(),
     icon: z.string(),
+    image: z.string(),
   }),
 });
 

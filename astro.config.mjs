@@ -31,7 +31,8 @@ export default defineConfig({
         '/projects/glyph-palette',
         '/projects/goodboy',
         '/projects/solidarity/Main/',
-        '/projects/hiddencurrent'
+        '/projects/hiddencurrent',
+        '/projects/tinywave'
       ];
       return !excludePatterns.some(pattern => page.includes(pattern));
     },
