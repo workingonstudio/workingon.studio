@@ -17,7 +17,7 @@
  */
 
 import { ClientRouter } from "astro:transitions";
-import { AstroSeo } from "@astrolib/seo";
+import Seo from "@layouts/partials/Seo.astro";
 import Analytics from "../partials/Analytics.astro";
 
 export interface SeoProps {
@@ -76,7 +76,7 @@ const {
 
     <ClientRouter />
 
-    <AstroSeo
+    <Seo
       title={seo.title}
       description={seo.description}
       canonical={seo.canonical}
@@ -132,7 +132,8 @@ const {
       is:inline
       type="module"
       src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    ></script>
+    >
+    </script>
     <meta name="generator" content={Astro.generator} />
     <Analytics productName={productName} />
     <title>{seo.title}</title>

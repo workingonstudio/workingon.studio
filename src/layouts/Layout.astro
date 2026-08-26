@@ -3,12 +3,11 @@ import "../styles/base.css";
 import "../styles/main.css";
 
 import { Font } from "astro:assets";
-import { ClientRouter, fade } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 
 import Analytics from "./partials/Analytics.astro";
 import StructuredData from "./partials/StructuredData.astro";
-import { AstroSeo } from "@astrolib/seo";
-
+import Seo from "@layouts/partials/Seo.astro";
 import Header from "@components/partials/Header.svelte";
 import Footer from "@components/partials/Footer.svelte";
 
@@ -53,7 +52,7 @@ const currentPath = Astro.url.pathname;
     <ClientRouter />
     <Font cssVariable="--font-general-sans" preload />
     <Font cssVariable="--font-azeret-mono" preload />
-    <AstroSeo
+    <Seo
       {title}
       description={description || defaultDescription}
       canonical={currentURL}
@@ -96,7 +95,8 @@ const currentPath = Astro.url.pathname;
       is:inline
       type="module"
       src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    ></script>
+    >
+    </script>
     <meta name="generator" content={Astro.generator} />
     <Analytics />
     <StructuredData />

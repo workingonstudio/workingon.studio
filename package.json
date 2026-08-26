@@ -15,7 +15,6 @@
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",
     "@astrojs/svelte": "^8.1.2",
-    "@astrolib/seo": "^1.0.0-beta.8",
     "@felte/validator-zod": "^1.0.18",
     "@iconify/svelte": "^5.0.1",
     "@klinking/squircle": "^0.9.0",
