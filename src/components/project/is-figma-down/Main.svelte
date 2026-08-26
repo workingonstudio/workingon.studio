@@ -20,7 +20,7 @@
       <a href="https://www.sketch.com?ref=workingon.studio" class="btn flex flex-row items-center gap-3">
         <iconify-icon
           icon="material-symbols:diamond-outline-rounded"
-          class="group-spin-drop relative top-[1px] text-base text-amber-400"
+          class="group-spin-drop relative top-px text-base text-amber-400"
         ></iconify-icon>
         <div class="flex gap-0 sm:gap-1">
           <span class="hidden sm:inline">Try</span>
@@ -30,7 +30,7 @@
       <a href="https://penpot.app?ref=workingon.studio" class="btn flex flex-row items-center gap-3">
         <iconify-icon
           icon="material-symbols:design-services-outline-rounded"
-          class="group-spin-drop relative top-[1px] text-base text-emerald-400"
+          class="group-spin-drop relative top-px text-base text-emerald-400"
         ></iconify-icon>
         <div class="flex gap-0 sm:gap-1">
           <span class="hidden sm:inline">Try</span>
