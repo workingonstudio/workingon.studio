@@ -24,7 +24,8 @@ const projectData = await Promise.all(
       download: p.data.download ?? null,
       image: p.data.image,
       icon: p.data.icon,
-      isNew: DateTime.now().diff(DateTime.fromJSDate(p.data.publishedAt), "days").days < 80,
+      isNew: DateTime.now().diff(DateTime.fromJSDate(p.data.publishedAt), "days").days < 30,
+      featured: p.data.featured,
       Content,
     };
   })
@@ -64,7 +65,6 @@ const projectData = await Promise.all(
               >
                 <h3>{project.title}.</h3>
               </a>
-              {project.isNew && <span class="badge">New</span>}
             </div>
             <p>{project.description}</p>
           </div>
