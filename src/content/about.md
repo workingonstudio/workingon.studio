@@ -1,6 +1,6 @@
 ---
 title: "About Paul Mackenzie | workingon.studio"
-description: "Creative direction from Seed to Series A to Acquisition. In-house product development. Founded by Paul Mackenzie."
+description: "Creative director, not product designer. 15 years as the sole designer at early-stage startups, five of them acquired. Now running workingon.studio."
 ---
 
 Every one of those companies needed one person to handle everything. Brand, marketing, experience, photography, copy, SEO, pitch decks, dev handoff. That person was me.
@@ -17,4 +17,4 @@ I work directly with founders and their teams. Not as a pair of hands. As a guid
 
 You won't find that in a framework.
 
-Available now. Contract or full-time. If you ship more than you meet, [we'll get on.](/contact)
+Available now. Contract or full-time. Ship more than you meet?[Get in touch](/contact).
