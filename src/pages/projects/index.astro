@@ -22,10 +22,7 @@ const projectData = await Promise.all(
       link: p.data.link,
       externalLink: p.data.externalLink,
       download: p.data.download ?? null,
-      image: p.data.image,
       icon: p.data.icon,
-      isNew: DateTime.now().diff(DateTime.fromJSDate(p.data.publishedAt), "days").days < 30,
-      featured: p.data.featured,
       Content,
     };
   })
