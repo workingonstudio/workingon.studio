@@ -7,6 +7,7 @@
   import { slide } from "svelte/transition";
 
   import { recorder } from "@stores/tiny-wave/recorder.svelte";
+  import Hero from "./partials/Hero.svelte";
 
   let checkedPermission = $state(false);
 
@@ -20,19 +21,19 @@
   });
 </script>
 
-<div class="flex w-full flex-col gap-6 lg:w-2xl">
+<div class="flex w-full flex-col gap-12 lg:w-3xl">
+  <Header />
+  <Hero />
   {#if checkedPermission && recorder.permissionState === "idle"}
     <Permissions />
   {/if}
-  <div class="squircle-3xl flex flex-col border border-gray-300 bg-white p-6 shadow-lg/5 ring ring-gray-100">
-    <div class="flex flex-row items-center justify-between">
-      <Header />
-    </div>
+  <div class="flex flex-col">
+    <!-- <div class="flex flex-row items-center justify-between"></div>
     {#if !recorder.isMuted}
       <div transition:slide class="pt-6">
         <RecordPanel />
       </div>
-    {/if}
+    {/if} -->
   </div>
 
   <Footer />

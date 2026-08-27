@@ -1,13 +1,13 @@
 ---
 title: "Tiny Wave"
-description: "Create editable SVG audiowaves with your voice. Copy them into you designs."
+description: "Create editable SVG audiowaves with your voice. Copy them into your designs."
 publishedAt: 2026-02-22
 link: "/projects/tiny-wave"
 externalLink: true
 download: ""
 image: "tinywave.webp"
 featured: true
-icon: "ph:waveform-duotone"
+icon: "ph:tilde-duotone"
 ---
 
 What started as a potential library of waveforms, specifically for audio base designs. Turn into a self creating resource.

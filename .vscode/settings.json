@@ -7,7 +7,17 @@
   "svelte.plugin.typescript.diagnostics.enable": true,
   "typescript.preferences.includePackageJsonAutoImports": "auto",
   "svelte.plugin.svelte.diagnostics.enable": false,
-  "cSpell.words": ["astrolib", "azeret", "felte", "iconify", "klinking", "nudica", "squircle"],
+  "cSpell.words": [
+    "astrolib",
+    "azeret",
+    "chillax",
+    "felte",
+    "iconify",
+    "klinking",
+    "nudica",
+    "squircle",
+    "workingonstudio"
+  ],
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[astro]": {
