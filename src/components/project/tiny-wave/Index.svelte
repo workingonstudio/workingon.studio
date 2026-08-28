@@ -1,13 +1,11 @@
 <script lang="ts">
+  import { recorder } from "@stores/tiny-wave/recorder.svelte";
   import Header from "./partials/Header.svelte";
   import Footer from "./partials/Footer.svelte";
   import Permissions from "./partials/Permissions.svelte";
   import RecordPanel from "./RecordPanel.svelte";
-
-  import { slide } from "svelte/transition";
-
-  import { recorder } from "@stores/tiny-wave/recorder.svelte";
   import Hero from "./partials/Hero.svelte";
+  import Controls from "./partials/Controls.svelte";
 
   let checkedPermission = $state(false);
 
@@ -32,8 +30,12 @@
   <div class="flex w-full flex-col">
     {#if !recorder.isMuted}
       <RecordPanel />
+      {#if !recorder.finalPath}
+        <Controls />
+      {/if}
     {/if}
   </div>
+
   <div class="mx-[5%] flex w-full flex-col gap-12 lg:w-3xl">
     <Footer />
   </div>

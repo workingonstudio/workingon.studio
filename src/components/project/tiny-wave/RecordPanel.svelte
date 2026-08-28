@@ -31,7 +31,7 @@
         });
 
         animate(printBar, {
-          x: 800,
+          x: 797, // width="3", so 797 keeps the right edge flush with the 800 viewBox instead of overshooting to 803
           duration: 3000,
           ease: "inOutQuad",
           onComplete: () => {
@@ -40,7 +40,7 @@
           },
         });
       } else {
-        // Dot tracing animation for all other styles
+        // Dot tracing animation for all other styles — unchanged, this already tracked correctly
         if (!pathElement || !dotElement) return;
 
         pathElement.id = "waveform-path";
@@ -78,9 +78,9 @@
   });
 </script>
 
-<div class="flex w-full flex-col justify-center gap-2">
+<div class="relative flex w-full flex-col justify-center gap-2 overflow-hidden">
   {#if recorder.finalPath && recorder.wavePathName === "Bar"}
-    <svg viewBox="0 0 800 100" xmlns="http://www.w3.org/2000/svg" class="w-full" aria-hidden="true">
+    <svg viewBox="0 0 800 100" xmlns="http://www.w3.org/2000/svg" class="w-full overflow-hidden" aria-hidden="true">
       <defs>
         <clipPath id="reveal-clip">
           <rect bind:this={clipRect} x="0" y="0" width="0" height="100" />
@@ -107,7 +107,7 @@
       />
     </svg>
   {:else}
-    <svg viewBox="0 0 800 100" xmlns="http://www.w3.org/2000/svg" class="w-full" aria-hidden="true">
+    <svg viewBox="0 0 800 100" xmlns="http://www.w3.org/2000/svg" class="w-full overflow-hidden" aria-hidden="true">
       {#if recorder.finalPath}
         <path
           bind:this={pathElement}
@@ -131,11 +131,8 @@
       ></div>
     {/if}
   {/if}
-
   {#if recorder.finalPath}
     <WaveOptions />
-  {:else if !recorder.isMuted}
-    <WaveStyles />
   {/if}
 </div>
 

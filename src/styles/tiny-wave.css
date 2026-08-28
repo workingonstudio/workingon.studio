@@ -43,12 +43,9 @@
 
 @layer components {
   .btn {
-    @apply rounded-full border border-gray-300 bg-white ring ring-gray-100;
+    @apply rounded-full border border-gray-200 bg-white;
     @apply cursor-pointer;
     @apply transition-all delay-100 duration-300;
-    &:hover {
-      @apply shadow-sm;
-    }
     &:active {
       @apply shadow-none;
     }
