@@ -17,7 +17,7 @@
       <iconify-icon icon="ph:microphone-duotone" class="text-muted size-4 text-base"></iconify-icon>
       <div class="flex flex-col">
         <span class="text-primary text-[10px] font-bold uppercase">Step 1</span>
-        <strong class="text-xs">Give access to your microphone.</strong>
+        <strong class="text-xs">Allow access to your microphone.</strong>
       </div>
     </div>
     <div class="flex flex-row items-center gap-3">
@@ -31,7 +31,7 @@
       <iconify-icon icon="ph:copy-duotone" class="text-muted size-4 text-base"></iconify-icon>
       <div class="flex flex-col">
         <span class="text-primary text-[10px] font-bold uppercase">Step 3</span>
-        <strong class="text-xs">Copy or download your graphic.</strong>
+        <strong class="text-xs">Copy or download your waveform.</strong>
       </div>
     </div>
   </div>

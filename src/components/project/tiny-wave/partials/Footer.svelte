@@ -8,7 +8,7 @@
 
 <footer class="text-xxs text-muted/50 flex flex-col items-center justify-between gap-1 px-1 md:flex-row">
   <a href="/" class="flex flex-row items-center gap-2 font-bold">
-    <Logo width={16} style="top-0.5 relative" />
+    <Logo width={16} style="relative" />
     <span>workingonstudio ltd, no: 16700615</span>
   </a>
   <ul class="flex flex-row gap-3">
