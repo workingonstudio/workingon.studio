@@ -21,22 +21,22 @@
   });
 </script>
 
-<div class="flex w-full flex-col gap-12 lg:w-3xl">
-  <Header />
-  <Hero />
+<div class="flex w-full flex-col items-center gap-12">
+  <div class="mx-[5%] flex flex-col gap-12 lg:w-3xl">
+    <Header />
+    <Hero />
+  </div>
   {#if checkedPermission && recorder.permissionState === "idle"}
     <Permissions />
   {/if}
-  <div class="flex flex-col">
-    <!-- <div class="flex flex-row items-center justify-between"></div>
+  <div class="flex w-full flex-col">
     {#if !recorder.isMuted}
-      <div transition:slide class="pt-6">
-        <RecordPanel />
-      </div>
-    {/if} -->
+      <RecordPanel />
+    {/if}
   </div>
-
-  <Footer />
+  <div class="mx-[5%] flex w-full flex-col gap-12 lg:w-3xl">
+    <Footer />
+  </div>
 </div>
 
 <style>
