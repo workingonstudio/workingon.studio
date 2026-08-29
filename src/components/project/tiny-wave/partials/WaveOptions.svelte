@@ -3,25 +3,26 @@
 </script>
 
 <div class="flex flex-row justify-center gap-3">
-  <button type="button" onclick={() => recorder.downloadSvg()} aria-label="Download">
-    <iconify-icon icon="ph:download-simple-bold" class="text-base"></iconify-icon>
-  </button>
-  <button type="button" onclick={() => recorder.copyToClipboard()} aria-label="Copy to Clipboard">
+  <button type="button" class="btn" onclick={() => recorder.copyToClipboard()} aria-label="Copy to Clipboard">
     <iconify-icon
       icon={recorder.isCopied ? "ph:check-bold" : "ph:copy-bold"}
       class="text-base {recorder.isCopied ? 'text-emerald-500' : ''}"
     ></iconify-icon>
+    {recorder.isCopied ? "Copied" : "Copy"}
   </button>
-  <button type="button" onclick={() => recorder.reset()} aria-label="Delete">
-    <iconify-icon icon="ph:trash-bold" class="text-base"></iconify-icon>
+  <button type="button" class="btn" onclick={() => recorder.downloadSvg()} aria-label="Download">
+    <iconify-icon icon="ph:download-simple-bold" class="text-base"></iconify-icon>
+    Download
+  </button>
+  <button type="button" class="btn" onclick={() => recorder.reset()} aria-label="Delete">
+    <iconify-icon icon="ph:arrow-arc-left-bold" class="text-base"></iconify-icon>
+    Retry
   </button>
 </div>
 
 <style>
   @reference "@styles/tiny-wave.css";
   button {
-    @apply flex size-8 cursor-pointer items-center justify-center rounded-full border-transparent bg-gray-100 hover:bg-gray-200;
-    @apply text-muted hover:text-body;
-    @apply transition-colors duration-150;
+    @apply hover:text-body flex flex-row items-center gap-2 px-4 py-3 text-xs font-semibold text-gray-500;
   }
 </style>

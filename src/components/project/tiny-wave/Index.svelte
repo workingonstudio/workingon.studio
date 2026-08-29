@@ -6,6 +6,7 @@
   import RecordPanel from "./RecordPanel.svelte";
   import Hero from "./partials/Hero.svelte";
   import Controls from "./partials/Controls.svelte";
+  import WaveOptions from "./partials/WaveOptions.svelte";
 
   let checkedPermission = $state(false);
 
@@ -24,14 +25,22 @@
     <Header />
     <Hero />
   </div>
-  {#if checkedPermission && recorder.permissionState === "idle"}
-    <Permissions />
-  {/if}
+
   <div class="flex w-full flex-col">
-    {#if !recorder.isMuted}
+    {#if checkedPermission && recorder.permissionState === "idle"}
+      <div class="mx-auto flex flex-col lg:w-3xl">
+        <Permissions />
+      </div>
+    {:else if checkedPermission && recorder.permissionState === "denied"}
+      <div class="mx-auto flex flex-col lg:w-3xl">
+        <Permissions />
+      </div>
+    {:else if checkedPermission && recorder.permissionState === "granted"}
       <RecordPanel />
       {#if !recorder.finalPath}
         <Controls />
+      {:else}
+        <WaveOptions />
       {/if}
     {/if}
   </div>
@@ -41,5 +50,4 @@
   </div>
 </div>
 
-<style>
-</style>
+<style></style>

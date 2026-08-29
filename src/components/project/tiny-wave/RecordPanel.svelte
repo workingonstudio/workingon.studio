@@ -1,7 +1,6 @@
 <script lang="ts">
   import { recorder } from "@stores/tiny-wave/recorder.svelte";
   import { animate, svg } from "animejs";
-  import WaveOptions from "./partials/WaveOptions.svelte";
   import WaveStyles from "./partials/WaveStyles.svelte";
 
   let pathElement: SVGPathElement | undefined = $state();
@@ -17,7 +16,6 @@
       isAnimating = true;
 
       if (recorder.wavePathName === "Bar") {
-        // Clip-based reveal with sliding print head
         if (!clipRect || !printBar) return;
 
         clipRect.setAttribute("width", "0");
@@ -31,7 +29,7 @@
         });
 
         animate(printBar, {
-          x: 797, // width="3", so 797 keeps the right edge flush with the 800 viewBox instead of overshooting to 803
+          x: 797,
           duration: 3000,
           ease: "inOutQuad",
           onComplete: () => {
@@ -40,7 +38,6 @@
           },
         });
       } else {
-        // Dot tracing animation for all other styles — unchanged, this already tracked correctly
         if (!pathElement || !dotElement) return;
 
         pathElement.id = "waveform-path";
@@ -127,12 +124,9 @@
     {#if recorder.finalPath}
       <div
         bind:this={dotElement}
-        class="absolute -top-1 -left-1 size-2 rounded-full border border-rose-600 bg-rose-500 shadow-sm shadow-rose-500"
+        class="absolute -top-1 -left-1 size-2 rounded-full border border-orange-600 bg-orange-500 shadow-sm shadow-orange-500"
       ></div>
     {/if}
-  {/if}
-  {#if recorder.finalPath}
-    <WaveOptions />
   {/if}
 </div>
 
