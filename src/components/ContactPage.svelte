@@ -54,7 +54,7 @@
       <button
         type="button"
         onclick={copyEmail}
-        class="text-primary flex cursor-pointer flex-row items-center gap-4 text-2xl font-bold hover:underline"
+        class="text-primary flex cursor-pointer flex-row items-center gap-4 text-lg font-bold hover:underline lg:text-2xl"
       >
         hello@workingon.studio
         <iconify-icon
