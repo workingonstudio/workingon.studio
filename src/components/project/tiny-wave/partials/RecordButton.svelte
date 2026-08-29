@@ -17,3 +17,10 @@
   ></span>
   {recorder.isRecording ? "Stop" : "Rec"}
 </button>
+
+<style>
+  @reference "@styles/tiny-wave.css";
+  button {
+    @apply ring-offset-2 transition-shadow duration-300 hover:ring-1 hover:ring-rose-500/20 disabled:ring-0;
+  }
+</style>
