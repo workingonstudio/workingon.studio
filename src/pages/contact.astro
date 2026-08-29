@@ -2,10 +2,8 @@
 // src/pages/index.astro
 import Layout from "../layouts/Layout.astro";
 import ContactPage from "../components/ContactPage.svelte";
-
-const baseRate = 500;
 ---
 
 <Layout title="Contact | workingon.studio">
-  <ContactPage client:load {baseRate} />
+  <ContactPage client:load baseRate={500} />
 </Layout>
