@@ -35,7 +35,6 @@
     color: var(--color-body);
     ::selection {
       background-color: var(--color-primary);
-      color: var(--color-main);
     }
   }
 
