@@ -2,7 +2,7 @@
   import { recorder } from "@stores/tiny-wave/recorder.svelte";
 </script>
 
-<div class="flex flex-col justify-center gap-3 lg:flex-row">
+<div class="flex flex-col items-center justify-center gap-3 lg:flex-row">
   <button type="button" class="btn" onclick={() => recorder.copyToClipboard()} aria-label="Copy to Clipboard">
     <iconify-icon
       icon={recorder.isCopied ? "ph:check-bold" : "ph:copy-bold"}
