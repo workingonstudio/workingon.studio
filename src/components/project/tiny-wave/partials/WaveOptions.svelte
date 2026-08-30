@@ -16,7 +16,7 @@
   </button>
   <button type="button" class="btn" onclick={() => recorder.reset()} aria-label="Delete">
     <iconify-icon icon="ph:arrow-arc-left-bold" class="text-base"></iconify-icon>
-    Retry
+    Redo
   </button>
 </div>
 
