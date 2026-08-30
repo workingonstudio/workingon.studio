@@ -6,10 +6,10 @@
   const dialog = new Dialog();
 </script>
 
-<footer class="text-xxs text-muted/50 flex flex-col items-center justify-between gap-1 px-6 md:flex-row">
-  <a href="/" class="flex flex-row items-center gap-2 font-bold hover:underline">
-    <Logo width={19} />
-    workingonstudio ltd, no: 16700615
+<footer class="text-xxs text-muted/50 flex flex-col items-center justify-between gap-1 px-1 md:flex-row">
+  <a href="/" class="flex flex-row items-center gap-2 font-bold">
+    <Logo width={16} style="relative" />
+    <span>workingonstudio ltd, no: 16700615</span>
   </a>
   <ul class="flex flex-row gap-3">
     <li><button {...dialog.trigger} class="cursor-pointer hover:underline">privacy policy</button></li>

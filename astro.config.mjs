@@ -105,6 +105,17 @@ export default defineConfig({
         subsets: ["latin"]
       },
 
+      // TinyWave
+      {
+        provider: fontProviders.fontshare(),
+        name: "Chillax",
+        cssVariable: "--font-chillax",
+        display: "swap",
+        weights: [600],
+        styles: ['normal'],
+        subsets: ["latin"]
+      }
+
     ],
   vite: {
     plugins: [tailwindcss()],

@@ -7,7 +7,7 @@ externalLink: true
 download: ""
 image: "tinywave.webp"
 featured: true
-icon: "ph:waveform-duotone"
+icon: "ph:tilde-duotone"
 ---
 
 What started as a potential library of waveforms, specifically for audio base designs. Turn into a self creating resource.

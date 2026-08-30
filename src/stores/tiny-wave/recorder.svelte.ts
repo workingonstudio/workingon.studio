@@ -96,7 +96,6 @@ function joinPathSegments(pathString: string): string {
 }
 
 function strokeWidthFromDuration(duration: number): number {
-  if (duration < 3) return 3;
   if (duration < 6) return 2;
   return 1;
 }

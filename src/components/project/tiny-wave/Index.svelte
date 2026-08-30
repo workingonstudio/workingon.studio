@@ -1,12 +1,12 @@
 <script lang="ts">
+  import { recorder } from "@stores/tiny-wave/recorder.svelte";
   import Header from "./partials/Header.svelte";
   import Footer from "./partials/Footer.svelte";
   import Permissions from "./partials/Permissions.svelte";
   import RecordPanel from "./RecordPanel.svelte";
-
-  import { slide } from "svelte/transition";
-
-  import { recorder } from "@stores/tiny-wave/recorder.svelte";
+  import Hero from "./partials/Hero.svelte";
+  import Controls from "./partials/Controls.svelte";
+  import WaveOptions from "./partials/WaveOptions.svelte";
 
   let checkedPermission = $state(false);
 
@@ -20,23 +20,34 @@
   });
 </script>
 
-<div class="flex w-full flex-col gap-6 lg:w-2xl">
-  {#if checkedPermission && recorder.permissionState === "idle"}
-    <Permissions />
-  {/if}
-  <div class="squircle-3xl flex flex-col border border-gray-300 bg-white p-6 shadow-lg/5 ring ring-gray-100">
-    <div class="flex flex-row items-center justify-between">
-      <Header />
-    </div>
-    {#if !recorder.isMuted}
-      <div transition:slide class="pt-6">
-        <RecordPanel />
+<div class="flex w-full flex-col items-center gap-12">
+  <div class="mx-[5%] flex flex-col gap-12 lg:w-3xl">
+    <Header />
+    <Hero />
+  </div>
+
+  <div class="flex w-full flex-col">
+    {#if checkedPermission && recorder.permissionState === "idle"}
+      <div class="mx-auto flex flex-col lg:w-3xl">
+        <Permissions />
       </div>
+    {:else if checkedPermission && recorder.permissionState === "denied"}
+      <div class="mx-auto flex flex-col lg:w-3xl">
+        <Permissions />
+      </div>
+    {:else if checkedPermission && recorder.permissionState === "granted"}
+      <RecordPanel />
+      {#if !recorder.finalPath}
+        <Controls />
+      {:else}
+        <WaveOptions />
+      {/if}
     {/if}
   </div>
 
-  <Footer />
+  <div class="mx-[5%] flex w-full flex-col gap-12 lg:w-3xl">
+    <Footer />
+  </div>
 </div>
 
-<style>
-</style>
+<style></style>

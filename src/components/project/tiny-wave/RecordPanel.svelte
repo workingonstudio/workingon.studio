@@ -1,7 +1,6 @@
 <script lang="ts">
   import { recorder } from "@stores/tiny-wave/recorder.svelte";
   import { animate, svg } from "animejs";
-  import WaveOptions from "./partials/WaveOptions.svelte";
   import WaveStyles from "./partials/WaveStyles.svelte";
 
   let pathElement: SVGPathElement | undefined = $state();
@@ -17,7 +16,6 @@
       isAnimating = true;
 
       if (recorder.wavePathName === "Bar") {
-        // Clip-based reveal with sliding print head
         if (!clipRect || !printBar) return;
 
         clipRect.setAttribute("width", "0");
@@ -31,7 +29,7 @@
         });
 
         animate(printBar, {
-          x: 800,
+          x: 797,
           duration: 3000,
           ease: "inOutQuad",
           onComplete: () => {
@@ -40,7 +38,6 @@
           },
         });
       } else {
-        // Dot tracing animation for all other styles
         if (!pathElement || !dotElement) return;
 
         pathElement.id = "waveform-path";
@@ -78,68 +75,58 @@
   });
 </script>
 
-<div class="flex flex-col items-center gap-6">
-  <div class="justify-center-center flex w-full flex-col gap-2 p-3">
-    <div class="relative">
-      {#if recorder.finalPath && recorder.wavePathName === "Bar"}
-        <svg viewBox="0 0 800 100" xmlns="http://www.w3.org/2000/svg" class="w-full" aria-hidden="true">
-          <defs>
-            <clipPath id="reveal-clip">
-              <rect bind:this={clipRect} x="0" y="0" width="0" height="100" />
-            </clipPath>
-          </defs>
-          <g clip-path="url(#reveal-clip)">
-            <path
-              d={recorder.finalPath}
-              stroke="currentColor"
-              fill="none"
-              stroke-width={recorder.finalStrokeWidth}
-              stroke-linecap="round"
-            />
-          </g>
-          <rect
-            bind:this={printBar}
-            x="0"
-            y="0"
-            width="3"
-            height="100"
-            rx="2"
-            class="text-primary fill-current"
-            opacity="1"
-          />
-        </svg>
+<div class="relative flex w-full flex-col justify-center gap-2 overflow-hidden">
+  {#if recorder.finalPath && recorder.wavePathName === "Bar"}
+    <svg viewBox="0 0 800 100" xmlns="http://www.w3.org/2000/svg" class="w-full overflow-hidden" aria-hidden="true">
+      <defs>
+        <clipPath id="reveal-clip">
+          <rect bind:this={clipRect} x="0" y="0" width="0" height="100" />
+        </clipPath>
+      </defs>
+      <g clip-path="url(#reveal-clip)">
+        <path
+          d={recorder.finalPath}
+          stroke="currentColor"
+          fill="none"
+          stroke-width={recorder.finalStrokeWidth}
+          stroke-linecap="round"
+        />
+      </g>
+      <rect
+        bind:this={printBar}
+        x="0"
+        y="0"
+        width="3"
+        height="100"
+        rx="2"
+        class="text-primary fill-current"
+        opacity="1"
+      />
+    </svg>
+  {:else}
+    <svg viewBox="0 0 800 100" xmlns="http://www.w3.org/2000/svg" class="w-full overflow-hidden" aria-hidden="true">
+      {#if recorder.finalPath}
+        <path
+          bind:this={pathElement}
+          d={recorder.finalPath}
+          stroke="currentColor"
+          fill="none"
+          stroke-width={recorder.finalStrokeWidth}
+          stroke-linecap="round"
+        />
+      {:else if recorder.livePath && !recorder.isMuted}
+        <path d={recorder.livePath} stroke="#E5E7EB" fill="none" stroke-width="1.5" stroke-linecap="round" />
       {:else}
-        <svg viewBox="0 0 800 100" xmlns="http://www.w3.org/2000/svg" class="w-full" aria-hidden="true">
-          {#if recorder.finalPath}
-            <path
-              bind:this={pathElement}
-              d={recorder.finalPath}
-              stroke="currentColor"
-              fill="none"
-              stroke-width={recorder.finalStrokeWidth}
-              stroke-linecap="round"
-            />
-          {:else if recorder.livePath && !recorder.isMuted}
-            <path d={recorder.livePath} stroke="currentColor" fill="none" stroke-width="3" stroke-linecap="round" />
-          {:else}
-            <line x1="0" y1="50" x2="800" y2="50" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
-          {/if}
-        </svg>
-
-        {#if recorder.finalPath}
-          <div
-            bind:this={dotElement}
-            class="absolute -top-1 -left-1 size-2 rounded-full border border-rose-600 bg-rose-500 shadow-sm shadow-rose-500"
-          ></div>
-        {/if}
+        <line x1="0" y1="50" x2="800" y2="50" stroke="#E5E7EB" stroke-width="1.5" stroke-linecap="round" />
       {/if}
-    </div>
-  </div>
+    </svg>
 
-  {#if recorder.finalPath}
-    <WaveOptions />
-  {:else if !recorder.isMuted}
-    <WaveStyles />
+    {#if recorder.finalPath}
+      <div
+        bind:this={dotElement}
+        class="absolute -top-1 -left-1 size-2 rounded-full border border-orange-600 bg-orange-500 shadow-sm shadow-orange-500"
+      ></div>
+    {/if}
   {/if}
 </div>
 
