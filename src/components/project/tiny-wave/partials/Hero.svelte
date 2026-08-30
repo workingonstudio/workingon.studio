@@ -7,9 +7,10 @@
       <br />
       scaleable waveform graphics.
     </h1>
-    <p>
-      This doesn’t work without permission to hear you. It needs access to your microphone. Nothing is stored, it all
-      works locally. Don’t believe me? Turn off wifi if you want.
+    <p class="lg:w-2/3">
+      Tired of using the pen tool to create visuals for audio?
+      <br />
+      Why not use that frustration to create them with your angry voice?
     </p>
   </div>
   <div class="flex flex-col gap-6 lg:flex-row lg:gap-12">

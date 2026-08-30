@@ -2,7 +2,7 @@
   import { recorder } from "@stores/tiny-wave/recorder.svelte";
 </script>
 
-<section class="squircle-3xl flex flex-col justify-between gap-6 bg-gray-100 p-6 lg:flex-row">
+<section class="squircle-3xl mx-6 flex flex-col justify-between gap-6 bg-gray-100 p-6 lg:flex-row">
   <div class="flex flex-col">
     <h2 class="color-body text-sm font-bold">Allow permissions to get started.</h2>
     <p class="text-muted text-xs">

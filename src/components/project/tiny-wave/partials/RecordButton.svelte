@@ -13,7 +13,7 @@
   <span
     class="size-2.5 rounded-full border {recorder.isRecording
       ? 'bg-primary border-rose-600 shadow-sm shadow-current'
-      : 'border-rose-300 bg-rose-600 shadow-none'} group-disabled:border-rose-100 group-disabled:bg-rose-300"
+      : 'border-rose-300 bg-rose-600 shadow-none'}"
   ></span>
   {recorder.isRecording ? "Stop" : "Rec"}
 </button>
@@ -21,6 +21,6 @@
 <style>
   @reference "@styles/tiny-wave.css";
   button {
-    @apply ring-offset-2 transition-shadow duration-300 hover:ring-1 hover:ring-rose-500/20 disabled:ring-0;
+    @apply ring-offset-2 transition-shadow duration-300 hover:ring-1 hover:ring-rose-500/20 disabled:pointer-events-none;
   }
 </style>

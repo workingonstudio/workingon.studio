@@ -24,12 +24,6 @@
   body {
     font-family: var(--font-satoshi);
     color: var(--color-body);
-    /* background: var(--color-bg); */
-
-    &::selection {
-      background: var(--color-body);
-      @apply text-white;
-    }
   }
 
   h1 {
