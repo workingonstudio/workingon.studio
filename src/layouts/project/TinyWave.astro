@@ -14,19 +14,18 @@ const currentURL = new URL(Astro.url.pathname, Astro.site).href;
 <BaseLayout
   productName="TinyWave"
   seo={{
-    title: `${title} - workingon.studio`,
-    description: "Create waves with your voice.",
+    title: `TinyWave — Turn Your Voice Into a Waveform SVG`,
+    description:
+      "Record your voice and get a clean waveform SVG in seconds. Free voice-to-waveform tool for podcast covers, album art, and social posts.",
     canonical: currentURL,
     ogImage: `${Astro.site}tiny-wave/opengraph/site-default.webp`,
-    ogImageAlt: "Tinywave - Create waves with your voice.",
+    ogImageAlt: "TinyWave — turn your voice into a waveform SVG.",
     siteName: "workingon.studio",
     twitterUrl: "https://wo.studio/projects/tiny-wave",
   }}
   meta={{
     themeColor: "#FAFAF9",
     faviconSvg: "/tiny-wave/favicon.svg",
-    bodyId: "top",
-    bodyClass: "h-full",
   }}
 >
   <Font slot="head" cssVariable="--font-satoshi" preload />
