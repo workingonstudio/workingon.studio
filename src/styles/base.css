@@ -27,6 +27,7 @@
   body {
     ::selection {
       background: var(--color-primary);
+      color: var(--color-white);
     }
     @apply text-base;
   }
