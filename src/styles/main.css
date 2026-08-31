@@ -1,6 +1,17 @@
 /* Main Site Theme - Enhanced with Layout Utilities */
 @import "./base.css";
 
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+html[data-transitioning] [data-transition-wrapper] {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
 @theme {
   /* Typography */
   --font-general-sans: "General Sans", sans-serif;
@@ -11,7 +22,7 @@
   --color-body: theme(colors.neutral.800);
   --color-muted: theme(colors.neutral.400);
   --color-contrast: theme(colors.blue.900);
-  --color-main: theme(colors.neutral-50);
+  --color-main: theme(colors.neutral.50);
   --color-surface: theme(colors.white);
   --color-surface-border: theme(colors.neutral.200);
   --bg-pattern: url("/images/background-light.svg");

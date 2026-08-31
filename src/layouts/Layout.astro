@@ -19,7 +19,7 @@ export interface Props {
 
 const { title, description, extraStyles } = Astro.props;
 const defaultDescription =
-  "Creative direction from Seed to Series A to Acquisition. In-house product development. Founded by Paul Mackenzie.";
+  "Creative direction from Seed to Series A. In-house product development. For founders who've already proven the idea.";
 const currentURL = new URL(Astro.url.pathname, Astro.site).href;
 const currentPath = Astro.url.pathname;
 ---
@@ -75,7 +75,6 @@ const currentPath = Astro.url.pathname;
         cardType: "summary_large_image",
         handle: "@prmack",
       }}
-      ,
       additionalMetaTags={[
         {
           name: "twitter:image",
@@ -95,7 +94,9 @@ const currentPath = Astro.url.pathname;
       is:inline
       type="module"
       src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    ></script>
+    >
+    </script>
+    <script is:inline type="module" src="/src/scripts/page-transitions.ts"></script>
     <meta name="generator" content={Astro.generator} />
     <Analytics />
     <StructuredData />
@@ -108,8 +109,11 @@ const currentPath = Astro.url.pathname;
         <Header client:load {currentPath} transition:persist />
       </div>
     </div>
-    <div class="mx-9 flex flex-1 lg:mx-38">
-      <section class:list={["flex w-full flex-col gap-30 py-24", extraStyles]}>
+    <div class="mx-4 flex flex-1 lg:mx-38">
+      <section
+        class:list={["flex w-full flex-col gap-30 py-24", extraStyles]}
+        data-transition-wrapper
+      >
         <slot />
       </section>
     </div>

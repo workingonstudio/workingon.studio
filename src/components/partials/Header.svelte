@@ -66,7 +66,7 @@
   ];
 </script>
 
-<header class="group background bg-main relative z-110 flex flex-row items-center gap-24 p-9">
+<header class="group background bg-main relative z-110 flex flex-row items-center gap-24 px-4 py-9 lg:p-9">
   <a href="/" title="Home" class="group/logo text-body flex items-center justify-center">
     <Logo width={24} />
   </a>
@@ -99,7 +99,7 @@
 <nav
   class="{showMenu
     ? 'flex'
-    : 'hidden'} mobile-nav bg-main fixed inset-0 z-100 h-dvh flex-col items-center justify-center lg:hidden"
+    : 'hidden'} mobile-nav background bg-main fixed inset-0 z-100 h-dvh flex-col items-center justify-center lg:hidden"
 >
   <ul class="flex w-full flex-col gap-12">
     {#each navItems as { href, title }}
