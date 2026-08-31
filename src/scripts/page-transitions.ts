@@ -17,7 +17,6 @@ document.addEventListener("astro:before-preparation", (event) => {
       return;
     }
     transitioning = true;
-    document.documentElement.dataset.transitioning = "true";
 
     gsap.killTweensOf(SELECTOR);
     await gsap.to(SELECTOR, {
@@ -26,6 +25,7 @@ document.addEventListener("astro:before-preparation", (event) => {
       duration: 0.35,
       ease: "power2.in",
     });
+    document.documentElement.dataset.transitioning = "true";
     await originalLoader();
   };
 });
