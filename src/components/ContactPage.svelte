@@ -1,9 +1,9 @@
 <script lang="ts">
-  import { onMount } from "svelte";
+  import { onMount, untrack } from "svelte";
 
   let { baseRate = 400 }: { baseRate?: number } = $props();
 
-  let displayRate = $state(baseRate);
+  let displayRate = $state(untrack(() => baseRate));
   let timeInterval: ReturnType<typeof setInterval> | null = null;
   let pageLoadTime = 0;
 

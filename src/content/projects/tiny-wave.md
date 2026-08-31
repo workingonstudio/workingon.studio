@@ -2,8 +2,8 @@
 title: "Tiny Wave"
 description: "Create editable SVG audiowaves with your voice. Copy them into your designs."
 publishedAt: 2026-02-22
-link: "/projects/tiny-wave"
-externalLink: true
+link: "tiny-wave"
+externalLink: false
 download: ""
 image: "tinywave.webp"
 featured: true
