@@ -99,7 +99,7 @@
 <nav
   class="{showMenu
     ? 'flex'
-    : 'hidden'} mobile-nav bg-main fixed inset-0 z-100 h-dvh flex-col items-center justify-center lg:hidden"
+    : 'hidden'} mobile-nav background bg-main fixed inset-0 z-100 h-dvh flex-col items-center justify-center lg:hidden"
 >
   <ul class="flex w-full flex-col gap-12">
     {#each navItems as { href, title }}
