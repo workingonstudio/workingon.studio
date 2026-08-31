@@ -1,5 +1,10 @@
 import { gsap } from "gsap";
 
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+if (prefersReducedMotion) {
+  gsap.globalTimeline.timeScale(50);
+}
+
 const SELECTOR = "[data-transition-wrapper]";
 let transitioning = false;
 
