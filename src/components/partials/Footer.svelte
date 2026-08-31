@@ -24,7 +24,7 @@
     <iconify-icon icon="ph:arrow-up-bold" class="text-muted group-hover:text-primary"></iconify-icon>
   </a>
   <!-- prettier-ignore -->
-  <div class="md:flex flex-1 flex-col gap-1 md:justify-end py-6 px-9 text-muted text-end text-xxs uppercase">
+  <div class="md:flex flex-1 flex-col gap-1 md:justify-end py-4 lg:py-6 px-9 text-muted text-end text-xxs uppercase">
     <a
       href="https://find-and-update.company-information.service.gov.uk/company/16700615"
       class=""
