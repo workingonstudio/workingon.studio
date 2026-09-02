@@ -49,7 +49,7 @@ const currentPath = Astro.url.pathname;
       document.addEventListener("astro:after-swap", applyTheme);
     </script>
 
-    <ClientRouter />
+    <ClientRouter fallback="swap" />
     <Font cssVariable="--font-general-sans" preload />
     <Font cssVariable="--font-azeret-mono" preload />
     <Seo
@@ -111,7 +111,7 @@ const currentPath = Astro.url.pathname;
     </div>
     <div class="mx-4 flex flex-1 lg:mx-38">
       <section
-        class:list={["flex w-full flex-col gap-30 py-24", extraStyles]}
+        class:list={["flex w-full flex-col gap-24 py-24 lg:gap-48 lg:py-48", extraStyles]}
         data-transition-wrapper
       >
         <slot />

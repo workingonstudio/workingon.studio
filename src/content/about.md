@@ -13,8 +13,8 @@ I've watched the industry turn design into a performance. Metrics, frameworks, t
 
 It doesn't.
 
-I work directly with founders and their teams. Not as a pair of hands. As a guide. Someone who's been at the early stages enough times to know what matters, what doesn't, and when to move.
+I work directly with founders and their teams. Not just advice from the sidelines. Hands on the work itself. Someone who's been at the early stages enough times to know what matters, what doesn't, and when to move.
 
 You won't find that in a framework.
 
-Available now. Contract or full-time. Ship more than you meet?[Get in touch](/contact).
+Available now. Contract or full-time. Prefer shipping to meetings? [Get in touch](/contact).
