@@ -35,8 +35,19 @@ const about = defineCollection({
   }),
 });
 
+const skills = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "./src/content/skills" }),
+  schema: z.object({
+    icon: z.string(),
+    header: z.string(),
+    body: z.string(),
+    order: z.number(),
+  }),
+});
+
 export const collections = {
   writing: writingCollection,
   projects: projectsCollection,
   site: about,
+  skills: skills,
 };

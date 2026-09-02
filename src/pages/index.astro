@@ -2,6 +2,11 @@
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 
+import SkillCard from "@components/partials/SkillCard.svelte";
+import { getCollection } from "astro:content";
+
+const skills = (await getCollection("skills")).sort((a, b) => a.data.order - b.data.order);
+
 import elevenPlay from "../assets/work/eleven-play.png";
 import elevenRecord from "../assets/work/eleven-record.png";
 import elevenWhy from "../assets/work/eleven-why.png";
@@ -35,6 +40,18 @@ import PageHeader from "@layouts/partials/PageHeader.astro";
       </a>
     </div>
   </PageHeader>
+  <div class="flex flex-col gap-12">
+    <div class="flex w-full flex-col lg:w-xl">
+      <h2>
+        <span class="text-primary">Skills.</span>
+        <br />
+        What we're good at.
+      </h2>
+    </div>
+    <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+      {skills.map((entry) => <SkillCard skill={entry.data} />)}
+    </div>
+  </div>
   <div class="flex flex-col gap-12">
     <div class="flex w-full flex-col lg:w-xl">
       <h2>
