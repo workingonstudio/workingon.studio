@@ -66,7 +66,7 @@
   ];
 </script>
 
-<header class="group background bg-main relative z-110 flex flex-row items-center gap-24 px-4 py-9 lg:p-9">
+<header class="group background bg-main relative z-110 flex flex-row items-center gap-24 px-6 py-9 lg:p-9">
   <a href="/" title="Home" class="group/logo text-body flex items-center justify-center">
     <Logo width={24} />
   </a>
