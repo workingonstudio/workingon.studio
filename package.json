@@ -1,7 +1,7 @@
 {
   "name": "workingon-studio",
   "type": "module",
-  "version": "1.3.0",
+  "version": "8.4.5",
   "scripts": {
     "dev": "astro dev",
     "build": "npm run timeline:generate && astro build",
