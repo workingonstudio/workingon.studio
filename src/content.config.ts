@@ -13,6 +13,7 @@ const projectsCollection = defineCollection({
     download: z.string().optional(),
     icon: z.string(),
     image: z.string(),
+    featured: z.boolean().default(false),
   }),
 });
 
@@ -36,7 +37,7 @@ const about = defineCollection({
 });
 
 const skills = defineCollection({
-  loader: glob({ pattern: "**/*.md", base: "./src/content/skills" }),
+  loader: glob({ pattern: "**/*.yaml", base: "./src/content/skills" }),
   schema: z.object({
     icon: z.string(),
     header: z.string(),
