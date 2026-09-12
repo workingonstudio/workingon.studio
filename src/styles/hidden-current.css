@@ -20,6 +20,7 @@
 
   body {
     font-family: var(--font-satoshi);
+    font-weight: 500;
     color: var(--color-body);
     &::selection {
       background: var(--color-primary);
