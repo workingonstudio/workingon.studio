@@ -17,6 +17,7 @@
 @layer base {
   body {
     font-family: var(--font-satoshi);
+    font-weight: 500;
     color: var(--color-text);
     background: var(--color-bg);
     &::selection {

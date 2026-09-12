@@ -23,6 +23,7 @@
     try {
       await navigator.clipboard.writeText("hello@workingon.studio");
       copied = true;
+      window.umami?.track("contact-email-copy");
       if (copyTimeout) clearTimeout(copyTimeout);
       copyTimeout = setTimeout(() => {
         copied = false;

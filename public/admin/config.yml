@@ -1,0 +1,76 @@
+# public/admin/config.yml
+backend:
+  name: github
+  repo: workingonstudio/workingon.studio
+  branch: main
+  base_url: https://workingon-studio-cms-auth.workingon-studio.workers.dev
+  commit_messages:
+    create: "content: add {{collection}} — {{slug}}"
+    update: "content: update {{collection}} — {{slug}}"
+    delete: "content: remove {{collection}} — {{slug}}"
+    uploadMedia: "content: upload {{path}}"
+    deleteMedia: "content: delete {{path}}"
+
+publish_mode: editorial_workflow
+
+media_folder: "public/images"
+public_folder: "/images"
+
+collections:
+  - name: "projects"
+    label: "Projects"
+    folder: "src/content/projects"
+    extension: "md"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Published", name: "publishedAt", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Link", name: "link", widget: "string" }
+      - { label: "External link", name: "externalLink", widget: "boolean", default: false }
+      - { label: "Download", name: "download", widget: "string", required: false }
+      - { label: "Icon", name: "icon", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Featured", name: "featured", widget: "boolean", default: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "writing"
+    label: "Writing"
+    folder: "src/content/writing"
+    extension: "md"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - { label: "Published", name: "publishedAt", widget: "datetime" }
+      - { label: "Icon", name: "icon", widget: "string" }
+      - { label: "Draft", name: "draft", widget: "boolean", default: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "skills"
+    label: "Skills"
+    folder: "src/content/skills"
+    extension: "yaml"
+    format: "yaml"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Icon", name: "icon", widget: "string" }
+      - { label: "Header", name: "header", widget: "string" }
+      - { label: "Body", name: "body", widget: "text" }
+      - { label: "Order", name: "order", widget: "number" }
+
+  - name: "about"
+    label: "About"
+    files:
+      - name: "about"
+        label: "About Page"
+        file: "src/content/about.md"
+        extension: "md"
+        format: "frontmatter"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Body", name: "body", widget: "markdown" }
