@@ -1,7 +1,7 @@
 <script lang="ts">
   import { theme } from "@stores/themeStore";
 
-  $: icon = $theme === "dark" ? "ph:sun" : "ph:moon-stars";
+  let icon = $derived($theme === "dark" ? "ph:sun" : "ph:moon-stars");
 
   function toggleTheme() {
     $theme = $theme === "dark" ? "light" : "dark";
