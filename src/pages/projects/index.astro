@@ -9,7 +9,7 @@ const projects = (await getCollection("projects")).sort(
   (a, b) => b.data.publishedAt.getTime() - a.data.publishedAt.getTime()
 );
 
-const launchDate = "2025-08-27"; // still an open item — March vs August
+const launchDate = "2025-08-27";
 const initialDays = Math.floor(DateTime.now().diff(DateTime.fromISO(launchDate), "days").days);
 
 const projectData = await Promise.all(

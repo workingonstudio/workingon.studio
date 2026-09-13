@@ -1,34 +1,19 @@
 <script>
   import { onMount, tick } from "svelte";
   import { DateTime } from "luxon";
-  export let timelineData;
+
+  let { timelineData } = $props();
 
   // State for pagination
-  let visibleCount = 50;
-  let isLoadingMore = false;
-  let loadMoreTrigger;
-  let observer;
+  let visibleCount = $state(50);
+  let isLoadingMore = $state(false);
+  let loadMoreTrigger = $state();
 
-  $: allEntries = timelineData?.entries || [];
-  $: visibleEntries = allEntries.slice(-visibleCount);
-  $: hasMore = visibleCount < allEntries.length;
-
-  $: if (loadMoreTrigger && hasMore && !observer) {
-    console.log("Setting up observer");
-    observer = new IntersectionObserver(
-      (entries) => {
-        console.log("Intersection observed:", entries[0].isIntersecting);
-        if (entries[0].isIntersecting) {
-          loadMore();
-        }
-      },
-      { rootMargin: "200px" }
-    );
-    observer.observe(loadMoreTrigger);
-  }
+  let allEntries = $derived(timelineData?.entries || []);
+  let visibleEntries = $derived(allEntries.slice(-visibleCount));
+  let hasMore = $derived(visibleCount < allEntries.length);
 
   function loadMore() {
-    console.log("loadMore called", { isLoadingMore, hasMore, visibleCount });
     if (isLoadingMore || !hasMore) return;
 
     isLoadingMore = true;
@@ -36,25 +21,30 @@
     setTimeout(() => {
       visibleCount += 50;
       isLoadingMore = false;
-      console.log("Loaded more, new visibleCount:", visibleCount);
     }, 100);
   }
 
-  // Cleanup when no more entries
-  $: if (!hasMore && observer) {
-    observer.disconnect();
-    observer = null;
-  }
+  // Sets up the infinite-scroll observer whenever the trigger element or
+  // hasMore changes, and disconnects it automatically on cleanup — replaces
+  // the old manual "observer" guard variable and separate teardown block.
+  $effect(() => {
+    if (!loadMoreTrigger || !hasMore) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          loadMore();
+        }
+      },
+      { rootMargin: "200px" }
+    );
+    observer.observe(loadMoreTrigger);
+
+    return () => observer.disconnect();
+  });
 
   onMount(async () => {
     await tick(); // Wait for DOM to fully render
-    console.log("After tick, loadMoreTrigger:", !!loadMoreTrigger);
-
-    return () => {
-      if (observer) {
-        observer.disconnect();
-      }
-    };
   });
 
   // Group entries by date
@@ -80,7 +70,7 @@
       .sort((a, b) => new Date(b.entries[0].date) - new Date(a.entries[0].date));
   }
 
-  $: groupedEntries = groupByDate(visibleEntries);
+  let groupedEntries = $derived(groupByDate(visibleEntries));
 
   function shortenText(text, maxLength = 30) {
     if (text.length <= maxLength) return text;
@@ -117,7 +107,7 @@
     return stats;
   }
 
-  const result = getGitHubStats(timelineData);
+  let result = $derived(getGitHubStats(timelineData));
 </script>
 
 <div class="flex flex-col gap-8 lg:w-xl">
