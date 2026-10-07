@@ -6,7 +6,7 @@
     "predev": "npm run timeline:generate",
     "dev": "astro dev",
     "build": "npm run timeline:generate && astro build",
-    "check": "astro check",
+    "check": "npm run timeline:generate && astro check",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "preview": "astro preview",
