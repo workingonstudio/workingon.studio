@@ -1,4 +1,6 @@
-<script lang="ts"></script>
+<script lang="ts">
+  const year = new Date().getFullYear();
+</script>
 
 <footer class="text-xxs text-muted flex w-full flex-row items-center justify-between py-3">
   <div class="flex flex-row items-center gap-3">
@@ -6,7 +8,7 @@
       <img src="/hidden-current/wo-logo.svg" alt="workingon.studio logo" />
       workingon.studio
     </a>
-    copyright 2026
+    copyright {year}
   </div>
   <ul class="flex flex-row gap-3">
     <li><a href="/projects/hidden-current/methodology">methodology</a></li>

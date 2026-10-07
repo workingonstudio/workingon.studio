@@ -1,5 +1,7 @@
 <script lang="ts">
   import Comment from "./Comment.svelte";
+
+  const year = new Date().getFullYear();
 </script>
 
 <footer class="relative flex flex-col justify-between gap-4 py-6 text-[11px] md:flex-row md:items-center md:gap-0">
@@ -29,7 +31,7 @@
     <li class="flex flex-row items-center gap-2">
       <iconify-icon icon="lucide:copyright" class="size-4 text-base"></iconify-icon>
       <div class="flex flex-row gap-1">
-        <a href="/">Copywrite 2026</a>
+        <a href="/">Copyright {year}</a>
       </div>
     </li>
   </ul>

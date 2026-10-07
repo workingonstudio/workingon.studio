@@ -1,7 +1,22 @@
 <script lang="ts">
+  import { onMount } from "svelte";
   import { DateTime } from "luxon";
-  import timelineData from "../../data/timeline-github.json";
-  let date = DateTime.fromISO(timelineData.generated).toRelative();
+  // timeline.json is restamped on every build by timeline:generate
+  import timelineData from "../../data/timeline.json";
+
+  const generated = DateTime.fromISO(timelineData.generated);
+
+  // Deterministic on the server so hydration matches, relative once mounted
+  let date = generated.setZone("utc").setLocale("en-GB").toFormat("d LLL yyyy");
+
+  onMount(() => {
+    const tick = () => {
+      date = generated.setLocale("en-GB").toRelative() ?? date;
+    };
+    tick();
+    const id = setInterval(tick, 60_000);
+    return () => clearInterval(id);
+  });
 
   export let typefaces = [
     {
@@ -51,7 +66,7 @@
       </li>
       <!-- prettier-ignore -->
       <li class="flex flex-row items-center">
-        <a href="https://github.com/workingonstudio/workingon.studio/commits/main/">Last updated: {date}</a>
+        <a href="https://github.com/workingonstudio/workingon.studio/commits/main/">Last build: <time datetime={timelineData.generated} class="ml-1">{date}</time></a>
       </li>
     </ul>
   </div>

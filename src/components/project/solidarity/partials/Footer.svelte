@@ -1,4 +1,5 @@
 <script lang="ts">
+  const year = new Date().getFullYear();
 </script>
 
 <footer class="flex flex-col items-center justify-between gap-3 md:flex-row">
@@ -18,7 +19,7 @@
     </li>
     <li>
       <iconify-icon icon="material-symbols:copyright-outline" class="text-muted text-base"></iconify-icon>
-      Copywrite 2026
+      Copyright {year}
     </li>
   </ul>
 </footer>

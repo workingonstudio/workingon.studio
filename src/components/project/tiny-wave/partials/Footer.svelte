@@ -4,6 +4,7 @@
   import { Dialog } from "melt/builders";
 
   const dialog = new Dialog();
+  const year = new Date().getFullYear();
 </script>
 
 <footer class="text-xxs text-muted/50 flex flex-col items-center justify-between gap-1 px-1 md:flex-row">
@@ -13,7 +14,7 @@
   </a>
   <ul class="flex flex-row gap-3">
     <li><button {...dialog.trigger} class="cursor-pointer hover:underline">privacy policy</button></li>
-    <li>copyright 2026</li>
+    <li>copyright {year}</li>
   </ul>
 </footer>
 

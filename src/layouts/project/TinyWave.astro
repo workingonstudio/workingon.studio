@@ -4,22 +4,21 @@ import BaseLayout from "./Layout.astro";
 import { Font } from "astro:assets";
 
 export interface Props {
-  title: string;
+  title?: string;
 }
 
-const { title } = Astro.props;
 const currentURL = new URL(Astro.url.pathname, Astro.site).href;
 ---
 
 <BaseLayout
   productName="TinyWave"
   seo={{
-    title: `TinyWave — Turn Your Voice Into a Waveform SVG`,
+    title: "TinyWave: Turn Your Voice Into a Waveform SVG",
     description:
       "Record your voice and get a clean waveform SVG in seconds. Free voice-to-waveform tool for podcast covers, album art, and social posts.",
     canonical: currentURL,
     ogImage: `${Astro.site}tiny-wave/opengraph/site-default.webp`,
-    ogImageAlt: "TinyWave — turn your voice into a waveform SVG.",
+    ogImageAlt: "TinyWave: turn your voice into a waveform SVG.",
     siteName: "workingon.studio",
     twitterUrl: "https://wo.studio/projects/tiny-wave",
   }}
