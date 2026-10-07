@@ -12,10 +12,7 @@ export const totals = derived(financeEntries, ($entries) => {
     income: totalIncome,
     expenses: totalExpenses,
     rawNet,
-    formatted:
-      rawNet >= 0
-        ? `£${rawNet.toFixed(2)}`
-        : `-£${Math.abs(rawNet).toFixed(2)}`,
+    formatted: rawNet >= 0 ? `£${rawNet.toFixed(2)}` : `-£${Math.abs(rawNet).toFixed(2)}`,
     isPositive: rawNet >= 0,
   };
 });

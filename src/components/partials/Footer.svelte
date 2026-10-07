@@ -1,7 +1,44 @@
 <script lang="ts">
-  import { DateTime } from "luxon";
-  import timelineData from "../../data/timeline-github.json";
-  let date = DateTime.fromISO(timelineData.generated).toRelative();
+  import { onMount } from "svelte";
+
+  // ISO timestamp passed from Layout.astro so the timeline JSON stays server-side
+  export let generated: string;
+
+  const built = new Date(generated);
+
+  // Deterministic on the server so hydration matches, relative once mounted
+  let date = new Intl.DateTimeFormat("en-GB", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+    timeZone: "UTC",
+  }).format(built);
+
+  const rtf = new Intl.RelativeTimeFormat("en-GB", { numeric: "auto" });
+  const units: [Intl.RelativeTimeFormatUnit, number][] = [
+    ["year", 31536000],
+    ["month", 2592000],
+    ["day", 86400],
+    ["hour", 3600],
+    ["minute", 60],
+  ];
+
+  function relative(from: Date) {
+    const seconds = Math.round((from.getTime() - Date.now()) / 1000);
+    for (const [unit, size] of units) {
+      if (Math.abs(seconds) >= size) return rtf.format(Math.round(seconds / size), unit);
+    }
+    return rtf.format(seconds, "second");
+  }
+
+  onMount(() => {
+    const tick = () => {
+      date = relative(built);
+    };
+    tick();
+    const id = setInterval(tick, 60_000);
+    return () => clearInterval(id);
+  });
 
   export let typefaces = [
     {
@@ -51,7 +88,7 @@
       </li>
       <!-- prettier-ignore -->
       <li class="flex flex-row items-center">
-        <a href="https://github.com/workingonstudio/workingon.studio/commits/main/">Last updated: {date}</a>
+        <a href="https://github.com/workingonstudio/workingon.studio/commits/main/">Last build: <time datetime={generated} class="ml-1">{date}</time></a>
       </li>
     </ul>
   </div>

@@ -20,24 +20,19 @@ function parseStats(statsLine) {
 function getBranchForCommit(hash) {
   try {
     // First, try to find branches that contain this commit
-    const branchOutput = execSync(
-      `git branch --contains ${hash} --format="%(refname:short)"`,
-      { encoding: "utf8" }
-    ).trim();
+    const branchOutput = execSync(`git branch --contains ${hash} --format="%(refname:short)"`, {
+      encoding: "utf8",
+    }).trim();
 
     if (branchOutput) {
-      const branches = branchOutput
-        .split("\n")
-        .filter((branch) => branch.trim());
+      const branches = branchOutput.split("\n").filter((branch) => branch.trim());
 
       // If commit is on main/master, prefer that
       if (branches.includes("main")) return "main";
       if (branches.includes("master")) return "master";
 
       // Otherwise, return the first non-main branch
-      const featureBranches = branches.filter(
-        (b) => b !== "main" && b !== "master"
-      );
+      const featureBranches = branches.filter((b) => b !== "main" && b !== "master");
       if (featureBranches.length > 0) return featureBranches[0];
 
       return branches[0] || "main";
@@ -49,15 +44,12 @@ function getBranchForCommit(hash) {
     }).trim();
     return currentBranch || "main";
   } catch (error) {
-    console.warn(
-      `Could not determine branch for commit ${hash}:`,
-      error.message
-    );
+    console.warn(`Could not determine branch for commit ${hash}:`, error.message);
     return "main";
   }
 }
 
-function determineEntryType(message, isMerge, branchName) {
+function determineEntryType(_message, isMerge, branchName) {
   if (isMerge) {
     return "merge";
   }
@@ -95,7 +87,7 @@ function extractGitHistory() {
     const tagLines = tagCommitOutput.split("\n");
     const tagCommitLine = tagLines[0];
     if (tagCommitLine) {
-      const [hash, message, date, author, parents] = tagCommitLine.split("|");
+      const [hash, message, date, author] = tagCommitLine.split("|");
       const statsLine = tagLines.find(
         (line) => line.includes("insertion") || line.includes("deletion")
       );
@@ -132,10 +124,7 @@ function extractGitHistory() {
         // Look for stats line
         let statsLine = "";
         for (let j = i + 1; j < lines.length && j < i + 5; j++) {
-          if (
-            lines[j] &&
-            (lines[j].includes("insertion") || lines[j].includes("deletion"))
-          ) {
+          if (lines[j] && (lines[j].includes("insertion") || lines[j].includes("deletion"))) {
             statsLine = lines[j];
             break;
           }
@@ -187,32 +176,20 @@ function formatStats(stats) {
 
 function generateTimeline() {
   // Check if we have existing GitHub timeline data
-  const githubTimelineFile = path.join(
-    process.cwd(),
-    "src",
-    "data",
-    "timeline-github.json"
-  );
+  const githubTimelineFile = path.join(process.cwd(), "src", "data", "timeline-github.json");
 
   if (fs.existsSync(githubTimelineFile)) {
     console.log("📄 Using existing GitHub timeline data");
 
     try {
-      const githubData = JSON.parse(
-        fs.readFileSync(githubTimelineFile, "utf8")
-      );
+      const githubData = JSON.parse(fs.readFileSync(githubTimelineFile, "utf8"));
 
       // Update the lastBuild time to current
       githubData.lastBuild = formatDate(new Date().toISOString());
       githubData.generated = new Date().toISOString();
 
       // Copy to main timeline file so component can use it
-      const mainTimelineFile = path.join(
-        process.cwd(),
-        "src",
-        "data",
-        "timeline.json"
-      );
+      const mainTimelineFile = path.join(process.cwd(), "src", "data", "timeline.json");
       fs.writeFileSync(mainTimelineFile, JSON.stringify(githubData, null, 2));
 
       console.log("✅ GitHub timeline data preserved and updated");
@@ -251,9 +228,7 @@ function generateTimeline() {
   const timelineFile = path.join(dataDir, "timeline.json");
   fs.writeFileSync(timelineFile, JSON.stringify(timeline, null, 2));
 
-  console.log(
-    `✅ Generated local timeline with ${timeline.entries.length} entries`
-  );
+  console.log(`✅ Generated local timeline with ${timeline.entries.length} entries`);
   console.log(`📝 Written to: ${timelineFile}`);
 
   return timeline;

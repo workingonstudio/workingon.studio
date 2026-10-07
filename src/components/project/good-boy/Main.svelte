@@ -47,6 +47,6 @@
     }
   }
   .button {
-    @apply cursor-pointer place-self-center rounded-lg border border-stone-600 bg-stone-800 px-4 py-2 font-[Roboto] font-semibold tracking-wide text-stone-50 ring ring-stone-800 transition-transform duration-300 text-shadow-sm hover:scale-105;
+    @apply cursor-pointer place-self-center rounded-lg border border-stone-600 bg-stone-800 px-4 py-2 font-(family-name:--font-roboto) font-bold tracking-wide text-stone-50 ring ring-stone-800 transition-transform duration-300 text-shadow-sm hover:scale-105;
   }
 </style>

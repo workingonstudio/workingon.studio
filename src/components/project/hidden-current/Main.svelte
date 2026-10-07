@@ -29,8 +29,7 @@
         {isFirefox ? "Add to Firefox" : "Add to Chrome"}
       </a>
       <div class="flex flex-row items-center gap-3">
-        <span class="text-xxs text-primaryfont-semibold italic">&#8230;coming soon</span>
-
+        <span class="text-xxs text-primary font-semibold italic">&#8230;coming soon</span>
         <iconify-icon icon="logos:safari" class="size-6 text-2xl"></iconify-icon>
         <iconify-icon icon="logos:microsoft-edge" class="size-6 text-2xl"></iconify-icon>
       </div>

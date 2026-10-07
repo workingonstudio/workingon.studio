@@ -3,3 +3,4 @@ dist/
 node_modules/
 *.md
 astro.config.mjs
+public/glyph-palette/appcast.json

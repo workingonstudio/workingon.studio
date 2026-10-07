@@ -64,6 +64,15 @@ export default defineConfig({
       styles: ['normal'],
       subsets: ["latin"]
     },
+    {
+      provider: fontProviders.bunny(),
+      name: "Roboto",
+      cssVariable: "--font-roboto",
+      display: "swap",
+      weights: [500, 700],
+      styles: ['normal'],
+      subsets: ["latin"]
+    },
 
     // IsFigmaDown
     {

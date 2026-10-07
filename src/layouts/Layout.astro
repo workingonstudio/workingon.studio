@@ -11,6 +11,8 @@ import Seo from "@layouts/partials/Seo.astro";
 import Header from "@components/partials/Header.svelte";
 import Footer from "@components/partials/Footer.svelte";
 
+import timelineData from "../data/timeline.json";
+
 export interface Props {
   title: string;
   description?: string;
@@ -22,15 +24,21 @@ const defaultDescription =
   "Creative direction from Seed to Series A. In-house product development. For founders who've already proven the idea.";
 const currentURL = new URL(Astro.url.pathname, Astro.site).href;
 const currentPath = Astro.url.pathname;
+const ogImage = new URL("images/site-default.webp", Astro.site).href;
 ---
 
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="en-GB" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
+    <!-- Must sit before the theme script so applyTheme can find it on first load -->
+    <meta name="theme-color" content="#f5f5f4" />
     <script is:inline>
       function applyTheme() {
-        const theme = localStorage.getItem("theme") || "light";
+        let theme = "light";
+        try {
+          theme = localStorage.getItem("theme") || "light";
+        } catch (e) {}
         const meta = document.querySelector('meta[name="theme-color"]');
 
         if (theme === "dark") {
@@ -62,10 +70,10 @@ const currentPath = Astro.url.pathname;
         description: description || defaultDescription,
         images: [
           {
-            url: Astro.site + "/images/site-default.webp",
+            url: ogImage,
             height: 630,
             width: 1200,
-            alt: "Paul Mackenzie — Creative Director, workingon.studio",
+            alt: "Paul Mackenzie - Creative Director, workingon.studio",
           },
         ],
         site_name: "Paul Mackenzie",
@@ -78,11 +86,10 @@ const currentPath = Astro.url.pathname;
       additionalMetaTags={[
         {
           name: "twitter:image",
-          content: Astro.site + "site-default.webp",
+          content: ogImage,
         },
       ]}
     />
-    <meta name="theme-color" content="#030712" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -90,19 +97,19 @@ const currentPath = Astro.url.pathname;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <!-- prettier-ignore -->
     <script
       is:inline
       type="module"
       src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
-    >
-    </script>
+    ></script>
     <script src="/src/scripts/page-transitions.ts"></script>
     <meta name="generator" content={Astro.generator} />
     <Analytics />
     <StructuredData />
   </head>
 
-  <body id="#top" class="background mx-auto flex min-h-dvh max-w-screen-2xl flex-col">
+  <body id="top" class="background mx-auto flex min-h-dvh max-w-screen-2xl flex-col">
     <div class="sticky top-0 z-50">
       <div class="mx-auto w-full">
         <Header client:load {currentPath} transition:persist />
@@ -116,6 +123,6 @@ const currentPath = Astro.url.pathname;
         <slot />
       </section>
     </div>
-    <Footer transition:persist />
+    <Footer client:idle generated={timelineData.generated} transition:persist />
   </body>
 </html>
