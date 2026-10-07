@@ -11,6 +11,8 @@ import Seo from "@layouts/partials/Seo.astro";
 import Header from "@components/partials/Header.svelte";
 import Footer from "@components/partials/Footer.svelte";
 
+import timelineData from "../data/timeline.json";
+
 export interface Props {
   title: string;
   description?: string;
@@ -121,6 +123,6 @@ const ogImage = new URL("images/site-default.webp", Astro.site).href;
         <slot />
       </section>
     </div>
-    <Footer client:idle transition:persist />
+    <Footer client:idle generated={timelineData.generated} transition:persist />
   </body>
 </html>

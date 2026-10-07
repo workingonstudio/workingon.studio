@@ -1,17 +1,39 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import { DateTime } from "luxon";
-  // timeline.json is restamped on every build by timeline:generate
-  import timelineData from "../../data/timeline.json";
 
-  const generated = DateTime.fromISO(timelineData.generated);
+  // ISO timestamp passed from Layout.astro so the timeline JSON stays server-side
+  export let generated: string;
+
+  const built = new Date(generated);
 
   // Deterministic on the server so hydration matches, relative once mounted
-  let date = generated.setZone("utc").setLocale("en-GB").toFormat("d LLL yyyy");
+  let date = new Intl.DateTimeFormat("en-GB", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+    timeZone: "UTC",
+  }).format(built);
+
+  const rtf = new Intl.RelativeTimeFormat("en-GB", { numeric: "auto" });
+  const units: [Intl.RelativeTimeFormatUnit, number][] = [
+    ["year", 31536000],
+    ["month", 2592000],
+    ["day", 86400],
+    ["hour", 3600],
+    ["minute", 60],
+  ];
+
+  function relative(from: Date) {
+    const seconds = Math.round((from.getTime() - Date.now()) / 1000);
+    for (const [unit, size] of units) {
+      if (Math.abs(seconds) >= size) return rtf.format(Math.round(seconds / size), unit);
+    }
+    return rtf.format(seconds, "second");
+  }
 
   onMount(() => {
     const tick = () => {
-      date = generated.setLocale("en-GB").toRelative() ?? date;
+      date = relative(built);
     };
     tick();
     const id = setInterval(tick, 60_000);
@@ -66,7 +88,7 @@
       </li>
       <!-- prettier-ignore -->
       <li class="flex flex-row items-center">
-        <a href="https://github.com/workingonstudio/workingon.studio/commits/main/">Last build: <time datetime={timelineData.generated} class="ml-1">{date}</time></a>
+        <a href="https://github.com/workingonstudio/workingon.studio/commits/main/">Last build: <time datetime={generated} class="ml-1">{date}</time></a>
       </li>
     </ul>
   </div>
