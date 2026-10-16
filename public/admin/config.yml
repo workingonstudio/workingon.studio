@@ -2,7 +2,7 @@
 backend:
   name: github
   repo: workingonstudio/workingon.studio
-  branch: main
+  branch: dev
   base_url: https://workingon-studio-cms-auth.workingon-studio.workers.dev
   commit_messages:
     create: "content: add {{collection}} — {{slug}}"
