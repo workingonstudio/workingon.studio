@@ -31,7 +31,7 @@ collections:
       - { label: "External link", name: "externalLink", widget: "boolean", default: false }
       - { label: "Download", name: "download", widget: "string", required: false }
       - { label: "Icon", name: "icon", widget: "string" }
-      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Image", name: "image", widget: "image", required: false }
       - { label: "Featured", name: "featured", widget: "boolean", default: false }
       - { label: "Body", name: "body", widget: "markdown" }
 
