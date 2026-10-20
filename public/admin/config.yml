@@ -5,9 +5,9 @@ backend:
   branch: dev
   base_url: https://workingon-studio-cms-auth.workingon-studio.workers.dev
   commit_messages:
-    create: "content: add {{collection}} — {{slug}}"
-    update: "content: update {{collection}} — {{slug}}"
-    delete: "content: remove {{collection}} — {{slug}}"
+    create: "content: add {{collection}} - {{slug}}"
+    update: "content: update {{collection}} - {{slug}}"
+    delete: "content: remove {{collection}} - {{slug}}"
     uploadMedia: "content: upload {{path}}"
     deleteMedia: "content: delete {{path}}"
 
@@ -31,7 +31,7 @@ collections:
       - { label: "External link", name: "externalLink", widget: "boolean", default: false }
       - { label: "Download", name: "download", widget: "string", required: false }
       - { label: "Icon", name: "icon", widget: "string" }
-      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Image", name: "image", widget: "image", required: false }
       - { label: "Featured", name: "featured", widget: "boolean", default: false }
       - { label: "Body", name: "body", widget: "markdown" }
 
