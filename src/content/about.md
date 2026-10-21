@@ -17,4 +17,4 @@ I work directly with founders and their teams. Not just advice from the sideline
 
 You won't find that in a framework.
 
-Available now. Contract or full-time. Prefer shipping to meetings? [Get in touch](/contact).
+Prefer shipping to meetings? [Get in touch](/contact).

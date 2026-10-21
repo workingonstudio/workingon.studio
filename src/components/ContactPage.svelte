@@ -1,17 +1,21 @@
 <script lang="ts">
   import { onMount, untrack } from "svelte";
 
-  let { baseRate = 400 }: { baseRate?: number } = $props();
+  let { baseRate = 5000 }: { baseRate?: number } = $props();
+
+  const perSecond = 10;
 
   let displayRate = $state(untrack(() => baseRate));
   let timeInterval: ReturnType<typeof setInterval> | null = null;
   let pageLoadTime = 0;
 
+  const formatted = $derived(displayRate.toLocaleString("en-GB", { maximumFractionDigits: 0 }));
+
   function startTimeBasedIncrement(rate: number) {
     pageLoadTime = Date.now();
     timeInterval = setInterval(() => {
       const elapsedSeconds = (Date.now() - pageLoadTime) / 1000;
-      displayRate = Math.round((rate + elapsedSeconds) * 10) / 10;
+      displayRate = Math.round(rate + elapsedSeconds * perSecond);
     }, 100);
   }
 
@@ -48,7 +52,7 @@
       I work with founders that decide fast and ship faster.
     </h1>
     <!-- prettier-ignore -->
-    <p>£<span class="tabular-nums">{displayRate.toFixed(2)}</span>/day. The rate increases while you think about it.</p>
+    <p>£<span class="tabular-nums">{formatted}</span>/month. The rate increases while you think about it.</p>
   </div>
   <div class="flex flex-col gap-6">
     <div class="flex flex-row items-center gap-2">
