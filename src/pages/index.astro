@@ -30,7 +30,9 @@ import PageHeader from "@layouts/partials/PageHeader.astro";
         </p>
         <p>Fifteen years at early-stage startups. Five acquired.</p>
       </div>
-      <a href="/contact" class="self-start" data-umami-event="clicked-rate">Check the rate</a>
+      <a href="/contact" class="self-start" data-umami-event="clicked-rate">
+        Check the rate
+      </a>
     </div>
   </PageHeader>
   <div class="flex flex-col gap-12">
@@ -42,7 +44,9 @@ import PageHeader from "@layouts/partials/PageHeader.astro";
       </h2>
     </div>
     <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
-      {skills.map((entry) => <SkillCard skill={entry.data} />)}
+      {skills.map((entry) => (
+        <SkillCard skill={entry.data} />
+      ))}
     </div>
   </div>
   <div class="flex flex-col gap-12">

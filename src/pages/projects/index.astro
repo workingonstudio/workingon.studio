@@ -32,10 +32,12 @@ const projectData = await Promise.all(
 <Layout title="Projects | workingon.studio">
   <PageHeader>
     <h1 class="text-pretty">
-      <span class="text-primary">Projects.</span><br />
-      <DaysCounter client:load launchDate={launchDate} initialDays={initialDays} /> days passed. {
-        projectData.length
-      } projects.<br />All solo. All live.
+      <span class="text-primary">Projects.</span>
+      <br />
+      <DaysCounter client:load launchDate={launchDate} initialDays={initialDays} />
+      days passed.{projectData.length}projects.
+      <br />
+      All solo. All live.
     </h1>
     <div class="flex flex-col gap-4">
       <p>
@@ -45,60 +47,58 @@ const projectData = await Promise.all(
     </div>
   </PageHeader>
   <div class="grid gap-8 lg:grid-cols-2">
-    {
-      projectData.map(({ Content, ...project }) => (
-        <div class="bg-surface squircle-3xl flex flex-col gap-4 p-6 lg:p-12">
-          <iconify-icon icon={project.icon} class="text-primary text-2xl" />
-          <div class="flex min-h-20 flex-col gap-2">
-            <div class="flex flex-row items-center gap-3">
-              <a
-                href={project.externalLink ? project.link : `/projects/${project.link}`}
-                target={project.externalLink ? "_blank" : undefined}
-                rel={project.externalLink ? "noopener noreferrer" : undefined}
-                class="hover:underline"
-                data-umami-event="project-click"
-                data-umami-event-project={project.title}
-                data-umami-event-source="title"
-              >
-                <h3>{project.title}.</h3>
-              </a>
-            </div>
-            <p>{project.description}</p>
+    {projectData.map(({ Content, ...project }) => (
+      <div class="bg-surface squircle-3xl flex flex-col gap-4 p-6 lg:p-12">
+        <iconify-icon icon={project.icon} class="text-primary text-2xl" />
+        <div class="flex min-h-20 flex-col gap-2">
+          <div class="flex flex-row items-center gap-3">
+            <a
+              href={project.externalLink ? project.link : `/projects/${project.link}`}
+              target={project.externalLink ? "_blank" : undefined}
+              rel={project.externalLink ? "noopener noreferrer" : undefined}
+              class="hover:underline"
+              data-umami-event="project-click"
+              data-umami-event-project={project.title}
+              data-umami-event-source="title"
+            >
+              <h3>{project.title}.</h3>
+            </a>
           </div>
-          <ul class="flex flex-row gap-6 text-xs uppercase [&_a]:hover:underline!">
+          <p>{project.description}</p>
+        </div>
+        <ul class="flex flex-row gap-6 text-xs uppercase [&_a]:hover:underline!">
+          <li class="flex flex-row gap-2">
+            <a
+              href={project.externalLink ? project.link : `/projects/${project.link}`}
+              target={project.externalLink ? "_blank" : undefined}
+              rel={project.externalLink ? "noopener noreferrer" : undefined}
+              class="text-primary"
+              data-umami-event="project-click"
+              data-umami-event-project={project.title}
+              data-umami-event-source="visit-site"
+            >
+              Visit site
+            </a>
+            <iconify-icon icon="ph:arrow-up-right-bold" class="text-primary size-4 text-sm" />
+          </li>
+          {project.download ? (
             <li class="flex flex-row gap-2">
               <a
-                href={project.externalLink ? project.link : `/projects/${project.link}`}
-                target={project.externalLink ? "_blank" : undefined}
-                rel={project.externalLink ? "noopener noreferrer" : undefined}
+                href={project.download}
+                target="_blank"
+                rel="noopener noreferrer"
                 class="text-primary"
-                data-umami-event="project-click"
+                data-umami-event="project-download-click"
                 data-umami-event-project={project.title}
-                data-umami-event-source="visit-site"
               >
-                Visit site
+                Add to Chrome
               </a>
               <iconify-icon icon="ph:arrow-up-right-bold" class="text-primary size-4 text-sm" />
             </li>
-            {project.download ? (
-              <li class="flex flex-row gap-2">
-                <a
-                  href={project.download}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-primary"
-                  data-umami-event="project-download-click"
-                  data-umami-event-project={project.title}
-                >
-                  Add to Chrome
-                </a>
-                <iconify-icon icon="ph:arrow-up-right-bold" class="text-primary size-4 text-sm" />
-              </li>
-            ) : null}
-          </ul>
-        </div>
-      ))
-    }
+          ) : null}
+        </ul>
+      </div>
+    ))}
   </div>
 </Layout>
 
