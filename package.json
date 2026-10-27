@@ -14,6 +14,11 @@
     "timeline:fetch-github": "node scripts/fetchGitHubTimeline.js",
     "timeline:status": "node -e \"const fs=require('fs'); const t=JSON.parse(fs.readFileSync('src/data/timeline.json')); console.log('Source:', t.source||'local-git', '| Generated:', new Date(t.generated).toLocaleString());\""
   },
+  "overrides": {
+    "@astrojs/sitemap": {
+      "zod": "4.6.7"
+    }
+  },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",
     "@astrojs/svelte": "^9.0.1",
