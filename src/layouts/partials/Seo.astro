@@ -69,44 +69,38 @@ const ogImages = openGraph?.images ?? [];
 {description && <meta name="description" content={description} />}
 {canonical && <link rel="canonical" href={canonical} />}
 
-{
-  openGraph && (
-    <>
-      {openGraph.title && <meta property="og:title" content={openGraph.title} />}
-      {openGraph.description && <meta property="og:description" content={openGraph.description} />}
-      {openGraph.url && <meta property="og:url" content={openGraph.url} />}
-      {openGraph.type && <meta property="og:type" content={openGraph.type} />}
-      {openGraph.site_name && <meta property="og:site_name" content={openGraph.site_name} />}
-      {openGraph.locale && <meta property="og:locale" content={openGraph.locale} />}
-      {ogImages.map((image) => (
-        <>
-          <meta property="og:image" content={image.url} />
-          {image.width && <meta property="og:image:width" content={String(image.width)} />}
-          {image.height && <meta property="og:image:height" content={String(image.height)} />}
-          {image.alt && <meta property="og:image:alt" content={image.alt} />}
-          {image.type && <meta property="og:image:type" content={image.type} />}
-        </>
-      ))}
-    </>
-  )
-}
+{openGraph && (
+  <>
+    {openGraph.title && <meta property="og:title" content={openGraph.title} />}
+    {openGraph.description && <meta property="og:description" content={openGraph.description} />}
+    {openGraph.url && <meta property="og:url" content={openGraph.url} />}
+    {openGraph.type && <meta property="og:type" content={openGraph.type} />}
+    {openGraph.site_name && <meta property="og:site_name" content={openGraph.site_name} />}
+    {openGraph.locale && <meta property="og:locale" content={openGraph.locale} />}
+    {ogImages.map((image) => (
+      <>
+        <meta property="og:image" content={image.url} />
+        {image.width && <meta property="og:image:width" content={String(image.width)} />}
+        {image.height && <meta property="og:image:height" content={String(image.height)} />}
+        {image.alt && <meta property="og:image:alt" content={image.alt} />}
+        {image.type && <meta property="og:image:type" content={image.type} />}
+      </>
+    ))}
+  </>
+)}
 
-{
-  twitter && (
-    <>
-      {twitter.cardType && <meta name="twitter:card" content={twitter.cardType} />}
-      {twitter.site && <meta name="twitter:site" content={twitter.site} />}
-      {twitter.handle && <meta name="twitter:creator" content={twitter.handle} />}
-    </>
-  )
-}
+{twitter && (
+  <>
+    {twitter.cardType && <meta name="twitter:card" content={twitter.cardType} />}
+    {twitter.site && <meta name="twitter:site" content={twitter.site} />}
+    {twitter.handle && <meta name="twitter:creator" content={twitter.handle} />}
+  </>
+)}
 
-{
-  additionalMetaTags.map((tag) =>
-    tag.property ? (
-      <meta property={tag.property} content={tag.content} />
-    ) : (
-      <meta name={tag.name} content={tag.content} />
-    )
+{additionalMetaTags.map((tag) =>
+  tag.property ? (
+    <meta property={tag.property} content={tag.content} />
+  ) : (
+    <meta name={tag.name} content={tag.content} />
   )
-}
+)}

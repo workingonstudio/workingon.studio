@@ -56,7 +56,6 @@ const ogImage = new URL("images/site-default.webp", Astro.site).href;
       // Reapply after ClientRouter navigation
       document.addEventListener("astro:after-swap", applyTheme);
     </script>
-
     <ClientRouter fallback="swap" />
     <Font cssVariable="--font-general-sans" preload />
     <Font cssVariable="--font-azeret-mono" preload />
