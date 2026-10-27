@@ -103,29 +103,27 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Favicons -->
-    {
-      adaptiveFavicons ? (
-        <>
-          <link
-            rel="icon"
-            type="image/svg+xml"
-            href={adaptiveFavicons.light}
-            media="(prefers-color-scheme: light)"
-          />
-          <link
-            rel="icon"
-            type="image/svg+xml"
-            href={adaptiveFavicons.dark}
-            media="(prefers-color-scheme: dark)"
-          />
-        </>
-      ) : (
-        <>
-          {faviconSvg && <link rel="icon" type="image/svg+xml" href={faviconSvg} />}
-          {faviconPng && <link rel="icon" type="image/png" href={faviconPng} />}
-        </>
-      )
-    }
+    {adaptiveFavicons ? (
+      <>
+        <link
+          rel="icon"
+          type="image/svg+xml"
+          href={adaptiveFavicons.light}
+          media="(prefers-color-scheme: light)"
+        />
+        <link
+          rel="icon"
+          type="image/svg+xml"
+          href={adaptiveFavicons.dark}
+          media="(prefers-color-scheme: dark)"
+        />
+      </>
+    ) : (
+      <>
+        {faviconSvg && <link rel="icon" type="image/svg+xml" href={faviconSvg} />}
+        {faviconPng && <link rel="icon" type="image/png" href={faviconPng} />}
+      </>
+    )}
 
     <!-- Iconify web component (used across all products) -->
     <!-- prettier-ignore -->
