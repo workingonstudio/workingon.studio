@@ -35,7 +35,7 @@ const projectData = await Promise.all(
       <span class="text-primary">Projects.</span>
       <br />
       <DaysCounter client:load launchDate={launchDate} initialDays={initialDays} />
-      days passed.{projectData.length}projects.
+      {` days passed. ${projectData.length} projects.`}
       <br />
       All solo. All live.
     </h1>
