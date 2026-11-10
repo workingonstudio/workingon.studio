@@ -38,20 +38,6 @@ import PageHeader from "@layouts/partials/PageHeader.astro";
   <div class="flex flex-col gap-12">
     <div class="flex w-full flex-col lg:w-xl">
       <h2>
-        <span class="text-primary">Skills.</span>
-        <br />
-        What I'm good at.
-      </h2>
-    </div>
-    <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
-      {skills.map((entry) => (
-        <SkillCard skill={entry.data} />
-      ))}
-    </div>
-  </div>
-  <div class="flex flex-col gap-12">
-    <div class="flex w-full flex-col lg:w-xl">
-      <h2>
         <span class="text-primary">Work.</span>
         <br />
         Shipped, not pitched.
@@ -100,6 +86,20 @@ import PageHeader from "@layouts/partials/PageHeader.astro";
           format="webp"
         />
       </div>
+    </div>
+  </div>
+  <div class="flex flex-col gap-12">
+    <div class="flex w-full flex-col lg:w-xl">
+      <h2>
+        <span class="text-primary">Skills.</span>
+        <br />
+        What I'm good at.
+      </h2>
+    </div>
+    <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+      {skills.map((entry) => (
+        <SkillCard skill={entry.data} />
+      ))}
     </div>
   </div>
 </Layout>
