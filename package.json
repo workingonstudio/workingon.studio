@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",
-    "@astrojs/svelte": "^9.0.1",
+    "@astrojs/svelte": "^9.1.2",
     "@felte/validator-zod": "^1.0.18",
     "@klinking/squircle": "^0.10.0",
     "@tailwindcss/vite": "^4.3.3",
